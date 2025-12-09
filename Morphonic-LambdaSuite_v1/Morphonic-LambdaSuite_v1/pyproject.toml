@@ -1,0 +1,16 @@
+
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "morphonic-lambda-suite"
+version = "1.0.0"
+description = "Morphonic Geometry-Native Lambda Calculus (MGLC) with modal layer, glyphs, and sidecar runtime"
+authors = [{name="Unification Attempt", email="noreply@example.org"}]
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = ["Programming Language :: Python :: 3"]
+
+[project.scripts]
+mglc-demo = "morphonic_lambda.runtime:eval_with_sidecar"
