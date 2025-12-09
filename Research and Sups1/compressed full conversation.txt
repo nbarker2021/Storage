@@ -1,0 +1,333 @@
+#initial idea presentation#
+
+I have an idea for a reasoning model. It is based on this. 
+
+Any data point that touches the system, Internal or external, is plotted on e8 lattice grids. 
+This is not a single grid. Each full datapoint is a lattice. 
+All data Inside that datapoint is its own lattice. 
+All pieces of all pieces of all parts of all parts are their own lattices, all the way down until you have the most base representation of that datapoint, that can be expressed in three words, or short phases. 
+This "universe" of datapoints is, at this point, a vast number of interconnected e8 lattice structures. 
+This is the point at which we use and review the data. 
+If you superimpose all lattices, but only at like node sections, and allow all connected nodes to inform each other and all neighbors, then all data is a single operation of ask and pass determination based on direct relationship vs context drive lf job using data. 
+
+#first continuation#
+
+This lattice layout is the strata for every piece of input and output data. 
+The next process is using this organization to do two things. 
+Inform the custom hash system, built with dimensionality and dynamic updating of hot and edge use maps. 
+This hash system, which I call MDHG(Multi-Dimensional Hamiltonian Golden) is built for any data complex enough that greedy and inline/normal hashing isn't sufficient. 
+It isn't inactive when not in use. It is filling and mapping "buildings" of hot topic and likely linked and connected hot topics derived from close proximity in lattice structure. 
+On complexity explosion occursances(n=5+), A handoff from greedy is made to MDHG to take over all hash based, and hot zone and like subject determination, and inform the brain of the system(AGRM-Advanced Golden Ratio Modulation/Method)) 
+These buildings are part of the overall neighborhood of data, and there can be many different buildings and neighborhoods that interact, but are grouped by systems and dependent data links. 
+Inside the building is the "floors". This is how you mimic graph of interaction used in "RAG" builds currently being released for most advanced AI systems for doc parsing. 
+This is directly tied to the levels of data that are created and e8 mapped in the initial intake process(shells and n=x level of data plotting). 
+Each floor then has "rooms" which are the individual datasets that are being hashed and monitored. 
+These rooms stay floor locked but can move to new layouts inside its own floors. 
+They can also dynamically create direct access "data elevators" to talk to other floors. 
+This is all handled by an Agentic Management Complex, and the SNAP system of tools that run most processes.
+
+#second continuation#
+Shelling, Glyph Compression, and the e8 lattice all use the same concepts. 
+Any node(e8) can be broken down into all parts of all parts of the idea atomic level. 
+This means you take the full idea, and step by step disassemble all parts of the idea as you go.
+if you can, with 0 ambiguious meaning in 3 words or short phrases, you then know when you are what i refer to as the n=.5(n=0 is amxiomic and law rule based info, n=1 is the most base representation of an idea)
+at this point, you start expanding back up the decisoion chain, in both positive and negative lattices(by deriving the base meaning, you can logically derive the counter or inverse of those base meanings)
+once you get fully n=2 seeded(one step up from the n=1 base shell in all logical and legal ways, while still recording all other data as results for review) you then review your n=1 shells again for actual base level correctness
+this repeats, checking each layer cumulativly as you step up the shell levels, for validity of assessment.
+all determinations are fully based only on context of request, but stored to be reviewed against any and all context if needed
+once you reach the n=4 level, and are certain all shells are acurate to level of complexity(n=.5-4) you MUST compress all ideas into a set of glyphs that represent the full idea while retaining the full context of the contained idea
+this is to allow memory to be hot on demand by layering many lattices inside many linked glyphs to allow vast traversal with minimal memory.
+Bridges are nodes that cross lattices to continue train of logic in process. these are how you escape from loops and endpoints that are not sufficent to qualify for promotion
+
+
+#third continuation#
+Let me explain AGRM to you and how it works.
+
+The original build uses this tool to solve TSP,(Traveling Salesman Problem) as a way for me to test the complexity management aspects and the idea as a whole build in some form.
+
+The idea is that you can theoretical map anything to a vector grid, and so using AGRM you do just that, via appropriate shell allocation to space and context. 
+
+AGRM makes a full map of the needed search space leveraging all other system tools
+
+It then plots all datapoints that are to be reviewed based on shelling as distance based nodes on a tour map with grouping (dense/mid/spare) based on distance on any and all e8 lattices and the determination made on relevance after hot zone review via MDHG
+
+Ill use a document as an example
+
+The user would provide a log. It is messy, not formatted consistently and there are logic and reasoning loops and chained commands all over the place. These can span huge gaps of the text. And it is also filled with huge verbose explanations of very advanced topics.
+
+Ok so how would we approach that in this system. Simple. A single step to take a single step across all action. Meaning a single shell traversal in best determined edge(this will mimic best in class tools/methods for superpermutation solving retooled to fit these needs) but in all operations. 
+
+A single tick. But that then, on its own creates several new paths. These are all valid. But the distance traveled to get to that logic(tour length) is critical. 
+
+Once the document shelling has reached its first n=5 level representation, you then normally(native) parse the document for context to go along with the new understanding of parts as a whole.
+
+Now this is simply the "what do I plot, where, and how is thst relevant to a work needed(what shell level in the overall work lattice shell)"
+
+This uses all tools. Leveraging the Hash system, and the next system i will explain vall SNAP, and many more to come as well. the entire system shoud be designed to be task/input agnostic. truely universal by design.
+
+From here AGRM divides the map into hemispheres and quadrant. Entrypoints are always the hottest n=1 shell attached to the main idea. You gather all data about all possible next steps, but as in all hot shell connections, all answers must be allowed, but the final output will be quarantined and checked for both content validity and rule following, and a final "is this the best path of actions for this request specifically, and the task as a whole"
+
+You gate the hemispheres and quadrant with their relevant shells. If AGRM doesn't understand 100% clearly the hemispheres or quadrant it is gated behind n-level locks
+
+I didnt mention how AGRM works in action. You sweep x arms relative to n(can be edited at will really if resources allow) in a fan motion around the space, each arm starting on only most packed closest non shared quadrant x4(1 in each hemisphere) and gates open based on route efficiency in quadrant. This data is meant to be iterative and injected back in as the sweeps go and inform bad and good choice along the way. The hash system covers all of this as does snap, and you can even let greedy do the easy parts its just when n=5 at any level(even things like session bloat) happens we must trigger this system instead because it is built to handle these kinds of tasks
+
+#fourth continuation#
+SNAP-State Naming and Altering Protocol
+Snap is a tool designed to manage all systems via rapid and custom state saving and creation.
+
+the overall idea is that, instead of holding full context, you hold a series of heirarchial state save snapshots that you can on demand sticth together for the perfect X(in this case x= literally anything you can think of)
+this tool is only limited by imagination. this is not even an exaggeration. you can easially think of a way to use snap for any single problem you encouter.
+ill give you just a couple of uses
+
+SNAPDNA: The ability to create and stitch together states via rapid adaption of state, gathering of contained relevant content and context, and continuing to the next state, creating a new hybrid state custom fit to task.
+
+all of this is playbooked and saved for future need(meaning all tasks are essientially one shots, as if we save a snap, we can assume that perfect data state. as we make more hybids, less and less actual process has to be done, and state swapping is all that is required.
+
+SNAPKermel: Save all kernel level data as save state snaps for recovery in data loss situations
+
+SNAPPersona: Same concept as the DNA but specific to Persona for the Think Tank tool and other expertise based need. You can make an endless number of custom personas and expertise levels, hybrids as you need, hybrids of those, etc. this also makes everything faster as it grows via lessening workloads
+
+SNAPTokenized: tiny micro level states that are simply your token output for use in reviewing work and improving all future output and responses, and troubleshooting
+
+SNAPBit/SNAP Byte: all things can be broken down into custom "universes of their contained data" you can then SNAP any single part of that as a single bit/byte of data(size dependant) that can be used as a direct bridge, or stitch.
+
+SNAPFinace: Monitors all finacial markets and makes determinations on trading strategies.
+
+Easy wins (immediately useful)
+
+Messy-log Doc Reader SNAP: parse chaotic logs, resolve long-range references, output grounded action items.
+
+Knowledge Capsule SNAP: a curated, task-specific mini-KB (facts, examples, tests) for “perfect-fit” agents.
+
+Policy/Compliance SNAP: encode N=0 constraints (style guides, safety, licensing); auto-validate outputs.
+
+Codebase Onboarding SNAP: map a repo into floors/rooms; generate architecture briefs + TODOs.
+
+Refactor Assistant SNAP: patterns + tests to safely modernize code (per language/framework).
+
+Dataset Intake SNAP: normalize new corpora, dedupe, schema map, and generate E8 codes + glyphs.
+
+RAG Booster SNAP: domain-specific retrieval guide with canonical IDs and elevator seeds.
+
+Research Digest SNAP: read a topic, shell to N≤4, glyph at N=5; produce literature maps + tensions.
+
+Decision Log SNAP: capture prompts, choices, rationales; export an audit trail you can replay.
+
+Personal KB SNAP: your notes → atoms → shells; fast recall with provenance.
+
+Tutor SNAP: teaches a subject in N-levels; quizzes and explanations bound by N=0 rules.
+
+Creative Style SNAP: mimic a style with glyph templates; enforce continuity and character bibles.
+
+Combo plays (SNAP + your other tools)
+
+AGRM Entry SNAPs: use SNAP metadata to pick entrypoints/beam widths; faster, steadier traversals.
+
+MDHG-Sharded SNAPs: hash by domain/N-band so hot regions don’t swamp base facts.
+
+Glyph-Packed SNAPs: compress heavy knowledge into reversible 3-word glyph tokens to ship lightweight agents.
+
+Elevator Seeder SNAPs: pre-wired cross-links for long-range doc dependencies and code symbol hops.
+
+Sheaf-Guarded Composition: compose multiple SNAPs; reject combos with high tension across claims.
+
+Superperm Planner SNAP: store coverage schedules for combinatorial tasks; resume exactly where you left off.
+
+Cold-Start Bootstrap: SNAPDNA pulls web materials → shells → glyphs; mint first-cut SNAPs automatically.
+
+Quarantine Gate SNAP: a pre-output filter: grounding check, constraint check, “best-path” justification.
+
+N-Lock Firebreaks: SNAPs that exist solely to lock unstable hemispheres/quadrants until minimal evidence is met.
+
+Trace-First Ops SNAP: standardize trace formats so every agent returns explainable paths by default.
+
+A/B Agent Harness: spawn two agents from different SNAP mixes, compare outputs, auto-promote the winner.
+
+Drift Monitor SNAP: watch for concept drift; trigger SNAP refreshes, deprecations, and re-certification.
+
+Wildcards (novel / cross-domain ideas)
+
+SNAP-of-SNAPs Registry: hierarchical bundles (course → module → lesson SNAPs; product → feature → playbook SNAPs).
+
+Causal Sandbox SNAP: “what-if” forks with controlled ΔN changes; compare counterfactual outcomes.
+
+Preference-Learning SNAP: collects ranked outputs and learns cost-weight scalarizations for AGRM.
+
+Adversarial Red-Team SNAP: generates structured attacks against claims/tools; logs failures for SNAPDNA retraining.
+
+License/Taint Auditor SNAP: tracks source licenses/PII; enforces redactions and usage contracts.
+
+Incident Postmortem SNAP: ingests alerts/logs; reconstructs timelines; outputs blameless RCA + action items.
+
+Procurement/Vendor SNAP: normalizes proposals; apples-to-apples comparison using constraint sheaves.
+
+Design Superperm Studio: enumerate UI/UX flows as superpermutations; prune with user telemetry.
+
+Experiment Conductor SNAP: orchestrates ablations/benchmarks; stores reproducible manifests + hashes.
+
+Time-Capsule SNAP: periodic full checkpoints (files + hashes) for legal/regulatory reproducibility.
+
+Multimodal Lab Tech SNAP: maps protocol videos, diagrams, and notes into shells; generates step checks.
+
+Data Quality Sentinel SNAP: monitors pipelines for schema drift, null storms, bias; suggests fixes.
+
+Fusion Hypothesis SNAP: merges two distant domains, hunts low-tension overlaps, proposes testable cross-ideas.
+
+Negotiation Coach SNAP: encodes playbooks + BATNA rules; simulates counterpart moves with superperm coverage.
+
+Hiring Calibrator SNAP: turns JD into structured competencies; consistent rubric + evidence mapping.
+
+Localization SNAP: style/terminology guides per locale; sheaf checks keep canonical facts intact.
+
+Meetings Autopilot SNAP: agenda → facilitation cues → decisions; outputs action items with owners/dates.
+
+Security Playbook SNAP: IR runbooks + detections; suggests next best action with evidence gates.
+
+Quant Research SNAP: hypothesis templating, factor library, backtest manifests (no live trading).
+
+Legal Clause Mapper SNAP: aligns contract clauses to a canonical library; flags conflicts/tension.
+
+Roadmap Synthesizer SNAP: merges PRDs, bug queues, support logs; proposes priority stacks with constraints.
+
+Knowledge Garden SNAP: continuously grows topic maps; prunes obsolete branches; publishes “state of X.”
+
+Ethics Governor SNAP: encodes affirmative rules beyond “do no harm”; blocks outputs violating stated norms.
+
+there are literally endless uses. this tool will eventually run most of the system when propegated with data.
+
+#fifth continuation#
+
+Let me explain how SAP works.
+Three layers 
+High- 
+Sentinel on this layer is a single operator. As are both other High level operators in SAP. It monitors all traffic for breach of rules or guidelines in any way, this level is focused on rules and governance of all other systems via upwards escalation via Porter and Arbiter judgements on issue at hand. 
+Arbiter on this level is the main determination for any error in any way. All reports end up with arbiter if we find any kind of non compliance, this operator has a "stop and deferr all" function thst is basically quarantine mode tk find the state issue thst caused the error(that is what troubleshooting this system will look like in the end) 
+The Porter is literally the only thing in the system allowed tl carry data. 
+
+Mid level- works the same. But these are assigned to family groups as mid mangers and escalation determination assessors. 
+Basic/base level, still the same, but this is a toggle that each and every system runs before ops to turn on and report up chain of command
+
+#explaining main thought tools#
+Thought tool suite(this whole section can be tweaked and refined ad needed.) 
+The working tools: 
+Think Tank: MoE via SNAP creations tailored to work field. All determination passes thinktank at all steps. This is handled by the next two ideas that are a set, but can be used independently. 
+DTT- Deploy to Test This is more of a concept than anything but does need function included. This idea is that ad soon as Think Tank decides kn any decision you test many variants of thst decision as the determination is being made, all viable candidates after deployment and working intended use testing go back into Think Tank to further inform and allow better solves. Once once final resolution is done. Deliver to AGRM. 
+That ties into this tool Assembly Line: a factory that for it its main purpose manages and takes the DTT workflow and breaks all items into microfucntions and atomic levels to test all parts, along side that it tests many current build ideas and future build ideas to implant when possible or upon next delivery inform the user. This is all housed, with Think Tank as the middle man via glass wall methods, in an always allocated independant and isolated sandbox with its own special SAP set up. (this is too heavy to call porter everytime. I imagine all mannequin agent that is just a screen of data fed to thinktank via state swapping as needed on the mannequin(technically you could do this to keep a backup of our live version of all systems ready to swap at all times in case of system failure)) When not in use. It can be used to sanity check systems, prototype a d hypothesis viable builds, pull and learn new data, craft more/better/hybrid MoE members and agent abilities, and save thst DNA for future use, and much more. 
+MORSR(Middle out, Ripple, SubRipple.) This tool can be used anywhere on anything. Its idea is: Take what im being pointed at, divide the space in half(or more segments if the sets are large) and start a scan to all 240 node neighbors. One step neighbors that are like are hot. One step that are not, are not. The further tbe step count the further in the shells you are, so you limit this by instead of continuing a single path, you the. So a sub ripple from the new location. Map all of this, locate the new middle. And do this until there is no more middle(dep chain ended) 
+Wave Pool: This concept started as imagining a 2d circle with two waves moving counter of each other that have different velocities. If you consider the waves as the full needed context of the 2s circle interaction, the location they meet would be informed of both datasets on full and in both directions of work. This can be expanded. Each "wave" is a snap of context about something. There can be any combination of waves created. You then partition the behind read-only walls until called for relevant context of said wave. You run it counter and at differing speeds in the same manner as the 2d circle, excite the operation cycle is the meeting point and is what is informed. This can then be updated with new context and hibernated again.
+
+all of this creates and feeds SNAPs at all points to appropriate agency
+
+#Safe cube and Universe breakdow#
+Not yet. I am almost done with everything.
+
+The last parts, at least for the main explanation are as follows
+
+"Safe Cube" and "Unvierse Architecture"
+
+To start. This has yet to be really tested and ks a concept fully.
+
+The "Safe Cube" is the representation of your best starting point in any request. 
+
+It is made up by defining universal space for things, I dont mind if we alter this to be a better full idea, but the concept is:
+
+Universal space is defined in certain way, as i imagine it to work. A NOTE; DATA CAN EXIST IN EXACT STATES IN NONE ONE MANY OR ALL LF THESE, WE DO NOT LIMIT DATA WE SIMPLY PLOT IT FOR STUDY.
+
+User Unvierse- This is everything "USER" uploads, opinions. Likes/dislikes, preferences etc, everything you know about current user(it matters as contextual evidence of meaning during interaction)
+
+Document Universe:
+Any and all file based content that is in current 
+
+Work Universe: this is all past, present, amd future work, including any and all orphaned and non explored ideas
+
+Governance Universe: All rules thst must be true to all.
+
+Beyond that, these universes should be clones of the full system, meaning yes. They all need lattice representation upon request.
+
+
+Now, the place where all of these Initerations  and bridges leads to make all Governance and User Universes rules and allowances and intention of request to be true is you best Safe cube of interactions. 
+
+I know that this isn't the common understanding, but I think Lie groups exist, and Weyl works so well is because this makes almost everything a single deterministic step by step process, and that this "safe cube" might should be considered contextual n=0.5-1, and i stead of the points starting outside the lattice, I believe it is the opposite. I believe it is natural organization at work, and those paths along those lines result in a baseline opinion or whatever is being studied and the more you veer off that main Weyl line you are in not fully mapped and know territory.
+
+There can be any number of Universes of any kinds created at will. These can be saved as hierarchial states, fed the SNAP Ops Agency, and used as need at request by the same agency to depoly properly
+
+
+#final clarifcation of original intent of idea#
+
+I have a couple more kind of important things.
+
+Using these tools you can create a very complete user profile that can be adjusted as you go. Im not saying to gather personal data or info, but you will be mich more aware of ykur user.
+
+(in my mind, as context shifts so does the topology of the lattice itself, you have to determine new n1 points. This applies across the board)
+
+That's just a process clarification.
+
+Some things I think are needed.
+
+Agent Center housing permanent agents that fill system need and report to the single other bot thst gets data, the Archivist, all learning related materials, aystem specs, definition, abbreviations, tool use, op guides, full snap backup in read only in a single file if possible, basically any and all long term data. This is handled by this Agent. It lives in a sublevel I think of as The Repository that is hard i/o gated and is basically our system backup data storage.
+
+Document parsing tool tailored tk how we operate using latest RAG concepts
+
+The build should contain everything I have been describing, as described. Unless your designs are better,  as long as the intent remains i dont care who wrote the code or had the final version of the idea, be it me or you.
+
+Every tool to the atomic level must be designed to be a call or class of its own for any other system to call, I assume snap and agents will solve this. I mean everything needs to be called by everything else. That is vital.
+
+Projector concept where the Repository sends ephemeral data on call if needed
+
+
+#extra context explainations#
+
+I have a theory that superpermutaitons sovlers can be used to aid advanced reasoing and determination via the lattice layout, SNAP, and allowing glyph based compression
+
+for this i want to refrence best of solving metods and create a method that fits this system.
+
+Lattices are not optional. Neither are shells or glyhp compression.
+
+SNAP, SAP, AGRM, MDHG, and the thought tools and their sandbox are the spine, everything else is assigned a family and individual assignment for SNAP purposes
+
+If you do an Initial set of greedy runs on the space focused only on plotting vector distances of nodes, it can give that both to the hash and agrm, and move on in stack more informed from cold start.
+
+I don't mind if you edit any system as long as design intent remains. if you change anything point it out in chat doc string and wherever else is needed
+
+The system is design to prefer very light, custom tailored to task operaiton, reporting to Agency controll center, and terminating over heavy process loops if we can.
+
+make MDHG still do everything it does now, but via toggle for normal inline/native hashing(still informing the MDHG building as it goes) for any task that is not extra than normal dimensions in scope( i think this will make a lot of process much faster)
+
+create a "fast path" universe, that must be evaluated against full path known determinations before use promotion. Meaninng, we gate the fast lane to meet quality standards of full, then we treat fast lane passed data as staged starting points for a forced full evaluation after fast lane work.
+
+
+As for SNAP as a whole. We need tools that allow it to custom define new and unique snap types and families for evaluation and deployment, for all systems. Meaning if any data in the system isnt classified into at least a family and type of snap for each part(can also be more snap qualified definitive terms for better stitched agecy tasks) our system defines and evaluates one for promotion. For example. You get a file that is creative writing. This need a fiction family tag immediately, as we dont want something that is fictional defining or influencing things that are real. Alternatively, that same file can live in the "culture" snap family, the Creative writing" snap family, the "user Universe" family, and even specif to content type snap classes. This should be all systems all parts, internal external and learned.
+
+Yes. And for the snap taxonomy problems. We should create a management suite that is responsible for taking all DNA and testing it for best use/layout/application, etc for that specific thing, as well as what types it is and isnt preferred with(not disallowong any, just listing more or less compatible, less compatible can be trained into a better hybrid version). Basically we want a full SNAP Ops Center that is always scrutinizing and sanity checking any and all snap results, communicating with the archivist along the way.
+
+we need to find or develop formuals for all process to use to govern the heuristic choices, and i believe the "golden family" should be treated as the formulaic drive+contextual need equivilancy+scaling complexity factors as n=x level increases
+
+The golden ration is naturally an organizing metric. As are all golden family tools. The idea was tk use the golden ration, any other golden family derivative useful, and any needed complexity and scaling components, and run was is existent to a single arm lf the argm sweep across the full sequence. The sweep is meant to determine the comments as a whole and as pieces of what its intersection point contains. If it contains 0 imperfections between that intersection and both the prior and the next, the no action is taken. My work shows that as the n levels grow, so does the dimensional space needed to accommodate the complexity. The formulas are meant to be both additive, cumulative and expentually compensation based as complexity grows. It is estimated a d shift upwards must occur ever 2 n value past 4(6,8,10,etc)
+
+All formulas and formulaic work should always be tested for refinement and cherry picked parts that are actually constraints rather than derivatives of actual imperical math meaning and use. The goal is to aid the search via informing not restrict by bias.
+
+while we work let's think about how to expand on the "universes" idea. I feel like we can fully clone any data we want into custom universes with snaps and then have built to task datasets we can apply as wanted/needed
+
+take it further by using a version of the mannequin that is toggle on/off but is the full lattice of the created universe. Toggle only when direct data review is needed, and done by slice rather than full lattice traversal? Meaning, in theory, you could pull a dataset from anywhere, even the web, and save its full composition as both new universe if needed/additional info in existing universe and as a copy of the full lattice but kn a dormant state that only calls of that data is touched. I feel like that would bee better resource wise.
+
+The system is called SnapLat.
+
+add a fresh start mechanic in place for across the board fresh start runs. This system is built on iteration, so you should maybe add a system to force iterative type operation, many sweeps. Many reviews. Aggregate and review for sanity. If good deliver, if not x more iterative scans occur.
+
+W5H- Weights by judging who what where when why and how in 5 dimensions with relevant universal context. These weights are controlled by Beacons and Sub Beacons meant to aid classification of data by tagging g high level items(beacons) and weights and low level items(sub beacons) and weights. Each time an item is called both overall and contextual weights are gathered analyzed reviewed against current of both and the updated if needed and applied
+
+With snap you can keep best of tech ops, strategy guides, how to/not to, know errors and error causes, etc etc. This can all be archivst based and projected. And can also be how training teaching learning refining and any other analytical task can become a snap also, as a play by play of everything that happened in x snap. Basically a way tk expand the glyphs compression to the snap ideas and snaps themeselvs
+
+I think maybe, having a a set of high mid and basic control agents always active and managing snaps would allow a system to step up into specificity of snap as needed. Meaning this: Work request enters SNAP Ops Center Initial need snap delivered Check for n=x level understanding, report back SOC(snap ops center) sends back specific snaps of specific data pulled from internal logs Repeat until full shelling for what we know about intake data has occurred. If not fully shelled at the point of fully saturated state, inform user of needed gap coverage material, and request permission to access outside sources for filling both our and this gap in data. All relevant snaps updated and re archived. End
+
+activly test universal nature of the n=5 data level as I have described it, and it being a logic, reason and complexity threshold existing due to the same complexity explosion of superpermutation. In humans this surfaces as self doubting decisions. In ai it is drift. In logistics it is improper assignment, etc etc. I argue thos is because all of the naturally occuring binary stances are impossible to validate in that environment. test this while building system
+
+when solving superpermutation, per seed, you always: start with the best perfect n=4(always the same as it is known and unbeatable), solve for n=x+cumulative(always must start solve with all previous best perfect results, this is what prodigal are meant to be.) During solve, dimensional divide the space as per the documents and our future findings.(this is to be done to all prodigals given, branching into as many solution paths as meet perfect standards) As you work all of this data Is recorded and housed in a specific sidecar mdhg storage. Eventually, after much time, you end up with a seed by seed playback of all.combinations of all n levels worked. This is all saved as a rolling seed-by-seed, action-by-action, master index. this can be expanded to tailor fit any field or data
+
+because it is set up in the way it is, you can theoretically treat any data use as "a superpermutation of nodes determination "
+
+expand the snap ops creating snaps method to all work, all tools, literally all operations, and make sure our tools to create and define and refine and stitch snaps are fully built to our needs currently. This will be the workhorse lf the system going forward
+
+Because my intention for those system is to leverage this massive dataset we hold to explore both good and bad options to expand all datasets held further. This means even bad data in one context can be good data in another and a bridge to another that is even better than the good data path in that universe. Its all about context defining everything. And bounds being perfect. If you know perfect context and perfect bounding you will always work within an n=1-4 perfect recall, pinned to the current context of all shells and being delivered any data a bridge may exist to. All of this is used to create new and unique options along with the beat existing options for any request. Basically we are trying to build a universally data and task request agnostic reasoning machine
+
+Can we build a "what is missing in any way" universe, mot referring to us building right now, but how the system runs. Every task gets evaluated before work of what is missing shell wise, what n level is achieved, what expertise is required. What system to be used, and any other relevant data. This lattice has major use case in finding bridges in existing data. We can make variations of this, different versions of what exactly we need, to allow even more counted data to show up as half bridges to connect to. The same van be done hypothetically occuromg scenarios and fully false versions of any idea to compare and review. I think this will really open things up for what the system is capable of.

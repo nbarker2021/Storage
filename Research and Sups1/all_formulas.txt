@@ -1,0 +1,100 @@
+/home/ubuntu/upload/log1.txt:79:→
+/home/ubuntu/upload/log1.txt:80:∞
+/home/ubuntu/upload/log1.txt:95: )(n→∞)
+/home/ubuntu/upload/log1.txt:104:∫
+/home/ubuntu/upload/log1.txt:106:∞
+/home/ubuntu/upload/log1.txt:111:∑
+/home/ubuntu/upload/log1.txt:113:=
+/home/ubuntu/upload/log1.txt:115:∞
+/home/ubuntu/upload/log1.txt:129:=
+/home/ubuntu/upload/log1.txt:142:∫ 
+/home/ubuntu/upload/log1.txt:144:∞
+/home/ubuntu/upload/log1.txt:149:k=0
+/home/ubuntu/upload/log1.txt:150:∑
+/home/ubuntu/upload/log1.txt:151:∞
+/home/ubuntu/upload/log1.txt:159: dx=Γ(s)ϕ(−s),
+/home/ubuntu/upload/log1.txt:184:≡
+/home/ubuntu/upload/log1.txt:200:≡
+/home/ubuntu/upload/log1.txt:216:≡
+/home/ubuntu/upload/log1.txt:224:p(5n+4)≡0(mod5),p(7n+5)≡0(mod7),p(11n+6)≡0(mod11)
+/home/ubuntu/upload/log1.txt:250:→
+/home/ubuntu/upload/log1.txt:251:∞
+/home/ubuntu/upload/log1.txt:267: )(n→∞),
+/home/ubuntu/upload/log1.txt:278:=
+/home/ubuntu/upload/log1.txt:279:∑
+/home/ubuntu/upload/log1.txt:281:=
+/home/ubuntu/upload/log1.txt:283:∞
+/home/ubuntu/upload/log1.txt:293:=
+/home/ubuntu/upload/log1.txt:301:∞
+/home/ubuntu/upload/log1.txt:309:∞
+/home/ubuntu/upload/log1.txt:315:=
+/home/ubuntu/upload/log1.txt:316:∑
+/home/ubuntu/upload/log1.txt:318:=
+/home/ubuntu/upload/log1.txt:320:∞
+/home/ubuntu/upload/log1.txt:332:=
+/home/ubuntu/upload/log1.txt:341:∞
+/home/ubuntu/upload/log1.txt:349:∞
+/home/ubuntu/upload/log1.txt:351:G(q)= 
+/home/ubuntu/upload/log1.txt:352:n=0
+/home/ubuntu/upload/log1.txt:353:∑
+/home/ubuntu/upload/log1.txt:354:∞
+/home/ubuntu/upload/log1.txt:367: = 
+/home/ubuntu/upload/log1.txt:371:∞
+/home/ubuntu/upload/log1.txt:378:∞
+/home/ubuntu/upload/log1.txt:383: ,H(q)= 
+/home/ubuntu/upload/log1.txt:384:n=0
+/home/ubuntu/upload/log1.txt:385:∑
+/home/ubuntu/upload/log1.txt:386:∞
+/home/ubuntu/upload/log1.txt:399: = 
+/home/ubuntu/upload/log1.txt:405:∞
+/home/ubuntu/upload/log1.txt:412:∞
+/home/ubuntu/upload/log1.txt:426:=
+/home/ubuntu/upload/log1.txt:427:∑
+/home/ubuntu/upload/log1.txt:429:=
+/home/ubuntu/upload/log1.txt:431:∞
+/home/ubuntu/upload/log1.txt:444:f(x)= 
+/home/ubuntu/upload/log1.txt:445:k=0
+/home/ubuntu/upload/log1.txt:446:∑
+/home/ubuntu/upload/log1.txt:447:∞
+/home/ubuntu/upload/log1.txt:457:∫
+/home/ubuntu/upload/log1.txt:459:∞
+/home/ubuntu/upload/log1.txt:472:=
+/home/ubuntu/upload/log1.txt:486:∫ 
+/home/ubuntu/upload/log1.txt:488:∞
+/home/ubuntu/upload/log1.txt:492: f(x)dx=Γ(s)ϕ(−s).
+/home/ubuntu/upload/log1.txt:496:Tau function and conjectures – Ramanujan introduced the tau-function $\tau(n)$ via the expansion of the modular discriminant $\Delta(q)=q\prod_{m\ge1}(1-q^m)^{24}=\sum_{n\ge1}\tau(n)q^n$. He discovered that $\tau(n)$ is multiplicative and satisfies a recurrence $\tau(p^{r+1})=\tau(p)\tau(p^r)-p^{11}\tau(p^{r-1})$. He famously conjectured that for primes $p$, $|\tau(p)|\le2p^{11/2}$ (now known as the Ramanujan conjecture, proved by Deligne in 1974). Mordell (1917) proved the multiplicativity and recurrence, and Deligne proved the growth bound
+/home/ubuntu/upload/log1.txt:501:. Equivalently, $\pi(R_n)-\pi(R_n/2)=n$. The first few Ramanujan primes are 2, 11, 17, 29, 41, …
+/home/ubuntu/upload/log1.txt:520:→
+/home/ubuntu/upload/log1.txt:521:∞
+/home/ubuntu/upload/log1.txt:530: (x→∞),
+/home/ubuntu/upload/log1.txt:533:=
+/home/ubuntu/upload/log1.txt:536:∏
+/home/ubuntu/upload/log1.txt:538:≡
+/home/ubuntu/upload/log1.txt:557:b= 
+/home/ubuntu/upload/log1.txt:564:p≡3(4)
+/home/ubuntu/upload/log1.txt:565:∏
+/home/ubuntu/upload/log1.txt:583:=
+/home/ubuntu/upload/log1.txt:588:∑
+/home/ubuntu/upload/log1.txt:590:=
+/home/ubuntu/upload/log1.txt:592:∞
+/home/ubuntu/upload/log1.txt:614: = 
+/home/ubuntu/upload/log1.txt:624:k=0
+/home/ubuntu/upload/log1.txt:625:∑
+/home/ubuntu/upload/log1.txt:626:∞
+/home/ubuntu/upload/log1.txt:658:=
+/home/ubuntu/upload/log1.txt:659:∑
+/home/ubuntu/upload/log1.txt:661:=
+/home/ubuntu/upload/log1.txt:663:∞
+/home/ubuntu/upload/log1.txt:664:∞
+/home/ubuntu/upload/log1.txt:694:f(a,b)= 
+/home/ubuntu/upload/log1.txt:695:n=−∞
+/home/ubuntu/upload/log1.txt:696:∑
+/home/ubuntu/upload/log1.txt:697:∞
+/home/ubuntu/upload/log1.txt:707:$\varphi(q)=f(q,q)=\sum q^{n^2}=(q^2;q^2)\infty(-q;q^2)\infty{}^2$ and
+/home/ubuntu/upload/log1.txt:708:$\psi(q)=f(q,q^3)=\sum_{n\ge0}q^{n(n+1)/2}=(q^2;q^2)\infty(-q;q)\infty$
+/home/ubuntu/upload/log1.txt:717:Ramanujan sums – Ramanujan studied finite trigonometric sums now called Ramanujan sums, $c_q(n)=\sum_{\substack{a,(q)=1}}e^{2\pi i a n/q}$. (Hardy later coined the name “Ramanujan sum”
+/home/ubuntu/upload/log1.txt:775:Taxicab numbers: These are the smallest integers expressible as sums of two positive cubes in n distinct ways—e.g., Taxicab(2) = 1729, Taxicab(3) = 87539319, and so on 
+/home/ubuntu/upload/log1.txt:860:The exact bridge: cubes → a shared quadratic split
+/home/ubuntu/upload/log1.txt:864:a^3+b^3 = (a+b)\,\underbrace{(a^2-ab+b^2)}_{\text{quadratic form}}.
+/home/ubuntu/upload/log1.txt:869:1729 &= 1^3+12^3 = (1+12)\,(1^2-1\cdot12+12^2) = 13\cdot133,\\
+/home/ubuntu/upload/log1.txt:870:     &= 9^3+10^3 = (9+10)\,(9^2-9\cdot10+10^2) = 19\cdot91.

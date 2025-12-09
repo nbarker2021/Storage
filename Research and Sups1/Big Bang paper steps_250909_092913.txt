@@ -1,0 +1,109 @@
+Here is the stepwise expansion doc. Each step has: goal, formalism, proof/derivation target, pen-and-paper demo, dataset test, pass/fail.
+S0. Assumptions & Notation
+• Symbols: datum ; contradiction set ; count ; ledger entropy ; unit contradiction energy ; effective temperature .
+• Pose group .
+• Parity lanes ; snap ; golden forcing ; E8 lattice .
+Pass: all later steps use only these.
+S1. CQE as memory equivalence in D
+Goal. Define CQE as law over bounded ledgers.
+Formalism.
+• Ledger on -D cell complex; admissible moves .
+• Edge-complete: iff any admissible move is non-increasing in and -class is connected by such moves.
+Target lemma. If and , there exists s.t. closure requires embedding to .
+Pen-paper. 4×4 grid with parity lanes; enumerate moves; show deadlock in 2D when all octads occupied.
+Pass/Fail. Existence of deadlock example that cannot close in 2D but closes in 3D+.
+S2. Proto-simulation as geometry-filled 2D
+Goal. Exhibit saturated 2D ledger.
+Formalism.
+• Tiling with eight faces per cell; all faces occupied .
+• No orthogonal parity to cancel all crossings in 2D.
+Derivation. Show parity equations over unsatisfiable (rank deficiency).
+Pen-paper. Draw 8-ray star per site; attempt global 2-coloring parity; derive contradiction.
+Pass/Fail. Linear system over inconsistent in 2D instance; becomes consistent after lift (next step).
+S3. Necessity of 8D containment; minimal host 
+Goal. Prove minimal parity host is .
+Formalism.
+• Need even, unimodular, positive-definite lattice for parity, decoding, bounded energy.
+• Classification: unique in rank 8 .
+Construction.
+• Define embedding , coefficients .
+• Forced projection: .
+Pen-paper. List 8 simple roots; map a 2D deadlock pattern to root coefficients; show integrality only in rank 8.
+Pass/Fail. Produce explicit 2D pattern that embeds integrally in but in no lower-rank even unimodular lattice.
+S4. Big Bang as observer snap
+Goal. Define BB as first observation of all edges.
+Formalism.
+• Conservation: , with , .
+• Split :
+\Delta C_{\rm loc}<0,\ \Delta\log\Omega_{\rm loc}<0;\quad \Delta C_{\rm glob}\le0,\ \Delta\log\Omega_{\rm glob}>0. 
+Pen-paper. Small 3-cell example; compute per move; verify conservation.
+Pass/Fail. Step-wise ledger where local collapse + global expansion satisfy conservation.
+S5. φ-paced inflation law
+Goal. Derive contradiction decay schedule.
+Formalism.
+C(t_{k+1})=C(t_k)\big(1-\kappa\phi^{-k}\big),\quad t_k=\lfloor k\phi\rfloor,\ \phi=\tfrac{1+\sqrt5}{2}. S_{\rm glob}(t_k)=S_0+\sum_{j\le k}\eta\log(1+\phi^{j}). 
+Pen-paper. Compute first 6 steps numerically on a 4×4 ledger; plot by hand.
+Pass/Fail. Monotone , super-log early observed.
+S6. Projection from 8D to observed 3D
+Goal. Show why observed rest is 3D.
+Formalism.
+• Triad closure: Observer–Observed–Relation ⇒ minimal projection dimension .
+• Define slice map as Weyl-equivariant 3-frame selection; rest states are -images.
+Pen-paper. Choose an explicit 3-frame in ; project 10 roots; check parity preservation.
+Pass/Fail. Parity operations commute with on worked set.
+S7. Energetics & entropy estimation from data
+Goal. Show how to fit .
+Formalism.
+• Cost:
+\mathcal J=\chi^2_{H(z)}+\chi^2_{P(k)}+\chi^2_{C_\ell} 
+Dataset test. Use public summaries (Hubble history, BAO , CMB ); specify bins, likelihoods.
+Pass/Fail. Consistent parameter triplet yielding good joint fit (AIC/BIC improved vs baseline without φ-law).
+S8. Observable predictions and falsifiers
+Goal. Make crisp tests.
+Predictions.
+• CMB phases: cluster near .
+• LSS octant anisotropy: steerable wavelet excess at .
+• BAO sidebands: residual peaks at .
+• EB cross: small nonzero with fixed sign.
+Pen-paper. Toy spherical harmonic with 5 modes; compute phase histogram; show golden peaks.
+Pass/Fail. Detection thresholds after trials; any two nulls → reject.
+S9. Human-scale natural demos (memory ↔ geometry)
+Goal. Ground in everyday environment.
+Demos.
+• Sand ripple ledger: draw 4×4 parity lanes; introduce contradiction; apply tile-flip; observe global smoothing.
+• Stone stacking: triad of supports; add fourth, force φ-spiral placement to avoid contradiction; sketch.
+Pass/Fail. Reproducible by a reader with paper, pencil, small props.
+S10. Worked 2D→8D→3D example (complete)
+Goal. End-to-end miniature Big Bang.
+Steps.
+• 2D saturated 4×4 grid, .
+• Embed to via explicit on chosen simple roots.
+• Apply three φ-steps; update .
+• Project to 3D frame; show final parity-lawful configuration.
+Pass/Fail. All moves ledgered; conservation holds; final state contradiction-free in 3D slice.
+S11. Cross-domain sanity checks
+Goal. Same mechanics elsewhere.
+Checks.
+• DNA 8-mer fold ledger reproduces helical pitch class.
+• superpermutation: 1 palindromic + 7 invariant branches recovered.
+• 3-body octad walk: coherent revectoring under face rotation; momentum parity respected.
+Pass/Fail. Each demo closes with ledger reproducibility.
+S12. Packaging & reproducibility
+Goal. Make it audit-ready.
+Artifacts.
+• Definitions & lemmas (S1–S6) with numbered equations.
+• Hand-ledger worksheets (grids, octads, root lists).
+• Test protocols (S7–S8) with acceptance criteria.
+• Full worked example (S10) pages.
+• “How-to” appendix for human-scale demos (S9).
+Pass/Fail. A third party can reproduce S10 from the worksheets alone.
+Minimal equations to include in the long paper
+• Edge completeness; 2) Conservation: ;
+• φ-paced law; 4) projection ;
+• Slice commuting with parity.
+What to draft next (in order)
+• Full proofs for S1–S3 with explicit small matrices and the minimality citation.
+• Conservation worked tables (S4) and φ-schedule numeric table (S5).
+• The complete S10 ledgered example pages.
+• The dataset test protocols (S7–S8) with thresholds.
+If you want, I can now expand S1–S3 into full text with equations and the S10 end-to-end ledger as the first appendix.

@@ -1,0 +1,65 @@
+Contents
+
+Main_Universal_Law
+
+QCE_Universal_Law.pdf
+
+Tier_A_IRL_Claims
+(links framework to physical/experimental changes)
+
+Entropy_Localization.pdf
+
+Least_Action_Equivalence.pdf
+
+Lattice_Universality.pdf
+
+Tier_B_Framework
+(core mechanics of the system)
+
+BRS_Best_Representation_State.pdf
+
+BRM_Base_80_Mirror.pdf
+
+AWB_Compression.pdf
+
+UDMS_Duplex.pdf
+
+Tier_C_Technical_Support
+
+CRT_Defect_Prime.pdf
+
+Hodge_Entropy_Ledger.pdf
+
+ALENA_Parity.pdf
+
+Tier_D_Case_Studies
+
+Quantum_Pinning.pdf
+
+DNA_Neural_Networks.pdf
+
+Topological_Photonic_Coupling.pdf
+
+Tier_E_Appendices
+(earlier or related whitepapers integrated)
+
+LSDT_Simulations.pdf
+
+PURR_Units.pdf
+
+CAT_Theory.pdf
+
+Sacred_Numerology.pdf
+
+RAG_Decks
+(curated reference decks)
+
+RAG_Master_IRL.json
+
+RAG_Framework.json
+
+RAG_Technical.json
+
+RAG_Case_Studies.json
+
+Each file right now is a placeholder (so you’ll be able to open them, but they just say “placeholder for X”). The structure is locked in, so when we begin drafting or importing real text/math, everything can drop into the right folder.

@@ -1,0 +1,1302 @@
+A. What “braiding” means in this system (one paragraph)
+
+A braid is a certified, two-strand (or k-strand) interleaving of lawful quad sequences whose helicity (signed phase slope) is coherent, whose invariants (ALT and W4∨Q8) remain satisfied at every step, and whose per-modulus residues (3/5/9/11/13/17) line up so that a CRT lift yields a single global representative with bounded phase spend. In our pipeline, braids seed at n=3 (triads), legalize at n=4 (projector), stabilize by per-modulus checks, and certify when all constraints pass; every nonfree twist/splice emits receipts. Mature n=8 bonds that are equivalent to a certified braid necessarily exhibit a two-helix normal form.
+
+B. Objects and invariants (recap + braid-specific)
+B.1 Alphabet & quad
+
+Digits: 
+Σ
+=
+{
+1
+,
+2
+,
+3
+,
+4
+}
+Σ={1,2,3,4} (base-4).
+
+Quad: 
+𝑞
+=
+(
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+)
+∈
+Σ
+4
+q=(a,b,c,d)∈Σ
+4
+.
+
+B.2 Lawfulness & phase
+
+ALT: parity alternation across positions.
+
+W4: 
+𝑎
++
+𝑏
++
+𝑐
++
+𝑑
+≡
+2
+(
+m
+o
+d
+4
+)
+a+b+c+d≡2(mod4).
+
+Q8: 
+𝑎
+2
++
+𝑏
+2
++
+𝑐
+2
++
+𝑑
+2
+≡
+0
+(
+m
+o
+d
+8
+)
+a
+2
++b
+2
++c
+2
++d
+2
+≡0(mod8).
+
+LAWFUL(q): ALT ∧ (W4 ∨ Q8).
+
+Phase: 
+𝐻
+8
+(
+𝑞
+)
+=
+(
+𝑎
+−
+𝑑
+)
++
+2
+(
+𝑏
+−
+𝑐
+)
+ 
+(
+ 
+m
+o
+d
+ 
+ 
+8
+)
+H8(q)=(a−d)+2(b−c) (mod 8).
+
+Phase step: 
+Δ
+𝐻
+8
+𝑖
+=
+(
+𝐻
+8
+(
+𝑞
+𝑖
++
+1
+)
+−
+𝐻
+8
+(
+𝑞
+𝑖
+)
+)
+ 
+m
+o
+d
+ 
+8
+ΔH8
+i
+	​
+
+=(H8(q
+i+1
+	​
+
+)−H8(q
+i
+	​
+
+))mod8.
+
+B.3 Strands, paths, and time
+
+A strand 
+𝑆
+S is an ordered sequence of lawful quads 
+𝑆
+=
+⟨
+𝑞
+0
+,
+𝑞
+1
+,
+…
+,
+𝑞
+𝑇
+⟩
+S=⟨q
+0
+	​
+
+,q
+1
+	​
+
+,…,q
+T
+	​
+
+⟩.
+
+The time index is the path index 
+𝑖
+i.
+
+The two-strand configuration is an ordered pair 
+(
+𝑆
+(
+𝐴
+)
+,
+𝑆
+(
+𝐵
+)
+)
+(S
+(A)
+,S
+(B)
+) of strands defined over the same index set.
+
+B.4 Free symmetries (always free; I, M, D, V)
+
+You may apply them per-quad or per-strand without cost; any induced phase change is receipted.
+
+C. How braids form by level (n=2 → n=8)
+C.1 n=2 — Pair mapping (seeding the lane lines)
+
+Map any space with pairs 
+(
+𝑎
+,
+𝑏
+)
+(a,b), enforcing a guard (parity, monotone, type).
+
+Mirror gives reverse edges for free, so you have two “lanes” in embryo: forward and reverse.
+
+Output of n=2: A connected edge set with local residues (e.g., 
+𝑟
+3
+=
+𝑎
++
+2
+𝑏
+(
+m
+o
+d
+3
+)
+r
+3
+	​
+
+=a+2b(mod3), 
+𝑟
+5
+=
+𝑎
++
+2
+𝑏
+(
+m
+o
+d
+5
+)
+r
+5
+	​
+
+=a+2b(mod5)). These residues become the lane markers for later braid checks.
+
+C.2 n=3 — Triads (where braids actually start)
+
+Build triples 
+𝑡
+=
+(
+𝑎
+,
+𝑏
+,
+𝑐
+)
+t=(a,b,c). Most choices happen here; introduce entropy budgeting.
+
+When two near-equal routes exist, keep two top strands (proto-braid) if they satisfy proto-braid predicates:
+
+Per-modulus alternation/coherence (residues agree with an alternating pattern),
+
+Consistent local helicity sign (see §D.1),
+
+No guard violations.
+
+Receipt: triad_select with decision:"keep_top2" and entropy_spent.
+
+C.3 n=4 — The projector (legalize, then canonicalize)
+
+Run CLTMP on each sliding quad.
+
+Prefer phase-preserving solutions; if unavoidable, receipt the ΔH8.
+
+The two proto-strands are now two lawful symmetry images that interleave step by step.
+
+Key: after legalization, we can talk about signed crossings and helicity precisely.
+
+C.4 n=5–7 — Local capsules & batching (stability scaffolding)
+
+Use subadditivity to bundle local fixes.
+
+Smooth boundary receipts across batches; push heavy checks to aggregate stage.
+
+C.5 n=8 — Global geometry & bond equivalence
+
+Embed strands in E₈ space; check nearest-point snaps and root-path distances.
+
+If two strands live on the same root-path up to free symmetries and satisfy per-modulus braid checks, they define a bond-equivalent two-helix.
+
+Certified bonds inherit the dual-helix motif: interleaved symmetry images with coherent helicity.
+
+D. Helicity, crossings, and braid words
+D.1 Helicity (discrete)
+
+Define signed helicity increment per step:
+
+ℎ
+𝑖
+=
+sgn
+⁡
+(
+[
+(
+𝐻
+8
+(
+𝑞
+𝑖
++
+1
+)
+−
+𝐻
+8
+(
+𝑞
+𝑖
+)
+)
+]
+8
+)
+⋅
+𝑑
+𝐿
+(
+𝑞
+𝑖
+,
+𝑞
+𝑖
++
+1
+)
+h
+i
+	​
+
+=sgn([(H8(q
+i+1
+	​
+
+)−H8(q
+i
+	​
+
+))]
+8
+	​
+
+)⋅d
+L
+	​
+
+(q
+i
+	​
+
+,q
+i+1
+	​
+
+)
+
+with 
+sgn
+⁡
+(
+0
+)
+=
+0
+sgn(0)=0 and distances in Lee metric.
+Strand helicity: 
+𝐻
+(
+𝑆
+)
+=
+∑
+𝑖
+=
+0
+𝑇
+−
+1
+ℎ
+𝑖
+H(S)=∑
+i=0
+T−1
+	​
+
+h
+i
+	​
+
+.
+Braid helicity: 
+𝐻
+b
+r
+a
+i
+d
+=
+𝐻
+(
+𝑆
+(
+𝐴
+)
+)
++
+𝐻
+(
+𝑆
+(
+𝐵
+)
+)
+H
+braid
+	​
+
+=H(S
+(A)
+)+H(S
+(B)
+).
+
+Coherent helicity ⇒ the sign of 
+ℎ
+𝑖
+(
+𝐴
+)
+h
+i
+(A)
+	​
+
+ and 
+ℎ
+𝑖
+(
+𝐵
+)
+h
+i
+(B)
+	​
+
+ is the same or both zero for almost all steps (kinks receipted).
+
+D.2 Crossings (over/under, signed)
+
+At index 
+𝑖
+i, define relative phase 
+Δ
+𝑖
+=
+[
+(
+𝐻
+8
+(
+𝑞
+𝑖
+(
+𝐴
+)
+)
+−
+𝐻
+8
+(
+𝑞
+𝑖
+(
+𝐵
+)
+)
+)
+]
+8
+Δ
+i
+	​
+
+=[(H8(q
+i
+(A)
+	​
+
+)−H8(q
+i
+(B)
+	​
+
+))]
+8
+	​
+
+.
+A crossing occurs when 
+Δ
+𝑖
+Δ
+i
+	​
+
+ and 
+Δ
+𝑖
++
+1
+Δ
+i+1
+	​
+
+ straddle a threshold (e.g., pass through 0 or 4 mod 8).
+
+Sign of crossing = 
+sgn
+⁡
+(
+(
+Δ
+𝑖
++
+1
+−
+Δ
+𝑖
+)
+8
+)
+sgn((Δ
+i+1
+	​
+
+−Δ
+i
+	​
+
+)
+8
+	​
+
+).
+
+Over/under is determined by which strand takes the phase-increasing step at that index.
+
+Log crossing: {i, sign: +1|-1, over: "A"|"B"}.
+
+D.3 Linking, twist, writhe (discrete avatars)
+
+Linking number (Lk): half the algebraic sum of signed crossings in a window:
+
+L
+k
+=
+1
+2
+∑
+𝑖
+s
+i
+g
+n
+(
+𝑖
+)
+.
+Lk=
+2
+1
+	​
+
+i
+∑
+	​
+
+sign(i).
+
+Writhe (Wr): sum of signed crossings without pairing.
+
+Twist (Tw): normalized cumulative phase change:
+
+T
+w
+=
+1
+8
+∑
+𝑖
+[
+(
+Δ
+𝐻
+8
+𝑖
+(
+𝐴
+)
++
+Δ
+𝐻
+8
+𝑖
+(
+𝐵
+)
+)
+]
+8
+.
+Tw=
+8
+1
+	​
+
+i
+∑
+	​
+
+[(ΔH8
+i
+(A)
+	​
+
++ΔH8
+i
+(B)
+	​
+
+)]
+8
+	​
+
+.
+
+Helicity–Călugăreanu relation (discrete flavor): use as a check, not an equality:
+
+W
+r
++
+T
+w
+≈
+?
+L
+k
+(flag deviations with receipts)
+Wr+Tw
+≈
+?
+Lk(flag deviations with receipts)
+
+This gives a topology-aware diagnostic for braid stability.
+
+E. Per-modulus braid predicates (3/5/9/11/13/17)
+
+For each modulus 
+𝑚
+m, compute on each strand 
+𝑆
+S:
+
+Linear residue path 
+𝑅
+𝑚
+(
+1
+)
+(
+𝑆
+)
+=
+⟨
+𝑎
++
+2
+𝑏
++
+3
+𝑐
++
+4
+𝑑
+‾
+⟩
+R
+m
+(1)
+	​
+
+(S)=⟨
+a+2b+3c+4d
+	​
+
+⟩.
+
+Phase residue path 
+𝑅
+𝑚
+(
+𝐻
+)
+(
+𝑆
+)
+=
+⟨
+(
+𝑎
+−
+𝑑
+)
++
+2
+(
+𝑏
+−
+𝑐
+)
+‾
+⟩
+R
+m
+(H)
+	​
+
+(S)=⟨
+(a−d)+2(b−c)
+	​
+
+⟩.
+
+Quadratic residue path 
+𝑅
+𝑚
+(
+2
+)
+(
+𝑆
+)
+=
+⟨
+𝑎
+2
++
+𝑏
+2
++
+𝑐
+2
++
+𝑑
+2
+‾
+⟩
+R
+m
+(2)
+	​
+
+(S)=⟨
+a
+2
++b
+2
++c
+2
++d
+2
+	​
+
+⟩.
+
+Orientation symbol 
+𝜒
+𝑚
+(
+𝑆
+)
+=
+⟨
+(
+𝑅
+𝑚
+(
+1
+)
+(
+𝑞
+𝑖
+)
+𝑚
+)
+⟩
+χ
+m
+	​
+
+(S)=⟨(
+m
+R
+m
+(1)
+	​
+
+(q
+i
+	​
+
+)
+	​
+
+)⟩ for odd prime 
+𝑚
+m.
+
+Predicate @ m (must pass for both strands):
+
+Lipschitz: 
+𝑅
+𝑚
+(
+1
+)
+R
+m
+(1)
+	​
+
+ changes by ≤L per step (typically L=1 or 2).
+
+Monotone or few-kink: 
+𝑅
+𝑚
+(
+𝐻
+)
+R
+m
+(H)
+	​
+
+ is monotone or has ≤K signed kinks, each receipted.
+
+Quadratic stability: 
+𝑅
+𝑚
+(
+2
+)
+R
+m
+(2)
+	​
+
+ stays in a small allowed set (often {0}).
+
+Constant orientation: 
+𝜒
+𝑚
+χ
+m
+	​
+
+ is constant (or flips only at receipted crossings).
+
+Inter-strand coherence: 
+𝑅
+𝑚
+(
+1
+)
+R
+m
+(1)
+	​
+
+ for A and B interleave with bounded gap; 
+𝑅
+𝑚
+(
+𝐻
+)
+R
+m
+(H)
+	​
+
+ maintain consistent sign relation.
+
+Receipt if violated: braid_penalty@m with magnitude equal to minimal fixes required (in Lee units or kink count).
+
+F. CRT braid lift (global coherence)
+
+Gather per-modulus observations for both strands and perform a joint CRT lift:
+
+Solve for global class 
+𝐴
+(
+m
+o
+d
+𝑀
+)
+A(modM) and global phase 
+𝐻
+(
+m
+o
+d
+𝑀
+)
+H(modM) with 
+𝑀
+=
+∏
+𝑚
+M=∏m.
+
+Choose representative 
+𝑞
+∘
+q
+∘
+ minimizing Lee distance to both strands’ local anchors and minimizing 
+∣
+Δ
+𝐻
+8
+∣
+∣ΔH8∣ (reduced mod 8).
+
+Ensure the lifted representative’s quadratic residue agrees with observed 
+𝑅
+𝑚
+(
+2
+)
+R
+m
+(2)
+	​
+
+ (else price with penalties).
+
+Emit a combined braid-CRT receipt with per-modulus penalties and an overall braid status.
+
+Outcome: If penalties are within budgets and predicates pass, set status:"certified".
+
+G. Two-strand normal form & bond equivalence (why double-helix emerges)
+
+Theorem (operational).
+If two lawful strands pass all per-modulus braid predicates and the CRT braid lift succeeds with bounded ΔH8, then there exists a canonical two-strand representation (free symmetries applied) such that:
+
+signed crossings alternate with stable sign,
+
+𝑅
+𝑚
+(
+𝐻
+)
+R
+m
+(H)
+	​
+
+ of A and B differ by a fixed offset mod 
+𝑚
+m,
+
+the E₈ root-path distance between strands is bounded and periodic,
+
+and the ledger contains no unresolved kinks after smoothing windows of size ≥ 4.
+
+Corollary. Any n=8 bond equivalent to such a certified braid will display a double-helix interleaving in the canonical representation (modulo free symmetries), with helicity matched to the ledger’s sign.
+
+H. Operators on braids (actions → checks)
+
+These appear as predicates with receipts, never bare procedures.
+
+splice(SA, SB, i) — join two strands at index 
+𝑖
+i.
+
+Check: continuity in 
+𝑅
+𝑚
+(
+1
+)
+R
+m
+(1)
+	​
+
+ & 
+𝑅
+𝑚
+(
+𝐻
+)
+R
+m
+(H)
+	​
+
+; no ALT break; ΔH8 bounded.
+
+Receipt: splice with residuals.
+
+twist(S, k) — apply k units of phase twist.
+
+Check: Tw increases by 
+𝑘
+k, Lk constant unless crossings introduced.
+
+Receipt: phase_change magnitude k; budgeted.
+
+rephase(SA,SB,θ) — shift relative phase by θ mod 8.
+
+Check: inter-strand coherence remains; if it flips helicity, require governed exception.
+
+Receipt: rephase with ΔH8=θ.
+
+swap(SA,SB) — swap strand labels (free symmetry).
+
+Check: no ledger cost; crossing over/under signs invert accordingly.
+
+Receipt: free move recorded.
+
+decimate(S, r) — keep every r-th step (coarse-grain).
+
+Check: resampled braid still passes predicates (with scaled Lipschitz).
+
+Receipt: coarse_grain with r, predicate summary.
+
+merge(SA,SB→Sc) — collapse two-strand braid to a single canonical strand.
+
+Check: Sc’s H8 and residues equal the CRT representative trajectory; λ non-increasing.
+
+Receipt: braid_collapse.
+
+I. Error handling, noise, and robustness
+
+Missing steps: gap fill with minimal Lee moves; emit gap_fill receipts; kinks priced.
+
+Conflicting moduli: prefer low primes (3,5) as deciders; higher primes get penalties, not vetoes.
+
+Phase drift: re-anchor at the nearest phase modulo 8; log reanchor with ΔH8.
+
+Guard violations: never silently fix ALT; use projector; if W4 and Q8 both fail, perform free symmetries first, then minimal fixes with receipts.
+
+Tolerance bounds (recommended):
+
+Per-step Lee ≤ 2; kinks per 100 steps ≤ 3; ΔH8 per 100 steps ≤ 8 unless governed.
+
+J. Metrics & diagnostics
+
+Braid score 
+𝐵
+=
+B= weighted sum of (few penalties, high coherence, low ΔH8).
+
+Helicity stability index 
+𝐻
+𝑠
+=
+1
+−
+#
+kinks
+𝑇
+H
+s
+	​
+
+=1−
+T
+#kinks
+	​
+
+.
+
+Modulus pass-rate 
+𝑃
+𝑚
+=
+#
+steps passing at 
+𝑚
+𝑇
+P
+m
+	​
+
+=
+T
+#steps passing at m
+	​
+
+.
+
+CRT penalty budget 
+𝐶
+=
+∑
+𝑚
+penalty
+(
+𝑚
+)
+C=∑
+m
+	​
+
+penalty(m).
+
+Topological check residual 
+𝐸
+t
+o
+p
+=
+∣
+W
+r
++
+T
+w
+−
+L
+k
+∣
+E
+top
+	​
+
+=∣Wr+Tw−Lk∣.
+
+K. Receipts (schemas)
+K.1 Proto-braid (n=3)
+{
+  "level": 3,
+  "op": "triad_select",
+  "decision": "keep_top2",
+  "entropy_spent": 0.73,
+  "candidates": [[a,b,c1],[a,b,c2],...],
+  "proto_braid_predicate": {"mod3": true, "mod5": true}
+}
+
+K.2 Braid certification (n=4..8)
+{
+  "level": 4,
+  "op": "braid_certify",
+  "strand_A": { "len": T, "H_series": [...], "R1": {"3":[...], "5":[...]}, "R2": {"3":[...], "5":[...]}, "chi": {"11":[...], "13":[...], "17":[...]} },
+  "strand_B": { ... },
+  "crossings": [{"i":17,"sign":"+","over":"A"}],
+  "helicity": {"A": HA, "B": HB, "coherent": true },
+  "per_modulus": {"3": "pass", "5": "pass", "9":"pass", "11":"pass", "13":"pass", "17":"pass"},
+  "CRT": { "A_mod_M": A, "H_mod_M": H, "delta_phase_mod8": 0, "penalties": {"13": 0} },
+  "topology": {"Wr": wr, "Tw": tw, "Lk": lk, "residual": 0},
+  "status": "certified",
+  "manifest": "sha256:..."
+}
+
+K.3 Penalties & governed exceptions
+{
+  "level": 4,
+  "op": "braid_penalty@13",
+  "magnitude": 1,
+  "reason": "R2 instability at index 42",
+  "budget_after": {"phase": 6, "entropy": 4}
+}
+
+L. Algorithms (pseudocode)
+L.1 Proto-braid detection at n=3
+def proto_braid_from_triples(triples, beta=2.0):
+    # triples: [(a,b,c_i)...] sliding window
+    candidates = score_candidates(triples, beta)  # exp(-beta * expected_n4_cost)
+    top2 = top_k(candidates, k=2)
+    if per_modulus_predicates_ok(top2, moduli=[3,5]):
+        return {"keep_top2": True, "entropy_spent": entropy(candidates)}
+    return {"keep_top2": False}
+
+L.2 Braid certification at n=4
+def certify_braid(strandA, strandB, moduli=[3,5,9,11,13,17]):
+    # 1) legality assumed (projected)
+    if not helicity_coherent(strandA, strandB): return fail("helicity")
+    per_mod = {m: braid_predicate_modulus(strandA, strandB, m) for m in moduli}
+    if not all(per_mod.values()): return fail(per_mod)
+    crt = joint_crt_lift(strandA, strandB, per_mod)
+    if crt["delta_phase_mod8"] > bound: return fail("phase spend")
+    topo = topology_checks(strandA, strandB)
+    return success(per_mod, crt, topo)
+
+L.3 Crossing detection & metrics
+def crossings(strandA, strandB):
+    X = []
+    for i in range(len(strandA)-1):
+        d0 = (H8(strandA[i]) - H8(strandB[i])) % 8
+        d1 = (H8(strandA[i+1]) - H8(strandB[i+1])) % 8
+        if straddles_threshold(d0,d1):  # e.g., passes through 0 or 4
+            sign = sgn((d1 - d0) % 8)
+            over = "A" if deltaH8(strandA,i) > deltaH8(strandB,i) else "B"
+            X.append({"i": i, "sign": "+" if sign>0 else "-", "over": over})
+    return X
+
+M. Scale behavior: “every level, every modulation”
+
+Claim (system-internal). If a two-strand braid is certified at base moduli (3,5), then—subject to bounded penalties—it persists at higher moduli (9,11,13,17) after projector legalization, because:
+
+ALT and W4∨Q8 clamp local parity/energy.
+
+Phase 
+𝐻
+8
+H8 controls allowed kinks.
+
+CRT lift forces a single address class; extra moduli only refine the address, they don’t change the interleaving pattern—only price it when they disagree.
+
+What you observe: the same dual-helix motif reappears at every modulus checkpoint, with the same helicity sign, up to receipted corrections.
+
+N. From braid to bond (and up)
+
+A bond is a braid whose CRT and E₈ checks have no open receipts and whose 
+𝜆
+λ-energy is locally minimal. Bonds can be composed (capsule merges) and lifted to n=8 where E₈ geometry certifies root-path bridges between bonds. Bond equivalence (same root-path up to free symmetries) guarantees the double-helix appearance in canonical form.
+
+O. Interop with your speculative n=8→n=16 transfer
+
+The Taxicab ∩ Cabtaxi ∩ Solve crossing (from your theory) is a braid-rich point: multiple cube decompositions give multiple lawful routes to the same address.
+
+When at least two positive and two signed decompositions each yield certified two-strand braids that share the same E₈ class, we promote to a transfer event.
+
+The factoradic (μ→!) step then chooses a canonical permutation for higher-level weaving; helicity and braid coherence are required to not worsen (or must be receipted).
+
+(This handoff is outside “pure braiding,” but you see how the braid certification gates it.)
+
+P. Worked end-to-end micro-trace (toy)
+
+n=3: Triples around (2,4,1) yield two near-equal options; keep two strands.
+
+n=4: Projector legalizes both.
+
+Strand A: ΔH8 series [+1, +1, 0, +1, ...]
+
+Strand B: ΔH8 series [+1, 0, +1, +1, ...]
+Helicity coherent (+ overall); crossings detected at i=7, 19 (both +).
+
+Moduli: At m∈{3,5,9,11,13,17}, residue paths pass Lipschitz/monotone/χ checks.
+
+CRT: Address A_mod_M consolidates; ΔH8_mod8=0; no penalties.
+
+Topology: Wr+Tw ≈ Lk within tolerance.
+
+Status: certified; bond equivalence established with a known class; dual-helix visible in canonical symmetry image.

@@ -1,0 +1,96 @@
+Cartan Quadratic Equivalence (QCE) — Project Index
+
+This index tracks all whitepapers, decks, and artifacts.
+Each entry shows Tier → Title → Scope → Status.
+
+Stage 1 — Anchor Claims (Tier A + B)
+
+These are the foundation; they must be filled first.
+
+Tier A (IRL Anchor Laws)
+
+Entropy Localization — Maps entropy to boundary-only, aligns with thermodynamic law revision. → Status: placeholder
+
+Least Action Equivalence — Shows least-action savings = entropy-energy equivalence. → Status: placeholder
+
+Lattice Universality — Embeds E8/Leech as universal packing media; links to experimental analogues. → Status: placeholder
+
+Tier B (Framework Mechanics)
+
+BRS (Best Representation State) — Dimensional match, AWB cancellation, Hodge split minimality. → Status: draft in progress
+
+BRM (Base-80 Mirror) — CRT(16,5), radix mirror regime; base-80 as natural audit radix. → Status: draft in progress
+
+AWB Compression — Active Workbody = free algebra → quotient; records structural dividend. → Status: placeholder
+
+UDMS Duplex — Palindromic dual symmetry gates; escrow parity across states. → Status: placeholder
+
+Stage 2 — Technical Structure (Tier C)
+
+Support mechanisms that keep the framework consistent.
+
+CRT Defect & Primes — Coprime channel recomposition; defect receipts; ties to code-lattice methods. → Status: placeholder
+
+Hodge Entropy Ledger — Exact/coexact/harmonic decomposition; entropy ledgerization. → Status: placeholder
+
+ALENA Parity — Code-syndrome parity checks at ports; aligns with Construction A/B (E8, Leech). → Status: placeholder
+
+Stage 3 — Case Studies (Tier D)
+
+Direct experimental analogues; each one a paper.
+
+Quantum Pinning — Flux pinning, coherence, lattice-bound stability. → Status: placeholder
+
+DNA Neural Networks — Base-4 encoding as biological implementation; direct mirror of QCE framework. → Status: placeholder
+
+Topological Photonic Coupling — NV center + topological waveguide = natural chiral audits. → Status: placeholder
+
+Stage 4 — Appendices (Tier E)
+
+Legacy or related whitepapers tied in for completeness.
+
+LSDT Simulations — Layered simulation model; early analogues of AWB. → Status: placeholder
+
+PURR Units — Primitive units; modular expansions. → Status: placeholder
+
+CAT Theory — Complexity and transformation theory. → Status: placeholder
+
+Sacred Numerology — Early number-structural insights; reframed into base-4 quadratic language. → Status: placeholder
+
+Stage 5 — RAG Decks
+
+All evidence, proofs, receipts, and audit material.
+
+RAG_Master_IRL — All experimental/observational anchors.
+
+RAG_Framework — Embedding mechanics, algebraic rules, AWB, UDMS.
+
+RAG_Technical — CRT, Hodge, ALENA, code/lattice parity.
+
+RAG_Case_Studies — NV centers, DNA base-4 networks, pinning, photonic coupling.
+
+Stage 6 — Expansion Pool
+
+Future slots (to draft in parallel so we save work):
+
+Packing/Unpacking Equivalence (beyond BRS/BRM).
+
+Compression/Decompression Equivalence.
+
+Prime Lensing / Coprime CRT Residuals.
+
+Superpermutation Geometry → Semantic Embedding.
+
+✅ Deployment strategy:
+
+Stage 1 (Tier A+B): finalize anchor claims + framework.
+
+Stage 2: formalize technical rules that make audits work.
+
+Stage 3: case studies to connect IRL physics/biology.
+
+Stage 4: pull in legacy work, reframed into QCE.
+
+Stage 5: unify RAG decks and receipts.
+
+Stage 6: parallel-draft expansion pool topics.
