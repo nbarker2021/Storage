@@ -1,0 +1,220 @@
+CQE / MORSR Deep Dive — What It Is, What It Can Be, and How To Run It (v1)
+Audience: systems / infra / applied math leads.
+Scope: a ground-up explanation of CQE as we’ve implemented it; all operators, invariants, objectives, and protocols; worked examples; and a forward-looking section on what CQE can become.
+Lens: pattern-first, form-aware. Parity and geometry are the machinery. Provenance is the contract.
+0) Executive summary (what CQE is in practice)
+Cartan–Quadratic Equivalence (CQE) is a proof-carrying governor for search, merge, and control. We embed heterogeneous states into a common E₈ overlay (sparse activations over a fixed 248-slot frame), act on them with a small set of discrete operators (the Alena family), and accept a move only if a scalar Lyapunov-like objective Φ does not increase (monotone acceptance). Every accepted step emits a signed handshake record (provenance). The result is a general mechanism to drive systems safely forward with reproducible evidence.
+Key pieces:
+• Substrate: E₈ root geometry (240 roots + 8 Cartan lanes) with Coxeter-plane projection for explainable 2D viz.
+• Overlays (EO): binary/weighted activations + phases over the E₈ frame, with a canonical pose (gauge + reflection neighborhood) and a content hash.
+• Objective (Φ): convex-ish sum of geometry, parity/ECC, sparsity, and kissing penalties. Weights are policy.
+• Operators (Alena): Rθ (quantized rotation), WeylReflect(sᵢ), Midpoint, ParityMirror, ECC-Parity, SingleInsert, Restrict(A₂/A₃/D₄, …).
+• Acceptance: ΔΦ ≤ 0 with optional quorum across multiple Φ-views, escrow for bounded uphill, and plateaus.
+• MORSR: Middle-Out Ripple Shape Reader — shells + pulses + lanes, with reason-coded decisions and signed handshakes.
+• E₈×3 comparative projection: fuse Left/Right sources into a Center solve-frame under sector gating; sources stay read-only.
+• Governance: codified automorphisms (Monster as policy), parity codes (ExtHamming lanes + ExtGolay global), signatures.
+This is not a belief system or an optimizer API; it is a lawful move engine that turns progress into auditable artifacts.
+1) Axioms (minimal, checkable)
+• Axiom A — State Space: A state is an overlay EO = {present[248], w[248], φ[248], pose} on the canonical E₈ frame. Adapters map domain objects into overlays.
+• Axiom B — Group Action: A Weyl/Coxeter group W acts by isometries on E₈; geometry terms in Φ are W-invariant.
+• Axiom C — Quadratic Objective: Φ = α·Φ_geom + β·Φ_parity + γ·Φ_sparsity + δ·Φ_kissing (+ ν·extras).
+• Axiom D — Equivalence: x ~_CQE y ⇔ ∃ g∈W: y = g·x, Q(y)=Q(x), parity(y)=parity(x).
+• Axiom E — Operators: finite moves {Rθ, WeylReflect, Midpoint, ParityMirror, ECC-Parity, SingleInsert, Restrict} with the contract: accept iff ΔΦ ≤ 0 (modulo quorum/escrow rules).
+• Axiom F — Provenance: every accepted move logs ΔΦ, operator, policy hash, and parent IDs; logs are immutable and replayable.
+• Axiom G — Compositionality: domain isomorphisms (native symmetries) imply CQE-equivalence after embedding.
+2) Data model & canonicalization (what a state is)
+2.1 E₈ frame and indexing
+• Slots: 248 indices; first 240 are E₈ roots (Type I/II ordering), last 8 are Cartan placeholders (lanes).
+• Sub-root sets: named index sets for A₂, A₂×A₂, A₃, D₄ (and optional H₄) for restrictions.
+• Pose: reflection neighborhood (depth ≤2), lane-permutation ID, diagram automorphism ID, and torus parameters.
+2.2 Overlay (EO) schema
+• present[248] — Boolean activity mask.
+• w[248] — optional weights (float); policy can enforce binary.
+• φ[248] — optional phases (float radians) for active slots.
+• pose — gauge & symmetry info; immutable for a given hash.
+2.3 Canonicalization algorithm
+• Gauge: set φ of the max-weight active node to 0 (ties → smallest index).
+• Round: phases to 9 decimals; weights to 8.
+• Score: lexicographic (present bitset, w_rounded, φ_rounded).
+• Weyl neighborhood scan: identity + depth-2 simple-reflection products (≤ ~65 candidates).
+• Pick max-score; record weyl_actions in pose.
+• Hash: hash_id = SHA256(canonical_bytes).
+2.4 Invariants (for fast CQE checks)
+• orbit_counts (Weyl orbits / symbol classes)
+• cartan_sig[8] (per-lane energies)
+• coxeter_hist[30] (phase coverage histogram)
+• torus_link (winding numbers; rational reduction)
+• closure_flags (triad/dyad/pal plateaus)
+• code_proof (lane/global syndromes + coset leaders)
+• spectrum (small eigen spectrum of induced subgraph)
+3) Objective Φ and acceptance policy
+3.1 Components
+• Geometry (Φ_geom): variance/adjacency penalties in Coxeter-plane / neighbor graph; W-invariant.
+• Parity (Φ_parity): ExtHamming(8,4) per-lane + ExtGolay(24,12) global syndromes; penalties scale with syndrome norms.
+• Sparsity (Φ_sparsity): mild L₁ over active weights to prevent spurious mass.
+• Kissing (Φ_kissing): deviation from target kissing numbers (E₈: 240; Leech-lift local shells). Accept if δ_kissing ≤ 0.02.
+3.2 Weights (policy surface)
+(α, β, γ, δ; ν) are declared in policy and can be ablated. The strict build tends to β ≳ α ≥ γ, giving parity-dominant acceptance with geometry constraining drift.
+3.3 Monotone acceptance (base rule)
+• Accept if ΔΦ = Φ_after − Φ_before ≤ −ε.
+• Plateau accepts (ΔΦ ≈ 0) are optional and bounded.
+3.4 Quorum Φ (robust acceptance)
+Compute multi-view components {Φ¹, Φ², …} (e.g., geom-heavy, parity-heavy, sparsity-heavy). Accept only if all (or m-of-n) views agree Δ≤−ε. This prevents Goodharting a single metric.
+3.5 Escrow supermartingale (safe local uphill)
+Allow bounded ΔΦ>0 steps (debt) only if compensated by a larger descent inside a short horizon K. You keep global monotonicity with minimal local exploration.
+3.6 Thermostat (sector fairness)
+PID-like controller that adjusts a sector_balance_lambda so sector histogram maintains min/max ≥ τ (e.g., 0.3). Prevents geometric bias.
+3.7 Negative-proof cache (futility as an asset)
+If stage strict gain and EMA fall below threshold, store a negative proof keyed by (policy_hash, seed_hash, shell_fingerprint); future runs can skip futile branches deterministically.
+4) Operators (Alena family)
+For each operator: intent → preconditions → invariants → effect on Φ → typical use.
+4.1 Rθ — Quantized Coxeter-plane rotation
+• Intent: reorient sectors without changing topology.
+• Pre: active set non-empty; quantization grid present.
+• Invariants: parity unchanged; W-invariance holds.
+• Effect: usually neutral/weakly uphill on Φ_geom; sets up Midpoint success.
+• Use: “prepare” phase; improve future acceptance odds.
+4.2 WeylReflect(sᵢ) — Simple-root reflection
+• Intent: local isometry; cross a hyperplane to a new orbit rep.
+• Pre: simple-root index valid; reflection neighborhood permitted by policy.
+• Invariants: geometry preserved; parity unchanged (layout constant).
+• Effect: can raise phase variance short-term; high assist rate for later Midpoint.
+• Use: unstick local minima; orbit normalization.
+4.3 Midpoint — Palindromic expansion (diagonals in reserve)
+• Intent: reduce parity syndromes by XOR-to-coset on lanes; tighten phases around a hinge.
+• Pre: lane/global parity solvable.
+• Invariants: code structure preserved; syndromes non-increasing.
+• Effect: dominant accepter in practice; main driver of ΔΦ<0.
+• Use: “exploit” phase; applied after Rθ/WeylReflect preparation.
+4.4 ParityMirror — Mirror duplication with sector involution
+• Intent: flip subpopulations to reduce a stubborn parity norm.
+• Pre: thermostat must predict sector balance remains within band.
+• Invariants: parity structure preserved; pose updated.
+• Effect: helps parity but may skew sectors; follow with Rθ to re-center.
+4.5 ECC-Parity — Syndrome-guided flips
+• Intent: targeted lane/global bit fixes.
+• Pre: computed syndromes non-zero.
+• Invariants: ECC constraints enforced; accepts if ΔΦ≤0 or parity-strict rule.
+• Effect: local, deterministic cleanups.
+4.6 SingleInsert — Admissible symbol/dimension insertion
+• Intent: add structure only if parity remains satisfiable and ΔΦ doesn’t increase (or escrow used).
+• Use: controlled growth under strict shells.
+4.7 Restrict(S) — Sub-root projection (A₂/A₃/D₄/…)
+• Intent: snap overlays to interpretable subsystems; certify invariants.
+• Pre: node set subset test; parity preserved; else → frontier.
+Operator scheduling pattern (empirical): Prepare (Rθ/Weyl) → Exploit (Midpoint) → Clean (ECC-Parity/ParityMirror) → Grow (SingleInsert) → Restrict for certification.
+5) MORSR: protocol & ledger
+5.1 Concepts
+• Shell: admissible region of moves (radial radius, graph hops, or both). We often run counterfactual shells in parallel (radial vs graph) and choose the winner by Return-on-Verification (RoV).
+• Pulse: a middle-out sweep that attempts operators across lanes.
+• Reason codes: each decision emits {accepted, reason} such as strict_decrease, parity_strict, escrow_uphill, delta_increase, plateau.
+5.2 Handshake record (per accepted lane)
+{ "op": "Midpoint", "phi_before": 0.081, "phi_after": 0.041, "delta": -0.040, "reason": "strict_decrease", "policy_hash": "…", "overlay_id": "…", "invariants": {…}, "code_proof": {"lane_syndromes":0, "global_syndrome":0}, "zk_parity_proof": "…", "parents": ["…"] } 
+5.3 Region ledger
+• rings: seed (ring 0), neighbors (ring 1…), status (saturated, completed_ext).
+• stages: per-shell variant stats with accepted lanes and winner.
+• overlay_store: canonical overlays produced.
+5.4 Acceptance policy in MORSR
+• Base monotone rule plus: quorum Φ, escrow uphill (bounded, horizon), thermostat for sector fairness, negative-proof cache to skip futility.
+6) E₈×3 comparative projection (Left/Right → Center)
+Pattern: Two read-only sources (Left = internal, Right = external) are routed under sector policies into a Center overlay. Only the Center is allowed to accept parity/geometry edits; sources remain pristine.
+Controls: weights (w_left, w_right) and allow_sectors (e.g., NE, N).
+Guarantee: a Center move is accepted only if ΔΦ≤0; provenance logs carry sector and color signatures for viz.
+Why it matters: you can fuse noisy or biased signals without corrupting originals and with a replayable explanation of each accepted link.
+7) Worked examples (from the harness patterns)
+7.1 Golden MORSR (seed + Rθ + Midpoint)
+• Ring 0: seed (A₂ triad active).
+• Neighbor 1 (Rθ): Φ 0.081 → 0.053 (reason=strict_decrease or escrow_uphill under quorum variants).
+• Neighbor 2 (Midpoint): Φ 0.053 → 0.041 (reason=strict_decrease).
+• Status: saturated under shell acceptance rules.
+7.2 E₈×3 solve-frame
+• Artifacts: solve_overlay.json (Center), e8_compare_LCR_summary.json (sector histogram), viz PNG with routing lines.
+• Observation: parity+Midpoint dominate; geometry constrains drift; selective sectors behave predictably.
+7.3 Superpermutation n=5 (A₄ adapter)
+• Embedding: map inversion vector of a permutation into an A₄ slice of E₈ (ordered by Coxeter angle); run MORSR; log Φ curves per class.
+• Goal: show separability of minimal classes via invariants (coxeter_hist, parity signatures, ΔΦ trajectories).
+7.4 Audio GGWave → E₈ quantization (E8QC)
+• Frame tokens: quantize features to E₈ indices + prosody phases; ECC (Golay) guards; use filler policies to mask jitter; MORSR validates ΔΦ improvements under Midpoint.
+7.5 Proof-carrying RAG
+• Retriever: each candidate chunk becomes an overlay; include into context only with a ΔΦ certificate. Auditable relevance.
+8) Evaluation & diagnostics
+8.1 Ablations (qualitative summary)
+• full (geometry + parity + operators): steady ΔΦ↓; Midpoint dominant; Rθ/Weyl preparatory.
+• no_geom: faster drop (parity-dominant) but drift risk.
+• no_parity: stalls (geometry alone doesn’t close).
+• no_alena: no progress.
+8.2 Health metrics
+• strict_gain (sum of negative ΔΦ) and RoV (gain per attempt/time).
+• Half-life of strict_gain (stop when too long → switch phase/shell).
+• Reason entropy H(reasons) (detect regime shifts).
+• Operator Gini (avoid over-reliance on one op).
+• Sector min/max ratio (thermostat success).
+• Governance spend (automorphism budgets used vs gained).
+9) Governance, compliance, and DB
+• Monster-governed automorphisms: symmetry use is a budgeted action with reason codes (governance_spent, governance_blocked).
+• Signatures: ED25519 + Sigstore metadata on overlays and handshakes; policy hashes embedded in logs.
+• ZK parity (stub → SNARK): prove parity correctness without exposing tokens/data.
+• Storage: overlays, invariants, pose, code_proofs, and MORSR regions in normalized tables; append-only JSONL audit.
+10) What CQE can be (near-term evolution)
+• Quorum Φ as standard: multi-metric, Goodhart-resistant acceptance.
+• Supermartingale policies: provable global descent with bounded local exploration (escrow).
+• Negative-proof markets: organization-wide sharing of futility proofs; schedulers skip dead zones by evidence, not by guess.
+• Proof-of-Coverage (PoCov) maps: prioritize compute where verification density is high.
+• BFT multi-tenant merges: E₈×3 with cross-org votes, emitting a verifiable credential per solve-frame.
+• Reason-aware schedulers: tiny reason-LSTM or rules to skip hopeless lanes early.
+• Optimal transport framing: interpret E₈×3 routing as constrained OT; thermostat becomes an entropy regularizer with theory behind it.
+• Adapter library: first-class mappings for superperms (n=5..8), audio, graphs, and retrieval; each with native symmetries preserved.
+• Automorphism economics: governance budgets + yield metrics drive or restrict high-power symmetries.
+• Leech-lite lifts: report 24D motifs from E₈×3 Center as structural evidence (consistency across scales).
+11) What CQE hints at (evidence yet to be proven)
+• Class separation for n=5 superperms under CQE invariants (we expect 8-ish inequivalent minima—needs a clean batched run).
+• Dyadic shell stabilization (octet → palindromic expansion) observed informally; requires systematic shell sweeps and plateau proofs.
+• Operator assist causality: Rθ/Weyl consistently increasing Midpoint success probability (quantify assist rate).
+• Global monotonicity with escrow: empirical confirmation that debt is reliably repaid within horizon across seeds.
+• Thermostat optimality: formal bounds on sector fairness vs ΔΦ degradation.
+• ZK parity feasibility: real SNARK circuits meeting latency/size constraints for in-line handshakes.
+• Adapter universality: invariance of results across domain embeddings (A₄ for S₅ vs alternatives) without spurious bias.
+• Proof density as a predictor: does high PoCov correlate with downstream task quality or safety?
+Test plan (minimal):
+• Batch n=5 with 8 class reps; log invariants + Φ curves; train a linear separator over signature vectors; report separability.
+• Escrow ablation (cap ∈ {0, ε, 2ε}) → measure net strict_gain & stall escape rate.
+• Quorum Φ vs single Φ → veto rates and final Φ variance.
+• Thermostat on/off → sector balance and accept distribution.
+• Negative-proof reuse across two independent teams → compute saved.
+12) End-to-end runbook (step-by-step)
+• Ingest → Overlay: adapter maps data to EO; compute invariants; canonicalize and hash_id.
+• Set shells: radial and/or graph (or both as counterfactual variants).
+• Stage loop: 
+• Compute Φ components for seed; thermostat update on sector histogram (if enabled).
+• For each lane/variant: try operators in {Rθ, Midpoint, WeylReflect, ParityMirror/ECC} order; compute ΔΦ and parity norms.
+• AcceptGuard.decide with quorum/escrow/plateau rules; log reason codes; store overlays on accept.
+• Summarize strict_gain, accepts, RoV; pick winner among counterfactual shells.
+• If return < threshold → add negative proof to cache.
+• Exit conditions: strict_gain half-life too long; reason entropy collapse; governance budget hit; or shells exhausted.
+• Artifacts: region ledger JSON, handshakes JSONL, overlay store, and viz signatures.
+13) FAQ (sharp answers)
+• Is CQE an optimizer? No. It’s a governor with monotone acceptance and provenance. You can plug any proposer under it.
+• Why E₈? Rich symmetry, tight packing, known Coxeter projection for explainability, and clean parity channelization (8 Cartan lanes).
+• Why parity? ECC gives lawful edits and strong failure signals. It’s the scalpel.
+• Is Φ arbitrary? No, but it’s policy. Use quorum Φ to avoid single-metric pathologies.
+• What if strict geometry stalls? Use escrow + counterfactual shells, then lock in gains with geometry back on.
+• How do we stop compute burn? Negative proofs and RoV-based scheduling.
+14) Appendices
+A) Tolerances (canonicalization)
+• Phase equality: 1e−6 rad
+• Weight equality: 1e−8
+• Quadratic compare: 1e−9
+• Descent threshold ε: 1e−6
+• Spectrum rounding: 1e−7
+B) Lane permutation whitelist (row-space invariant)
+IDs and 8 permutations that preserve ExtHamming(8,4) row-space; each validated by rowspace(H) = rowspace(P·H) over GF(2).
+C) Kissing deviation penalty
+δ_kissing = | K(o)/K* − τ | with K* = 240 (E₈); accept if δ_kissing ≤ 0.02.
+D) Torus link extraction (rational windings)
+Compute average phase increments along a fixed transform path; reduce to rationals with small denominators; store as ordered pairs.
+E) DB (DDL sketch)
+Tables: overlays, overlay_invariants, overlay_pose, code_proofs, and MORSR regions/rings/boundaries. All signed.
+F) Unit tests (must-pass)
+Canonicalization determinism; Weyl neighborhood sufficiency; lane-permutation safety; parity preservation under M/P; Φ monotonicity; torus link stability; kissing penalty bounds; MORSR saturation on seeds.
+15) Closing take
+CQE is a shape-governed, parity-enforced, proof-carrying way to move systems forward. It doesn’t replace your models—it disciplines them. The value isn’t just in the good steps; it’s in turning the no-ops into evidence that saves the next unit of compute. With quorum Φ, escrow, thermostat, counterfactual shells, and negative-proof caching, you now have a framework that is both hard-nosed and practical—one that can scale across domains without ever hand-waving what was accepted and why.

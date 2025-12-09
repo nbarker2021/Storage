@@ -1,0 +1,185 @@
+SnapLat — System‑by‑System Deep Review (v0.2.8+)
+Purpose: a single, deep, implementation‑oriented reference for each SnapLat subsystem — what it is for, how it works, its contracts/invariants, failure modes, metrics/SLOs, tests, and roadmap. This complements the Deployment Canvas and the Tensor/Anti‑Tensor & Detector Manifold spec.
+Contents
+• Terminology & Core Principles
+• E8 Core Engine
+• Mannequin‑E8 Bridge
+• Shelling
+• Superperm / C[8] Candidates
+• ThinkTank → DTT (Deploy‑to‑Test)
+• Assembly & DNA
+• Planner / AGRM (simple, cmplx, unified)
+• MDHG (Hot Map)
+• SAP Governance (Sentinel/Arbiter/Porter)
+• MORSR Telemetry & Release Artifacts
+• RAG Stack (Retrieval & Evaluation)
+• Glyph Intake (OCR/Marker/Math/Graphs)
+• TSP/CPP Navigator & Salesman Splice
+• Braid Mode (α‑anchor)
+• Tensor/Anti‑Tensor Discipline & Complexity Gate
+• Multi‑Sensor Detector Manifold
+• Observability & Dashboards
+• CI/QA Matrix
+• Security/Privacy
+• Deployment & Lanes
+• Per‑Subsystem Roadmaps
+1) Terminology & Core Principles
+• Cell: an E8 lattice point (integer or half‑integer with even parity).
+• Root: one of the 240 minimal vectors (norm²=2).
+• Neighbor: x + r for a cell x and root r if the result is a valid cell.
+• Glyph: assembled output object + DNA for replay.
+• TAC: test‑anchor coverage; proxy for adequate boundary probing/anchoring.
+• S⁺: positive‑definite subspace where operations are safe (TAC, coverage, replay‑stability, drift bounds).
+• E→C: expansion then contraction; every expansive block must be followed by a contractive block.
+Design maxims: determinism by default; replayability; explicit contracts; budgeted complexity; governance before promotion.
+2) E8 Core Engine
+Purpose. Provide lattice membership, nearest projection, neighbors, reflections, Coxeter‑plane projection, shells, and cache. Foundation for all spatial reasoning.
+Key APIs.
+• is_member(Vec, tol) -> bool
+• nearest(Vec) -> (Vec cell, float dist2)
+• edges(Vec cell) -> List[Vec] (neighbors via 240 roots)
+• reflect(Vec x, Vec r) -> Vec
+• coxeter_plane(Vec x) -> (u, v)
+• roots() -> List[Vec] (240 roots)
+• NeighborCache.get_first_shell(Vec) -> List[Vec]
+Invariants & Contracts.
+• Membership: integer or half‑integer coordinates with even parity.
+• nearest(nearest(v)) == nearest(v) and second call returns dist2=0.
+• reflect(reflect(x, r), r) == x (involutive).
+• Neighbors from origin count exactly 240.
+• Coxeter projection deterministic across code paths (SymPy vs fallback).
+Failure Modes. FP rounding near boundaries, parity flips on perturbed halves, cache key drift if keyed by raw floats.
+Metrics. hit rates (cache), exact neighbor counts, projection idempotence, symmetry checks.
+Tests. membership/nearest idempotence; edges count=240; reflection involution; projector determinism; shell counts.
+Implementation Notes. Key NeighborCache by a canonical cell ID, not raw tuple; expose weyl_canon() to normalize representatives.
+3) Mannequin‑E8 Bridge
+Purpose. Convenience layer to build identifiers and small projections for UIs and mannequin sidecars.
+APIs.
+• slice_id_for(vec) -> str (stable cell ID)
+• neighbors_for(vec, k) -> List[Vec]
+• project2d(vec) -> (u, v)
+Contracts. Uses nearest() internally to guarantee cell canonicalization; never returns non‑member points.
+4) Shelling
+Purpose. Enumerate or stream shells of the lattice for exploration and tours.
+APIs.
+• root_shell() -> List[Vec] (m=1)
+• oracle_count(m:int) -> int (count oracle: 240·σ₃(m))
+• shell_count(m:int) -> int (if implemented)
+• shell_stream(m:int, …) -> Iterable[Vec] (streaming enumerator)
+Contracts. Counts for m=1..3 match oracle; streaming is deterministic under seed.
+Failure Modes. Over‑generation; duplicates without dedupe; heavy memory if non‑streaming.
+Metrics. per‑shell size, generation rate, dedupe ratio, coverage of boundary faces during tours.
+5) Superperm / C[8] Candidates
+Purpose. Produce 8 non‑repeating candidates for n=5 cycles; seed‑deterministic.
+APIs.
+• produce_c8(C8Config) -> List[Candidate]
+Invariants. 8 unique candidates; deterministic under fixed seed; divergence threshold policy defined.
+Failure Modes. Repetition without divergence guard; brittle payload IDs.
+Tests. Invariant suite: uniqueness, seed determinism, divergence metric.
+6) ThinkTank → DTT (Deploy‑to‑Test)
+Purpose. Sandbox evaluation of candidates and micro‑plans to yield evidence + detector vectors.
+APIs.
+• DTT.run(candidates) -> List[Evidence]
+• Micro‑plan templates: neighbors→project, shell_step→canon, short_braid→reduce
+Contracts. Deterministic scoring; evidence carries metrics (score, stability, utility) and notes (seed, config). Supports mannequin sidecars.
+Failure Modes. Leakage (leaving S⁺), oscillation if feeding AGRM tightly without damping.
+Metrics. stability distribution, utility variance, TAC coverage, boundary hits, leakage rate.
+7) Assembly & DNA
+Purpose. Contractive aggregation of candidates into a glyph with DNA that encodes replay.
+APIs.
+• stitch(candidates, evidences) -> {glyph, DNA}
+• replay(DNA, candidate_lookup) -> {glyph, DNA}
+Contracts. Replay parity (exact or ε‑equivalent); weights sum to 1; carries anchor_id, braid_word, manifold_id when present.
+Failure Modes. Weight degeneracy; non‑deterministic ordering; loss of provenance.
+Metrics. MDL proxy (glyph_dl), variance of weights, replay success rate.
+8) Planner / AGRM (simple, cmplx, unified)
+Purpose. Choose schedules (neighbors/shell/reflect/braid), manage budgets and scores, and coordinate with detectors.
+APIs.
+• plan(AGRMState) -> {radius, floors, elevators, schedule}
+• get_planner(name)->Planner (simple|cmplx adapter)
+• Unified: planner.tick(), planner.braid(), planner.detect(), planner.fuse()
+Contracts. Budget enforcement (E→C windows, M_max); Leakage≤ε; Planner scorecard includes coverage, entropy, drift, frontier_width, glyph_dl.
+Failure Modes. Thrashing radius; stale hotmaps; over‑reliance on vendor cmplx controller.
+Metrics. scorecard trend, acceptance rate, detector consensus, latency per tick.
+9) MDHG (Hot Map)
+Purpose. Lightweight store + heat accounting to bias exploration.
+APIs. put/get/has/hotmap, decay()
+Contracts. Access updates heat; decay prevents lock‑in; vendor adapter interchangeable.
+Failure Modes. Memory growth; skewed heat without decay; adapter API mismatches.
+Metrics. hotness skew, decay half‑life, cache hit ratio.
+10) SAP Governance (Sentinel/Arbiter/Porter)
+Purpose. Enforce gates and route artifacts through lanes.
+Gates.
+• AcceptanceGate (utility)
+• LeakageGate (S⁺)
+• ComplexityGate (Φ budget)
+• DetectorGate (N‑sensor consensus/diversity)
+Lanes. Shadow → Pilot → Prod; Force‑deploy OFF by default; quarantine/embargo supported.
+Metrics. HOLD/ACCEPT rates, false‑accept rate, time‑to‑promote.
+11) MORSR Telemetry & Release Artifacts
+Purpose. JSONL trails, release events, checksums, manifests.
+Schema Highlights. event, ts, op_trace[{op, tag:E|C, m}], phi_before/after, detectors[], fusion, braid{}, verdict, checksums.
+Artifacts. manifest.json, morsr_release.jsonl, per‑step JSON, plots.
+Contracts. Append‑only, sort‑key stable; file_checksum recorded when present.
+12) RAG Stack (Retrieval & Evaluation)
+Purpose. Ingest, search, and evaluate corpora; interface with E8 hooks and reasoning.
+APIs. /health, /documents, /query, /evaluate/{recall|faithfulness|utility}
+E→C Discipline. Expansive retrieve (BM25+dense/kNN) → contractive re‑rank/cluster/anchor‑bind before promotion to reasoning.
+Metrics. recall, faithfulness, utility; latency SLOs; variance across sidecars.
+13) Glyph Intake (OCR/Marker/Math/Graphs)
+Purpose. Convert raw documents to structured glyphs; emit embeddings and identifiers.
+Process. OCR/parse → symbol/AST normalization → embedding → anchor linking → Trails.
+Metrics. parse success, normalization rate, embed coverage, anchor yield.
+14) TSP/CPP Navigator & Salesman Splice
+Purpose. Sectorized kNN + CPP to cover regions, TSP to stitch tours, splice into plans.
+APIs. tsp.solve, postman.path, nav_tsp wrappers, salesman.apply_best(α)
+Metrics. tour length, coverage %, splice delta, acceptance impact.
+15) Braid Mode (α‑anchor)
+Purpose. Access gates otherwise unavailable by braiding around a stationary anchor.
+Contracts. Word ∈ admissible group; Leakage≤ε; braid replay parity; S⁺ persistence.
+Artifacts. braid_step.json, braid_trail.jsonl; CLI snap braid …
+16) Tensor/Anti‑Tensor Discipline & Complexity Gate
+Purpose. Keep complexity bounded and evidence coherent by alternating E then C, with explicit Φ budget.
+Contracts. ∏ m(op) ≤ M_max for E‑blocks; C‑block within K steps; windowed ΔΦ<0; gates enforce on promotion.
+Metrics. Φ trend, frontier_width cap, glyph_dl cap, proportion of E and C ops.
+17) Multi‑Sensor Detector Manifold
+Purpose. N mannequin sidecars probe local/universal structure each tick; Sentinel fuses signals.
+APIs. planner.detect(manifold) -> [DetectorVector], planner.fuse(D) -> FusionResult
+DetectorVector. {coverage, drift, leakage, cues, hotmap_delta, confidence}
+Fusion. K‑of‑N, weighted vote, disagreement index; diversity constraints (anchors/universes/seeds).
+Metrics. consensus, disagreement, novelty; latency overhead budget.
+18) Observability & Dashboards
+• Complexity Funnel: Φ, W, C, L, D over time; E|C barcodes.
+• Leakage Heatmap: leakage by universe/anchor.
+• Detector Matrix: pairwise agreement; novelty spikes.
+• Promotion Ledger: verdict reasons; lane transitions.
+• Braid Stats: lengths, reductions, parity hashes.
+19) CI/QA Matrix
+• Roots/Neighbors exactness; projector determinism; shell counts
+• C[8] invariants; DNA replay parity
+• Complexity monotonicity (windowed ΔΦ<0)
+• Leakage rejection; braid normal‑form determinism
+• Detector calibration; RAG variance thresholds
+• End‑to‑end smoke (compose) & perf SLOs
+20) Security/Privacy
+• Detectors as sanitizers: run C‑blocks that scrub sensitive artifacts before logging.
+• Lane isolation: embargo/quarantine lanes; artifact redaction at the Porter edge.
+• Config hygiene: secrets in k8s; no logging of tokens; reproducible builds.
+21) Deployment & Lanes
+• Compose (local): core, planner, dtt, rag, glyph, archivist, porter.
+• K8s: charts per service, HPA, secrets; promotion via SAP gates.
+• Lanes: Shadow (detectors on, no promote) → Pilot → Prod; force‑deploy off.
+22) Per‑Subsystem Roadmaps
+E8 Engine. weyl_canon, Voronoi boundary walkers, full shell(m)>3 enumerators.
+Shelling. Streaming half‑coset; dedupe/pruning heuristics.
+Superperm/C[8]. Divergence metric formalization; universe‑aware rotations.
+DTT. Boundary coverage targets; mannequin feedback loop; leak tests.
+Assembly. Strategies beyond barymix (sparse codes, attention‑mix).
+Planner. Unified planner GA; braided policy gradients under Φ.
+MDHG. Multi‑universe heat channels; adaptive decay.
+SAP. Posture templates; remediation matrix; per‑domain gates.
+MORSR. Typed trails; artifact lineage graph; cross‑release manifests.
+RAG. Hybrid re‑rankers; evaluators tied to anchors; drift alarms.
+Glyph. Better math/diagram ASTs; embedding mix.
+Navigator. Metric learning for TSP; CPP robustness.
+Braid & Detectors. Admissible group generators; adaptive manifold sizing, auto‑thresholding from Trails analytics.

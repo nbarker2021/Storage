@@ -1,0 +1,113 @@
+The Quadratic Frame — System Specification v0.1
+Subtitle: Universal comparison via advanced multi‑dimensional data analysis and manipulation using geometry and superpermutation to categorize and denote all combinations of the defined superpermutation‑as‑dataset‑as‑superpermutation classifications and context, leveraging native LLM architecture
+0) One‑page summary
+What it is. A governed, auditable compute system that enumerates, validates, and composes all lawful states for a request within a bounded superpermutation space, then selects and synthesizes outputs using symmetry, CRT locks, resonant gates, and bounded receipts. It is transformer‑equivalent under a reversible encoding—but with explicit legality, metrics, and ledgers.
+Why it exists. Plausibility‑first systems (LLMs) optimize for one likely sequence; The Quadratic Frame optimizes for complete lawful coverage first, then relevance—yielding lower global entropy, fewer actions, and provable composability.
+Core moves. Orbit4 closure → CLTMP projection → CRT lock → resonant gate (Taxicab/Cabtaxi) → bounded receipts at n=8 → E‑scalar evaluation (E2/E4/E6/E8) → ledger.
+What you can prove. Saved actions/entropy vs baselines, Prime certification for composability, braid health for sessions, and bisimulation parity between bit‑space and quaternary space.
+1) Naming & scope
+• Name: The Quadratic Frame (TQF)
+• Scope: A universal governance and synthesis layer for discrete, bounded computation over superpermutation‑structured datasets; integrates with LLMs/agents as proposal or UI layers.
+2) Formal model
+2.1 Superpermutation & bound
+• Declare a superpermutation and a hard bound (size, depth, cost). All work occurs in .
+2.2 Representation and encoding
+• Quaternary atoms: tuples with .
+• Reversible bit encoding: 2‑bit Gray code for : 1→00, 2→01, 3→11, 4→10. Lee distance ↔ Hamming distance.
+2.3 Symmetries
+• Orbit4: {Identity I, Mirror M, Dual D, Mirror∘Dual MD}. Algebraically: chunk‑reverse and chunk‑XOR in bitspace.
+2.4 Law (W4/Q8) and projectors
+• ALT: alternating parity along coordinates.
+• LAWFUL: ALT ∧ (W4 ∨ Q8) where W4 is a linear plane (mod 4), Q8 a quadratic (mod 8).
+• CLTMP: nearest lawful element under Lee (bit‑Hamming) distance.
+2.5 Phase lenses
+• H8: .
+• H16: same mod 16 for braid lifting.
+2.6 Receipts
+• Bounded unit adjustments at n=8 boundaries only; interior steps are zero‑edit.
+2.7 Primes
+• Prime iff Orbit4 is ALT&LAWFUL, all four are CLTMP‑fixed (distance 0), , and every self‑join locks with 0 edits & 0 receipts.
+3) Operating playbook (n=2→4→6→8)
+• n=2 (Δ): Orbit4 closure, CLTMP fixation, compute E2, Prime screen.
+• n=4 (×): choose best I/M/D/MD reps (four‑plane mirroring) to minimize circular H8 gap; CRT lock; attempt resonant gates (Cabtaxi, then Taxicab).
+• n=6 (!): stitch a short sequence; track braid word proxy via H16 order; compute E6.
+• n=8 (Σ): zero‑edit attempt; if misaligned and no cheap gate: spend ≤1 receipt, else declare resting; compute E8.
+4) E‑Scalar metrics (auditable 0..1)
+• E2 (Atom Legality): orbit CLTMP distance + unlawful count + H8 spread.
+• E4 (Join Quality): projection effort + lock delta + gate cost class.
+• E6 (Session Health): average E4 + normalized braid writhe.
+• E8 (Boundary Uncertainty): projection effort + lock status + S16 lift uncertainty − coprime bonus.
+Acceptance defaults: E4=0, E6=0, E8≤0.25 preferred; receipts ≤1 at n=8.
+5) Resonant gates
+• Taxicab: find s.t. with H8 match; minimize .
+• Cabtaxi: allow negatives; ; typically higher coverage.
+• Coprime bonus: prefer .
+6) CRT → braid mapping
+• H8 lock defines basepoint; allowed lifts to H16 across orbit strands yield a braid word; Mirror inverts, Dual preserves orientation; receipts act as boundary half‑twists. Track writhe & linking.
+7) Governance & ledger (canonical schema)
+7.1 Certificate JSON (per operation)
+{ "version": "tqf-0.1", "superperm": {"id": "SP:letters", "bound": 4096}, "orbit4": {"q": [1,2,3,4], "I": [1,2,3,4], "M": [4,3,2,1], "D": [3,4,1,2], "MD": [2,1,4,3]}, "cltmp": {"I": {"to": [1,2,3,4], "dist": 0}, "M": {"to": [4,3,2,1], "dist": 0}}, "phase": {"h8": 3, "h16": 11}, "crt": {"locked": true, "mod": 8}, "gate": {"type": "cabtaxi", "u": -1, "v": 2, "l1": 3, "coprime": true}, "receipts": {"spent": 0, "cap": 1, "stage": 8}, "e": {"E2": 0.0, "E4": 0.0, "E6": 0.125, "E8": 0.2}, "braid": {"writhe": 2, "events": 7}, "policy": {"accept": true, "reason": "E8≤0.25, no receipt"}, "parity": {"bits_vs_quads": "match", "gray": true}, "timestamp": "2025-09-03T00:00:00Z" } 
+7.2 Ledger invariants
+• Deterministic hashes over inputs / law versions / policy; tamper‑evident chain.
+8) APIs & interfaces
+8.1 Python (core)
+from tqf import cltmp, prime_check, crt_gate, join_policy, braid_ledger q = (1,2,3,4) prime = prime_check(q) # -> {E2, prime_like, ...} L,R = (1,2,3,4), (2,1,4,3) lock = crt_gate(L,R) # -> {L*,R*, h8L,h8R, gate, l1, uv} join = join_policy(L,R) # -> {E4,E8, receipt_ok} session = braid_ledger([L,R,...]) # -> {writhe, ...} 
+8.2 REST (minimal)
+• POST /tqf/prime { "quad": "1 2 3 4" }
+• POST /tqf/gate { "left": "1 2 3 4", "right": "2 1 4 3" }
+• POST /tqf/join { "left": ..., "right": ... }
+• POST /tqf/braid { "quads": ["1234", ...] }
+8.3 Elysia decision tree mapping
+• Node Δ: orbit4_prime_check
+• Node ×: orbit4_crt_gate
+• Node !: loop step + orbit4_braid_ledger
+• Node Σ: orbit4_join_policy with rest/receipt branches
+9) Layout synthesis (coverage‑first engine)
+• Enumerate lawful canonical states .
+• Remove known‑bad patterns (embedding and rule filters).
+• Fill gaps via lawful joins (resonant gates first, otherwise ≤1 receipt at n=8).
+• Rank with E‑scalars + task utility.
+• Emit a minimal cover (non‑overlapping representatives) + shortlist.
+Optional: use an LLM as proposal oracle inside step 3; governance remains authoritative.
+10) Bisimulation & parity
+• Encoder : bytes→quads via 2‑bit Gray chunks.
+• Proof obligations: ; ; receipt count ↔ bit flips; E‑scalars parity.
+• Certificate: attach a parity verdict per ledger item ("match").
+11) Experiments & KPIs
+11.1 Fixed universes (Σ⁴)
+• ALT×ALT pairs: compute entropy (phase gap or gate cost) and actions (edits+entropy) under: A) baseline (no mirroring, no gates), B) mirroring only, C) mirroring + gates.
+• KPIs: mean/median entropy & actions; coverage of gate matches; distribution by baseline gap class.
+11.2 Real data scans
+• Parse quads from logs/zip; report ALT, lawful, prime‑like counts; join success and receipt usage.
+11.3 Acceptance
+• Rate of E8≤0.25 without receipts; rate with ≤1 receipt; braid writhe ≤ cap.
+12) Security, policy, and compliance
+• Pre‑bounding: cull unlawful states and always‑fail moves at load time.
+• Versioned law: tag W4/Q8 versions; re‑project on updates; drift alarms.
+• Zero‑trust replay: all results re‑computable from ledger.
+13) Implementation plan
+• Core lib: Orbit4 ops, CLTMP, H8/H16, CRT/gates, E‑scalars, ledger.
+• Adapter: Elysia tools (prime, gate, join, braid).
+• Harness: reproducible runs, CSVs, real‑data ingest.
+• Synthesis: coverage‑first engine + minimal cover selection.
+• Bisimulation: bits↔quads parity module.
+14) Roadmap
+• v0.1: current harness + adapter + ledgers + entropy accounting (done).
+• v0.2: layout synthesis engine + parity certificates; Primitive Sheet generator.
+• v0.3: learn W4/Q8 from evidence; acceptance dashboards; Prime‑only greedy optimality study.
+15) Risks & mitigations
+• Predicate drift: version W4/Q8; re‑projection pipeline; counterexample bank.
+• Pathological ties in CLTMP: deterministic tie‑breakers; audit.
+• Gate overfitting: ablations; cap L1.
+• Throughput: pre‑canonicalization; cache reps; vectorized CLTMP.
+16) Appendix — Pseudocode
+16.1 CLTMP (nearest‑lawful)
+best←⊥; d*←+∞ for r in LAWFULS: d ← L1_lee(q,r) if d<d* or (d==d* and r<best): best←r; d*←d return best,d* 
+16.2 Gate search
+for (u,v) in grid(bound): if (h8(L)+u)≡(h8(R)+v) (mod 8) and u^3+v^3∈Cabtaxi: keep min |u|+|v| if none, retry with Taxicab; else return best 
+16.3 Join policy
+Lp,dL ← CLTMP(L); Rp,dR ← CLTMP(R) lock ← (h8(Lp)==h8(Rp)) if lock: return E4=0,E8 from S16 uncertainty else if gate exists with L1≤1: accept with E4,E8; receipts=0 else if n=8 and cap>0: spend 1 receipt; recompute else: RESTING 
+17) Appendix — Config (policy.yaml)
+receipts: cap: 1 stage: 8 gates: order: [cabtaxi, taxicab] l1_cap: 1 coprime_bonus: true accept: e4: 0 e6: 0 e8_max: 0.25 
+18) Appendix — Minimal cover emission
+• Compute connected components in join graph under accepted edges; select one canonical representative per component (lowest E8, then lexicographic H8/H16).

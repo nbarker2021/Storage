@@ -1,0 +1,63 @@
+Love it—picking up right where we left off with the same “instructor / learner / whiteboard / receipts” flow.
+Section 11 — Viewers & Hot-Zone Debugger (8×8 locals, 4× shells, parity twin)
+Instructor scene (what it looks like)
+You pin two translucent sheets to the board.
+Sheet A is an 8×8 local viewer—a tiny heat-map grid sitting directly on top of a single face Hₖ.
+Sheet B is a surround stencil: four nested cubes—4×4×4×4 (first shell) and 2×2×2×2 + its parity twin (second shell). Each shell is tinted faint gray; the 8×8 local is in color.
+You drop last run’s metrics onto A (per-cell residuals and mirror drift). Two orange blotches appear in row 3, row 6. You flip Sheet B down: in shell-1 those blotches line up with an upstream conditioning step; in shell-2 the parity twin shows the same defect mirrored with half magnitude. You circle them with a red pencil: “hot zone H₃↔H₆.”
+“Watch: we’ll repair locally and ratchet globally—no new model, no new math. Just better placement and a lighter identity.”
+Learner scene (how you run it by hand)
+• You print an 8×8 grid and four tiny 4× stencils.
+• You pick a single face (say H₃) and copy over your two numbers per cell: fit error and mirror drift.
+• On the stencils, you mark: what feeds this cell? what does it feed? (arrows + tiny notes like “FFT→PSF” or “encode↔decode”.)
+• Wherever drift>τ or error>τ shows twice (local and shell), you put a red dot = candidate Δ-lift.
+• You flip the parity twin (the second 2× shell) over the page; if the red dot also shows up there, you write “hinged” (meaning a reversible micro-fix should exist).
+Five minutes later you’ve got a short list:
+H₃ cell (3,5) “hinged”, H₆ cell (6,2) “hinged”, and H₄ cell (2,7) “local only”.
+Whiteboard walkthrough (the ritual)
+• Stencil the local
+Fill the 8×8 with (error, drift) per cell. Circle any cell where either exceeds its face threshold.
+• Lay the surrounds
+Place 4×4×4×4 (first shell). For each circled cell, trace one step upstream and downstream; write the producing/consuming step (one verb each, e.g., whiten, rescale, FFT).
+Place 2×2×2×2 and its parity twin (second shell). Note if the anomaly shows a mirrored echo (mark “hinged”).
+• Pick the Δ-lift (local identity only)
+Choose the smallest identity that removes the cause you saw in shell-1 without touching semantics: e.g., replace normalize(x) with normalize(x, ε=ε*), or swap window=Hann → window=Blackman if the shell shows spectral leakage. Write it in red right on the 8×8 cell.
+• Mirror test immediately
+Re-run forward∘inverse on that face only. If drift collapses under τ and the parity twin’s echo halves or vanishes, keep the Δ. If not, revert.
+• Strict ratchet
+If four faces pass in the current octave, tighten a single number (e.g., MAE from 0.050→0.045). Gold-pen the new bound at the top of the page.
+• Receipts
+Shade the commit-4 nibble from the pass/fail pattern; jot the evidence root/ID. Done.
+A miniature concrete pass (optics-flavored but generic)
+• Face H₃ (FFT→PSF): 8×8 shows two hot cells with leakage stripes; first shell says “windowing choice” upstream; parity twin has a faint twin stripe.
+Δ-lift: Hann → Blackman; Result: error ↓ 19%, drift ↓ 41%; parity echo halves → keep.
+• Face H₆ (deconvolution): localized over-sharpen ring; shell points to ε too small in Tikhonov.
+Δ-lift: ε: 1e-4 → 3e-4; Result: error ↓ 12%, drift ↓ 36%; keep.
+• Faces H₁,H₂,H₅ already under gates; now 4 faces pass → strict ratchet MAE≤0.045 → ≤0.0435.
+• Commit-4: from the 8-face bitstring, nibble rule yields 1011. You shade it, write evidence_root: 9f…73.
+Hand checks (so you trust it)
+• Local parity check: For any repaired cell (i,j), compute mirror_drift = ‖f⁻¹(f(x)) − x‖. Confirm it fell below τ and its parity twin’s drift didn’t rise.
+• Shell sanity: The producing step listed in shell-1 must be the only change you made. If you touched two steps, you violated “local”.
+• Receipt arithmetic: Recompute the commit-4 from the eight pass bits; it must match the nibble on your page.
+Ledger snippet (what gets recorded)
+form_id, automorphism, s_level, octet_map, strict_gate, commit4, passes, evidence_root, notes LEECH_PATCH_A1, σ_173842, S2, H1..H8, MAE<=0.0435&drift<=0.020, 1011, 6/8, 9f3a...e873, Δ(H3:window), Δ(H6:ε) 
+Why this works (and isn’t just “heat-map aesthetics”)
+• Resolution-agnostic: 8×8 is not magic; it’s the smallest grid that cleanly expresses phase+amplitude patterns you’ll see after the n=4→5 hinge.
+• Causality exposure: The 4× shells are just one hop up/down the pipeline—enough to name the actuator (no fishing).
+• Reversibility guard: The parity twin is a cheap “do no harm” check: if the mirror got worse, your fix wasn’t local.
+• Monotone learning: Δ-lifts are identities (parameter or basis swaps), so the strict ratchet stays monotone; no silent regress.
+Common pitfalls (and how to dodge them)
+• Overfitting a blotch: If a Δ fixes the 8×8 but inflates the parity twin, revert; that’s a disguised global tweak.
+• Threshold thrash: Don’t tighten two gates after one pass. Only one knob per octave.
+• Semantic creep: If your “fix” changes meaning (e.g., swapping the loss function class), park it in Non-Working and write a new meaning token instead.
+Practice (10-minute drill)
+• Take any face that failed last round.
+• Run the 8×8 + shells + parity twin ritual.
+• Propose exactly one Δ; mirror test; accept/reject.
+• If you now have ≥4 passes, ratchet by one notch; compute commit-4; file the receipt.
+What we just advanced
+• A repeatable viewer protocol (8×8 + 4× shells + parity twin) to localize causes.
+• A minimal Δ-lift menu that stays local and reversible.
+• A disciplined ratchet and commit that make the improvement portable.
+What’s next
+Section 12 — Automorphisms & Clone Rings (M₂₄/Monster as “copy without re-deriving”): we’ll take a passed anchor face set, generate isomorphic clones by permutation/braid, and show how meaning packs swap in while geometry (and viewers) stay identical. Same scene format, same receipts.

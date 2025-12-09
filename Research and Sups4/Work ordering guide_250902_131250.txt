@@ -1,0 +1,145 @@
+Here’s a single, tight “presentation deck” for every layer → . Each layer uses the same tiny ISA (predicates, edits, geometry, ledger) and the same accounting rule (the 16 + 1 carry). After the layers, I show how to step beyond 8D and give a worked example you can run mentally.
+n=1 — Atoms (make the idea addressable)
+Purpose
+Turn raw stuff (text, signals, features) into stable atoms you can move one unit at a time.
+State
+Digits in . Parity .
+Guards (free checks)
+None required—this is pre-law.
+Operators (paid)
+Eight atomics : increment/decrement one position by mod 4 (cost each).
+Phase contribution (for a quad ):
+\Delta H8(e_1^\pm)=\pm1,\;\Delta H8(e_2^\pm)=\pm2,\;\Delta H8(e_3^\pm)=\mp2,\;\Delta H8(e_4^\pm)=\mp1\ (\bmod 8). 
+Output
+A digit stream with consistent local increments; nothing is “legal” yet.
+n=2 — Pairs (stabilize adjacency)
+Purpose
+Give atoms a preferred local neighbor relation to reduce later fixes.
+Guards
+Your domain’s 2-way test (e.g., type compatibility, monotone step, etc.).
+Plan
+Symmetry-first (try Mirror / Dual / Inverse for free), then the minimal to satisfy the pair test.
+Cost & Receipts
+Cost = number of fired. Record only if you changed a quad’s phase.
+Output
+Pairs that don’t surprise the next layer.
+n=3 — Triples (choose a flow)
+Purpose
+Pick a chirality (left→right vs right→left) and maintain it lightly.
+Guards
+Your 3-way test (order, monotonicity, small convexity).
+Plan
+Symmetry-first; if a triple fights the flow, apply sparingly or mark it for n=4 to legalize.
+Cost & Receipts
+As above.
+Output
+A stream with a preferred direction (softly enforced).
+n=4 — Governance (legalize quads; the core law)
+Purpose
+Make every 4-token window LAWFUL with minimal work.
+Guards (free)
+\mathrm{ALT}(q)\ \wedge\ \big(\mathrm{W4}(q)\ \ \vee\ \ \mathrm{Q8}(q)\big), 
+= alternating parity,
+,
+.
+Phase: .
+Plan (always the same three steps)
+• Symmetry-first: try to lower cost without paying phase.
+• CLTMP target: pick the Combined Lowest Taxicab Meeting Point
+s.t. LAWFUL(r).
+• Realize with atomics: apply the minimal bundle to reach .
+Critical rule — 16 + 1 carry
+Over two adjacent quads (8 digits) you have 16 interior bits.
+If phase-locked legalization is infeasible, immediately allow exactly one unit of phase carry (), then re-solve interior. Never hunt for a 17th interior flip.
+Cost & Receipts
+Pack cost (if you call it as an n=4 op) = 4; otherwise sum of atomics. If , deposit a single receipt (PhaseCarry1).
+Output
+A lawful quad sequence with phase mostly locked and receipts isolated.
+n=5 — Session (smooth a strip)
+Purpose
+Make a contiguous span of quads coherent (few receipts, low boundary energy).
+Guards
+Same as n=4, but evaluated across a sliding window.
+Plan
+Tile with n=4 blocks; prefer symmetry choices that help neighbors; close small loops; keep H8 constant where possible.
+Cost & Receipts
+Pack cost = 5 per session op; otherwise the sum of underlying n=4’s. Receipts appear only at loop joins if needed.
+Output
+A clean pass (begin–middle–end) with predictable local structure.
+n=6 — Regime (policy dial)
+Purpose
+Declare preferences (W4 vs Q8, phase strictness, lane weights) and apply them across a region.
+Guards
+Regime must not contradict the law; it only orders choices among legal projections.
+Plan
+Fix in the energy ; bias symmetry and CLTMP to minimize future edits under that dial.
+Cost & Receipts
+Pack cost = 6. Receipts only at regime boundaries if policy toggles force a phase change.
+Output
+Consistent “style” of legality choices that reduces downstream thrash.
+n=7 — Network (stitch sessions)
+Purpose
+Connect many sessions; keep receipts confined to boundaries.
+Guards
+Boundary joins must satisfy the law; interiors must remain untouched.
+Plan
+Choose joins that reuse lawful subpaths; if a phase mismatch exists, place one explicit receipt at the boundary.
+Cost & Receipts
+Pack cost = 7. At most one receipt per join.
+Output
+A stitched graph of sessions whose interiors are stable and auditable.
+n=8 — Macro (close the books)
+Purpose
+Finish globally: conservation, canonical form, replay recipe.
+Guards
+Ledger closed: . All windows lawful.
+Plan
+Sum work ; settle any residual with the smallest legal set of boundary receipts; emit canonical stream + capsule library (your favorite lawful n=4 seeds).
+Cost & Receipts
+Pack cost = 8. No interior edits at this stage—only boundary accounting.
+Output
+Global canonical output + full provenance (receipts + operator plan).
+How to go beyond 8D (higher-dimensional spaces)
+You get higher dimensions in three principled ways:
+• Stack windows (direct sums):
+Each 8-token window lifts to and snaps to . windows in parallel give (16D, 24D, 32D, …). Your ISA is unchanged; you just run it blockwise with cross-block guards at n=7/8.
+• Add fibers (extra lanes):
+Attach new DoF as independent “fibers” over each window (e.g., time, scale, color). Algebraically, this is a product space (base × fibers). Guards tell you when a fiber is allowed to carry the “+1” instead of interior bits.
+• Glue for special lattices:
+If you need special 16D/24D structures (e.g., even unimodular without roots), start from or and add a small glue code at n=8 (a regime-level constraint) so the combined set meets your target spectrum. The per-window ISA still doesn’t change; the glue appears as network/macro constraints.
+Key point: the only new thing at higher D is coordination—the local move set never grows.
+Worked example (end-to-end on a tiny stream)
+Take two quads (8 digits):
+q_1=(1,2,3,4),\qquad q_2=(2,1,2,1). 
+n=1–2
+Atoms/pairs are fine (no immediate conflicts).
+n=3
+Choose left→right chirality; both triples are consistent (no edits).
+n=4
+• Check :
+: → ALT ✅;
+→ W4 ✅;
+So is LAWFUL; .
+• Check :
+: → ALT ✅;
+→ W4 ✅;
+So is LAWFUL; .
+No edits, no receipts needed. (If one had failed, we’d do symmetry-first → CLTMP → minimal atomics; if phase-lock failed, the 16 + 1 rule would authorize exactly one unit of , then finish with interior edits.)
+n=5
+Session-smooth: slide the quad window one step; choose symmetry targets that keep constant across the span if possible. Here, already OK.
+n=6
+Regime dial: prefer W4 over Q8 and penalize phase jumps (set high). No change needed.
+n=7
+Network: if we had multiple such spans, we’d join them and place a single receipt at a boundary if two spans disagreed in phase.
+n=8
+Macro: ledger is already closed (no receipts). Emit canonical stream and save the capsule as a reusable lawful seed.
+Higher-D note on this example
+If you take 3 such 8-digit windows in parallel, you’re in (24D). The per-window legalization is still the same; the only new work is n=7/8 coordination across the three blocks.
+Master equality (one program for all layers)
+Every transformation you do—whether you call it “n=2 pair” or “n=8 macro”—instantiates this single objective with different scopes:
+\min_{g,\ \{x_n\},\ \Delta} \Big[ \underbrace{\textstyle\sum_{n=1}^{8} n\,\|x_n\|_1}_{\text{operator work}} +\ \lambda\,d_8(\Delta) +\ \mu \sum \mathcal E(\text{windows}) \Big] 
+• (symmetry, then edits),
+• LAWFUL on all windows,
+• 16 + 1 rule: if phase-locked infeasible, enforce then re-solve interior.
+“Being at layer ” just means you allow packs up to cost and apply the matching guards.
+That’s the whole machine in one view: eight layers, one tiny ISA, one conservation law, and a clean path to higher dimensions.

@@ -1,0 +1,325 @@
+Nick’s Unified Geometry–Adjacency (NGA) Program — Comprehensive R&D Dossier (Running Document)
+Version: v0.4 (2025‑08‑26)
+Owner: Nick
+Co‑pilot: GPT‑5 Thinking
+Scope: Living, exhaustive record of this session’s theory, design, experiments, datasets, metrics, results, policies, and falsification plan. Intended to be iteratively updated.
+0) Orientation & Live Artifacts
+Session objective. Build and test a token‑first, geometry‑forward pipeline that advances through the n‑ladder (half‑steps vs full‑steps), scores edits with a geometry action and DFSS (minimax across futures), and validates the program’s claims—especially the n=5 behavior and possible octadic (2→4→8) structure.
+Uploaded sources used in this phase:
+• Eight “canvas docs” (content windows): 
+• canvas docs 1-3 81525.txt
+• canvas docs 4-6 81525.txt
+• canvas docs 7-9 81525.txt
+• canvas docs 10-12 81525.txt
+• canvas docs 13-15 81525.txt
+• canvas docs 16-18 81525.txt
+• canvas docs 19-21 81525.txt
+• canvas docs 22-23 81525.txt
+• Additional context (not fully ingested in v0.2–v0.4 runs): 
+• egans superperm work in full.txt
+• full session SnapLat build.txt
+Key run artifacts (saved locally):
+• v0.1j (two‑doc micro): 
+• /mnt/data/nga_v0_1j_three_methods_bundle.json
+• /mnt/data/nga_v0_1j_micro_three_methods.json
+• v0.2 (8‑doc corpus, 3 methods + octadic checks): 
+• /mnt/data/nga_v0_2_corpus_bundle.json
+• v0.3 (policy cards + geometry cards + evidence cards): 
+• /mnt/data/nga_v0_3_policy_cards.json
+• /mnt/data/nga_v0_3_geometry_cards.csv
+• /mnt/data/nga_v0_3_evidence_cards.json
+• v0.4 (policy‑wired, independent evaluation): 
+• /mnt/data/nga_v0_4_policy_alt_tests.json
+Update protocol. Treat this doc as the canonical R&D log. Append new sections; don’t overwrite history. Use Changelog at the end for deltas.
+1) Framework (Concise but Complete)
+1.1 Token Semantics (explicit distinction)
+• Model‑native tokens: internal to GPT; not used as units of analysis here.
+• Session tokens (NGA): deterministic, audit‑friendly units we define (e.g., D[k], LAYER[b], VERT[bits], EDGE[dim=j], MORTON[...], control operators). These drive graphs, ledgers, CI checks, and DataFrames.
+1.2 n‑Ladder (semantics & parity)
+• Half‑steps (x.5): adjacency/topology rewires, potentially alternate‑D access; near‑constant energy lower bounds.
+• Full‑steps (even integers): embedding/axis upgrades that reduce contention and stabilize geometry.
+Levels (abbrev):
+• 0 rest; x.5 bridge; 1 primitives; 2 synthesis + plot (line); 3 tri‑synthesis; 4 governance (swap components, maintain invariants); 5 forced paired move; 6 symmetry gate; 7 exterior coupling; 8 hyper‑embedding. After 8, gather ~8 n=8 sets and braid.
+1.3 Token Grammar (+ CI)
+D[k] | LAYER[b] | VERT[bits] | EDGE[dim=j] | MORTON[code] CELL[k]:id | BOUNDARY(...) | SYM_LOOKAHEAD | DFSS_MINIMAX | CONTRA_BRAID | HELICITY[window=w] 
+CI (hard gates): bit‑length matches k; in‑layer VERT hops are Hamming‑1; cross‑layer edges only when LAYER[0] & LAYER[1] staged; cell refs unique; ∂²=0 if used. Auto‑legalizer suggests minimal fixes.
+1.4 DataFrames & Ledgers
+• Token‑Graph: nodes, edges, chains (append‑only audit).
+• Session Memory: chunks, links, queries, states (energy floors respected).
+• Ledgers: dfss_ledger, inverse_ledger, observation_ledger, braid_ledger, overload_ledger.
+1.5 Geometry‑First Scoring ()
+• Metrics: chirality, helicity/writhe, crossings, hull compactness, Band‑8, orbit split (ACI/BCI), 8×8 orbit tensor penalties (trace‑free; divergence).
+• Sanity controls: mirror flips signs; null surrogates (shuffle/Markov/block‑8/orbit‑wise) shouldn’t beat real.
+1.6 DFSS (minimax across futures)
+Scenarios: S₀ (now), S½ (half‑step rewires), S⁺ (dimension upgrade), Sᶜ (curvature↔fields slider), Sʳ (robustness). Normalize jointly; take min over futures.
+1.7 Operator Set (legal moves)
+• O1 Half‑step (alt‑dim rewire).
+• O2 Full‑step (axis/layer add).
+• O3 Center‑3‑Tri (k≈5 repair, add hub triangles).
+• O4 Per‑Edge Triad (k≈5 repair, distributed).
+• O5 Symmetry Gate.
+• O6 Alena Slider (curvature↔fields isoenergetic).
+• O7 Governance swaps (n=4 type‑safe replacements).
+2) Datasets & Construction
+2.1 Intake form
+Free‑text chat/work summaries → tokenization → co‑occurrence graph (top‑K vocab, sliding window). For spectral affinity: NPMI or normalized Laplacian eigenvectors. For geometry: sentence windows → TF‑IDF‑lite → PCA‑2 → polyline → metrics.
+2.2 Seed vocabulary & extension
+• Centers: top‑degree tokens per spectral cluster.
+• Bridges: tokens with high cross‑ratio (neighbors outside center set).
+• Seeds extend dynamically per doc via cluster sizes and degree/within scores (audited in policy params).
+3) Methods Under Test (mapped to learning stages)
+• RAW‑INTAKE (pre‑understanding) — small half‑step seed bridges; optional tiny k≈5.
+• DEEPENING (weak→deep + recall build) — larger structured half‑step plus k≈5; order chosen by DFSS.
+• RECALL/REVIEW (full recall & reassessment) — strong k≈5 brace; optional tiny half‑step (center‑recouple).
+Why three? They reflect x.5 (bridge), even (upgrade), and the n=5 paired‑move repair regime.
+4) Experimental Timeline
+v0.1j — Two‑doc micro
+• Built adjacency graphs; ran RAW/DEEPEN/RECALL variants; quick geometry sanity (helicity, mirror flip, null p‑value).
+• Outcome: methods behave distinctly; DEEPEN vs RECALL trade depending on doc density.
+v0.2 — 8‑doc corpus + octadic (2→4→8) checks
+• Full candidate grid per doc (identity + half + k≈5 orderings).
+• Octadic test: nested Fiedler splits (2→4→8), compute cut fractions (cf2, cf4, cf8) and modularity (Q2→Q4→Q8).
+• Saved: /mnt/data/nga_v0_2_corpus_bundle.json.
+v0.3 — Controller policies + geometry cards + evidence cards
+• For each doc, selected winning method/variant; parsed params (k5@…, half…, order).
+• Emitted policy cards (method/params + rationale), geometry cards (chirality/helicity/crossings/hull/Band‑8/ACI/BCI/mirror/null), and evidence cards (DFSS + hypothesis flags).
+• Saved: policy/geometry/evidence files under /mnt/data/nga_v0_3_*.
+v0.4 — Policy‑wired independent validation
+• Different futures: id, degswap20 (degree‑preserving rewires; isoenergetic proxy), drop10, add5.
+• Different score: AltScore = 0.4·λ₂ₙ + 0.3·Cₙ + 0.3·(ASP_invₙ); AltDFSS = min over futures.
+• Baselines: S0 (no edit), k5‑only, and random‑half mimic (budget‑matched).
+• Saved: /mnt/data/nga_v0_4_policy_alt_tests.json.
+5) Results (explicit)
+All numbers below come from the saved bundles; see Artifacts section for paths and full tables.
+5.1 Method winners across 8 docs (v0.2)
+• RECALL wins 4/8 (50%).
+• DEEPEN wins 3/8 (37.5%).
+• BASE (no edit) wins 1/8 (12.5%).
+Interpretation: three distinct regimes are empirically present; base can still win on one doc (already‑good structure).
+5.2 n≈5 tiny half‑step effect (v0.2, RECALL context)
+• Files where a tiny half‑step after k≈5 improved DFSS: 3/8 (37.5%).
+• Gain stats (ΔDFSS): median −0.057, mean −0.033, max +0.419.
+Interpretation: the tiny half‑step is situational: sometimes sharply helpful (large positive gain), sometimes neutral/negative. This suggests the “first forced upgrade” at n≈5 manifests under specific graph geometries (e.g., when centers are close to a latent 2→4→8 split or when k≈5 braces expose cross‑cluster seams).
+5.3 Octadic (2→4→8) “cleanliness” (v0.2)
+• Using strict thresholds (cf* < 0.45 and Q8 ≥ Q4 ≥ Q2), 0/8 met all conditions.
+Interpretation: our clean criterion was conservative for this corpus. Partial evidence (Q lifts without meeting all cuts) may still support octadic tendencies; threshold tuning and alternative community detectors are on the roadmap.
+5.4 Policy validation on independent stress (v0.4)
+• Policy beats baseline: 6/8 files (75%).
+• Policy beats k5‑only: 4/7 applicable cases (57.1%).
+• Policy beats random‑half mimic: 2/4 cases (50%).
+• Gain vs baseline (AltDFSS): median +0.204, mean +0.132, range [−0.118, +0.254].
+Interpretation: policies generalize under different futures and metrics, with majority wins and positive median gain; not universal, which is expected under minimax.
+6) What We Learned (mapped to the program’s theses)
+• Three‑method hypothesis holds. Distinct winners across RAW / DEEPEN / RECALL confirm stage‑specific best practices.
+• n=5 is a hinge, but not always “forced.” k≈5 braces stabilize; tiny half‑step can act as the minimal cross‑dimensional nudge, but only when local geometry suggests a latent split—consistent with “paired move” logic.
+• Octadic structure requires careful detection. Our strict 2→4→8 flags were too tight for this corpus; we’ll broaden detectors (e.g., Leiden/Louvain, multi‑scale modularities, SBMs) and relax cut thresholds with CI reporting.
+• Geometry cards matter. Mirror flips and null p‑values provide quick sanity (signed metrics behave, real beats nulls). This supports the geometry‑first stance.
+• Independent robustness is critical. The v0.4 “AltScore” confirms that wins are not an artifact of one futures set or normalization.
+7) Controllers & Policies (as of v0.3 → v0.4)
+Policy selection rule of thumb:
+• If 2→4→8 evidence is present (or geometry suggests multi‑community structure): prefer DEEPEN; try both orders (half→k5 vs k5→half); keep higher DFSS.
+• If the graph core is dense/consistent: RECALL (k≈5). Test a tiny half‑step and keep it only if ΔDFSS>0.
+• If sparse/noisy: RAW‑INTAKE small half‑step; avoid k≈5 unless DFSS improves.
+Implemented policy cards per file include: method, variant (desc), parsed params (k5@…, half…, order), and rationale (DFSS, ΔDFSS, eff/edge, tiny‑half flags). See /mnt/data/nga_v0_3_policy_cards.json.
+8) Energetics & Information Accounting (operational notes)
+• Choice/Control energy: steering cost; we proxy via added edges and their effect on ASP/λ₂.
+• Erase (Landauer): modeled as delete/compile phases; kept qualitative in this text pass.
+• Isoenergetic topology tests: v0.4 degswap20 is an adjacency slider that preserves degrees (proxy for “same energy floor” classes).
+9) Falsifiability & Risks (session‑specific instantiation)
+• F1 (half‑step isoenergetic): If degree‑preserving rewires change energy proxies systematically, hypothesis weakens. Current: mixed—AltDFSS mostly stable; revisit with explicit energy logs.
+• F2 (mirror/null beats real): Not observed qualitatively; retain for each geometry card.
+• F3 (k≈5 repairs don’t survive full‑step): In this corpus, policy wins under AltScore suggest survival; add explicit S⁺ runs later.
+• F4 (octadic absent): Our strict test found 0/8 clean cases; we’ll broaden detectors and quantify partial matches with CIs.
+10) Implementation Details (algorithms & parameters)
+Adjacency graph: top‑K vocab; window 5; undirected; optional NPMI filter (min co‑count 3).
+Centers/Bridges: degree‑ranked centers; bridge score = external‑neighbor ratio.
+k≈5 repairs: per_edge_triad (distributed bracing) and center_3_tri (hub triangles). Budgets: 8–14 edges in micro runs.
+Futures (v0.2): identity; half‑rewire (+12); drop 5%.
+Futures (v0.4): identity; degswap20; drop 10%; add 5%.
+Scoring (v0.2): normalized λ₂ and ASP; DFSS = min across futures.
+Scoring (v0.4): AltScore = 0.4·λ₂ₙ + 0.3·Cₙ + 0.3·(ASP_invₙ); AltDFSS = min across futures.
+Geometry extraction: sentence windows (6, stride 3), TF‑IDF‑lite → PCA‑2 → polyline metrics; mirror flip by y‑axis reflection; nulls by window shuffle.
+11) Repro & How‑To (minimal)
+• Load text → tokenize → build .
+• Compute centers/bridges → assemble seeds.
+• Generate candidates per method (RAW/DEEPEN/RECALL; vary order).
+• Evaluate over futures → DFSS (or AltDFSS).
+• Emit policy / geometry / evidence cards.
+• Check hypotheses (tiny half‑step; 2→4→8 metrics).
+12) Open Questions & Next Steps
+• Octadic detection: add Louvain/Leiden, SBMs, and multi‑resolution modularity; tune cut thresholds; report CIs.
+• Energy accounting: attach explicit choice vs erase proxies; log ΔJ alongside ΔDFSS.
+• Order effects: systematically test half→k5 vs k5→half across all docs and weight by geometry regime.
+• External corpora: run on egans superperm… and SnapLat build… to cross‑validate superpermutation‑like rules.
+• S⁺ survival: add explicit dimension‑upgrade futures.
+13) Session Changelog
+• v0.1j — Two‑doc micro: 3 methods; DFSS; geometry sanity.
+• v0.2 — Corpus‑wide: method winners; tiny half‑step test; 2→4→8 checks; bundle saved.
+• v0.3 — Policies + geometry/evidence cards saved.
+• v0.4 — Policy‑wired independent evaluation (new futures & AltScore) with baselines.
+14) Appendix: Glossary (selected)
+• Half‑step: topology/adjacency change (alternate‑D access) with near‑constant energy floors.
+• Full‑step: embedding upgrade (new axis/layer).
+• : geometry action combining invariant shape metrics and tensor penalties.
+• DFSS: minimax structural security across futures.
+• ACI/BCI: anti‑chirality and balanced‑cancellation indices across 8 orbits.
+• k≈5 repairs: minimal bracings that legalize “paired moves” at n=5.
+• Centers/Bridges: seed vocabulary selection primitives (cluster cores vs cross‑cluster connectors).
+15) Appendix: References to Generated Artifacts (paths)
+/mnt/data/nga_v0_1j_three_methods_bundle.json /mnt/data/nga_v0_1j_micro_three_methods.json /mnt/data/nga_v0_2_corpus_bundle.json /mnt/data/nga_v0_3_policy_cards.json /mnt/data/nga_v0_3_geometry_cards.csv /mnt/data/nga_v0_3_evidence_cards.json /mnt/data/nga_v0_4_policy_alt_tests.json 
+Note: For numeric details per file (DFSS, AltDFSS, winners, octadic metrics, tiny half‑step deltas), consult the bundles above or the session tables; this document summarizes and interprets those results and will be extended with embedded tables on request.
+End v0.4 — ready for edits and extensions.
+
+NGA Operational Rulebook & Methods (Ops R&D)
+Version: v0.4 (running)
+Owner: Nick
+Ops Co‑pilot: GPT‑5 Thinking
+Purpose: A clear, complete, operational handbook for how we run the systems designed in this session. Mirrors the R&D style while being execution‑ready. Treat as a living document; append changes in the changelog.
+0) Scope & Contract
+• This rulebook governs: data intake, token grammar, CI gates, controllers, operators, evaluation (DFSS/AltDFSS), geometry cards, octadic checks, energy accounting, evidence, automation, and change control.
+• Separation of tokens: 
+• Model‑native tokens (inside GPT) are not our units of record.
+• Session tokens (NGA tokens) are explicit, deterministic symbols used to build graphs, ledgers, and audits.
+1) Canonical Operational Vocabulary
+1.1 Session Tokens & Grammar
+D[k] # enter dimension k LAYER[b] # half‑step layer b∈{0,1} VERT[bits] # Gray‑coded vertex; len(bits)=k under current D[k] EDGE[dim=j] # step along axis j (in‑layer 1..k; cross‑layer j=k+1) MORTON[code] # range/locality hint for grid subsets CELL[k]:id # optional k‑cell id BOUNDARY(CELL[k]:α → [CELL[k‑1]:β…]) # algebraic boundary SYM_LOOKAHEAD | DFSS_MINIMAX | CONTRA_BRAID | HELICITY[window=w] 
+Hard CI gates:
+• len(bits)=k in active D[k].
+• In‑layer VERT hops are Hamming‑1.
+• Cross‑layer EDGE[dim=k+1] requires LAYER[0] and LAYER[1] staged; endpoints share base bits.
+• IDs unique; referential integrity; if cells used, enforce ∂²=0.
+Auto‑legalizer: normalize bit lengths; insert missing LAYER[1] before cross‑layer edges; rewrite illegal in‑layer hops to nearest Hamming‑1.
+1.2 n‑Ladder → Ops Phases
+• n=0: Idle/observe.
+• n=x.5: Half‑step/bridge (alt‑adjacency; isoenergetic).
+• n=1: Glyphs/primitives.
+• n=2: First synthesis + plotting (1‑D).
+• n=3: Tri‑synthesis choice.
+• n=4: Governance modules (swap‑safe).
+• n=5: Paired move/repair (k≈5).
+• n=6: Symmetry gate.
+• n=7: Exterior coupling prep.
+• n=8: Hyper‑embedding; gather ~8 n=8 sets and braid.
+2) Data Intake & Build
+2.1 Inputs
+• Free‑text chat logs, work summaries, code blocks (plaintext).
+• Optional structured: CSV/Parquet minimal views if/when needed (columns only as required).
+2.2 Pipeline
+• Tokenize (stopworded, alnum underscore, ≥3 chars).
+• Adjacency graph A: top‑K vocab (120–160), sliding window=5; undirected 0/1.
+• Centers & Bridges: 
+• Centers = degree‑top tokens per spectral cluster (or degree top‑k).
+• Bridges = high cross‑ratio tokens (neighbors outside center set).
+• Geometry windows: sentence windows (len=6, stride=3) → TF‑IDF‑lite → PCA‑2 → polyline.
+2.3 Repro Artifacts
+• Keep A (adjacency), vocab list, and token counts.
+• Log seeds (centers/bridges), budgets, and random seeds.
+• Persist evidence cards (Section 9).
+3) Controllers (Method Selection)
+3.1 Methods
+• RAW‑INTAKE: small half‑step seed bridges; optional tiny k≈5.
+• DEEPENING: structured half‑step + k≈5 repair; try both orders (half→k5, k5→half).
+• RECALL/REVIEW: strong k≈5; optional tiny center‑recouple half‑step.
+3.2 Selection Heuristics (default policy)
+• If nested community evidence (2→4→8 hints) or multi‑cluster geometry → DEEPEN; test both orders; pick higher DFSS.
+• If dense core (high λ₂, low ASP) → RECALL (k≈5); then test tiny half‑step; keep only if ΔDFSS>0.
+• If sparse/noisy → RAW‑INTAKE; avoid k≈5 unless DFSS improves.
+• Tie‑breaking: use eff_per_edge (ΔDFSS per added edge); then lowest ASP; then highest clustering C.
+3.3 Parameter Budgets (micro defaults)
+• half‑step edges: 10–16; per‑bridge cap: 3; center cap: 8–10.
+• k≈5 repair (per‑edge‑triad): 8–14 edges.
+4) Operators (Moves) & Preconditions
+O1 — Half‑Step (Alt‑Dim Rewire)
+• Goal: increase effective dimension with minimal energy change.
+• Build: seed bridges from bridges×centers under caps; or center‑recouple (halfSmall).
+• Pre: Token CI; layer staging ok.
+• Post: log edges added; update DFSS ledger.
+O2 — Full‑Step (Embedding Upgrade)
+• Goal: reduce contention; replot with added axis.
+• Pre: symmetry/geometry rationale; memory of invariants.
+• Post: lower crossings/ASP; check survival of repairs.
+O3 — Center‑3‑Tri (k≈5 Repair, hub)
+• Goal: legalize paired move via hub triangles.
+• Pre: pick hubs by degree/centrality.
+• Post: increases clustering, λ₂; watch for brittleness.
+O4 — Per‑Edge Triad (k≈5 Repair, distributed)
+• Goal: distributed brace along boundary edges;
+• Pre: boundary pairs available;
+• Post: best minimax in tests; survives upgrades well.
+O5 — Symmetry Gate
+• Enumerate legal symmetries; choose by DFSS and geometry action look‑ahead (n+1,n+2).
+O6 — Alena Slider (Curvature↔Fields)
+• Degree‑preserving rewires as isoenergetic topology shift proxy; compare AltDFSS.
+O7 — Governance Swaps (n=4)
+• Type‑safe component replacement while keeping invariants green.
+5) Evaluation Protocols
+5.1 DFSS (v0.2 style)
+• Futures: id; half‑rewire (+12); drop 5%.
+• Metrics: λ₂ ↑, ASP ↓ (normalized jointly).
+• Score: DFSS = min over futures.
+5.2 AltDFSS (v0.4 independent)
+• Futures: id; degswap20; drop 10%; add 5%.
+• Metrics: λ₂ ↑, clustering C ↑, ASP ↓.
+• Score: AltScore = 0.4·λ₂ₙ + 0.3·Cₙ + 0.3·(ASP_invₙ); AltDFSS = min over futures.
+5.3 Acceptance & Regression
+• Accept edit if DFSS (or AltDFSS) improves over baseline by ≥ small ε and eff_per_edge>0.
+• Regression sweep: after any rule change: recompute deltas, mirror/null checks, issue pass/fail report.
+6) Geometry Cards (Shape‑First Sanity)
+• Windows: sentences (6, stride 3, cap≈360).
+• Embed: TF‑IDF‑lite → PCA‑2 → polyline.
+• Metrics: chirality (signed turning), helicity (signed area/length), crossings, hull compactness, Band‑8, ACI/BCI.
+• Controls: mirror flip must invert signed metrics; null surrogates (window shuffle) should not beat real (report p‑value on |helicity|).
+• Use: attach per run; cite when choosing between ordered variants (half→k5 vs k5→half).
+7) Octadic Checks (2→4→8)
+• Default detector: nested Fiedler splits to 2, then 4, then 8 groups.
+• Stats: cut fractions cf2/cf4/cf8 (lower better), modularities Q2/Q4/Q8 (higher better), balance b2/b4/b8.
+• Clean flag: (cf2,cf4,cf8 < θ) and Q8≥Q4≥Q2 (θ≈0.45 by default; tune).
+• Alternative detectors (roadmap): Louvain/Leiden, SBMs, multi‑resolution modularity; report CIs.
+• Ops rule: if clean or strong multi‑community signals → prefer DEEPEN.
+8) Energy & Information Accounting
+• Choice/Control energy (proxy): edges added; ASP/λ₂ shifts; throughput/J proxy if available.
+• Erase (Landauer) energy: register on delete/compile phases (qualitative in text‑only runs).
+• Isoenergetic topology tests: degree‑preserving rewires (degswap20) serve as slider; compare AltDFSS stability.
+9) Evidence & Audit
+9.1 Evidence Card (JSON skeleton)
+{ run_id: "…", file: "…", gates: { token_CI_pass, completeness_edges_min }, metrics: { DFSS, AltDFSS?, lambda2, clustering?, ASP, eff_per_edge }, soi: { clean_2_4_8, tiny_half_improves, tiny_half_gain }, geometry: { chirality, helicity, crossings, hull_compact, band8, ACI, BCI, mirror_flip, p_null_helicity }, notes: "…" } 
+9.2 DFSS Ledger
+• Append (candidate, futures scores, normalization parameters, minimax result, ΔDFSS, ΔJ if available).
+• Keep random seeds and budgets.
+10) Runbooks & Automations
+10.1 Minimal Run (one doc)
+• Build A and seeds (centers/bridges).
+• Generate candidates per method (RAW/DEEPEN/RECALL).
+• Evaluate DFSS (or AltDFSS).
+• Pick winner; emit policy, geometry, evidence cards.
+10.2 Corpus Sweep
+• Iterate Minimal Run across docs; publish Per‑File Method Winners and Hypothesis Checks.
+• Promote winners into controller policy cards.
+10.3 Watchers
+• 5→8 watcher: when k≈5 applied, test tiny half‑step; accept only if ΔDFSS>0; log frequency & gains.
+• Symmetry gate: enumerate symmetry classes; pick by DFSS and geometry look‑ahead.
+• Regression watcher: rerun AltDFSS after rule changes; flag regressions.
+11) Failure Modes & Guardrails
+• Token CI fails: fix layer staging; enforce Hamming‑1; auto‑legalizer suggests nearest neighbor.
+• Null beats real: retune weights; add orbit‑8 terms; inspect windows.
+• k≈5 bloat: switch to per‑edge‑triad; reduce budget; try order swap.
+• Octadic not detected: relax thresholds; try alternative detectors; record CI.
+• Policy under AltDFSS: adjust half/k5 budgets by ±2 edges; re‑score; keep best.
+12) Change Control
+• Use Changelog entries for every update (date, rationale, delta in budgets/thresholds).
+• Keep previous policies for rollback.
+• After each change: run Regression sweep and update evidence bundles.
+13) Pseudocode Snippets
+13.1 Policy Application
+A = build_adjacency(text) centers, bridges = find_centers_bridges(A) params = policy[file].params # {k5_budget, half_edges, half_style, order} G = A.copy() if order == "half→k5": G = apply_half(G, centers, bridges, params) G = apply_k5(G, params) elif order == "k5→half": G = apply_k5(G, params) G = apply_half(G, centers, bridges, params) else: if params.half_edges>0: G = apply_half(...) if params.k5_budget>0: G = apply_k5(...) score = DFSS_or_AltDFSS(G) emit_policy_geometry_evidence(...) 
+13.2 Octadic Split (Fiedler‑nested)
+parts2 = fiedler_split(A) parts4 = split_each(parts2) parts8 = split_each(parts4) compute {cf2,cf4,cf8, Q2,Q4,Q8, balances} clean = (cf2,cf4,cf8<threshold) and (Q8≥Q4≥Q2) 
+14) Current Defaults (tunable)
+• Top‑K vocab: 140 (120–160 acceptable).
+• Window size: 5.
+• Half‑step budget: 10–16 edges; per‑bridge cap: 3.
+• k≈5 budget: 8–14 edges.
+• Octadic clean thresholds: cf* < 0.45; modularity ordering Q8 ≥ Q4 ≥ Q2.
+15) Changelog
+• v0.4 (today): First full ops rulebook extracted from session; aligned with v0.3 policies and v0.4 AltDFSS.
+This rulebook is live. Request edits with “update ops rulebook:” followed by the change; we’ll append to the changelog and adjust watchers/policies accordingly.

@@ -1,0 +1,380 @@
+1) What this sandbox is (one paragraph)
+
+A live, self-improving AI workroom: it mints personas from your RAG cards (per data type / task), routes each task through an assembly-line of atomic operators, and runs a Futures Engine that projects all feasible ledger uses H steps ahead (default H=3) by expanding along the E₈ root fan (240 directions) at each step. A Mixture-of-Experts (MoE) panel inspects projected paths, spins up optional pass paths, spot-tests them, double-embeds (original + best move), and hands the solver a precise hint: “make move M within X steps to avoid failure,” with proofs. All of it writes receipts to ledgers and a master best-of store.
+
+2) System architecture (high level)
+
+Persona Factory
+
+Input: RAG cards + IRL corpus.
+
+Output: Persona specs (encoders, invariants, dials, budgets, test battery, acceptance).
+
+Think “typed experts” for text, tables, time series, graphs, media—each a check suite + runbook.
+
+Workflow Orchestrator (Assembly-Line Manager)
+
+Orders atomic stages (encode→pairs→triads→projector→CRT→braid→E₈ snap→governance).
+
+Enforces budgets (atomic flips, ΔH8, entropy, CRT penalties).
+
+Everything is an action-as-check with receipts.
+
+Futures Engine (240×H)
+
+From current ledger state 
+𝑆
+𝑡
+S
+t
+	​
+
+, expand to E₈ neighbors along 240 roots; repeat H=3 times.
+
+Beam/prune by λ-drop, phase bounds, residue predicates, subadditivity; cache receipts.
+
+MoE Panel (Routing + Adjudication)
+
+Experts = persona-scoped checkers (residue heads, phase heads, braid heads, CRT heads, governance heads).
+
+Gating by evidence score (how much proof improves) and cost vector.
+
+Decides which futures to instantiate in DTT.
+
+DTT Sandbox (Deploy-to-Test)
+
+Spins up ephemeral runs for each candidate path; executes spot tests (fast projector/E₈/CRT checks).
+
+Emits compact attestations; no heavy training required.
+
+Double-Embedder
+
+Stores (original state, best move) as a pair of canonical embeddings (Σ→E₈ & CRT fingerprints).
+
+Feeds solver hinting and future retrieval.
+
+Solver Interface (Hinting + Control)
+
+Presents: “Apply operator O at index i within X steps; expected Δλ = −k; receipts attached.”
+
+Supports mid-task error correction with guaranteed minimal paid work.
+
+Storage
+
+Master Best-Of: canonical states + best moves + proofs.
+
+Ledgers: full receipts (per move, per path, per commit).
+
+Attestation Vault: compact proofs for external verifiers.
+
+Governance Layer (24D Leech + Conway/Monster)
+
+Batches decisions; snap 24D pack (struct/arith/dyn 8-tuples) to Leech lattice; class-check under permitted symmetries; record policy receipts.
+
+3) Persona Factory (perfect data-type personas)
+3.1 Persona spec (schema)
+{
+  "persona_id": "text-v3" ,
+  "encoders": ["balanced-byte","prefix-free-utf8"],
+  "invariants": ["ALT","W4_or_Q8","phase:H8"],
+  "guards": ["pair:parity","triple:chirality"],
+  "dials": {"entropy_beta": 2.0, "max_dH8": 2, "beam": 64},
+  "crt_moduli": [3,5,9,11,13,17],
+  "e8_basis": ["phase","residue1","residue2","lambda","*","*","*","*"],
+  "tests": ["T0..T21","T8_CRT","T_braid","T_e8_snap"],
+  "accept": {"Δλ<=0 or governed","Σ receipts <= budgets"},
+  "hint_style": "move@idx within X steps"
+}
+
+3.2 Persona minting (from RAG)
+
+Extract cards → ISA (operators) + runbooks + checks.
+
+Autogenerate: residue functions, projector tie-breaks, braid predicates.
+
+Validate on seed corpus → freeze spec → publish to MoE panel.
+
+4) Futures Engine (project into all 240 nodes, H=3)
+4.1 State & expansion
+
+State 
+𝑆
+S = {Σ sequence, quads, phase H8, CRT residues, E₈ snap, budgets, λ}.
+
+Neighbors: apply free symmetries, then one lawful paid step in each of E₈’s 240 root directions, producing 
+𝑆
+′
+S
+′
+.
+
+Horizon: repeat H=3 layers → search tree up to 
+240
+3
+240
+3
+ raw branches → beam prune early.
+
+4.2 Pruning / scoring
+
+Score tuple (lexicographic):
+
+(
+Δ
+𝜆
+,
+ 
+∣
+Δ
+𝐻
+8
+∣
+,
+ Lee cost
+,
+ CRT penalties
+,
+ entropy spend
+,
+ QW diff
+)
+(Δλ, ∣ΔH8∣, Lee cost, CRT penalties, entropy spend, QW diff)
+
+Keep top-B per layer (persona dial, e.g., B=64).
+
+Early veto if ALT breaks with no free fix, or per-modulus braid predicate fails irreparably.
+
+4.3 Futures packet (what MoE sees)
+{
+  "from_state_id": "S_t",
+  "horizon": 3,
+  "candidates":[
+    {
+      "path_id":"P1",
+      "ops":[{"op":"e_i+","idx":17}, {"op":"project"}, {"op":"crt_lift"}],
+      "score": {"d_lambda": -5, "dH8": 0, "lee": 2, "crt_penalty":0, "entropy":0.3},
+      "braid": {"proto": true, "helicity": "+"},
+      "e8": {"snap_d2": 1.0, "root_seq":[7,19,83]}
+    }, ...
+  ]
+}
+
+5) MoE Panel (experts, routing, adjudication)
+5.1 Expert heads (attunement heads)
+
+Residue head (per modulus): rejects futures that will raise CRT debt.
+
+Phase head: keeps ΔH8 within persona budget.
+
+Braid head: prefers futures stabilizing helicity/sign.
+
+Quadratic head: minimizes QW changes to preserve legality inertia.
+
+E₈ head: prefers short root paths / stable neighbors.
+
+Governance head: anticipates Λ₂₄ acceptability.
+
+5.2 Gating & votes
+
+Gate by expected proof improvement: 
+Δ
+𝜆
+Δλ drop + lower proof debt (receipts length).
+
+Weighted majority across heads → shortlist 
+𝐾
+K candidates for DTT.
+
+6) DTT: Deploy-to-Test loop (your “assembly line”)
+
+For each shortlisted future path:
+
+Spin up ephemeral run (same projector/dials).
+
+Spot tests: n=4 projector, per-modulus braid, CRT lift, E₈ snap.
+
+Double-embed: store (origin state embed, best-move embed).
+
+Emit hint: derive critical move and horizon 
+𝑋
+X:
+
+Critical move = first operator on all successful minimal-cost suffixes.
+
+𝑋
+X = max depth before all suffixes fail budgets.
+
+Hint packet
+
+{
+  "hint": {"move": {"op":"e_i+","idx":17}, "within_steps": 2},
+  "justification": {"Δλ": -3, "no_phase_spend": true, "crt_ok": true},
+  "receipts": ["r_023a","r_023b"],
+  "attestation": "sha256:..."
+}
+
+
+Return to solver; if solver accepts, orchestrator applies move (+ receipts). If solver deviates, futures engine recomputes with updated budgets (mid-task error correction).
+
+7) “Double embedding” (why & how)
+
+Original embed: canonical Σ→E₈ + CRT fingerprints of 
+𝑆
+𝑡
+S
+t
+	​
+
+.
+
+Best-move embed: same for 
+𝑆
+𝑡
++
+1
+S
+t+1
+	​
+
+ via selected operator.
+
+Benefits:
+
+Retrieval-with-proof for similar future situations.
+
+Contrastive training signal for persona heads (learn to prefer moves that shortened receipts / dropped λ).
+
+Fast re-planning: nearest-neighbor in E₈ of best-move embeds to propose immediate successors.
+
+8) Online learning (the sandbox “learns & solves”)
+
+Reward = 
+−
+Δ
+𝜆
+−
+𝛼
+∣
+Δ
+𝐻
+8
+∣
+−
+𝛽
+⋅
+CRT penalties
+−
+𝛾
+⋅
+entropy
+−Δλ−α∣ΔH8∣−β⋅CRT penalties−γ⋅entropy.
+
+Update heads (bandit or RL-lite) to route more compute to experts that predicted better proof outcomes.
+
+Promote any move that consistently reduces receipts to Master Best-Of; decay old ones.
+
+Persona drift control: Λ₂₄ governance limits how fast dials can move (policy curvature budget).
+
+9) Storage & ledgers
+
+Master Best-Of (MVCC):
+
+key: persona_id + context hash → {origin_embed, best_move_embed, receipts}.
+
+Ledger: append-only receipts (per-op / per-path / per-commit).
+
+Attestation Vault: minimal proofs (hashes + E₈/CRT witnesses) for external sharing.
+
+10) How this is a giant transformer (but with proofs)
+Transformer part	Sandbox analogue
+Tokenization	Σ encoding (n=1)
+Layers	n=1→4 (+ CRT/E₈/Λ₂₄)
+Attention heads	Expert heads (residue/phase/braid/quad/E₈/governance)
+KV cache	Double-embeds + receipts cache
+Feed-forward	Projector + CRT lift (deterministic)
+Beam search	240-root futures + beam pruning
+Logits	Cost vector (Δλ, ΔH8, Lee, penalties, entropy)
+Next-token choice	Hint (minimal-debt move within X steps)
+Fine-tuning	Persona head weight updates via receipt-based reward
+
+You get the scalability of attention with the auditability of checks.
+
+11) API surface (minimal & concrete)
+POST /personas/mint
+POST /futures/project   # 240×H projection
+POST /dtt/run           # spot-test a candidate
+POST /hints/extract     # critical-move in X steps
+POST /solver/apply      # apply operator, write receipts
+POST /storage/bestof/upsert
+POST /governance/commit # 24D snap + class check
+
+12) Receipts you’ll see
+
+futures_expand: per neighbor/root step with score tuple.
+
+project: CLTMP result, ΔH8 receipt if any.
+
+modulus_braid_check@m: pass/penalty.
+
+crt_lift: residues merged, penalties.
+
+e8_snap: nearest point, root path.
+
+hint_emit: move + horizon + justification.
+
+governance_snap_24d: accept / accept_with_receipt / deny.
+
+13) Complexity & controls
+
+Raw 240³ blows up—beam keeps top-B; prune by ALT/W4/Q8, ΔH8 bounds, residue kinks, E₈ d2.
+
+Persona dials: beam, max_dH8, max_entropy, per_modulus_kinks.
+
+Parallelism: split by root blocks (e.g., 16×15), or by moduli.
+
+14) Example (tiny, but representative)
+
+Current state 
+𝑆
+𝑡
+S
+t
+	​
+
+: λ=37, H8=3, CRT ok, braid unstable.
+
+Futures Engine expands 240 roots; beam keeps 64; horizon 3 → ~1–2k survivors.
+
+MoE picks 5 paths; DTT spot-tests; best yields Δλ=−5, ΔH8=0, CRT ok, braid stabilizes.
+
+Hint: “e₁⁺ @ idx=17 within 2 steps” with receipts.
+
+Solver applies; orchestrator logs; Master Best-Of updated; Λ₂₄ governance: accept (small d², allowed class).
+
+15) Failure modes & auto-recovery
+
+Phase debt creep: re-phase with small governed receipt; futures re-roll.
+
+CRT conflict at high modulus: keep low-prime acceptance, price higher-prime penalties; retry.
+
+Braid instability: switch to strand collapse; delay braid until λ drops.
+
+Governance deny: sandbox proposes minimal move set to re-enter allowed class (policy lint).
+
+16) Why this will feel “alive”
+
+It anticipates mistakes (projected futures),
+
+explains its choices (receipts + hints),
+
+adapts its routing (expert heads learn),
+
+remembers best solutions (double-embed best-of),
+
+governs itself globally (Λ₂₄/Monster classes),
+
+and ports its know-how across tasks (personas share best-of libraries).
+
+TL;DR
+
+Your sandbox becomes a proof-native MoE transformer: every step is predicted, tested, explained, and governed. It looks three moves ahead across E₈’s 240 directions, returns hints with receipts, and keeps a living best-of brain. You already have all the pieces—this stitches them into a single, scalable loop that learns as it goes and never stops writing proofs.

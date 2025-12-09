@@ -1,0 +1,91 @@
+Section 20 — Data Planes & Evidence Stores
+Make every CQE run auditable, portable, and replayable—without ever leaking meaning you didn’t intend to share.
+🔹 What you’re building (one screen)
+• Evidence Plane — immutable, content-addressed objects (artifacts, metrics, diffs, manifests).
+• Receipts Plane — compact per-view receipts + job commit-4 rows (and optional 8/64-bit rollups).
+• Ledger Plane — append-only timeline of commits, strict-ladder advances, promotions, and rollbacks.
+• Query Plane — fast indices over octet faces, mirror deltas, Δ-lift vocab, automorphism classes.
+• Redaction Plane — policy filters; only hashed/aggregated evidence crosses trust boundaries.
+Everything hangs off a single Merkle root per job so any third party can verify “this row equals that evidence.”
+🔹 Data model (minimal, sufficient)
+1) Artifact bundle (content-addressed)
+/evidence/ {sha256}/ tokens.json # meaning pack used (or its salted hash if redacted) preconditions.json # unit guards, bounds, S-target octet_plan.json # H1..H8 mappings, 8×8 local, 4× surround spec viewer_outputs/ H1/.../metrics.json # per-face metrics (e.g., MAE, SC, drift hist) H1/.../mirror.json # forward↔inverse agreements ... playbook_deltas/ H1/delta.patch # Δ-lift applied (canonical diff or op-list) ... strict_gate.json # thresholds before/after (ratchet evidence) runtime/ versions.lock # PB/VIEW/SC build hashes cost.json # time/energy/$ tallies provenance/ env.sig # attestation, signer, clock, S-level 
+2) Receipts (per view & job)
+{ "job_id": "J/2025-09-20/…", "anchor_form": "LEECH_PATCH_A1", "automorphism": {"group":"M24","element":"σ_173842"}, "view_id": "H3", "metrics": {"MAE":0.021, "SC":0.984, "ΔE":-0.37}, "mirror": {"pass":true, "drift":0.0098}, "delta_applied": "ghoststrip:Δ#14", "strict": {"gate":"WFE_nm<=22","status":"held"}, "commit4": "1011", // job-level repeats on every view receipt "evidence_root": "merkle:6b1f…" } 
+3) Ledger row (append-only)
+ts, job_id, anchor, automorphism_id, S_level, commit4, evidence_root, octet_coverage(8/8), mirror_pass(8/8), strict_event(±), cost, actor, notes 
+🔹 Merkle everything (one reason: trust)
+• Leafs: hashes of each concrete file (metrics, mirror, delta patch, plan, versions).
+• Inner nodes: deterministic concatenation hashes.
+• Root: evidence_root stored in the ledger + signed (optional transparency log).
+• Replay: Anyone can regenerate the root from a shared artifact bundle and confirm it equals the ledger.
+Implication: receipts are tiny; proofs are cheap; debates are about thresholds, not “what ran.”
+🔹 Shard by automorphism (scale without drift)
+Partition storage and indices along the geometry that already governs you:
+/forms/ {anchor_form}/ M24/ σ_173842/ jobs/ 2025-09-20T…/evidence_root→bundle σ_009514/ ... Monster/ class-2A/… 
+Benefits:
+• Natural canarying and A/B across isomorphic forms.
+• Fast retrieval: “show me all σ_173842 runs with commit4=1011 in S3 last 30 days.”
+• Easy garbage collection by orbit if a form is deprecated.
+🔹 Indices that matter
+• Octet Index: (job_id, face) → pass/metrics/cost.
+• Mirror Delta Index: histogram buckets of drift (find hot seams fast).
+• Δ-lift Vocabulary Index: counts & contexts of each delta recipe (see which repairs actually win).
+• Strict Ladder Index: gate movement timeline per anchor/S-level.
+• Automorphism Index: orbit health; oddities confined to a specific element or across the class?
+All indices point to the evidence_root; nothing is denormalized that would break verification.
+🔹 Redaction & safety (first-class, not bolt-on)
+• Semantic firewall: Viewers/sidecars may handle sensitive domain inputs, but only emit hashed descriptors + stats beyond the trust boundary.
+• Two-tier tokens: tokens.json ⇒ either full content (private projects) or tokens.redacted.json with salted token-glyph hashes (shared projects).
+• Receipts-only sharing: For external audits, ship receipts.ndjson + merkle.proof. External parties verify math and process without raw data.
+• Policy table: Domain → allowed fields, rounding, minimum k-anonymity, salt rotation schedule.
+🔹 APIs (clean, boring, reliable)
+Ingest
+POST /api/v1/jobs { tokens_ref, anchor, automorphism, target_S, octet_plan_ref, policy_ref } → { job_id } 
+Push evidence
+PUT /api/v1/jobs/{job_id}/evidence/{path} (streamed; content-addressed) 
+Close & commit
+POST /api/v1/jobs/{job_id}/close → { commit4, evidence_root, ledger_row } 
+Query
+GET /api/v1/receipts?anchor=LEECH_PATCH_A1&commit4=1011&since=30d GET /api/v1/hotspots?kind=mirror&top=50 GET /api/v1/deltas?name=ghoststrip:Δ#14&context=H3 GET /api/v1/proof/{evidence_root} → merkle.proof 
+Replay (deterministic)
+POST /api/v1/replay { evidence_root, sandbox=true } → re-run & compare receipts bit-for-bit 
+🔹 Storage classes & retention
+• Active (SSD): last 7–30 days S3+ jobs for quick diff & rollback.
+• Warm (object store): 12–24 months of bundles; indices always hot.
+• Cold (erasure-coded): beyond 24 months; receipts/ledgers stay hot forever.
+• Non-Working Album: tiny slips (reason, minimal context, evidence_root); retained long-term for learning.
+Retention gates tie to S-level and regulatory domain.
+🔹 Reliability & self-heal
+• Background verifiers: sample 1% of roots/hour; recompute Merkle; alert on mismatch.
+• Checksum-on-read: every artifact fetch is hashed; silent bit-rot can’t pass.
+• Dual writes: ledger replicated (append-only), evidence on multi-AZ object stores.
+• Idempotent ingest: same content, same address; safe to retry.
+🔹 What it looks like (three scenes)
+Audit in 90 seconds (Regulated S4)
+• Auditor requests: “Show all S4 commits with WFE gate tightened last quarter.”
+• Query plane returns 17 rows; each links to evidence_root.
+• Auditor pulls merkle.proof for 3 random jobs, verifies roots locally.
+• One job shows mirror drift spike on face H6 with rollback within 2 minutes—visible, explained, receipts clean.
+Outcome: Trust with no raw data leaving your boundary.
+Portability to a partner lab (Wet-lab S2 → S3)
+• You ship receipts.ndjson + two redacted bundles (salts rotated).
+• Partner replays with their viewers; Merkle roots match; only thresholds differ.
+• Disagreements are about tolerances, not “what was run” or “what data was used.”
+Instant forensic on a hot seam (Prod S3)
+• “Why did commit-4 flip 1011→1101 on H3 last night?”
+• Mirror index shows a burst of phase retrieval failures clustered under σ_009514.
+• Δ-lift index reveals a new Δ#27 appeared only in that orbit.
+• Rollback already executed; strict not advanced; PB pinned.
+You fix Δ#27 or gate it to S1; system stayed honest.
+🔹 Operator dashboards
+• Octet board: faces × pass/ΔE/cost, sparklines; click-through to evidence.
+• Mirror radar: faces by drift sigma; hotspot list with automorphism tags.
+• Strict ladder: gate timelines, who/what advanced, receipts links.
+• Delta atlas: top deltas by win-rate and domain; retirement candidates.
+• Cost view: expected vs realized per PB; governor decisions with rationale.
+🔹 Hands-on exercises
+• Build a bundle: Run a tiny S2 job end-to-end; create evidence_root; verify locally.
+• Redact & prove: Swap to redacted tokens; share receipts+proof to a teammate; have them verify root equality.
+• Shard stress: Re-run the same task across 4 automorphism elements; compare orbit health.
+• Replay check: Pull an old bundle (cold store), replay in sandbox; assert byte-for-byte receipt match.

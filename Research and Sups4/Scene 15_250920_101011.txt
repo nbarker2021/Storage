@@ -1,0 +1,101 @@
+Section 16 — Stitching & Parity Looms
+How tiles become cloth: Hamming-8/4 strips, Golay-24 belts, and mirror-safe seams.
+🔹 Warm-up Q&A
+Q: We fixed cells; why do seams still bite?
+A: Local caps/Δ-lifts can leave phase, label, or gauge drift along borders. Stitching aligns interfaces so the octet/mirror stays global.
+Q: Why bring in codes?
+A: A seam is just a short binary word describing which border tests fail. Parity checks give a finite, minimal repair that’s auditable.
+Q: When Hamming(8,4) vs. Golay(24,12,8)?
+A: Use Hamming-8/4 on strips (8-edge spokes). Escalate to Golay-24 on belts/rings or when multiple strips conflict—Golay’s octads resolve multi-edge contradictions cleanly.
+Q: Where’s lattice geometry here?
+A: Construction-A turns those codes into even lattices; the half-shift “glue” enforces mirror evenness. Hamming → E8 slicelets; Golay → Leech slice belts.
+🔹 The seam word (what we actually encode)
+For a seam between patches and , build a binary seam word :
+• : eight edge probes (intensity delta sign, phase wrap flag, unit guard, orientation bit, …) laid clockwise.
+• : twenty-four belt probes (the 8 local ones × 3 rotations across the ring), or a 24-tap seam if your tiling is 3×8 around a hub.
+Each bit means this probe violates mirror parity (fwd∘inv ≠ id within strict).
+🔹 Hamming-8/4 strip (SECDED on spokes)
+Check: (3-bit syndrome; extended parity catches doubles).
+Goal: find minimum-weight error with ; set .
+Interpretation: each flipped bit corresponds to a legal, local equivalence on that edge:
+• re-index (swap) an edge label,
+• add/remove one phase wrap,
+• toggle a unit display bit (never a unit change),
+• flip a gauge sign where the model allows.
+Policy:
+• Prefer flips on edges without caps this loop.
+• If ties, pick the flip minimizing viewer energy (your seam viewer’s score).
+• Commit one strip at a time; re-mirror frontier ring after each.
+Receipt: seam_id, code=Hamming8/4, syndrome, e, viewerΔ, commit4.
+🔹 Golay-24 belt (octads on rings)
+Check: (12-bit syndrome).
+Goal: choose a small set of octads s.t. solves and keeps viewer constraints.
+Why octads? In Golay-24, legal low-weight corrections live on octads (weight-8 supports). They are the exact “8-way doors” that n=5 forced. Choosing octads is equivalent to selecting Leech-legal adjustments on the belt.
+Policy:
+• Start with syndrome table → candidate octad sets.
+• Prune any octad touching an edge with a strict gold lock.
+• Score survivors by (a) fewest touched edges, (b) lowest seam viewer energy, (c) no overlap with fresh caps.
+• Apply as declared equivalences only (no semantics change).
+Receipt: belt_id, code=Golay24, syndrome, octads=[…], e_weight, viewerΔ, commit4.
+🔹 Construction-A glue (why this is geometry, not vibes)
+• Map to via binary → integer lift.
+• Evenness: extended parity enforces sum-even → lives in even sublattice.
+• Glue half-shift: when the code says “flip here”, you move by a half-vector that keeps the seam in the mirror-even coset.
+• For , those half-steps drop directly onto E8 roots along the strip.
+• For , octad support gives you a Leech slice along the belt.
+Result: A stitched seam is a move to the nearest legal lattice point in the correct coset—finite, provable, and mirror-safe.
+🔹 The loop (stitch stage)
+• Detect: gather seam words on all frontiers.
+• Classify: strips with single syndromes → Hamming; belts with entangled strips → Golay.
+• Solve: compute (flip set or octad union) under viewer constraints.
+• Apply: perform only legal equivalences (index relabel, phase wrap, gauge flip).
+• Re-mirror: immediately re-run mirror on the frontier ring.
+• Ledger: write receipts; if strict can tighten, gold-ratchet one notch.
+🔹 Three scenes (what it looks like)
+Optics mosaic — PSF seams (Hamming-8/4)
+• Symptom: Checker fringing at tile borders; phase wraps disagree.
+• Seam word: eight bits per edge; bits 2 and 6 lit across several spokes.
+• Fix: Hamming syndrome points to flipping bit-6 (wrap) on two spokes.
+• Apply: phase wrap equivalence only; no pixel values erased.
+• Viewer: Fringing collapses into green; frontier ring goes quiet.
+• Receipt: seam OPT-12A, H8/4, σ=101, e=00010000.
+Thermal panel belt — radiative mismatch (Golay-24)
+• Symptom: A full ring shows alternating cool/hot bias; local strips disagree pairwise.
+• Belt word: 24 bits; 11 ones.
+• Fix: Syndrome table → two octads .
+• Apply: Per-edge display bias toggles (legal radiosity equivalence), no unit changes.
+• Viewer: Ring bias vanishes; ΔT/tick variance halves.
+• Receipt: belt TH-07, G24, octads=[3,17], |e|=16, viewerΔ=-42%.
+Spin/EM lattice — SU(2) seam drift (Construction-A glue)
+• Symptom: Along a seam, spinor phases drift; coherence dips.
+• Strip word: E8 slice shows three parity conflicts.
+• Fix: Hamming picks two flips; apply local unitary equivalences matching those flips.
+• Viewer: Chiral beat map smooths; coherence recovers.
+• Receipt: seam Q-EM-9, H8/4, σ=011, e=00000101.
+🔹 Subharmonic early-warnings (what to watch)
+Seams that aren’t yet “red” produce beats at subharmonics of your dominant mode (½, ¼), and the Cartan frame shows tiny off-diagonal leakage.
+• Tripwire: if the shell reports ½-rate energy rising on a ring, pre-emptively test Golay on that belt.
+• Strip sign: a single ¼-rate on a spoke → quick Hamming scan.
+🔹 Viewer signatures (so you can eyeball a seam)
+• Hamming fix: border checker → single faint ridge → flat.
+• Golay fix: “barber-pole” around the ring → uniform belt, spokes align.
+• Glue half-shift: small, symmetric nudge in edge tensors; parity light flips from amber to green.
+🔹 Safety rails
+• Equivalences only. Stitch flips may relabel, rewrap, rephase; they do not alter physical units or erase data.
+• One touch per seam per loop.
+• Frontier re-mirror is mandatory.
+• Strict ratchet only after a pass (and only one notch).
+🔹 Hands-on loom (paper/foam board)
+• 8-twine strip: clip 1s; lay tracing-paper mirror; XOR with stenciled Hamming checks; the lit clip is your flip.
+• 24-twine belt: lay octad transparencies; pick the pair that cancels all clips with least overlap; mark flips; verify on mirror paper.
+You can do this in minutes, by hand. That’s the point.
+🔹 Exercises
+• Strip clinic: Build a noisy 8-edge seam on paper; run Hamming; apply only a phase wrap equivalence; re-mirror with your FFT/iFFT viewer.
+• Belt triage: Create a 24-edge belt with alternating bias; find two octads that kill the syndrome while minimizing touched edges.
+• Glue sanity: For a fixed strip, redo stitch using the E8 half-vector picture; confirm it matches your Hamming flips edge-for-edge.
+• Beat sentinel: Inject a tiny alternating error on every other edge; confirm the shell’s ½-rate alarm fires before the seam turns red.
+🔹 Where we are now
+• You can read a seam, encode it, and legalize it with Hamming/Golay.
+• You understand how Construction-A makes this geometry-true.
+• You’ve seen how subharmonics warn you early.
+Next section: Stitch Flips & Global Consistency — choosing among multiple minimal fixes, ledger tie-breakers, and how multi-seam scheduling avoids deadlocks while preserving mirror and strict.

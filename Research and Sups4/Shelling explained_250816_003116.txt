@@ -1,0 +1,117 @@
+Shelling — Definitive Guide & Method Review (SnapLat)
+Purpose: Provide a complete, standalone definition and review of shelling in SnapLat — what it is, why it exists, how it runs step‑by‑step, what methods it uses internally, how it interfaces with E8, governance (SAP/MDHG/AGRM), and the rest of the system. This is an operator/engineer handbook for implementation and audit.
+1) What is Shelling?
+Shelling is the layered understanding process that turns raw material (text, code, logs, metrics, agent outputs) into compact, reusable glyphs via successive n‑level shells. Each shell adds or validates information; when an idea can be captured by a 3‑word triad and a perfect inverse, the idea compresses to a glyph. Shelling makes reasoning reproducible, searchable, and composable across the E8 lattice.
+Key outcomes:
+• A glyph (triad + inverse + lineage) that stands in for the full idea.
+• Trails events capturing every decision/evidence, so the glyph is reconstructible.
+• Indices mapping the glyph/shells into the E8 lattice and pattern dictionaries.
+2) Inputs & Outputs
+Inputs:
+• Source units (“snaps”): text spans, code fragments, functions, logs, measurements, agent decisions.
+• Context: environment, constraints (Safe Cube), policies (SAP/MDHG/AGRM), prior glyphs.
+Outputs:
+• A glyph with: triad[3], inverse[3], glyph_id, n_path (n‑level lineage), evidence_links, policy_posture.
+• Updated shells (n=1..10) with validators and failure reasons.
+• E8 mappings (coords, edges) and pattern links.
+3) Lifecycle at a Glance (n‑Levels)
+• n = −1 (pre‑index): gather candidate terms/atoms; initial pattern hints; no commitments.
+• n = 1 (base idea): form a minimal, fully informed statement and attempt a triad + perfect inverse. If it fails, mark underinformed.
+• n = 2–4 (local expansion): add nearby facts/examples/edge‑cases until the triad describes the idea unambiguously.
+• n = 5 (complexity break): enforce superpermutation discipline — generate 8 distinct “perfect” outcomes (top‑K=8) for the seed context.
+• n = 6 (glyph gates / 3‑6‑9): lift from ASCII‑only descriptors when needed; validate symbol adequacy.
+• n = 7 (cross‑domain stitching): unify alternate formulations from other families/domains.
+• n = 8 (stress universes): inject 8 previously excluded universes; re‑test the triad’s invariance.
+• n = 9 (law & reality): pass SAP governance (Sentinel/Arbiter/Porter), MDHG harmonization, AGRM runtime limits, Safe Cube constraints.
+• n = 10 (full compression): all subordinate shells resolved; glyph is authoritative. (Optional n=11–12 external‑universe repeats.)
+Every transition emits Trails events and updates indices. Failure to advance triggers methods below.
+4) Core Methods Inside Shelling
+Shelling is not a single function; it is a suite of methods that cooperate. Below are the principal methods, their purpose, and how they interact.
+4.1 Triad Synthesis
+• Goal: Propose a 3‑word triad that uniquely captures the idea.
+• Steps: 
+• Extract candidate terms (TF, topicality, role labels, domain lexicon).
+• Rank for coverage/precision/non‑overlap; favor orthogonal axes.
+• Generate inverse triad (“perfect negative”) that is mutually exclusive.
+• Bind evidence links (citations, tests, examples, code paths).
+• Validators: Triad Adequacy Check (below), Inverse Clarity.
+4.2 Triad Adequacy Check (TAC)
+• Pass criteria: (a) triad is minimal (3 terms), (b) covers ≥95% of described behavior, (c) inverse cleanly excludes it, (d) evidence exists.
+• Fail ⇒ mark underinformed, enqueue 8 relevant + 8 dichotomy sets.
+4.3 Dichotomy Set Generation (8 Relevant + 8 Opposed)
+• Goal: Force stance and reveal ambiguity.
+• Relevant 8: orthogonal support contexts.
+• Dichotomy 8: opposing or exclusionary contexts.
+• Usage: fed to ThinkTank for candidate exploration and to DTT for counter‑example tests.
+4.4 Underverse Harness (8×8)
+• Goal: Systematically explore ambiguity via 8 universes × 8 contexts.
+• Mechanics: Cross‑product of relevant and dichotomy sets; each cell yields a mini‑shell attempt; coverage map highlights gaps.
+• Output: stance convergence, failing cells (to remediate), or triad update.
+4.5 Superpermutation Gate (n=5, top‑K=8)
+• Goal: At the n=5 boundary, generate the canonical 8 perfect outcomes per seed.
+• Mechanics: Top‑K sampling/rotation under consistent context; disallow repeats; retain weights and divergence notes.
+• Output: ordered set of candidates → DTT; informs Assembly stitching.
+4.6 Glyph Compression
+• Goal: Collapse shells to a stable glyph once adequacy + governance pass.
+• Mechanics: Encode triad, inverse, attach glyph_id, n_path, evidence_links, policy_posture.
+• Output: glyph stored; indexed in dictionaries; used as building block in higher shells.
+4.7 Expansion (Reverse Shelling)
+• Goal: Given a glyph, rehydrate shells to validate or adapt to new context.
+• Mechanics: Retrieve n_path, replay Trails, expand evidence, re‑run governance (n=9), re‑test TAC.
+4.8 Evidence Binding & 1729 Gate (Ramanujan Class)
+• Goal: Assure high‑risk truths.
+• Mechanics: Accumulate 1729 independent nodes (tests, citations, distinct contexts); require green Safe Cube faces.
+• When: Reserved for correctness‑critical or policy‑sensitive glyphs.
+4.9 E8 Projection & Stitching
+• Goal: Place shells/glyphs in the E8 lattice for discovery/composition.
+• Mechanics: Map triads to coordinates (roots/Weyl/Coxeter projections); build edges to related glyphs.
+• Output: faster search, relation mining, and hybrid assembly.
+4.10 Governance Hooks (SAP/MDHG/AGRM)
+• Sentinel: observe shell transitions, record telemetry, detect policy‑relevant events.
+• Arbiter: evaluate CAS/LawPacks at promotion; decide/deny/require remediation.
+• Porter: control movement (egress lanes, quarantine) of shells/glyphs across boundaries.
+4.11 State Saves & Indices
+• Goal: Make the process reproducible.
+• Mechanics: JSON5 state with master index attachment (pattern links, policy links, E8 coords, n‑path, evidence hashes).
+5) Validators & Failure Modes
+Validators
+• TAC: triad adequacy; inverse clarity; evidence presence.
+• Superperm at n=5: 8 outcomes found; no repeats; divergence bounded.
+• Glyph gate (n=6): symbol adequacy; no loss of meaning.
+• Stress universes (n=8): triad holds across 8 injected universes.
+• Governance (n=9): SAP+MDHG+AGRM+Safe Cube green.
+Failure modes
+• Underinformed: missing context ⇒ trigger Underverse first.
+• Drift (unanchored): prevent via anchors (pattern/policy links) and force‑deploy OFF.
+• Ambiguity: dichotomy sets not strong enough ⇒ expand set and re‑test.
+• Policy block: Arbiter denial ⇒ attach remediation SNAP and retry.
+6) Interface Sketch (implementation view)
+shell.build(snap) -> ShellResult inputs: snap{id, content, context, policy} steps: n=-1..10 progression with methods 4.1–4.11 outputs: { shells[], glyph? , evidence_links[], indices[], policy_posture } shell.triad.synthesize(content, context) -> {triad[3], inverse[3], candidates} shell.triad.check(triad, inverse, evidence) -> {pass|fail, reasons, underinformed?} shell.dichotomy.generate(triad, context) -> {relevant[8], opposed[8]} shell.underverse.run(relevant[8], opposed[8]) -> coverage_map, stance, updates shell.superperm.topK8(seed, context) -> outcomes[8] shell.glyph.compress(shells, policy) -> glyph shell.glyph.expand(glyph, target_context) -> shells shell.e8.project(triad|glyph) -> coords, edges shell.gov.apply(stage, posture) -> {allow|deny|remediate} shell.state.saveJSON5(result, master_index) 
+7) Worked Micro‑Example (toy)
+• Input: function nearest_lattice_point(v).
+• n=1 triad: nearest / lattice / rounding; inverse: not nearest / not lattice / not rounding.
+• TAC fails (too vague) ⇒ dichotomy sets (metric choice, tie‑break rules, E8 vs Zn, etc.).
+• Underverse explores 8×8 combinations; stance emerges: “E8, Euclidean, Voronoi cell tie‑break by lexicographic order”.
+• n=5 yields 8 variants across seed contexts (normalization on/off, tolerance gates, etc.).
+• DTT runs; 3 pass strongly; Assembly stitches a hybrid spec.
+• n=6 introduces a glyph alias for readability.
+• n=8 injects 8 universes (noise, adversarial vectors, boundary cases); triad holds.
+• n=9 SAP green; compress to glyph; index in E8; state saved.
+8) Integration with the Rest of SnapLat
+• ThinkTank feeds triad/dichotomy proposals and superperm outcomes.
+• DTT executes candidate shells; returns evidence.
+• Assembly creates SNAP.DNA for compressed glyphs and their hybrids.
+• Archivist stores state, indices, lineage, pattern dictionaries.
+• MORSR tunes exploration/refinement cadence based on wave telemetry.
+• SAP/MDHG/AGRM maintain legal/operational safety.
+9) Operator Checklist
+• Attempt triad + inverse at n=1; bind evidence.
+• If TAC fails twice → run Underverse 8×8.
+• At n=5 → generate top‑K=8 outcomes.
+• Before promotion → SAP governance check with remediation.
+• On success → compress to glyph, update indices, save JSON5 state with master index.
+10) FAQ
+• Is 3 words always enough? No — but the triad adequacy rule forces clarity; when it’s insufficient, we use 8/8 sets and underverse until it is.
+• Why E8? Its rich symmetry and projection tools make relation‑finding and composition efficient at scale.
+• Can a glyph change? The glyph ID is stable for a meaning; if meaning changes, it’s a new glyph with lineage to the old.
+Shelling turns messy reality into precise, composable glyphs. It is the heartbeat of SnapLat’s compression and the reason the system gets faster and more reliable with every tick.

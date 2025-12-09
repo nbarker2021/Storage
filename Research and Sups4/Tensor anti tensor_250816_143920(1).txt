@@ -1,0 +1,129 @@
+SnapLat — Tensor/Anti‑Tensor Discipline & Multi‑Sensor Detector Manifold (Design Spec)
+Purpose: formalize an E→C (expansion→contraction) discipline across SnapLat and introduce an N‑sensor detector manifold using mannequin sidecars (alternate anchors, universes, seeds) to probe both local and universal structure every tick. Integrates with α‑anchor Braid Mode, SAP gates, and MORSR for replayable governance.
+0) Concepts at a Glance
+• Expansive (tensor‑like) ops, E: increase frontier/DoF (C[8] fan‑out, shell expansion, sector kNN, Salesman splice, braid word growth).
+• Contractive (anti‑tensor) ops, C: compress/quotient/canonize (nearest‑lattice projection, Weyl canon, anchor/TAC pruning, Assembly, braid normal‑form).
+• Positive subspace, S⁺: region where TAC≥τ, boundary‑coverage≥β, replay‑stable, drift≤δ.
+• Complexity potential, Φ: bounded measure of current search/representation size; planner seeks high utility under Φ budget.
+• Detector manifold, 𝔇: N mannequin sidecars with diverse (anchor, R_u, seed, TAC target) that run short E→C micro‑plans and emit detector vectors per tick.
+• Fusion: Sentinel aggregates sidecar signals (K‑of‑N / weighted vote / disagreement indices) → main planner schedule updates.
+• Leakage: deviation outside S⁺ during braid/engine ops; must be ≤ ε at promotion.
+1) Formal Model
+1.1 Potential & Metrics
+Let a Snap state at tick t be s_t. Define:
+• frontier_width W_t: active candidates or open cells.
+• radius R_t: current shell/step radius.
+• distinct_cells C_t: unique lattice cells visited (windowed).
+• word_length L_t: braid word length (if enabled).
+• glyph_dl D_t: approximate description length of the assembled glyph (MDL proxy).
+Complexity potential: with non‑negative weights α_*. Planner targets subject to constraints below.
+1.2 Expansion/Contraction Discipline
+For each operator op in schedule S_t, associate expected multiplicative growth m(op)≥0.
+• Budget constraint: 
+• Windowed contraction: every E‑block must be followed by a C‑block within K steps that yields (or ≤−γ for margin).
+1.3 Positive Subspace & Leakage
+S⁺ defined by tuple constraints: (TAC≥τ, boundary≥β, replay_stable=True, drift≤δ). Leakage L is a scalar summarizing violations (e.g., hinge penalties). Leakage≤ε required at promotion; LeakageGate holds otherwise.
+2) Planner Contracts & APIs
+2.1 Core Tick (with detectors)
+planner.tick(state S, cfg): # 1) Sense via detector manifold D = planner.detect(manifold M, S, cfg.detect) F = planner.fuse(D, cfg.fusion) # 2) Plan (budget-aware) schedule = planner.schedule(S, F, cfg.plan) assert respects_budget(schedule, cfg.budget) # E→C within K, M_max # 3) Execute trail = engine.run(schedule) A = assembly.maybe_stitch(trail) # 4) Govern verdict = sap.evaluate(A, trail, D, F) morsr.emit(tick_log(S, schedule, trail, A, D, F, verdict)) return (new_state, verdict) 
+2.2 Braid Mode (α‑anchor)
+planner.braid(anchor_id: GlyphID, alphabet: MoveSet, word: List[str], cfg: BraidCfg) -> BraidResult 
+• Alphabet: reflect(r_i), neighbor(k), rotate(R_u), conjugate(w), reverse()
+• Constraints: word ∈ admissible group G_adm; execution stays in S⁺; Leakage≤ε.
+• Outputs: coverage, drift, leakage, braid_length, parity_hash
+2.3 Detector Manifold
+planner.detect(manifold M, S, cfg): List[DetectorVector] 
+• Manifold M: {d₁..d_N}, each dᵢ=(anchor, R_u, seed, tac_target, micro_K, E:C ratio)
+• Micro‑plan: E‑micro (neighbors/shell step or short braid) ⇒ C‑cleanup (projection/canon/anchor prune/word reduce)
+• DetectorVector vᵢ: {coverage, drift, leakage, cues, hotmap_delta, confidence}
+2.4 Fusion
+planner.fuse(D, cfg): FusionResult 
+• Policies: KofN(k), WeightedVote(wᵢ), DSmT (conflict‑tolerant), DisagreementIndex (0..1)
+• Result: {consensus, disagreement, novelty, bias, recommended_delta}
+3) SAP Governance Additions
+3.1 Gates
+• LeakageGate: HOLD if leakage>ε or braid word ∉ G_adm or S⁺ violated.
+• ComplexityGate: HOLD if frontier_width>F_max, glyph_dl>DL_max, missing C‑block within K, or Φ rises over N ticks.
+• DetectorGate (optional): HOLD unless N≥N_min, diversity≥Δ_min (anchors/universes/seeds), and fusion consensus≥θ.
+3.2 Porter Lanes
+• Shadow lane: detectors ON, promotions disabled except for low‑risk classes.
+• Pilot lane: K‑of‑N≥2, mild thresholds (ε↑, λ↓).
+• Prod lane: tight thresholds, braid required for some domains.
+4) MORSR & Trails (Schema)
+4.1 Tick Log (excerpt)
+{ "event":"tick", "tick": 128, "schedule": [ {"op":"neighbors","k":8,"tag":"E","m":8.0}, {"op":"project","tag":"C","m":0.2} ], "phi_before": 17.3, "phi_after": 12.8, "frontier_width": 64, "glyph_dl": 2.91, "detectors": [ {"id":"d1","coverage":0.91,"drift":0.05,"leakage":0.01,"conf":0.8}, ... ], "fusion": {"policy":"KofN","k":2,"consensus":0.78,"disagreement":0.12,"novelty":0.21}, "braid": {"anchor_id":"A7","word":["reflect(17)","neighbor(1)"] ,"length":2, "leakage":0.02, "parity_hash":"..."}, "verdict": {"decision":"ACCEPT","reasons":["Leakage≤ε","Φ stable"]} } 
+4.2 Detector Artifacts
+• artifacts/detector_{i}.json: raw vectors per sidecar.
+• artifacts/detector_fusion.json: fused decision basis.
+• artifacts/braid_trail.jsonl: per‑step braid audit (if braid mode used).
+5) Subsystem Changes & Intended Use
+5.1 Engine/E8
+• Tag ops with E|C and supply m(op). Provide project(), weyl_canon(), boundary_probe() as contractive primitives.
+• Add moves.normal_form(word) for braid reductions.
+5.2 ThinkTank→DTT
+• Support micro‑plan templates: neighbors→project, shell_step→canon, short_braid→reduce. Return detector vectors alongside evidence.
+5.3 Assembly/DNA
+• Treat stitch() as contractive; record ΔΦ. Include anchor_id, braid_word, manifold_id in DNA for replay.
+5.4 AGRM Planner
+• Add budget solver that selects schedules satisfying E→C windows and M_max constraint. Incorporate fusion recommended_delta (radius/sectors/word edits).
+5.5 MDHG
+• Ingest hotmap_delta from detectors; expose decay to prevent persistent bias. Support per‑universe heat channels.
+5.6 RAG & Glyph Intake
+• Enforce retrieval E→C (expansive retrieve → contractive re‑rank/cluster/anchor‑bind). Offer detector sidecars querying alternate shards/seeds.
+5.7 SAP/Porter/Archivist
+• Enforce new gates; log E|C traces; require detector diversity for elevated risk classes; lane rules carry braid + manifold invariants.
+6) CLI & Configuration
+6.1 CLI
+# Detector manifold snap detect --manifold N=3 --anchors A1,A2,A3 --universes R1,R2,R3 --ticks 4 --microK 2 --ratio E1:C1 # Braid mode snap braid --anchor A7 --word "reflect(17),neighbor(1),rotate(R3)" --tau 0.95 --beta 0.9 --eps 0.05 # Planner with budget snap plan --lambda 0.3 --Mmax 64 --K 2 --Fmax 256 --DLmax 3.1 
+6.2 Config (excerpt)
+[complexity] alpha_W=1.0; alpha_R=0.3; alpha_C=0.5; alpha_L=0.2; alpha_D=0.8 lambda=0.25; Mmax=64; K=2; Fmax=256; DLmax=3.0; epsilon=0.05 [detectors] N=3; policy="KofN"; k=2; diversity.min_delta=2 # anchors/universes/seeds microK=2; ratio="E1:C1" [braid] anchor="A7"; tau=0.95; beta=0.9; epsilon=0.05 
+7) CI / QA & SLOs
+7.1 Tests
+• Roots/Neighbors Exactness: roots=240; neighbors(origin)=240 (exact, not ≥).
+• Complexity Monotonicity: synthetic runs ensure windowed ΔΦ<0 after each E→C window.
+• Leakage Rejection: adversarial braid words trigger LeakageGate; normal‑form determinism holds.
+• Detector Calibration: sidecars detect injected instabilities with ≥X recall at ≤Y latency cost.
+• RAG Variance: detector sidecars surface index drift; HOLD over threshold.
+• Replay Parity: DNA + manifold reproduce glyph and fused detector signature within tolerance.
+7.2 SLOs
+• P95 planner tick (no braid): ≤ 350ms; with braid+detectors (N=3): ≤ 700ms.
+• HOLD/ACCEPT disagreement across lanes: ≤ 5%.
+• Detector overhead budget: ≤ 40% of tick cost (amortized).
+8) Observability & Dashboards
+• Complexity Funnel: Φ, W, C, L, D across ticks; E|C barcodes.
+• Leakage Heatmap: leakage by universe/anchor.
+• Detector Agreement Matrix: pairwise agreement, consensus, novelty.
+• Braid Word Stats: length, reductions, parity hashes.
+• Promotion Ledger: reasons (gates), detector fusion snapshots.
+9) Advanced Uses & Extensions
+• Active Learning: route high‑disagreement samples to experts; store as anchors.
+• Counterfactual Search: run sidecars with mirrored universes R_u to estimate sensitivity.
+• Explainability: color Trails by E|C; show where contraction saved Φ.
+• Risk Controls: dynamic λ up‑tick when ops backlog grows; emergency C‑sweep (mass projection/canon) on surge.
+• Privacy/Fairness: treat anti‑tensor stages as sanitizers; enforce balanced exploration across subspaces.
+• Multi‑modal Glyphs: sensors for image/math/graph lanes; fused consensus before assembly.
+10) Deployment
+10.1 Compose (local)
+make compose-up make smoke # includes detector micro-plans 
+Services: core engine, planner, dtt, rag, glyph, archivist, porter.
+10.2 Kubernetes
+make k8s-apply ENV=staging make promote ENV=staging->prod-pilot # gates enforce detectors/leakage/complexity 
+11) Roadmap & Rollout
+• Phase 1 (MVP): ComplexityGate + 2 sidecars (K‑of‑2); braid optional.
+• Phase 2: α‑anchor braid required for classes A/B; DS‑fusion; detector diversity enforcement.
+• Phase 3: Auto‑tuned λ and thresholds from MORSR analytics; adaptive manifold sizing.
+Rollback: feature flags: enable_detectors, enable_braid, enable_complexity_gate. Auto‑disable on SLO breach.
+12) Risks & Mitigations
+• Latency creep: keep microK small; parallelize sidecars; sample every M ticks.
+• Over‑gating: start permissive (ε↑, λ↓), tighten via data; add "override with audit" lane.
+• Config sprawl: ship presets (orthogonal universes, anchor classes) + schedules.
+13) Worked Example (Sketch)
+• N=3 sidecars over anchors A1,A2,A7; universes R1,R2,R3; microK=2.
+• Sidecar vectors → consensus=0.8, disagreement=0.1; recommended radius+1, sectors+2.
+• Planner schedule: neighbors(8)[E] → project[C] → shell_step[E] → canon[C]; Φ drops 18→12.
+• Braid (anchor A7): reflect(17),neighbor(1); leakage=0.02; S⁺ satisfied; ACCEPT.
+14) Implementation Notes
+• Add E|C tagging + m(op) to engine API.
+• Implement planner.detect, planner.fuse, ComplexityGate, LeakageGate.
+• Extend DNA with anchor_id, braid_word, manifold_id.
+• Migrate MORSR to record op_trace, Φ deltas, detector fusion.

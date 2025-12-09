@@ -1,0 +1,159 @@
+Section 15 — Hot-Zone “Caps” & Δ-Lift Cookbook
+Your reversible micro-ops (caps), your legal repairs (Δ-lifts), and how they live inside the loop.
+🔹 Warm-up Q&A
+Q: What’s a cap in CQE terms?
+A: A local, reversible, one-shot micro-operation dropped on a hot cell (or tiny patch) to neutralize a mirror residual without changing global meaning. Every cap ships with its inverse, proves it (pre→post→pre), and writes a tiny receipt.
+Q: And a Δ-lift?
+A: A declared local identity (a repair that isn’t merely undoable, but equivalent under your model) that improves conditioning or symmetry. Think “swap to a dual basis”, “apply a commuting average”, “local min-curvature identity”. Δ-lifts are monotone: they can tighten strict after a pass.
+Q: How do they differ in the rails?
+A: Caps: reversible, at most one per hot cell, no strict change.
+Δ-lifts: identity-preserving but not trivially invertible; allowed to tighten strict after success.
+Q: Who decides which to try?
+A: The Cap Broker ranks candidates (smallest footprint, biggest residual drop, clean inverse), tries one, re-mirrors. If still hot, it may propose a cookbook Δ-lift.
+🔹 Whiteboard — Formal shape
+Cap (reversible micro-op)
+A cap on patch is valid iff:
+• Locality: (small ; default ).
+• Reversibility: s.t. on .
+• Neutral semantics: View outputs outside are unchanged; inside all declared invariants (units, bounds) hold.
+• Mirror improvement: for residual operator .
+• One-shot: A hot cell sees ≤1 cap per loop.
+Receipt: cap_id, patch, pre_hash, post_hash, inv_hash_ok, Δresidual.
+Δ-lift (declared identity)
+A Δ-lift is admissible if:
+• Identity class: for the forward operator (or same ledger-class up to symmetry).
+• Local support: bounded stencil, documented cookbook name.
+• Monotone strict: allows a tighter threshold only after pass.
+• Re-mirror: must reduce residual or unlock a cap-free pass.
+Receipt: lift_id, region, invariant_name, proof_note, Δresidual, strict_new?.
+🔹 Bench — The core library (starter set)
+Below are safe defaults you can enable today. Each entry lists intent, preconditions, inverse/proof, viewer signature, and common pitfalls.
+A. Orthonorm-2×2 (cap)
+• Intent: Fix local oblique leak; orthonormalize a 2×2 slope/edge block.
+• Pre: Finite values; unitless or unit-consistent pair.
+• Inverse/Proof: QR with recorded ; apply to revert. Hash pre/post and verify .
+• Viewer: Local 8×8 shows cross-residual pin collapsing; surround shows seam tension drop.
+• Pitfall: Don’t rotate across unit boundaries.
+B. Phase unwrap/re-wrap (cap)
+• Intent: Remove wrap causing mirror ping-pong in phase fields.
+• Pre: Field is phase-valued; neighbor continuity.
+• Inverse/Proof: Store integer wrap ; inverse adds/subtracts .
+• Viewer: Residual ring → single dot; shell shows beat suppression.
+• Pitfall: Never apply across discontinuities (edges).
+C. Bias repaint + anti-repaint (cap)
+• Intent: Zero a local DC bias that defeats symmetry tests.
+• Pre: Known acceptable DC range; no unit change.
+• Inverse/Proof: Keep bias ; inverse adds back.
+• Viewer: Green island replaces amber saddle; surround tensors align.
+• Pitfall: Don’t repaint if view contract needs the bias.
+D. Swap-pair (cap)
+• Intent: Swap two mis-indexed neighbors (labeling error) deterministically.
+• Pre: Known permutation class; labels recorded.
+• Inverse/Proof: Swap is its own inverse; receipt contains permutation id.
+• Viewer: Residual checkerboard disappears.
+• Pitfall: Don’t chain swaps—one cap per cell.
+E. Local unitary (cap)
+• Intent: Rephase a 2-component spinor/vector to restore unitarity.
+• Pre: Norm within tolerance; SU(2)/SO(2) neighborhood ok.
+• Inverse/Proof: Store angle ; inverse uses .
+• Viewer: Hot ridge collapses; shell chirality flag quiets.
+• Pitfall: Apply only to designated spin channels.
+F. Notch/denotch (cap)
+• Intent: Remove a spurious narrowband spike introduced by view discretization; pair with denotch inverse.
+• Pre: Spike narrower than declared notch width; outside signal of interest.
+• Inverse/Proof: Preserve IIR/FIR taps to reconstruct; check round-trip.
+• Viewer: Spectral hot line vanishes; time-domain mirror stabilizes.
+• Pitfall: Over-notching is erasure → forbidden.
+G. Sparse⇄dense toggle (cap)
+• Intent: Flip between two exactly equivalent encodings (same math, different storage) to defuse a numeric corner.
+• Pre: Lossless map defined; checksums available.
+• Inverse/Proof: Exact codec round-trip.
+• Viewer: Same field, fewer hot specks from rounding.
+• Pitfall: Don’t combine with any other cap in the same cell.
+Δ-Lift cookbook (identity repairs)
+L1. Min-curvature identity
+• What: Replace local patch by argmin of subject to same forward outputs (identity on ).
+• Why: Smooths only the nullspace that mirror is hypersensitive to.
+• Proof note: KKT conditions show unchanged; ledger stores Lagrange multipliers.
+• Viewer: Hot speckles → smooth green pool; strict tightens a notch.
+L2. Symmetry averaging
+• What: Average tile with its dihedral orbit then project back to the invariant subspace used by views.
+• Why: Restores enforced symmetry exactly where the view expects it.
+• Proof note: commutes with group; projection leaves invariant.
+• Viewer: Residual “flower” pattern snaps to uniform.
+L3. Kernel dualization
+• What: Swap a filter/operator for its algebraic dual that has identical forward effect under boundary conditions.
+• Why: Better conditioning, same outputs.
+• Proof note: Dual pair documented; unit test proves equality on test bank.
+• Viewer: Surround seam tensors align; shell flags shrink.
+L4. Prox-identity (small λ)
+• What: Apply with an invariant penalty and small that leaves unchanged (identity limit).
+• Why: Damp unstable directions while respecting outputs.
+• Proof note: Taylor bound; outputs within strict tolerance; mirror equal.
+• Viewer: Amber bands fade without topological change.
+L5. Fenchel dual swap
+• What: Local swap to dual variables; compute; swap back.
+• Why: Compute in a domain where the mirror is linearized.
+• Proof note: Documented involution; invariant on round-trip.
+• Viewer: Hot cross resolves; caps no longer needed in that cell.
+🔹 Three domain vignettes (what it looks like)
+Optics (PSF ring artifact)
+• Symptom: Bright ring in residual at (r≈2.1λ/D).
+• Cap: phase unwrap on a 2×2 phase patch at ring peak; inverse stored.
+• Re-mirror: Ring collapses to green; one stubborn pixel remains amber.
+• Δ-lift: min-curvature identity on 3×3 with PSF constraints.
+• Strict: WFE gate tightens 25 nm → 22 nm.
+• Wrap bits: class4=1001 cap4=0100 commit4=1110 strict4=0001.
+Thermal (radiative balance glitch)
+• Symptom: Two adjacent tiles disagree on by 3σ.
+• Cap: bias repaint of sub-patch to zero DC offset; inverse recorded.
+• Re-mirror: Disagreement drops to <1σ; seam still slightly tilted.
+• Δ-lift: kernel dualization (view uses radiosity; swap to exact dual).
+• Strict: ΔT/tick 1.0 K → 0.8 K.
+• Wrap: 1011 / 0011 / 1101 / 0010.
+Spin/EM (unitary phase drift)
+• Symptom: SU(2) norm leak 1e-3 on a 2-component spinor.
+• Cap: local unitary rephase with θ=−0.004 rad; inverse noted.
+• Re-mirror: Leak <1e-6; chiral shell beats still present.
+• Δ-lift: symmetry averaging over L/R chiral view orbit.
+• Strict: Coherence time floor raises; BER gate tightens.
+• Wrap: 1000 / 0001 / 1010 / 0100.
+🔹 Safety rails (runtime enforced)
+• At most one cap per hot cell per loop.
+• Cap must round-trip (inverse check + hash).
+• Δ-lift must cite invariant and pass canned tests.
+• No strict tightening before a pass.
+• Any erase ⇒ Landauer log. Most runs: 0 erasures.
+🔹 Broker policy (how picks happen)
+• Rank by footprint (smaller first).
+• Rank by expected Δresidual / cost (viewer-trained heuristic).
+• Penalize cap stacking in same neighborhood.
+• Prefer caps over Δ-lifts for first attempt; prefer Δ-lifts if the same motif recurs (structural issue).
+• After stitch, re-mirror the frontier ring; never trust un-remirrored neighbors.
+🔹 Terminal — What it feels like to use
+cap Orthonorm2x2(id:"CAP_QR_2x2") { patch = 2x2; pre=finite; units=compatible do : {Q,R} = qr(X); X := Qᵀ X undo : X := Q X prove: hash(pre) -> do -> undo == hash(pre) } lift MinCurv(id:"LIFT_MINCURV") { region=3x3; invariant="PSF_eq" do : x* = argmin ||Δx|| s.t. F(x*)=F(x) prove: KKT log + PSF forward equivalence testbank strict: nrmse <= min(nrmse, nrmse-ε) } use tile(5,7) { suggest cap Orthonorm2x2 if residual.xform == "oblique" else lift MinCurv } 
+CLI:
+cqe run scene.cql --caps=auto --lifts=declared --emit-viewers=all cqe report --tile 5,7 --show wrap,cap,proof,viewer 
+🔹 Viewer signatures (so you can spot them)
+• Orthonorm2x2: tiny X-shaped heatblob goes to dot; surround tensor straightens.
+• Phase unwrap: ring-like residual collapses; shell beat map calms.
+• Bias repaint: flatting of a small plateau; gold strict ring often appears next.
+• Min-curv: “sandpaper” noise becomes satin; no change to forward image.
+• Symmetry average: petals → disk; dihedral spokes vanish.
+• Kernel dual: same picture, lower edge tension across tiles.
+🔹 Anti-patterns to avoid
+• Chaining two caps on the same hot cell in one loop.
+• Using a cap to smuggle a unit change.
+• Calling a Δ-lift “identity” without a proof note (cookbook + testbank).
+• Tightening strict after a “green but fragile” transient (require stability over N repeats).
+• Skipping frontier re-mirrors after stitch flips.
+🔹 Exercises
+• Cap-only vs Lift-only: Run a problem twice: first with caps enabled, lifts off; then reverse. Compare total residual, strict deltas, and number of stitch flips.
+• Viewer-guided caps: Train yourself to spot the “X-blob” and “ring-wrap” signatures before the broker acts; confirm your picks match the broker ≥80%.
+• Symmetry audit: Intentionally perturb a symmetric tile; fix it only with Symmetry averaging. Verify unchanged on the testbank.
+• Proof hygiene: Delete an inverse from a cap in a sandbox—watch the runtime refuse to proceed (good!).
+🔹 Where we are now
+• You have a tight catalog of reversible caps and legal Δ-lifts.
+• You know how they’re selected, proven, viewed, and recorded.
+• You can read a viewer and guess the right cap/Δ-lift by sight.
+Next section: Stitching & Parity Looms — Hamming-8/4 and Golay-24 on wraps, seam legalization policies, frontier re-mirrors, and how the shell’s subharmonics warn you before a bad seam spreads.

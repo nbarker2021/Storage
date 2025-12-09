@@ -1,0 +1,126 @@
+PLDE Sessions — Evidence & Results Log (Pre‑Alpha)
+A living brief of all experiments run in this thread: why we ran them, how they work, and what we saw. Each card is self‑contained and links to the session artifacts.
+Glossary (metrics & terms)
+• Coverage ratio: fraction of graph edges traversed by the team (target 1.0).
+• Overlap: number of edges traversed by both strands (lower is better; 0 = perfect partition).
+• Steps per edge: total steps ÷ total edges (≈1.0 is near‑Eulerian efficiency).
+• Routed steps: steps used solely to reach a new frontier when boxed in.
+• Helix R² (projection‑robust): quality of a linear phase advance (θ vs. step) after projecting traces into many random 3‑D subspaces and selecting the principal axis inside each subspace; we report median across projections/agents.
+• Radius CV: coefficient of variation of the helix radius in those subspaces (lower is steadier).
+• PLDE‑16: dual, phase‑locked explorers with golden/lucas modulation and light cross‑prop; PLDE‑16.2 adds triad/quadrant governance, invariant balancing, and a 16‑beat role cycle.
+Session 1 — Projection‑Robustness: PLDE‑16 vs RandomGreedy (Hypercubes)
+Why
+Rule out “PCA artifact”: do the double‑helix metrics persist under many random 3‑D views?
+How
+Graphs: hypercubes , . Seeds: 5 per . For each run we drew 24 random orthonormal 3‑D bases, computed helix R² and radius CV, then aggregated.
+Results (high level)
+• PLDE‑16 shows stable helix signal; at , a non‑trivial slice (≈6–7%) of projections hit R² ≥ 0.8.
+• Radius stability is good (median CV ≈ 0.43–0.47) across both methods.
+• Confirms the helix is not an artifact of one view.
+Artifacts
+• CSV: plde16_projection_sweep.csv
+• Plots: median R² vs n, fraction R²≥0.8, median CV vs n, fraction CV≤0.5
+→ /mnt/data/proj_medR2_vs_n.png, /mnt/data/proj_fracR2_ge_0_8_vs_n.png, /mnt/data/proj_medCV_vs_n.png, /mnt/data/proj_fracCV_le_0_5_vs_n.png
+Session 2 — Tailored Baselines: EulerAlt & AxisPair
+Why
+Compare PLDE‑16 to directed/structured splits that might favor braids or efficiency.
+How
+• EulerAlt: Build an Euler tour of , alternate‑color edges along the tour → A/B get disjoint edge sets by construction.
+• AxisPair: Partition bit‑flip axes into pairs and alternate pairs between A and B.
+• Same projection‑robust helix metrics as Session 1.
+Results (comparative)
+• AxisPair: strongest helix R² at high but more routing (steps/edge ~1.11–1.18).
+• EulerAlt: zero overlap but often fragmented into many cycles → extra routing.
+• PLDE‑16: near‑Euler efficiency (~1.00–1.03 steps/edge), small overlap, solid helix.
+Artifacts
+• CSV: plde16_tailored_competition.csv
+• Plots: tailored_medR2_vs_n.png, tailored_overlap_vs_n.png, tailored_stepsPerEdge_vs_n.png
+Session 3 — Hybrid: EulerAlt Partition + PLDE Scheduling (EA+PLDE)
+Why
+Try to get the best of both: disjoint edge ownership and PLDE’s braided geometry with low overhead.
+How
+• Split edges by EulerAlt (A/B disjoint), then within each color run PLDE‑style golden/lucas scheduling with phase lock.
+• , , 12 projections per run.
+Results
+• Zero overlap (inherits the split) and near‑Euler efficiency (~1.01–1.02 steps/edge).
+• Helix R²: ~0.38 @ n=6, ~0.59 @ n=8 (best among methods here), ~0.43 @ n=10.
+Artifacts
+• CSV: plde16_hybrid_results.csv (full) and plde16_hybrid_results_min.csv (recap)
+• Plots: hybrid_medR2_vs_n.png, hybrid_stepsPerEdge_vs_n.png, hybrid_overlap_vs_n.png
+Session 4 — Off‑Cube Generalization: 3‑D Torus Grid 
+Why
+Test whether the braid appears on a different geometry (periodic lattice), not just hypercubes.
+How
+• 1,000 nodes, 3,000 edges; two agents start far apart.
+• PLDE vs a random greedy baseline; 10 random 3‑D projections from a 6‑D torus embedding.
+Results
+• Both reach full coverage with zero overlap; near‑Euler efficiency (steps/edge ~1.018 PLDE, 1.014 random).
+• Helix R²: 0.691 (PLDE) vs 0.410 (random); radius CV comparable (~0.439 vs ~0.425).
+• Clear, braided double‑helix traces in 3‑D overlays.
+Artifacts
+• CSV: torus3D_demo.csv
+• Overlay plot: torus3D_plde_overlay.png
+Session 5 — Master Session Log (interactive)
+Why
+Centralize all runs/metrics for filtering and cross‑cutting plots.
+How
+• Consolidated all per‑run tables into a session log with graph family, algo, , seed, coverage, overlap, steps/edge, routed steps, helix R², radius CV.
+Artifacts
+• CSV: plde_session_log.csv
+Session 6 — PLDE‑16.2: Role‑Cycle Controls & Cross‑Family Runs
+Why
+Harden the controller: add triad/quadrant governance, invariants, and a 16‑beat role cycle; test across different graph families.
+How
+• Families: Hypercubes (), Torus , and a degree‑preserving‑rewired 6‑regular expander (from ).
+• Orientation: natural coordinates for cube/torus; spectral 3‑D for the expander.
+• Metrics: as before; 8 random 3‑D projections per run for helix metrics.
+Aggregate results (median across runs)
+• Torus (3‑D): Helix R² 0.685, CV 0.417, steps/edge 1.003, overlap 0, coverage 1.0.
+• Hypercubes: Helix R² 0.401, CV 0.451, steps/edge 1.034, overlap 4.5 (edge counts), coverage 1.0.
+• 6‑reg Expander: Helix R² 0.081, CV 0.744, steps/edge 1.012, overlap 0, coverage 1.0.
+Interpretation
+• PLDE‑16.2 remains efficient and low‑overlap across families.
+• The helix signature depends on an orientation field: strong on periodic geometry (torus), moderate on cubes, weak on expanders with the crude spectral frame.
+Next (queued in roadmap)
+• Add graph orientation fields (diffusion/Laplacian vector frames) so expanders recover a braid.
+• Add PLL‑style phase control for robustness to noise/asynchrony.
+• Test code→lattice priors (E8/Leech) for dimensional lifts and packing gains.
+Artifacts
+• CSV (family summary): plde162_family_summary.csv
+• Session log updated: plde_session_log.csv
+Methods Appendix
+Projection‑robust helix metrics
+• Concatenate both strands’ points; center.
+• Draw many random 3‑D orthonormal subspaces; project.
+• In each 3‑D, find a principal axis (local PCA); unwrap angle θ(t) in the orthogonal plane; regress θ vs step to get R².
+• Compute radius vector r(t) in that plane and its CV. Aggregate medians across projections and agents.
+Controllers
+• PLDE‑16: golden/lucas angle modulation across axis pairs; anti‑phase strands; cross‑prop bonus; governance and invariant terms.
+• PLDE‑16.2: adds triad fairness, periodic role cycle (16 beats), and stronger invariant/sync terms.
+Baselines
+• RandomGreedy: random unvisited edge per step.
+• EulerAlt: disjoint edges by alternation along a full Euler tour.
+• AxisPair: disjoint edges by axis‑pair partition.
+Common parameters
+• Cube dims: ; seeds as noted per session.
+• Torus: (3‑D); spectral 3‑D embedding used for the expander.
+• Projections: 8–24 per run depending on session; statistics reported as medians.
+Limitations / threats to validity
+• Helix is summarized from projections; while robust across many views, it’s still a surrogate for topological winding.
+• Some comparisons used approximate counts (indicated).
+• Expander orientation via spectral 3‑D is weak; better, local frames are planned.
+Roadmap (what’s next)
+• FIELD‑Graph: diffusion/Laplacian vector frames on non‑geometric graphs; re‑run PLDE‑16.2 on expanders.
+• PLL‑Loop: closed‑loop phase estimation + micro‑detuning to maintain anti‑phase under noise.
+• LAT‑E8/Leech: Construction‑A embeddings as priors; measure packing/robustness vs vanilla.
+• SB‑05: n=5 seed octet (incl. palindromic) with symmetry‑aware canonicalization; ablate φ‑mix vs alternatives.
+• PHI‑MIX ablations: φ vs 50/50 vs learned; pick the winner empirically.
+Artifact Index (created in this thread)
+• plde16_projection_sweep.csv
+• proj_medR2_vs_n.png, proj_fracR2_ge_0_8_vs_n.png, proj_medCV_vs_n.png, proj_fracCV_le_0_5_vs_n.png
+• plde16_tailored_competition.csv, tailored_medR2_vs_n.png, tailored_overlap_vs_n.png, tailored_stepsPerEdge_vs_n.png
+• plde16_hybrid_results.csv, plde16_hybrid_results_min.csv, hybrid_medR2_vs_n.png, hybrid_stepsPerEdge_vs_n.png, hybrid_overlap_vs_n.png
+• torus3D_demo.csv, torus3D_plde_overlay.png
+• plde_session_log.csv (master)
+• plde162_family_summary.csv
+If you want, we can pin the top plots directly on this canvas or add a one‑page executive summary at the top for a more narrative read.

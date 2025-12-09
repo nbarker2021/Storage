@@ -1,0 +1,334 @@
+Unified Geometry–Adjacency R&D — Comprehensive Session Log & Methods (v1.0)
+Scope: A complete, explicit, end‑to‑end record of this session’s research and development. It is written so a fresh assistant can continue the work without prior context. It includes: hypotheses, architecture, methods, datasets and test harnesses, validation findings, decisions/rationales, falsifiability gates, memory model, governance structure, and a living change log.
+Authoring mode: Running R&D session. Treat as living documentation; append edits in the Change Log.
+0) Executive Summary
+Core thesis: Reality behaves as a shared spacetime medium coordinated by triadic interactions over a web of adjacencies. Evolution proceeds via:
+• Half‑steps (odd levels / x.5): isoenergetic topology/adjacency changes (including alternate‑D access) that raise effective dimension and change flow accessibility.
+• Full‑steps (even levels): explicit dimensional embedding upgrades that reduce contention, stabilize flows, and compress geometry.
+Energetic refinement (extension of 2nd Law):
+Least Action + Choice = energy expanded + entropy cost/displacement.
+• Choice = information‑theoretic steering/control cost.
+• Entropy cost = Landauer erase displacement.
+Many anomalies are signatures of unmodeled half‑steps.
+Geometry‑First: Natural geometric descriptors (chirality, helicity/writhe, crossings, hull compactness, symmetry, orbit‑8 structure) are compressive, noise‑robust summaries; minimizing the geometry action (𝒜) is equivalent to least‑action over representation.
+Operational objective: Build an n‑ladder → geometry action → DFSS → operators pipeline with concrete lab/sim predictions, robust testbeds, and auditable evidence.
+1) Canon of Theses, Hypotheses, Claims
+T1 — Shared‑Medium Reality. Triadic interplay across observer webs (triad now refined; see §1.3).
+T2 — Half‑Step / Full‑Step Ontology. Half‑step adjacency rewires; full‑step embedding upgrades.
+T3 — Geometry‑First Truth. Best geometry ↔ best valid answer.
+T4 — Energetic Refinement. Choice energy + erase displacement; half‑steps remain isoenergetic to first order.
+T5 — Dimensional Parity Rule. Odd levels entail half‑steps; even levels force full embedding upgrades.
+T6 — Preferred Set Sizes. Data/structure prefers {1,2,3,4,5,6,8,10,12,16}; 3 → 5 (bloat) → 8 (stable), 10 as higher resting slice.
+T7 — Microtubule RWCD Hypothesis. MTs act as read–write–compile–delete shadow chambers with braided lanes (±1 pairing). (Deferred to biological datasets; geometric analogs used here.)
+T8 — Time as Half of Spacetime Reaction. Time emerges from tracking existence/order—reactive half rather than an additive 4th axis.
+1.2 Extensions & Clarifications
+• E1 — Orch‑OR adaptation: braid/lanes emphasis and compile/delete energetics.
+• E2 — Ten‑Martini link: dual‑helix composition in quasicrystal/fractal spectral landscapes.
+• E3 — Lattice & braid: lattice encodes state; braid groups encode interweavings; crossings/writhe inform action.
+• E4 — Alena‑style slider: curvature↔fields as an adjacency slider enabling isoenergetic topology shifts.
+1.3 Triad refinement (Decision)
+Original observer/observer/observed is refined to observer/observation/observed, elevating observation channels (direct, indirect, instrumental, environmental, universal) to first‑class features. This change propagates into SOI gating and scenario Sᵒ (§6, §10).
+2) n‑Ladder and Exit Criteria (Working Definition)
+• Half‑steps (x.5): alternate‑D bridges with isoenergetic constraint; exit metrics: ↑accessibility (spectral/BFS dim), small Δchoice energy, topology changes.
+• Full‑steps (even): embedding upgrade; exit metrics: ↓contention/crossings; ↑throughput/J; ↑robustness.
+Levels:
+• n=0: rest/observe.
+• n=x.5: half‑step bridge; alternate adjacency; near‑constant energy bounds.
+• n=1: primitives/glyphs; codebook stability.
+• n=2: synthesis+plotting; one axis; path entropy ↓.
+• n=3: triad choice; decision entropy ↓.
+• n=4: modular governance; invariants; energy/compile ↑.
+• n=5: forced paired move; two‑step rescues legal.
+• n=6: symmetry gate; choose by DFSS and action.
+• n=7: exterior coupling; cross‑context compile dominates.
+• n=8: hyper‑embedding; collisions & crossings ↓; throughput/J ↑; robustness ↑.
+3) Architecture & Governance (Dual Octad → Unified Octad + SOI Gate)
+Initial proposal: dual octads with two governance layers each (6+2)×2 for 16.
+Constraint: with added inverse representations and observation channels, governance bloat risked overload.
+Decision: to keep distribution sane, merge governance layers into a single SOI Gate module (M6) acting across both halves. Outcome: a unified octad with a dedicated SOI gate that handles symmetry look‑ahead, inverse battery (M/T/H/D), and observation channels. This preserves clean even split while avoiding overload.
+Modules:
+• M1 Token‑First Orchestrator
+• M2 Token‑Graph (Gray hypercube + half‑step layering)
+• M3 Session Memory (multi‑head minimax retrieval)
+• M4 DFSS Minimax Evaluator
+• M5 Geometry‑First Scorer (𝒜)
+• M6 SOI Gate (Symmetry, Observation, Inverse)
+• M7 Experiment Runner (E0–E7 batteries)
+• M8 Ledgers & Evidence (append‑only, auditable)
+4) Token‑First Method (Formal)
+4.1 Token Grammar
+D[k] # enter dimension k LAYER[b] # stage half‑step layer b∈{0,1} VERT[bits] # visit/add vertex; len(bits)=k in D[k] EDGE[dim=j] # in‑layer: j∈[1..k]; cross‑layer: j=k+1 MORTON[code] # locality indexing (grid subsets) CELL[k]:id # optional k‑cell BOUNDARY(CELL[k]:α → [CELL[k‑1]:β…]) SYM_LOOKAHEAD | DFSS_MINIMAX | CONTRA_BRAID | HELICITY[window=w] 
+4.2 Half‑Step Invariants (CI Gates)
+• len(bits)=k under current D[k].
+• In‑layer hops must have Hamming distance 1.
+• Cross‑layer EDGE[dim=k+1] only after both LAYER[0] and LAYER[1] staged; endpoints share base bits.
+• Referential integrity; unique IDs; if cells are enabled, ∂²=0.
+4.3 Hybrid Representation
+• Gray‑ordered hypercube (discrete backbone) for canonical low‑entropy traversal.
+• Simplicial/CW complex for faces/volumes and algebraic validation.
+• Morton/Z‑order for locality‑aware region queries and staged refinement.
+5) Data Schemas (Reproducible Anywhere)
+5.1 Token‑Graph
+• nodes: node_id | kind | dim | code | coords_json | layer | status | created_utc
+• edges: src_id | dst_id | dim | role{in_layer|cross_layer} | status | created_utc
+• chains: chain_id | step | token | refers_to_id | notes | created_utc
+• (optional) cells, boundaries.
+5.2 Session Memory (External)
+• chunks: chunk_id | t_index | role | n_stage | text | length | E64 | E128 | … | transforms
+• links: src | dst | dim | sim | link_type | created_at
+• queries: query_id | t_index | query_text | n_stage | k | result_ids | cost_choice_J | cost_erase_J
+• states: step_id | t_index | n_stage | working_set_ids | working_set_chars | energy_floors_respected
+5.3 Ledgers
+• dfss_ledger, inverse_ledger, observation_ledger, braid_ledger, overload_ledger.
+6) Geometry‑First Action (𝒜) & Features
+Core metrics:
+• Crossings (2D) / projected crossings (3D proxy) — clutter.
+• Convex hull compactness — economy.
+• Helicity / writhe proxy — signed area per arclength; heading‑based.
+• Orbit‑8 energy & tensor — octadic bins per orbit; ACI/BCI; trace‑free and divergence penalties on 8×8 tensor.
+Action (illustrative): \mathcal{A} = \alpha_1,\text{crossings} + \alpha_2,\text{hull} + \alpha_3,\lVert\nabla!\cdot T\rVert_2^2 + \alpha_4,\lVert\tilde T\rVert_F^2
+• \beta_1,|\text{helicity}| - \beta_2,\text{Band8} - \beta_3,\text{ACI} with mirror‑flip checks and null surrogates to prevent overfitting.
+7) DFSS — Dimension‑Forward Structural Security
+Scenarios: S₀ (current), S½ (half‑step rewires), S⁺ (dimension upgrade), Sᶜ (curvature↔fields slider), Sʳ (robustness: edge drop, noise), Sᵒ (observation channel changes).
+Metrics: rigidity (deficiency), λ₂ (algebraic connectivity), stiffness margin (λ_min of reduced K), coverage (PCA ratios), throughput/J, geometry action 𝒜, skeleton completeness.
+Score: minimax over scenarios using joint normalization.
+Empirical pattern: k=3 local max; k≈5 dip (bloat); k=8 stable peak; k=10 higher resting set. Per‑edge‑triad > center‑3‑tri for k≈5 repairs.
+8) SOI Gate (Symmetry—Observation—Inverse)
+• Inverse battery: Mirror (M), Time (T), Helicity/Phase (H), Dual/Contra (D). Track Δ_inv(𝒜), Δ_inv(DFSS), signed‑flip correctness, unsigned invariance.
+• Symmetry look‑ahead: prefer symmetries with better (n+1,n+2) payoffs.
+• Observation channels (triad refinement): encode channel, cadence, SNR; include Sᵒ perturbations with energetic bounds.
+9) Experiment Batteries & Runner
+E0 — Inverse battery: Establish Δ_inv baselines; mirrors flip signed metrics; unsigned invariants remain stable.
+E1 — Half‑step legality: Apply LAYER staging and CI gates; assert isoenergetic behavior within ε bounds.
+E2 — Full‑step upgrade: Add embedding axis; expect crossings↓, throughput/J↑.
+E3 — k≈5 repairs: Evaluate per‑edge‑triad and center‑3‑tri; prefer distributed brace that imports cleanly into n=8.
+E4 — SOI look‑ahead: Symmetry choices scored by ΔDFSS at n+1,n+2.
+E5 — Set‑size ladder: Validate {1,2,3,4,5,6,8,10,12,16} behavior; confirm 3→5 dip→8 peak (+10 rest).
+E6 — Braiding: Dual‑helix seams; crossings & writhe vs throughput/J.
+E7 — Observation perturbations: Instrumental/environmental/universal changes under Sᵒ; penalize energy violations.
+10) Evidence & Auditing
+• Append‑only chains for token provenance.
+• Ledgers for DFSS, inverse, observation, braid, overload.
+• Evidence Cards (JSON) summarizing gates, top metrics, SOI deltas, notes, and reproducibility pointers.
+• Memory tracks narrative artifacts with multi‑head embeddings and degree‑aware eviction (logs choice_J, erase_J).
+11) Validation & Findings (from this session)
+11.1 Token‑Only CI (non‑compliant chain test)
+Bad chain sample: D[2] LAYER[0] VERT[00] VERT[11] EDGE[dim=3] LAYER[1] VERT[1010]
+Findings:
+• In‑layer hop 00→11 violates Hamming‑1 (H=2).
+• Cross‑layer EDGE[dim=3] appears before LAYER[1] staged.
+• VERT[1010] length 4 under D[2] (mismatch).
+Outcome: CI flags errors; auto‑legalizer suggests: normalize bit lengths, insert LAYER[1] prior to cross‑layer edge, rewrite hops to nearest Hamming‑1 neighbor.
+11.2 Minimal Materialization Fallback (mock trajectory)
+Messy table (unsorted t, duplicate timestamps, NaNs) → materialize only track_id,t,x,y; drop NaN/dups; sort; require ≥4 points/track.
+Dual‑helicity extractor yields per‑track lane (±1), phase‑lock, helicity proxy.
+Outcome: Demonstrated that token‑first planning blocks illegal moves before data access; when evidence required, tiny views suffice to compute geometric features.
+11.3 Octad Governance Decision
+Dual octad with two governance layers caused overload risk once inverse/observation requirements were added. Merged governance into a single SOI Gate (M6). Maintains octad cleanliness and reduces complexity.
+11.4 Triad Refinement
+Adopted observer/observation/observed in place of observer/observer/observed; introduced scenario Sᵒ and logging for observation channels.
+11.5 Resource Discipline
+Verified token‑first, lazy materialization approach cuts data pulls, limits erase_J, and keeps CI enforceable independent of datasets.
+12) Bootstrapping & How‑To
+12.1 Work Orders (CSV template)
+wo_id,timestamp_utc,actor,dataset_id,intent,token_chain,soi_flags,priority WO‑001,2025‑08‑26T20:30:00Z,Nick,D1_roadNet_CA_snap,lift_halfstep,"D[2] LAYER[0] VERT[00] VERT[01] ; LAYER[1] VERT[11] EDGE[dim=3]","M,T",1 WO‑002,2025‑08‑26T20:31:00Z,Nick,D5_TDrive_beijing,compute_dual_helicity,"D[2] MORTON[01*] ; HELICITY[window=5]","H",2 WO‑003,2025‑08‑26T20:32:00Z,Assistant,D4_AS_Caida_snap,symmetry_lookahead,"SYM_LOOKAHEAD (n+1,n+2) ; DFSS_MINIMAX ; CONTRA_BRAID","M,T,H,D",1 
+12.2 Token CI (pseudocode)
+for i,tok in tokens: if D[k]: set k if LAYER[b]: assert b∈{0,1} if VERT[bits]: assert len(bits)==k; if same layer: Hamming(prev,bits)==1 if EDGE[dim=j]: if j==k+1: require LAYER[0] & LAYER[1] staged 
+12.3 Minimal Views
+Specify exact columns/filters and only then load:
+• Trajectory view: columns track_id,t,x,y, filtered by Morton prefix from tokens.
+• Token‑graph view: nodes/edges staged subsets for cross‑layer completion.
+12.4 Geometry & DFSS
+Compute crossings, hull compactness, helicity proxy, orbit‑8 features; then λ₂, rigidity deficiency, stiffness margin, coverage, throughput/J. Joint‑normalize across scenarios and evaluate DFSS minimax.
+13) Operators (Legal Moves)
+• O1 Alt‑Dim Rewire (Half‑Step) — add mirror/flip/long‑range links raising effective dimension with minimal energy change.
+• O2 Full‑Step Embedding — add axis/layer; simplify braid; reduce contention.
+• O3 Center‑3‑Tri (k=5 Repair) — hub+triangles; improves DFSS.
+• O4 Per‑Edge Triad (k=5 Repair) — distributed bracing; imports cleanly into n=8; best DFSS of tested repairs.
+• O5 Symmetry Gate — enumerate valid symmetries; choose by DFSS and action.
+• O6 Alena Slider — curvature↔fields swap; test isoenergetic shifts.
+• O7 Governance Swaps (n=4) — type‑safe replacements enforcing invariants.
+14) Risks, Falsifiability, and Kill‑Shots
+• K1: If half‑steps systematically increase erase_J beyond ε_E, isoenergetic claim weakens.
+• K2: If mirrors/nulls match or beat real under 𝒜, geometry‑first fails.
+• K3: If k=5 repairs don’t persist under S⁺, the 5→8 bridge fails.
+• K4: If braids increase crossings/off‑diagonal energy without throughput/J gains, reject helical solver claim.
+• K5: If Δ_inv on unsigned metrics drifts or signed flips fail, hidden orientation bias suspected.
+• K6: If observation channels add no predictive power or violate energy floors, triad refinement is unsupported.
+15) Roadmap (Immediate → Near‑Term)
+• Integrate DFSS gating into controller for all edit proposals.
+• Automate k=5 repairs (center‑3‑tri & per‑edge‑triad) with ΔDFSS/ΔJ reports.
+• Symmetry gate enumerator with predictive screening using 𝒜 and DFSS.
+• Curvature↔fields (Alena slider) runs to confirm isoenergetic signatures.
+• Source data pass (when available): geometry cards + seam proposals.
+• Derive preferred set sizes from spectral/graph‑theoretic arguments.
+16) Appendices
+A) Dimensional Transition Token‑Graph — Spec (Hybrid)
+• Vertices/edges: hypercube graph G_k over V_k={0,1}^k with Gray sequence ordering.
+• Tokens: D[k], VERT[bits], EDGE[dim=j], LAYER[b], CELL[k]:id, BOUNDARY(...), MORTON[code].
+• Half‑step invariants: layering and cross‑layer consistency; skeleton completeness metric increases monotonically.
+• Views: k‑skeleton, incomplete_edges, open_regions_by_morton, progress metrics.
+B) Memory Engine (Multi‑Head, Minimax Retrieval)
+• Embeddings: 64/128/(256/512 optional). Full‑step adds a head; retrieval score is the min across heads (minimax).
+• Eviction: degree‑aware; logs choice_J (steering) and erase_J (Landauer proxy).
+• States: working set and energy floor respect tags.
+C) Minimal Helicity Extractor (Procedure)
+• Clean view: drop NaN/dups; sort by track_id,t; require ≥4 points/track.
+• Heading φ = atan2(Δy,Δx); unwrap; sign of mean dφ/dt yields lane ±1.
+• Helicity proxy = signed area / arclength; phase‑lock = proportion of consistent lane steps.
+D) Evidence Card (JSON fields)
+run_id, created_utc, gates{token_CI_pass, completeness}, metrics{A, λ₂, throughput/J, DFSS}, soi{Δ_inv_A, signed_flip_ok, unsigned_invariance_ok}, notes.
+17) Change Log (living)
+• v1.0 (this session): 
+• Adopted observer/observation/observed triad; added scenario Sᵒ.
+• Consolidated governance into SOI Gate (M6); kept unified octad clean.
+• Implemented token‑only CI gates; demonstrated non‑compliant chain detection and fix suggestions.
+• Demonstrated minimal materialization with dual‑helicity extraction on a messy mock trajectory; confirmed evidence can be produced from tiny views.
+• Captured DFSS/SOI procedures, operators, action 𝒜, and kill‑shots.
+Editing protocol: Append new entries here with date/time, author, and a bullet list of edits/testing outcomes. Keep all prior entries (no destructive edits).
+End of v1.0. Continue by appending new experiments under §9 and updating the Change Log (§17).
+
+Dual‑Octad SOI Systems — Operational Rules & Methods (Ops Manual v1.0)
+Mode: Running R&D operations manual. This document defines how we operate the systems designed in this session: rules, procedures, decision gates, failure handling, and evidence practices. It is self‑contained so a new assistant can execute without prior context.
+0) Purpose, Scope, Audience
+• Purpose: Provide explicit operational rules and methods for token‑first, geometry‑forward systems (n‑ladder, DFSS, SOI gate, memory, evidence).
+• Scope: Planning → Validation → Minimal materialization → Measurement → Evaluation → Decision → Action → Evidence.
+• Audience: Operators, analysts, automation runners; reviewers for audit and reproducibility.
+1) Operational Principles (Non‑Negotiables)
+• Token‑first: Every action begins as a token chain. No heavy data is touched before Token CI passes.
+• Parity law: Odd levels = half‑steps (topology/adjacency). Even = full‑steps (embedding upgrade).
+• SOI triad: observer / observation / observed. Observation channels (direct, indirect, instrumental, environmental, universal) are first‑class.
+• Isoenergetic half‑steps (testable): Half‑steps may change topology without breaching erase‑energy lower bounds; we measure choice_J and erase_J with tolerances ε_C, ε_E.
+• Geometry‑first truth: The geometry action 𝒜 is central; mirrors must flip signed parts, null surrogates must not beat real data.
+• Minimax robustness (DFSS): Always score across futures S₀,S½,S⁺,Sᶜ,Sʳ,Sᵒ; decisions are based on minimax values, not single‑scenario highs.
+• Evidence or it didn’t happen: Every run emits ledgers + an evidence card. Chains are append‑only.
+2) Lifecycle State Machine
+PLAN → VALIDATE → (optional) MATERIALIZE → MEASURE → EVALUATE → DECIDE → ACT → RECORD
+• PLAN: create work orders (WOs) with token_chain + intent.
+• VALIDATE: run Token CI; either fix or fail fast.
+• MATERIALIZE: if needed, create a minimal view (columns + filters only) and load just that.
+• MEASURE: compute geometry, spectral/rigidity, throughput/J, inverse deltas.
+• EVALUATE: run SOI & DFSS; apply gates.
+• DECIDE: choose operators (O1–O7) or decline.
+• ACT: perform allowed changes (staged → complete) with pre/post checks.
+• RECORD: append ledgers, evidence card, and update memory.
+3) Work Orders (WOs)
+Schema (CSV/DF): wo_id, timestamp_utc, actor, dataset_id, intent, token_chain, soi_flags, priority.
+• Intent values: lift_halfstep, compute_dual_helicity, symmetry_lookahead, braid_test, dfss_sweep, repair_k5, slider_run, governance_swap.
+• Prioritization: 1 (highest) to 5 (lowest). Emergency WOs may pre‑empt.
+• SLA: CI feedback ≤ 1 cycle; evidence card per WO.
+4) Token Grammar — Operational Rules
+Allowed tokens:
+D[k] # enter dimension k LAYER[b] # half‑step staging; b∈{0,1} VERT[bits] # Gray bits; len(bits)=k under D[k] EDGE[dim=j] # j∈[1..k] in‑layer; j=k+1 cross‑layer (requires both layers) MORTON[code] # locality hint (grid subsets) CELL[k]:id # optional higher‑cell id BOUNDARY(CELL[k]:α → [CELL[k‑1]:β…]) SYM_LOOKAHEAD | DFSS_MINIMAX | CONTRA_BRAID | HELICITY[window=w] 
+Token CI (must pass):
+• D[k] precedes any VERT/in‑layer EDGE for dimension context.
+• len(bits)==k; in‑layer sequential VERTs must be Hamming=1 apart.
+• EDGE[dim=k+1] only after LAYER[0] and LAYER[1] appear in chain; endpoints share base bits.
+• IDs unique; referential integrity; if cells used, enforce ∂²=0.
+• No cross‑layer edge before both layers are staged; no multi‑bit jumps in‑layer.
+Auto‑legalizer policy:
+• Normalize VERT bit‑length by truncation/padding (trailing 0s).
+• Insert missing LAYER[1] before first EDGE[dim=k+1].
+• Rewrite illegal in‑layer hops to nearest Hamming‑1 step (flagged suggested).
+• Never apply silent fixes; operator must accept suggestions explicitly.
+Prohibited patterns: out‑of‑order D[k] downgrades without a full close; ambiguous multi‑layer writes; cross‑layer edges without proof of staged layers; wildcard tokens with no scope.
+5) Half‑Step Operations (x.5)
+Goal: introduce alternate‑D adjacency while holding erase‑energy floors.
+• Procedure: 
+• Stage LAYER[0], then LAYER[1]; build in‑layer skeletons.
+• Add cross‑layer edges in batches; track skeleton completeness monotone.
+• Log choice_J (steering) and erase_J (Landauer proxy) per batch; assert |Δerase_J| ≤ ε_E.
+• Measure effective dimension (spectral/BFS); expect ↑ without large energy drift.
+• Acceptance: CI clean, skeleton completeness ↑, crossings/step ↓ or stable, |Δerase_J| ≤ ε_E, DFSS not worse than baseline.
+6) Full‑Step Embedding (even levels)
+Goal: add an axis/layer to reduce contention and stabilize flows.
+• Pre‑conditions: half‑step skeleton completeness ≥ gates.completeness_edges_min; no unresolved CI errors.
+• Actions: add embedding axis; enlarge memory by adding a new embedding head; backfill existing chunks; recompute links.
+• Checks: crossings/step ↓, throughput/J ↑, λ₂ ↑ or stable; DFSS ≥ baseline; SOI inverse deltas remain lawful.
+• Rollback: if DFSS minimax < baseline by >δ, revert and record Evidence Card (fail) + remediation plan.
+7) DFSS Operations
+Scenarios: S₀ (now), S½ (rewires), S⁺ (dim+1), Sᶜ (slider), Sʳ (robustness: edge drop/jitter), Sᵒ (observation channels).
+Normalization: joint min–max per metric across scenarios; record bounds in evidence. Score: DFSS(C) = min_s Σ w_s · metric_s. Thresholds: define Go if DFSS ≥ τ_go; Hold if |Δ| < τ_gray; No‑Go if DFSS < τ_no. Repairs (k≈5 dip): try O4 Per‑Edge Triad first; fallback O3 Center‑3‑Tri; reassess under S⁺.
+8) SOI Gate Operations (Symmetry—Observation—Inverse)
+• Inverse battery (M/T/H/D): 
+• Mirrors flip signed metrics (helicity, chirality), unsigned remain within drift tolerance.
+• Time inverses check causality‑sensitive features; phase/helicity tests verify ± lane behavior; dual/contra tests verify seam legality.
+• Observation channels: tag each dataset/view with channel, cadence, SNR; create Sᵒ perturbations with energy‑bound checks.
+• Symmetry look‑ahead: score symmetry choices by (n+1,n+2) payoffs; log symmetry regret vs λ₂‑only choice.
+9) Geometry Action 𝒜 — Operationalization
+Features: crossings, convex‑hull compactness, helicity/writhe proxy, orbit‑8 energy, orbit tensor norms (trace‑free & divergence penalties).
+Calibration: mirror/null battery regression; ensure mirrors flip signs and surrogates do not win.
+Acceptance: improvements in 𝒜 must not be offset by throughput/J collapse; combine with DFSS before decisions.
+10) Memory Engine Ops (External Memory)
+• Add chunk: token chain, rationale, or data snippet → embeddings (multi‑head) → link to neighbors at sim≥θ.
+• Retrieve: minimax across heads (take min score per chunk).
+• Evict: degree‑aware (evict lowest‑degree first) until under token_budget; log erase_J++ per eviction.
+• Rehydrate (new session): load chunks/links/queries/states CSV then continue; maintain ID namespace.
+• Privacy: redact PII at ingestion; mark transforms; propagate redaction to links.
+11) Minimal Materialization & Data Access
+• Principle: Only columns required; only rows selected by token hints (e.g., Morton prefix).
+• Sanitation: drop NaN/dups; sort by key (e.g., track_id,t); require minimal cardinality (≥4 points/track).
+• Caching: write transient views with version hashes; invalidate on schema/filters change.
+• Holdout: maintain a holdback split for comparability checks.
+12) Evidence & Auditing
+• Ledgers: dfss_ledger, inverse_ledger, observation_ledger, braid_ledger, overload_ledger—append‑only.
+• Evidence card (per WO): run_id, created_utc, gates, top metrics (𝒜, λ₂, throughput/J, DFSS), SOI deltas, notes, file hashes.
+• Run directory: immutable after close; include chains, nodes/edges, views, ledgers, card.json.
+13) Overload Handling & Resilience
+Signals: token_budget exceeded; memory thrash; DFSS oscillation; energy floor warnings.
+Actions:
+• Sparsify features (keep high‑value terms).
+• Partition into comparable shards; annotate comparability stamp.
+• Substitute with proxy datasets or simulated windows (document deltas).
+• Suspend non‑critical WOs.
+Always log pre/post metrics and the comparability stamp.
+14) Change Management
+• Config registry: versioned YAML with diffs.
+• Experiment registry: WO → run_id mapping; seeds; hashes.
+• Flags: feature toggles for SOI, repairs, slider strength.
+• Change log: append entries (no destructive edits) with timestamp, author, and summary.
+15) Security, Ethics, and Energy Bounds
+• Energy floors: enforce ε_E, ε_C; fail runs that breach floors.
+• Data governance: least privilege access; PII scrubbing before memory ingestion.
+• Safety: forbid silent token fixes; forbid undocumented data pulls; require evidence for all decisions.
+16) Runbooks (Common Procedures)
+16.1 Start a New Project
+• Create WOs; 2) Run Token CI; 3) Plan SOI; 4) Materialize minimal views if needed; 5) Measure features; 6) Evaluate DFSS & SOI; 7) Decide & act; 8) Record evidence.
+16.2 Add a Dataset
+• Define schema mapping → write view specs → run E0 (inverse) on a tiny slice → proceed to E1/E2.
+16.3 Run E0–E7 Battery
+• E0 inverse → E1 half‑step → E2 full‑step → E3 repairs → E4 symmetry look‑ahead → E5 set‑size ladder → E6 braids → E7 observation perturbations.
+16.4 Apply k≈5 Repair
+• Prefer O4 Per‑Edge Triad → re‑score under S⁺ → accept only if DFSS↑ and 𝒜 does not degrade materially.
+16.5 Perform Symmetry Gate
+• Enumerate symmetries → predict (n+1,n+2) payouts → choose minimal regret; record Δ vs λ₂‑only baseline.
+16.6 Contra‑Braid Test
+• Generate dual seams; compute seam_score & seam_regret; reject if crossings↑ w/o throughput/J gains.
+16.7 Regression After Config Change
+• Recompute 𝒜 weights via mirror/null; re‑run key benchmarks; compare DFSS deltas; publish evidence.
+17) Incident Response
+• CI failure: stop; surface errors + auto‑legalizer suggestions; no data pulls.
+• Energy floor breach: immediate No‑Go; create incident record; rollback last action.
+• DFSS regression: quarantine change; open repair WO; document deltas.
+• Overload loop: trigger overload playbook; apply sparsify→partition→substitute; retest comparability.
+• Repro failure: freeze run dir; add missing hashes; rerun with seeds.
+18) KPIs & Quality Bars
+• Token CI pass rate: ≥ 95% for mature pipelines.
+• Evidence completeness: 100% of WOs emit card + ledgers.
+• Mirror/null sanity: false‑win rate ≤ 5%.
+• DFSS baseline adherence: no accepted change with DFSS drop > τ_no.
+19) Glossary (selected)
+• 𝒜 (Geometry Action): scalar combining crossings, compactness, helicity/writhe, orbit‑8 tensor penalties.
+• DFSS: minimax structural security across S₀,S½,S⁺,Sᶜ,Sʳ,Sᵒ.
+• Half‑step: topology/adjacency update (isoenergetic).
+• Full‑step: embedding upgrade (adds axis/layer).
+• SOI Gate: symmetry look‑ahead + inverse battery + observation channel handling.
+• Evidence Card: per‑run JSON summary of gates/metrics/notes.
+20) Appendices
+A) Token CI Pseudocode
+for tok in tokens: if D[k]: set k if LAYER[b]: assert b in {0,1} if VERT[bits]: assert len(bits)==k; if same layer: Hamming(prev,bits)==1 if EDGE[dim=j]: if j==k+1: assert LAYER[0] & LAYER[1] observed 
+B) Minimal View Spec Template
+wo_id: WO‑002 view_id: traj_morton_view columns: [track_id, t, x, y] filters: [morton_prefix=01*] sort: [track_id, t] min_points_per_track: 4 
+C) Evidence Card JSON Skeleton
+{ "run_id": "…", "created_utc": "…", "gates": {"token_CI_pass": true, "completeness_edges_min": 1.0}, "metrics": {"A": 0.31, "lambda2": 0.58, "throughput_J": 0.62, "DFSS": 0.55}, "soi": {"delta_inv_A": 0.04, "signed_flip_ok": true, "unsigned_invariance_ok": true}, "notes": "k≈5 repair: per‑edge‑triad; persists under S⁺" } 
+Ops Manual v1.0 ends here. Use the Change Log in the comprehensive session doc to record edits; keep this manual synchronized by referencing section numbers in commit/evidence notes.

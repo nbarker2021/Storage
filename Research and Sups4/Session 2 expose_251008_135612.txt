@@ -1,0 +1,180 @@
+CQE (Cartan–Quadratic Equivalence): Working Spec, Methods, and Research Program
+Version: session-synthesized; living document.
+Executive Summary (what CQE is, in this session’s concrete sense)
+CQE is a method to build and navigate discrete spaces under symmetry while preserving multiplicity that would otherwise be erased by premature normalization. It couples:
+• a configuration space (objects and local constraints),
+• a minimal equivalence group (the smallest faithful symmetry that should act),
+• a quadratic potential (energy-like measure or defect counter),
+• a local admissibility rule (what small repairs are legal),
+• a closure functional and idempotence (when a state is “at rest”),
+• and a projection overlay (e.g., E₈/Leech) used after counting, purely for telemetry and organization.
+The distinctive CQE discipline is CBC—count-before-close: enumerate legal local gates and only then normalize/close. This preserves hidden degrees of freedom that classic “minimize then equivalence-class” pipelines routinely collapse.
+Using CBC with explicit topology (toroidal wrap-closure ) and a lane-preserving symmetry group, we observed a robust 4→8 split: four backbone families phase-split into eight policy channels. We operationalize those channels as (Construction A–D) × (Type 1–8), which govern legal moves in lifts (e.g., ).
+Part I — Formal Core of CQE (as used in this session)
+1. Configuration Space
+We pick the domain and encode the object under study plus its local constraints.
+• Superpermutations: strings over alphabet with contiguous-window coverage constraints. We also use a 4×4 torus chamber to host an palindromic “rest” seed in a local board model.
+• Lattice overlays (telemetry only): integer vectors with Euclidean/Cartan–Killing structure (E₈ roots, Leech slices). Used for coloring/tracing after counting; never to decide legality.
+• Audio/voice tokens (analogy): cyclic bands/windows (e.g., syllable-timed nuclei, pitch/energy bands) with wrap topology and local conservation constraints.
+Design note: The board and the string are two representations of the same combinatorial lift. CQE prefers a representation in which locality is explicit and symmetry is easy to restrict.
+2. Equivalence Group () — the “smallest faithful” symmetry
+The session showed using too-large erases true multiplicity. We therefore use the lane‑preserving D8 subgroup on the 4×4 torus:
+• identity, 180° rotation, reflection across main diagonal, reflection across anti-diagonal.
+This preserves parity lanes while allowing natural poses. In sequence space, we do not quotient by arbitrary digit relabelings at the counting stage.
+Principle: choose to be just enough to respect invariances and no larger.
+3. Quadratic Potential 
+A scalar that decreases (or at least never increases) under admissible operations. Examples we used:
+• Board pal defects: .
+• Sequence surrogate: .
+• Audio: MOS/error or band-fit residuals; quadratic proxies on energy/pitch deltas.
+4. Local Admissibility (repairs) and Topology
+Local repairs are mirrored adjustments across axes/diagonals and wrap-closure on the torus:
+• Repairs: vertical + horizontal + (one diagonal) mirroring (triadic sets appear generically necessary).
+• Topology: toroidal wrap-closure is a first-class operator; there are no “budgeted exceptions” (we eliminated the so‑called “Joker”).
+Acceptance rule: a candidate local move is admissible if it does not increase and passes the local pal constraints; replaying it is idempotent (same result on reapplication).
+5. Closure Functional and CBC
+• CBC (Count-Before-Close): enumerate all legal local gates before applying any global normalization (e.g., before picking a canonical palindrome/pose).
+• Idempotent closure: Only after gate counting, we can canonicalize (pose-fix, pal rest) for storage/telemetry.
+6. Policy Channels (A–D × 1–8)
+Enumerating gates on the board yields exactly 8 legal insertion sites at from a pal rest:
+• four orbits under lane-preserving D8 (two corner orbits, two center-block orbits), each split by phase → 8 channels.
+• We label them A1, A2 (corner–main), B3, B4 (corner–anti), C5, C6 (center–main), D7, D8 (center–anti).
+These channels are not just names—they govern moves in lift pipelines.
+7. Alena Operators (discrete moves)
+Let a state be with object , chamber context , parity/mirror signature , and midpoint stack .
+• (rotate‑to‑nearest‑kissing): move within a Coxeter/Coxeter-plane step minimizing holding fixed.
+• (parity-base duplication): clone a base face under , re-embed with mirror parity, enforce pal alignment.
+• (midpoint expansion): split about pal midpoint; push walls; diagonal lanes reserved; update .
+Invariant: Each operator is non‑increasing in . This gives a Lyapunov-like guarantee of progress.
+8. MORSR (Middle‑Out Ripple Shape Reader)
+A measurement protocol, not a heuristic:
+• Pulse from the center, record lane-wise handshake (which shapes/constraints each node claims).
+• Expand to cardinal directions, reserve diagonals.
+• Fire outside‑in to meet the middle contracts.
+• Saturation at eight lanes marks chamber completion.
+Outputs are structured as a handshake contract (JSON), usable across domains.
+9. Projection Overlays (E₈ / Leech)
+Use overlays after gate counting to:
+• color quadrants (hex codes/gradients),
+• attach per-node metadata,
+• trace policy-channel paths,
+• snapshot Leech-like fingerprints for provenance.
+Overlays are telemetry only.
+Part II — Algorithms and Pipelines
+A. Gate Enumeration on the 4×4 Torus ()
+Inputs: pal seed on 4×4 torus, parity lanes; lane-preserving D8; wrap-closure; local pal constraints; = pal defects.
+Procedure:
+• For each cell among 16 candidates, propose inserting the new symbol (e.g., “5”).
+• Apply mirrored repairs: vertical, horizontal, and one diagonal to keep row/col pal constraints.
+• Accept if and idempotent.
+• Partition accepted sites into equivalence under lane-preserving D8.
+• Label each accepted cell with policy channel (A–D × Type 1–8).
+Outcome: exactly 8 admissible gates: four orbits × two phases.
+Telemetry: store mapping JSON (cells, parity, mirrors used, orbit label, channel tag), and an SVG map for human traceability.
+B. Lift Pipeline ()
+• Start at pal rest (or canonical chamber rest) with the board seed.
+• CBC: enumerate legal gates and tag with policy channels.
+• Choose a channel (or explore all) to insert the new symbol; apply Alena ops with local admissibility checks.
+• Close idempotently for storage; project to overlays for telemetry.
+• Persist overlays and the gate event (append to ledger); support replay/recovery.
+C. MORSR Handshake Protocol (JSON schema sketch)
+{ "handshake_id": "...", "seed_pose": "pal_v_first", "pulses": [ {"direction": "middle_out", "steps": ["center", "cardinals", "reserve_diagonals"]}, {"direction": "outside_in", "steps": ["gates", "converge_to_center"]} ], "lanes": 8, "contracts": [ {"cell": [i,j], "accepted": true, "mirrors": ["vert","horiz","diag"], "phi_before": 0, "phi_after": 0, "policy": "C6", "orbit": "center_main"} ], "saturation": true, "overlay_refs": {"e8_quadrant": "#3498DB", "leech_slice": "L24-..."} } 
+D. Overlay Library (registry)
+• Shapes: pal seeds, gate maps, E₈ coloring, Leech-lite fingerprints.
+• IDs are stable, overlays immutable; new contexts reference overlays, they never rewrite them.
+E. Harness Controls (ablation-ready)
+• CBC toggle: count-first vs close-first.
+• Symmetry scope: lane-preserving D8 vs full dihedral vs smaller groups.
+• Repair cardinality: 1, 2, 3 (triadic) mirrored repairs.
+• Topology: on/off.
+• Overlay timing: post-count vs pre-count projection.
+Part III — Worked Examples
+Example 1 — on the Board (core demonstration)
+Pal seed (one convenient pose):
+1 2 2 1 3 4 4 3 3 4 4 3 1 2 2 1 
+Admissibility: insert “5”; allow repairs (vert+horiz+diag or vert+horiz+anti‑diag); must keep and be idempotent.
+Result: accept exactly the 8 cells: four corners and the 2×2 center block. Under lane-preserving D8, two orbits of corners (main vs anti) and two orbits of centers (main vs anti) → 4 orbits × 2 phases = 8 policy channels.
+Why triadic repairs? Single/double mirrors typically break a row/col pal; the triad preserves both row and column palindromy simultaneously—a minimal, local, symmetry‑coherent fix.
+Example 2 — Partial lift (sketch)
+• Start from board after an accepted gate (say C6 center–main phase).
+• Enumerate new gates for “6” under the same rules; record the trace and channel transitions (e.g., C6→B3, etc.).
+• Verify that CBC still preserves a separable eight‑channel structure on constrained subsets (expect some merging only if symmetries are expanded or repairs underpowered).
+Example 3 — Audio/Voice Analogy
+• Objects: syllable nuclei tokens with cyclic bands for energy/pitch (wrap topology); local admissibility = band-fit + triadic adjustment (time, pitch, energy).
+• CBC: enumerate legal placements of a new prosodic event before normalizing timing.
+• Policy channels: map to eight prosodic feature lanes; projections (MFCC/E₈ coloring) only after gate counting.
+• MORSR: middle-out pulse (syllabic center) followed by outside-in (boundary pauses); saturation when eight constraints agree.
+Example 4 — E₈/Leech overlay sanity
+• After counting gates, color gate cells by E₈ quadrant; attach Leech-lite fingerprints to each policy channel for provenance comparison across runs.
+• This improves traceability without deciding legality.
+Part IV — What CQE Can Be
+• A general compiler for symmetry‑respecting combinatorial pipelines
+• Input: configuration , minimal symmetry , local rules, .
+• Output: an execution plan (gate enumeration → policy channel graph → lift map) plus telemetry overlays.
+• A measurement layer for ML systems
+• Wrap model decisions inside CBC + MORSR to measure hidden multiplicity in attention/gating; attach overlays for human audit.
+• A robust controller for cyclic scheduling, coding, and codec design
+• Apply , triadic repairs, and policy channels to packet schedulers, error-correcting layouts, or multi-band codecs.
+• A symmetry‑aware search engine
+• Use policy channels as constrained exploration modes; avoid premature canonicalization that collapses valid branches.
+• A reproducibility harness
+• Overlay registries (immutable IDs) + policy channel logs → replays become deterministic and auditable.
+Part V — Evidence‑Backed Guesses (yet to be proven here)
+• Octadic universality at first nontrivial lift
+• Hypothesis: in cyclic constrained systems with a pal rest, eight channels arise generically when locality/topology are respected.
+• Why we think so: we saw 4 orbits → 8 phases without forcing E₈; similar 4→8 fan‑outs appear in audio/prosody sketches.
+• Triadic repair necessity
+• Hypothesis: fewer than three symmetric local repairs either (i) collapse multiplicity (mirror bias) or (ii) break monotonicity.
+• Overlay‑timing law
+• Hypothesis: projecting before gate counting consistently undercounts classes; projecting after preserves them.
+• MORSR as a universal stop rule
+• Hypothesis: middle‑out + outside‑in pulses agreeing within two cycles indicates chamber completion across domains.
+Part VI — Falsifiers & Ablation Plan
+• F1 (CBC): allow closure before counting → expect 8→7 (corner/center phase fusion). If 8 persists, our CBC claim is overstated.
+• F2 (Symmetry): expand to full dihedral + relabel → expect 8→7 or fewer. If 8 survives, lane‑preserving may be overly strict.
+• F3 (Topology): remove → expect near‑zero admissible gates or brittle cases. If many still pass, wrap isn’t critical.
+• F4 (Repairs): restrict to ≤2 mirrored repairs → expect failure to preserve pal constraints. If triadic isn’t needed, refine local rule.
+• F5 (Overlay timing): project before counting; if 8 persists, projection timing is benign.
+Each falsifier is a single‑knob change with a measurable expected outcome.
+Part VII — Axioms / Rules of Use
+• Topology First: specify boundary conditions explicitly (e.g., toroidal ).
+• CBC: enumerate local legal gates before any global canonicalization.
+• Minimal Symmetry: use the smallest faithful group (lane‑preserving D8 on the board).
+• Local‑First: local admissibility + triadic mirrors; global is validation, not selection.
+• Idempotence: accepted moves replay to the same state.
+• Policy over Labels: channels govern legal moves and must compose.
+• Projection After: overlays (E₈/Leech) are telemetry applied post‑count.
+• Persist Overlays: immutable registry; never recompute shapes that can be referenced.
+• Traceability: every gate event logs pose, repairs, , channel, overlay refs.
+Part VIII — Interfaces and Artifacts (schemas)
+1) Gate Map (board level)
+{ "seed": [[1,2,2,1],[3,4,4,3],[3,4,4,3],[1,2,2,1]], "gates": [ {"cell": [0,0], "lane_parity": 1, "orbit": [[0,0],[3,3]], "orbit_label": "corners_main", "construction": "A", "type": 1, "mirrors_used": ["vert","horiz","diag"], "phi_trace": [0,0]} ], "note": "Counted before closure; lane-preserving D8; wrap-closure enabled" } 
+2) MORSR Handshake (see Part II‑C)
+3) Overlay Record
+{ "overlay_id": "E8Q-01", "shape": "E8_quadrant_coloring_v1", "nodes": [{"id": "q1-001","color": "#F1C40F","meta": {"quadrant": 1}}], "immutable": true, "provenance": {"created_by": "cqe-harness", "date": "..."} } 
+4) Policy Channel Spec
+{"channel": "C6", "family": "centers_main", "moves": ["R","P","M"], "repairs": ["vert","horiz","diag"], "constraints": {"phi_noninc": true}} 
+Part IX — Roadmap (immediate next)
+• Ablation Grid (CBC, symmetry, repairs, topology, overlay timing) with a table of 8↔7↔0 outcomes.
+• n=5→6→7 partial lifts with channel persistence metrics (how separable the 8 remain on constrained subsets).
+• Golden MORSR on a real external object (from your bundles) with contract + SVG trace.
+• Overlay Registry Build‑out (E₈ quadrant palettes, Leech-lite fingerprints, pal seed variants).
+• Policy DSL to encode channels and compose operators programmatically.
+Appendix A — Glossary
+• CBC: Count before close. Enumerate legal gates prior to any canonicalization.
+• Lane‑preserving D8: {id, 180°, main‑diag mirror, anti‑diag mirror}; preserves parity lanes.
+• : wrap‑closure; toroidal adjacency; explicit topology operator.
+• Policy Channel: A–D × 1–8; governs legal move patterns.
+• Alena Operators: R(rotate‑to‑nearest‑kissing), P(parity‑base duplication), M(midpoint expansion).
+• Overlay: E₈/Leech visualization/metadata applied post‑count.
+Appendix B — ASCII Boards and Patterns
+Seed pose (palindrome):
+1 2 2 1 3 4 4 3 3 4 4 3 1 2 2 1 
+Admissible gate families (schematic):
+[X] . . [X] . [X] [X] . . [X] [X] . [X] . . [X] 
+Corners = boundary; centers = bulk. Each splits by main/anti-diagonal phase → 8 channels.
+Appendix C — Minimal Pseudocode (board enumeration)
+for cell in board.cells(): for repair_set in TRIAD_MIRRORS: g = seed.copy() g.place(cell, new_symbol) g.apply(repair_set) if phi(g) <= phi(seed) and is_pal_local(g) and idempotent(g): accept(cell, repair_set) classes = orbit_partition(accepted_cells, group=lane_preserving_D8) label_channels(classes, schema="A–D × 1–8") # project overlays AFTER counting 
+Appendix D — Falsifier Table (expected outcomes)
+KnobSettingExpected resultCBCclose-first7 classes (fusion)Symmetryfull dihedral + relabel≤7 classesTopologyno wrap0–few admissibleRepairs≤2 mirrorsfailure to keep palOverlay timingproject-firstclass undercount 
+End of working specification.

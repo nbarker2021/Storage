@@ -1,0 +1,61 @@
+""" Deterministic 4×4 Tile VM — Reference Implementation (v1.0)
+Single-step loop: bind → collide → expand → act. All operations are deterministic. This file pins concrete contracts for: receipts, numeric policy, expansion, dual, logging schema, and a minimal test harness. Optional E8/Construction A stubs included.
+Note: This is a reference skeleton. It runs with sane defaults and fixed seeds. """ from future import annotations from dataclasses import dataclass, asdict from typing import List, Tuple, Optional, Literal, Dict, Any import numpy as np import pandas as pd import hashlib
+-----------------------------
+0) Global constants & helpers
+-----------------------------
+A = np.array([0, 1, 2, 3], dtype=np.uint8) # Z4 alphabet LABELS = A + 1 # user-facing labels {1,2,3,4}
+Move = Literal["stay", "R", "L", "U", "D"] OpKind = Literal["concat", "repeat", "delete", "dual"]
+Fixed-point quantization step for canonical vectors
+Q_STEP = 2 ** -12
+def quantize(v: np.ndarray, step: float = Q_STEP) -> np.ndarray: """Uniform quantization to fixed grid. Returns float64 grid reps.""" return np.round(v.astype(np.float64) / step) * step
+def blake2b_keyed(data: bytes, key: bytes = b"tilevm_v1") -> bytes: return hashlib.blake2b(data, key=key, digest_size=32).digest()
+def hash_vec(v: np.ndarray, extra_fields: bytes = b"") -> str: q = quantize(v).tobytes() return blake2b_keyed(q + extra_fields).hex()
+def vec_tile(tile: np.ndarray) -> np.ndarray: """Flatten 4x4 tile over Z4 into R^16 float vector (values 0..3).""" assert tile.shape == (4, 4) return tile.astype(np.float64).reshape(-1)
+def split_halves(v16: np.ndarray) -> Tuple[np.ndarray, np.ndarray]: """Split 16-vector into two 8-vectors.""" return v16[:8].copy(), v16[8:].copy()
+def join_halves(a: np.ndarray, b: np.ndarray) -> np.ndarray: return np.concatenate([a, b], axis=0)
+-----------------------------
+1) Parameter pack (frozen per run)
+-----------------------------
+@dataclass(frozen=True) class Params: version: str = "v1.0" eps_d: float = 0.0 eps_h: float = 0.0 # Embedding: here E is identity R^16→R^16 # Canonicalizer policy: normalize to unit L2 then map to nonnegative orthant (idempotent) # Templates P: 4 coordinate axes inside R^16 (simple, deterministic placeholders) P: np.ndarray = np.eye(16, dtype=np.float64) # 16 templates at unit axes # Separators H: simple box constraints x_i >= 0, enforced via canonicalizer; keep list empty H: Optional[np.ndarray] = None # not used in this basic profile # Dual policy: tile-space dual is reversal of each 8-vector half (involutive linear map) dual_kind: Literal["tile_reverse", "content_plus2"] = "tile_reverse"
+-----------------------------
+2) State, ops, receipts, logging
+-----------------------------
+Tile = np.ndarray # 4x4 uint8 array with entries in {0,1,2,3}
+def neutral_tile() -> Tile: return np.zeros((4, 4), dtype=np.uint8)
+@dataclass class Op: kind: OpKind k: int = 0 # used only for repeat tile: Optional[Tile] = None # used only for concat id: int = 0 # opaque op identifier
+@dataclass class Receipt: run_id: str step_id: int layer: str chamber_id: int tile_from: int tile_to: int opid: int move: Move pre_hash: str post_hash: str dmin: float mmin: float tiebits: int expanded_k: int params_version: str native_match: Optional[bool] entropy_bits: float time_ns: int
+class Log: def init(self): self.rows: List[Dict[str, Any]] = []
+def append(self, r: Receipt): self.rows.append(asdict(r)) def to_df(self) -> pd.DataFrame: return pd.DataFrame(self.rows) 
+-----------------------------
+3) Canonicalization and classification
+-----------------------------
+def embed_identity(v16: np.ndarray) -> np.ndarray: return v16.astype(np.float64)
+def canonicalize(x: np.ndarray) -> np.ndarray: """Idempotent: L2 normalize then set negatives to 0 (project to nonnegative orthant).""" n = np.linalg.norm(x) if n == 0: y = np.zeros_like(x) y[0] = 1.0 # fixed anchor return y y = x / n y = np.where(y < 0, 0.0, y) # second pass ensures idempotence: already nonnegative and unit or subunit; renorm only once return y
+def classify(x: np.ndarray, params: Params) -> Tuple[bool, float, float, int]: # distance to nearest template P diffs = params.P - x[None, :] dists = np.sqrt(np.sum(diffs * diffs, axis=1)) dmin_idx = int(np.argmin(dists)) dmin = float(dists[dmin_idx]) # simple margin proxy: min coordinate value after canonicalization (>=0 by construction) mmin = float(np.min(x)) interior = (dmin > params.eps_d) and (mmin > params.eps_h) # tiebits encodes which axis won and a parity bit from hash h = int.from_bytes(blake2b_keyed(x.tobytes()), "little") tiebits = (dmin_idx & 0x3FF) ^ (h & 0x3FF) return interior, dmin, mmin, tiebits
+-----------------------------
+4) Tuple-of-3 gating (action eligibility)
+-----------------------------
+def lane_tuple_of_3(tile: Tile) -> bool: """Return True if a fixed 4-tuple lane contains exactly 3 distinct symbols of {0,1,2,3}.""" # Fixed lane rule: top row (positions (0,0..3)) lane = tile[0, :] uniq = set(int(x) for x in lane.tolist()) return len(uniq) == 3 # exactly one symbol missing
+-----------------------------
+5) VM core
+-----------------------------
+class VM: def init(self, params: Params): self.params = params self.state: List[Tile] = [neutral_tile()] self.log = Log() self._step_counter = 0
+# ---- binding def bind(self, tile: Tile) -> np.ndarray: v = vec_tile(tile) x = embed_identity(v) return canonicalize(x) # ---- expansion policy (minimal: append to the right) def expand_if_needed(self, move: Move, interior: bool) -> int: if move == "stay" and interior: return 0 # Minimal policy: allocate exactly 1 tile when needed self.state.append(neutral_tile()) return 1 # ---- duals def apply_dual(self, tile: Tile) -> Tile: if self.params.dual_kind == "tile_reverse": v = vec_tile(tile) a, b = split_halves(v) a = a[::-1] b = b[::-1] v2 = join_halves(a, b) return v2.reshape(4, 4).astype(np.uint8) % 4 else: # content_plus2 return ((tile.astype(np.uint8) + 2) % 4).astype(np.uint8) # ---- act def act(self, op: Op): if op.kind == "concat": if op.tile is None: raise ValueError("concat requires a tile") self.state.append(op.tile.copy()) elif op.kind == "repeat": k = max(0, int(op.k)) if k: self.state.extend([self.state[-1].copy() for _ in range(k)]) elif op.kind == "delete": if len(self.state) > 1: self.state.pop() else: # single-tile policy: replace with neutral self.state[-1] = neutral_tile() elif op.kind == "dual": self.state[-1] = self.apply_dual(self.state[-1]) else: raise ValueError("unknown op kind") # ---- entropy/cost proxy def entropy_bits(self, pre: np.ndarray, post: np.ndarray, choices: int = 1) -> float: dq = quantize(post - pre) nz = np.count_nonzero(dq) # crude upper bound: nz components at log2(1/step) bits each + choice bits return float(nz * np.log2(1 / Q_STEP) + (0 if choices <= 1 else np.ceil(np.log2(choices)))) # ---- one step def step(self, run_id: str, op: Op, move: Move = "stay", native_match: Optional[bool] = None, chamber_id: int = 0, layer: str = "L0", time_ns: int = 0) -> Receipt: self._step_counter += 1 pre_x = self.bind(self.state[-1]) interior, dmin, mmin, tiebits = classify(pre_x, self.params) # tuple-of-3 gate eligible = lane_tuple_of_3(self.state[-1]) effective_op = op if eligible else Op(kind="repeat", k=0, id=op.id) # no-op with receipt expanded_k = self.expand_if_needed(move, interior) pre_hash = hash_vec(pre_x) # act self.act(effective_op) post_x = self.bind(self.state[-1]) post_hash = hash_vec(post_x) ent = self.entropy_bits(pre_x, post_x, choices=1) r = Receipt( run_id=run_id, step_id=self._step_counter, layer=layer, chamber_id=chamber_id, tile_from=max(0, len(self.state) - 1 - expanded_k), tile_to=len(self.state) - 1, opid=effective_op.id, move=move, pre_hash=pre_hash, post_hash=post_hash, dmin=dmin, mmin=mmin, tiebits=tiebits, expanded_k=expanded_k, params_version=self.params.version, native_match=native_match, entropy_bits=ent, time_ns=time_ns, ) self.log.append(r) return r # ---- post-mortem def post_mortem(self) -> Dict[str, Any]: df = self.log.to_df() if df.empty: return {"steps": 0} # basic aggregates out = { "steps": int(df.shape[0]), "expands": int(df["expanded_k"].sum()), "unique_receipts": int(df[["pre_hash", "post_hash"]].nunique().sum()), "avg_entropy_bits": float(df["entropy_bits"].mean()), "min_margin": float(df["mmin"].min()), "min_distance": float(df["dmin"].min()), "native_agreement": None if df["native_match"].isna().all() else float(df["native_match"].mean()), } return out 
+-----------------------------
+6) Optional: Construction A / E8 stubs (placeholders for future pinning)
+-----------------------------
+class E8Embed: """Placeholder for Construction A embedding. Not used in default Params. Map a 16-bit vector → R^8 via fixed linear F2→Z lift. Here we return identity-8 slice. """ def init(self): # Fixed 8×16 binary map selecting first 8 positions (placeholder) self.M = np.zeros((8, 16), dtype=np.uint8) for i in range(8): self.M[i, i] = 1
+def embed(self, v16_bits: np.ndarray) -> np.ndarray: assert v16_bits.shape == (16,) # interpret as bits 0/1; compute M v mod 2, then as floats in R^8 vb = (v16_bits.astype(np.int32) & 1) % 2 y = (self.M @ vb) % 2 return y.astype(np.float64) 
+-----------------------------
+7) Minimal tests (sanity checks)
+-----------------------------
+def _test_idempotent_C(): rng = np.random.default_rng(0) for _ in range(100): x = rng.normal(size=16) y = canonicalize(x) z = canonicalize(y) assert np.allclose(y, z), "C is not idempotent"
+def _test_dual_involution(vm: VM): t0 = vm.state[-1].copy() vm.act(Op(kind="dual")) vm.act(Op(kind="dual")) assert np.array_equal(vm.state[-1], t0), "dual is not an involution"
+def _test_repeat0_noop(vm: VM): pre = vm.state[-1].copy() vm.act(Op(kind="repeat", k=0)) assert np.array_equal(vm.state[-1], pre), "repeat(0) must be no-op"
+def run_sanity_suite(): _test_idempotent_C() vm = VM(Params()) _test_dual_involution(vm) _test_repeat0_noop(vm) return "ok"
+-----------------------------
+8) Example usage
+-----------------------------
+if name == "main": vm = VM(Params()) run_id = "demo01"
+# seed tile with a simple pattern t = neutral_tile() t[0] = np.array([0, 1, 2, 3], dtype=np.uint8) vm.state[-1] = t r1 = vm.step(run_id, Op(kind="dual", id=1), move="stay", native_match=True) r2 = vm.step(run_id, Op(kind="repeat", k=2, id=2), move="R", native_match=True) r3 = vm.step(run_id, Op(kind="delete", id=3), move="stay", native_match=True) print("post-mortem:", vm.post_mortem()) print("rows:") print(vm.log.to_df().head())

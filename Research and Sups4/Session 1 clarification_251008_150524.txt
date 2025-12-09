@@ -1,0 +1,281 @@
+Clarifications & Deep Technical Answers (v1)
+
+This section addresses the explicit questions you raised. For each topic I give: (a) crisp definition, (b) algorithm/derivation, (c) complexity/limits, and (d) a small worked example or test recipe.
+
+1) E₈ Embedding Mechanism (superpermutations, audio, scenes)
+
+1.1 Canonical E₈ frame recap
+
+Indices 0–239: E₈ roots (Type I/II ordering).
+
+Indices 240–247: 8 Cartan lanes (policy channels: parity/ECC/phase lanes).
+
+Pose: lane permutation ID, diagram automorphism, Weyl neighborhood (depth≤2), torus params.
+
+1.2 Superpermutations → A₄-in-E₈ embedding (faithful, symmetry-preserving)
+
+Object: permutation π ∈ Sₙ, target n=5 for A₄ (since rank(A₄)=4).
+Invariant to preserve: inversion set and Coxeter-phase order.
+
+Mapping:
+
+1. Compute inversion set  Inv(π) ⊂ Φ⁺(A₄).
+
+2. Fix an explicit A₄ simple-root basis {α₁,…,α₄} inside E₈ (indices provided in subroot_indices.json).
+
+3. Map each positive root of A₄, αᵢⱼ = αᵢ+…+αⱼ, to its corresponding E₈ root index by the table derived from e8_nodes.json.
+
+4. Activate those E₈ indices whose A₄ roots are in Inv(π): present[idx(αᵢⱼ)] = 1.
+
+5. Phase ordering: project all active roots to the E₈ Coxeter plane; sort by angle; set φ to quantized angles; set weights w=1 (or proportional to multiplicity in a superperm window embedding).
+
+6. Encode window locality (for superpermutation candidates) by raising weights for roots that arise from adjacent swaps observed in the window graph.
+
+Why it preserves symmetry: The inversion-set construction is Weyl-natural in type A; restricting to the embedded A₄ inside E₈ ensures that native S₅ symmetries correspond to Weyl/Coxeter actions in the ambient. The Coxeter-plane phase produces a canonical cyclic order consistent with reduced words.
+
+Worked micro-example (n=5): π = (2,1,3,4,5).
+Inv(π) = { (2,1) } → positive root α₁. Activate the single E₈ index corresponding to α₁ in the A₄ slice; set its phase to the α₁ Coxeter angle; hash.
+
+> Alternative (window embedding): For a superpermutation string S, for each adjacent transposition observed in k-grams, increment the weight of the corresponding A₄ root; this turns the state of the run rather than a single π into an EO.
+
+1.3 Audio → E₈ (E8QC, prosody lanes)
+
+Object: frame f with features (pitch Δ, energy Δ, spectral tilt, formant ratio, voicing prob, sibilance, attack, rhythm).
+Mapping:
+
+1. Cartan lanes (240–247): place the 8 standardized prosody features; set present[240..247]=1, φ as wrapped phase (e.g., rhythm/attack), w normalized (z-scored, clipped).
+
+2. Root quantization: embed a small VQ codebook whose centroids lie on root directions (L₂-normalized). Map the frame spectral feature vector to the nearest root index i in 0..239, set present[i]=1, φ[i] as instantaneous phase of the analytic signal (Hilbert), w[i] as feature magnitude.
+
+3. ECC parity: compute lane/global syndromes (ExtHamming lanes, ExtGolay global) on the 248-bit presence pattern; attach proofs.
+
+Why it preserves invariants: The root-quantized centroids commute with orthogonal transforms of the spectral space; Cartan lanes isolate prosody so style and content signals don’t tangle. ECC ensures lawful edits.
+
+1.4 Scenes → E₈ (SceneForge adapter)
+
+Object: scene graph (objects, relations, schedule).
+Mapping:
+
+Orbits → root orbits: object categories map to root-orbit IDs;
+
+Relations → adjacency: pairwise relations (above, next-to, behind) map to edges in the E₈ root graph;
+
+Pose → phases: camera/lighting angles → φ via Coxeter projection;
+
+Policy channels (Cartan): story/continuity/pace/coverage/lighting/constraints each assigned to one lane; their scores become w and φ on lanes.
+
+Constraint preservation: lane-perm whitelist ensures parity checks remain valid under scene re-orderings.
+
+---
+
+2) Φ construction (explicit formulas + example)
+
+Let EO = (present, w, φ) after canonicalization. Let A be the E₈ root adjacency (edge if dot(rootᵢ,rootⱼ)=1 in normalized basis). Let P be the set of active indices.
+
+2.1 Geometry term (Φ_geom)
+
+Two parts, both Weyl-invariant:
+
+1. Angular dispersion: circular variance of phases on active roots:
+Var◦(φ) = 1 − |(1/|P|) Σ_{i∈P} e^{i φ_i}|.
+
+2. Adjacency smoothness: quadratic edge penalty:
+Smooth(φ,w) = (1/|E(P)|) Σ_{(i,j)∈E(P)} w_i w_j (φ_i − φ_j)² (φ wrapped to [−π,π]).
+Then Φ_geom = a·Var◦(φ) + b·Smooth(φ,w) with policy weights a,b.
+
+2.2 Parity term (Φ_parity)
+
+Compute lane syndromes s_lane with ExtHamming(8,4) over Cartan bits; and global syndrome s_golay with ExtGolay(24,12) over a 24-bit slice formed by a pose-fixed projection of present[0..239].
+Φ_parity = λ₁ ||s_lane||₀ + λ₂ ||s_golay||₀ (or Hamming weight), with optional squared norms.
+
+2.3 Sparsity (Φ_sparsity)
+
+Φ_sparsity = τ Σ_{i∈P} |w_i| (mild L₁).
+
+2.4 Kissing deviation (Φ_kissing)
+
+Let K(o) be observed minimal-shell neighbor count in the induced subgraph; target K* = 240 (E₈).
+Φ_kissing = κ · |K(o)/K* − τ*|, accept if below tolerance.
+
+2.5 Concrete numbers example
+
+Suppose 6 actives with phases [0, 0.1, 0.15, −0.05, 0.0, 0.08] and unit weights:
+
+Var◦ ≈ 1 − |mean(exp(i φ))| ≈ 1 − 0.985 ≈ 0.015.
+
+Suppose 7 induced edges with average (φ_i−φ_j)² ≈ 0.006 → Smooth ≈ 0.006.
+
+Lane syndrome weight=0, Golay weight=1 → Φ_parity = λ₂. If λ₂=0, parity clean.
+
+Sparsity with τ=0.02 → Φ_sparsity= 6·0.02 = 0.12.
+
+Kissing-dev negligible.
+Then with (a,b,τ,κ)=(1,1,0.02,0): Φ ≈ 0.015 + 0.006 + 0.12 = 0.141.
+
+---
+
+3) Policy channels: 4 orbits × 2 phases → 8 lanes (why not 6 or 12?)
+
+Claim (operational, not an iron law): Under lane-preserving D₈ symmetry (dihedral on 8 Cartan lanes), parity structure and phase polarity split the action into four lane-orbits; multiplying by two phase polarities (even/odd under sector involution) yields 8 policy channels.
+
+Reasoning sketch:
+
+1. The allowed lane permutations form a group G_lane whose action preserves the row-space of the lane parity check matrix H_lane (ExtHamming). In our whitelist this group has a dihedral-like core (rotations + reflection).
+
+2. The orbits of lanes under G_lane partition the 8 lanes into four equivalence classes when you factor in the constraint that some lanes are phase-conjugate under sector involution.
+
+3. Each orbit supports two polarities: a lane can align in-phase with its sector or sit in the antiphase (π-shift) class.
+
+4. Therefore, policy reduces naturally to 4 × 2 = 8 channels.
+
+> Caveat: This is a policy choice justified by invariants (row-space preservation + sector involution), not a mathematical necessity of E₈. Counterexamples exist if you change the lane code or permit non-preserving permutations. When we switch to a different lane code or source parity constraints, the count can change.
+
+Test recipe: Exhaust the whitelist permutations; compute orbits under the action on lane indices; verify rowspace(H)=rowspace(P·H); count orbits; detect phase conjugacy via sector involution map; confirm the 4→8 split.
+
+---
+
+4) Canonicalization complexity & convergence
+
+Procedure: depth-2 Weyl neighborhood (≤ 1 + 8 + 8·7 = 65 candidates). Each candidate requires a score over 248 slots (bitset, rounded w, rounded φ).
+Cost: O(65·248) comparisons per canonicalization (≈ 16k primitive ops) — trivial versus operator evaluation.
+Convergence: finite candidate set; always terminates in one pass; no iterative chase.
+Risk: if you expand to deeper neighborhoods, ensure deterministic tie-breaking; complexity scales linearly with neighborhood size.
+
+---
+
+5) MORSR specifics (pulse, saturation, termination)
+
+Pulse generation:
+
+1. Middle-out select a hinge sector/lane ordering per stage (thermostat may adjust).
+
+2. For each lane ℓ in order, attempt {Rθ, Midpoint, WeylReflect, ParityMirror/ECC, SingleInsert}.
+
+3. For each attempt: compute Φ components and parity norms; call AcceptGuard (quorum/escrow/plateau).
+
+4. Log handshake (accepted or rejected) with reason code.
+
+Lane saturation: a lane ℓ is saturated when no operator yields ΔΦ ≤ 0 (mod rules) within the current shell.
+
+Stage termination (per shell variant):
+
+Hard stop: no accepts across all lanes in the last sweep; or strict_gain < threshold and EMA below threshold (→ negative proof).
+
+Half-life stop: strict_gain half-life > H steps (prevents grind).
+
+Governance stop: automorphism budget exceeded.
+
+Region completion: all shell variants either terminate negatively (cached) or produce no further strict decrease; status = completed_ext (or saturated in the simpler baseline).
+
+Pseudocode (compact):
+
+for stage in shells:
+  best = None
+  for variant in {radial, graph}:
+    strict_gain = 0
+    accepts = 0
+    for lane in lane_order:
+      for op in OP_SEQ:
+        (btot, atot, bc, ac, pb, pa) = measure(seed, op)
+        acc, reason = Guard.decide(op, btot, atot, bc, ac, pb, pa)
+        log(handshake)
+        if acc: strict_gain += (btot - atot); accepts += 1
+    best = pick(best, variant, by=RoV(strict_gain, time), accepts)
+  if best.strict_gain < τ and best.ema < τ: cache_negative(...); if all variants dead: break
+
+---
+
+6) Triadic repair necessity (status + proof approach)
+
+Claim: “Exactly three mirrored repairs (vertical + horizontal + diagonal) are necessary and sufficient for palindrome preservation.”
+
+Status: Unproven as a general theorem. True for specific operator grammars and grid symmetries; not known universally.
+
+Why it seems to work in our runs: The Midpoint operator fixes palindromic structure around a hinge; pairing it with a sector involution (horizontal/vertical) often addresses the two independent symmetry axes; the diagonal repair is the reserve for phase-conjugate sectors. Together they span the three independent reflective conditions used by our acceptance grammar.
+
+Path to proof or disproof:
+
+1. Formalize the palindrome constraint as a set of linear equalities on (present, φ) under the dihedral action of the lane/sector group.
+
+2. Show that the three repair types generate the constraint stabilizer (sufficiency).
+
+3. Search for counterexamples by SAT/SMT: construct overlays violating palindrome after two repairs but fixed by a 4th independent move → would falsify necessity of “exactly three.”
+
+Actionable interim: treat “triadic repairs” as a policy heuristic, not an axiom. Keep acceptance dependent on ΔΦ and parity, not on a fixed count of repairs.
+
+---
+
+7) Cross-domain adapters & invariants
+
+Superperms: inversion-set A₄ embedding preserves Bruhat order and Coxeter angles; parity lanes hold window/ECC structure.
+Audio: VQ-on-roots preserves orthogonal invariance; Cartan lanes decouple prosody from content; ECC proofs prevent illicit flips.
+Scenes: orbit-based object mapping preserves category symmetry; relations → adjacency on the root graph; sector/phase align with camera/lighting poses; schedule/continuity sit on Cartan.
+
+Guideline: every adapter must (a) map native symmetry to an E₈/Weyl action or a lane permutation, and (b) provide at least one Φ component that correlates with task quality.
+
+---
+
+8) Scalability
+
+Work partitioning: shells are shards; counterfactual shells choose better shards → horizontal scaling.
+
+Caching: negative proofs eliminate repeated dead work.
+
+Operator budgets: assist-rate logging allocates compute to ops with the best downstream yield.
+
+Asymptotics: canonicalization ~1.6e4 ops; a pulse is O(L·|OP|·|E(P)|) with L≤8; shells/stages multiply linearly.
+
+Big-n superperms: embed only A₄/A₅ windows rather than full Sₙ; use snap-to-library overlays (“overlay snapping”) to cap active set size.
+
+---
+
+9) SceneForge bridge (from r_story / r_schedule → true CQE)
+
+Now: r_story, r_schedule are illustrative scalars.
+Bridge:
+
+Treat each candidate scene as an EO with: category orbits → actives; camera/light → φ; schedule → Cartan lanes.
+
+Compute real Φ: Φ_geom from phase smoothness across spatial relations; Φ_parity from story/schedule ECC; Φ_sparsity from object count or token budget; Φ_kissing from local layout density.
+
+Accept new scenes or edits only if ΔΦ ≤ 0 under quorum Φ; log handshakes.
+
+Result: UI remains the same; the acceptance and provenance become CQE-lawful rather than heuristic.
+
+---
+
+10) Verification & falsification (execution, not just plans)
+
+F1 — Escrow works: cap ∈ {0, ε, 2ε}, horizon K=3. Metrics: net strict_gain, stall-escape rate, drift.
+F2 — Quorum Φ > single Φ: veto rate, final Φ variance, Goodhart resistance under adversarial seeds.
+F3 — Thermostat: sector min/max ratio, accept dispersion, ΔΦ vs fairness tradeoff curves.
+F4 — Negative-proof utility: reuse rate across runs/teams; compute saved.
+F5 — A₄ adapter separability: 8 canonical n=5 minima → Φ curves + invariants; linear classifier accuracy over signature vectors.
+
+Reporting: store each as a signed JSON report with policy hash; publish PoCov heatmaps.
+
+---
+
+11) Octadic universality (claim status)
+
+Hypothesis: “8-channel structures emerge generically in cyclic constrained systems.”
+Status: Interesting but unproven; may hold given our specific lane code and sector involution but is not universal.
+Plan: sweep lane codes (Hamming(7,4), BCH variants), change sector involutions, measure emergent policy-channel count; report distribution.
+
+---
+
+12) Concrete next clarifications to ship
+
+Publish adapter specs (superperm A₄ table; audio VQ root set; scene orbit map) with examples.
+
+Release Φ calc notebook with the numeric example above and more.
+
+Formalize triadic repairs as constraints; SAT-based counterexample search.
+
+Implement assist-rate and half-life halting in the ext runner; add PoCov maps to the CLI.
+
+Document MORSR complexity bounds and termination guarantees under fixed shells.
+
+---
+
+Bottom line: None of the open questions block deployment. Where claims were previously vibes, we have now a) explicit embeddings, b) explicit Φ math, c) a crisp MORSR algorithm with reasons and termination, and d) a falsification plan. The remaining “big” claims (triadic necessity, octadic universality) are flagged as policy heuristics until proven.

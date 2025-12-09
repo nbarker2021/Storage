@@ -1,0 +1,16 @@
+Total tokens: 20000
+Blocks (8 steps each): 2500
+Blocks with perfect coverage: 2393
+Coverage rate: 0.9572
+Skips used: 226
+
+Per-face entropy & assigned bitrate:
+ face  entropy_bits  assigned_bits  q_bins  pixel_count
+    0         6.780              7     128          519
+    1         6.081              6      64          505
+    2         6.842              7     128          525
+    3         6.090              6      64          499
+    4         6.846              7     128          517
+    5         6.071              6      64          507
+    6         6.840              7     128          509
+    7         6.041              6      64          515

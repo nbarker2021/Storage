@@ -1,0 +1,86 @@
+Superpermutation & Geometric Embedding R&D — Running Session Log
+This document records the entire exploratory R&D session, capturing hypotheses, theories, methods, test harnesses, and findings. Nothing is omitted: both successful results and partial/failed attempts are included, to preserve full reasoning.
+1. Starting Theories and Frameworks
+Core Hypotheses
+• Orch-OR extension: Microtubules function as braided quantum shadow chambers, meant to expire after processing. They obey embedding/bridging rules in lattice space.
+• Half-step dimensional embedding: Odd values force half-step dimensional bridges, even values force full-step dimensional upgrades.
+• Superpermutation solving: Best representation requires forced insertions ("bridge points"). These correspond to dimensional jumps and geometric bracings.
+• Geometry-first reasoning: Natural geometry compresses rules. Best solutions = lowest action paths in embedding space.
+• Quartet & Octad cycles: Base 1→2→3→4 cycle (line, triad, square, cube) governs all higher solves. From onward, 8-seed octads emerge; each block of 4 n-levels adds a power: 1²..4², then 1³..4³, etc.
+• Entropy correction: 2nd Law of Thermodynamics reformulated as: Least Action + Choice = Energy expanded + Entropy cost/displacement. Failures of mainline 2nd Law may be explained by dimensional half-steps.
+2. Early Ladder Analysis (n=0→8)
+• n=0: Void / rest state.
+• n=1: Dot (primitive glyph).
+• n=2: Line (bridged dots).
+• n=3: Triad (triangular stability, decision point).
+• n=4: Square/cube modular planning, swap-in/out governance.
+• n=5: First forced paired move, required bridges.
+• n=6: Symmetry gate, external evaluation.
+• n=7: Exhaustion of local space, preparation for 4D upgrade.
+• n=8: Hyper-embedding, best geometry = best answer.
+This “ladder” repeats at higher levels with squared/raised beats.
+3. Geometry Use & Reasoning
+• Why geometry:
+• Invariants (chirality, helicity, hull area, crossings) resist noise.
+• Compression principle (MDL): shorter shapes = better understanding.
+• Symmetry exposes rules.
+• Variational guidance: geodesics = least action.
+• How applied:
+• Build point-cloud polylines from permutations.
+• Extract metrics (chirality, helicity, hull ratio, etc.).
+• Partition into mod-8 orbits; detect anti-chirality, braiding.
+• Use tensors (Alena-style) to score flows and divergences.
+• Geometry-first action scoring guides seam/bridge choice.
+4. Test Harness Development
+FBD (Forced-Bridge Detector)
+• Definition: A bridge is forced when overlap < AND cluster changes.
+• Method: PCA embeddings → geometry bundles → orbit-mix simulation.
+• Output: Step logs with phase (mod 8), cluster IDs, forced flag.
+Symmetry / Hybrid Controllers
+• Always-on: uniform support at all bridges.
+• Quartet-targeted: only support the strong beat group (G0..G3).
+• Hybrid: weak baseline + strong targeted (beats always-on in tests).
+Beat-Power Scheduler
+• .
+• .
+• At level , apply support at phases = group , scaling strength by .
+• Example: , so strong phases = {1,5}.
+5. Test Findings
+n=5
+• Detected ~1 forced bridge, aligned with prediction.
+• Bridges clustered in 1–2 octad bins.
+• Supports the half-step insertion thesis.
+n=6
+• Forced bridges ~2–4 per run (prediction held).
+• Always-on vs targeted vs hybrid: 
+• Always-on beat targeted-only.
+• Hybrid beat-power outperformed always-on.
+• Strong phases (group {1,5}) did capture bridge density, but not exclusively—so hybrid baseline necessary.
+n=7 (preliminary runs)
+• Forced bridge counts increased (~4–6).
+• More branching half-steps evident.
+• Supports odd- = branching rule.
+General trends
+• Bridge counts grow with n, structured not random.
+• Quartet beat groups (1–4) remain organizing framework.
+• Octad-seed view: solves = 8 minimal layouts; higher n builds braid over these seeds.
+6. Conceptual Advances
+• Bridges = Forced Dimension Steps: insertion points correspond to dimensional upgrades.
+• Quartet Beat + Exponent Rule: 
+• 1²..4²
+• 1³..4³
+• 1⁴..4⁴
+• Hybrid Support Needed: targeted support alone misses, but hybrid wins.
+• Entropy Restated: 2nd Law is incomplete without choice/action terms.
+• Geometry → Action: Best embedding is geodesic; forced bridges show up as geometric stress points.
+7. Next Steps
+• Run beat-power hybrid at with DFSS features for sharper localization.
+• Map bridge distributions vs predicted (1, ~2–4, ~4–6, ~12–15).
+• Integrate octad seeds explicitly into controller.
+• Begin drafting cumulative R&D record (this document) with full trace of theories → tests → results.
+8. Meta: R&D Process Notes
+• All hypotheses, even speculative, recorded without omission.
+• Failures included (e.g., pure targeted support losing to always-on).
+• Internal journal of “best design options” maintained separately.
+• Updates & edits expected: document is living and will grow as tests advance.
+Status: Running log created. Ready for expansion with each new test and refinement.

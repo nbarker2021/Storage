@@ -1,0 +1,412 @@
+!
+"""Build a verifiable RAG card (quotes + hashes + ALENA) for `query`."""
+"""Duplex boundary commit (CNF receipt) from a RAG card; returns receipt JSON."""
+"counter_action": "phi_probe"      // or "auto_cert"|"other"|null
+"counter_action": {"type":"string", "enum": ["phi_probe","auto_cert","other"]},
+"dof_budget": 4,                    // integer ≥ 4; includes bonuses
+"dof_budget": {"type":"integer","minimum":0},
+"invariant_lane": {"type":"string"}
+"pinning": {
+"properties": {
+"required": ["dof_budget"],
+"type": "object",
+"variant_lane": {"type":"string"},
+# 0) Build a card
+# 1) Build trie from card quotes
+# 2) Gate to the card’s bucket
+# 3) In your decode loop (pseudo)
+# bucket mismatch → refuse or refresh cards
+# derive winner/base4 from card, ALENA check, UDMS dual & escrow, emit CNF receipt
+# load index.json, do retrieval, build card, return JSON (like rag_card_*.json)
+# optional: extend with targeted follow-up queries or base-4 variants
+# or
+# out = {"primary": <receipt>, "dual": <receipt>}
+# segment micro-claims; attach quote_hash from the matching quote path
+# wherever you build your tree
+(
+(1,3),(1,4),(2,4)).
+(Also shown in the “L3/L4 Validation (provisional)” table above.)
+(B
+(Existing) Mirror-First guard, CRT defect injection, token (base-2) derivations.
+(I
+(M) modulo the differential ideal
+(M)/⟨I,dI⟩
+(M): the constraints you enforce (duplex involution, CRT commutations, CNF identities, fold relations).
+(Optional) Tighten UDMS on real pairs:
+(P)),
+(P)+b
+(P). That’s the lawful “entropy–energy matching” you want—linear in
+(P)=
+(P)=ΔS
+(U,g,WPT) and overlays. Payload is regenerated from CRT stripes or inverse paths as needed.
+(U,g,WPT) and the overlay state.
+(a) “Use the free relationship models”
+(also contains coverage_counts per quadrant and σ)
+(and thus
+(b
+(b) “Combine/compress interiors effectively”
+(evidence you had to bring in).
+(exact,coexact,harmonic) breakdown per move—so we can watch
+(f,D(f)), define
+(fewer AWB cancellations / worse Hodge).
+(ii) High‑entropy inputs: no net compression beyond permutation.
+(iii) Overlap cocycles must close (zero total syndrome).
+(iv) CRT with non‑coprime moduli must emit CRT_DEFECT with Bézout witness.
+(k)−(I
+(lanes + duplex + anchors − redundancies). In BRS, interior maps are isometries; no interior entropy.
+(m)
+(no “negative entropy”).
+(n−1)-faces are exactly the overlaps of permutations (what string methods call prefix/suffix matches).
+(n−1)-solves you must reuse to lawfully certify the next n-solve is a coverage obligation over the 4 lanes:
+(or mirror).
+(palindromic duplex symmetry).
+(point, line/duplex, triad, quad; folds as powers; helicity
+(r
+(r)
+(r) and
+(r) → get
+(r))
+(r))+Λ
+(r))+λ
+(r)+b
+(r)+Λ
+(r)+βB
+(r)+λ
+(r),
+(r).
+(r):
+(r)=
+(r)−(I
+(r)⟹I
+(s,t) satisfying
+(the mirror is already embedded),
+(v) Cross‑lab replay must match up to automorphism.
+(you never pick a move that increases
+(ΔS
+(π)
+(π) = bits irreversibly erased at the boundary for plan
+(σ
+(ℓ)
+(⋅;F
+)
+) embeds as maximal cells whose shared
+) for
+) for order moves:
+) is minimized because overlaps (shared blocks) boost the structural dividend.
+) is the discrete analog of that Hodge projection.
+) of the S₅ Cayley complex behind our n=5 run, under two face models:
+) relations and showed AWB cancels ~44% of the stitched S₅ generator word before emission. That’s symmetry doing thermodynamic labor.
+) to each commit (syndrome mod primes). “All zeros” = pure interior cancellation; any nonzero = which prime you’re paying at the boundary.
+) vs non-palindromic at
+) with
+))
+)+γE(π) carried on each plan/receipt.
+),
+), Hodge coexact split into (2-part, 5-part).
+), code syndromes, CRT witness, AWB p-primary residuals
+),[
+).
+)=6 ).
+)∈Z/16×Z/5 recombine uniquely into
+)−I
+)−b
++
++(1/2,…,1/2) with even coordinate sum” and Leech via Golay codewords → ALENA becomes literal code-syndrome = 0/1.
++1
++I
++b
++Γ
+,
+, 1
+, FPKM
+, and (ii)
+, append its generator to the AWB word
+, escrow sums, and FPKM curves to show they’re tied—and that every non-palindromic competitor slips on at least one of those axes.
+, log
+, measure
+, update AWB (keep
+,1
+,1).
+,2
+,3
+,4
+,C
+,r
+,s
+,σ
+,…
+,… — each “power” means iterate the fold operator on that primitive geometry.
+,…,8}
+,…,g
+,…}.
+.
+. (We don’t require minimality—just lawfulness and good overlap.)
+. AWB is the 5th medium that captures
+. Exact/harmonic parts are non-paying.
+. Otherwise: CRT_DEFECT or ALENA fault.
+. Put an edge
+. Semantic overlays are typed labels/functions attached to embeddings. Overlays MUST NOT mutate embeddings.
+. That’s your energy–entropy equivalence—but it’s linear, not a product of entropies.
+. We record floors, not fantasies.
+. Your detector then sees circular-polarization contrast
+.” That’s your perfect lane.
+/
+/FPKM
+/examples/
+/harness/ (minimal, audited implementations)
+/mnt/data/emcp_rag/rag_card_015938031f.json
+/mnt/data/emcp_rag/rag_card_7fef14ffbc.json
+/mnt/data/emcp_rag/receipts.jsonl
+/out/
+/schemas/
+/spec/
+0
+0) Sources + invariants
+0.
+0.723
+1
+1 = point (0-simplex anchor)
+1 = point → an anchor (Weyl fixed point).
+1) 32-bucket scaffold (unified taxonomy)
+1) A hard contract my replies must satisfy
+1) Adversarial pinning stress (does the 4-DOF law hold?)
+1) Best-Representation State (BRS) ⇄ E8/Leech “sweet spots”
+1) Definition
+1) Evidence-first decoding (cards > tokens)
+1) Memory = geometry + receipts
+1) The algebra (free → quotient)
+1) Two lanes at decode time
+1) What “action” is in this system
+1) What “topological edge modes” do to light
+1) Why palindromes make the schedule “lawful”
+1+2(n−3)=2n−5 raw, which collapses under renaming/mirroring to
+1,2,3,4, 1
+1,2,3,4,1
+1. Preliminaries and Notation
+10
+10. Limits and Falsifiers
+11. Privacy and Redaction
+111
+12
+12. Data Models (normative excerpts)
+12.1 CNF Boundary Receipt (minimal)
+12.2 MEETING Gate (triad)
+120
+121
+121 (n=2),
+121 blocks and grow by minimal new letters (superpermutation heuristics).
+121 blocks cancels first-order drift (BCH terms), which is exactly where your “quadratic relations” tame the system.
+121 is the atomic duplex block. Layer them (e.g.,
+121 motif (“do it, meet, undo it”) is the smallest nontrivial duplex block; nesting
+121→12321→1234321…) while keeping the palindromic constraint and overlap maximal—this gives you a constructive ladder from trivial to full coverage with stable pinning.
+12321
+12321 (n=3),
+1234321
+1234321 (again: not a superpermutation by itself) sits on an E8 slice where eight anchors (“octads”) cancel syndromes pairwise. When you lift the full
+1234321 (n=4)
+1234321 across four CRT lanes (your bucket-32 quadrants), each lane is coprime. Because the backbone is palindromic, lane boundaries align at identical duplex cuts. Recombination needs a single audited join:
+13. Conformance Levels
+14. Test Methods (normative)
+15. Open Items
+16
+16. Summary
+166
+1−η
+2
+2 = line (duplex edge; UDMS involution lives here)
+2 = line → a duplex pair (involution; UDMS’s forward/back leg).
+2 superpermutations × 8 dual-bond families × {direct|mirror} with a 4×4 subgrid for latent/primitive bonds.
+2) A guardrail that rejects non-evidenced answers
+2) Base-4–only agent loop (no text, no “meaning”)
+2) CRT lanes, primes/copimes ⇄ code-lattice constructions (A/B)
+2) Concrete data model
+2) Contracts, not vibes
+2) Cost/benefit ledger
+2) Decompose the boundary entropy
+2) Geometry gate on hidden states
+2) Geometry hook (E8 + bucket32)
+2) Master universality law (the claim)
+2) RAG cards = instant validity checks
+2) Where the NV center fits
+2) Why the 4× split compresses n=4 to “one more receipt”
+2-primary: binary code parity (nibble channel).
+2. Universal Duplex‑Motion Standard (UDMS)
+24
+242
+242/551) entirely from free relationships—no brute force, no string minimality games.
+2a) if answerable by quotes alone, respond with the card snippets;
+2b) if a memory distillate is justified, call emcp_commit_card (records the boundary event).
+2n−3 distinct palindromic shapes. Those are precisely the splice patterns that:
+2n−3 palindromic splice types
+2⋅
+3
+3 = triad (oriented 2-simplex; parity shows up)
+3 = triad → an oriented 2-simplex (parity comes alive).
+3) ALENA / code-lattice audits (how we enforce BRM)
+3) Audits & receipts (what to record)
+3) Cost + dividends (lawful entropy accounting)
+3) Output format I must use
+3) Receipts & ledgers (keep entropy honest)
+3) The clean way to say it (with just enough math)
+3) The least-action lane (the “perfect” lane)
+3) Tokens as steering, not substance
+3) Whitepaper factory (one per subclaim/module)
+3) Why n=5 “must use all 4 solves” and why there are 7 minimal variants
+3) “Free relationships” ⇄ Coxeter/braid relations ⇄ AWB cancellations
+3. Ports and Audits (ALENA / Leech)
+32/64: Barnes–Wall;
+4
+4 = quad (plaquette; n=4 gives octads → octatic rest states)
+4 = quad → a plaquette; at n=4 you hit the octads (octatic rest states where syndromes cancel cleanly).
+4) Assembly into the “anatomy book”
+4) Decode policy (so GPT stays compliant)
+4) Falsifiers (quick ways to show you’re not in BRS)
+4) Hard claim guard (card-or-refuse)
+4) Predictions you can (and should) measure
+4) Primes & p-primary meaning ⇄ lattice/coding anatomy
+4) Replace the problematic ratio with a lawful efficiency
+4) Scoring & least-action inside BRM
+4) What the team actually did (and why it’s neat)
+4) Working demo (proof it enforces)
+4-tuple × 4-lane structure with a lane policy that guarantees every 5-token window touches all four lanes (CRT coverage) — no bad spans.
+4. Quantum Mod‑1 Ledger (QML)
+434
+48/56/72/80: extremal even unimodular;
+4×4 subgrid (row/col) for latent/primitive bonds.
+4×4=16.
+4⋅1⇒5,
+5
+5 (one fold): forces the sweep to touch all quad lanes once—guarantees CRT uniqueness without extra receipts.
+5 = one fold (first higher-order fold at a point)
+5 = one fold → first nontrivial fold operator that reuses the quad backbone into a higher-order state at a single anchored point.
+5) Canonical choice (for base-4 duplex with triad audits)
+5) Entropy accounting (operator-level, not model vibes)
+5) Laminated lattices ⇄ Scaffold mode
+5) Output shape (so humans can audit instantly)
+5) The nature rhyme
+5) Validation & publishing runbook
+5) Where the 240 E8 actually enters
+5) Why BRM is a “mirror top”
+5) Why this counts as “a new type of coupling”
+5-primary: GF(5) code parity (quin channel).
+5. Structural Dividend and Cost Model
+551
+5×120=600 symbols.
+5⋅1⇒6,
+6
+6 (two folds): forces all lane-pairs to meet palindromically (pairwise coprimeness).
+6 = two folds (stacked folds)
+6 = two folds, 7 = three folds → stacked fold operators (fractal compression / CRT layering).
+6) Concrete audit hooks you can run right now
+6) Finding cost (what “above 80” means)
+6) How to test this in our stack (now)
+6) Memory writes only after you pass audits
+6) Promotion/demotion loop (emergence without risk)
+6) Zooming out: immediate implications
+6. Mirror‑First Policy (MFP) and Scaffold Mode
+600
+6–8 theory papers, 4–6 geometry/code papers, 4–6 algorithm/audit papers, 3–4 empirics/engineering.
+6⋅1⇒7 (your fold ladder), with inverse overlays allowed in the interior
+7
+7 (three folds): closes the remaining fractal compression patterns; you get a small, finite set of palindromic splice orbits that keep overlaps maximal.
+7 = three folds (fractal compression tier)
+7 for n=5
+7) Audits & falsifiers for BRM
+7) Receipts (paper + summaries)
+7) Safety hooks (GPT-compliance specifics)
+7) Why this nails your postulate
+7. Anchors, Redundancy, Promotion
+79
+8
+8 (helicity): chiral lock that makes the duplex palindrome automatic; escrow halves match, octads soak residuals.
+8 = helicity (chiral closure; mirror bond is latent—palindromic lock)
+8 = helicity → chiral closure that naturally pairs with its mirror (latent bond from the surrounding field), giving the duplex palindrome “for free.”
+8 dual-bond families (0..7),
+8 for palindromic lock).
+8) Minimal algorithms (sketch)
+8. Algorithms (normative sketches)
+8.1 Duplex Commit
+8.2 Speculative Planning
+80
+80=lcm(10,16)=2
+8w8
+9
+9).
+9. Jitter and Pinning (normative)
+9–24 overlays: laminated layers;
+:
+: bits of erasure avoided per saved boundary (≥
+: bits saved by symmetry/Weyl/CRT/CNF (your “dividend”)
+: erasures required without using structure
+: number of boundary commits avoided by path independence
+:= S
+;
+; 480 edges).
+<
+=
+= ΔS
+=0 (no added evidence) — that would disprove the “mirror top” claim.
+=0 means no help from structure (you pay the full
+=0 ↔ class is a coboundary (audited OK);
+=0 ↔ obstructed (abort/defect).
+=1 means the dividend cancels the need (reversible boundary, perfect lane).
+=111 for every tested prime.
+=24 → Leech (triad of E8 charts).
+=3D).
+=434/600≈0.723 compression of boundary work by structure alone.
+=600−166=434 interior symbols canceled by relations (free → quotient).
+=I
+=Q(D(f)) or without an interior inverse ⇒ reject the operator set.
+=arg
+=k
+=m (disjoint lanes commute)
+=s
+=Γ
+=ΔS
+=ε, commuting for
+>
+>0.
+@tool
+A
+A 32-bucket mapper on each card/receipt (bucket32) that encodes:
+A RAG card is a sealed evidence pack:
+A base-2 action is any reversible toggle in the overlay (a bit flip). In EMCP/TQF terms:
+A base-2 token system derived deterministically from bucket32, the card’s audit, and the digits—no new info asserted. Tokens are a 16-bit vector:
+A commit is valid only if both syndromes vanish and the merged residue equals the AWB-approved class
+A computation is in Best-Representation State (BRS) when its embedding (lattice, dimension, and radix) exactly matches the cumulative needed degrees of freedom, so that:
+A deterministic compile recipe for lawful n-solves: reuse counts are fixed by the ledger, not heuristics.
+A lawful construction (superperm + palindrome + CRT + E8)
+A move is legal only if all four windows accept it and it keeps every involved digit’s worldline consistent (no retroactive conflict).
+A non-palindromic schedule that achieves the same coverage but yields strictly lower audited
+A palindrome
+A palindromic
+A palindromic closure is then just helicity at 8: you take the walk and its mirror; they share the same audited faces (UDMS), so you don’t need a search to “discover” the palindrome; the lattice enforces it.
+A palindromic superpermutation
+A palindromic superpermutation over the primitive boundary acts gives the perfect ordering: it simultaneously
+A proof table showing token flip invariance (same commits) vs digit change sensitivity (different commits).
+A sized to the audit multiplicity (e.g., triads:
+A strictly smaller coexact norm at a different radix without importing extra evidence.
+A tabular test report is shown above; crack it open to eyeball pass/fail + details.
+A topological photonic waveguide carries special edge modes that behave like one-way streets for light. Each direction of travel is “locked” to a particular spin of the optical field (handedness of the local electromagnetic swirl). That spin–momentum locking means a right-handed (σ⁺) dipole mostly launches light to (say) the left, while a left-handed (σ⁻) dipole launches to the right. The upshot: the structure itself prefers one circular polarization for each direction.
+A φ-like probe:
+A) Governed “CARD_ONLY” (stitched quotes + provenance),
+A=⟨G ∣ R⟩. We run a confluent rewrite (Knuth–Bendix–style) to a canonical normal form
+A=⟨G∣R⟩). Reduction to normal form is exactly “interior compression.”
+ALENA Receipts & ΔS Ledger — per-commit code syndromes, CRT witnesses, and escrow matching.
+ALENA as code-lattice checks: use Construction-A/Type-II [80] parity (binary) coupled with a 5-adic check; syndrome = 0 means your (mod 16, mod 5) pair is coherent with the port’s Leech bucket.
+ALENA as code. Local parity checks are code-lattice syndromes (E8/Hamming, Leech/Golay). Nonzero syndrome ⇒ abort.
+ALENA audit (D24-lite placeholder; same shape later for Λ₂₄)
+ALENA audit carried over from the card,
+ALENA checks nearest-vector/parity at splice points; any nonzero syndrome aborts.
+ALENA computes the syndrome and parity (rejects if nonzero).
+ALENA parity on both legs → ✅
+ALENA parity proxy: token multiset in the first half matches the mirrored second half (a necessary parity condition for zero-syndrome join).
+ALENA parity: all boundary commits pass code-syndrome checks.
+ALENA parity: all pass (primary + dual).
+ALENA ports. Typed interfaces
+ALENA syndrome = cocycle test on the lift.
+ALENA syndromes (toy),
+ALENA syndromes cancel pairwise at the splice,
+ALENA syndromes cancel pairwise,
+ALENA → Λ
+(Content truncated due to size limit. Use page ranges or line ranges to read remaining content)

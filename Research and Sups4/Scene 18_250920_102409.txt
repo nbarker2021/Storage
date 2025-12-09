@@ -1,0 +1,100 @@
+Section 19 — Service Graph & Orchestration
+How all the promoted pieces wire into a living system that routes work, enforces strictness, and never loses the receipts.
+🔹 Warm-up Q&A
+Q: Why a service graph at all? Can’t I just call playbooks in a script?
+A: You can for demos. But once you have multiple promoted playbooks, octet viewers, sidecars, and strict ladders, you need a runtime to (i) pick the right module, (ii) fan-out across views, (iii) enforce mirror fences, (iv) roll back safely, and (v) preserve receipts. That’s what the graph does.
+Q: What’s the minimum viable graph?
+A: Five node types and one router: Playbook, Viewer, Sidecar, Ledger/Commit, Quarantine, plus a Router/Gatekeeper that understands S-levels and costs.
+Q: Where do S-levels fit (S0–S5)?
+A: The router uses S-levels to choose deployment policy, rate limits, duplicate viewers, rollback lanes, and approval thresholds. Your strict ratchet maps directly to runtime behavior.
+🔹 Mental model (one screen)
+• Nodes = capabilities with contracts: PB/* playbooks, VIEW/* viewers, SC/* sidecars, LEDGER, QUAR.
+• Edges = typed channels: data →, receipts ↺, mirror ⇆, automorphism spray ⥁.
+• Router = the foreman: selects, schedules, duplicates, fences, rolls back, and writes the commit-4 row.
+Everything the graph does is still judged by octet → mirror → Δ-lift → strict → receipts; we’ve just made it automatic and safe at scale.
+🔹 The control plane (six small brains)
+• Ingress Classifier
+• Reads the bundle (tokens + preconditions + desired S-level).
+• Resolves a meaning pack and checks that it commutes with the requested playbook(s).
+• Automorphism Sprayer
+• If the task is geometric, generates isomorphic forms (e.g., M₂₄/Monster actions).
+• Used for canarying across equivalent instances and for robustness checks.
+• Octet Scheduler
+• Assigns (up to) eight independent views per job, with your standard envelopes: 8×8 local, 4×4×4×4 surround, mirror fence.
+• Balances compute/time budgets across views; tracks coverage.
+• Strict Gatekeeper
+• Enforces S-level policy: duplicate viewers (S3+), rollback paths, approval quorum, tighter gates over time.
+• Advances or freezes the strict ratchet based on receipts.
+• Cost Governor
+• Budget-aware routing (time/energy/$). Picks the playbook that minimizes expected cost subject to S-level and parity budget.
+• Receipts Bus → Ledger
+• Pushes all per-view receipts and the job’s commit-4 (plus evidence hash) to the Master Ledger.
+• Drives dashboards and alerts.
+🔹 The node kit (what each box does)
+• PB/ (Playbook Node)*
+Deterministic Δ-lifts + preconditions + S-level claim. Emits receipts; never silently changes input tokens.
+• VIEW/ (Viewer Node)*
+Implements the 8×8 local and 4× surround microscopes + mirror checks. Can be duplicated for S3+.
+• SC/ (Sidecar Node)*
+External domain logic (unit guards, solvers, data fetch). Never decides commits; only provides evidence/tokens.
+• LEDGER (Commit Node)
+Canonical home of per-view receipts, job evidence Merkle root, commit-4, automorphism scope, and provenance.
+• QUAR (Quarantine Node)
+Sandboxed area for fence-fails; stores non-working slips; triggers auto-rollback and notifies the gatekeeper.
+🔹 S-levels → runtime policy
+S-levelViewersCanaryRollbackApprovalsTelemetryS0 discovery1×nonebest-effortnoneverboseS1 dev1×face-by-faceauto1detailedS2 pre-prod1× + shadow10% loadguaranteed1 + receipts quorummetrics+receiptsS3 prod2× (dup viewers)rollingcold path ready2dashboards + alertsS4 high-assurance2× + diverseblue/greendual cold2 + dual-signanomaly beaconsS5 safety-critical3× (triplicate)staged + human gatetri-path2 + externalfull trace 
+🔹 What it looks like (three scenes)
+Scene A — Space Optics in Production (S3)
+Cast: PB/OPTICS/GhostStrip-v3, VIEW/FFT-PSF, SC/Units+WFE, LEDGER, QUAR.
+• Ingress: A new seam hits the router with tokens {band: H, WFE: 24 nm, pupil: toroid-13, cadence: 4×2×13} and S3 target.
+• Octet: Scheduler allocates 8 views (Airy, FFT pupil, Zernike, phase retrieval, polarization swaps…).
+• Viewers: Two duplicate VIEW/FFT-PSF instances run per view (S3).
+• Playbook: PB/GhostStrip-v3 applies the minimal Δ-set on each view.
+• Mirror: Forward FFT→PSF and inverse PSF→iFFT must agree within the S3 gate.
+• Strict: Ratchet WFE gate 25→22 nm holds; receipts say pass (ΔE −38%, mirror pass 0.98).
+• Commit: LEDGER records evidence and commit-4 = b1011.
+• Roll-forward: Router marks the seam “Working”; non-working attempts (if any) logged to QUAR.
+Failure variant: If one duplicate viewer disagrees (parity budget blown), auto-rollback, seam to QUAR, strict stays put, page SRE.
+Scene B — Wet-Lab DNA Overlay (S3→S4 upgrade)
+Cast: PB/BIO/ODE-Overlay-v2, VIEW/TrajOverlay, SC/LIMS, LEDGER.
+• The lab queue sends an experiment+ODE pair.
+• VIEW/TrajOverlay overlays kinetics; playbook applies timing tweak + stem-length Δ on four of eight views.
+• Residual RMS drops to 0.086 (below S3→S4 threshold 0.09).
+• Gatekeeper proposes S4 upgrade: adds blue/green path and human sign-off; next runs replicate with dual cold rollback prepared.
+Key moment: Promotion to S4 is earned by receipts; nothing changes without the ledger row.
+Scene C — Spintronics + Plasma Co-Sim (S2)
+Cast: PB/SPIN/HelixBias-cold, PB/PLASMA/BraidLock-v1, SC/MaterialDB+Mag, VIEW/Chirality, LEDGER.
+• Router sees a token pack with temp: 290 K → selects HelixBias-cold.
+• Sidecars fetch material constants and magnet geometry.
+• Octet views include handedness swaps, bias sweeps, boundary flips; PB/PLASMA/BraidLock-v1 checks braid invariants.
+• VIEW/Chirality confirms expected sign flips (subharmonic hints show up in summary; flagged for research rather than released).
+• Receipts pass; commit-4 = b1001; strict remains S2 while subharmonic behavior is studied in QUAR shadow.
+🔹 A tiny, realistic config (blueprint)
+graph: router: target_S: S3 budget: time_ms: 180000 cost_units: 100 policy: canary: octet_face_serial rollback: cold_path nodes: - id: PB-ghoststrip type: playbook name: PB/OPTICS/GhostStrip-v3 preconditions: parity: even WFE_nm_max: 25 declares_S: S3 - id: VIEW-fftpsf-A type: viewer name: VIEW/FFT-PSF duplicate: true # S3+ - id: VIEW-fftpsf-B type: viewer name: VIEW/FFT-PSF duplicate_of: VIEW-fftpsf-A - id: SC-units type: sidecar name: SC/Units+WFE - id: LEDGER type: ledger name: LEDGER/Master - id: QUAR type: quarantine name: QUAR/Sandbox edges: - from: ingress ; to: SC-units ; kind: tokens - from: SC-units ; to: VIEW-fftpsf-A ; kind: data - from: SC-units ; to: VIEW-fftpsf-B ; kind: data - from: VIEW-fftpsf-A ; to: PB-ghoststrip ; kind: view - from: VIEW-fftpsf-B ; to: PB-ghoststrip ; kind: view - from: PB-ghoststrip ; to: VIEW-fftpsf-A ; kind: mirror - from: PB-ghoststrip ; to: VIEW-fftpsf-B ; kind: mirror - from: PB-ghoststrip ; to: LEDGER ; kind: receipts - from: VIEW-fftpsf-A ; to: LEDGER ; kind: receipts - from: VIEW-fftpsf-B ; to: LEDGER ; kind: receipts - from: router ; to: QUAR ; kind: fencefail 
+🔹 Canary, rollback, & circuit breaking (octet as your ally)
+• Face canary: Release one octet face at a time; red/blue compare receipts.
+• Mirror guard: If forward≠inverse beyond tolerance, cut traffic to that face, keep others running.
+• Circuit breaker: If three seams in a window trip the fence, open the breaker: route to previous stable PB; freeze ratchets.
+🔹 Observability dashboards (what you actually stare at)
+• Octet Heatmap: 8 faces × pass rate, median ΔE, cost—sparkline over time.
+• Mirror Meter: pass %, drift histogram, top failing contexts.
+• Strict Ladder: gates over time; which PBs advanced/held.
+• Commit-4 Rollup: distribution of codes per anchor; unusual spikes = investigate.
+• Quarantine Inbox: fresh fence-fails, their minimal explanations, and automorphism context.
+🔹 Safety & redaction in the graph
+• Semantic firewall: Sidecars can read domain data; playbooks never exfiltrate raw content—only receipts.
+• Redaction layer: If a domain is sensitive, the viewer emits hashed descriptors and metrics, not full data.
+• Policy lock: Dangerous classes route to QUAR-only; commits disabled; receipts note “content redacted for safety.”
+🔹 Runbook (when things go sideways)
+• Alarm: Mirror fence trips on face H3 (spike in residuals).
+• Auto: Router rolls back that face, keeps other 7 faces live; marks seam hot; opens ticket.
+• Human: Inspect receipts; if meaning pack drifted (units leak), fix tokens; re-run S1 shadow.
+• Recover: If shadow passes, promote back to S3 with receipts; otherwise keep quarantined and file as non-working slip.
+🔹 Exercises
+• Wire one job: Take a promoted PB from last section, build the minimal S2 graph (single viewer + ledger), run a synthetic octet, produce a commit-4.
+• Add safety: Duplicate the viewer and enable mirror fencing; simulate a failure; verify rollback and quarantine.
+• Cost-aware routing: Install two PBs that solve the same class; configure the cost governor to choose by expected ΔE/compute; show receipts.
+• S-level upgrade: Start S2 → earn S3 by adding duplicate viewers and a cold rollback; prove with receipts that tolerances tightened and pass persisted.
+🔹 Where this takes us
+You now have a repeatable runtime that treats every job as: ingest → octet → mirror → Δ-lift → strict → receipts → commit-4, with promotion and safety built-in. Geometry still governs; the graph just keeps tempo and keeps you honest.
+Next section: Data Planes & Evidence Stores — designing the artifact stores, evidence Merkle trees, and retrieval APIs that make your receipts auditable, portable, and fast to re-play—plus how to shard by automorphism class so scale never bends the truth.

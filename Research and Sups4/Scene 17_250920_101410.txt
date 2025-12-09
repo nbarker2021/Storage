@@ -1,0 +1,96 @@
+Section 18 — Global Promotion & Consolidation
+When many local wins harden into a reusable playbook, and how we promote without losing truth or flexibility.
+🔹 Warm-up Q&A
+Q: I’ve fixed the same kind of seam five times. When do we stop “re-deriving” and just reuse?
+A: When a pattern satisfies stability, coverage, and cost gates—then we promote it into a playbook (a reusable Δ-lift recipe with viewers, thresholds, and receipts).
+Q: Won’t a promoted playbook become stale or overfit to one form?
+A: We only promote patterns that commute with the octet, pass mirror on rotated/relabeled instances (Mₚ actions: M₂₄ / Monster where applicable), and survive stricter ratchets. That keeps them form-agnostic.
+Q: How do we keep provenance?
+A: Each promotion is a ledger event: a parent anchor, a hash of evidence, an automorphism scope, and a semantic boundary (inputs/outputs). Nothing replaces receipts; the playbook simply generates them deterministically.
+🔹 What “promotion” means here
+A playbook is a compact, versioned package:
+• Name & Scope: PB/OPTICS/GhostStrip-v3
+• Preconditions: viewer minima, octet balance window, coset parity = even
+• Inputs: token pack IDs (units, bands, tolerances), seam IDs
+• Δ-lifts: allowed local moves + priority order
+• Viewers: required 8×8 local + 4×4×4×4 surround + mirror fence
+• Strict: tiered gates (S0 → S3) with monotone ratchets
+• Automorphisms: which permutations leave it invariant (e.g., M₂₄ orbit count)
+• Receipts: canonical schema (metrics → 4-bit, hash format, vote bins)
+• Rollbacks: legal undo or quarantine pathway if a fence fails post-commit
+Promoted playbooks are form-invariant modules. They keep geometry honest; meaning packs plug in on the outside.
+🔹 The Promotion Pipeline (deterministic, receipt-driven)
+• Harvest
+• Mine the ledger for repeats: same Δ-lift set solving homologous syndromes across ≥ K contexts (default K = 8), with ΔE↓ and mirror pass.
+• Cluster candidates by automorphism class (labels/braid permutations).
+• Draft
+• Freeze the minimal recipe that explains all instances: Δ-set, viewer layout, strict ladder, commit-4 encoding, and failure modes.
+• Strip any domain-only quirks into a meaning pack; keep the playbook geometric.
+• Cross-octet Trial
+• Apply across all eight faces (and their mirrors) on held-out seams/belts.
+• Require: 
+• ≥ 95% mirror pass on propose,
+• Octet balance drift |b|₁ ≤ 1 per wave,
+• Coset parity preserved,
+• Cost ≤ prior median − 1σ.
+• Automorphism Shake
+• Spray by M₂₄ / Monster action where defined; re-run trials on permuted copies.
+• Reject if any action creates a new failure class.
+• Strict Lift
+• Tighten S-gates one notch (e.g., WFE 25 → 22 nm; BER 10⁻⁶ → 10⁻⁷).
+• Pattern must still pass with receipts.
+• Anchor & Version
+• Record: parent anchor form, evidence Merkle-hash, automorphism scope, semantic boundary, and commit-4 for the promotion itself.
+• Tag as v1. Future refinements bump minor/major with backward-compat notes.
+🔹 Consolidation: merging near-duplicates without losing signal
+• Equivalence by relabel: If two drafts differ only by a label permutation or gauge flip, unify under one playbook with an expanded automorphism list.
+• Dominance by cost: If PB-A and PB-B both solve the same class, keep the one with lower expected cost under current strict gates; mark the other “shadowed.”
+• Split by failure mode: If a recipe consistently bifurcates (e.g., hot seams vs. cold seams), split into -hot and -cold variants with disjoint preconditions.
+• Deprecation: When a newer version strictly dominates (cost, coverage, stability), flag the older as deprecated but keep its receipts (audit chain intact).
+🔹 Service Levels (strict ladders → operational SLs)
+Tie strictness to S-levels you can communicate and enforce:
+• S0: discovery/debug (wide tolerances; rich logging)
+• S1: dev/iteration (mirror+octet pass, mild ratchet)
+• S2: pre-prod (tight ratchet; cost caps; parity budget)
+• S3: prod standard (fenced commits, rollbacks; telemetry receipts)
+• S4: high assurance (dual-review, duplicate viewers, cold rollback path)
+• S5: safety-critical (triplicate viewers, two-man commit, anomaly quarantine)
+Each playbook declares the highest S it currently satisfies. Promotion normally targets S2; upgrades follow evidence.
+🔹 What this looks like (three scenes)
+A) Optics “GhostStrip” → PB promotion
+• Harvest: 19 instances cleared chequer ghosting with the same Hamming bit-6 wrap + viewer fence order.
+• Draft: PB/OPTICS/GhostStrip-v1 with 8×8 local, 4× surround, mirror fence, cost knobs.
+• Cross-octet: Pass 8/8 faces on a different telescope pupil; ΔE median −41%.
+• Automorphism: Label spray over 24 spoke orderings passes.
+• Strict: WFE limit 25 → 22 nm; still passes.
+• Anchor: Promote at S2 with receipts. Subsequent runs call PB instead of re-inventing it.
+B) Spintronics “HelixBias” → split on temperature
+• Harvest: 12 wins, but 5 fail above 315 K.
+• Draft: One PB candidate bifurcates by temp band.
+• Split: PB/SPIN/HelixBias-hot and …-cold with disjoint preconditions.
+• Result: Each variant passes S2; router chooses per token pack.
+C) Wet-lab DNA “ODE-Overlay” → S3
+• Harvest: 27 overlays passed (experiment ↔ ODE) with one Δ-set (timing tweak + stem length).
+• Automorphism: Plate layouts permuted; no new failures.
+• Strict: Residual RMS gate from 0.12→0.09; passes.
+• S3 Upgrade: Add duplicate overlay viewer + cold rollback; promoted to S3 for lab automation.
+🔹 Receipts at promotion time (what we write down)
+promotion_id: PB/OPTICS/GhostStrip-v1 parent_anchor: LEECH_PATCH_A1 coverage: {instances: 19, octet_faces: 8/8, automorphisms: 24} cost_profile: {median_dE: -0.41, p95_dE: -0.28} strict: {from: S1, to: S2, gates: {WFE_nm: 25->22}} parity_budget: ok mirror_fence: pass_rate: 0.98 fail_modes: [] evidence_root: mkl-4f3e…c1a9 commit4: b101 
+(Every later call to the playbook still produces run-level receipts; promotion receipts justify re-use.)
+🔹 Interaction with meaning packs (semantics remain swappable)
+• The playbook freezes geometry + procedure.
+• The meaning pack supplies tokens/units/cost/precision.
+• On invocation, the router pairs {playbook, meaning_pack} satisfying preconditions and S-level—then executes with receipts.
+• If a meaning pack repeatedly forces exceptions (unit leaks, off-scale), we refactor its tokens; the playbook stays stable.
+🔹 Rollback & quarantine (safety valves)
+• Fence-fail: Auto-rollback the candidate; mark the seam quarantine:hot and escalate strictness locally for the next wave.
+• Regression spike: If a promoted PB suddenly raises ΔE or octet drift across ≥ N runs, auto-demote to S1-shadow and route traffic to the previous stable.
+• Red/blue eval: Keep a shadow path with the prior PB running on 5–10% of seams; compare receipts continuously.
+🔹 Exercises
+• Promote one: Pick a repeated Δ-lift from your ledger; run the pipeline to v1 at S2. Include evidence and an automorphism check.
+• Distinguish or unify: You have two near-identical drafts differing only by label order. Show that an automorphism makes them one PB; merge receipts.
+• Upgrade S-level: Take an S1 PB; add duplicate viewers and a rollback plan; prove S2 with receipts.
+• Quarantine drill: Inject a synthetic failure (mirror fence trip) during a PB call; walk the rollback + quarantine + re-route.
+🔹 Where this leaves us
+You now know when and how to stop bespoke fixes and start shipping playbooks—stable, audited, form-invariant modules with clear S-levels. Your system gains speed without sacrificing truth: geometry governs, receipts prove, strictness matures.
+Next section: Service Graph & Orchestration — wiring playbooks into a runtime graph (with viewers, sidecars, and strict ladders) so whole projects run as composed services with clear SLAs, costs, and rollback lanes.

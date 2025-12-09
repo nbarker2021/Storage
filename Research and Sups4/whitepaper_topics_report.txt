@@ -1,0 +1,996 @@
+================================================================================
+CQE CORPUS WHITEPAPER TOPIC ANALYSIS
+================================================================================
+
+Total topics identified: 29
+
+--------------------------------------------------------------------------------
+TOPIC: E8
+--------------------------------------------------------------------------------
+Evidence Strength: 519 files
+Source Files: 519
+Test Harnesses: 39
+Proofs: 92
+Falsifiers: 14
+Data Files: 60
+
+Test Harnesses:
+  - cqe_comprehensive_test_harness.py
+  - cqe_missing_tests.py
+  - cqe_test_harness_demo.py
+  - cqe_test_report_demo.json
+  - golden_test_suite.py
+
+Proofs:
+  - cqe_language_engine.py
+  - mathematical_proof_carlson_e8.py
+  - comprehensive_cqe_specifications.py
+  - CQE_TESTING_HARNESS_COMPLETE.py
+  - generate_figures.py
+
+Data Files:
+  - cqe_test_report_demo.json
+  - focused_analysis_report.json
+  - cqe_baseline_manifest.json
+  - cqe_s5_demo_receipts.json
+  - cqe_socratic_edge_requests.json
+
+Key Findings (sample):
+  - def _test_multimodal_interfaces(self) -> testresult:
+  - def full_validation(self) -> validationresult:
+  - <stref:renditionclass>proof:pdf</stref:renditionclass>
+
+--------------------------------------------------------------------------------
+TOPIC: SNAPLAT
+--------------------------------------------------------------------------------
+Evidence Strength: 466 files
+Source Files: 466
+Test Harnesses: 40
+Proofs: 107
+Falsifiers: 17
+Data Files: 58
+
+Test Harnesses:
+  - cqe_comprehensive_test_harness.py
+  - cqe_test_harness_demo.py
+  - cqe_test_report_demo.json
+  - golden_test_suite.py
+  - test_cqe_system.py
+
+Proofs:
+  - mathematical_proof_carlson_e8.py
+  - orbital_analysis_report.json
+  - comprehensive_cqe_specifications.py
+  - convergence_and_repair_proofs.py
+  - generate_figures.py
+
+Data Files:
+  - cqe_test_report_demo.json
+  - focused_analysis_report.json
+  - orbital_analysis_report.json
+  - scalability_benchmarks.py
+  - cqe_s5_demo_receipts.json
+
+Key Findings (sample):
+  - def _test_multimodal_interfaces(self) -> testresult:
+  - <stref:renditionclass>proof:pdf</stref:renditionclass>
+  - def _test_embedding_reversibility(self) -> testresult:
+
+--------------------------------------------------------------------------------
+TOPIC: FIBONACCI
+--------------------------------------------------------------------------------
+Evidence Strength: 416 files
+Source Files: 416
+Test Harnesses: 26
+Proofs: 76
+Falsifiers: 16
+Data Files: 38
+
+Test Harnesses:
+  - golden_test_suite.py
+  - test_cqe_system.py
+  - enhanced_golden_test_harness.py
+  - golden_test_harness.py
+  - test_cqe_integration.py
+
+Proofs:
+  - cqe_language_engine.py
+  - comprehensive_cqe_specifications.py
+  - convergence_and_repair_proofs.py
+  - generate_yangmills_figures.py
+  - script (1).py
+
+Data Files:
+  - focused_analysis_report.json
+  - benchmarks.csv
+  - cqe_baseline_manifest.json
+  - cqe_governance_prompts_template.json
+  - cqe_socratic_edge_requests.json
+
+Key Findings (sample):
+  - <stref:renditionclass>proof:pdf</stref:renditionclass>
+  - *proof:* convexity follows from quadratic form. weyl invariance from construction using coxeter plane. minimum analysis uses spectral theory of coxeter element. □
+  - • gap-labeling theorem: this theorem gives a topological constraint on spectra of ergodic schrödinger operators. it states that the possible values of the integrated density of states (ids) on gaps li
+
+--------------------------------------------------------------------------------
+TOPIC: SACRED GEOMETRY
+--------------------------------------------------------------------------------
+Evidence Strength: 381 files
+Source Files: 381
+Test Harnesses: 21
+Proofs: 65
+Falsifiers: 16
+Data Files: 22
+
+Test Harnesses:
+  - golden_test_suite.py
+  - test_cqe_system.py
+  - enhanced_golden_test_harness.py
+  - test_cqe_integration.py
+  - test_cqe_system.py
+
+Proofs:
+  - cqe_language_engine.py
+  - mathematical_proof_carlson_e8.py
+  - comprehensive_cqe_specifications.py
+  - convergence_and_repair_proofs.py
+  - generate_yangmills_figures.py
+
+Data Files:
+  - focused_analysis_report.json
+  - benchmarks.csv
+  - cqe_baseline_manifest.json
+  - cqe_governance_prompts_template.json
+  - cqe_socratic_edge_requests.json
+
+Key Findings (sample):
+  - <stref:renditionclass>proof:pdf</stref:renditionclass>
+  - *proof:* convexity follows from quadratic form. weyl invariance from construction using coxeter plane. minimum analysis uses spectral theory of coxeter element. □
+  - • gap-labeling theorem: this theorem gives a topological constraint on spectra of ergodic schrödinger operators. it states that the possible values of the integrated density of states (ids) on gaps li
+
+--------------------------------------------------------------------------------
+TOPIC: P VS NP
+--------------------------------------------------------------------------------
+Evidence Strength: 322 files
+Source Files: 322
+Test Harnesses: 22
+Proofs: 69
+Falsifiers: 8
+Data Files: 16
+
+Test Harnesses:
+  - cqe_comprehensive_test_harness.py
+  - cqe_test_harness_demo.py
+  - cqe_test_report_demo.json
+  - CQE_TESTING_HARNESS_COMPLETE.py
+  - e8_millennium_exploration_harness.py
+
+Proofs:
+  - cqe_language_engine.py
+  - comprehensive_cqe_specifications.py
+  - convergence_and_repair_proofs.py
+  - CQE_TESTING_HARNESS_COMPLETE.py
+  - generate_figures.py
+
+Data Files:
+  - cqe_test_report_demo.json
+  - agrm_cmplx_manifest.csv
+  - AGRM_comparative_review_v1.csv
+  - component_edges.csv
+  - components_registry.csv
+
+Key Findings (sample):
+  - def _test_multimodal_interfaces(self) -> testresult:
+  - def full_validation(self) -> validationresult:
+  - <stref:renditionclass>proof:pdf</stref:renditionclass>
+
+--------------------------------------------------------------------------------
+TOPIC: ATOMIZATION
+--------------------------------------------------------------------------------
+Evidence Strength: 296 files
+Source Files: 296
+Test Harnesses: 33
+Proofs: 65
+Falsifiers: 16
+Data Files: 10
+
+Test Harnesses:
+  - cqe_comprehensive_test_harness.py
+  - cqe_missing_tests.py
+  - cqe_test_harness_demo.py
+  - cqe_test_report_demo.json
+  - golden_test_suite.py
+
+Proofs:
+  - cqe_language_engine.py
+  - orbital_analysis_report.json
+  - comprehensive_cqe_specifications.py
+  - generate_yangmills_figures.py
+  - script (1).py
+
+Data Files:
+  - cqe_test_report_demo.json
+  - focused_analysis_report.json
+  - orbital_analysis_report.json
+  - cqe_baseline_manifest.json
+  - cqe_command_matrix.csv
+
+Key Findings (sample):
+  - def _test_multimodal_interfaces(self) -> testresult:
+  - def full_validation(self) -> validationresult:
+  - def _test_embedding_reversibility(self) -> testresult:
+
+--------------------------------------------------------------------------------
+TOPIC: MORSR
+--------------------------------------------------------------------------------
+Evidence Strength: 291 files
+Source Files: 291
+Test Harnesses: 15
+Proofs: 47
+Falsifiers: 6
+Data Files: 12
+
+Test Harnesses:
+  - cqe_test_harness_demo.py
+  - test_cqe_system.py
+  - CQE_TESTING_HARNESS_COMPLETE.py
+  - enhanced_golden_test_harness.py
+  - golden_test_harness.py
+
+Proofs:
+  - orbital_analysis_report.json
+  - comprehensive_cqe_specifications.py
+  - convergence_and_repair_proofs.py
+  - CQE_TESTING_HARNESS_COMPLETE.py
+  - generate_navier_stokes_figures.py
+
+Data Files:
+  - focused_analysis_report.json
+  - orbital_analysis_report.json
+  - scalability_benchmarks.py
+  - per_bucket_metrics.csv
+  - tension_math_tag.csv
+
+Key Findings (sample):
+  - def full_validation(self) -> validationresult:
+  - - key finding: p/np chamber separation in e₈ space
+  - *proof:* convexity follows from quadratic form. weyl invariance from construction using coxeter plane. minimum analysis uses spectral theory of coxeter element. □
+
+--------------------------------------------------------------------------------
+TOPIC: GEOMETRIC REASONING
+--------------------------------------------------------------------------------
+Evidence Strength: 232 files
+Source Files: 232
+Test Harnesses: 21
+Proofs: 100
+Falsifiers: 17
+Data Files: 29
+
+Test Harnesses:
+  - cqe_comprehensive_test_harness.py
+  - cqe_test_harness_demo.py
+  - cqe_test_report_demo.json
+  - golden_test_suite.py
+  - CQE_TESTING_HARNESS_COMPLETE.py
+
+Proofs:
+  - mathematical_proof_carlson_e8.py
+  - orbital_analysis_report.json
+  - comprehensive_cqe_specifications.py
+  - convergence_and_repair_proofs.py
+  - CQE_TESTING_HARNESS_COMPLETE.py
+
+Data Files:
+  - cqe_test_report_demo.json
+  - orbital_analysis_report.json
+  - cqe_socratic_edge_requests.json
+  - acceptance_table.csv
+  - acceptance_tests_extra.csv
+
+Key Findings (sample):
+  - def _test_multimodal_interfaces(self) -> testresult:
+  - def full_validation(self) -> validationresult:
+  - <stref:renditionclass>proof:pdf</stref:renditionclass>
+
+--------------------------------------------------------------------------------
+TOPIC: KOLMOGOROV
+--------------------------------------------------------------------------------
+Evidence Strength: 224 files
+Source Files: 224
+Test Harnesses: 20
+Proofs: 49
+Falsifiers: 9
+Data Files: 7
+
+Test Harnesses:
+  - cqe_comprehensive_test_harness.py
+  - cqe_test_harness_demo.py
+  - cqe_test_report_demo.json
+  - test_cqe_system.py
+  - e8_millennium_exploration_harness.py
+
+Proofs:
+  - cqe_language_engine.py
+  - orbital_analysis_report.json
+  - comprehensive_cqe_specifications.py
+  - convergence_and_repair_proofs.py
+  - generate_figures.py
+
+Data Files:
+  - cqe_test_report_demo.json
+  - focused_analysis_report.json
+  - orbital_analysis_report.json
+  - scalability_benchmarks.py
+  - cqe_command_matrix.csv
+
+Key Findings (sample):
+  - def _test_multimodal_interfaces(self) -> testresult:
+  - def full_validation(self) -> validationresult:
+  - def _test_embedding_reversibility(self) -> testresult:
+
+--------------------------------------------------------------------------------
+TOPIC: CRT
+--------------------------------------------------------------------------------
+Evidence Strength: 223 files
+Source Files: 223
+Test Harnesses: 23
+Proofs: 35
+Falsifiers: 15
+Data Files: 24
+
+Test Harnesses:
+  - e8_millennium_exploration_harness.py
+  - validation-framework-paper.md
+  - cqe_test_harness_documentation.md
+  - e_8_meta_harness_combined_test_suite_protocol_full_code.md
+  - Paper_2_Sacred_Geometry_Mathematical_Validation.md
+
+Proofs:
+  - script (13).py
+  - script (32).py
+  - script (33).py
+  - script.py
+  - Comprehensive Analysis of Legacy CQE Work.md
+
+Data Files:
+  - focused_analysis_report.json
+  - cqe_baseline_manifest.json
+  - d24_metrics.csv
+  - e8_metrics.csv
+  - acceptance_table.csv
+
+Key Findings (sample):
+  - conclusion: the first time the rest must branch, it branches into eight. that’s the octad, discovered—not assumed.
+  - <stref:renditionclass>proof:pdf</stref:renditionclass>
+  - • result: a per-tuple legal constraint that deterministically prunes pitches/phases—context changes with ; tokens don’t get “searched.”
+
+--------------------------------------------------------------------------------
+TOPIC: CARTAN
+--------------------------------------------------------------------------------
+Evidence Strength: 221 files
+Source Files: 221
+Test Harnesses: 17
+Proofs: 61
+Falsifiers: 4
+Data Files: 27
+
+Test Harnesses:
+  - cqe_comprehensive_test_harness.py
+  - test_cqe_system.py
+  - CQE_TESTING_HARNESS_COMPLETE.py
+  - e8_millennium_exploration_harness.py
+  - test_e8_embedding.py
+
+Proofs:
+  - mathematical_proof_carlson_e8.py
+  - comprehensive_cqe_specifications.py
+  - CQE_TESTING_HARNESS_COMPLETE.py
+  - generate_figures.py
+  - generate_yangmills_figures.py
+
+Data Files:
+  - cqe_baseline_manifest.json
+  - 65781fd7.csv
+  - acceptance_table.csv
+  - agrm_cmplx_manifest.csv
+  - ccd4f0d2.csv
+
+Key Findings (sample):
+  - def _test_multimodal_interfaces(self) -> testresult:
+  - def full_validation(self) -> validationresult:
+  - def _test_embedding_reversibility(self) -> testresult:
+
+--------------------------------------------------------------------------------
+TOPIC: BRAIDING
+--------------------------------------------------------------------------------
+Evidence Strength: 180 files
+Source Files: 180
+Test Harnesses: 19
+Proofs: 45
+Falsifiers: 10
+Data Files: 13
+
+Test Harnesses:
+  - cqe_comprehensive_test_harness.py
+  - cqe_test_harness_documentation.md
+  - golden_test_suite.py
+  - Paper_2_Sacred_Geometry_Mathematical_Validation.md
+  - Paper_2_Sacred_Geometry_Mathematical_Validation.md
+
+Proofs:
+  - script (19).py
+  - script (22).py
+  - script (36).py
+  - script (4).py
+  - script (40).py
+
+Data Files:
+  - agrm_cmplx_manifest.csv
+  - cqe_braiding_metrics.csv
+  - cqe_demo_dataset.csv
+  - cqe_formal_smoke_results_v2.csv
+  - cqe_formal_smoke_results_v3.csv
+
+Key Findings (sample):
+  - def _test_multimodal_interfaces(self) -> testresult:
+  - def full_validation(self) -> validationresult:
+  - def _test_embedding_reversibility(self) -> testresult:
+
+--------------------------------------------------------------------------------
+TOPIC: DIHEDRAL
+--------------------------------------------------------------------------------
+Evidence Strength: 176 files
+Source Files: 176
+Test Harnesses: 18
+Proofs: 29
+Falsifiers: 5
+Data Files: 9
+
+Test Harnesses:
+  - golden_test_suite.py
+  - test_cqe_system.py
+  - test_cqe_integration.py
+  - validate_hodge_conjecture.py
+  - test_cqe_system.py
+
+Proofs:
+  - comprehensive_cqe_specifications.py
+  - convergence_and_repair_proofs.py
+  - generate_figures.py
+  - policy_channel_formal_proofs.py
+  - script (1).py
+
+Data Files:
+  - agrm_cmplx_manifest.csv
+  - component_edges.csv
+  - components_registry.csv
+  - cqe_ledger_runs.csv
+  - cqe_ledger_runs_v2.csv
+
+Key Findings (sample):
+  - <stref:renditionclass>proof:pdf</stref:renditionclass>
+  - • inverse/proof: store angle ; inverse uses .
+  - result: ui remains the same; the acceptance and provenance become cqe-lawful rather than heuristic.
+
+--------------------------------------------------------------------------------
+TOPIC: DNA
+--------------------------------------------------------------------------------
+Evidence Strength: 143 files
+Source Files: 143
+Test Harnesses: 11
+Proofs: 16
+Falsifiers: 1
+Data Files: 19
+
+Test Harnesses:
+  - EvaluationandTestingPlanforRecentMillennium.pdf
+  - __CQE Trajectory Testing_ Validation Complete & Re.pdf
+  - Evaluation and Testing Plan for Recent Millennium (1).pdf
+  - Evaluation and Testing Plan for Recent Millennium (2).pdf
+  - Evaluation and Testing Plan for Recent Millennium.md
+
+Proofs:
+  - cqe writeup 2.txt
+  - Evaluation and Testing Plan for Recent Millennium.md
+  - Bb5_250909_194333.txt
+  - Bb9_250909_195302.txt
+  - Big Bang paper steps_250909_092913.txt
+
+Data Files:
+  - 81025_headings_index (1).csv
+  - 81025_headings_index (2).csv
+  - 81025_headings_index (3).csv
+  - 81025_headings_index.csv
+  - agrm_cmplx_manifest.csv
+
+Key Findings (sample):
+  - <stref:renditionclass>proof:pdf</stref:renditionclass>
+  - **conclusion:**
+  - • session 4: off-cube generalization (3d torus grid): to ensure the braided effect isn’t limited to hypercubes (which have a very symmetric structure), we tested on a 3d toroidal grid (imagine a 10×10
+
+--------------------------------------------------------------------------------
+TOPIC: LAMBDA CALCULUS
+--------------------------------------------------------------------------------
+Evidence Strength: 138 files
+Source Files: 138
+Test Harnesses: 15
+Proofs: 21
+Falsifiers: 7
+Data Files: 4
+
+Test Harnesses:
+  - validate_navier_stokes.py
+  - validate_riemann_hypothesis.py
+  - validate_yangmills.py
+  - e_8_meta_harness_combined_test_suite_protocol_full_code.md
+  - EvaluationandTestingPlanforRecentMillennium.pdf
+
+Proofs:
+  - convergence_and_repair_proofs.py
+  - generate_navier_stokes_figures.py
+  - generate_yangmills_figures.py
+  - script (11).py
+  - script (33).py
+
+Data Files:
+  - cqe_baseline_manifest.json
+  - agrm_cmplx_manifest.csv
+  - CQE_Experiments_Protocol_v1.pdf
+  - hq_team_roster.csv
+
+Key Findings (sample):
+  - <stref:renditionclass>proof:pdf</stref:renditionclass>
+  - • result: a per-tuple legal constraint that deterministically prunes pitches/phases—context changes with ; tokens don’t get “searched.”
+  - **conclusion:**
+
+--------------------------------------------------------------------------------
+TOPIC: ALENA
+--------------------------------------------------------------------------------
+Evidence Strength: 136 files
+Source Files: 136
+Test Harnesses: 12
+Proofs: 17
+Falsifiers: 6
+Data Files: 4
+
+Test Harnesses:
+  - EvaluationandTestingPlanforRecentMillennium.pdf
+  - Evaluation and Testing Plan for Recent Millennium (1).pdf
+  - Evaluation and Testing Plan for Recent Millennium (2).pdf
+  - Evaluation and Testing Plan for Recent Millennium.md
+  - Test Set A_250826_095746.txt
+
+Proofs:
+  - script (20).py
+  - script (4).py
+  - Comprehensive Analysis of Legacy CQE Work.md
+  - cqe writeup 2.txt
+  - Evaluation and Testing Plan for Recent Millennium.md
+
+Data Files:
+  - focused_analysis_report.json
+  - 65781fd7.csv
+  - hq_ops_timeline.csv
+  - hq_team_roster.csv
+
+Key Findings (sample):
+  - \section{main theorem: mass gap existence}
+  - conclusion: an elegant idea that found no home in reality
+  - <stref:renditionclass>proof:pdf</stref:renditionclass>
+
+--------------------------------------------------------------------------------
+TOPIC: RIEMANN
+--------------------------------------------------------------------------------
+Evidence Strength: 120 files
+Source Files: 120
+Test Harnesses: 14
+Proofs: 30
+Falsifiers: 2
+Data Files: 6
+
+Test Harnesses:
+  - CQE_TESTING_HARNESS_COMPLETE.py
+  - e8_millennium_exploration_harness.py
+  - test_e8_embedding.py
+  - validate_hodge_conjecture.py
+  - validate_navier_stokes.py
+
+Proofs:
+  - comprehensive_cqe_specifications.py
+  - CQE_TESTING_HARNESS_COMPLETE.py
+  - generate_navier_stokes_figures.py
+  - policy_channel_formal_proofs.py
+  - script (11).py
+
+Data Files:
+  - agrm_cmplx_manifest.csv
+  - cqe_braiding_metrics.csv
+  - cqe_gate_labels_with_braiding.csv
+  - cqe_gate_labels_with_braiding_FIXED.csv
+  - cqe_wrap_snap_overlay.csv
+
+Key Findings (sample):
+  - def full_validation(self) -> validationresult:
+  - def embed_in_geometric_space(self, semantic_result: dict[str, any]) -> dict[str, any]:
+  - def evaluate_pathway(self, config: dict) -> explorationresult:
+
+--------------------------------------------------------------------------------
+TOPIC: SPECTRAL
+--------------------------------------------------------------------------------
+Evidence Strength: 119 files
+Source Files: 119
+Test Harnesses: 10
+Proofs: 44
+Falsifiers: 8
+Data Files: 18
+
+Test Harnesses:
+  - cqe_comprehensive_test_harness.py
+  - validate_riemann_hypothesis.py
+  - Evaluation and Testing Plan for Recent Millennium.md
+  - Test set b+methods_250826_100831.txt
+  - Test set C_250826_095931.txt
+
+Proofs:
+  - comprehensive_cqe_specifications.py
+  - policy_channel_formal_proofs.py
+  - script (11).py
+  - script (12).py
+  - script (13).py
+
+Data Files:
+  - acceptance_table.csv
+  - cqe_anchor_activation_edges.csv
+  - cqe_anchor_activation_summary.csv
+  - cqe_anchor_gate_report.csv
+  - cqe_braiding_metrics.csv
+
+Key Findings (sample):
+  - def _test_multimodal_interfaces(self) -> testresult:
+  - def _test_embedding_reversibility(self) -> testresult:
+  - *proof:* convexity follows from quadratic form. weyl invariance from construction using coxeter plane. minimum analysis uses spectral theory of coxeter element. □
+
+--------------------------------------------------------------------------------
+TOPIC: YANG MILLS
+--------------------------------------------------------------------------------
+Evidence Strength: 92 files
+Source Files: 92
+Test Harnesses: 4
+Proofs: 28
+Falsifiers: 0
+Data Files: 9
+
+Test Harnesses:
+  - e8_millennium_exploration_harness.py
+  - validate_yangmills.py
+  - PAPER_9_Computational_Validation_Framework.md
+  - Evaluation and Testing Plan for Recent Millennium.md
+
+Proofs:
+  - generate_yangmills_figures.py
+  - script (11).py
+  - script (15).py
+  - script (22).py
+  - script (26).py
+
+Data Files:
+  - acceptance_table.csv
+  - cqe_anchor_activation_edges.csv
+  - cqe_formal_smoke_results.csv
+  - cqe_formal_smoke_results_v2.csv
+  - cqe_formal_smoke_results_v3.csv
+
+Key Findings (sample):
+  - \section{main theorem: mass gap existence}
+  - def full_validation(self) -> validationresult:
+  - conclusion: an elegant idea that found no home in reality
+
+--------------------------------------------------------------------------------
+TOPIC: SAFECUBE
+--------------------------------------------------------------------------------
+Evidence Strength: 90 files
+Source Files: 90
+Test Harnesses: 8
+Proofs: 17
+Falsifiers: 7
+Data Files: 12
+
+Test Harnesses:
+  - validate_hodge_conjecture.py
+  - cqe_test_harness_documentation.md
+  - CQE_Complete_Testing_Framework_-_Summary.md
+  - Test set C+methods_250826_100624.txt
+  - Test set D_250826_095958.txt
+
+Proofs:
+  - script (13).py
+  - script (15).py
+  - validate_hodge_conjecture.py
+  - cqe_expert_persona_analysis.md
+  - cqe_ledger_runs.csv
+
+Data Files:
+  - agrm_cmplx_manifest.csv
+  - component_edges.csv
+  - components_registry.csv
+  - cqe_ledger_runs.csv
+  - cqe_ledger_runs_v2.csv
+
+Key Findings (sample):
+  - **conclusion:**
+  - • session 4: off-cube generalization (3d torus grid): to ensure the braided effect isn’t limited to hypercubes (which have a very symmetric structure), we tested on a 3d toroidal grid (imagine a 10×10
+  - form "sparse_field_demo_a" using constructiona(p=2, code="hamming→e8", glue="half-shift") { glyphs { # domain-neutral glyphs; can be emojis, bio tokens, etc. σ:"sum", 🎯:"target", 🌀:"curl", 🔁:"replay" 
+
+--------------------------------------------------------------------------------
+TOPIC: TOROIDAL
+--------------------------------------------------------------------------------
+Evidence Strength: 89 files
+Source Files: 89
+Test Harnesses: 4
+Proofs: 14
+Falsifiers: 3
+Data Files: 15
+
+Test Harnesses:
+  - golden_test_suite.py
+  - Test Set A+methods_250826_100436.txt
+  - Test set D_250826_095958.txt
+  - Test set D+methods_250826_100752.txt
+
+Proofs:
+  - CQE Master Suite - Complete Delivery Summary.md
+  - cqe writeup 2.txt
+  - DELIVERY_SUMMARY.md
+  - README (1).md
+  - DELIVERY_SUMMARY.md
+
+Data Files:
+  - cqe_command_matrix.csv
+  - smoke_results_summary.csv
+  - bucket_summary_v2.csv
+  - component_edges.csv
+  - components_registry.csv
+
+Key Findings (sample):
+  - def embed_in_geometric_space(self, semantic_result: dict[str, any]) -> dict[str, any]:
+  - • result: a per-tuple legal constraint that deterministically prunes pitches/phases—context changes with ; tokens don’t get “searched.”
+  - • session 4: off-cube generalization (3d torus grid): to ensure the braided effect isn’t limited to hypercubes (which have a very symmetric structure), we tested on a 3d toroidal grid (imagine a 10×10
+
+--------------------------------------------------------------------------------
+TOPIC: TDA
+--------------------------------------------------------------------------------
+Evidence Strength: 75 files
+Source Files: 75
+Test Harnesses: 6
+Proofs: 5
+Falsifiers: 1
+Data Files: 2
+
+Test Harnesses:
+  - EvaluationandTestingPlanforRecentMillennium.pdf
+  - golden_test_suite.py
+  - Evaluation and Testing Plan for Recent Millennium (1).pdf
+  - Evaluation and Testing Plan for Recent Millennium (2).pdf
+  - Evaluation and Testing Plan for Recent Millennium.md
+
+Proofs:
+  - Evaluation and Testing Plan for Recent Millennium.md
+  - Csv doc c_250827_234046.txt
+  - Tensor anti tensor_250816_143920(1).txt
+  - Tensor anti tensor_250816_143920.txt
+  - Test set C+methods_250826_100624.txt
+
+Data Files:
+  - agrm_cmplx_manifest.csv
+  - SnapOS_session_index_v1_110825_023857.csv
+
+Key Findings (sample):
+  - <stref:renditionclass>proof:pdf</stref:renditionclass>
+  - **conclusion:**
+  - • session 4: off-cube generalization (3d torus grid): to ensure the braided effect isn’t limited to hypercubes (which have a very symmetric structure), we tested on a 3d toroidal grid (imagine a 10×10
+
+--------------------------------------------------------------------------------
+TOPIC: MANDELBROT
+--------------------------------------------------------------------------------
+Evidence Strength: 69 files
+Source Files: 69
+Test Harnesses: 6
+Proofs: 6
+Falsifiers: 5
+Data Files: 2
+
+Test Harnesses:
+  - golden_test_suite.py
+  - e_8_meta_harness_combined_test_suite_protocol_full_code.md
+  - golden_test_suite.py
+  - Linguistic_Validation_Analysis_for_CQE_Framework_C.md
+  - Test set D_250826_095958.txt
+
+Proofs:
+  - script (8).py
+  - CQE Master Suite - Complete Delivery Summary.md
+  - DELIVERY_SUMMARY.md
+  - README (1).md
+  - DELIVERY_SUMMARY.md
+
+Data Files:
+  - metrics_precision_recall.csv
+  - universal_atomic_space_state.json
+
+Key Findings (sample):
+  - def embed_in_geometric_space(self, semantic_result: dict[str, any]) -> dict[str, any]:
+  - • result: a per-tuple legal constraint that deterministically prunes pitches/phases—context changes with ; tokens don’t get “searched.”
+  - review_result: dict[str, any],
+
+--------------------------------------------------------------------------------
+TOPIC: MILLENNIUM
+--------------------------------------------------------------------------------
+Evidence Strength: 61 files
+Source Files: 61
+Test Harnesses: 6
+Proofs: 20
+Falsifiers: 0
+Data Files: 2
+
+Test Harnesses:
+  - e8_millennium_exploration_harness.py
+  - EvaluationandTestingPlanforRecentMillennium.pdf
+  - PAPER_9_Computational_Validation_Framework.md
+  - Evaluation and Testing Plan for Recent Millennium (1).pdf
+  - Evaluation and Testing Plan for Recent Millennium (2).pdf
+
+Proofs:
+  - script (11).py
+  - script (12).py
+  - script (15).py
+  - script (19).py
+  - script (2).py
+
+Data Files:
+  - cqe_command_matrix.csv
+  - smoke_results_summary.csv
+
+Key Findings (sample):
+  - \textbf{main result:} every hodge class is algebraic, completing the proof of the hodge conjecture through exceptional lie group cohomology theory.
+  - \section{main theorem: mass gap existence}
+  - def full_validation(self) -> validationresult:
+
+--------------------------------------------------------------------------------
+TOPIC: COMBINATORIAL EXPLOSION
+--------------------------------------------------------------------------------
+Evidence Strength: 54 files
+Source Files: 54
+Test Harnesses: 3
+Proofs: 12
+Falsifiers: 2
+Data Files: 0
+
+Test Harnesses:
+  - Evaluation and Testing Plan for Recent Millennium.md
+  - Test set C_250826_095931.txt
+  - Test set C+methods_250826_100624.txt
+
+Proofs:
+  - convergence_and_repair_proofs.py
+  - script (32).py
+  - script (33).py
+  - cqe writeup 2.txt
+  - PAPER_1_CQE_Framework.md
+
+Key Findings (sample):
+  - • result: a per-tuple legal constraint that deterministically prunes pitches/phases—context changes with ; tokens don’t get “searched.”
+  - • session 4: off-cube generalization (3d torus grid): to ensure the braided effect isn’t limited to hypercubes (which have a very symmetric structure), we tested on a 3d toroidal grid (imagine a 10×10
+  - - key finding: p/np chamber separation in e₈ space
+
+--------------------------------------------------------------------------------
+TOPIC: HODGE
+--------------------------------------------------------------------------------
+Evidence Strength: 46 files
+Source Files: 46
+Test Harnesses: 3
+Proofs: 24
+Falsifiers: 1
+Data Files: 16
+
+Test Harnesses:
+  - e8_millennium_exploration_harness.py
+  - validate_hodge_conjecture.py
+  - Evaluation and Testing Plan for Recent Millennium.md
+
+Proofs:
+  - script (11).py
+  - script (15).py
+  - script (19).py
+  - script (20).py
+  - script (22).py
+
+Data Files:
+  - acceptance_table.csv
+  - cqe_anchor_activation_edges.csv
+  - cqe_anchor_activation_summary.csv
+  - cqe_anchor_gate_report.csv
+  - cqe_braiding_metrics.csv
+
+Key Findings (sample):
+  - \textbf{main result:} every hodge class is algebraic, completing the proof of the hodge conjecture through exceptional lie group cohomology theory.
+  - **result:** in a few hours you’ll have hundreds or thousands of minimal modules capturing each expert’s core data. all heavy context remains as sidecar rag, keeping the base ingestion swift and lightw
+  - def _discover_branches(self, result: explorationresult):
+
+--------------------------------------------------------------------------------
+TOPIC: NAVIER STOKES
+--------------------------------------------------------------------------------
+Evidence Strength: 39 files
+Source Files: 39
+Test Harnesses: 3
+Proofs: 12
+Falsifiers: 0
+Data Files: 0
+
+Test Harnesses:
+  - e8_millennium_exploration_harness.py
+  - validate_navier_stokes.py
+  - Evaluation and Testing Plan for Recent Millennium.md
+
+Proofs:
+  - generate_navier_stokes_figures.py
+  - script (11).py
+  - script (15).py
+  - script (22).py
+  - script (31).py
+
+Key Findings (sample):
+  - def full_validation(self) -> validationresult:
+  - **result:** in a few hours you’ll have hundreds or thousands of minimal modules capturing each expert’s core data. all heavy context remains as sidecar rag, keeping the base ingestion swift and lightw
+  - def _discover_branches(self, result: explorationresult):
+
+--------------------------------------------------------------------------------
+TOPIC: BSD
+--------------------------------------------------------------------------------
+Evidence Strength: 18 files
+Source Files: 18
+Test Harnesses: 2
+Proofs: 6
+Falsifiers: 0
+Data Files: 0
+
+Test Harnesses:
+  - e8_millennium_exploration_harness.py
+  - Evaluation and Testing Plan for Recent Millennium.md
+
+Proofs:
+  - script (13).py
+  - script (15).py
+  - script (20).py
+  - script (22).py
+  - script (36).py
+
+Key Findings (sample):
+  - **result:** in a few hours you’ll have hundreds or thousands of minimal modules capturing each expert’s core data. all heavy context remains as sidecar rag, keeping the base ingestion swift and lightw
+  - def _discover_branches(self, result: explorationresult):
+  - def evaluate_pathway(self, config: dict) -> explorationresult:
+
+--------------------------------------------------------------------------------
+TOPIC: POINCARE
+--------------------------------------------------------------------------------
+Evidence Strength: 17 files
+Source Files: 17
+Test Harnesses: 2
+Proofs: 6
+Falsifiers: 0
+Data Files: 0
+
+Test Harnesses:
+  - e8_millennium_exploration_harness.py
+  - Evaluation and Testing Plan for Recent Millennium.md
+
+Proofs:
+  - script (19).py
+  - script (20).py
+  - script (22).py
+  - script (31).py
+  - script (36).py
+
+Key Findings (sample):
+  - \textbf{main result:} every hodge class is algebraic, completing the proof of the hodge conjecture through exceptional lie group cohomology theory.
+  - **result:** in a few hours you’ll have hundreds or thousands of minimal modules capturing each expert’s core data. all heavy context remains as sidecar rag, keeping the base ingestion swift and lightw
+  - def _discover_branches(self, result: explorationresult):

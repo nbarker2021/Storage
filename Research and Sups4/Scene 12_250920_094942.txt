@@ -1,0 +1,90 @@
+Section XII — Weaving the ENTROPY/INFO Rail into the Shell & Using the 4-bit Qubit-Cap
+(Goal: every move carries an explicit information budget; local fractures get fixed with a tiny, reversible 4-bit “cap” that preserves global parity while stabilizing the hot zone. Same CQE cadence, now with thermodynamics-of-information riding shotgun.)
+0) Quick Q&A warm-up
+Q: Why add an info rail if the physics rails already pass?
+A: Because passing can still be wasteful. The info rail tells you where you’re throwing bits (and heat). It makes Δ-lifts targeted (max information gain per unit cost) and prevents “green-by-threshold” wins that silently erase evidence.
+Q: Is this about quantum? I’m not building a quantum computer.
+A: No quantum hardware needed. We use information quantities (Shannon , mutual information , KL divergence , von Neumann where relevant) plus Landauer: erasing one bit costs heat. That’s a design budget, not a lab constraint.
+Q: Won’t this slow me down?
+A: It speeds you up by aiming the viewer. The info rail ranks hot zones by “most fixable, most informative.” You spend Δ-lifts where the expected mutual information bump is highest.
+1) The Info Rail: tokens & mirrors (drop-in for any domain)
+Tokens (pick what fits your sidecar):
+• Shannon entropy , mutual info , KL .
+• Rate–distortion (how many bits you need for a tolerated error).
+• Fisher information (local identifiability).
+• Landauer budget: .
+• vN entropy if your state is inherently quantum (optional).
+Mirror pairs (Info-centric):
+• Encode ⟷ Decode (does the round-trip preserve agreed bits?).
+• Forward residual ⟷ Posterior fit (do they agree within a KL tolerance?).
+• Compression ⟷ Reconstruction (rate–distortion bound respected both ways?).
+Receipts (Info lane):
+• Report bits gained, bits erased, bits at risk, and Landauer heat lower-bound for any irreversibles you accept.
+2) The 4-bit qubit-cap (the smallest reversible repair that matters)
+What it is: a 16-state reversible micro-operator you can drop onto a single hot tile (and its mirror mate) to stabilize without global rework. Think of it as a local isometry in a 2×2 parity cell:
+• State space: 4 bits → reversible maps (we constrain to parity-respecting variants).
+• Actions you encode with it (choose one): swap, invert, phase flip, orthogonalize, renormalize, tiny rotation, binary mask, basis re-index.
+• Why “qubit-cap”? It behaves like a tiny, reversible gate cap: you patch the tile while keeping mirror/parity intact—no entropy dump unless you later choose to erase.
+When to use:
+• 8×8 local viewer flags a persistent red/amber.
+• 4×4×4×4 surround is green/amber (local, not global).
+• 2×2×2×2 parity surround passes (so a local reversible nudge is legal).
+What to log: the cap ID (one of 16), pre/post bit ledger (Δ info, Δ residual), and mirror parity check marks. If you later erase a cap (commit to an irreversible simplification), you log a Landauer debit.
+3) How it looks on the bench — three scenes with the info rail wired in
+Scene A — OPTICS + INFO (deconvolution that pays its bit bill)
+• Setup: Pupil → PSF via FFT; inverse path iFFT; noisy image ; latent .
+• Info tokens: under your noise model; ; for your chosen distortion (e.g., MSE).
+• Mirror: decode⟷encode must commute to identity within receipt tolerances; KL between forward residual and posterior fit ≤ threshold.
+• Hot zone: edge ringing at high-NA; local 8×8 flags red. Surround green → local.
+• 4-bit cap: apply CAP#07: orthogonalize+renorm on the 2×2 parity cell of the offending band.
+• Δ-lift (if still needed): replace naive deconv with Tikhonov on that band only (local operator).
+• Strict ratchet: PSF mismatch ≤ 2%, WFE 22 nm RMS.
+• Info receipt: +0.12 bits/pixel MI gain in the hot zone; 0 bits erased (cap is reversible); KL drop −18%. Landauer debit 0 (no erasure).
+Why this wins: you stabilized the inversion locally without a global blur; your info budget shows you gained distinguishability where it matters.
+Scene B — THERMAL + INFO (transient that conserves evidence)
+• Setup: conduction transient with a vent cadence; forward solve vs. time-reversed replay (energy budget mirror).
+• Info tokens: entropy production rate , exergy destruction, information rate about the driver sequence .
+• Hot zone: a single stiff node jitters under explicit stepping.
+• 4-bit cap: CAP#0C: implicit-step micro-rotation on that node’s 2×2 parity cell (swap basis to the stable axis; reversible in the ledger).
+• Δ-lift (if needed): local Crank–Nicolson only on that node and its immediate neighbors.
+• Strict ratchet: ΔT/tick 0.8 K; heat-balance residual ≤ 0.5%.
+• Info receipt: preserved (no inadvertent smoothing); bits erased from any post-smoothing: 0 (cap reversible); exergy accounting consistent with .
+Bottom line: you removed numerical noise without erasing the driver’s imprint—the signal you actually care about.
+Scene C — ACOUSTICS + INFO (beats, subharmonics, and honesty)
+• Setup: matched filter on a broadband burst; check forward propagation vs time-reversal mirror.
+• Info tokens: channel capacity , MI between sent and received glyph trains, between recovered and nominal spectrum.
+• Hot zone: a faint subharmonic shows under high drive (nonlinear corner). Local 8×8 amber; 4×4×4×4 surround amber; parity surround green (localizable).
+• 4-bit cap: CAP#03: gate+phase flip to quarantine the subharmonic band; reversible mask recorded.
+• Δ-lift: inject a local robust loss in that band (Huber) instead of L2.
+• Strict ratchet: group delay error ≤ 2%; reconstruction SNR ≥ 20 dB.
+• Info receipt: MI ↑ by 0.2 bits/s/Hz in the main band; gated band MI parked (no false gain); no irreversible erasure yet (cap reversible). If you later erase the gated content, you log .
+Takeaway: the info rail keeps you from “winning” by silently dumping awkward content; you quarantine first, decide later.
+4) The three-step cap protocol (so you don’t overuse it)
+• Screening: cap only if local 8×8 is red/amber, 4×4×4×4 is green/amber, and 2×2×2×2 parity is green.
+• Choice: pick one of 16 parity-respecting cap maps (documented menu: swap, invert, rotate , orthogonalize, renorm, mask, re-index, phase flip, etc.).
+• Audit: recompute mirror & info receipts; if MI ↓ or KL ↑ in neighbors, revert (caps must be net-beneficial).
+Caps are reversible patches. Δ-lifts are model rewrites. Strict ratchets are maturity locks. Don’t mix their roles.
+5) Ledgers with Info rail (template)
+info_rail: metrics: H_px_bits: 3.42 # avg per-pixel entropy (optics) I_signal_obs_bits: 0.87 # mutual info in hot zone D_KL_forward_posterior: 0.034 capacity_bpsHz: 1.8 # acoustics landauer: bits_erased: 0 # reversible so far Qmin_J: 0.0 # kT ln2 * bits_erased caps_applied: - tile: optics/H1/band_7 cap_id: CAP#07 reversible: true delta_MI: +0.12 delta_KL: -0.018 - tile: thermal/H3/node_42 cap_id: CAP#0C reversible: true delta_MI: +0.05 decisions_pending: - acoustics/subharmonic_band: action_if_commit: "erase gated content" cost_landauer_bits: 1.6e4 rationale: "nonlinear artefact; outside domain-of-validity" 
+6) Teacher–Student bench scene (what it feels like)
+Teacher: “We’ve got an amber smear in OPTICS H1 at the high-NA ring. Info rail says KL is stubborn there; MI curve suggests a small gain is possible if we rotate the local basis.”
+Student: “So we try CAP#07 on that 2×2 parity cell?”
+Teacher: “Yep. Drop it, replay mirror. Watch the MI needle… good—+0.12 bits/pixel. KL down 18%. No Landauer debit—kept it reversible. Now, check the 4×4×4×4 surround—no collateral.”
+Student: “Thermal H3’s stiff node is next. Same play?”
+Teacher: “Cap first (#0C). If it stabilizes the phase without MI loss, we stop there. If not, Δ-lift to CN just on that node. Then ratchet ΔT/tick from 1.0→0.8 K.”
+Student: “Acoustics shows a faint subharmonic. Cap or cut?”
+Teacher: “Cap to quarantine; don’t erase yet. The info rail will tell us if keeping that band buys insight. If not, we commit the erase later and pay the Landauer bill.”
+7) Pitfalls (and their antidotes)
+• Green-by-smoothing: Passing a view by destroying MI. Antidote: require MI non-decrease (or a logged Landauer debit) for any pass.
+• Cap addiction: Over-patching instead of fixing. Antidote: at most one cap per tile; two caps in the same 8×8 → write a Δ-lift.
+• Global fracture disguised as local: Parity surround red means stop capping; re-pose the view or split the band.
+8) Exercises (do these now)
+• Wire the info rail into one OPTICS and one THERMAL view: compute MI/KL before/after your best Δ-lift; verify no unlogged bit erasures.
+• Cap clinic: pick a persistent amber tile; apply two different caps (#07 vs #09 rotation). Keep the one with higher MI gain and lower KL; revert the other.
+• Landauer ledger: choose one nuisance component (e.g., acoustics subharmonic). Simulate both choices—keep vs erase. If you erase, compute the Landauer lower-bound; write a one-line justification.
+9) What this buys you (in plain terms)
+• Sharper Δ-lifts: you repair where the information gradient is steepest.
+• Honest receipts: you can’t hide entropy dumps—every irreversible choice has a logged cost.
+• Tiny, surgical stabilizers: the 4-bit cap fixes tiles without rippling the whole run, keeping parity/mirror intact.
+10) Next up
+We now promote the cap to a first-class pattern: the hot-zone qubit-cap registry (the canonical 16 parity-respecting maps with usage notes), and we’ll show how cap usage scales in the n=32 two-slice hub—so local caps don’t collide when two shells meet at the codec midpoint.

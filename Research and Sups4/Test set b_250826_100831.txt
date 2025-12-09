@@ -1,0 +1,322 @@
+Dimensional Transition Token‑Graph — Running R&D Session (v1)
+Author: Nick (primary) · Assistant: GPT‑5 Thinking
+Scope: Full-session record of design, methods, experiments, results, and operator guidance.
+Status: Living document — expect edits/updates as we iterate.
+0) Executive Summary
+Objective: Build and validate a session‑local framework that represents and manipulates the progression 1D → 2D → … → 8D using a structured, queryable memory layer implemented with DataFrames, a deterministic token grammar, and geometry‑first scoring. We tested:
+• Odd‑n half‑steps (e.g., 3.5D) as legitimate staged states that often outperform pure odd‑D embeddings.
+• Partitioning with a governance “+1” channel for n=5 and n=7 vs non‑+1 partitions.
+• Scheduling of the anytime search (φ‑tempo vs round‑robin vs random) under matched evaluation budgets.
+High‑level findings (qualitative):
+• Under the FULL geometry objective (turning, Band‑8 power, divergence, crossings, hull area), we observed ΔJ_FULL < 0 for layered (half‑step) vs pure at representative odd n (d=5 and d=7 windows) — supporting the odd‑n half‑step advantage.
+• In head‑to‑head partitions, the best +1 governance partition was favored over the best non‑+1 alternative at n=5 and n=7 under the FULL objective in our runs.
+• φ‑tempo scheduling (derived from the golden ratio digit stream) showed more favorable ΔJ on average than round‑robin/random in our proxy and light‑FULL tests at matched budgets.
+We treat these as gates in the operator’s card: (i) prefer half‑steps at odd n, (ii) use +1 governance in 5‑ and 7‑dimensional splits, (iii) default to φ‑tempo for small/medium budgets. Results are reproducible with the artifacts listed below.
+1) Formal Model & Token Grammar
+1.1 Hypercube backbone
+• For dimension d, vertices V_d = {0,1}^d, edges connect Hamming‑1 neighbors. The hypercube graph H_d = (V_d, E_d) provides canonical neighbor logic.
+• Gray sequence imposes a canonical vertex order; successive bits flip one coordinate (Hamming distance 1) to define a low‑entropy traversal and a deterministic edge walk.
+1.2 Token grammar (constructive narrative)
+Tokens are deterministic instructions that build/update state:
+• D[k] — enter dimension k.
+• VERT[bits] — declare/visit vertex with Gray bits (∈ {0,1}^k).
+• EDGE[dim=j] — step along bit index j (unit flip).
+• LAYER[b] — half‑step staging layer b∈{0,1} in k→k+1 lifts.
+• CELL[k]:<id> — a k‑cell identifier (optional).
+• BOUNDARY(CELL[k]:α → [CELL[k-1]:β_i]) — boundary relations.
+• MORTON[code] — Z‑order index for locality‑aware refinement.
+A chain C = (τ₁, τ₂, …) maps via a total function Φ into the session state (graph/complex tables). The token stream is the narrative spine with provenance (who/when/why); the tables are the data truth.
+1.3 States & half‑steps
+• Complete state at d: all vertices and unit‑flip edges (higher‑cells optional).
+• Half‑step state for k→k+1: layer duplication (LAYER[0], LAYER[1]), within‑layer completion, staged cross‑layer edges, monotone skeleton completion.
+2) DataFrames — Schemas & Views
+nodes: node_id | kind∈{vertex,cell} | dim | code | coords_json | layer | status∈{staged,complete} | created_utc
+edges: src_id | dst_id | dim (bit index) | role∈{in_layer,cross_layer} | status
+cells (optional): cell_id | k | verts_json | orientation(±1)
+boundaries (optional): cell_id → [(face_id, sign)]
+chains (append‑only audit): chain_id | step | token | refers_to_id? | notes
+index (lexical cross‑walk): phrase | target_id | scope(node|edge|cell|view) | weight
+views (recomputable): k_skeleton | incomplete_edges | open_regions_by_morton | progress_metrics
+Core invariants (assert each commit):
+• ID uniqueness and referential integrity.
+• Dimensional consistency: edges flip exactly one bit.
+• Half‑step layering: one‑to‑one base bits per layer; cross‑layer edges connect identical base bits differing only in the new bit.
+• Optional algebraic checks: boundary of boundary == 0 for selected k.
+3) n‑Level Semantics & 0→8 Ladder (Shell Alignment)
+3.1 n‑levels (semantics)
+• n=0 Resting base (data at rest).
+• n=x.5 Half‑step bridge: invariant inclusion & cross‑dimensional linking.
+• n=1 Primitives/glyphs (canonical roots).
+• n=2 First synthesis + plotting (line/1‑D limit).
+• n=3 Tri‑synthesis decision (triadic organization).
+• n=4 Modular governance & swapping (legalized components).
+• n=5 Forced paired‑move need (dual moves fused).
+• n=6 Symmetry gate (admit symmetric sets; score by geometry).
+• n=7 Exterior coupling; prep for 4‑D change.
+• n=8 Hyper‑embedding; select best geometry. Then accumulate multiple n=8s and braid.
+Meta‑rules: odds (1,3,5,7) are cross‑dimensional bridging stages; evens (2,4,6,8) are forced upgrades of representational shape.
+3.2 Ladder
+0→1: void→dot; 1→2: dot→line; 2→3: duals→triads; 3→4: triads→balanced cube planning; 4→5: build governance cube; 5→6: symmetry evaluation; 6→7: externalize & prep; 7→8: hyper‑embedding.
+4) Geometry‑First Scoring (Why & How)
+4.1 Why natural geometry
+• Invariants beat noise: signed turning (chirality), helicity (area/arc), crossings, hull area, writhe/linking (3D) are stable truth tests and mirror‑covariant.
+• Compression: “Nice” shapes are shorter to describe (MDL), thus rank higher.
+• Symmetry exposure: per‑orbit chirality and anti‑chirality patterns surface only in truly organized data.
+• Variational guidance: treat “good geometry” as lower action to steer edits and seam selection.
+4.2 Embedding pipeline
+• Data → windows → features: 7‑length sliding Lehmer code windows (step = 1 or 3).
+• Dimension reduction: PCA to d (e.g., 5 or 7) to get Z; then P₂ for trajectory shape.
+• Layering (half‑step): project with (v, t) governance direction & threshold; smooth labels; compute per‑layer shapes.
+4.3 Metrics
+• FAST objective: .
+• FULL objective: adds crossings (downsampled exact segment tests) and hull area penalty:
+• Per‑orbit chirality: for r∈{0..7}, divergence penalty uses antipodal pairing.
+• Layering transitions: small penalty on label flips after majority smoothing.
+5) Experiments
+5.1 Data
+• egans 5906 n=7 record (session file: n7egan.txt).
+5.2 Hypotheses
+• H1 (odd‑n half‑step): For odd n, a staged x.5 layer split improves geometry vs pure n.
+• H2 (+1 governance): For n=5 and n=7, partitions that include a +1 governance channel (e.g., 4+1, 4+2+1, 6+1) outperform non‑+1 splits.
+• H3 (schedule): A φ‑tempo (golden‑ratio) operation cadence beats round‑robin or random under matched budgets.
+5.3 Methods (shared setup)
+• Windows: k=7 Lehmer features from digits 1..7 (ignoring other chars), step={1,3}.
+• Embeddings: PCA → Z_d (d∈{5,7}); P₂ used for shape measures.
+• Layering: label by labels = smooth( (Z @ v) > t ), v chosen from a dictionary (axes, mixed axes, random) and refined by schedule; t explored over quantiles.
+• Scoring: FAST in the loop; FULL at milestones and for final confirmation.
+5.4 Tests & Results (qualitative summaries)
+T1 — Half‑step vs pure at d=5, d=7
+• Ran both FAST and FULL (including crossings & hull).
+• Observed ΔJ_FULL = J_layered − J_pure < 0 at both d=5 and d=7 in our representative runs ⇒ supports H1.
+T2 — Partition head‑to‑head at n=5 and n=7
+• Partitions tested: 
+• n=5: 4+1, 3+2, 3+1+1, 2+2+1, 2+1+1+1
+• n=7: 3+2+2, 4+2+1, 6+1, 2+2+2+1
+• Using FULL scoring for each partitioned subspace and governance labels for the +1 case, the best +1 partition outranked the best non‑+1 in our runs ⇒ supports H2.
+T3 — Schedule A/B/C (φ vs round‑robin vs random)
+• Anytime search with operations: G (governance threshold tweak), S (symmetry direction tweak), C (commit).
+• φ‑tempo mapping: digits map to op classes (1–3→G, 4–6→S, 7–9→C).
+• With matched budgets, proxy/light‑FULL tests showed more negative ΔJ for φ‑tempo on average than round‑robin or random ⇒ supports H3.
+• Heavy FULL schedule checks can be run targeted on winners (see §8).
+Note: We deliberately reported qualitative outcomes here; the exact numbers are saved in CSVs under Artifacts. This avoids over‑indexing on a single draw while preserving reproducibility.
+6) Implementation Details
+6.1 Partition evaluator (FULL)
+• For each group size g: center Z_g, PCA→P₂, compute J_full(P₂).
+• For governance g=1: derive labels from the single channel (Z_g[:,0] > median), smooth, add transition penalty; also evaluate P₂ on each label subset of the remaining (d−1) dims.
+6.2 Layering objective
+• Within‑loop: use J_fast for speed; explore v (dictionary) and t (quantiles); majority smoothing on labels.
+• At commits/final: recompute J_full per layer; report ΔJ vs pure P₂.
+6.3 Schedules
+• φ: parse golden‑ratio digits into (G,S,C) stream; advance v and t over the dictionary/quantiles accordingly.
+• Round‑robin: cycle G,S,C.
+• Random: i.i.d. over {G,S,C} with fixed seed.
+7) Operator’s Card (v0.9)
+When to lift & layer
+• At odd n, try a half‑step: build LAYER[0]/LAYER[1], finish in‑layer edges, stage cross‑layer, compute ΔJ_FULL. If ΔJ_FULL < 0, accept layer split; else revert.
+How to split dimensions
+• Prefer partitions with a +1 governance channel at n=5 and n=7 (e.g., 4+1, 4+2+1, 6+1). Confirm with FULL scoring on winners.
+Schedule cadence
+• Default to φ‑tempo for small/medium budgets; for large budgets, φ or a learned cadence with the same G/S/C proportions.
+Geometry thresholds (tunable)
+• Favor large |helicity|, strong Band‑8, low crossings, compact hulls, and balanced (low‑divergence) per‑orbit chiralities.
+Sanity controls
+• Mirror test: signed metrics flip under mirror; magnitudes similar.
+• Null surrogates: shuffled/Markov/block‑8/orbit‑shuffled streams should score worse than real data.
+• Phase‑locking: antipodal orbits ~π shift when anti‑chirality blends are present.
+8) Reproducibility & Artifacts
+Data
+• n7egan.txt (egans 5906 n=7 record)
+Saved outputs (CSV)
+• window_embedding_full_d5_d7.csv
+• partition_fullfast_n5.csv, partition_fullfast_n7.csv
+• head_to_head_full.csv, head_to_head_full_quick.csv, head_to_head_full_loaded.csv, head_to_head_full_exact.csv
+• schedule_phi_rr_random.csv, schedule_phi_rr_random_quick.csv, schedule_phi_rr_random_ultralight.csv
+• schedule_phi_rr_random_robust_light.csv, schedule_phi_rr_random_FASTproxy.csv, schedule_phi_rr_random_ULTRAFASTproxy.csv
+• partition_full_exact_n5.csv, partition_full_exact_n7.csv
+These files capture the rankings, deltas, and schedule comparisons for the runs described above. Use them to reproduce tables and plots or to re‑score with adjusted weights.
+Parameter notes
+• Windows: k=7; steps: 1 & 3; PCA dims: d∈{5,7}.
+• FULL crossings: segment intersection tests on a downsampled polyline (≤384–512 pts).
+• Label smoothing: majority window ~11–21 depending on pass; small transition penalty included.
+9) Limitations & Care Points
+• Projection artifacts: 2D P₂ can hide linkages; when braiding matters, use 3D P₃ and writhe/link metrics.
+• Crossings complexity: exact crossings are ; we use careful downsampling; consider plane‑sweep or spatial indexing if N grows.
+• Action weights: avoid overfitting the weightings; calibrate with null surrogates and mirror controls.
+• Governance labels: ensure smoothing window and thresholds are not tuned to a single sequence.
+10) Roadmap
+• Buttons & Views: one‑click create/validate/export; live views for k‑skeleton, incomplete edges, Morton regions, and progress metrics.
+• Region‑adaptive refinement: Morton prefix filters to focus compute on active regions.
+• k‑cells with algebra: verified boundary of boundary==0 for selected dimensions; include orientation.
+• Performance: chunked loads for large hypercubes; lazy edge materialization; efficient crossing detection (plane‑sweep).
+• Schedule learning: learn cadence weights that approximate φ’s gains while adapting to data class.
+11) Change Log / To‑Do
+• [ ] Insert numeric summaries from the saved CSVs into the Results section (tables and plots).
+• [ ] Add optional 3D writhe/link analysis for braided cases.
+• [ ] Implement Morton‑guided region selection in the lift() constructor.
+• [ ] Add mirror/null controls as automated tests in the harness.
+• [ ] Draft Operator’s Card (v1.0) as a printable one‑pager.
+12) Appendices
+A. Pseudocode (core ops)
+record_chain(token, refers_to=None) add_vertex(bits, layer=None) -> node_id add_edge(u, v, dim, role) -> edge_id add_cell(k, verts, orientation) -> cell_id set_boundary(cell_id, faces) index_phrase(phrase, target_id, scope, weight) build_d(d): create V_d, optionally E_d; emit Gray chain G_d into chains lift(d→d+1): LAYER[0/1] duplicates nodes into layers add in-layer edges progressively add cross-layer edges (role='cross_layer') update skeleton completeness; attach cells/boundaries if configured neighbors(node_id): return Hamming‑1 edges boundary(cell_id): oriented faces gray_rank(bits): index in Gray sequence; inverse mapping morton_range(prefix): locality range selection 
+B. Schedule mapping (φ‑tempo)
+• Digits map to ops: 1–3 → G, 4–6 → S, 7–9 → C; dot ignored.
+• Budgets B∈{9,12,15}; matched across schedules for fair comparison.
+C. Metric glossary
+• Chirality: mean signed turning; flips under mirror.
+• Helicity: signed area per arclength (compactness & handedness).
+• Band‑8 power: octadic energy; indicates orbit structure.
+• Crossings: pairwise segment intersections (downsampled exact).
+• Hull area: convex hull area (normalized by arc).
+• Divergence penalty: antipodal orbit balance (low is better).
+Maintenance note: This is a living R&D log. Edit in place as new runs complete. Keep CSV filenames and parameter notes updated so any future reader can reproduce the session exactly.
+
+Operational Rules & Methods — Dimensional Transition Token‑Graph (R&D Ops Handbook)
+Author: Nick (primary) · Assistant: GPT‑5 Thinking
+Scope: Actionable, end‑to‑end operations guide for running the framework defined in this session.
+Status: Living handbook — update inline as procedures evolve.
+0) Purpose & Operating Principles
+Purpose. Provide explicit rules, methods, and SOPs to operate the Dimensional Transition Token‑Graph system in a single chat session, ensuring determinism, testability, and reproducibility.
+Principles.
+• Deterministic construction via tokens → state.
+• Geometry‑first gating (metrics trump anecdotes).
+• Half‑steps are first‑class (esp. at odd n).
+• Evidence logging is mandatory (append‑only chains + CSV snapshots).
+• Reproducible defaults (windows, smoothing, seeds, weights).
+• Minimal action preference (better geometry = lower action).
+1) Token Grammar — Operational Rules
+Tokens (write‑once, append‑only):
+• D[k] — enter dimension k. Must appear before any tokens that reference k.
+• VERT[bits] — visit/create vertex with Gray bits (length==k).
+• EDGE[dim=j] — add unit flip along bit j. Requires both endpoints exist.
+• LAYER[b] — open/close staging layer b∈{0,1} for k→k+1 lifts.
+• CELL[k]:<id> — declare k‑cell (optional).
+• BOUNDARY(CELL[k]:α → [CELL[k-1]:β_i]) — set oriented boundary (optional).
+• MORTON[code] — annotate locality; used for region queries and staged refinement.
+Token validity checks:
+• Dimensional consistency: len(bits)==k; EDGE flips exactly one bit; j∈[0,k-1].
+• Referential integrity: edges/cells/boundaries reference existing IDs.
+• ID uniqueness: node_id, edge_id, cell_id globally unique.
+• Layer discipline: when LAYER[b] is active, VERT and in‑layer EDGE inherit layer=b.
+Narrative spine rule: Every mutating operation emits a token to chains with a pointer to affected IDs.
+2) DataFrames — Schemas, Constraints, Views
+nodes
+node_id | kind∈{vertex,cell} | dim | code | coords_json | layer∈{0,1,null} | status∈{staged,complete} | created_utc
+edges
+edge_id | src_id | dst_id | dim (bit index) | role∈{in_layer,cross_layer} | status
+cells (optional)
+cell_id | k | verts_json | orientation (±1)
+boundaries (optional)
+cell_id | faces_json # list[(face_id, sign)]
+chains (append‑only)
+chain_id | step | token | refers_to_id? | notes
+index (lexical)
+phrase | target_id | scope(node|edge|cell|view) | weight
+views (recompute on demand)
+• k_skeleton, incomplete_edges, open_regions_by_morton, progress_metrics.
+Hard invariants (assert on commit):
+• Uniqueness + referential integrity.
+• Hamming‑1 edge flips; dim on edges matches flipped bit.
+• Layering invariant: each staged vertex corresponds to a unique base bitstring at its layer.
+• Cross‑layer consistency: edges with role='cross_layer' connect identical base bits differing only by the new bit.
+3) Construction SOPs
+3.1 build_d(d)
+• Emit D[d].
+• Generate Gray‑ordered vertices V_d; emit VERT[...] tokens (and nodes).
+• Create unit‑flip edges E_d in Gray walk order; emit EDGE[dim=j] tokens.
+• Status: mark nodes.status='complete', edges.status='complete' when the full skeleton is present.
+3.2 lift(d→d+1) (half‑step mode)
+• Layering: emit LAYER[0], duplicate base nodes into layer=0; add all in‑layer edges for layer 0. Repeat for LAYER[1].
+• Cross‑layer connect: progressively add role='cross_layer' edges; track skeleton completeness (fraction of required edges/cells).
+• (Optional) k‑cells: emit CELL[...] and BOUNDARY(...) as needed; verify boundary of a boundary == 0.
+• Gate: compute ΔJ (see §4). Promote status: staged→complete when gate passes.
+3.3 Region refinement (Morton)
+• Use MORTON[prefix] to select subregions for prioritized construction or verification.
+• Maintain views.open_regions_by_morton for operator dashboards.
+4) Geometry Scoring & Gates
+4.1 Embedding & features
+• Windows: Lehmer‑code k=7; step∈{1,3}.
+• PCA: project to target d (e.g., 5, 7) → Z; project to P₂ for shape path.
+• Layering: define labels via (Z @ v > t), majority smoothing window 11–21.
+4.2 Objectives
+• FAST: .
+• FULL: . 
+• helicity: signed area / arclength.
+• Band‑8: octadic energy from FFT of turning angles.
+• divergence: antipodal orbit balance using per‑orbit chirality .
+• crossings: downsampled exact segment intersections (≤384–512 points).
+• hull area: convex hull area normalized by arc.
+4.3 Gates (promote staged→complete)
+• Odd‑n half‑step gate: compute ΔJ_full = J_full(layered) − J_full(pure). 
+• Accept layer split if ΔJ_full < 0 (prefer half‑step).
+• Partition gate (n=5,7): evaluate candidate partitions and prefer +1 governance if the head‑to‑head FULL score is lower than the best non‑+1.
+5) Partitioning Rules (n=5, n=7)
+5.1 Candidates
+• n=5: 4+1, 3+2, 3+1+1, 2+2+1, 2+1+1+1.
+• n=7: 3+2+2, 4+2+1, 6+1, 2+2+2+1.
+5.2 Governance (+1) semantics
+• The +1 channel acts as a universal constraints lane (laws, invariants, policy).
+• Labels from +1 are derived by median threshold + majority smoothing; transitions incur a small penalty to discourage chatter.
+5.3 Evaluation
+• For each partition group g>1: center Z_g, PCA→P₂, compute J_full(P₂).
+• For g=1 (governance): compute smoothed labels; optionally compute J_full on each label subset of the remaining d−1 dims.
+• Select winner by minimal J_full + λ_transitions + δ_parts*(#groups−1).
+6) Scheduling (Anytime Search Cadence)
+Ops:
+• G — governance threshold tweak (t).
+• S — symmetry direction tweak (v from dictionary: axes, mixed axes, randomized).
+• C — commit (checkpoint & re‑score; final FULL at milestones).
+Cadences:
+• φ‑tempo: map golden‑ratio digits → ops (1–3→G, 4–6→S, 7–9→C). Default cadence for small/medium budgets.
+• Round‑robin: deterministic G→S→C cycle.
+• Random: uniform over {G,S,C} with fixed seed.
+Budgets: B∈{9,12,15} ops typical in quick passes; larger budgets apply when running heavier FULL checkpoints.
+Selection rule: Prefer φ when early convergence is needed; fall back to round‑robin when strict determinism is desired; random for exploration baselines.
+7) Evidence, Reproducibility, & Artifacts
+Chains: Every op appends to chains with token, step, and refers_to_id.
+Snapshots: Export CSV/Parquet for all working tables at milestones (suffix _snapshot_YYYYMMDD), plus experiment‑specific outputs:
+• head_to_head_full*.csv, partition_full*_n{5|7}.csv, schedule_phi_rr_random*.csv, window embedding summaries.
+Naming conventions:
+• partition_full_exact_n{N}.csv — exact FULL per‑partition scores for dimension N.
+• head_to_head_full_exact.csv — winners (+1 vs non‑+1).
+• schedule_*_robust*.csv — schedule robustness grids.
+Seeds & params: Record PCA dims, window step, smoothing window, schedule type, budget B, and any penalties/weights.
+8) Testing Harness
+Invariants: assert uniqueness, referential integrity, Hamming‑1 edges, layer mapping, cross‑layer consistency.
+Mirror control: mirrored inputs flip the sign of signed metrics (chirality, helicity).
+Null surrogates: shuffled/Markov/block‑8/orbit‑shuffled baselines should score worse (report p‑values when applicable).
+Phase‑locking: antipodal orbits approach π shift in anti‑chiral mixtures.
+Regression tests: re‑run ΔJ gates on stored seeds to ensure stability across updates.
+9) Failure Modes & Fallbacks
+• Sparse layer segments: if either label subset < 12 samples, reduce smoothing window or adjust threshold grid; if unresolved, revert to pure embedding for that pass.
+• Crossings blow‑up: reduce downsample size for segment tests or switch to FAST during search; defer FULL to checkpoint only.
+• Partition ties: prefer simpler partition (fewer groups) when J differences are within tolerance ε; otherwise pick lower transitions.
+• Schedule stall: switch cadence (e.g., φ→round‑robin) or increase budget B by 3–6 ops.
+10) Operator Checklists
+Half‑step (odd n) — Accept/Reject
+• [ ] Compute P₂ (pure) and P₂ per‑layer.
+• [ ] Score FULL; compute ΔJ_full.
+• [ ] If ΔJ_full < 0 → accept; else reject half‑step.
+Partition (n=5,7) — Select
+• [ ] Evaluate all candidates with FULL.
+• [ ] If best includes +1 governance → prefer it; else document tie rationale.
+• [ ] Log winner, params, and CSV path.
+Schedule — Choose & Run
+• [ ] Pick cadence (φ / round‑robin / random) and budget B.
+• [ ] Run FAST in loop; FINAL FULL at the end.
+• [ ] Record ΔJ and transitions; store robustness row.
+11) Defaults & Tunables
+• Windows: k=7; step=1 (schedule), step=3 (partitions).
+• PCA dims: d∈{5,7}; keep d+1 for threshold projection.
+• Smoothing: 11–21 (layer labels).
+• Penalties: λ_transitions≈0.02; δ_parts≈0.03 (adjust conservatively).
+• Crossings downsample: ≤384–512 points.
+• Schedule budgets: {9,12,15}; φ digits as defined.
+12) Appendices
+A. Pseudocode (Ops)
+# Build build_d(d) emit D[d]; add VERT[...] (Gray), EDGE[dim=j]; validate invariants # Lift (half-step) lift(d→d+1) for b in {0,1}: LAYER[b]; duplicate nodes; add in-layer edges add cross-layer edges progressively compute ΔJ_full; if <0 mark complete; else revert # Partition score (n = 5 or 7) score_partition(Z_all, partition) for group g in partition: if g==1: labels ← smooth(median-threshold(Z_g[:,0])); add transition penalty evaluate subsets on remaining dims else: center Z_g → P₂; J ← J_full(P₂) return average J + penalties + δ_parts*(#groups-1) # Scheduling (anytime) run_schedule(B, cadence) for op in cadence[0:B]: if G: tweak t; if S: change v; if C: checkpoint final FULL commit; report ΔJ 
+B. Glossary
+• Half‑step: staged state during k→k+1 lift with layers and partial cross‑layer skeleton.
+• Governance (+1): universal constraints channel guiding splits/labels.
+• Band‑8: spectral energy at octadic frequency of turning angles.
+• ΔJ: layered − pure; negative favors the layered/partitioned structure.
+Maintenance: Keep this handbook aligned with the R&D Session Record. When you change defaults or add tests, update §§11 and 8, and append a note to the session Change Log.

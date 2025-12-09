@@ -1,0 +1,3 @@
+Policy: channel-collapse
+decagon: θ=0.00°, W=240, repair=True, K=19
+octagon: θ=1.50°, W=240, repair=False, K=30

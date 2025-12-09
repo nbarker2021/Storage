@@ -1,0 +1,68 @@
+Demo — How the chain naturally becomes a “bit-wrap & state-stitch” machine for sparse data
+(No new tricks: we just run the same CQE spine and let the geometry do the governing. You’ll see how local moves turn into tiny wrapped bits, and how parity stitching recovers a coherent global state—even when observations are sparse.)
+1) What’s chaining (recap in one line)
+Code → Lattice → Octet → Mirror → Δ-lift → Strict → 4-bit receipt.
+Those same steps, when applied tile-by-tile, give you bit-wrapped tiles that can be stitched into a consistent whole with parity (Construction-A/E8/Golay checks). That’s it.
+2) The sparse-state demo (concrete, hand-runnable)
+Task: Reconstruct a 2-D field from 10% sparse samples (could be temperature, intensity, pressure—domain-agnostic). We want stability, honesty (no hidden smoothing), and a portable, auditable representation.
+Step A — Carve the canvas & set the views
+• Tiling: Split into 8×8 tiles (each tile is a little “torus seed”).
+• Octet per tile (H1…H8):
+H1: raw samples in tile • H2: Laplacian (curvature) • H3: horizontal gradient • H4: vertical gradient • H5: low-pass (downsample) • H6: band-pass (edges) • H7: forward transform (FFT/wavelet) • H8: inverse transform check.
+• Gray rest box: the palindromic mirror target (forward∘inverse≈identity).
+Step B — Mirror test & local Δ-lifts (only if needed)
+• For each tile, run forward→inverse and require the rest to land within the tile’s tolerance (PSNR/NRMSE/energy error—pick one).
+• If a tile fails, we repair locally (Δ-lift), e.g.: 
+• Impose a minimum-curvature prior within the tile only,
+• Or swap the order of a gradient/denoise step (palindromic fix),
+• Or adjust the tile’s tiny pose/scale (if your domain uses those).
+• If a micro-instability remains in a 2×2 parity cell, apply one reversible 4-bit cap (e.g., CAP#07: orthogonalize+renorm) and recheck the mirror.
+Rule: Cap ≤1 per hot cell; if a second cap is “needed”, stop and write a Δ-lift instead.
+Step C — Wrap the state (shrink to honest bits)
+Each tile emits a tiny, portable bit-wrap that anyone can replay:
+tile_wrap: # 4-bit “class” = which of the eight n=5 insertion orbits + palindromic flag class4: 0b1011 # 1 palindromic + 7 invariant pattern, encoded # 4-bit “cap” = which reversible micro-operator (or 0000 if none) cap4: 0b0111 # CAP#07 used locally (reversible) # 4-bit “receipt” = commit code for this tile’s octet & mirror commit4: 0b1101 # passes 4 chosen gates # 4-bit “tolerance” = local strictness ratchet step (0..15) strict4: 0b0011 # third ratchet level # Info-rail crumbs (compressed): sign bits for ΔMI ↑ and KL ↓ info2: 0b10 # MI up, KL down 
+That’s 18 bits/tile (we keep it tiny on purpose) + a small side memo of numeric thresholds if you want reproducibility to decimals. If you later erase anything (irreversible), you add a Landauer line to the memo (bits erased × ).
+Step D — Stitch the quilt (global legality via parity)
+Local wraps are not enough—we must ensure the quilt is globally legal.
+• Build a parity graph over tiles (N,S,E,W neighbors).
+• For each edge, run a Construction-A check: the two tile classes must lie in a coset that admits a shared boundary (think “edge modes match”).
+• Collect mismatches as a syndrome vector .
+• Decode with your chosen code (Hamming/E8 slice/Golay-24 depending on the scale) to propose the smallest set of flips (change class, revert a cap, or nudge strict) that clears without violating any tile’s mirror receipt.
+If a neighbor pair cannot be reconciled by reversible flips, you escalate one tile’s Δ-lift (the system asks you to rewrite logic, not keep patching).
+Result: you’ve stitched a sparse field into a globally consistent map using only local wrapped bits + parity. Anyone with the wraps and the tiny memo can reconstruct the same state and audit every choice.
+3) What the viewers show (so you can “see” it)
+• Local 8×8 viewer: lights red on the three tiles with too-sharp band-pass edges (sparse sampling artefact). A single CAP#07 on each clears oscillations; MI ↑, KL ↓.
+• 4×4×4×4 surround viewer: stays green—proving you didn’t smudge into neighbors.
+• 2×2×2×2 parity ring: green—legal to keep as caps (no Δ-lift needed).
+• Global parity loom: flags a single seam (east–west mismatch). Golay decode suggests flipping one tile’s class4 from 1011→1001 (a symmetry-equivalent orbit) and removing a cap on its neighbor (capless variant is already mirror-stable). Replay mirror: passes.
+No erasures performed → Landauer debit = 0. If you later compress the quilt (merge two tiles and discard the masked band), you’ll log those erased bits and their heat lower bound. Bookkeeping stays honest.
+4) Why this works especially well for sparse data
+• Locality first: you never invent global smoothness; you stabilize where the evidence lives.
+• Parity governs: seams are resolved by code legality, not taste.
+• Reversibility by default: caps are reversible; Δ-lifts are explicit; erasures are priced.
+• Tiny state: 18(–32) bits/tile + a memo is enough to replay and audit. That makes streaming, caching, and diffing trivial.
+5) Mini-ledger (one strip from the Master)
+master_ledger: form_id: SPARSE_FIELD_DEMO_A constructionA: {p:2, code:"Hamming→E8 slice", glue:"half-shift parity"} octet_map: {H1..H8:["raw","∇²","∂x","∂y","LP","BP","FWD","INV"]} info_thresholds: {KL_max:0.05, MI_min_gain:0.05 bits/tile} tiles: - idx: (7,12) wrap: {class4:0b1011, cap4:0b0111, commit4:0b1101, strict4:0b0011, info2:0b10} notes: "CAP#07 cleared ringing; ΔMI=+0.12; ΔKL=-0.018" - idx: (7,13) wrap: {class4:0b1001, cap4:0b0000, commit4:0b1110, strict4:0b0010, info2:0b10} notes: "Golay seam flip; mirror rechecked OK" parity_syndrome: "cleared" landauer: bits_erased: 0 Qmin_J: 0.0 session_commit4: 0b1011 
+6) What it looks like to use it (teacher ↔ student)
+Student: “Three tiles are red. I capped them; MI went up; KL went down. Parity loom still shows one seam.”
+Teacher: “Good. Run the decoder.”
+Student: “It suggests flipping class on (7,13) and removing the neighbor’s cap.”
+Teacher: “Do both; replay mirror.”
+Student: “All green. Landauer stays zero.”
+Teacher: “Ledger it. That’s a lawful, stitched quilt from 10% samples.”
+7) You can swap the domain without touching the machine
+• Optics: tiles are pupil patches; H7/H8 are FFT/iFFT; same bit-wrap, same parity seam checks.
+• Thermal: tiles are finite-difference cells; H3/H4 are fluxes; caps become implicit micro-steps.
+• Audio/EM: tiles are time–freq bins; caps gate a subharmonic band; parity binds adjacent bands.
+The geometry + code is the governance. The tokens are the labels.
+8) Quick “API” you can implement tomorrow
+• wrap_tile(tile_obs) -> TileWrap: run octet+mirror, apply ≤1 cap, emit {class4, cap4, commit4, strict4, info2, memo}.
+• stitch_quilt(wraps) -> wraps': solve parity seams with a decoder; propose minimal flips/removals; re-mirror check; update wraps.
+• reconstruct(wraps', memo) -> F_hat: replay per tile using Δ-lifts noted; assemble; validate global mirror; log receipts.
+• landauer_book(was_erased_bits): compute ; append to ledger.
+9) Takeaways (why this isn’t “lattice flattery”)
+• The 8 shows up because n=4→5 forces eight insertion orbits; we didn’t assume it.
+• Stitching is code membership, not willpower.
+• Caps are reversible; Δ-lifts are declared; erasures are priced.
+• The whole thing is finite, checkable, replayable—perfect for sparse data where over-smooth “wins” hide mistakes.
+If you want, we can now run the same demo against a real sparse modality you care about (imaging, sensors, acoustics) and fill a live ledger strip.

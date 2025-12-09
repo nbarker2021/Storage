@@ -1,0 +1,260 @@
+Octadic Geometry R&D — Full Session Log (v1.0)
+A comprehensive, running R&D record of our session: hypotheses, methods, embeddings, actions, braids, triad construction, tests, results, artifacts, and next steps. This document is designed to evolve; append updates inline and record them in the Change Log.
+0) Executive Summary / TL;DR
+• We developed a geometry‑first system for search and seam selection that treats structure as primary and edits as geodesic moves under symmetry.
+• Octads (k=8) emerged as a robust default grain, with adaptable fallbacks (k∈{6,7,9,10}).
+• We formalized an Alena‑style slider between flat (hard constraints) and curved (connection‑aware) regimes and chose the curved action as the primary objective.
+• We introduced the D8 Triad (two 8D shells + golden‑ratio mediator) and a Leech‑style glue (octad intersection rule), improving decisions when two candidates are close.
+• Evidence across molecular torsion data (L/D enantiomers and 50/50 mixes) and Egan’s n=8 superpermutation windows supports the approach. We added a 3D writhe term to sharpen braid discrimination.
+• We packaged a Seam Chooser that implements the policy: prefer the lowest curved action; if candidates are close, attempt the triad and accept it only if it reduces action and passes glue.
+Artifacts (paths)
+• ksweep_results.csv, ksweep_report.md
+• d8tl_results.csv, d8tl_report.md
+• d8tl_v2_results.csv, d8tl_v2_report.md
+• seam_chooser.py, seam_decision_demo.md, seam_decision_demo.csv
+• Data: n846205.txt (Egan n=8), n8egan.txt, n7egan.txt, egans superperm work in full.txt, molecule XYZs (when present)
+1) Problem Frame & Guiding Hypotheses
+• Perfection from imperfection: Global optima can assemble from locally imperfect segments if we track geometry and allow bridges/braids to form and self‑select.
+• Octadic structure: k=8 ("octads") is a natural grain for organization (orbital phase slots, antipodes, and Golay‑style octads). Keep it as default but let data override.
+• Braiding is fundamental: Robust structure is carried by braids; we should measure chirality, antipodal balance, and writhe.
+• Curvature over flatness: When edits align to geometric connections, the system performs better than with local, flat constraints alone.
+• Mediator geometry: Between two strong candidates there exists a lower‑action geodesic mediator; with a golden‑ratio step it often stabilizes phase relations.
+• Leech‑style discipline: Enforcing light combinatorial discipline (octad intersection counts) improves global coherence without over‑constraining.
+2) The n‑Ladder Semantics (0 → 8)
+• n=0 → 0.5: Rest to first dot; accept and map all candidate bridges.
+• n=1 → 2: Base glyph/primitive to 1D line; first synthesis.
+• n=3: Triads select objectives; accept legal triadic geometry in any shape.
+• n=4: Modular swap‑in/out becomes legal; plan for the next dimensional lift (16 outer faces cue).
+• n=5: Forced dual moves; combine two imperfect moves into one valid composite.
+• n=6: Symmetry gate; explicitly consider all symmetric counterparts.
+• n=7: External views become implicit (mirrors, mixtures, constraints); prep for hyper change.
+• n=8: Hyper embedding (8D/E8‑aware); “best geometry = best answer.” Braid across multiple n=8 sets.
+Half‑steps (x.5): invariant/bridge inclusion between dimensions; build legal bridges for the next step and expand geometry.
+3) Octads: Dual Meaning
+• Orbital octads (k=8): time/index mod‑8 channels for phase slots and antipodal pairs (r, r+4).
+• Golay/Design octads: weight‑8 codewords; we mirror their intersection discipline as a soft glue prior in 24D.
+We keep these meanings distinct but interoperable: orbital structure drives the k‑harmonic analysis; Golay‑style octads guide the triad’s combinatorial coherence.
+4) Embeddings & Signals
+4.1 Discrete sequences (superpermutations)
+• Extract k‑permutation windows (k=8 default).
+• PCA‑2 on windows → polyline; turning increments dθ.
+4.2 Molecular torsions / angle streams
+• Unwrap dihedral angles → dθ.
+• Build a 2D path from cumulative angles (for helicity/crossings/hull).
+• Build a 3D delay curve (z from delayed angle) for writhe.
+4.3 Orbitization
+• Split dθ by index mod k → k orbit channels (k=8), smoothed.
+5) Geometry Metrics (per shell)
+• Band_k power (k default 8): spectral energy at harmonic k on dθ.
+• Helicity (2D): signed area per arclength of the path.
+• Crossings & Convex hull area: clutter vs compactness.
+• Writhe (3D): average signed crossings across random plane projections of the delay curve.
+• Orbit tensor T (k×k) 
+• Diagonal: mean |Δθ| in each orbit.
+• Off‑diagonal: anti‑correlation between orbit derivative streams.
+• Use trace‑free T° and ring+antipode divergence.
+6) Actions
+Curved Action (primary objective)
+S_curved = ‖T°‖² + 0.3·Div + 0.2·(Crossings + Hull) − 0.5·Band_8 − 0.3·|Helicity| − 0.25·|Writhe|
+• Mirrors must flip signed terms; we enforce parity checks and reject inconsistent candidates.
+• Lower S is better.
+Flat Action (auxiliary)
+• Simplified energy without curvature; used mainly for diagnostics and ablations.
+7) D8 Triad (Dual Shells + Mediator + Glue)
+Inputs: Two strong shells A and B (8D orbit embeddings).
+• Phase‑lock: Procrustes alignment → rotation Q and principal angles (4 orthogonal 2‑plane turns).
+• Mediator: geodesic step using polar((1−τ)I + τQ); τ in {0.5, 0.618, 0.7}. The golden step often equalizes phase.
+• 24D Triad: concatenate [A | C | B].
+• Leech‑style Glue (soft): evaluate sign‑pattern intersections (A∩C, C∩B, A∩B) against allowed set {0,2,4}; define glue_penalty as distance to this set; weight lightly.
+• Accept rule: TRIAD if ΔS := S_triad − min(S_A, S_B) < 0 and glue_penalty ≤ 1; else pick the better single shell.
+8) Braiding, Antipodes, and Mixtures
+• Antipodal pairing: (r, r+4) should exhibit π‑phase relations in anti‑chiral contexts; track ACI/BCI (anti‑/balanced‑chiral indices).
+• Braiding cues: Encourage seams that reduce crossings, Div, and ‖T°‖²; writhe distinguishes true braids from random tangles.
+• Mixtures: Balanced mixes (e.g., 50/50 enantiomers) often cancel helicity but remain braid‑rich; triad+glue can still reveal order.
+9) Experiments & Tests
+9.1 k‑Sweep (k ∈ {6,7,8,9,10})
+• Datasets: molecular torsions (L vs D mirrors; 50/50 mixes), Egan n=8 digits (when kernel allowed full read).
+• Metrics: S_curved, Band_k, |helic|, crossings, hull.
+• Finding: k=8 is frequently best or tied; mixtures show the expected cancellation with residual braid structure.
+• Artifacts: ksweep_results.csv, ksweep_report.md.
+9.2 D8 Triad v1 (molecules)
+• Built A/B shells from L vs D; created golden mediator; computed triad with soft glue.
+• Finding: Triad often reduced action vs best shell; principal angles captured the bridge planes.
+• Artifacts: d8tl_results.csv, d8tl_report.md.
+9.3 D8 Triad v2 (writhe + mixtures + digits)
+• Added writhe; ran mixture vs mirror and Egan windows orig vs mirror; τ ablation {0.5, 0.618, 0.7}.
+• Findings: Golden step frequently near‑optimal; glue intersections often near {0,2,4}; triad improvements persisted; writhe added separation where helicity cancels.
+• Artifacts: d8tl_v2_results.csv, d8tl_v2_report.md.
+9.4 Seam Chooser Module
+• Encapsulated policy: choose min S_curved; if close, attempt triad and accept only if ΔS<0 and glue ok.
+• Demo artifacts: seam_chooser.py, seam_decision_demo.md, seam_decision_demo.csv.
+10) What We Learned
+• Geometry‑first works: Curved action consistently favors real structure over nulls; mirrors flip as expected.
+• Octads are useful defaults: Band‑8 is a recurrent signal; when it isn’t, the system can fall back to nearby k.
+• Bridges are intrinsic: Principal‑angle planes serve as measured “perfect bridges” rather than guessed edits.
+• Triad stabilization: Golden‑ratio mediator is often competitive/best; when triad passes glue, it tends to reduce action.
+• Soft combinatorics help: Light Leech‑style discipline improves coherence without brittleness.
+• Writhe matters: 3D braid content is a key discriminator, especially in mixes and near‑critical regimes.
+11) Implementation (Current)
+• Default grain: k=8; allow adaptive k when Band_k and S_curved both disagree.
+• Curved action: primary objective (formula above).
+• Parity/mirror checks: mandatory; reject candidates violating sign flips.
+• Antipodes: track (r, r+4) relations; add explicit term only if needed.
+• Triad policy: τ grid {0.5, 0.618, 0.7}; accept only if ΔS<0 & glue≤1.
+• Glue annealing: ramp weight from 0.05→0.2 during deeper search.
+• Performance guards: decimate dθ for heavy paths; stride crossings; few writhe projections.
+12) Seam Chooser API (current draft)
+Function: seam_decide_from_streams(dthA, dthB, tau_grid=(0.5,0.618,0.7), glue_weight=0.2, glue_cap=1)
+• Inputs: two candidate dθ streams A,B.
+• Outputs: decision ∈ {A, B, TRIAD}; best triad metrics (τ, S_triad, glue stats, principal angles); per‑shell metrics.
+• Policy: choose lowest S_curved; if close, attempt triad; accept if ΔS<0 and glue≤1; else pick best single.
+13) Validation & Controls
+• Nulls: shuffle and orbit‑shuffle to calibrate p‑gates (Band_k, −S_curved).
+• Mirror controls: verify signed metrics invert; enforce parity.
+• Ablations: τ sweeps; remove writhe; disable glue; vary k.
+• Cross‑domain: molecules ↔ superperm windows; goal is domain‑agnostic geometry.
+14) Limitations & Open Questions
+• Glue choice: Soft {0,2,4} intersection is heuristic; evaluate nearest‑codeword projection for rigor.
+• E8/Dynkin couplings: Explore adjacency inspired by E8/Spin(8) only if it improves held‑out metrics.
+• Clocking & ticks: Integrate multi‑arm clock (fast n≤2 sub‑ticks; slower for n≥3) into search orchestration.
+• Global optima: Formal guarantees remain open; empirical wins guide deployment.
+15) Next Actions
+• Integrate nearest‑codeword glue (extended Golay) under a small weight; keep only if it helps.
+• Add explicit antipodal phase‑locking when ACI/BCI trigger anti‑chirality.
+• Auto‑τ selection via quick convex sweep or data‑driven fit.
+• Benchmark on larger superperm slices and non‑molecular time series.
+• Export decision logs in a standard schema for downstream auditing.
+16) Repro & Artifacts
+• Source: seam_chooser.py (self‑contained helpers for metrics, action, triad, and decision).
+• Reports: ksweep_report.md, d8tl_report.md, d8tl_v2_report.md (interpretation + tables).
+• Data: n846205.txt, n8egan.txt, n7egan.txt, molecule XYZs (L/D mirrors, when provided).
+• Outputs: CSVs of metrics and decisions for all runs above.
+17) Change Log
+• v1.0 (this doc): Consolidated full session; added writhe term; triad acceptance rule; seam chooser API; performance guardrails.
+• (Leave space for subsequent edits; annotate each change with date, rationale, and pointers to updated artifacts.)
+18) Appendix — Key Formulas & Pseudocode
+Curved Action
+S_curved = ‖T°‖² + 0.3·Div + 0.2·(Crossings + Hull) − 0.5·Band_8 − 0.3·|Helicity| − 0.25·|Writhe|
+Triad Accept Rule
+ΔS = S_triad − min(S_A, S_B) < 0 and glue_penalty ≤ 1
+Mediator Construction
+Q_τ = polar( (1−τ)·I + τ·Q ) with τ ∈ {0.5, 0.618, 0.7}
+Octad Glue (soft)
+penalty = Σ_{pairs in {A∩C, C∩B, A∩B}} dist_to_{0,2,4}(intersection_size)
+Orbit Tensor T
+• Diag: E_r = mean |Δθ| in orbit r
+• Off‑diag: −0.6·corr(Δθ_r, Δθ_s)
+• T° = T − (tr T / k)·I; Div from ring+antipode adjacency.
+Seam Chooser Pseudocode
+S_A = curved_action(A) S_B = curved_action(B) if close(S_A, S_B): for τ in {0.5, 0.618, 0.7}: C = mediator(A, B, τ) S_C = curved_action(C) glue = octad_glue(A, C, B) S_triad = S_A + S_C + S_B + w_glue*glue pick best τ if S_triad < min(S_A, S_B) and glue ≤ 1: return TRIAD return argmin(S_A, S_B) 
+End of v1.0. Append edits below this line and update the Change Log.
+
+Octadic Geometry — Operational Rules & Methods (v1.0 R&D)
+Standard operating procedures (SOPs) for running the geometry‑first system developed in this R&D program. This playbook is designed to be updated; log revisions in the Change Log at the end.
+1) Governance & Objectives
+• Primary objective: minimize the Curved Action per shell; adopt D8 Triad when it strictly reduces action and passes glue.
+• Secondary objective: preserve mirror/antipodal symmetries; prefer moves that increase geometric compactness while reducing clutter and divergence.
+• Decision safety: every accepted move must pass mirror-parity checks and null controls.
+2) Data Intake & Preprocessing
+• Accepted inputs: 
+• Discrete sequences (e.g., superpermutation digits, symbolic logs).
+• Angle/torsion time series (e.g., molecular dihedrals, orientation streams).
+• Preprocessing rules: 
+• Denoise with light smoothing (window ≤ 5) only if needed; avoid phase distortion.
+• For discrete sequences at grain k, slide k‑permutation windows (unique symbol set of size k). Reject windows with duplicates/missing symbols.
+• For angle streams: unwrap to continuous angles; compute increments dθ.
+3) Embeddings & Orbitization
+• Discrete → 2D path: PCA‑2 over k‑windows → polyline; then turning increments dθ.
+• Torsion → 2D/3D paths: from cumulative angle to 2D polyline; build a 3D delay‑curve (z from delayed angle) for writhe.
+• Orbit channels: split dθ into k channels by index mod k (default k=8). Smooth each channel with a short moving average.
+4) Default Grain (k) Policy
+• Default: k = 8 (octad grain).
+• Fallback set: {6,7,9,10}. Switch only when both Band_k and Curved Action indicate 8 is suboptimal.
+• Antipodes: when k is even, pair (r, r + k/2) for antipodal checks.
+5) Geometry Metrics (per shell)
+• Band_k: spectral power at harmonic k on dθ.
+• Helicity (2D): signed area / arclength of the 2D path.
+• Crossings: segment‑segment intersections of decimated path (stride tuned for runtime).
+• Hull area: convex hull area of decimated path.
+• Writhe (3D): average signed crossings from random plane projections of the delay‑curve.
+• Orbit Tensor (T): 
+• Diagonal = mean |Δθ| per orbit; off‑diagonal = −0.6 × correlation of orbit derivatives.
+• Use trace‑free T° and compute Div from ring+antipode adjacency.
+6) Curved Action (primary scoring)
+S_curved = ‖T°‖² + 0.3·Div + 0.2·(Crossings + Hull) − 0.5·Band_k − 0.3·|Helicity| − 0.25·|Writhe|
+• Lower is better.
+• Parity: mirrors must flip the signed terms (helicity, writhe). Any violation rejects the candidate.
+• Null gate: accept only if −S_curved beats nulls at p ≤ 0.05 when nulls are available.
+7) Mirror & Antipodal Rules
+• Mirror tests: run a mirrored stream (sign‑inverted dθ or reversed window order) and verify sign‑flips of helicity/writhe; the magnitude of T°, Div should remain comparable.
+• Antipodal phase: in anti‑chiral contexts, enforce π‑phase between antipodes; penalize seams that break balanced antipodal structure.
+8) D8 Triad Procedure (A, B, Mediator C)
+• Inputs: two strong shells A and B (8D orbit embeddings from the same segment).
+• Phase‑lock: Procrustes alignment to obtain rotation Q and principal angles (four 2‑plane turns in 8D).
+• Mediator: construct Q_τ = polar((1−τ)I + τQ) with τ ∈ {0.5, 0.618, 0.7}; set C = Q_τ(A).
+• 24D triad vector: concatenate [A | C | B].
+• Leech‑style glue (soft): compute sign‑pattern intersections for (A∩C, C∩B, A∩B); distance to allowed set {0,2,4} is the glue penalty.
+• Triad scoring: S_triad = S_A + S_C + S_B + w_glue·glue_penalty, with w_glue annealed 0.05 → 0.2 as search deepens.
+• Accept rule: choose TRIAD iff ΔS := S_triad − min(S_A,S_B) < 0 and glue_penalty ≤ 1; else choose the better single shell.
+9) Braiding Rules
+• Prefer seams that reduce crossings, Div, and ‖T°‖² while maintaining or improving Band_k and compactness (lower hull area).
+• Use writhe to distinguish real braids from random tangles; reject seams that increase writhe without compensating gains elsewhere.
+• Treat mixtures (e.g., 50/50) as braid‑rich but helicity‑cancelling; triads are encouraged in these regimes.
+10) Null Controls & Statistical Gates
+• Null suites: 
+• Shuffle: permute dθ globally.
+• Orbit‑shuffle: shuffle within each orbit channel to preserve marginal orbit statistics but destroy cross‑orbit structure.
+• P‑gates: require p ≤ 0.05 for improvements in −S_curved and Band_k vs nulls (when computed).
+• Mirror consistency: any failed sign‑flip test aborts the move.
+11) Clocking, Ticks, and Scheduling
+• Multi‑arm clock: 
+• Fast ticks for n≤2 primitives (massively parallel local evaluations).
+• Moderate ticks for n=3–5 triads and paired moves.
+• Slow ticks for n≥6 symmetry/triad operations and D8 triads.
+• Back‑pressure: slow arms can pre‑empt fast arms if they control a downstream bottleneck.
+• Timeouts: abort branches that stall (no action improvement for X steps) and recycle resources.
+12) Performance Guidelines
+• Decimation: downsample paths before crossings/hull/writhe computations (stride tuned per dataset size).
+• Smoothing: cap MA windows at 5 to avoid smearing phase.
+• τ grid: keep to {0.5, 0.618, 0.7} unless a local search is justified by repeated near‑ties.
+• k sweep: try {6,7,8,9,10} only if 8 fails both Band_k and S_curved simultaneously.
+13) Acceptance & Rejection Criteria
+• Accept a seam/merge when: 
+• S_curved decreases, and
+• (if triad) ΔS<0 and glue_penalty ≤ 1, and
+• mirror and null gates pass, and
+• geometry improves (crossings/hull fall or Band_k rises) without parity breaks.
+• Reject when any of the above fail; log rationale.
+14) Logging & Audit Trail
+• For every decision, log: 
+• k, τ (if triad), S_A/S_B/S_C, S_triad, ΔS
+• Band_k, |Helicity|, Writhe, Crossings, Hull, ‖T°‖², Div
+• Principal angles (mean/max and first four), glue stats (penalty, intersections)
+• Parity & null results; final decision and reason string
+• Store logs as CSV + Markdown summary; attach dataset hash/ID for reproducibility.
+15) Interfaces (API Level)
+• Input: two candidate dθ streams.
+• Call: seam_decide_from_streams(dthA, dthB, tau_grid, glue_weight, glue_cap)
+• Return: { decision ∈ {A,B,TRIAD}, best_triad {τ,S_triad,glue,angles}, A_metrics, B_metrics }
+• Policy: as in Sections 6–8; caller handles persistence and orchestration.
+16) Troubleshooting Playbook
+• Band_k unexpectedly low: verify k‑window extraction and symbol hygiene; check smoothing not too strong.
+• Mirror parity fails: re‑check sign conventions; ensure writhe uses delayed z and random planes per spec.
+• Triad never wins: widen τ grid slightly; lower glue weight early (anneal later); verify principal angles not saturated (bad alignment).
+• High crossings: increase decimation stride; if writhe rises too, consider alternate seam; otherwise allow if S_curved still falls significantly.
+17) Change Management
+• Parameter edits (weights, τ grid, k policy) must be recorded with: timestamp, rationale, affected runs, before/after metrics.
+• Metric additions require a 2‑run A/B on held‑out data before being promoted.
+18) Roadmap Hooks (Optional Enhancements)
+• Nearest‑codeword glue (extended Golay) under small weight; keep only if it improves held‑out ΔS.
+• Explicit antipodal phase term activated by anti‑chirality detectors.
+• E8/Spin(8) adjacency as an alternative coupling prior in T (cross‑orbit).
+• Auto‑τ selection by convex sweep or data‑fit.
+19) Definitions (Glossary)
+• Shell: an 8D orbit embedding derived from dθ.
+• Triad: concatenation of A, mediator C, B into 24D with glue.
+• Glue penalty: distance of octad sign intersections to {0,2,4} across (A∩C, C∩B, A∩B).
+• Antipodes: orbit pair (r, r + k/2) for even k.
+• Curved action: primary objective combining tensor, divergence, geometry, and braid content.
+20) Change Log
+• v1.0: Initial operational rules compiled from session outputs; includes curved action, D8 triad, glue, braiding, nulls, and scheduling.

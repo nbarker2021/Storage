@@ -1,0 +1,91 @@
+Section 17 — Stitch Flips & Global Consistency
+Choosing minimal fixes across many seams, staying mirror-safe, and never deadlocking.
+🔹 Warm-up Q&A
+Q: Why can’t I just fix each red seam locally and move on?
+A: Local minima can fight: two adjacent fixes may re-light each other (phase wrap vs. gauge flip), or drift your chamber out of the intended coset. We need a global chooser.
+Q: What “global” do we actually track?
+A: Three invariants:
+• Mirror (frontier rest after each wave),
+• Octet balance (no persistent tilt to any face),
+• Coset parity (Construction-A evenness + glue half-shift).
+Q: How do we decide among several minimal corrections?
+A: Score each candidate with a viewer energy + strict locks + parity budget cost. Pick the set that minimizes total cost and preserves invariants.
+🔹 Objects on the table
+• Seam graph : = patches/tiles; = seams (spokes or belt edges).
+• Red set : seams with non-zero syndrome (strip: Hamming-8/4; belt: Golay-24).
+• Candidates per seam : 
+• Hamming strip: one single-bit flip or (rarely) a two-bit extended parity flip.
+• Golay belt: one or more octads whose XOR solves the belt syndrome.
+• Locks: edge flags cap, strict_gold, fresh_delta (from prior Δ-lift).
+• Budgets: 
+• Octet balance (net flips touching each face).
+• Coset parity (evenness of total flip weight per ring).
+• Viewer energy : your seam viewer’s scalar (lower is better).
+🔹 Costing a candidate fix
+For a seam with candidate correction (bit flip or octad union), define:
+\mathrm{cost}(e,c)= \underbrace{\Delta E_{\text{view}}(e,c)}_{\text{what the viewer feels}} \;+\; \lambda_{\text{strict}}\cdot \underbrace{\#\text{locked\,edges}(c)}_{\text{don’t touch gold}} \;+\; \lambda_{\text{octet}}\cdot \underbrace{\|\tilde b + \delta_b(c)\|_1}_{\text{octet balance}} \;+\; \lambda_{\text{coset}}\cdot \underbrace{\mathbf{1}[p\oplus \mathrm{wt}(c)\bmod 2=1]}_{\text{evenness}}. 
+• : predicted drop in seam/belt energy after applying .
+• : hard penalty if any strict-gold edges are touched.
+• : +1 to each face index touched by .
+• : Hamming weight (bits flipped); coset stays even.
+• Coefficients : start with and tune—strict > parity > balance.
+🔹 The chooser (wave scheduling)
+Step 0 — Build conflict sets
+Two candidates conflict if they touch the same edge or their coset/parity effects would break evenness together. Make a conflict graph over candidates.
+Step 1 — Color for parallelism
+Greedy color so candidates with same color class don’t conflict—these can be applied in parallel (GPU-brain friendly).
+Step 2 — Pick minimal cover per wave
+Within a color class, choose the minimum-cost subset that covers all seams in without violating budgets. Heuristics:
+• Strips (Hamming-8/4): independent; pick the single-bit fix with lowest cost per seam.
+• Belts (Golay-24): small hitting set: 
+• From the syndrome table, enumerate 1–3 octad unions.
+• Score each union; prefer fewer octads, fewer touched edges, lower .
+• If adjacent belts share edges, stagger them into different color classes.
+Step 3 — Two-phase commit (no deadlocks)
+• Propose: publish the chosen set with receipts (dry-run).
+• Fence: frontier mirror check—if any fence fails, abort that candidate only and pick next best.
+• Commit: apply legal equivalences (relabel, wrap, gauge flip); write commit-4.
+• Re-mirror: run the pal rest on the entire frontier ring.
+Deterministic tie-breakers
+If two candidates tie on cost, pick the one with lexicographically smaller (seam_id, hash(c)). The hash is a public salt for reproducibility.
+🔹 Receipts (how we prove we did the right thing)
+For each committed seam/belt:
+seam_or_belt_id: … code: H8/4 | G24 syndrome: … candidate: <bit index> | <octad ids> cost: ΔE=…, locks=…, Δbalance=…, coset_ok=true frontier_mirror: pass commit4: bXYZ 
+At wave level, summarize:
+wave_id: t+17 class: color=2 touched: 7 strips, 2 belts global: ΔE_total=-63%, balance=[…], coset_ok=true ledger_hash: … 
+🔹 What this looks like (three scenes)
+1) Optics tiling — “chequer ghosting” collapses
+• Before: Every other spoke shows faint fringes; belts mildly amber.
+• Wave 1: All strips propose bit-6 (wrap) flips. Two conflict; colored into class-1/2.
+• Fence: Class-1 passes mirror; class-2 trips on a belt. The belt escalates to Golay in next wave.
+• After: Strips green; one belt amber. Total ΔE −48%. Coset even.
+2) Thermal chassis — “barber-pole” around ring
+• Before: 24-edge belt alternates bright/dim.
+• Candidates: , , .
+• Pick: Single octad wins (fewest edges, lowest ΔE).
+• Fence: Mirror passes; no strict gold touched.
+• After: Belt uniform; ΔT/tick variance halves; balance nudges +1 on face H4.
+3) Spin/EM slab — “chirality drift”
+• Before: Subharmonic ½-beat rising along two adjacent seams.
+• Plan: Pre-emptive Hamming on both seams, colored apart.
+• Commit: Gauge flip on seam-A, relabel on seam-B.
+• After: ½-beat sentinel clears; SU(2) viewer flat. Coset ok; balance unchanged.
+🔹 Deadlock & oscillation cures
+• Ping-pong pair: If two neighboring seams re-ignite each other across waves, escalate to a belt Golay pass that picks an octad covering both edges—one larger move, then quiet.
+• Budget drift: If octet balance grows across waves, inject a budget correction candidate that flips display-only on under-represented face(s).
+• Fence flaps: If mirror routinely fails on propose, lower class size (more color classes) so waves are smaller but steadier.
+🔹 Safety rails (unchanged, enforced)
+• Only legal equivalences at seams (labels/phase/gauge); no unit changes, no erasures.
+• One touch per seam per wave.
+• Frontier re-mirror after every class commit.
+• Strict ratchet only after a pass, and by one notch.
+🔹 Pocket pseudocode (you can run this by hand or script)
+input : seam set R, viewer, budgets (balance b, coset p) output : committed fixes + receipts C := enumerate_candidates(R) # Hamming flips / Golay octads H := conflict_graph(C) # edge overlap + coset coupling classes := greedy_color(H) for cls in classes: S := select_min_cost_cover(cls, viewer, b, p) propose(S); if not frontier_mirror_ok(S): S := fallback(S) commit_equivalences(S) ledger_receipts(S) (b,p) := update_budgets(S) remirror_frontier() tighten_strict_if_passed() 
+🔹 Exercises
+• Local vs. global: Create three adjacent red seams; show that fixing each with its lowest local cost re-lights a neighbor. Then run the chooser; document ΔE and mirror outcomes.
+• Belt contention: Two belts share 4 edges; build syndromes that overlap. Color the candidates; show how staggering avoids deadlock.
+• Budget rescue: Force a run that drifts balance onto H2/H3; design a display-only correction restoring neutrality without changing units.
+• Fence discipline: Intentionally pick a high ΔE candidate; watch the fence abort and the fallback succeed. Record receipts.
+🔹 Where this leaves us
+You can now coordinate many seam fixes in waves, keep mirror/octet/coset invariant, avoid deadlocks, and produce auditable receipts.
+Next section: Global Promotion & Consolidation — when repeated local patterns harden into playbooks (meaning packs), how we promote them without losing the ledger trail, and how strict ratchets become service levels for production runs.
