@@ -1,0 +1,36 @@
+Here’s a compact “field guide” to quantum pinning across the main platforms where it shows up, with concrete data/observables and primary sources you can dig into.
+Superconductors: quantum pinning of vortices (quantum creep)
+What’s pinned? Abrikosov vortices in type-II superconductors get trapped by disorder/defects.
+Quantum signature. When thermal activation is frozen out, creep of vortices becomes temperature-independent due to tunneling through the pinning barriers (quantum creep). Measured via magnetization relaxation and AC linear response (Campbell penetration depth). 
+• Tunneling rates & control parameter. Weak-collective-pinning theory gives a WKB rate controlled by dissipation; a key dimensionless parameter is ρn/ξ (normal-state resistivity over coherence length). Strong tunneling when ρn/ξ ≳ 1 kΩ (order-of-magnitude criterion). 
+• Data trend (recent). In single crystals, flux creep initially increases the effective Labusch curvature (κ) as vortices re-trap into deeper wells; this shows up in the Campbell penetration depth vs T and drive amplitude at low T. (Linear AC response; 2025 PRB.) 
+• Temperature-independent creep observed: magnetization (or resistive) relaxation rates flatten as T → 0, consistent with vortex tunneling rather than Arrhenius activation. (Early experiments & analyses.) 
+• Theory toolkits. Path-integrals for vortex tunneling with Hall/dissipative dynamics; quantum collective creep of single vortices and bundles. 
+Charge-density waves (CDWs): quantum depinning
+What’s pinned? The CDW phase ϕ is pinned by random impurities; sliding requires overcoming a threshold field .
+Quantum signature. Macroscopic quantum tunneling (MQT) of the CDW phase over the pinning landscape produces depinning below the classical threshold and modifies I–V at low T. 
+• Models & data links. Fukuyama–Lee–Rice (FLR) gives pinning frequency and σ(ω) in strong/weak pinning; Bardeen’s tunneling theory relates MQT parameters to FLR and explains the near-uniform current density except near threshold. Threshold field’s T-dependence and microwave pinning modes are key observables. 
+• What to look for in experiments. Sub-threshold conduction at millikelvin temperatures; switching/noise in sliding; pinning-mode resonances shifting with disorder and field. Contemporary measurements (e.g., ZrTe₃) analyze the pinning dynamics and threshold evolution. 
+Electron crystals (Wigner solids): quantum pinning in the quantum Hall regime
+What’s pinned? The Wigner solid (WS) of electrons at very low Landau-level fillings is pinned by residual disorder.
+Quantum signature. A pinning mode—a microwave/RF resonance of WS domains oscillating in the pinning potential; nonlinear I–V with distinct dynamical phases and noise signatures as current exceeds depinning thresholds. 
+• Representative data (GaAs 2DES). Multiple transport/noise regimes with current thresholds: (P1) pinned (low noise), (P2) intermittent sliding (huge noise, sign changes), (P3) steady sliding (noise reduced). Frequencies and thresholds shift with density and nearby FQH states. (2019 Sci. Adv.; 2023–2024 PRL/arXiv). 
+Magnetic skyrmions: quantum pinning & depinning
+What’s pinned? Skyrmions trapped by atomic-scale defects in chiral magnets.
+Quantum signature. At ultralow T and small skyrmion size, level quantization in a pinning well (splitting of the lowest Landau level) and quantum depinning via tunneling; detectable by microwave absorption (level transitions) and by deviations from thermal depinning laws. 
+• Theory results. Universal WKB exponent for the tunneling rate; crossover temperature separating thermal vs quantum depinning; enhanced quantum effects for small skyrmions (large Dzyaloshinskii–Moriya interaction). 
+(Bonus) Moiré & generalized Wigner crystals: zero-T depinning
+What’s pinned? Commensurate/incommensurate electron crystals on periodic substrates (moiré).
+Quantum signature (numerical/low-T). Strongly pinned states at commensurate fillings with finite depinning thresholds; reduced thresholds (easier depinning) when incommensurate—capturing the quantum zero-T limit where thermal fluctuations are irrelevant. (Phys. Rev. Research 2025, simulations). 
+How to recognize “quantum pinning” in data
+• T-independent creep/relaxation at the lowest temperatures (vortices, CDWs). 
+• Microwave/RF pinning modes with sharp resonances and disorder-dependent frequencies (WS, CDWs). 
+• Threshold behavior & noise: nonlinearity, telegraph noise, intermittent sliding near depinning (WS, CDWs). 
+• Quantum-tunneling exponents & : fits to WKB rates, crossover from Arrhenius to T-independent regimes (vortices, skyrmions, CDWs). 
+Good starting references (mix of classic & recent)
+• Superconducting vortices: Blatter et al., PRL 66, 3297 (1991) — quantum collective creep; experiments on T-independent creep. 
+• CDWs: Fukuyama–Lee–Rice, PRB 17, 535 (1978); Bardeen, Physica D 20, 222 (1986); Z. Phys. B 69, 337 (1987). 
+• Wigner solids (QH): Hatke et al., Sci. Adv. 5, eaao2848 (2019); Madathil et al., PRL 131, 236501 (2023). 
+• Skyrmions: Lin & Bulaevskii, PRB 88, 060404(R) (2013) & arXiv:1304.7322; Psaroudaki et al., PRL 124, 097202 (2020). 
+• Overview challenge piece: Eley et al. (2021) on open problems in vortex physics—what we don’t yet know about quantum creep scaling. 
+If you want, I can pull PDFs and extract specific numbers (e.g., pinning-mode frequencies vs density, measured creep exponents, fitted WKB barriers) into a small comparison table.

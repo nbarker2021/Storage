@@ -1,0 +1,177 @@
+Section 0 — First Contact
+“What it looks like, in the room, with your hands on it.”
+(I’m both your instructor and your inner student. I’ll switch voices so you can feel the rhythm of doing this for real.)
+Scene 1 — The table
+Teacher (T): You walk into a quiet room. Big table. No laptops required. On it:
+• a stack of small token cards (3×5 index cards);
+• a DNA-10 sheet (ten checkboxes: timing, polarity, scale, pose, domain, conditioning, units, precision, cost, seed);
+• an octet overlay sheet (eight colored boxes in a ring, plus a gray box in the center labeled REST);
+• a mirror table (two columns: forward →, backward ←, with a narrow “residual” column between);
+• a Δ-lift cookbook page (a tiny list of allowed “local fixes”);
+• a strict ratchet strip (a place to write tolerances that only get tighter);
+• a receipts ledger (date, what passed, what failed, a short hash);
+• a 4-bit commit strip (four little squares you can shade);
+• and an 8-peg parity loom (a foam board with eight pegs around a circle, plus a bit of string).
+Everything is color-coded:
+• Gray for REST,
+• Eight hues for the views,
+• Red for Δ-lifts (local repairs),
+• Gold for strict thresholds,
+• Blue for receipts.
+Student (S): It looks like a craft table for math.
+T: Exactly. Section 0 is about the feel of CQE. You’ll touch every piece once, end-to-end, on something simple and non-controversial. Then, in later sections, we point this same machine at heavy topics.
+Scene 2 — The one-minute story (what CQE is)
+T: CQE runs in five moves:
+• Stand-ins — write tiny, bounded measurement tokens (quantity, unit, guardrails).
+• DNA-10 — snapshot the state (timing, polarity, scale, pose, domain, conditioning, units, precision, cost, seed).
+• Octet — look at 8 independent views of the same thing.
+• Mirror — go forward then backward (or swap order) and demand they rejoin at REST within a tolerance.
+• Δ-lift → Strict → Receipts → 4-bit — repair locally (red), tighten tolerances (gold), log tiny receipts (blue), and only then shade a 4-bit commit.
+S: So… do eight things, check symmetry, fix locally, get a tiny receipt?
+T: You’ve got it.
+Scene 3 — A tiny world we can finish today
+T: We’ll calibrate a household thermometer. No physics degree needed.
+• Ground truth: ice-water bath at 0.0 °C; body-temp bath at 37.0 °C.
+• Your thrift-store thermometer reads a little off.
+3.1 Stand-ins (token cards)
+You write three cards:
+• tok-ice — quantity: temperature, value: 0.0 °C, guard: ±0.2 °C window
+• tok-body — quantity: temperature, value: 37.0 °C, guard: ±0.3 °C window
+• tok-therm — quantity: reading, unit: °C, drift: unknown, bias: unknown
+(Notice: nothing metaphysical. Just units and guards.)
+3.2 DNA-10 (state snapshot)
+You tick boxes:
+• timing: same day, morning; polarity: normal (no inverted scale)
+• scale: 0–50 °C; pose: immersed 5 cm; domain: kitchen / fluids
+• conditioning: stirred baths, steady 60 s; units: SI; precision: 0.1 °C marks
+• cost: negligible; seed: 2025-S0-T1 (any tag you like)
+S: Why write seed?
+T: So a re-run can reproduce your exact setup.
+Scene 4 — The octet (eight views)
+You draw the eight colored boxes around the gray REST. We’ll fill them with independent views that could disagree if something’s wrong:
+• V1 (purple): Ice bath, 60 s settle, read.
+• V2 (teal): Ice bath, 120 s settle, read.
+• V3 (orange): Body bath, 60 s settle, read.
+• V4 (blue): Body bath, 120 s settle, read.
+• V5 (magenta): Ambient 22 °C spot-check (reference digital probe).
+• V6 (green): Fahrenheit side → convert to °C (forward).
+• V7 (gold): °C → F → back to °C (round-trip).
+• V8 (red): Slight depth change (3 cm) in body bath (pose sensitivity).
+S: Eight feels arbitrary.
+T: It’s deliberate coverage. You want different failure modes, not eight clones of the same reading.
+You run them and jot raw numbers (you can imagine the physical readings):
+• V1: +0.5 °C; V2: +0.3 °C
+• V3: 36.2 °C; V4: 36.3 °C
+• V5: 21.7 °C vs reference 22.0 °C
+• V6: F-scale reads 97.8 °F → 36.6 °C
+• V7: 36.6 °C → 97.88 °F → 36.6 °C (round-trip stable)
+• V8: 36.0 °C (shallower dip)
+You color each box and write the number inside.
+Scene 5 — The mirror
+T: The mirror is a palindromic check: do forward and backward transforms undo each other within a set tolerance?
+Here, you use the mirror table:
+Forward (°C→°F)Back (°F→°C)Residual36.6 → 97.8897.88 → 36.600.00 °C0.3 → 32.5432.54 → 0.300.00 °C 
+Your chosen mirror tolerance (gold pencil) is ±0.05 °C on round-trip.
+S: We pass that easily. But some views disagree with ground truth.
+T: Good eye. Mirror ≠ truth; it’s a consistency check. We still need the Δ-lift to repair bias.
+Scene 6 — Δ-lift (local repair) and strict ratchet
+T: Your ice readings are +0.5 and +0.3. Body readings are −0.8 to −0.7 off. That smells like a linear bias + small slope error.
+Your allowed Δ-lifts (on the red page) for this lab are:
+• Δ1: Additive bias (shift all readings by constant b)
+• Δ2: Two-point affine (map thermometer scale by y′ = a·y + b)
+• Δ3: Pose compensation (add +0.2 °C when depth < 5 cm)
+You pick Δ2 and solve it by hand with the two anchors:
+• Want: T*(0 °C) = 0.0; T*(36.3 °C) = 37.0
+• Solve for a, b so that a·0 + b = 0 → b = 0 (nice), and a·36.3 = 37.0 → a = 1.01928…
+So your repaired reading is T = 1.0193·T*.
+You apply it:
+• Ice V1: 0.5 → 0.51 °C (still off a hair because the true ice was 0.0; that tells you the first datum had settle error)
+• Ice V2: 0.3 → 0.31 °C
+• Body V3/V4: 36.2/36.3 → 36.9/37.0 °C
+• Ambient V5: 21.7 → 22.1 °C (closer to 22.0)
+• V8 shallow 36.0 → 36.7 °C → apply Δ3 +0.2 for shallow pose → 36.9 °C
+Strict ratchet: You write a gold line: “After Δ2, ice residual ≤ 0.3 °C, body residual ≤ 0.2 °C, round-trip residual ≤ 0.05 °C.” Next time you pass, you’ll tighten further; you never loosen.
+S: We didn’t force perfection on ice. That’s allowed?
+T: Yes. Strictness is monotone: only tighter after a pass. No heroics.
+Scene 7 — Receipts and the 4-bit commit
+You open the receipts ledger (blue):
+• OPE debt (outside-parity error, i.e., mismatch across different views): 0.18 (dimensionless small score you compute from residuals; don’t overthink the formula today)
+• FCE debt (forward-cycle error): 0.01
+• Votes: mirror 24/24, views 56/64 (enough)
+• Residues: ice settle variance noted; shallow pose compensated
+• Δ-lifts used: Δ2 (affine), Δ3 (pose)
+• Strict: adopted as above
+• Mini-hash: S0-THERM-a1e9
+Now the fun bit: the 4-bit strip. You shade 1 0 1 1 (or any canonical map your group uses—here, think of it as: optics-like pass, math-like pass, thermal pass with caveat, pose compensated). The exact semantics of the four bits don’t matter today—only that the same inputs always regenerate the same 4-bit code when replayed.
+S: Why not 3 or 5 bits?
+T: Four is enough to make a tiny, replayable fingerprint for Section 0 jobs. Later, you’ll see why n=4 is the hinge that forces the octet at n=5—but we keep that for Section 3.
+Scene 8 — The parity loom (feel the octet)
+You pick up the 8-peg loom and a length of string. Label pegs V1..V8.
+• Loop the string from V1 → V5 → V2 → V6 → V3 → V7 → V4 → V8 → back to V1.
+• The string crosses the circle twice. That crossing is your “hot zone”: the two spots where your views most disagree (ice settle vs shallow pose).
+S: It’s like a map of where to spend effort.
+T: Exactly. Plug a “viewer” (your attention) into the hot zone first. If a loom crossing persists after Δ-lifts, you know you need a new view or a stricter guard.
+Scene 9 — What it looks like when it fails
+You intentionally try a bad Δ-lift: “force a quadratic” (not on the cookbook). The mirror round-trip explodes to 0.12 °C residual, exceeding the ±0.05 °C strict line.
+• You annihilate that path: write a one-line breadcrumb in the Non-Working Album:
+“S0-THERM-bad-quad — exceeded mirror residual; reason: over-fit.”
+No drama. It’s logged, tiny, and out of the way. Your Working Album remains clean.
+Scene 10 — A second tiny world (sound)
+T: Same machine, different domain. We’ll look at two tuning forks, A4 (440 Hz) and a slightly flat fork (436 Hz).
+Tokens
+• tok-A4: 440 Hz ±0.2 Hz
+• tok-flat: 436 Hz ±0.2 Hz
+• tok-beat: measured beat frequency
+Octet
+1–2: beat in air at 20 °C, 30 °C (speed-of-sound shifts)
+3–4: beat in foam box (attenuation effects)
+5–6: Fourier phone app vs DAW spectrogram
+7: swap order (start flat first)
+8: light tap vs hard tap (nonlinearity)
+You listen: the beat is about 4 Hz. Mirror here is superposition symmetry: A⊕B ≡ B⊕A within ±0.1 Hz.
+You Δ-lift only allowed fixes: level-match (equal loudness) and window-length tweak in the app. Strict ratchet: beat residual ≤ 0.05 Hz after pass. Receipts logged; 4-bit shaded.
+S: It’s the same ritual.
+T: That’s the point. Different content, same spine.
+Scene 11 — What you write on the courseboard today
+On one laminated page (we keep it visible):
+• Stand-ins: at least 3 cards, with units & guards.
+• DNA-10: tick every box.
+• Octet: eight colored views, materially independent.
+• Mirror: pick a forward/back pair; set a small round-trip tolerance.
+• Δ-lift: choose from the tiny cookbook; fix locally; never global rewrite.
+• Strict: only tighter after a pass; write the number.
+• Receipts: OPE/FCE small numbers, votes, residues, Δ-lifts, strict, hash.
+• 4-bit: shade it.
+• Non-Working: annihilate bad paths with one-line reasons.
+• Loom: draw your crossings; that’s where to look next.
+S: How do I know my octet is “good enough”?
+T: Two heuristics:
+• Each view should be able to disagree for a sensible reason (duration, pose, method, modality…).
+• When the mirror passes, at least four of the eight views should also agree within their guards. If not, expand or refine the octet.
+Scene 12 — Inner voices (how it feels)
+Student voice (in your head):
+This is calmer than I expected. I’m not “solving everything,” I’m braiding eight little checks and seeing where they don’t touch. The mirror makes me honest. The red fixes are small; the gold numbers keep me from cheating. The blue receipt feels like a postcard to my future self: “This is what worked today, exactly.”
+Teacher voice (over your shoulder):
+If you can finish Section 0 on thermometers and tuning forks, you can point the same ritual at spectra, circuits, code, lab plots, even history tables. Don’t expand the cookbook too fast. Earn each fix. Tighten strict modestly. Keep receipts tiny.
+Scene 13 — Your first solo run (10 minutes)
+Pick any everyday quantity you can check two different ways (distance by pace count vs tape measure; kitchen scale vs water displacement; stopwatch vs metronome).
+• Make 3–5 tokens, fill DNA-10.
+• Draft an octet with at least one time-swap, one pose change, one method swap.
+• Define a mirror (e.g., convert units forward/back).
+• Apply one Δ-lift from a three-item cookbook you declare in advance.
+• Write one strict line (not too strict).
+• Log receipts and shade a 4-bit.
+If one view is stubborn, enter it in the Non-Working album with a one-line reason. That breadcrumb will save you time later.
+Scene 14 — What we just learned (Section 0 takeaways)
+• CQE is hands-on geometry for reasoning: eight views around a gray rest, a mirror through the middle, small local fixes, and tiny receipts.
+• You separate form from meaning: the ritual is the same no matter the topic.
+• Bad data doesn’t “find a home”—it’s logged and annihilated, not averaged in.
+• Four bits are enough to fingerprint a pass at this level; replay regenerates the same code.
+• The parity loom shows where your attention belongs next.
+S: It’s oddly satisfying.
+T: Good. In the next section we formalize what counts as a “view,” what kinds of mirrors exist (unit, algorithmic, physical symmetry), and how Δ-lifts are licensed per domain. But you now own the motion of CQE.
+Epilogue — If you peek ahead
+When we scale up, this same table grows sidecars (OPTICS, THERMAL, POLAR, MATH, SOUND, HEAT/ENTROPY…), each running this exact mini-ritual. The ledger ties them together; the 4-bit rolls up, or promotes to 8 when needed. But the muscle memory is the same as what you did today.
+T: Pack the kit the same way each time.
+S: Eight colors, gray center, red fixes, gold strict, blue receipts.
+T: And a string around eight pegs. You’re ready.

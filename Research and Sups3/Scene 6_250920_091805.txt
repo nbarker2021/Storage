@@ -1,0 +1,102 @@
+Q&A pit stop (carry-over + new)
+Q1. How do I decide what belongs in a meaning pack vs. what stays in the form?
+Rule of thumb: if changing it would create a new geometry, it’s form; if changing it keeps geometry identical but alters labels, units, priors, thresholds, or data bindings, it’s meaning. Forms are invariant shapes; meaning packs are swappable semantics.
+Q2. Can a meaning pack include code (scripts, notebooks)?
+Yes—but only as tools bound to viewers, not as ground truth. The pack must also include the receipts it promises to produce (metrics, hashes), the DNA-10 state save, and any safety gates (redaction rules, non-exportable outputs).
+Q3. What if two teams use different glyph sets for the same concept (e.g., “dose” vs. “⚗️ΔE”)?
+That’s fine. Each pack carries a glyph ledger (glyph → canonical label → units). Packs interoperate via the canonical label, not the emoji or sigil. Clash? Prefer the pack attached to the anchor form, or compose via a shim map.
+Q4. When do I version a pack vs. mint a new one?
+If you tighten thresholds / add views / fix a Δ without changing its declared scope → bump version. If you expand scope (new domain rail) or alter its receipt type → mint a new pack id.
+Q5. How do safety and redaction live inside packs?
+Every pack ships with a Safety Profile: what viewers may export, what must be summarized/redacted, and which ops are simulation-only. The pack enforces this before receipts are written.
+Section 7 — Meaning packs & sidecars: designing, wiring, compressing (64 rails, one ritual)
+What you’ll learn
+• The schema of a meaning pack (tokens → DNA-10 → viewers → receipts → safety)
+• How to build sidecars (OPTICS, THERMAL, BIO, SPINTRONICS, EM, etc.) that reuse the same ritual
+• How to manage glyphs (semantics hash) without coupling to prose labels
+• How to compress repeated deltas across packs into a common pack
+• How to gate packs with 4-bit receipts and promote them to “canonical kits”
+Instructor view (crisp)
+1) Draft the pack skeleton.
+Declare scope, glyph ledger, units/guards, DNA-10 defaults, viewers (8×), mirror spec, Δ-cookbook, strict plan, receipt type, safety profile.
+2) Bind viewers.
+For each of the 8 views, name the method + expected receipt (e.g., MAE≤X, RMS overlay≤Y). Gray box = palindromic rest/mirror.
+3) Declare Δ-lifts.
+A minimal, local set (identity swaps, unit guards, window shave, bias repaint). Each Δ must be monotone (debt ↓).
+4) Declare strict ratchet.
+Which thresholds tighten after a pass, and by how much.
+5) Safety profile.
+Export policy (OK/summarize/redact), forbidden ops, “sim-only” tags.
+6) Version & receipts.
+Pick 4-bit receipt semantics (e.g., [coverage, mirror, Δ-stability, strict]) and the 8-bit extension if needed.
+7) Test on a clone, then compress.
+Run the pack on ≥2 clones; if the same Δs recur across packs, factor them into a shared COMMON_vN pack.
+Student view — “what it looks like” scenes
+Scene A — You author your first meaning pack
+You open a blank card and sketch:
+meaning_pack: OPTICS_S2_v1 scope: "Ground-to-orbit toroidal imaging; S2 sidecar" glyphs: 🎯WFE: {canonical: "wavefront_error", units: "nm_rms"} 🔁FFT: {canonical: "fft_psf_overlay", units: "—"} 🌀AST: {canonical: "astigmatism_coeff", units: "waves"} DNA10_defaults: timing: steady polarity: + scale: 1x pose: N domain: S2 conditioning: whiten units: SI precision: 1ULP cost: L seed: 7391 viewers: V0: {name: "Airy-PSF", receipt: "MAE_psf ≤ 0.03"} V1: {name: "FFT→PSF→iFFT", receipt: "overlay_RMS ≤ 0.05"} V2: {name: "Zernike-13", receipt: "z13_norm ≤ 0.02"} V3: {name: "Thermal-tilt inject", receipt: "Δtilt_comp ≤ 5 µrad"} V4: {name: "Pupil mask sweep", receipt: "pass_rate ≥ 0.9"} V5: {name: "Polar swap L↔R", receipt: "ΔPSF ≤ 2%"} V6: {name: "Jitter sim", receipt: "MTF50_drop ≤ 3%"} V7: {name: "Spectral slice", receipt: "achrom_resid ≤ 1%"} mirror: op: ["FFT", "iFFT"] tolerance: "overlay_RMS ≤ 0.05" delta_cookbook: - id: "bias_repaint" description: "Repaint bias gradient at edge ring only" - id: "unit_guard" description: "Assert SI before non-commuting ops" - id: "window_shave" description: "Shorten hot window by 1 tick" strict: after_pass: overlay_RMS: "-10%" pass_rate: "+5%" receipt_4bit: [coverage, mirror, delta_stability, strict] safety: export: {images: "ok", raw_sensordata: "summarize", layouts: "redact"} forbidden: ["real-harmful emissions"] sim_only: ["laser power > class-1"] 
+You didn’t write any code; you wrote contracts the viewers will satisfy and numbers they must produce.
+Scene B — You bind the pack to a clone
+You take LEECH_CLONE_C2 and attach OPTICS_S2_v1. Run the octet:
+• V1 mirror is orange. You apply bias_repaint Δ. It turns green.
+• Two other views are on-edge. You tighten strict (overlay_RMS −10%).
+• The 4-bit comes out 1101 (coverage✓ mirror✓ Δ-stable✓ strict near-pass).
+You log the receipts; the pack version remains v1.
+Scene C — You author a second pack (BIO) and spot a shared Δ
+You build BIO_COHERENCE_v1:
+glyphs: 🧬τ: {canonical: "coherence_time_T2", units: "ms"} 🌡️T: {canonical: "temperature", units: "K"} 💡RMS: {canonical: "overlay_RMS", units: "—"} delta_cookbook: - id: "unit_guard" - id: "window_shave" - id: "stem_plus_1bp" 
+On LEECH_CLONE_D5, V0/V1 pass after unit_guard and window_shave. You realize two packs relied on the same two Δs.
+You mint:
+meaning_pack: COMMON_VIZ_GUARDS_v1 delta_cookbook: ["unit_guard", "window_shave"] strict: {overlay_RMS: "-10%"} 
+Then rebind both OPTICS and BIO packs to include this common guard. Less duplication, more consistency.
+Scene D — You add glyphs without breaking anyone
+A colleague prefers domain-native glyphs. They extend the glyph ledger:
+glyphs: 📈Σ: {canonical: "signal_to_noise", units: "dB"} ⚡ΔE: {canonical: "energy_step", units: "J"} 
+Since viewers consume canonical names, nothing breaks. Packs remain interoperable; glyphs are just frontend labels.
+Scene E — You version safely
+A week later, you tighten OPTICS mirror tolerance from 0.05 → 0.04 and add a new V8 adversarial pupil. That’s a scope expansion within optics → bump to OPTICS_S2_v2. The ledger notes the version; old receipts are still valid for v1.
+Ready-to-copy schemas
+Meaning pack (full)
+meaning_pack: <NAME_vN> scope: "<domain-and-intent>" glyphs: {<glyph>: {canonical: "<snake_case>", units: "<SI|—>"} , ...} DNA10_defaults: [timing, polarity, scale, pose, domain, conditioning, units, precision, cost, seed] viewers: V0..V7: {name: "<method>", receipt: "<metric and bound>"} mirror: {op: ["<forward>", "<inverse>"], tolerance: "<bound>"} delta_cookbook: - {id: "<Δ-id>", description: "<local monotone fix>"} strict: after_pass: {<metric>: "<tighten rule>", ...} receipt_4bit: [coverage, mirror, delta_stability, strict] receipt_8bit: [optional extended bits] safety: export: {<artifact>: "ok|summarize|redact", ...} forbidden: ["<op-ids>"] sim_only: ["<op-ids>"] 
+COMMON guard pack
+meaning_pack: COMMON_<THEME>_vN delta_cookbook: ["unit_guard", "window_shave", ...] strict: {<metric>: "<rule>"} 
+Micro-lab (75–90 min)
+• Author two domain packs (e.g., OPTICS_S2_v1, BIO_COHERENCE_v1).
+• Run each on a different clone; collect viewer receipts.
+• Identify any Δs used by both; extract a COMMON_v1 pack.
+• Rebind both packs to depend on COMMON_v1; re-run a minimal viewer set to confirm no regressions.
+• Version one pack (tighten a bound, add one adversarial view) → v2.
+• Record all receipts (4-bit) and short hashes into the ledger.
+Deliverables: 3 pack YAMLs, 2 clone slips updated, 6× viewer receipts, 1 roll-up table.
+Patterns to watch (and compress)
+• Repeated unit leaks → always solved by unit_guard pre-transform → compress.
+• Edge-ring instability across optics/EM/BIO → window_shave appears in every fix → compress.
+• Mirror sensitivity to phase offsets → “phase-zero” Δ shows up → compress into COMMON_PHASE_v1.
+When you see the same Δ thrice in unrelated packs, it’s a candidate for a COMMON pack.
+Safety & redaction (built-in)
+• Declare redaction at the pack level (e.g., raw lab traces → summarized stats).
+• Mark sim-only ops to block real-world actuation or hazardous parameters.
+• Ensure the 4-bit never discloses sensitive internals; keep details in page_hash that’s verifiable but not self-revealing.
+Receipts: per pack, per form
+• Per pack: 4-bit across its active viewers (optionally expand to 8-bit when moving to production).
+• Per form: roll-up “views: 64/64; packs: N_pass/N_total” and the cumulative hash.
+• Promotion: when a pack hits 1111 on ≥2 clones and its COMMON dependencies remain stable for two cycles, label it CANONICAL.
+Pitfalls
+• Over-eager compression: pulling Δs into COMMON before they prove domain-agnostic. Wait for cross-domain repetition.
+• Glyph sprawl: too many bespoke glyphs without canonical bindings. Keep the canonical map lean and shared.
+• Silent scope drift: adding a new rail without versioning → breaks reproducibility. Bump vN.
+Takeaways
+• Meaning packs are portable, declarative contracts: glyph ledger → viewers → mirror → Δs → strict → receipts → safety.
+• Sidecars aren’t different logic; they are different labels riding the same ritual.
+• Compression creates COMMON packs that reduce entropy and improve reuse.
+• Versioning and receipts keep the provenance clean and replayable.
+Homework
+• Draft a SPINTRONICS_Q_v1 pack (8 views, mirror, Δs, strict, safety).
+• Run it on two clones; produce 4-bit receipts.
+• Extract a COMMON_BIAS_GUARD_v1 if both runs used the same fix.
+• Version your pack → v2 by adding one adversarial view. Re-run minimal checks; document the change.
+(Optional) Instructor demo seed
+• Packs: OPTICS_S2_v2, BIO_COHERENCE_v1, COMMON_VIZ_GUARDS_v1.
+• Clones: K1-B, K1-D.
+• Results: both pass 1111; COMMON holds; OPTICS v2 tightens mirror by 20% with no regressions.
+• Decision: mark COMMON_VIZ_GUARDS_v1 as CANONICAL; recommend migrating legacy packs to depend on it.

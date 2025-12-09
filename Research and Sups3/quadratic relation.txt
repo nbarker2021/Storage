@@ -1,0 +1,1528 @@
+Document Q — Quadratic Relations & the Law Family
+Q.1 Objects and rings
+
+Alphabet: 
+Σ
+=
+{
+1
+,
+2
+,
+3
+,
+4
+}
+Σ={1,2,3,4}.
+
+Quad: 
+𝑞
+=
+(
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+)
+∈
+Σ
+4
+q=(a,b,c,d)∈Σ
+4
+.
+
+Work primarily in 
+𝑍
+/
+4
+𝑍
+Z/4Z and 
+𝑍
+/
+8
+𝑍
+Z/8Z.
+Use 
+𝑥
+‾
+x
+ for reduction mod 4, 
+𝑥
+~
+x
+ for mod 8.
+
+Q.2 Base invariants
+
+ALT (alternation of parity):
+
+(
+𝑎
+ 
+m
+o
+d
+ 
+2
+,
+𝑏
+ 
+m
+o
+d
+ 
+2
+,
+𝑐
+ 
+m
+o
+d
+ 
+2
+,
+𝑑
+ 
+m
+o
+d
+ 
+2
+)
+∈
+{
+(
+1
+,
+0
+,
+1
+,
+0
+)
+,
+(
+0
+,
+1
+,
+0
+,
+1
+)
+}
+.
+(amod2,bmod2,cmod2,dmod2)∈{(1,0,1,0),(0,1,0,1)}.
+
+W4 (sum check mod 4): 
+𝑎
++
+𝑏
++
+𝑐
++
+𝑑
+‾
+=
+2
+a+b+c+d
+	​
+
+=2.
+
+Q8 (quadratic sum mod 8): 
+𝑎
+2
++
+𝑏
+2
++
+𝑐
+2
++
+𝑑
+2
+~
+=
+0
+a
+2
++b
+2
++c
+2
++d
+2
+	​
+
+=0.
+(Since squares mod 8 are in 
+{
+0
+,
+1
+,
+4
+}
+{0,1,4}, this is highly constraining on parity patterns.)
+
+LAWFUL(q): 
+ALT
+(
+𝑞
+)
+∧
+(
+W4
+(
+𝑞
+)
+∨
+Q8
+(
+𝑞
+)
+)
+ALT(q)∧(W4(q)∨Q8(q)).
+
+Commentary
+
+ALT fixes a “checkerboard” parity footprint; W4 and Q8 are linear vs quadratic constraints, respectively; they are not equivalent, but both single out a thin, well-structured subset of 
+Σ
+4
+Σ
+4
+.
+
+In practice, W4 is more permissive; Q8 is stricter. Allowing 
+W4
+∨
+Q8
+W4∨Q8 hits a sweet spot of legality vs. reach.
+
+Q.3 Phase (linear mod-8 form)
+𝐻
+8
+(
+𝑞
+)
+≡
+(
+𝑎
+−
+𝑑
+)
++
+2
+(
+𝑏
+−
+𝑐
+)
+(
+m
+o
+d
+8
+)
+.
+H8(q)≡(a−d)+2(b−c)(mod8).
+
+Phase is not fixed by LAWFUL; it measures “orientation” of the quad.
+
+Phase preservations are preferred; phase changes are allowed but must be receipted (see Q.7).
+
+Q.4 Symmetries (free moves)
+
+𝐼
+I (identity), 
+𝑀
+M:(a,b,c,d)↦(d,c,b,a), 
+𝐷
+D:(a,b,c,d)↦(b,a,d,c), 
+𝑉
+V:(a,b,c,d)↦(5-a,5-b,5-c,5-d)).
+
+These preserve LAWFUL; 
+𝐻
+8
+H8 transforms predictably (sign/orientation flips). All are free (no cost), but any induced ΔH8 is receipted.
+
+Q.5 Quadratic family & witnesses
+
+Define the quadratic witness 
+𝑄
+𝑊
+(
+𝑞
+)
+QW(q) as
+
+𝑄
+𝑊
+(
+𝑞
+)
+=
+(
+𝑎
+2
++
+𝑏
+2
++
+𝑐
+2
++
+𝑑
+2
+~
+,
+ 
+(
+𝑎
+−
+𝑐
+)
+2
++
+(
+𝑏
+−
+𝑑
+)
+2
+~
+,
+ 
+(
+𝑎
++
+𝑏
+)
+2
+−
+(
+𝑐
++
+𝑑
+)
+2
+~
+)
+∈
+(
+𝑍
+/
+8
+𝑍
+)
+3
+.
+QW(q)=(
+a
+2
++b
+2
++c
+2
++d
+2
+	​
+
+, 
+(a−c)
+2
++(b−d)
+2
+	​
+
+, 
+(a+b)
+2
+−(c+d)
+2
+	​
+
+)∈(Z/8Z)
+3
+.
+
+A quad passes Q8 iff the first component is 0.
+
+The other components are orthogonal diagnostics that help tie-break projector choices when multiple lawful targets exist (prefer the one minimizing deviations in the other two components under Lee distance).
+
+Check (action-as-check form):
+
+legal_q(q):
+  if ALT(q) and (W4(q) or first(QW(q))==0): return PASS
+  else: return FAIL
+
+Q.6 Projector objective (recap, quadratic angle)
+
+When projecting 
+𝑥
+x to a lawful 
+𝑟
+r, in addition to Lee distance and 
+∣
+Δ
+𝐻
+8
+∣
+∣ΔH8∣, prefer:
+
+Quadratic coherence: minimize 
+∥
+(
+𝑄
+𝑊
+(
+𝑟
+)
+−
+𝑄
+𝑊
+(
+𝑥
+)
+)
+∥
+0
+∥(QW(r)−QW(x))∥
+0
+	​
+
+ (number of changed quadratic components).
+
+This stabilizes braid helicity later (Document T).
+
+Q.7 Receipts (quadratic fields included)
+{
+  "level": 4,
+  "op": "project",
+  "input": [a,b,c,d],
+  "target": [r1,r2,r3,r4],
+  "ALT_before": "...", "ALT_after": "...",
+  "W4_before": k4b, "W4_after": k4a,
+  "Q8_before": k8b, "Q8_after": k8a,
+  "QW_before": [q1b,q2b,q3b],
+  "QW_after": [q1a,q2a,q3a],
+  "phase_before": h_in, "phase_after": h_out, "delta_phase": dh,
+  "lee_cost": K,
+  "free_sym": "I|M|D|V|...",
+  "receipt": (dh==0) ? null : {"type":"phase_change","mag":dh}
+}
+
+Document P — Prime/Coprime Ladder, Quadratic Residues & CRT
+P.1 Moduli set and roles
+
+Choose a coprime set 
+𝑀
+M, e.g., 
+{
+3
+,
+5
+,
+9
+,
+11
+,
+13
+,
+17
+}
+{3,5,9,11,13,17}.
+
+Small primes (3,5,11,13,17) → “orientation checks” via quadratic residues.
+
+Prime powers (9) → stability under carry/borrow and error-smoothing.
+
+P.2 Residue features per modulus
+
+For a quad 
+𝑞
+=
+(
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+)
+q=(a,b,c,d), define:
+
+Linear residue: 
+𝑅
+𝑚
+(
+1
+)
+(
+𝑞
+)
+=
+𝑎
++
+2
+𝑏
++
+3
+𝑐
++
+4
+𝑑
+‾
+ 
+(
+ 
+m
+o
+d
+ 
+𝑚
+)
+R
+m
+(1)
+	​
+
+(q)=
+a+2b+3c+4d
+	​
+
+ (modm).
+
+Phase residue: 
+𝑅
+𝑚
+(
+𝐻
+)
+(
+𝑞
+)
+=
+(
+𝑎
+−
+𝑑
+)
++
+2
+(
+𝑏
+−
+𝑐
+)
+‾
+ 
+(
+ 
+m
+o
+d
+ 
+𝑚
+)
+R
+m
+(H)
+	​
+
+(q)=
+(a−d)+2(b−c)
+	​
+
+ (modm) (i.e., 
+𝐻
+8
+H8 reduced mod 
+𝑚
+m).
+
+Quadratic class: 
+𝑅
+𝑚
+(
+2
+)
+(
+𝑞
+)
+=
+𝑎
+2
++
+𝑏
+2
++
+𝑐
+2
++
+𝑑
+2
+‾
+ 
+(
+ 
+m
+o
+d
+ 
+𝑚
+)
+R
+m
+(2)
+	​
+
+(q)=
+a
+2
++b
+2
++c
+2
++d
+2
+	​
+
+ (modm).
+
+For odd prime 
+𝑝
+p, we also use a Jacobi/Legendre class label:
+
+𝜒
+𝑝
+(
+𝑞
+)
+=
+(
+𝑅
+𝑝
+(
+1
+)
+(
+𝑞
+)
+𝑝
+)
+∈
+{
+−
+1
+,
+0
+,
+1
+}
+χ
+p
+	​
+
+(q)=(
+p
+R
+p
+(1)
+	​
+
+(q)
+	​
+
+)∈{−1,0,1}
+
+with the convention 
+(
+0
+/
+𝑝
+)
+=
+0
+(0/p)=0. This offers a cheap orientation parity across moduli.
+
+P.3 Per-modulus braid predicate (level-local)
+
+A strand 
+𝑆
+S (a symmetry image sequence of quads) passes modulus 
+𝑚
+m iff:
+
+Residue coherence: 
+𝑅
+𝑚
+(
+1
+)
+R
+m
+(1)
+	​
+
+ is Lipschitz along the path (bounded stepwise change).
+
+Phase monotonicity: 
+𝑅
+𝑚
+(
+𝐻
+)
+R
+m
+(H)
+	​
+
+ is monotone or piecewise monotone with receipted kinks.
+
+Quadratic stability: 
+𝑅
+𝑚
+(
+2
+)
+R
+m
+(2)
+	​
+
+ stays in a small finite set (ideally 0 or class-stable).
+
+Orientation parity: 
+𝜒
+𝑚
+χ
+m
+	​
+
+ remains constant (or flips only at receipted crossings).
+
+Log as:
+
+{
+  "level": 4,
+  "op": "modulus_braid_check",
+  "modulus": 11,
+  "coherent_R1": true, "monotone_RH": true,
+  "stable_R2": true, "chi_const": true,
+  "receipts": []
+}
+
+P.4 CRT lift (globalize constraints)
+
+Given 
+{
+𝑅
+𝑚
+(
+1
+)
+}
+𝑚
+∈
+𝑀
+{R
+m
+(1)
+	​
+
+}
+m∈M
+	​
+
+ and 
+{
+𝑅
+𝑚
+(
+𝐻
+)
+}
+{R
+m
+(H)
+	​
+
+}, find the unique class 
+𝐴
+(
+m
+o
+d
+𝑀
+)
+A(modM) and 
+𝐻
+(
+m
+o
+d
+𝑀
+)
+H(modM) with 
+𝑀
+=
+∏
+𝑚
+∈
+𝑀
+𝑚
+M=∏
+m∈M
+	​
+
+m.
+
+Representative selection: Choose 
+𝑞
+∘
+q
+∘
+ that minimizes Lee distance to local anchors and minimizes 
+∣
+Δ
+𝐻
+8
+∣
+∣ΔH8∣ when reducing 
+𝐻
+H back to mod-8.
+
+Quadratic guard: ensure the induced 
+𝑅
+𝑚
+(
+2
+)
+(
+𝑞
+∘
+)
+R
+m
+(2)
+	​
+
+(q
+∘
+) matches observed classes; otherwise penalize (per-modulus braid_penalty@m receipt).
+
+CRT receipt:
+
+{
+  "level": 4,
+  "op": "crt_lift",
+  "moduli": [3,5,9,11,13,17],
+  "R1": {...}, "RH": {...}, "R2": {...}, "chi": {...},
+  "M": 2432430,
+  "A_mod_M": A, "H_mod_M": H,
+  "representative": [u,v,w,z],
+  "delta_phase_mod8": dh8,
+  "penalties": {"11":0,"13":0,"17":2},
+  "manifest": "sha256:..."
+}
+
+P.5 Quadratic reciprocity as an orientation harmonizer (optional dial)
+
+For odd primes 
+𝑝
+,
+𝑞
+p,q, the law
+
+(
+𝑝
+𝑞
+)
+(
+𝑞
+𝑝
+)
+=
+(
+−
+1
+)
+(
+𝑝
+−
+1
+)
+(
+𝑞
+−
+1
+)
+4
+(
+q
+p
+	​
+
+)(
+p
+q
+	​
+
+)=(−1)
+4
+(p−1)(q−1)
+	​
+
+
+lets you predict whether 
+𝜒
+𝑝
+χ
+p
+	​
+
+ and 
+𝜒
+𝑞
+χ
+q
+	​
+
+ should agree or disagree on orientation. Use it as a consistency check to anticipate braid flips at certain modulus pairs; price exceptions with receipts.
+
+Document T — Taxicab & Cabtaxi Equivalence and Transfer Triggers
+
+This section formalizes your “n=8 → n=16 transfer occurs where Taxicab ∩ Cabtaxi ∩ solve meet” idea. We keep your contribution flagged as speculative but make it a precise, auditable predicate.
+
+T.1 Definitions
+
+Taxicab numbers 
+𝑇
+𝑎
+(
+𝑘
+)
+Ta(k): positive integers representable as a sum of two positive cubes in at least 
+𝑘
+k distinct ways. Classic: 
+1729
+=
+1
+3
++
+12
+3
+=
+9
+3
++
+10
+3
+1729=1
+3
++12
+3
+=9
+3
++10
+3
+.
+
+Cabtaxi numbers 
+𝐶
+𝑎
+𝑏
+(
+𝑘
+)
+Cab(k): integers representable as a sum of two cubes allowing negative or zero terms, in at least 
+𝑘
+k distinct ways.
+
+Solve set 
+𝑆
+S: addresses (integers) that arise as CRT-lifted representatives of lawful quad streams (your global class numbers).
+
+Let 
+𝑁
+N be a candidate address (e.g., the CRT-assembled 
+𝐴
+ 
+m
+o
+d
+ 
+𝑀
+AmodM lifted to 
+𝑍
+Z by a canonical representative).
+
+T.2 Transfer candidate predicate (speculative → formal)
+
+A number 
+𝑁
+N is an n=8→n=16 transfer candidate if:
+
+𝑁
+∈
+𝑇
+𝑎
+(
+𝑘
+)
+N∈Ta(k) for some 
+𝑘
+≥
+2
+k≥2 (≥2 distinct positive cube decompositions),
+
+𝑁
+∈
+𝐶
+𝑎
+𝑏
+(
+ℓ
+)
+N∈Cab(ℓ) for some 
+ℓ
+≥
+2
+ℓ≥2 (≥2 distinct signed/zero-allowed cube decompositions),
+
+𝑁
+∈
+𝑆
+N∈S (i.e., occurs as a CRT-lifted class of a lawful quad stream), and
+
+Decomposition coherence: When you map each cube decomposition of 
+𝑁
+N to 
+Σ
+Σ-quads (via your encoder → projector), all decompositions land in the same lawful class (same E₈ root-path up to free symmetries) with bounded 
+∣
+Δ
+𝐻
+8
+∣
+∣ΔH8∣ and coherent helicity.
+
+If (1)–(4) hold, log a transfer candidate:
+
+{
+  "level": 8,
+  "op": "transfer_candidate",
+  "N": N,
+  "taxicab_decomps": [[x1,y1],[x2,y2],...],
+  "cabtaxi_decomps": [[u1,v1],[u2,v2],...],
+  "encodings": { "x1^3+y1^3": {...}, "...": {...} },
+  "lawful_class_id": "E8:rootpath:abc123",
+  "delta_phase_bounds": {"max": 2},
+  "helicity_coherent": true
+}
+
+T.3 Acceptance as transfer event (μ → !)
+
+Promote a candidate to an event if, in addition:
+
+Braid certification holds for the merged strands from at least two positive and two signed decompositions; and
+
+Quadratic witnesses 
+𝑄
+𝑊
+QW match within the projector’s tie-break tolerances.
+
+Emit a transfer receipt:
+
+{
+  "level": 8,
+  "op": "transfer_accept",
+  "event_id": "uuid",
+  "N": N,
+  "class_id": "E8:rootpath:abc123",
+  "decomps_used": ["x1^3+y1^3","x2^3+y2^3","u1^3+v1^3","u2^3+v2^3"],
+  "ΔH8_series_max": 2,
+  "braid_status": "certified",
+  "QW_coherence": true,
+  "note": "μ→! handoff criteria met",
+  "manifest": "sha256:..."
+}
+
+
+Interpretation. Here, “μ→!” names the multiplicative → factorial transfer: we’re moving from multiplicative cube-sum factorizations to factorial (permutation-indexed) structure (see Document F) when the number sits at the intersection of multiple additive factorizations and your lawful/eight-dimensional geometry agrees across those factorizations.
+
+T.4 3/2 split & single-strand fallback (your guideline)
+
+If some decompositions do not map to below-8 complexity on both sides:
+
+3/2 split: collapse the higher-complexity side into a 3:2 bundled operator (one “triple” capsule paired with a “double”), then re-encode as a single strand and re-run (T.2–T.3).
+
+If still failing, mark as near-miss with diagnostic receipts.
+
+{
+  "level": 8,
+  "op": "transfer_near_miss",
+  "N": N,
+  "reason": "requires 3/2 split; helicity conflict at m=13",
+  "receipts": [{"type":"braid_penalty@13","mag":1}]
+}
+
+Document F — Multiplicative → Factorial Transfer (μ → !) via Factoradics & Permutation Lifts
+
+This document spells out what “factorial” means operationally and how we use it once a transfer is accepted.
+
+F.1 Factorial representation: factoradics
+
+Every nonnegative integer 
+𝐽
+J has a unique factoradic expansion
+
+𝐽
+=
+𝑑
+1
+⋅
+1
+!
++
+𝑑
+2
+⋅
+2
+!
++
+⋯
++
+𝑑
+𝑛
+⋅
+𝑛
+!
+,
+0
+≤
+𝑑
+𝑘
+≤
+𝑘
+.
+J=d
+1
+	​
+
+⋅1!+d
+2
+	​
+
+⋅2!+⋯+d
+n
+	​
+
+⋅n!,0≤d
+k
+	​
+
+≤k.
+
+The vector 
+(
+𝑑
+1
+,
+…
+,
+𝑑
+𝑛
+)
+(d
+1
+	​
+
+,…,d
+n
+	​
+
+) indexes a unique permutation 
+𝜋
+𝐽
+∈
+𝑆
+𝑛
++
+1
+π
+J
+	​
+
+∈S
+n+1
+	​
+
+ (Lehmer code).
+
+In our system: interpret the CRT-assembled address 
+𝐴
+(
+m
+o
+d
+𝑀
+)
+A(modM) (or post-lift integer 
+𝑁
+N) as factoradic indices to select canonical permutations at the next level of composition (e.g., n=8→n=16).
+
+F.2 μ → ! operator (definition)
+
+Let 
+𝐶
+C be a capsule (a lawful block at n=8). Define:
+
+Address: 
+𝐴
+=
+a
+d
+d
+r
+(
+𝐶
+)
+A=addr(C) via your CRT merge (Document P).
+
+Permutation code: 
+𝐿
+=
+f
+a
+c
+t
+o
+r
+a
+d
+i
+c
+(
+𝐴
+)
+L=factoradic(A); take 
+𝜋
+=
+𝜋
+𝐿
+∈
+𝑆
+𝑘
+π=π
+L
+	​
+
+∈S
+k
+	​
+
+ for the smallest 
+𝑘
+k covering the block size to be permuted (e.g., 
+𝑘
+=
+8
+k=8 or 
+16
+16).
+
+μ→! operator applies 
+𝜋
+π to:
+
+Quad positions across the block (a lawful reindexing; keeps ALT/W4/Q8 invariants intact if 
+𝜋
+π respects even/odd slot parity).
+
+Strand interleaving for braids (chooses one of 
+𝑘
+!
+k! interleavings deterministically).
+
+Bundle assembly order (selects an order of capsule merges that minimizes expected ΔH8).
+
+Action-as-check (μ→!):
+
+Check that 
+𝜋
+π is parity-compatible with ALT (even slots map to even positions, etc.).
+
+Check that applying 
+𝜋
+π does not increase λ (or logs a governed exception).
+
+Check braid coherency improves or holds (helicity preserved, fewer receipts).
+
+Receipt:
+
+{
+  "level": 8,
+  "op": "mu_to_factorial",
+  "capsule_id": "C123",
+  "A_mod_M": A,
+  "perm_group": "S16",
+  "lehmer": [d1,...,d15],
+  "pi": [.. permutation ..],
+  "parity_compatible": true,
+  "Δλ": -3,
+  "braid_improved": true,
+  "manifest": "sha256:..."
+}
+
+F.3 Why factorial? (intuition tied to your braids)
+
+Multiplicative decompositions (like cube sums) give multiple routes to the same address 
+𝑁
+N.
+
+Factoradics convert that multiplicity into a canonical permutation choice, which picks how to weave/merge capsules (strand order, merge schedule).
+
+Because 
+𝜋
+π is deterministic from 
+𝐴
+A (and hence from the CRT ladder), the same data always yields the same weave, making braids reproducible and globally coherent.
+
+F.4 Safety rails
+
+Parity rail: only allow 
+𝜋
+π that maps even→even/odd→odd positions in each quad; else require an explicit phase receipt and a λ-improving rationale.
+
+Quadratic rail: prefer 
+𝜋
+π minimizing quadratic witness changes 
+𝑄
+𝑊
+QW.
+
+Braid rail: forbid 
+𝜋
+π that flips helicity unless the per-modulus receipts budget can afford it.
+
+Algorithms & Pseudocode (drop-in)
+A. Projector with quadratic tie-break
+def project_quad(x):
+    S = [I(x), M(x), D(x), V(x), MD(x), DM(x), VM(x), VDM(x)]
+    best = None
+    for s in S:
+        for r in lawful_candidates(s):  # hash buckets by ALT,W4 checksum
+            cost = lee(s, r)
+            dh = (H8(r) - H8(s)) % 8
+            qdiff = qwit_diff(QW(s), QW(r))  # Hamming(3)
+            score = (cost, abs(dh), qdiff, r)  # lexicographic
+            best = min(best, (score, s, r)) if best else (score, s, r)
+    score, s_star, r_star = best
+    return receipt_project(x, s_star, r_star, score)
+
+B. Per-modulus braid check & CRT lift
+def braid_check_modulus(path, m):
+    ok_R1 = lipschitz([R1(q,m) for q in path])
+    ok_RH = mono_or_kink([RH(q,m) for q in path])
+    ok_R2 = stable_few([R2(q,m) for q in path])
+    ok_chi = const_symbol([chi(q,m) for q in path])
+    return ok_R1 and ok_RH and ok_R2 and ok_chi
+
+def crt_lift(residues_dict):  # {"m": {"R1":v1, "RH":vH, ...}, ...}
+    M = prod(residues_dict.keys())
+    A = CRT([ (r["R1"], m) for m,r in residues_dict.items() ])
+    H = CRT([ (r["RH"], m) for m,r in residues_dict.items() ])
+    q_rep = choose_rep_from(A,H)  # min Lee & |ΔH8|
+    penalties = per_modulus_penalties(q_rep, residues_dict)
+    return q_rep, penalties
+
+C. Taxicab/Cabtaxi transfer pipeline
+def transfer_candidate(N, streams):
+    # streams: map decomposition_id -> quad_path (already projected lawful)
+    if not (is_taxicab(N) and is_cabtaxi(N)): return None
+    class_ids = {decomp: E8_rootpath(streams[decomp]) for decomp in streams}
+    if len(set(class_ids.values())) != 1: return None
+    if not helicity_coherent(streams): return None
+    if not delta_phase_bounded(streams, bound=2): return None
+    return mk_transfer_candidate(N, class_ids.pop())
+
+def accept_transfer(candidate):
+    # require at least 2 positive + 2 signed decompositions certified as braids
+    if not braid_certified_subset(candidate, min_pos=2, min_signed=2): return None
+    return mk_transfer_receipt(candidate, tag="μ→!")
+
+D. μ→! operation (factoradics)
+def mu_to_factorial(capsule, A):
+    lehmer = to_factoradic(A, base=len(capsule.perm_domain))
+    pi = lehmer_to_permutation(lehmer)
+    if not parity_compatible(pi, capsule): return governed_exception(...)
+    out = apply_permutation(capsule, pi)
+    if delta_lambda(out, capsule) > 0: return governed_exception(...)
+    if not braid_nonworsening(out, capsule): return governed_exception(...)
+    return receipt_mu_to_factorial(capsule, A, lehmer, pi, out)
+
+Expanded Receipts & Schemas
+R.1 Quadratic-aware projector receipt
+
+(see Q.7; add qdiff)
+
+R.2 Per-modulus braid receipt
+{
+  "level": 4,
+  "op": "modulus_braid_check",
+  "modulus": 13,
+  "R1_path": [..], "RH_path": [..], "R2_path": [..], "chi_path": [..],
+  "ok": true,
+  "kinks": [{"at": 21, "ΔRH": 2}],
+  "penalty": 0
+}
+
+R.3 CRT braid lift
+
+(see P.4; include QW_rep and QW_match:true|false)
+
+R.4 Transfer candidate & accept
+
+(see T.2–T.3)
+
+R.5 μ→! application
+
+(see F.2)
+
+Tests (add-ons to your battery)
+
+TQ1 — Q8 correctness census: enumerate all 
+Σ
+4
+Σ
+4
+; verify Q8⇔first(QW)==0; verify projector picks minimum Lee with minimal 
+∣
+Δ
+𝐻
+8
+∣
+∣ΔH8∣, then minimal qdiff.
+
+TQ2 — Symmetry invariance: LAWFUL closed under {I,M,D,V}; phase transforms match table; receipts only for ΔH8≠0.
+
+TP1 — Modulus braid: for synthetic strands, verify per-modulus predicates and that CRT lift finds 
+𝑞
+∘
+q
+∘
+ with minimal extra phase.
+
+TP2 — Quadratic reciprocity dial: construct prime pairs (p,q) causing expected parity of orientation; verify predicted helicity flips (or receipts on exceptions).
+
+TT1 — Taxicab/Cabtaxi mapping: for a small list of known 
+𝑁
+N, map decompositions → quads → projector; assert class-id equality and bounded ΔH8 on success cases.
+
+TT2 — 3/2 split fallback: synthesize a near-miss; verify fallback produces candidate or explains failure with receipts.
+
+TF1 — Factoradic canonicality: for repeated runs with same 
+𝐴
+A, verify identical 
+𝜋
+π and improved or non-worsened λ and braid metrics.
+
+Worked micro-example (illustrative)
+
+Setup: Suppose a lawful path yields CRT address 
+𝐴
+≡
+142857
+(
+m
+o
+d
+𝑀
+)
+A≡142857(modM) with 
+𝑀
+=
+{
+3
+,
+5
+,
+9
+,
+11
+,
+13
+,
+17
+}
+M={3,5,9,11,13,17}.
+
+Per-modulus checks pass; 
+∣
+Δ
+𝐻
+8
+∣
+=
+0
+∣ΔH8∣=0 post-lift.
+
+Quadratic witness remains (0,,) across projector choices → stable.
+
+Taxicab/Cabtaxi: Let 
+𝑁
+=
+𝐴
+N=A (or canonical lift). Assume it has 2 positive and 2 signed cube decompositions. Mapping each decomposition (encode→project) lands in the same E₈ root-path, with helicity consistent and 
+max
+⁡
+∣
+Δ
+𝐻
+8
+∣
+=
+2
+max∣ΔH8∣=2.
+→ Transfer candidate created.
+
+μ→! step: Compute factoradic of 
+𝐴
+A for domain size 16 → permutation 
+𝜋
+∈
+𝑆
+16
+π∈S
+16
+	​
+
+.
+
+𝜋
+π preserves even/odd slot parity → parity-compatible.
+
+Applying 
+𝜋
+π reduces λ by 3 and improves braid coherency → accept.
+→ Emit μ→! receipt, upgraded capsule now sits ready for n=16 assembly.
+
+Where the pieces meet your earlier claims
+
+Quadratic relations (Q8, QW) give the tight, falsifiable structure that keeps projector choices and braid helicity stable when choices are close.
+
+The prime/coprime ladder turns local coherence into a global representative and sets up a deterministic address 
+𝐴
+A that drives factorial choices.
+
+Your Taxicab ∩ Cabtaxi crossing gives a natural “multiple decompositions agree” signal—exactly the kind of redundancy that justifies promotion from multiplicative constraints to a permutation (factorial) regime. We formalize it as a transfer predicate with receipts (speculative, but fully testable).
+
+The 3/2 split gives a practical fallback to keep the pipeline moving even when both sides aren’t “below 8” simultaneously.

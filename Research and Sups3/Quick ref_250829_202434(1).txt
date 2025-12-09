@@ -1,0 +1,65 @@
+UVIBS — Quick Reference (v1)
+What it is
+A math-first legality engine for reasoning: small integer moves in D=8k dimensions, only through gates that pass parity/isotropy. If a strict gate jams, detour via a parametric expansion lane; reconcile at rests; score segments with entropy deltas and Crooks-like suppression.
+Objects (memory card)
+• Space: Z^D with D=8k (default 80=E8×10).
+• Gram: G80 = diag(G_E8,…,G_E8). Quadratic form Q(v)=vᵀG80v.
+• Rests (windows): 
+• W4: Σv ≡ 0 (mod 4)
+• W80: Σv ≡ 0 (mod 8) and Q(v) ≡ 0 (mod 4)
+Modes: global or strict per-block (each 8-slice).
+• Expansion Wexp(p,ν|8): Q(v) ≡ 0 (mod p) & Σv ≡ 0 (mod ν). 
+• Classic 7/72 mnemonic: p=7, ν=9 (lcm(8,9)=72).
+• φ-lane 11/40: p=11, ν=10 (lcm(8,10)=40).
+Optional bridge: Σv ≡ 0 (mod lcm(8,ν)).
+• Gates: PAL_b (palindrome), MIRROR(m,b): x≡rev_b(x) (mod m), Mirror-CRT across several m.
+• Governance (24D): projections Π; each requires per-block E8 mod-4 + total mod-7; joint legality is intersection 𝒦.
+• Transforms: fold / split(o) / shear; Monster-aware = base op + AMP repair into 𝒦.
+• Weights: shell gauge (triad/pentad/octad) × Alena 24-slot cosine.
+• Capacity/Entropy: μ_W=Σ w; S_W=ln μ_W; ΔS(A→B)=S_B−S_A; Crooks: P_rev/P_fwd=e^(−ΔS).
+Control flow (4→80 or 4→exp→80)
+• Gate prefilter: require PAL/MIRROR (or both) for the 8-window.
+• Enter rest: fix W4 (Σv≡0 mod 4).
+• Governance repair: AMP on a +8 DOF block until all projections pass (𝒦).
+• Route choice: 
+• If not strict: try direct 4→80 via Monster-aware fold→split.
+• Else (or if jammed): go 4→exp(p,ν)→80 (classic 7/9 or φ 11/10).
+• Close: at W80; record ΔS, Crooks, repair budget; keep failures with context.
+When to use which expansion
+• 7/72 (7,9): clears codec jam when W80 is strict; good default.
+• φ-lane (11,10): comparable raw pass; often better re-entry to W80 and lower repair when palindromic structure is strong.
+PAL/MIRROR palette
+• For base b: 
+• always include divisors of (b−1); for even length 8, include divisors of (b+1) too.
+• pair with 8 or 16 to align with codec; add small odd (5 or 7) for CRT flexibility.
+Monster-aware transforms
+• fold ≻ split(o=7); avoid shear unless needed.
+• After each base op, run AMP repair on a fixed +8 DOF block; accept only if all projections pass.
+Metrics to watch (CSV columns)
+• phase_metrics: S4, S80, Sexp, dS_4_80, dS_80_exp, Crooks*, counts, regime flags.
+• direct_hits: confirmed 4→80 geodesics; governance OK; repair steps.
+• relations: pal/mirror flags; residues; small-prime QF; ΔS/jam/re-entry per relation.
+Jam proxy: mean(W80)/mean(W4).
+Re-entry: P(W80 | Wexp).
+Repair budget: mean AMP steps per accepted move.
+Common symptoms → fixes
+• Codec jam (strict W80): switch to 4→exp→80; prefer PAL∧MIRROR windows; increase split offset to 7 or 9.
+• Governance clash (overlaps): run AMP with a higher step budget; try fold→split; if still stuck, go via expansion then re-enter.
+• Shear breaks invariants: backtrack; avoid shear unless fold/split fail.
+Plugging into an LLM
+• Let the LLM propose 8-windows (pal-biased).
+• Use core gates as referees: reject on PAL/MIRROR fail; otherwise call route_once.
+• Return precise failure reasons (W4_FAIL, GOV_FAIL, EXP_FAIL, REENTRY_FAIL) so the LLM learns to propose legal moves.
+• Rank beams by ΔS gain, jam reduction, and low repair.
+Minimal recipes
+• Direct codec (global): PAL/MIRROR → W4 → AMP → fold→split → W80 → log.
+• Strict phase: PAL∧MIRROR → W4 → AMP → fold→split → Wexp(7,9) or (11,10) → AMP → W80 → log.
+• Best-of-rest: choose (m,b) with high PAL∧MIRROR density + non-negative ΔS_4_80 in your phase; ship as a pack.
+Defaults (you can copy these)
+• D=80; projections: mod24, affine 5i+7; control block [40..47]; split offset 7; max AMP steps 100.
+• Base b=10; mirror mods (9,10,8); expansion (7,9) or φ-mode (11,10).
+Remember: Everything is O(D) checks + tiny +8 DOF repairs. Keep moves small, record every failure, and compare routes with ΔS & Crooks—this is how UVIBS stays fast, legal, and explainable.
+Done!
+• I added a runnable wrapper: uvibs_gpt.py — it takes a prompt, proposes palindromic 8-windows (or you can plug in your own LLM proposer), lifts them to 80D, and routes them through the UVIBS engine with full logging. It’s in the canvas.
+• I also added “UVIBS Quick Reference v1.md” — a tight, math-first guide for why/how to operate: objects, windows, expansions (7/72 vs φ-lane), gates, governance, transforms, routing flow, metrics, and common fixes.
+If you want, I can wire the wrapper to your favorite LLM API next (swap out propose_windows()), or add a small demo that reads windows from a CSV and produces a full phase_metrics.csv in one go.

@@ -1,0 +1,81 @@
+Section X — Building the Shells by Hand (Construction A → E8, Golay → Leech), and Logging Automorphisms
+(We pick up right where we left off—now that we’ve defused the “lattice flattery” worry, we’ll build the shells with pencil-and-paper moves and show how the ledger records every symmetry as a replayable action.)
+0) Quick Q&A warm-up
+Q: Do we really need code theory to touch E8/Leech?
+A: Only the tiniest slice. We use binary parity checks (mod 2) and one “half-shift” glue. That’s it.
+Q: If I don’t see all 240 E8 roots at once, am I doing it wrong?
+A: No. You only need to generate enough exemplars to pass mirror and parity tests. The Weyl reflections (mirrors) produce the rest.
+Q: Where do automorphisms (M24/Conway) enter my workflow?
+A: After you build a valid form once, any “clone” you make by a recorded permutation is provenance-clean: the ledger says which element you used, and anyone can replay it.
+1) The classroom scene (whiteboard): Construction A to E8
+Teacher: “We’ll build E8 from a binary code so your parity loom and your notebook overlays line up.”
+• Pick the code (mod 2).
+Use the extended Hamming code . You can think of it as the set of 8-bit vectors with even weight that satisfy simple parity checks. Keep a tiny parity-check matrix in the margin.
+• Lift to (Construction A starter).
+Take any . Consider vectors of the form with . This makes a lattice whose points reduce to modulo 2.
+• Glue with a half-shift.
+Add the coset where . The union is even and unimodular in 8D. That is E8.
+• Spot the roots (norm 2).
+Two families appear:
+• “Two-coordinate” roots: permutations of with even number of minus signs.
+• “Half-coordinate” roots: vectors with all entries and an even number of plus signs.
+Count lands at 240 once you include symmetries.
+• Mirror & octet mapping.
+Put your 8 viewer hues on the coordinate axes (or simple root directions). A mirror reflection in the whiteboard is exactly a Weyl reflection in the lattice: take a root and reflect .
+Student: “So my ‘mirror test’ is literally a root reflection?”
+Teacher: “Exactly. Your Δ-lifts are just local rewrites that keep evenness and parity. The receipts record which mirrors you used.”
+2) The bench scene (parity loom): doing E8 with clips & tracing paper
+Kit on the table:
+• 8 twines (one per coordinate), foam board with pegs at integer marks.
+• Clips for mod 2 residues (blue for 0, red for 1).
+• Tracing-paper mirror to flip a configuration.
+Moves:
+• Lay a codeword. Put red clips on twines where , blue elsewhere. That’s your .
+• Lift (2z). Step along pegs in units of 2 on any twine.
+• Half-shift. Slide the tracing paper by a half-peg on every twine together (your ).
+• Parity check (syndrome pad). XOR your clips against . Zero syndrome = legal.
+• Mirror check. Fold the tracing paper; endpoints must align (pal rest). Misalignments → draw a red Δ line and repair locally.
+Commit: When four independent views pass mirror and parity (your octet can be larger; the rule is “≥ 4 pass to commit”), fill the 4-bit strip. Log which reflections you used.
+3) Whiteboard II: Golay → Leech (24D) in three postcards
+• Code: Extended Golay . Think “legal 24-bit words; octads are weight-8 supports.”
+• Construction A: Lift Golay to , then add the prescribed glue (the 24-vector half-shift compatible with evenness).
+• Rootless choice: Select the no-root even unimodular lattice in 24D—that is uniquely the Leech. (Other Niemeier lattices have ADE roots; we don’t want those for strict Δ behavior.)
+• Automorphisms: The Leech automorphism group contains Conway groups; Golay’s permutations include M24 actions on octads. These are your recorded “braid moves.”
+Operational meaning: octads = your eight viewer domains at 24D scale. “Spraying” an octad via an M24 element is a legitimate ledgered clone.
+4) Ledger anatomy for shells & clones
+Minimal row fields that make runs 1:1 replayable:
+• constructionA: {p:2, code: H8 | Golay24, glue: half-shift+evenness}
+• automorphism: {group: Weyl(E8) | M24 | Co_i, element: <canonical tag>}
+• octet_map: {H1..H8: <coordinate/simple-root/octad labels>}
+• dna10: [timing, polarity, scale, pose, domain, conditioning, units, precision, cost, seed]
+• thresholds: {normal:{…}, strict:{…}}
+• receipts: {fourbit:"bxyz", votes:{mirror:v1/views:v2}, page_hash:"…"}
+• status: ANCHOR | PROVISIONAL | WORKING | NONWORKING
+That’s enough for anyone to recreate the geometry, apply the same symmetry move, and re-run the tests without knowing your semantics.
+5) Live mini-lab: from one E8 anchor to two clones
+Anchor (E8)
+• Pick four roots as your octet axes (H1..H4 paired with mirrors; H5..H8 are the paired views).
+• Run mirror ↔ inverse maps on four analyses (e.g., factor/expand; FFT/iFFT; L/R polarization; numeric/symbolic).
+• Δ-repair any mismatch; tighten strict bounds.
+• Commit 4-bit (say, 1011). Status: ANCHOR.
+Clone A (E8, Weyl reflection set W₁)
+• Record automorphism: {group:"Weyl(E8)", element:"rα rβ rγ"}.
+• Replay the same octet; results should be congruent under the reflection.
+• If a view fails, it’s a semantics issue, not form—repair or mark PROVISIONAL.
+Clone B (Leech slice, M24 permutation σ)
+• Record automorphism: {group:"M24", element:"σ_173842"}.
+• Map octads to sidecars (OPTICS/THERMAL/POLAR/…); run the same mirror/Δ/strict.
+• If four pass, commit; if not, log a one-line non-working reason and keep the breadcrumb.
+6) What the student writes in the margin (takeaways)
+• I can touch E8/Leech with parity clips and a half-shift.
+• “Mirror” = reflection in a root; “Δ-lift” = local rewrite that preserves evenness/unimodularity.
+• Octads aren’t poetry; they’re the forced 8 from the n=5 hinge.
+• Automorphisms are legal relabelings I must log—nothing mystical.
+• My 4-bit is not vibes; it’s a reproducible receipt keyed to parity + mirror passes.
+7) Exercises (do them now)
+• E8 by hand (micro): Generate 6 distinct norm-2 vectors (2-coord and half-coord types). Show a mirror that maps one into another. Record the reflection as a product of simple mirrors.
+• Parity-loom demo: Choose a codeword in , lift once, half-shift, mirror, and show the Δ-repair if any lane misaligns.
+• Golay → Leech postcard: Identify one octad (a weight-8 support). Describe how an M24 permutation moves it, and why two such permutations can be ledger-distinct but form-equivalent.
+• Ledger row: Fill a complete row for your E8 anchor and one clone. Include a 4-bit commit justified by which four views passed.
+8) Where we go next (teaser)
+Next section we’ll mount domain sidecars on these shells—OPTICS, THERMAL, POLAR, SPINTRONICS, PLASMA, SOUND/ACOUSTICS, CHEM/ENTROPY—and run one mixed, real-data pass end-to-end. You’ll see how semantics stay swappable while the geometry, mirrors, and receipts keep everyone honest.

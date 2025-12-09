@@ -1,0 +1,201 @@
+Section 1 — Views, Mirrors, and the Lawful Fix
+“Same room, same kit—now we label the parts and tighten the moves.”
+(I’ll keep the teacher/student voices. You’ll build two complete runs and leave with a pocket recipe.)
+Scene 1 — What a “view” really is
+Teacher (T): You already drew eight colored boxes last time. Today we make views lawful. A view is a measurement or transform that can disagree for a specific, independent reason.
+Student (S): Independent how?
+T: Independence means the view leans on a different axis—so a failure points to a real cause, not noise. These are the six canonical axes; your octet should cover at least four:
+• Method (instrument/algorithm changes)
+• Time (order/settle/latency changes)
+• Pose (orientation/depth/fixtures changes)
+• Scale (range/resolution/sampling changes)
+• Domain (e.g., time↔frequency; pixel↔Fourier)
+• Conditioning (filters/denoisers/windows, declared in advance)
+Rule V.1 (Eight-with-teeth): Each of your 8 views must register to a distinct row in at least one axis. No two views may be identical along all six axes.
+S: So “eight repeats with new labels” doesn’t count.
+T: Right. If a view can’t possibly disagree for a named reason, drop it.
+Scene 2 — Building the octet on paper (you’ll do this every time)
+T: Draw your eight boxes around REST. Under each box, pencil the axis tags you intend to exercise (M, T, P, S, D, C). You want a spread, e.g.:
+• V1: M, T — method A, quick settle
+• V2: M, T↑ — method A, long settle
+• V3: M′ — method B
+• V4: P — different depth/angle
+• V5: S — lower resolution
+• V6: D — swap domain (e.g., FFT)
+• V7: C — window/denoiser predeclared
+• V8: T, order-swap — invert processing order
+Rule V.2 (Quorum): At least 4 of 8 must be able to pass together when the mirror passes. If mirror passes and fewer than 4 views pass, expand or refine the octet.
+Scene 3 — Mirrors: five families you’ll use constantly
+T: The mirror enforces a palindromic rest: forward∘back ≈ identity.
+Pick one mirror family per run (more if you can afford it):
+• Unit mirror – convert forth & back (°C↔°F; radians↔degrees).
+• Process mirror – encode↔decode; compress↔decompress; train/eval ↔ eval/train.
+• Dual-domain mirror – FFT↔iFFT; factor↔expand; integrate↔differentiate (with declared constants).
+• Experimental mirror – simulate↔measure overlay; calibration↔application swap.
+• Order mirror – swap pipeline order of two commuting steps and demand same rest.
+Tolerance setting (Gold line): Choose a round-trip residual target before you see the data. Start modest (Section 1 defaults):
+• unit mirror: ≤ 0.05 in native units,
+• process mirror: ≤ 1% of dynamic range,
+• dual-domain: Parseval energy drift ≤ 0.5%,
+• experimental: overlay RMS ≤ 1σ of measurement noise,
+• order mirror: ≤ 0.5% of output scale.
+S: And we fail if we exceed that?
+T: You fail the mirror; that sends you to a Δ-lift (local repair) or to the Non-Working Album.
+Scene 4 — The Δ-lift cookbook (licensed fixes only)
+T: A Δ-lift is a small, local repair you pre-license. It must:
+• (L1) Reduce debt (your residuals go down),
+• (L2) Preserve invertibility (doesn’t destroy mirror structure),
+• (L3) Be minimal (fewest parameters / smallest change),
+• (L4) Be declared before you look at failures.
+Starter cross-domain cookbook (pick ≤2 per run):
+• Bias shift: y′ = y + b (single constant b)
+• Affine scale: y′ = a·y + b (two params; use 2 anchors)
+• Pose compensation: add fixed offset for named pose flag
+• Window swap: rectangular↔Hann with length L (declared L)
+• Median-3: replace each point with median of neighbors (edge-aware, preserves identities)
+• Basis change: switch to an orthonormal basis (keeps invertibility)
+• Robust loss: re-fit with Huber/ε-insensitive loss (declare ε)
+Red lines you may not cross in Section 1:
+• No polynomials > affine,
+• No unconstrained smoothing (must be Median-3 or declared window),
+• No adding new sensors mid-run,
+• No changing units post hoc.
+Scene 5 — Strict ratchet (how to tighten without cheating)
+T: Strict is the gold ratchet you only turn downward after a pass.
+• Write initial thresholds with rationale (noise floor, spec sheet, prior runs).
+• After a pass, reduce each by a factor of 0.8–0.9 (never more).
+• If a later run fails the tighter line, you do not loosen it; you fix the cause or log Non-Working.
+Section-1 defaults:
+• Unit mirror residual ≤ 0.05 → next pass target 0.04 → 0.032 …
+• Process mirror ≤ 1.0% → 0.8% → 0.64% …
+• Dual-domain energy drift ≤ 0.5% → 0.4% …
+S: What if environment changed?
+T: You record a new seed in DNA-10 and start a new line of strict values for that seed. You never retroactively loosen a settled line.
+Scene 6 — Receipts and the 4-bit code (semantics we’ll keep)
+T: Your receipt is blue and tiny:
+• OPE (Outside Parity Error): disagreement across views (mean abs residual / guard).
+• FCE (Forward Cycle Error): mirror residual / tolerance.
+• Votes: mirror (out of 24 checks if you do a grid), views (out of 64 pairs).
+• Residues: short bullets of stubborn bits.
+• Δ-lifts used, Strict revision, mini-hash.
+Section-1 4-bit meanings (we keep these stable):
+• b1 (MIR): mirror passed under current strict line.
+• b2 (OCT): ≥4 of 8 views passed within their guards.
+• b3 (DLF): Δ-lifts reduced both OPE and FCE (monotone).
+• b4 (STR): strict ratchet tightened at least one threshold.
+Example: 1 0 1 1 means mirror pass, octet quorum failed, Δ-lift improved debts, strict tightened.
+Rule R.4 (Idempotence): Replaying the same inputs, cookbook, and strict lines must regenerate the same 4-bit.
+Scene 7 — Worked run #1 (optics mini): FFT→PSF→iFFT
+Problem: Verify a diffraction simulator round-trips on a pupil image.
+Tokens
+• tok-pupil: 256×256 mask; units: aperture diameters; guard: binary mask tolerance ±0.01
+• tok-λ: 550 nm ± 5 nm
+• tok-sampling: image scale 5 px/Airy; guard ±10%
+DNA-10
+timing morning; polarity normal; scale 256; pose centered; domain pixel & Fourier; conditioning: zero-pad×2; units SI; precision float32; cost n/a; seed “S1-OPT-FFT-001”
+Octet (axes tagged)
+V1(M,D): FFT → PSF (Hann window)
+V2(M,D,C): FFT (rect window)
+V3(D): zero-pad×1 instead of ×2
+V4(S): 128×128 downsampled
+V5(T): reorder ops (pad after FFT—illegal? you’ll see)
+V6(P): centered vs slight centroid offset
+V7(C): apodize edges at 1%
+V8(M′): alternate FFT library
+Mirror
+Forward: pupil → FFT → PSF. Back: PSF → iFFT → pupil′.
+Tolerance: pixel MSE ≤ 1e-4 (float32 noise/roundoff scale).
+Run
+• V1/V2/V3/V7/V8 pass mirror ≤ 7e-5.
+• V4 (downsample) violates invertibility: MSE 9e-4 (fail).
+• V5 (pad after FFT) breaks math: MSE 2.1e-2 (fail).
+• V6 (offset) MSE 1.4e-4 (just over).
+Δ-lifts (licensed)
+• Apply Basis change (confirm orthonormal FFT norm): fixes V6 to 9e-5.
+• Window swap allowed; note that V2 rect inflates sidelobes but mirror OK.
+Strict
+• Mirror line from 1e-4 → next 0.8e-4 (0.00008) after pass on ≥4 views.
+Receipts
+• OPE 0.21 (V4/V5 outliers quarantined), FCE 0.70→0.63 after Δ-lift,
+• Votes: mirror 19/24, views 44/64,
+• Residues: V4 non-invertible by design; V5 illegal op order,
+• Δ-lifts: FFT norm fix, window declared,
+• 4-bit: 1 1 1 1 (mirror pass; ≥4 views pass; debts fell; strict tightened).
+S: We didn’t force V4/V5 to pass.
+T: Correct: bad views are instructive; they map the hot zone. They go to Non-Working with a one-liner.
+Scene 8 — Worked run #2 (software mini): zip round-trip
+Problem: Verify that a pipeline serialize → compress → store → retrieve → decompress → parse round-trips a record set.
+Tokens
+• tok-recset: 10,000 JSON lines; guard: schema-valid % ≥ 99.99%
+• tok-codec: DEFLATE level 6; guard: decode time ≤ 2× encode time
+• tok-hash: SHA-256 for byte-exact mirror
+DNA-10
+timing batch-AM; polarity UTF-8; scale 10k lines; pose S3 bucket / region us-east-1; domain bytes/records; conditioning: CRLF normalize; units bytes; precision exact; cost $; seed “S1-SW-ZIP-010”
+Octet
+V1(M): gzip lvl 6
+V2(M): zstd lvl 3
+V3(D): newline normalize first
+V4(D): newline normalize last (order mirror)
+V5(C): chunk size 64k
+V6(S): shuffle record order (stable sort key)
+V7(T): change upload latency (throttle)
+V8(M′): alternate parser (strict JSON vs permissive)
+Mirror
+Forward bytes → gzip → S3 → get → gunzip → bytes′. Tolerance: Hash(bytes′) == Hash(bytes).
+Run
+• V1, V2, V3 pass.
+• V4 fails (normalize last breaks exact bytes unless you freeze canonical form).
+• V6 fails mirror (reorder without a canonicalization step).
+• V8 permissive parser parses, but mirror (byte-exact) fails by design.
+Δ-lifts (licensed)
+• Bias shift not relevant; choose Basis change: define canonical JSON (sorted keys + LF endings) as the object-level identity. Move mirror from byte-exact to canonical-bytes-exact.
+• This change is allowed only if declared in cookbook up front (Section-1 rule). You add it now and rerun from seed.
+Strict
+• Hash equality at canonical level; tighten decode time guard from 2× to 1.8×.
+Receipts
+• OPE 0.12 → 0.05 after canonicalization, FCE 0.00 (hash match),
+• Votes: mirror 22/24; views 48/64,
+• Residues: V6 requires canonicalization for any order jitter,
+• Δ-lifts: canonical-JSON basis, line ending fixed,
+• 4-bit: 1 1 1 1.
+S: So “mirror” can be at object level, not raw bytes.
+T: Exactly—but declare it. That’s why DNA-10 + cookbook exist.
+Scene 9 — The loom & the viewer: where to look first
+T: Put your eight view labels on the 8-peg loom. Tie the string in the observed failure order (worst residual to best). Count crossings: the more crossings between two pegs, the hotter that view-pair edge is.
+Viewer rule: Always “plug the viewer” (your attention & extra diagnostics) into the hottest crossing first. Do not jump around. Your debt falls fastest there.
+S: That’s the thing you meant by “the hot zone.”
+T: Yes. The loom is a tactile priority queue.
+Scene 10 — Pitfalls you’ll avoid (and how to catch them)
+• Correlated views: Eight boxes that secretly share the same axis value—your OPE will stay artificially low. Fix: tag axes explicitly; if two boxes share all tags, merge them.
+• Pseudo-mirrors: A forward/back that isn’t invertible (downsampling, lossy parse) but was treated as one. Fix: move to a canonical object mirror or mark that view Non-Working.
+• Over-fitting Δ-lifts: Adding more parameters than your anchors allow. Fix: never exceed affine in Section 1; raise anchors before new params.
+• Hidden conditioning: Silent denoisers or auto-gain. Fix: declare all conditioning in DNA-10; if discovered late, new seed, rerun.
+Scene 11 — Ten-minute solo: two mini-labs
+Pick one of each and run the full ritual.
+A) Dual-domain mirror (sound or images)
+• Sound: 2-note beat (440 & 437 Hz). Mirror: A⊕B ≡ B⊕A (≤0.1 Hz). Δ-lifts allowed: level-match, window length.
+• Images: 2D FFT of a test chart. Mirror: FFT/iFFT MSE ≤ 1e-4. Δ-lifts allowed: norm fix, window swap.
+B) Process mirror (data)
+• CSV→Parquet→CSV round-trip. Mirror: schema + sorted-row canonicalization. Δ-lifts: canonicalization only.
+• Zip round-trip as above.
+Log OPE, FCE, Votes, Δ-lifts, strict, and shade your 4-bit.
+Scene 12 — The pocket card (you’ll keep this in your kit)
+Views: tag (M,T,P,S,D,C). No duplicate tags across all six.
+Mirror: pick family; write tolerance before data.
+Δ-lifts: choose ≤2 from cookbook; L1–L4 must hold.
+Strict: monotone tighter only after pass; 0.8× step.
+Receipts: OPE, FCE, Votes, Residues, Δ, Strict, Hash.
+4-bit = (MIR, OCT, DLF, STR). Reproducible.
+Scene 13 — What it feels like when it clicks
+S (inner voice):
+I can now name why a view exists, prove why a mirror is legitimate, and fix only in the smallest way. The gold numbers keep me honest; the blue postcard tells future-me what I did. The string shows me where to look next.
+T (quietly):
+Good. Next section, we’ll scale the table: the 8×8 local viewer and the 4×4×4×4 surround you asked for—so you see neighborhoods, not just single boxes. Then we’ll show why n=4 forces an octad at n=5 in a way your hands can verify.
+Section-1 Checklist (you pass if…)
+• [ ] Each of 8 views carries distinct tags across (M,T,P,S,D,C).
+• [ ] Mirror tolerance set before seeing outputs.
+• [ ] ≤2 Δ-lifts used, both pre-declared, both reduce debts.
+• [ ] Strict threshold tightened after pass; never loosened.
+• [ ] Receipts complete; 4-bit shaded; run is idempotent.
+• [ ] Non-Working entries are one-line, informative, and out of the way.
+T: If all the boxes tick, you’re ready for Section 2: Local & Global Viewers—how to nest 8×8 panels and the 4×4×4×4 surround so the machine “hums” on real data.

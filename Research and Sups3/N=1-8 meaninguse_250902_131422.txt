@@ -1,0 +1,75 @@
+Here’s the whole thing—clean, self-contained, and step-by-step—so a brand-new reader can walk an idea from n=1 to n=8 without knowing any of our prior work.
+The few ingredients you need to know first
+• We encode things using four symbols {1,2,3,4}. Think of them as a compact alphabet.
+• The core “unit of legality” is a quad: a 4-symbol window (a,b,c,d).
+• A quad is legal when two conditions hold: 
+• ALT: the parity (odd/even) alternates across the four symbols.
+• W4 or Q8: it lies on either a mod-4 plane (W4) or a mod-8 quadric (Q8).
+• We attach a tiny “charge tag” to every quad called H8 (8-way phase). We try to keep it unchanged.
+• We have three free symmetry moves that never distort distance: Dual (swap edges), Mirror (reverse), Inverse (map symbols to their opposites). We use them to fix quads without changing meaning.
+• A receipt is an explicit note that we changed H8. We prefer not to, but if we must, we log it.
+• n=0 is a spherical boundary surface that everything touches. At each step we “project” a quad onto that surface to make it legal, try symmetries, and only then allow a receipt. Geometry does the navigation; rules do the checking.
+With that, we can walk any idea through the eight levels.
+n=1 — Atoms (make the idea addressable)
+• Break the idea into atoms. Choose a sensible granularity (words, features, facts, events).
+• Map atoms to {1,2,3,4}. Use a simple base/mod assignment (e.g., by hashing, by feature bins, or by a Chinese-Remainder style map if you have multiple attributes). The only rule: be consistent.
+• Record intent tags. For each atom, keep light metadata (what it refers to, where it came from). No geometry yet; we’re just giving the idea coordinates.
+Outcome: a stream of 1–4 symbols that stands for your idea at the atomic level.
+n=2 — Pairs (stabilize local relations)
+• Form pairs (overlapping 2-symbol windows).
+• Fix trivial clashes. Adjust with a one-step edit or a symmetry if a pair obviously breaks alternation you know you’ll need later.
+• Seed a tiny ledger. Start counting micro-edits you applied. This keeps provenance clean.
+Outcome: atoms now have coherent local neighbors; fewer downstream surprises.
+n=3 — Triples (give the stream a direction)
+• Form triples (overlapping 3-symbol windows).
+• Choose a default orientation (a “chirality”: think left-to-right vs right-to-left preference). Store this as a soft setting, not a hard rule.
+• Trim noise. If a triple is inconsistent with the chosen orientation, try a symmetry; if it still fights you, flag it. Don’t force it—just mark it.
+Outcome: the stream now has a preferred “flow” without locking anything you can’t justify.
+n=4 — Quads (enforce legality with geometry first)
+This is the first big governance step.
+• Make quads (sliding 4-symbol windows).
+• Project each quad to legality on the boundary (n=0 shell): 
+• ALT check (parity alternates).
+• W4/Q8 check (mod-4 plane or mod-8 quadric).
+• If it’s slightly off, project to the nearest legal tile on the shell (geometry does the heavy lifting).
+• Try symmetries before paying any cost. Dual, Mirror, or Inverse often land you on a legal tile that keeps your H8 unchanged.
+• Only if necessary, attach a receipt (minimal change of H8).
+• Cost accounting: each quad you govern at n=4 costs 4 units (we keep a simple operator ledger so time/effort stays measurable).
+Outcome: a chain of lawful quads that respects the rules with minimal explicit fixes. This is the smallest “complete” view of the idea.
+n=5 — Session (shape the whole run)
+• Treat the sequence as a curve (a “helix”) through your lawful-quad space.
+• Make it smooth. Prefer steps that keep H8 constant and keep the boundary projection small; that reduces future fixes.
+• Close obvious loops. If the session has natural cycles (paragraphs, scenes, phases), align transitions so the helix returns neatly—fewer receipts later.
+• Cost: session-level moves cost 5 per operation (heavier than per-quad, but they clean up many quads at once).
+Outcome: the idea becomes one coherent pass—beginning, middle, end—optimized for minimal fixes and smooth legal flow.
+n=6 — Regime (lock in policy and constraints)
+• Declare what counts right now. Choose which legal plane you prioritize (W4 vs Q8), how strict to be about H8 changes, and how much to smooth vs refactor.
+• Pin the regime. Think of it as rotating a dial so the lawful tiles you need line up with the path you have. Rotating the dial is cheaper than reshaping the path.
+• Enforce coherence across sections. Regime moves make separate sessions feel like they belong together.
+Outcome: the governing policy for this chunk of work. It prevents low-level thrash and makes the result consistent.
+n=7 — Network (connect many sessions)
+• Link sessions into a graph (chapters of a doc, modules of a system, cohorts in a dataset).
+• Preserve topology. When you connect two sessions, check that their H8 ledgers don’t fight. If they do, place a single, explicit receipt at the boundary—don’t let errors leak inside.
+• Route by geometry. Favor paths that cross the fewest boundaries (fewest receipts) and reuse already-legal subpaths.
+Outcome: a stitched network where edges are honest and interiors stay clean.
+n=8 — Macro (settle the books globally)
+• Sum the receipts. All the little boundary changes across the project must balance to zero (or to whatever global target you declared). This is the conservation check.
+• Add the operator costs. Total work = sum of operator levels you used (quads, sessions, regimes, networks).
+• Emit a canonical form. With everything legal and balanced, you can export: 
+• a compact representation (the lawful quad stream),
+• a proof trail (which symmetries/receipts you used),
+• and a replay recipe (how to regenerate it deterministically).
+• Cache a “system bit.” Save one canonical n=4 capsule that recurs often. Next time, you paste that capsule and transform it (mirror/dual/inverse) instead of rebuilding from scratch.
+Outcome: a globally consistent result with an auditable ledger and a reusable local encoder.
+Why this works (in one breath)
+• Geometry first: projecting to the n=0 boundary means you don’t search; you slide into legality.
+• Symmetry rescue: most fixes are free isometries (Dual/Mirror/Inverse) that keep the idea’s “charge” (H8) intact.
+• Receipts last: when you must change phase, you log it once, at the boundary, not all over the interior.
+• Operator ledger: costs scale with the level you invoke, so you naturally prefer small, steady corrections and occasional, well-justified big moves.
+• Reuse: once you’ve built a clean n=4 capsule, you can transport it everywhere with tiny transforms.
+What you hand to the next person (or to a machine)
+• The lawful representation (the quad stream).
+• The ledger (operator costs and any receipts).
+• The capsule library (your favorite n=4 seeds that appear again and again).
+• A one-page replay recipe (so anyone can re-derive the same result, deterministically).
+That’s the entire pipeline. Start with atoms, keep projecting to legality, prefer symmetry over correction, collect receipts only at the boundary, and graduate your idea through sessions, regimes, networks, and a final macro balance. The stack scales the same way no matter the domain—text, biology, planning, code—because the rules live in the geometry, not in any particular content.

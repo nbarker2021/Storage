@@ -1,0 +1,443 @@
+Onboarding Map (read this first)
+
+What you’re building/using:
+A universal, auditable transform machine that turns any data into base-4 quads, enforces invariants (ALT, W4∨Q8), manages phase (H8), prefers free symmetries (Mirror/Dual/Inverse), canonicalizes with a projector (CLTMP), reconciles constraints via CRT (coprime moduli), lifts to E₈ for geometric proofing, and logs every paid move as receipts in a ledger. “Do X” is always rewritten as “Check Y holds (else emit a receipt).”
+
+1) Core mental model (5 bullets)
+
+Alphabet → quads: Everything becomes digits in Σ={1,2,3,4}, chunked to 4-tuples (“quads”).
+
+Lawfulness: A quad is valid if ALT (parity alternates) and (W4 or Q8) holds.
+
+Phase: 
+𝐻
+8
+(
+𝑞
+)
+=
+(
+𝑎
+−
+𝑑
+)
++
+2
+(
+𝑏
+−
+𝑐
+)
+ 
+(
+ 
+m
+o
+d
+ 
+ 
+8
+)
+H8(q)=(a−d)+2(b−c) (mod 8). You try not to change it; if you must, receipt the delta.
+
+Free first: Try symmetry moves (M/D/V) before any paid work.
+
+Action-as-check: Procedures are predicates; outputs come with witnesses (proof artifacts) and receipts (what it cost).
+
+2) Minimum notation & facts (cheat sheet)
+
+ALT: parities go odd/even/odd/even (or the even/odd complement).
+
+W4: 
+(
+𝑎
++
+𝑏
++
+𝑐
++
+𝑑
+)
+≡
+2
+(
+m
+o
+d
+4
+)
+(a+b+c+d)≡2(mod4).
+
+Q8: 
+(
+𝑎
+2
++
+𝑏
+2
++
+𝑐
+2
++
+𝑑
+2
+)
+≡
+0
+(
+m
+o
+d
+8
+)
+(a
+2
++b
+2
++c
+2
++d
+2
+)≡0(mod8).
+
+LAWFUL(q): ALT ∧ (W4 ∨ Q8).
+
+Phase H8: 
+(
+𝑎
+−
+𝑑
+)
++
+2
+(
+𝑏
+−
+𝑐
+)
+(
+m
+o
+d
+8
+)
+(a−d)+2(b−c)(mod8).
+
+Symmetries:
+
+M: 
+(
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+)
+→
+(
+𝑑
+,
+𝑐
+,
+𝑏
+,
+𝑎
+)
+(a,b,c,d)→(d,c,b,a)
+
+D: 
+(
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+)
+→
+(
+𝑏
+,
+𝑎
+,
+𝑑
+,
+𝑐
+)
+(a,b,c,d)→(b,a,d,c)
+
+V: 
+(
+𝑥
+)
+→
+(
+5
+−
+𝑥
+)
+(x)→(5−x) elementwise
+
+Lee distance: per-digit wrap distance; sum over digits.
+
+CRT set: pick coprime moduli (e.g., 3,5,9,11,13,17) for residues and merges.
+
+3) The four levels you must internalize (n=1 → n=4)
+n=1 — Primitives
+
+Encode to Σ. Track paid unit flips 
+𝑒
+𝑖
+±
+e
+i
+±
+	​
+
+. Record everything in the operator ledger.
+
+Know your encoder(s) and why they’re reversible.
+
+n=2 — Mapping any space (pairs)
+
+Use guards (parity/monotone/type) to map connections with pairs.
+
+Mirrors give reverse edges for free. Start tagging residues mod small primes; these are your local coordinates.
+
+n=3 — Triads, entropy & braid start
+
+When multiple paths are near-equal, budget entropy: keep the best or the top-2 as proto-braid strands if per-modulus checks look good.
+
+Log the choice (weights, entropy spent). Triads decide most “real” choices.
+
+n=4 — Quads & Projector (the hinge)
+
+Run CLTMP: symmetry-first → nearest LAWFUL rep → minimize 
+∣
+Δ
+𝐻
+8
+∣
+∣ΔH8∣ → tie-break by Lee/phase; emit receipt if phase changed.
+
+CRT: merge cross-modulus residues; prefer representatives that don’t force extra phase spend.
+
+Braid certification: if two strands survived, check helicity/residue coherence and certify (or collapse) with receipts.
+
+If you only master n=1–4, you can already reproduce the core system end-to-end.
+
+4) E₈ in one page (why it matters)
+
+Treat legalized quads or sequences as points/paths and snap to the nearest point in E₈.
+
+Use neighbor checks (the 240 roots) and root-path lengths as proofs that your transforms make geometric sense.
+
+E₈ is your “semantic space”: if the algebra is right, the geometry is tight. Store snap distances and neighbor IDs as witnesses.
+
+(If you also use the 24D governance layer later, great—but it’s not required to start.)
+
+5) The two algorithms to know cold
+CLTMP Projector (conceptual)
+
+Generate symmetry images of your quad.
+
+For each, find the nearest LAWFUL target in Lee distance.
+
+Prefer phase-preserving solutions; if not possible, minimize 
+∣
+Δ
+𝐻
+8
+∣
+∣ΔH8∣ and receipt it.
+
+Pick the best image/target pair; write a deterministic receipt (inputs, symmetry, target, Lee cost, ΔH8, hashes).
+
+CRT Merge (conceptual)
+
+Compute per-modulus residues for a quad/segment.
+
+Solve the congruences to get a class modulo 
+𝑀
+M.
+
+Choose a representative that’s closest (Lee) to your local lawful anchors and minimizes new phase spend.
+
+Record any per-modulus penalties as receipts.
+
+6) What artifacts to expect (and how to read them)
+
+Cards: short, structured entries describing a dataset, algorithm, runbook, or theorem; each with provenance paths.
+
+Receipts: JSON lines with level, op name, input/output, symmetry used, cost, ΔH8, residue vectors, manifest hash.
+
+Manifests: content-addressed hashes (e.g., SHA-256) for every artifact.
+
+Ledgers: append-only logs that sum costs and cross-link manifests.
+
+Reports: human-readable summaries; the ledger is the source of truth.
+
+A good first habit: open a card → jump to its source README → run the smallest test it references → inspect the receipts.
+
+7) Budgets & dials (safety rails)
+
+Atomic flips (edit cost cap)
+
+Phase spend 
+∣
+Δ
+𝐻
+8
+∣
+∣ΔH8∣ (cap per op / per batch)
+
+Entropy (how often you keep top-2 at n=3)
+
+CRT penalties (per-modulus, per batch)
+
+λ-energy gate (accept if Δλ ≤ 0, else log a governed exception)
+
+Keep these visible; most “mysteries” are over-tight or under-tight dials.
+
+8) First-day run plan (90 minutes)
+
+Hello, Σ: encode a tiny payload into digits; record any unit flips.
+
+Pairs→Triples: run pair guards; pick one triad with an entropy receipt.
+
+Project 3–5 quads: run CLTMP; confirm LAWFUL; inspect ΔH8 receipts.
+
+Mini-CRT: compute residues at {3,5,11}; merge; check if a phase spend is forced.
+
+Proto-braid: keep two paths for a short segment; try the modulus check (3,5); either certify or collapse.
+
+E₈ snap: snap 5–10 legalized quads; record neighbor IDs and distances.
+
+Read a report: open the manifest; verify hashes match the ledger.
+
+You should end with at least one projector receipt, one CRT receipt, one (proto) braid result, and an E₈ snap witness.
+
+9) Common pitfalls (and the fix)
+
+Skipping free symmetries: If costs look high, you probably didn’t try M/D/V first.
+
+Treating W4 and Q8 as interchangeable: LAWFUL is ALT ∧ (W4 or Q8); don’t over-constrain.
+
+Letting phase drift silently: Every non-zero ΔH8 must have a receipt; otherwise debugging is pain.
+
+Forcing CRT at high primes early: Decide with small primes (3,5) first; add larger moduli later, priced.
+
+Overusing entropy: Top-2 at n=3 is powerful; budget it, or you’ll drown in branches.
+
+No manifest discipline: Always hash outputs; receipts without hashes aren’t reproducible.
+
+10) Questions to answer before you start
+
+Which encoder(s) map your domain to Σ and why are they reversible?
+
+Which pair/triad guards are relevant (parity, monotone, type)?
+
+What moduli set do you adopt for CRT and in what order (lowest first)?
+
+What are your budget caps (atomic flips, ΔH8, entropy, CRT penalties)?
+
+What is your acceptance policy (λ gate, governed exceptions)?
+
+What is the reporting surface (receipts you’ll expose, manifests to publish)?
+
+Write these into your run config so future receipts make sense.
+
+11) A tiny worked micro-example (paper-napkin)
+
+Start with digits: 
+[
+2
+,
+4
+,
+1
+,
+3
+]
+[2,4,1,3].
+
+Try symmetries: 
+𝐷
+D gives 
+[
+4
+,
+2
+,
+3
+,
+1
+]
+[4,2,3,1].
+
+Nearest LAWFUL (Lee=1) is 
+[
+4
+,
+2
+,
+2
+,
+4
+]
+[4,2,2,4] with 
+∣
+Δ
+𝐻
+8
+∣
+=
+0
+∣ΔH8∣=0 → projector receipt (cost 1, no phase spend).
+
+Residues (mod 3,5,11) computed; CRT picks a class; representative chosen with no extra ΔH8 → CRT receipt.
+
+Two adjacent quads form two paths; residues and phase slopes align → certify braid or collapse if not.
+
+That’s the whole loop in miniature.
+
+12) Reading order (cards/READMEs)
+
+Work-Ordering Guide (n=1→4) — the spine.
+
+Projector (CLTMP) card/README — inputs/outputs, tie-breaks, receipts.
+
+CRT & Reconstruction — residue functions, merge policy, penalty receipts.
+
+Universal Order Algebra / Phase — why action→check, H8, invariants.
+
+Braid predicates — what counts as a passing two-strand.
+
+E₈ lift — how snap/neighbor/root-path are recorded.
+
+Skim those; run the tiny plan above; then go deeper (tests, case studies).
+
+13) Quick glossary
+
+Quad: 4-tuple over Σ.
+
+ALT / W4 / Q8: the law family (alternation; sum mod-4; quadratic sum mod-8).
+
+H8: phase of a quad.
+
+Lee distance: wrap-around digit distance.
+
+CLTMP: the canonical projector (symmetry-first, phase-aware).
+
+Receipt: a priced, structured record of non-free work (or accepted exceptions).
+
+CRT: Chinese Remainder Theorem merge of residues.
+
+Braid: two interleaved lawful strands with coherent helicity.
+
+E₈ snap: nearest-point map into E₈ for geometric witnesses.
+
+λ gate: accept if energy doesn’t rise (or attach governed exception).

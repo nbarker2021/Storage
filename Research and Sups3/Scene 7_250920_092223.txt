@@ -1,0 +1,97 @@
+Q&A pit stop (carry-over + new)
+Q1. How do I tell a genuine model mismatch from a viewer artifact (e.g., windowing or sampling)?
+Run the pal rest in the gray box using two independent viewers that should commute (e.g., FFT→iFFT and ZT→IZT). If only one fails, it’s a viewer artifact (fix with Δ: window_shave, zero_pad, or resample_guard). If both fail in the same way, it’s a model mismatch (bias_repaint, unit_guard, parity_fix).
+Q2. What guarantees that a Δ-lift won’t make something else worse?
+Δ-lifts in CQE are local and monotone: each has a pre/post receipt pair and a debt ledger; you can only apply a Δ that (a) reduces the targeted debt and (b) does not increase any other tracked debt. If either condition isn’t met, ledger vetoes the commit and you revert.
+Q3. How aggressive should strict ratchets be?
+Start with −10% on error, +5% on coverage per pass unless the domain pack specifies otherwise. Ratchets are one-way; if a new pass can’t meet the tightened gate, you do not loosen—you add a Δ or you annihilate that branch to Non-Working.
+Section 8 — Mirror & Δ-lift library: from mismatch to repair (without regressions)
+What you’ll learn
+• A practical taxonomy of mirror mismatches (phase, unit, sampling, boundary, symmetry, conditioning)
+• The Δ-lift cookbook: 16 minimal, monotone repairs you can apply by hand
+• A decision tree that picks the right Δ from the mismatch’s fingerprint
+• How to prove monotonicity with receipts (before/after)
+• How to wire strict ratchets so your fixes don’t slide back
+Instructor view (crisp)
+1) Diagnose the mirror
+When a viewer’s forward∘inverse ≉ identity, classify the residual:
+• Phase drift: shape matches, energy OK, but peaks shifted → Δ: phase_zero
+• Unit leak: magnitudes off by a fixed factor; dimensional analysis flags it → Δ: unit_guard
+• Window/sampling: ringing at edges, aliasing combs → Δ: window_shave, zero_pad, resample_guard
+• Bias/offset: uniform pedestal in residual → Δ: bias_repaint
+• Parity break: antisymmetric resid under L↔R or +↔− → Δ: parity_fix
+• Conditioning: forward stable, inverse explodes small modes → Δ: tikhonov_λ, whiten_pass
+• Boundary: periodic vs. Dirichlet/Neumann mismatch → Δ: bc_match
+• Model gap: structured error (not noise), repeats across views → Δ: local_model_patch (domain-specific)
+2) Apply a single Δ at a time
+Each Δ declares: scope, pre-condition, receipt to improve, guard receipts not to worsen. You do:
+• Measure receipts (pre)
+• Apply Δ (strictly local)
+• Measure receipts (post)
+• Accept only if target ↓ and guards ≯ pre
+3) Ratchet after stability
+Once mirror holds across 2 cycles without new Δs, tighten the relevant threshold(s). Never tighten mid-repair.
+Student view — “what it looks like” scenes
+Scene A — Optics: FFT mirror mismatch
+You run FFT→PSF→iFFT on a pupil. The overlay RMS is 0.072 (gate 0.05). The residual shows edge ringing.
+• Fingerprint: ringing at aperture boundary + slight overshoot ⇒ window/sampling
+• Δ: window_shave (reduce hot window 1 tick), then zero_pad (2× pad)
+• Re-test: overlay RMS 0.043 (pass), MTF50 unchanged (guard ✓)
+• Strict: lower overlay gate to 0.045 (−10%)
+You annotate the Δ pair; the debt ledger drops by two ticks.
+Scene B — BIO: ODE ↔ fluorescence overlay with pedestal
+Experiment vs. ODE overlay has a uniform positive offset (same shape).
+• Fingerprint: constant pedestal ⇒ bias/offset
+• Δ: bias_repaint (subtract estimated baseline using gray rest interval)
+• Re-test: RMS 0.038→0.021; peak timing unchanged (guard ✓)
+• Strict: tighten RMS gate to 0.019 next cycle
+Scene C — Spintronics: parity flip under L↔R
+Swapping magnet chirality L↔R should leave conductance invariant; residual switches sign.
+• Fingerprint: antisymmetric under mirror ⇒ parity break
+• Δ: parity_fix (enforce palindromic constraint in the kernel; average L/R channels)
+• Re-test: asymmetry metric |ΔG| drops 2.8%→0.6% (pass); SNR stable (guard ✓)
+Δ-lift cookbook (monotone, local)
+delta_library: - id: unit_guard scope: "pre-transform" pre: "units not asserted or mismatched" improves: ["scale_error"] guards: ["overlay_RMS", "SNR"] action: "assert SI; convert to canonical; re-run" - id: window_shave scope: "aperture/time window" pre: "edge ringing; Gibbs lobes" improves: ["overlay_RMS", "ringing_index"] guards: ["bandwidth", "MTF50"] action: "shrink window by 1 tick with taper; keep bandwidth guard" - id: zero_pad scope: "FFT views" pre: "circular convolution artifacts" improves: ["overlay_RMS"] guards: ["energy_preservation"] action: "pad 2× before FFT, unpad after" - id: resample_guard scope: "multi-rate pipelines" pre: "aliasing combs; viewer mismatch" improves: ["alias_metric"] guards: ["Nyquist_margin"] action: "resample with polyphase; assert Nyquist>1.2×band" - id: bias_repaint scope: "additive offset" pre: "uniform pedestal in residual" improves: ["offset_metric"] guards: ["variance"] action: "estimate baseline in gray rest; subtract" - id: phase_zero scope: "phase alignment" pre: "peak shift without shape distortion" improves: ["phase_err"] guards: ["amplitude_err"] action: "align via cross-correlation; zero global phase" - id: parity_fix scope: "symmetry" pre: "antisymmetric residual under mirror" improves: ["parity_err"] guards: ["total_energy"] action: "enforce palindromic constraint or average L/R channels" - id: tikhonov_λ scope: "inverse conditioning" pre: "inverse amplifies noise" improves: ["cond_num", "overlay_RMS"] guards: ["bias_err"] action: "add λI with λ from L-curve; report λ" - id: whiten_pass scope: "noise shaping" pre: "colored residual; stripes" improves: ["whiteness_metric"] guards: ["signal_band"] action: "apply prewhitener; preserve passband gain" - id: bc_match scope: "boundaries" pre: "periodic vs. fixed BC mismatch" improves: ["edge_resid"] guards: ["interior_RMS"] action: "simulate with matching BC; ghost-cell fix if needed" - id: local_model_patch scope: "domain gap" pre: "structured residual persists" improves: ["overlay_RMS"] guards: ["complexity_penalty"] action: "inject minimal term (e.g., weak cross-coupling); log cost" - id: time_sync scope: "asynchronous streams" pre: "lag between sensors" improves: ["lag_metric"] guards: ["coverage"] action: "align clocks; interpolate once; lock" - id: gain_linearize scope: "sensor nonlinearity" pre: "resid grows with amplitude" improves: ["lin_err"] guards: ["noise_floor"] action: "apply inverse response; re-calibrate" - id: outlier_clip scope: "robustness" pre: "few large spikes dominate" improves: ["robust_RMS"] guards: ["information_loss"] action: "Huber/Tukey weighting; log clipped fraction" - id: phase_unwrap scope: "wrapped phases" pre: "2π jumps; unwrap needed" improves: ["phase_continuity"] guards: ["global_consistency"] action: "quality-guided unwrap; validate" - id: normalization_guard scope: "probability/energy norms" pre: "norm drift" improves: ["norm_err"] guards: ["shape"] action: "renormalize to declared norm; lock" 
+Each Δ carries pre, improves, guards, and a minimal action. You never apply two Δs at once; chain them and measure receipts between.
+Decision tree (quick pick)
+• Residual mostly constant → bias_repaint
+• Residual shifts but shape matches → phase_zero (then unit_guard if scale’s off)
+• Edge ringing/comb → window_shave → zero_pad → resample_guard
+• Antisymmetric under mirror → parity_fix
+• Inverse blows up small modes → tikhonov_λ (report λ), maybe whiten_pass
+• Error only near boundaries → bc_match
+• Residual structured, repeats across views → local_model_patch (last resort; log complexity)
+Proving monotonicity (receipts)
+For each Δ you record:
+• Before: target metric and guard metrics
+• After: same set
+• Debt change: Δtarget < 0 and Δguards ≤ 0 (no guard worsened)
+• Hash: page hash + Δ-id + timestamp → appended to the ledger row
+If any guard worsens, you revert (the pack enforces this).
+Strict ratchets (when & how)
+• After two stable cycles (no new Δ) over ≥4 active views, ratchet the relevant threshold(s) by the pack’s policy (default −10% error, +5% coverage).
+• Never ratchet during a Δ cascade; ratchets are for stability, not for chasing a moving target.
+“What it looks like” — hot-zone viewer plug-in
+You toggle the 8×8 hot-zone viewer. Cells light red where overlay RMS > gate. You click cell (3,6):
+• The right panel shows the residual’s spectrum—an aliasing comb—so you pick resample_guard.
+• The 4×4×4×4 context cube shows neighboring settings; two are amber with edge ringing → chain window_shave.
+• After both Δs, the whole 8×8 pane shifts mostly green; three cells remain amber—log for later.
+This is fast triage: find the Δ class visually, fix locally, prove by receipts.
+Micro-lab (60–75 min)
+• Dataset: Three packs (OPTICS, BIO, SPIN) each with one mirror failing.
+• Task: Diagnose, apply ≤2 Δs per case, prove monotonicity, and ratchet once stable.
+• Deliverables: Before/after receipts table, Δ chain, final 4-bit per pack, and a one-line reason for any Non-Working slip.
+Pitfalls
+• Δ stacking without measuring between: you lose causality and may hide regressions.
+• Over-regularizing (tikhonov_λ too large): you’ll pass the mirror but bias outputs; guards will catch it—respect them.
+• Boundary mismatches ignored: many false “model gaps” are just bc_match issues.
+Takeaways
+• Most mirror failures fall into six fingerprints; learn to see them.
+• The Δ-cookbook is finite and local; you don’t need heroics, just discipline.
+• Monotonicity isn’t a vibe—it’s receipts before/after with guard constraints.
+• Ratchets lock maturity; they’re one-way.
+Homework
+• For a pack of your choice, intentionally break the mirror (introduce unit and boundary errors). Diagnose and repair with exactly two Δs; show receipts and a successful ratchet.
+• Build a one-page Δ map: for your domain, list the top-3 residual fingerprints and the Δs that fixed them across two different forms.
+• Add one adversarial view to your pack; prove that an existing Δ still passes guards, or add a new Δ and justify it.
+Next up (Section 9): Receipts & the Ledger — Merkle rows, 4-bit to 8-bit promotion, and replay audits across forms.

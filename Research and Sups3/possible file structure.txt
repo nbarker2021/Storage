@@ -1,0 +1,90 @@
+agrm/
+├─ pyproject.toml
+├─ README.md
+├─ CHANGELOG.md
+├─ LICENSE
+├─ agrm/                        # installable package
+│  ├─ __init__.py
+│  ├─ config/                   # typed config & defaults
+│  │  ├─ schema.py              # pydantic dataclasses
+│  │  ├─ defaults.yaml
+│  │  └─ profiles/              # env/profile overlays
+│  ├─ spine/                    # “main spine” (protected)
+│  │  ├─ controller_v0_6.py     # original controller, flagged
+│  │  └─ controller_v0_7.py     # lightweight integration demo
+│  ├─ mdhg/
+│  │  ├─ __init__.py
+│  │  ├─ vws_bridge.py          # v0_2 (strategy+guards)
+│  │  ├─ adjacency.py           # grid, balltree, ann adapters
+│  │  └─ samplers.py            # poisson_disk, lhs, random
+│  ├─ agrm/
+│  │  ├─ __init__.py
+│  │  ├─ navigator.py
+│  │  ├─ patch_policy.py
+│  │  ├─ promotion_guard.py
+│  │  └─ priors/                # formula priors
+│  │     ├─ loader.py
+│  │     └─ profiles/           # JSON profiles live here
+│  ├─ sap/
+│  │  ├─ __init__.py
+│  │  └─ core.py                # Sentinel/Arbiter/Porter
+│  ├─ archivist/
+│  │  ├─ __init__.py
+│  │  ├─ repository.py          # pluggable backends (json, parquet, s3)
+│  │  └─ projector.py
+│  ├─ snap/
+│  │  ├─ __init__.py
+│  │  ├─ ops_center.py
+│  │  └─ taxonomy.py            # families/types schema
+│  ├─ universe/
+│  │  ├─ __init__.py
+│  │  ├─ manager.py             # selectors/overlays/policies
+│  │  └─ materialize.py         # to_points(), to_graph()
+│  ├─ mannequin/
+│  │  ├─ __init__.py
+│  │  ├─ lattice.py             # v2: SAP-gated, streaming
+│  │  └─ embed_e8.py            # pluggable E8 mapping
+│  ├─ plugins/
+│  │  ├─ edges/
+│  │  │  ├─ sfbb_construct.py   # real rules skeleton
+│  │  │  └─ dummy_inverse.py
+│  │  └─ ann/
+│  │     ├─ faiss_adapter.py
+│  │     └─ hnsw_adapter.py
+│  ├─ cli/
+│  │  ├─ agrm.py                # `agrm run`, `agrm universe ...`
+│  │  └─ tools.py               # one-off helpers
+│  └─ utils/
+│     ├─ journal.py             # structured logs
+│     ├─ metrics.py             # timers, counters
+│     └─ io.py
+├─ configs/
+│  ├─ dev.yaml
+│  ├─ prod.yaml
+│  └─ experiments/
+│     ├─ ab_adj_sfbb.yaml
+│     └─ priors_off_vs_on.yaml
+├─ experiments/                 # reproducible notebooks/scripts
+│  ├─ ab_controller.py
+│  ├─ mannequin_stream_demo.py
+│  └─ universe_demo.py
+├─ tests/
+│  ├─ unit/
+│  │  ├─ test_mdhg_adjacency.py
+│  │  ├─ test_mannequin.py
+│  │  └─ test_universe.py
+│  ├─ perf/
+│  │  ├─ test_seed_10k.py
+│  │  └─ test_adj_50k.py
+│  └─ integration/
+│     └─ test_pipeline_flags.py
+├─ scripts/
+│  ├─ build.sh
+│  ├─ bench.sh
+│  └─ release.sh
+└─ docs/
+   ├─ ARCHITECTURE.md
+   ├─ UNIVERSes.md
+   ├─ SNAP_OPS.md
+   ├─ SAP_GOVERNANCE.md
+   └─ DEPLOYMENT.md

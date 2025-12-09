@@ -1,0 +1,105 @@
+Q&A pit stop (carry-over + new)
+Q1. Why 4 bits? Isn’t that too small to be meaningful?
+It’s not a cryptographic hash—it’s a compact verdict: four orthogonal passes (mirror, octet coverage, Δ-debt non-increase, strict gate met). The 4 bits unlock promotion; the evidence lives in receipts + page hash.
+Q2. What prevents “passing by overfitting” (e.g., fixing only the screenshot case)?
+Two guards: (1) octet coverage ≥4 active views, (2) replay audit on a rotated form (automorphism) must reproduce the pass with identical 4-bit pattern. If either fails, the row cannot commit.
+Q3. How do we handle evolving thresholds?
+The ledger stores both normal and strict gates per row. Ratchets write forward-only diffs; no in-place edits. You can tighten, never loosen.
+Section 9 — Receipts & the Ledger: commits, hashes, and replay audits
+What you’ll learn
+• The anatomy of a receipt (metrics, votes, and the tiny 4-bit commit)
+• How to build a Merkle row that proves provenance without heavy crypto
+• Promotion rules: 4-bit → 8-bit (octet) → 64-bit (cross-form)
+• Replay audits: regenerating a row from first principles (Construction-A + automorphism + cookbook)
+• How to run disputes and rollbacks without breaking monotonicity
+Instructor view (crisp)
+1) Receipt anatomy (Blue)
+A receipt is a compact, page-local bundle:
+• IDs: form_id, page_id, view_id* (active views), pack_id (domain), epoch (version)
+• Metrics (named scalars): e.g., overlay_RMS=0.021, SNR=28.4 dB, parity_err=0.6%, coverage=6/8
+• Votes: mirror=22/24, views=46/64 (how many checks passed)
+• Δ-ledger: ordered list of applied Δs with before/after targets and guards
+• Gates: current normal and strict thresholds for each metric
+• 4-bit commit: b3b2b1b0 with canonical meaning: 
+• b0 = Mirror pal-rest holds under forward∘inverse
+• b1 = Octet coverage ≥ required & adversarial view passes
+• b2 = Δ-debt non-increase (all guards non-worsening)
+• b3 = Strict gates met (post-ratchet if applicable)
+If any bit = 0, no commit; you still keep the receipt (as Non-Working breadcrumb).
+2) Merkle row (Blue+Gold)
+Each row is hash of hashes so you can staple evidence without heavy tooling:
+row_hash = H( H(header: form_id, page_id, epoch) || H(config: code+glue, automorphism, octet_map, DNA-10) || H(metrics: sorted_kv) || H(deltas: Δ1..Δk with before/after) || H(gates: normal, strict) || H(attachments: small thumbs/plots if present) ) 
+• Use any stable content hash (e.g., BLAKE3 or SHA-256); choose one and stay consistent.
+• Store all child hashes in the row; the top hash (row_hash) is what you quote.
+3) Promotion ladders
+• 4 → 8 bits (Octet Commit): Once each of the 8 views has an individual 4-bit pass at least once, aggregate into an 8-bit mask (one bit per view). This is your octet commit.
+• 8 → 64 bits (Cross-form Commit): When a ring of 8 automorphism clones each promotes to 8-bit, fold into a 64-bit mosaic (8 views × 8 clones). This represents form-equivalence under the chosen automorphisms.
+• Each promotion adds a Merkle envelope: top hash includes children rows’ hashes and a witness describing automorphism elements used.
+4) Replay audits (Mirror of provenance)
+A valid row must be recomputable:
+• Reconstruct geometry: (code, p, glue) via Construction-A → (E8/Leech slice), apply automorphism element to get the same shell.
+• Apply the octet_map (H1..H8) and domain DNA-10.
+• Re-run Δs in order on the same views.
+• Recompute metrics; assert 4-bit matches.
+• Rebuild row_hash → it must equal the recorded top hash.
+If any stage diverges, the row is invalid.
+5) Disputes & rollbacks
+• Dispute = propose a counter-row with same header, different Δ chain, proving lower debt or fewer guards violated.
+• Ledger rule: lower-debt supersedes higher-debt if and only if strict gates are met and replay audit passes. Original row remains as superseded, not deleted.
+• Rollback is not allowed; you supersede forward.
+Student view — “what it looks like” scenes
+Scene 1 — OPTICS (pupil ↔ PSF)
+You’ve just passed mirror/Δ/strict on 6/8 views. Your receipt:
+form_id: TORI_OPTICS_A1 page_id: S2.034 pack_id: OPTICS epoch: v0.4 metrics: overlay_RMS: 0.021 MTF50: 41.2 lp/mm parity_err: 0.6% coverage: 6/8 deltas: - bias_repaint: RMS 0.038 -> 0.024 (guards OK) - window_shave: RMS 0.024 -> 0.021 (MTF50 stable) gates: normal: {RMS<=0.05, parity<=1.0%} strict: {RMS<=0.022, parity<=0.8%} commit_4bit: 1110 # strict not yet tightened post-stability (b3=0 is OK temporarily) row_hash: 5f..a3 
+Two sessions later, the remaining views pass; you promote to 8-bit octet:
+octet_mask: 11111111 octet_hash: H(row_hashes[H1..H8] || witness=none) 
+Scene 2 — BIO (ODE ↔ fluorescence)
+A collaborator disputes your pedestal Δ, proposing a temperature-drift Δ with better debt:
+• Their counter-row shows RMS 0.021 → 0.017, guards intact, same automorphism and octet.
+• You run a replay audit; it matches.
+• The ledger marks your row superseded and promotes theirs.
+Nothing is deleted; the chain preserves provenance.
+Scene 3 — SPINTRONICS (chirality invariance)
+You complete an 8-clone automorphism ring (M24 tags). Each clone has an 8-bit octet. You fold them:
+cross_form_commit_64: layout: clones C1..C8 × views H1..H8 bitfield: 64 ones witness: group: M24 elements: [σ_009514, σ_173842, … x8] hash64: H(octet_hashes[C1..C8] || elements) 
+Now any lab can pick the form_id + witness and replay the whole mosaic.
+Cookbook — making receipts that survive audits
+• Normalize names: metric keys sorted lexicographically; units explicit (SI); floats fixed-precision (e.g., 6 sig figs).
+• Store both numbers and how you measured them (method id + viewer id). Viewers are part of the receipt.
+• Attach small plots as thumbnails; hash them too. (They’re human-helpful, machine-ignored.)
+• One Δ per step; measure between. Chaining without measures → audit risk.
+• Never overwrite gates; write diffs as separate blocks with timestamps.
+• Automorphism witness must be explicit (group + element id). “Symmetry happened” is not reproducible.
+Decision aid — should I commit?
+• Coverage ≥ 4 views? If no, keep iterating receipts; don’t commit.
+• Mirror holds both ways? If no, fix via Δs first.
+• Guards non-worsening? If no, revert last Δ.
+• Strict met? If not yet (early cycles), you may record pre-strict receipts (b3=0), but promotion requires b3=1 at least once per view.
+What can go wrong (and how to avoid it)
+• Viewer drift (updated FFT lib changes tiny details): receipts embed viewer version; audits must use the same or a blessed equivalent with a tolerance clause.
+• Unit slippage (°C vs K; dBFS vs dBV): fail fast with unit_guard fields; don’t infer.
+• Hash fragility (whitespace / locale differences): canonicalize JSON/YAML; use UTF-8; define numeric formatting.
+Minimal templates
+Receipt (JSON-ish)
+{ "form_id": "LEECH_PATCH_A1", "page_id": "S7.012", "pack_id": "THERMAL", "epoch": "v0.4", "config": { "code": "Golay(24,12,8)", "p": 2, "glue": "half-shift+evenness", "automorphism": {"group":"M24","element":"σ_173842"}, "octet_map": {"H1":"vent_cadence", "H2":"opposed_vents", "...":"..."}, "dna10": ["timing","polarity","scale","pose","domain","conditioning","units","precision","cost","seed"] }, "metrics": {"overlay_RMS":0.0198,"ΔT_tick":0.78,"coverage":"5/8"}, "votes": {"mirror":"20/24","views":"40/64"}, "deltas":[ {"time_sync":{"before":{"lag_ms":12.4},"after":{"lag_ms":0.8}}}, {"tikhonov_λ":{"before":{"RMS":0.031},"after":{"RMS":0.0198},"λ":0.0031}} ], "gates":{ "normal":{"RMS":"<=0.05","ΔT_tick":"<=1.0"}, "strict":{"RMS":"<=0.02","ΔT_tick":"<=0.8"} }, "commit_4bit": "1111", "viewer": {"fft":"v1.4.2","ode":"v0.9.8"}, "row_hash": "9c8b...d7" } 
+Promotion envelope (8-bit)
+octet_commit: form_id: LEECH_PATCH_A1 epoch: v0.4 bitmask: 11111111 child_rows: [hash_H1, ..., hash_H8] octet_hash: ab12..ef 
+Cross-form (64-bit)
+cross_form_commit_64: parent: LEECH_PATCH_A1 clones: [C1..C8] # automorphism variants automorphism_elements: [σ_.. ×8] bitfield: 64 × '1' child_octets: [octet_hash_C1, ..., octet_hash_C8] hash64: 5a5a..77 
+“What it looks like” — running an audit
+You receive a 64-bit mosaic for SPIN. You:
+• Verify hash64 by re-hashing the eight octet_hashes + witness list.
+• For a random clone C5, pull its octet’s child hashes.
+• Pick two views (H3, H7). For each, rebuild the geometry (Construction-A + automorphism), apply Δs, recompute metrics, and confirm the 4-bit matches.
+• If both spot checks pass, you accept the 64-bit mosaic as audited.
+Time spent: ~30 minutes. No black boxes.
+Homework
+• Take a Working pack you produced earlier. Create a complete receipt and a 4-bit commit. Then write an octet envelope once all views pass.
+• Forge a counter-row that claims a better RMS but violates a guard. Show how the ledger rejects it during replay.
+• Build a tiny 64-bit demo: two clones × four views (toy), then generalize to 8×8. Include automorphism witness.
+Takeaways
+• The 4-bit is a verdict knob, not a hash—the hash tree carries the weight.
+• Promotion encodes maturity: per-view → per-form → across forms.
+• Replay is the court of record: if you can’t rebuild it, it didn’t happen.
+• Supersede, don’t erase—provenance is power.
+Next up (Section 10): Sidecars & meaning packs — designing, validating, and compressing domain meaning into reusable packs, plus the “provisional until parity” workflow across 16–64 fields.

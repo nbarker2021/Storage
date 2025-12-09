@@ -1,0 +1,49 @@
+Alena Tensor research notes
+Alena tensor / syndrome
+Barnes–Wall / Z4 codes
+Base‑80 Mirror Regime (BRM) — Hex×Quin CRT Ledger
+Best‑Representation State (BRS) — Dimension‑Matched Reversibility
+Binary Golay [24,12,8] code (Construction A for Leech)
+Boundary Entropy (Stokes/Hodge)
+CNF Path-Independence (E8/Leech)
+Chinese Remainder Theorem
+Chinese Remainder Theorem (coprime uniqueness)
+Compression Equivalence (AWB Normal Form)
+Construction A/B/D
+Construction A/B/D and CRT Governance
+Decompression Equivalence (Faithful Re‑Inflation)
+E8 root system has 240 roots
+Energy / theta
+Even unimodular (dims 32/48/64)
+Even-Unimodular Lattices in 32/48/64 Dimensions
+Extended Hamming [8,4,4] code (Construction A for E8)
+Generalized Stokes' Theorem
+Hodge Decomposition (exact/coexact/harmonic)
+Hodge Decomposition on compact Riemannian manifolds
+Interior Reversibility (Cartan Ideal)
+Lamination / Λ9
+Least-Action Scheduling (Duplex + φ‑probe)
+Leech lattice has 196560 minimal vectors
+Lisi E8 notes
+Packing Equivalence (Universal Base‑4 Encoder)
+Prime/Coprime vs Z4 Packing Uniformity (CQE proxy)
+Prime/primary receipts
+Quantum Pinning notes (1)
+Quantum Pinning notes (2)
+Quantum pinning
+Spherical designs
+Stokes' Theorem (manifold boundary integral)
+Superpermutation
+Symmetric composition cancels odd-order BCH terms
+Taxicab/Cabtaxi
+Ten Martini Problem / Dry notes
+Theta / completely monotone potentials (lattice energy)
+Theta and Energy Functionals in Packings
+Topological photonics
+UDMS / palindrome
+Unpacking Equivalence (Canonical Lift)
+Voronoi Extreme/Eutactic/Perfect Lattices
+Voronoi extreme / eutactic
+Voronoi: perfect+eutactic ⇒ extreme lattice
+Z4 Codes, Gray Maps, and Lattice Links
+Z4 Kerdock / Preparata with Gray map (Barnes–Wall)

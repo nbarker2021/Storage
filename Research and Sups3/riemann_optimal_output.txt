@@ -1,0 +1,140 @@
+Initializing Optimal Dimension Analyzer...
+
+======================================================================
+DIMENSIONAL HIERARCHY ANALYSIS
+======================================================================
+
+======================================================================
+Testing 4096D (E8 sublattices: 512)
+======================================================================
+
+[1] Critical line (σ=0.5)...
+  Zero 1 (t=14.134725): norm= 3091.9912 DR=4 valid=False
+  Zero 2 (t=21.022040): norm= 3093.4966 DR=7 valid=True
+  Zero 3 (t=25.010858): norm= 3094.6289 DR=5 valid=False
+
+[2] Off-critical line...
+  σ=0.3: avg_norm= 2240.0131 DR=3 valid=True
+  σ=0.4: avg_norm= 2558.4901 DR=4 valid=False
+  σ=0.6: avg_norm= 3766.5509 DR=6 valid=False
+  σ=0.7: avg_norm= 4505.5216 DR=7 valid=True
+
+[3] Optimization:
+  Critical (σ=0.5):   3098.7559
+  Off-critical avg:   3267.6439
+  Ratio (off/crit):  1.054502x
+  Critical is minimum: True
+  Critical valid rate: 10.0%
+
+======================================================================
+Testing 8192D (E8 sublattices: 1024)
+======================================================================
+
+[1] Critical line (σ=0.5)...
+  Zero 1 (t=14.134725): norm= 4387.5846 DR=9 valid=False
+  Zero 2 (t=21.022040): norm= 4389.6927 DR=5 valid=False
+  Zero 3 (t=25.010858): norm= 4391.2777 DR=9 valid=False
+
+[2] Off-critical line...
+  σ=0.3: avg_norm= 3178.4200 DR=3 valid=True
+  σ=0.4: avg_norm= 3630.3731 DR=4 valid=False
+  σ=0.6: avg_norm= 5344.7006 DR=6 valid=False
+  σ=0.7: avg_norm= 6393.3387 DR=7 valid=True
+
+[3] Optimization:
+  Critical (σ=0.5):   4397.0559
+  Off-critical avg:   4636.7081
+  Ratio (off/crit):  1.054503x
+  Critical is minimum: True
+  Critical valid rate: 10.0%
+
+======================================================================
+Testing 10000D (E8 sublattices: 1250)
+======================================================================
+
+[1] Critical line (σ=0.5)...
+  Zero 1 (t=14.134725): norm= 4850.6100 DR=1 valid=True
+  Zero 2 (t=21.022040): norm= 4852.9352 DR=9 valid=False
+  Zero 3 (t=25.010858): norm= 4854.6829 DR=9 valid=False
+
+[2] Off-critical line...
+  σ=0.3: avg_norm= 3513.8028 DR=3 valid=True
+  σ=0.4: avg_norm= 4013.4566 DR=4 valid=False
+  σ=0.6: avg_norm= 5908.7125 DR=6 valid=False
+  σ=0.7: avg_norm= 7068.0197 DR=7 valid=True
+
+[3] Optimization:
+  Critical (σ=0.5):   4861.0556
+  Off-critical avg:   5125.9979
+  Ratio (off/crit):  1.054503x
+  Critical is minimum: True
+  Critical valid rate: 40.0%
+
+======================================================================
+DIMENSIONAL COMPARISON
+======================================================================
+
+  Critical line average norms:
+     4096D:  3098.7559
+     8192D:  4397.0559
+    10000D:  4861.0556
+
+  Off-critical average norms:
+     4096D:  3267.6439
+     8192D:  4636.7081
+    10000D:  5125.9979
+
+  Optimization ratios (off/critical):
+     4096D: 1.054502x ✓
+     8192D: 1.054503x ✓
+    10000D: 1.054503x ✓
+
+  Critical line valid rates:
+     4096D:  10.0%
+     8192D:  10.0%
+    10000D:  40.0%
+
+  Optimal dimension: 10000D (highest ratio = strongest optimization)
+
+======================================================================
+10,000D STRUCTURE ANALYSIS
+======================================================================
+
+  Dimension: 10000
+  E8 sublattices: 1250 = 1250
+  Nearest power of 2: 8192 (2^13)
+  Error correction space: 1808 dimensions
+  Digital root of 10000: 1
+
+  Testing zero at t=14.134725...
+    Critical (σ=0.5): norm = 4850.6100
+    Off-line (σ=0.3): norm = 3499.3444
+    Ratio: 0.721424x
+
+  Error correction region (dims 8192-10000):
+    Critical: norm = 4646.4581
+    Off-line: norm = 3350.6410
+    Ratio: 0.721117x
+
+  Core E8 region (dims 0-8192):
+    Critical: norm = 1392.4240
+    Off-line: norm = 1009.2651
+    Ratio: 0.724826x
+
+======================================================================
+Results saved to: /home/ubuntu/riemann_optimal_dimension_results.json
+======================================================================
+
+======================================================================
+FINAL CONCLUSION
+======================================================================
+
+Optimal dimension for Riemann zeros: 10000D
+Optimization ratio: 1.054503x
+
+✓ 10,000D is the cumulative resting milestone
+✓ Powers of 10 are checkpoints (10^4 = 10,000)
+✓ Error correction space: 1808D (10,000 - 8,192)
+✓ Critical line minimizes norm at this dimension
+
+======================================================================

@@ -1,0 +1,165 @@
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierA/A1/paper.md ---
+Title: Interior Reversibility (Cartan Ideal)
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierA/A2/paper.md ---
+Title: Boundary Entropy (Stokes/Hodge)
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierA/A3/paper.md ---
+Title: CNF Path-Independence (E8/Leech)
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierA/A4/paper.md ---
+Title: Least-Action Scheduling (Duplex + φ‑probe)
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierA/A5/paper.md ---
+Title: Packing Equivalence (Universal Base‑4 Encoder)
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierA/A6/paper.md ---
+Title: Unpacking Equivalence (Canonical Lift)
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierA/A7/paper.md ---
+Title: Compression Equivalence (AWB Normal Form)
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierA/A8/paper.md ---
+Title: Decompression Equivalence (Faithful Re‑Inflation)
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierA/A0a/paper.md ---
+Title: Best‑Representation State (BRS) — Dimension‑Matched Reversibility
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierA/A0b/paper.md ---
+Title: Base‑80 Mirror Regime (BRM) — Hex×Quin CRT Ledger
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B3/paper.md ---
+Title: CNF Projection Algorithms (E8/Leech)
+Abstract: No abstract found.
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B4/paper.md ---
+Title: Construction A/B/D and CRT Governance
+Abstract: TBD
+
+## Claims
+- TBD
+
+## Methods
+- TBD
+
+## References
+- TBD
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B5/paper.md ---
+Title: Z4 Codes, Gray Maps, and Lattice Links
+Abstract: TBD
+
+## Claims
+- TBD
+
+## Methods
+- TBD
+
+## References
+- TBD
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B6/paper.md ---
+Title: Voronoi Extreme/Eutactic/Perfect Lattices
+Abstract: TBD
+
+## Claims
+- TBD
+
+## Methods
+- TBD
+
+## References
+- TBD
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B7/paper.md ---
+Title: Theta and Energy Functionals in Packings
+Abstract: TBD
+
+## Claims
+- TBD
+
+## Methods
+- TBD
+
+## References
+- TBD
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B8/paper.md ---
+Title: Even-Unimodular Lattices in 32/48/64 Dimensions
+Abstract: TBD
+
+## Claims
+- TBD
+
+## Methods
+- TBD
+
+## References
+- TBD
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B9/paper.md ---
+Title: Alena tensor / syndrome
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B10/paper.md ---
+Title: UDMS / palindrome
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B11/paper.md ---
+Title: Voronoi extreme / eutactic
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B12/paper.md ---
+Title: Superpermutation
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B13/paper.md ---
+Title: Prime/primary receipts
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B14/paper.md ---
+Title: Construction A/B/D
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B15/paper.md ---
+Title: Lamination / Λ9
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B16/paper.md ---
+Title: Taxicab/Cabtaxi
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B17/paper.md ---
+Title: Barnes–Wall / Z4 codes
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B18/paper.md ---
+Title: Spherical designs
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B19/paper.md ---
+Title: Energy / theta
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierB/B20/paper.md ---
+Title: Even unimodular (dims 32/48/64)
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierC/C9/paper.md ---
+Title: Quantum pinning
+Abstract: <Concise statement of the claim, result, and significance.>
+
+--- Paper: /home/ubuntu/upload/consolidated_files/CQE_Papers_Package/papers/TierC/C10/paper.md ---
+Title: Topological photonics
+Abstract: <Concise statement of the claim, result, and significance.>
+

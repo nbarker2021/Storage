@@ -1,0 +1,133 @@
+Section 2 — Local & Global Viewers
+“Make the machine visible: 8×8 up close, 4×4×4×4 around, 2×2×2×2 at the core.”
+(Same teacher/student voices; you’ll leave with paper templates and two fully worked viewer runs.)
+Scene 1 — Why viewers exist (and what “hot” really means)
+Teacher (T): Last time you proved an octet + mirror with small, licensed fixes. Today you’ll see where the machine wants help. Viewers are just grids that surface where OPE/FCE debt concentrates so you act locally, not vaguely.
+Student (S): So viewers don’t add new math; they add where-to-look.
+T: Exactly. Three scopes:
+• Local 8×8 — a close-up of your octet under eight micro-checks.
+• Surround 4×4×4×4 — a neighborhood of contexts (pose/scale/time/domain).
+• Parity core 2×2×2×2 — the quickest legality probe; if it passes cleanly you often skip heavier scans.
+Scene 2 — The Local 8×8 viewer (octet × eight micro-checks)
+What it is: Rows = your 8 views (V1…V8). Columns = 8 micro-checks that any domain can supply. Each cell is a tile with its own mini 4-bit.
+Standard micro-checks (columns):
+C1. Idempotence — same input twice → identical output (bitwise or canonical).
+C2. Round-trip residual — mirror error ≤ tolerance.
+C3. Energy/variance drift — Parseval/variance change ≤ bound.
+C4. Units/guards — units legal; values inside declared ranges.
+C5. Order-swap — swap two commutable steps; outputs match ≤ bound.
+C6. Determinism — no RNG leakage (seeded repeat).
+C7. Timing jitter — runtime variance ≤ guard (or throughput ≥ guard).
+C8. Cross-view stability — small param nudge doesn’t flip pass→fail.
+Tile mini 4-bit (write tiny in the corner):
+b1=mirror pass, b2=guards/units pass, b3=Δ-lift reduced local debt, b4=strict tightened.
+How to read:
+• Row heat = a whole view is sick (bad on many columns).
+• Column heat = a check class is the problem (e.g., order-swap fragility).
+• Hot crossing = your next Δ-lift target. You “plug the viewer” here first.
+Paper template: Draw an 8×8, annotate axes across the top/bottom; pencil OPE (outside) and FCE (inside) per tile; shade b1…b4 as tiny squares.
+Scene 3 — The Surround 4×4×4×4 viewer (context ring)
+What it is: Four axes × four levels each = 256 tiles. You won’t run all 256 every time; you stride them (see below).
+Default axes & rungs (tune to your domain):
+• Time (T): short settle, normal, long, order-reversed.
+• Pose (P): center, tilt-X, tilt-Y, defocus/offset.
+• Scale (S): ½× down, 1× native, 2× over, ROI crop.
+• Domain (D): native, Fourier, wavelet, phase-space/feature.
+Stride plan (so you finish fast):
+• Start with the 2×2×2×2 parity core (below).
+• If clean, sample a Latin hypercube 8-point (one per quadrant).
+• If any tile fails, expand that sub-cube to full 4×4 on the failing axis only.
+Each tile gets: OPE, FCE, guard flags, and a mini 4-bit. Surround heat tells you if errors are contextual (e.g., only at defocus+over-sample+wavelet).
+Scene 4 — The Parity 2×2×2×2 core (your five-minute scout)
+What it is: Minimal sixteen-tile probe: pick 2 rungs on each axis (e.g., {short, long}, {center, tilt-X}, {1×, 2×}, {native, Fourier}). Run all 16.
+Why it matters: If parity core passes cleanly (≥14/16 green; no mirror violations), you can usually promote strict and skip the heavy surround for that seed. If it fails, you now know which dimension’s flip causes pain.
+Hint: This core is the paper-visible spot where your n=4 rests live and your n=5 hinge shows up (when a fifth symbol forces eight insertion classes you’ll see exactly 8 systematic failure motifs around the core).
+Scene 5 — What to do when you “plug a viewer” into a hot zone
+• Name the crossing (row view + column check, or the T/P/S/D tuple).
+• Check cookbook eligibility (are your licensed Δ-lifts allowed for this failure?).
+• Apply one Δ-lift max; re-test the tile then the row then the core 2×2×2×2.
+• If the hot resolves but new heat appears elsewhere, back the Δ-lift out and pick the next hottest crossing. (Lawful local fixes don’t spawn distant fires.)
+Scene 6 — Worked viewer #1 (optics run extended)
+Recall the task: Pupil → FFT → PSF → iFFT → Pupil′ with 8 views (windows, pads, offsets, alt-FFT, etc.).
+Local 8×8 (sketch outcome)
+• Rows (V1…V8): as in Section 1.
+• Columns (C1…C8): the eight micro-checks.
+Hot pattern observed:
+• C5 (order-swap) hot on V5 (pad-after-FFT) — 6/8 tiles in that column fail or go amber.
+• C3 (energy drift) mild amber on V2 (rect window).
+• C6 (determinism) one amber on V8 (alt-FFT library uses auto-threads).
+Action:
+• Plug viewer at (V5,C5): Δ-lift = “restore commutation” → move pad to pre-FFT; codify in cookbook; V5 row cools.
+• (V2,C3) leave as Non-Working note (rect window is allowed but “ringy”; mirror still passes).
+• (V8,C6) set library thread pinning (seeded); determinism cools.
+Local viewer mini 4-bits tally:
+• Most tiles 1 1 1 1; V5-C5 was 0 0 0 0 → after fix 1 1 1 1.
+• Row votes: 7/8 rows pass all C1–C4; strict tightened to 0.00008 MSE target.
+Surround 4×4×4×4 (stride)
+• Parity core 2×2×2×2 clean: 16/16 pass (two amber on tilt-X+Fourier but below bounds).
+• Latin 8-point clean: no new reds. Decision: promote strict, skip full 256 scan this seed.
+Receipt note: “Order-swap fragility localized to pad-position; cookbook updated; determinism pinned; strict → 0.8×.”
+Scene 7 — Worked viewer #2 (software zip round-trip)
+Recall the task: JSON → canonicalize → gzip/zstd → store/retrieve → decompress → canonicalize → compare.
+Local 8×8
+Hot pattern observed:
+• C1 (idempotence) amber on V8 (permissive parser) — parse is fine but canonicalization differs on whitespace.
+• C5 (order-swap) red on V4 (normalize last) — illegal mirror.
+• C7 (timing jitter) amber under throttled upload (expected).
+Action:
+• Plug at (V4,C5): move normalization to pre-parse canonical step (already licensed basis-change). V4 row cools.
+• (V8,C1): accept as Non-Working — permissive parser allowed for resilience, not for mirror.
+• (C7) leave as measured; not a correctness issue; record guard.
+Surround 4×4×4×4 (stride)
+• Parity core shows exactly one systematic red: (Time=long settle, Domain=bytes) when CRLF normalization is after compression (you already fixed this structurally).
+• Latin 8-point clean after fix.
+Receipt: “Byte-level mirror fragile to late normalization; canonical-before-codec required. Strict tightened decode time to 1.8×.”
+Scene 8 — Building your paper kit (fast)
+• Local 8×8 card (laminated): row labels pre-printed (V1…V8); column headers C1–C8 with short tooltips. Write tile OPE/FCE and mini 4-bit with fine marker.
+• Parity 2×2×2×2 card: a 4×4 mini-grid per dimension pair (T×P and S×D); flipbook through combinations; quick color dots.
+• Surround ring sheet: four concentric rings (T,P,S,D) with four rungs each; string from center to chosen tuple (like a star plot); tick tiles you actually ran.
+Scene 9 — The 8×8 hum (the habit that makes this sing)
+T: You said, “it will hum if we always view 8×8 local and 4×4×4×4 around.” The habit:
+• Always light the 2×2×2×2 core first.
+• If any red → expand only that axis to 4; otherwise run Latin 8.
+• Keep the local 8×8 pinned on your desk; any amber/red you see in surround, reproduce it in local by crafting the matching view (M,T,P,S,D tags).
+• Fix only the hottest crossing; re-scan core; then resume.
+This is how you move fast and stay lawful.
+Scene 10 — Mirror-parity viewer (how to see the hinge)
+Add the mirror lane horizontally across every viewer: left = forward trace, right = backward trace. Palindromic rest = left and right tiles match (same mini 4-bit).
+When you stage a fifth symbol (n=5) on a saturated 4×4 parity core, you will discover exactly eight inequivalent red motifs lighting up at the same time—your forced octad. You don’t assume eight; the viewer shows it.
+Scene 11 — Pocket algorithms (run-books you can memorise)
+A. Hot-first loop (local 8×8):
+• Compute row/column sums of red/amber.
+• Pick argmax; check Δ-lift license; apply ≤1; re-test tile → row → core.
+• If global OPE or FCE did not drop, revert Δ-lift. Try next crossing.
+B. Surround stride:
+• Run 16-tile parity; if ≥14 pass and no mirror reds → Latin 8; else expand the failing axis to full 4.
+• Stop when the last new red has a matching local diagnosis recorded.
+C. Strict ratchet:
+• After any viewer page (local or surround) with no reds and OPE/FCE lower than prior, multiply strict by 0.8. Never loosen.
+Scene 12 — Ten-minute practicum (do it now)
+• Take any dataset you like (images, audio, JSON).
+• Define 8 views (tag M,T,P,S,D,C).
+• Light the local 8×8; fill C1–C8 with quick checks; shade mini 4-bits.
+• Run the 2×2×2×2 core; write a one-line on any red.
+• Apply one Δ-lift; re-scan the tile and core.
+• Record the blue receipt (OPE/FCE/Votes), gold strict, and your 4-bit.
+You’ve completed a lawful viewer cycle.
+Scene 13 — Teacher tips for real projects
+• Pin the mirror: write the exact inverse and show it on your page. If you can’t write it, you don’t yet have a mirror—choose a different family (canonical object mirror often saves you).
+• Don’t chase amber if a red exists; reds lead, ambers follow.
+• Only two Δ-lifts per seed in Section 2. If you need a third, new seed.
+• Name your failures in the Non-Working album like bug titles: “Order-swap fragility under pad-post FFT.”
+What it feels like when it clicks
+S (inner voice):
+The page tells me where to push. I don’t argue with the data; I follow the hottest crossing, fix once, and watch the core cool. The 4-bit stays honest.
+T (quietly):
+Good. Next time: Section 3 — The n=4→n=5 hinge. We’ll do the paper proof by enumeration (why eight legal gates appear and how that forces the octad you’re already using), then tie it to the E8/Leech “parity loom” so your viewers and your geometry are the same story.
+Section-2 Checklist (you pass if…)
+• [ ] Local 8×8 filled (C1–C8 defined; no duplicate views across M,T,P,S,D,C).
+• [ ] Parity 2×2×2×2 run; findings inform either Latin-8 or axis-expand.
+• [ ] At most one Δ-lift applied per hot crossing; OPE/FCE decreased.
+• [ ] Strict tightened after a clean viewer page; never loosened.
+• [ ] Receipts logged with mini 4-bits on tiles and a session 4-bit for the run.
+• [ ] Non-Working entries tersely explain why they’re allowed to remain.

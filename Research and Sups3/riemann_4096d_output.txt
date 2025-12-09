@@ -1,0 +1,111 @@
+Initializing 4096D Riemann Analyzer...
+  Target dimension: 4096
+  E8 sublattices: 512
+
+======================================================================
+Dimensional Stability Test
+======================================================================
+
+Testing zero at t=14.134725 across dimensions...
+      8D: norm =         14.4651
+     16D: norm =         16.6259
+     24D: norm =         25.2252
+     32D: norm =         36.3803
+     64D: norm =         75.8898
+    128D: norm =        129.7817
+    256D: norm =        200.8810
+    512D: norm =        296.7777
+   1024D: norm =        428.8173
+   2048D: norm =        612.9245
+   4096D: norm =        871.4083
+
+  Growth rates:
+        8D →    16D: 1.1494x
+       16D →    24D: 1.5172x
+       24D →    32D: 1.4422x
+       32D →    64D: 2.0860x
+       64D →   128D: 1.7101x
+      128D →   256D: 1.5478x
+      256D →   512D: 1.4774x
+      512D →  1024D: 1.4449x
+     1024D →  2048D: 1.4293x
+     2048D →  4096D: 1.4217x
+
+  Expected growth (if stable random):
+       16D: expected 1.4142x, actual 1.1494x, deviation 18.7%
+       24D: expected 1.2247x, actual 1.5172x, deviation 23.9%
+       32D: expected 1.1547x, actual 1.4422x, deviation 24.9%
+       64D: expected 1.4142x, actual 2.0860x, deviation 47.5%
+      128D: expected 1.4142x, actual 1.7101x, deviation 20.9%
+      256D: expected 1.4142x, actual 1.5478x, deviation 9.4%
+      512D: expected 1.4142x, actual 1.4774x, deviation 4.5%
+     1024D: expected 1.4142x, actual 1.4449x, deviation 2.2%
+     2048D: expected 1.4142x, actual 1.4293x, deviation 1.1%
+     4096D: expected 1.4142x, actual 1.4217x, deviation 0.5%
+
+======================================================================
+Critical Line Optimization in 4096D
+======================================================================
+
+[1] Critical line zeros (σ=0.5)...
+  Zero 1 (t=14.134725): norm=    871.4083 DR=9 valid=False
+  Zero 2 (t=21.022040): norm=    878.0445 DR=2 valid=False
+  Zero 3 (t=25.010858): norm=    883.0036 DR=4 valid=False
+  Zero 4 (t=30.424876): norm=    891.0121 DR=5 valid=False
+  Zero 5 (t=32.935062): norm=    895.2172 DR=3 valid=True
+
+[2] Off-critical line points...
+  σ=0.3: avg_norm=    649.4502 DR=3 valid=True
+  σ=0.4: avg_norm=    735.8873 DR=4 valid=False
+  σ=0.6: avg_norm=   1067.7815 DR=6 valid=False
+  σ=0.7: avg_norm=   1272.4107 DR=7 valid=True
+
+[3] Optimization analysis:
+  Critical line (σ=0.5):     883.7371
+  Off-critical avg:           931.3824
+  Ratio (off/critical):   1.053913x
+  Critical line is minimum: True
+
+======================================================================
+E8 Sublattice Distribution Analysis
+======================================================================
+
+Analyzing zero at t=14.134725...
+  Comparing σ=0.5 (critical) vs σ=0.3 (off-line)
+
+  Critical line (σ=0.5):
+    Mean sublattice norm: 24.9284
+    Std deviation:        29.3545
+
+  Off-line (σ=0.3):
+    Mean sublattice norm: 18.6759
+    Std deviation:        20.8056
+
+  Difference:
+    Mean ratio: 0.749181
+    Std ratio:  0.708769
+
+  Top 10 sublattices with largest difference:
+    Sublattice 511: critical=126.6291, off=91.3188, diff=35.3103
+    Sublattice 510: critical=125.2652, off=90.3354, diff=34.9299
+    Sublattice 509: critical=123.9160, off=89.3625, diff=34.5535
+    Sublattice 508: critical=122.5814, off=88.4001, diff=34.1813
+    Sublattice 507: critical=121.2611, off=87.4482, diff=33.8130
+    Sublattice 506: critical=119.9551, off=86.5064, diff=33.4487
+    Sublattice 505: critical=118.6631, off=85.5748, diff=33.0883
+    Sublattice 504: critical=117.3851, off=84.6533, diff=32.7318
+    Sublattice 503: critical=116.1208, off=83.7416, diff=32.3791
+    Sublattice 502: critical=114.8701, off=82.8398, diff=32.0303
+
+======================================================================
+Results saved to: /home/ubuntu/riemann_4096d_results.json
+======================================================================
+
+======================================================================
+CONCLUSION
+======================================================================
+✓ Critical line IS minimum in 4096D
+  Ratio: 1.053913x
+
+Dimensional stability:
+  Norms across dimensions: [428.81733179902267, 612.9244529154167, 871.4082560645187]

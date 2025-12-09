@@ -1,0 +1,149 @@
+================================================================================
+
+
+CQE_Core (97 files):
+--------------------------------------------------------------------------------
+  05_CQE_Developer_Guide_and_API.pdf
+  CQE_API_Schemas_v1.pdf
+  CQE_BigBang_Full_Paper.pdf
+  CQE_BigBang_Paper.pdf
+  CQE_BigBang_Project.pdf
+  CQE_BigBang_Walkthrough.pdf
+  CQE_Bucket_E.pdf
+  CQE_Bucket_I (1).pdf
+  CQE_Bucket_I.pdf
+  CQE_Bucket_N.pdf
+  CQE_Bucket_O.pdf
+  CQE_Bucket_P.pdf
+  CQE_Bucket_R.pdf
+  CQE_Bucket_S (1).pdf
+  CQE_Bucket_S.pdf
+  CQE_Bucket_V.pdf
+  CQE_Card_Kit_v1_2_Master.pdf
+  CQE_Card_Mat.pdf
+  CQE_Cards_Pitch_Handout.pdf
+  CQE_Cards_Pitch_Handout_Expanded.pdf
+  CQE_Cards_Pitch_Presenter_Notes.pdf
+  CQE_Cards_Pitch_Presenter_Notes_Expanded.pdf
+  CQE_Complete_Testing_Framework_-_Summary.md
+  CQE_Coursebook_v2.pdf
+  CQE_Experiments_Charts_v1.pdf
+  CQE_Experiments_Protocol_v1.pdf
+  CQE_Film_Earth_Mars_Cadenced.pdf
+  CQE_Framework_Testing_Instructions_Manual.md
+  CQE_Frontpage_Explainer.pdf
+  CQE_Glossary_Notation_v1.pdf
+  CQE_Governance_Compliance_v1.pdf
+  CQE_Helpsheet.pdf
+  CQE_Implementation_Guide_v1.pdf
+  CQE_Ledger_Pack.pdf
+  CQE_Ledger_Template.pdf
+  CQE_Master_Ledger.pdf
+  CQE_Octet_Papers.pdf
+  CQE_Octet_Papers_FULL.pdf
+  CQE_Operations_Runbook_v1.pdf
+  CQE_Parity_Framework.pptx
+  CQE_Presentation.pdf
+  CQE_Quickstart_Cookbook_v1.pdf
+  CQE_README.md
+  CQE_Roleplay_Scenes_v1_0_Master.pdf
+  CQE_Whitepaper_v1.pdf
+  CQE_Why_Files_Examples.pdf
+  CQE_full_presentation.tex
+  CQE_manifest_summary.txt
+  CQE_n1to5_DemoPack_v1.pdf
+  CQE_n1to5_Falsifier_Kit_v1 (1).pdf
+  CQE_n1to5_Falsifier_Kit_v1.pdf
+  CQE_n1to5_Worksheets_v1 (1).pdf
+  CQE_n1to5_Worksheets_v1.pdf
+  CQE_onepager.md
+  CQE_paper2 (1).md
+  CQE_paper2.md
+  CQL(language for CQE)_250920_095707.txt
+  CQL(language for CQE)_updated.txt
+  EM_CQE_receipts_summary.csv
+  Harness_250829_202351(1).txt
+  Harness_250829_202351.txt
+  Linguistic_Validation_Analysis_for_CQE_Framework_C.md
+  WHY_10_Final_Synthesis_CQE_Runbook.pdf
+  WHY_7_Thermo_Info_CQE_Entropy_Governance.pdf
+  WHY_8_Sonic_Symmetry_Cartan_CQE.pdf
+  WHY_9_Light_Photons_CQE_TransferRail.pdf
+  cqe_ai_operator_protocol.md
+  cqe_anchor_activation_edges.csv
+  cqe_anchor_activation_summary.csv
+  cqe_anchor_gate_report.csv
+  cqe_braiding_metrics.csv
+  cqe_controller.py
+  cqe_demo_dataset.csv
+  cqe_formal_smoke_results.csv
+  cqe_formal_smoke_results_v2.csv
+  cqe_formal_smoke_results_v3.csv
+  cqe_gate_labels_with_braiding.csv
+  cqe_gate_labels_with_braiding_FIXED.csv
+  cqe_harness (1).py
+  cqe_harness (2).py
+  cqe_harness.py
+  cqe_ledger_runs.csv
+  cqe_ledger_runs_v2.csv
+  cqe_n4_to_n5_proofing.csv
+  cqe_nodes_evidence_tiers_after_formal_smoke.csv
+  cqe_nodes_evidence_tiers_after_formal_smoke_v2.csv
+  cqe_nodes_evidence_tiers_after_formal_smoke_v3.csv
+  cqe_operational_definitions.csv
+  cqe_operator_lib.py
+  cqe_operator_placard.md
+  cqe_scenes_structured.csv
+  cqe_symmetry_pairing_report.csv
+  cqe_theory.pdf
+  cqe_tokens_extracted.csv
+  cqe_tokens_v2.csv
+  cqe_unified_index.md
+  harnesses.csv
+
+E8_Lattice (11 files):
+--------------------------------------------------------------------------------
+  2cd4e8db.md
+  88dbe8ca.py
+  CQE_E8_Lattices_Presentation.pptx
+  E8 Info_250816_120255.txt
+  Lattice info 1_250904_233404.txt
+  Lattice info 2_250904_233436.txt
+  Lattice node explained _250817_002144(1).txt
+  Lattice node explained _250817_002144.txt
+  Lisi e8_250904_230445.txt
+  Pause to clarify lattice_250920_093539.txt
+  WHY_4_E8_Leech_minimal_stable_geometry.pdf
+
+General_Research (406 files):
+--------------------------------------------------------------------------------
+  01_Legality_First_AI_Claim.pdf
+  01_Rulebook_Master.pdf
+  01_Wall_Rules.pdf
+  0219819d.txt
+  02_Card_Deck.pdf
+  02_ScratchPad_HQ_Runbook.pdf
+  02_Wall_CardPack.pdf
+  02b_Card_Deck_Rings_6x4.pdf
+  02c_Card_Deck_Jokers_4x2.pdf
+  03_Legality_Department_Spec.pdf
+  03_Presentation_Updated.pdf
+  03_Wall_CRT.pdf
+  03b_Presentation_Full.pdf
+  04615394.md
+  04_GAE_CEC_Contract_Formats.pdf
+  04_Wall_Language.pdf
+  05_Wall_CrossDomain.pdf
+  06_Falsifiers_Benchmarks_Eval.pdf
+  06_Wall_JokerEye.pdf
+  07_Glossary_and_Notation.pdf
+  07_Pres_Rules.pdf
+  08_Case_Studies_Navigation_Ice_Bio.pdf
+  08_Pres_CardPack.pdf
+  09_Pres_CRT.pdf
+  0b549f1c.py
+  1-8 as operators_250902_131447(1).txt
+  1-8 as operators_250902_131447(2).txt
+  1-8 as operators_250902_131447.txt
+  10 martini+dry_250904_230544.txt
+  10_Pres_Language.pdf

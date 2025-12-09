@@ -1,0 +1,597 @@
+Top 2025 Science Findings — Running Canvas
+Protocol: Ten items per turn. Each item has a fast TL;DR with a review link. We’ll keep adding, and later we’ll rank, cross-link, and draft Evidence Cards.
+1) NIF sets 8.6 MJ fusion yield (target gain ≈4.1)
+Field: Energy / Fusion
+Date: Apr 7, 2025
+TL;DR: National Ignition Facility reports its highest shot yet—~8.6 MJ from ~2.08 MJ laser input (gain >4). It strengthens scientific ignition repeatability, but engineering hurdles (rep-rate, target cost, wall-plug) remain before energy applications.
+Review link: https://lasers.llnl.gov/science/achieving-fusion-ignition
+2) Perovskite–silicon tandem hits 34.85% (NREL-certified)
+Field: Energy / Solar PV
+Date: Apr 2025
+TL;DR: LONGi sets a lab-cell record for two-terminal perovskite–Si tandems at 34.85% with NREL certification. Big efficiency headroom; long-term stability and scalable manufacturing are the gating factors.
+Review link: https://www.longi.com/en/news/silicon-perovskite-tandem-solar-cells-new-world-efficiency/
+3) Fourth global mass coral-bleaching event (record scope)
+Field: Climate / Oceans
+Date: Apr–Aug 2025 (ongoing)
+TL;DR: NOAA confirms Earth’s fourth global bleaching event; about ~84% of reef areas experienced significant heat stress since 2023. Ecological and economic impacts are large; mortality varies by region and recovery windows.
+Review link: https://www.noaa.gov/news-release/noaa-reports-fourth-global-coral-bleaching-event
+4) Arctic winter maximum sea ice hits record low
+Field: Cryosphere / Climate
+Date: Mar 22, 2025
+TL;DR: The Arctic’s winter maximum extent is the lowest in the satellite record, highlighting continued Arctic amplification and implications for weather, ecosystems, and shipping.
+Review link: https://nsidc.org/arcticseaicenews/2025/03/arctic-sea-ice-at-its-lowest-maximum-extents/
+5) KATRIN tightens neutrino mass to <0.45 eV (90% CL)
+Field: Physics (Particle)
+Date: Apr 11, 2025
+TL;DR: KATRIN halves the direct-lab upper limit on the effective electron-neutrino mass using precision beta-spectrum measurements—constraining neutrino physics and cross-checking cosmology.
+Review link: https://www.science.org/doi/10.1126/science.adq9592
+6) Euclid Q1 public data release (63 deg²; ~26M detections)
+Field: Astronomy / Cosmology
+Date: Mar 19, 2025
+TL;DR: Euclid opens its first tranche of survey data, enabling weak/strong lensing and galaxy-evolution studies ahead of full cosmology releases. This sets up a pipeline of dark-energy constraints in 2026+.
+Review link: https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_opens_data_treasure_trove_offers_glimpse_of_deep_fields
+7) SKA-Low produces its first calibrated sky image
+Field: Astronomy / Instrumentation
+Date: Feb 12, 2025
+TL;DR: The Australian SKA-Low array achieves a commissioning milestone with its first sky image—validating sensitivity and calibration workflows en route to transformational low-frequency radio surveys.
+Review link: https://www.skao.int/en/exploration/skas-first-image-ska-low-supersevsky
+8) Quantum error correction surpasses break-even (bosonic/qudit encodings)
+Field: Quantum Information
+Date: May 2025
+TL;DR: Nature reports hardware-efficient encodings (e.g., bosonic/cat or GKP qudits) achieving logical lifetimes beyond break-even versus physical qubits—an early but key step toward fault tolerance.
+Review link: https://www.nature.com/articles/s41586-025-08642-7
+9) Exercise after chemotherapy improves colon-cancer outcomes (CHALLENGE RCT)
+Field: Medicine / Oncology
+Date: Jun 2025
+TL;DR: In a ~889-patient randomized trial, a structured multi-year exercise program after adjuvant chemotherapy improved disease-free survival (and showed OS benefits) versus usual care—pointing to a scalable, low-toxicity adjunct to cancer survivorship.
+Review link: https://www.nejm.org/doi/full/10.1056/NEJMoa2502760
+10) 1,019 long-read human genomes expand structural-variation maps
+Field: Genomics
+Date: Jul 2025
+TL;DR: Population-scale long-read sequencing across diverse cohorts doubles the known catalog of structural variants, improving the foundation for precision genomics and pangenome efforts.
+Review link: https://www.nature.com/articles/s41586-025-09290-7
+Notes: Next turn I’ll add the next ten (e.g., deep-sea hadal ecosystems to 9,533 m, AIPL1 gene therapy in LCA, JWST Alpha Centauri A candidate, perovskite cooling paint, Euclid Perseus UDG ‘bleeding stars,’ etc.).
+11) Hadal cold-seep ecosystems to ~9,533 m documented
+Field: Oceanography / Deep-sea Biology
+Date: Jul 2025
+TL;DR: Submersible surveys revealed dense chemosynthetic animal communities (e.g., tubeworms, bivalves) at hadal trench cold seeps, expanding the known limits of complex life and informing carbon cycling and astrobiology analogs.
+Review link: https://www.nature.com/articles/d41586-025-02447-4
+12) AIPL1 gene therapy improves vision in severe LCA (phase 1/2)
+Field: Medicine / Gene Therapy (Ophthalmology)
+Date: Feb–Jul 2025
+TL;DR: First-in-human results in children with AIPL1-associated Leber congenital amaurosis show clinically meaningful gains in acuity and function, extending the gene-therapy playbook beyond RPE65; durability and larger cohorts remain to be shown.
+Review link: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)00728-2/fulltext
+13) Pig lung xenotransplant functions for ~9 days in brain-dead recipient
+Field: Medicine / Transplantation
+Date: Jun 2025
+TL;DR: A gene-edited pig lung maintained gas exchange for ~9 days in a brain-dead human, mapping rejection pathways in the organ considered toughest for xenotransplant; still far from living-patient trials.
+Review link: https://www.nature.com/articles/d41586-025-01594-5
+14) JWST evidence for a planet around Alpha Centauri A (candidate)
+Field: Astronomy / Exoplanets
+Date: Aug 7, 2025
+TL;DR: High-contrast JWST analysis reports a signal consistent with a sub-Neptune in Alpha Cen A’s habitable zone; follow-up is needed to rule out disk/clump artifacts.
+Review link: https://science.nasa.gov/missions/webb/astronomers-find-evidence-of-planet-in-alpha-centauri-a-s-habitable-zone/
+15) "Sweating" cooling paint delivers radiative + evaporative cooling
+Field: Materials / Thermal Management
+Date: Feb 2025
+TL;DR: A porous white coating wicks moisture and radiates heat to space, showing multi-degree sub-ambient cooling in humid field tests—promising for low-energy building cooling if durability holds.
+Review link: https://www.science.org/doi/10.1126/science.adt3372
+16) Euclid spots an ultra-diffuse galaxy shedding stars in Perseus
+Field: Astronomy / Galaxy Evolution
+Date: Jul 2025
+TL;DR: Early Euclid imaging reveals a rare tidal “bleeding stars” feature from an ultra-diffuse galaxy, offering a clean laboratory for cluster environmental quenching and dark-matter constraints.
+Review link: https://www.eso.org/public/news/eso2413/
+17) 65 near-complete human genomes close most remaining assembly gaps
+Field: Genomics
+Date: Jul 2025
+TL;DR: High-quality assemblies from diverse individuals resolve centromeres and other hard regions, strengthening the human pangenome and enabling studies of repeats tied to disease and evolution.
+Review link: https://www.nature.com/articles/s41586-025-09140-6
+18) NIST selects HQC as a fifth post-quantum algorithm
+Field: Computer Security / Cryptography
+Date: Mar 11, 2025
+TL;DR: To diversify key-establishment options beyond LWE-based schemes, NIST moved HQC into the standardization track—key signal for global crypto migrations.
+Review link: https://www.nist.gov/news-events/news/2025/03/nist-selects-hqc-fifth-algorithm-post-quantum-encryption
+19) Fermilab Muon g‑2 reaches 127 ppb precision (Run 1–6)
+Field: Physics / Precision HEP
+Date: Jun–Aug 2025
+TL;DR: The combined measurement tightens the experimental value; with updated theory (notably lattice-QCD HVP), the long-standing tension is reduced—though community consensus is still maturing.
+Review link: https://news.fnal.gov/2025/06/muon-g-2-most-precise-measurement-of-muon-magnetic-anomaly/
+20) Chang’e‑6 far-side lunar samples: early geochemical results
+Field: Planetary Science / Moon
+Date: Jul 2025
+TL;DR: Initial analyses of Apollo Basin samples from the lunar far side report distinctive mineralogy and chronology, refining models of farside volcanism and crustal evolution.
+Review link: https://www.nature.com/articles/s41467-025-53883-6
+21) SWOT reveals global submesoscale ocean dynamics
+Field: Oceanography / Earth Observation
+Date: Apr 2025
+TL;DR: The SWOT mission resolves kilometer-scale ocean features worldwide, reframing their role in energy cascades, climate feedbacks, and biogeochemical transport.
+Review link: https://www.nature.com/articles/s41586-025-08722-8
+22) Chip-scale optical frequency division for ultra-precise timing
+Field: Photonics / Metrology
+Date: May 2025
+TL;DR: Microcomb-based optical frequency division on chip advances ultralow-noise microwave generation and next-gen timing/GNSS, shrinking lab-grade metrology into integrated platforms.
+Review link: https://www.nature.com/articles/s41566-025-01617-0
+23) Trehalose-6-phosphate spray lifts wheat yields in field trials
+Field: Agriculture / Plant Science
+Date: Apr 2025
+TL;DR: Multi-year, multi-site studies show ~10–12% yield boosts from a T6P-precursor foliar treatment; potential climate-resilience lever pending larger deployments and cost analyses.
+Review link: https://www.ox.ac.uk/news/2025-04-30-new-biostimulant-treatment-significantly-boosts-wheat-yields-field-studies-confirm
+24) Inavolisib combo improves OS in PIK3CA‑mutated breast cancer
+Field: Medicine / Oncology
+Date: Jun 2025
+TL;DR: Adding the PI3Kα inhibitor inavolisib to palbociclib + fulvestrant improves overall survival in HR+/HER2–, PIK3CA‑mutated advanced disease—practice-informing targeted regimen.
+Review link: https://www.nejm.org/doi/full/10.1056/NEJMoa2501796
+25) Tarlatamab (DLL3xCD3) improves OS in relapsed SCLC
+Field: Medicine / Oncology
+Date: Jun 2025
+TL;DR: A DLL3‑targeted T‑cell engager significantly prolongs overall survival versus chemotherapy in previously treated small‑cell lung cancer, opening a new immunotherapy avenue for a hard-to-treat cancer.
+Review link: https://www.nejm.org/doi/full/10.1056/NEJMoa2502099
+26) Real‑time brain‑to‑voice neuroprosthesis restores naturalistic speech
+Field: Neuroengineering / BCI
+Date: 2025
+TL;DR: A brain–computer interface decodes speech with near‑instant latency and natural prosody (tone/pitch), restoring communication in paralysis and pushing clinical BCIs toward everyday use.
+Review link: https://www.nature.com/articles/s41593-025-01905-6
+27) Mauna Loa CO₂ monthly record highs (May/July 2025)
+Field: Climate / Atmospheric Science
+Date: May–Jul 2025
+TL;DR: The seasonal peak exceeded 430 ppm in May and the July 2025 monthly mean reached ~427.9 ppm at Mauna Loa—another step up in the Keeling Curve, underscoring the pace of climate forcing.
+Review link: https://gml.noaa.gov/ccgg/trends/monthly.html
+28) Quasi–solid‑state sodium battery survives ~50,000 cycles
+Field: Energy Storage / Batteries
+Date: May 2025
+TL;DR: A hybrid electrolyte architecture enables exceptionally long cycle life in sodium batteries, signalling cost‑effective grid storage pathways if scaled.
+Review link: https://www.nature.com/articles/s41467-025-60842-x
+29) Sodium–air battery reaches ~1,000 cycles via cascade reactor
+Field: Energy Storage / Batteries
+Date: May 2025
+TL;DR: A redesigned sodium–air chemistry using a cascade catalyst improves reversibility and cycle life to ~1,000 cycles, pushing metal–air toward practical regimes.
+Review link: https://www.nature.com/articles/s41467-025-60840-z
+30) Single‑solvent electrolyte boosts Li‑metal fast‑charge capability
+Field: Energy Storage / Batteries
+Date: Jun 2025
+TL;DR: A simplified electrolyte formulation supports high‑energy lithium‑metal cells with improved fast‑charging and retention, pointing to manufacturable chemistries beyond Li‑ion.
+Review link: https://www.nature.com/articles/s41467-025-59967-w
+31) High‑efficiency perovskites for indoor light (≈37.6% @ 1000 lux)
+Field: Energy / Photovoltaics (IoT)
+Date: Aug 2025
+TL;DR: Next‑gen perovskite devices tuned for indoor spectra reach record conversion efficiencies and multi‑week stability, enabling battery‑free sensors and wearables.
+Review link: https://www.livescience.com/technology/your-gadgets-could-soon-be-battery-free-thanks-to-new-solar-cells-powered-by-indoor-light
+32) AI‑designed radiative‑cooling paints cut surface temps 5–20 °C
+Field: Materials / Climate Adaptation
+Date: Jul 2025
+TL;DR: Materials‑informed ML searches discover paint formulations with strong solar reflectance + thermal emittance, offering passive building cooling; durability and real‑world performance remain to be proven.
+Review link: https://www.theguardian.com/technology/2025/jul/02/ai-helps-find-formula-for-paint-to-keep-buildings-cooler
+33) In vivo base editing (VERVE‑102) lowers LDL‑C up to ~69%
+Field: Medicine / Cardiometabolic Gene Editing
+Date: Apr 2025
+TL;DR: A one‑time infusion editing PCSK9 shows dose‑dependent LDL‑C reductions with early acceptable safety in Phase 1b—potentially a durable alternative to chronic lipid drugs.
+Review link: https://www.vervetx.com/our-programs/verve-102
+34) Neonatal base editing treats lethal CPS1 deficiency (first‑in‑human)
+Field: Medicine / Genetic Diseases
+Date: May 2025
+TL;DR: An emergency, compassionate‑use in vivo base‑editing intervention in a newborn corrected a urea‑cycle defect with rapid biochemical rescue—proof of concept for life‑saving neonatal edits.
+Review link: https://www.nejm.org/doi/full/10.1056/NEJMoa2504747
+35) AlphaGenome foundation model predicts DNA regulatory activity
+Field: Genomics / AI
+Date: Jun 2025
+TL;DR: A large foundation model trained on multi‑species sequences learns regulatory grammar, improving prediction of enhancer/promoter activity and variant effects across cell types.
+Review link: https://www.nature.com/articles/s41586-025-09038-3
+36) Inner‑speech BCI with privacy ‘mind‑password’ concept
+Field: Neuroengineering / BCI
+Date: Aug 2025
+TL;DR: Intracortical decoding of imagined speech introduces user‑controlled activation (“mind‑password”) to protect privacy, expanding non‑spoken communication options for paralysis.
+Review link: https://www.ft.com/content/6bf4ef14-932b-4b2b-8d64-fac10fbfd43c
+37) West Antarctic Ice Sheet shows tipping‑like behavior in models
+Field: Cryosphere / Climate Dynamics
+Date: Aug 2025
+TL;DR: Ice‑sheet modeling across glacial cycles indicates hysteresis and threshold behavior for WAIS, sharpening risk assessments for irreversible sea‑level rise under warming.
+Review link: https://www.nature.com/articles/s43247-025-02366-2
+38) MethaneSAT suffers anomaly; recovery and data preservation underway
+Field: Earth Observation / Methane Monitoring
+Date: Jun 2025
+TL;DR: The methane‑mapping mission encountered a communications anomaly; teams are working to restore operations and safeguard early datasets critical for emissions accountability.
+Review link: https://spacenews.com/methanesat-mission-in-anomaly-after-loses-contact/
+39) Chang’e‑6 detects negative ions near the lunar surface
+Field: Planetary Science / Plasma Environment
+Date: Jul 2025
+TL;DR: An onboard analyzer observed negative ions above the far‑side surface, informing surface–plasma interactions and lunar exosphere models ahead of crewed operations.
+Review link: https://eos.org/articles/chang%E2%80%99e-6-detects-negative-ions-near-lunar-surface
+40) New Uranian moon ‘Curhatan’ (S/2025 U1) identified in JWST imaging
+Field: Astronomy / Planetary
+Date: Aug 2025
+TL;DR: Analysis of JWST observations revealed a previously unknown ~8‑km moon orbiting Uranus, refining the system’s inventory and guiding future mission science targets.
+Review link: https://science.nasa.gov/mission/webb/science/our-solar-system/new-uranus-moon-curhatan/
+41) RH5.1/Matrix‑M malaria vaccine shows ~55% efficacy (delayed third dose)
+Field: Medicine / Infectious Disease (Malaria)
+Date: 2025
+TL;DR: A blood‑stage vaccine candidate achieved moderate efficacy with a modified schedule in Phase 2/3, expanding the toolkit beyond RTS,S and R21 candidates.
+Review link: https://pubmed.ncbi.nlm.nih.gov/39672183/
+42) CRISPR edit improves drought tolerance in commercial potato
+Field: Agriculture / Genome Editing
+Date: Jul 2025
+TL;DR: Editing CBP80 improved drought resilience with a smaller yield penalty in a cultivated potato line—toward climate‑resilient staples pending regulatory and field‑scale validation.
+Review link: https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2025.1598947/full
+43) Integrated photonic accelerator demonstrates ultralow‑latency compute
+Field: Computer Engineering / Photonics
+Date: 2025
+TL;DR: A large‑scale on‑chip photonic processor executes AI‑like workloads with sub‑nanosecond latencies, pointing to hybrid electro‑photonic systems for future accelerators.
+Review link: https://www.nature.com/articles/s41586-025-08786-6
+44) ‘Majorana 1’ topological‑qubit prototype announced (industry)
+Field: Quantum Computing / Devices
+Date: Feb 2025
+TL;DR: Microsoft and partners unveiled a prototype topological‑qubit processor; independent validation is ongoing, so we mark this as provisional but potentially field‑shaping.
+Review link: https://azure.microsoft.com/en-us/blog/quantum/2025/02/19/microsoft-unveils-majorana-1-the-worlds-first-quantum-processor-powered-by-topological-qubits/
+45) CO₂→ethylene electrocatalysis at industrially relevant current densities
+Field: Chemistry / Electrocatalysis
+Date: Mar 2025
+TL;DR: Improved catalyst/system design achieves high partial current densities and selectivity for ethylene from CO₂, narrowing the gap to viable carbon‑to‑chemicals platforms.
+Review link: https://www.nature.com/articles/s41929-025-01148-3
+Appendix A — Expanding Links (Master Index)
+Extra sources to go deeper: official releases, data portals, preprints, and high‑quality coverage.
+1) NIF 8.6 MJ fusion yield
+• Official overview: https://lasers.llnl.gov/science/achieving-fusion-ignition
+• Tech details: https://lasers.llnl.gov/about/keys-to-success/nif-sets-power-energy-records
+• DOE context: https://www.energy.gov/
+2) Perovskite–Si tandem 34.85%
+• Company post: https://www.longi.com/en/news/silicon-perovskite-tandem-solar-cells-new-world-efficiency/
+• Trade coverage: https://www.pv-magazine.com/2025/04/18/longi-achieves-34-85-efficiency-for-two-terminal-tandem-perovskite-solar-cell/
+• NREL records chart: https://www.nrel.gov/pv/cell-efficiency.html
+3) Global coral bleaching (4th event)
+• NOAA news: https://www.noaa.gov/news-release/noaa-reports-fourth-global-coral-bleaching-event
+• Coral Reef Watch dashboard: https://coralreefwatch.noaa.gov/
+• ICRI statement: https://icriforum.org/
+4) Arctic winter maximum record low
+• NSIDC analysis: https://nsidc.org/arcticseaicenews/
+• NASA feature: https://www.nasa.gov/earth/ice/arctic-sea-ice-maximum-lowest-in-satellite-record/
+• Sea ice data: https://nsidc.org/data/seaice_index
+5) KATRIN neutrino mass <0.45 eV
+• Science paper: https://www.science.org/doi/10.1126/science.adq9592
+• KIT press: https://www.kit.edu/kit/english/pi_2025_029_astroparticle-physics-neutrinos-weigh-less-than-0-45-electronvolts.php
+• Experiment site: https://www.katrin.kit.edu/
+6) Euclid Q1 public data
+• ESA release: https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_opens_data_treasure_trove_offers_glimpse_of_deep_fields
+• Euclid data portal: https://www.euclid-ec.org/science/q1/
+• Mission hub: https://www.esa.int/Science_Exploration/Space_Science/Euclid
+7) SKA‑Low first sky image
+• SKAO news: https://www.skao.int/en/exploration/skas-first-image-ska-low-supersevsky
+• CSIRO note: https://www.atnf.csiro.au/news/2025/ska-low-first-image.html
+• Project: https://www.skao.int/
+8) QEC beyond break‑even (bosonic/GKP)
+• Nature ref (cat qubits): https://www.nature.com/articles/s41586-025-08642-7
+• GKP qudit preprint: https://arxiv.org/abs/2409.15065
+• UChicago news: https://quantum.uchicago.edu/news/
+9) CHALLENGE exercise RCT
+• NEJM article: https://www.nejm.org/doi/full/10.1056/NEJMoa2502760
+• ASCO press: https://www.asco.org/about-asco/press-center/news-releases/
+• Trial info: https://clinicaltrials.gov/ (search: NCT01043458)
+10) 1,019 long‑read genomes
+• Nature paper: https://www.nature.com/articles/s41586-025-09290-7
+• Data/consortium: https://humanpangenome.org/
+• GitHub (pangenome tools): https://github.com/human-pangenomics
+11) Hadal cold‑seep ecosystems
+• Nature coverage: https://www.nature.com/articles/d41586-025-02447-4
+• AP coverage: https://apnews.com/article/deep-sea-hadal-cold-seeps-2025
+• Project info (as available): https://www.jamstec.go.jp/e/
+12) AIPL1 gene therapy (LCA)
+• Lancet article: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)00728-2/fulltext
+• Trial registry: https://clinicaltrials.gov/
+• Institutional news: https://www.moorfields.nhs.uk/news
+13) Pig lung xenotransplant (brain‑dead)
+• Nature Medicine report: https://www.nature.com/articles/s41591-025-03363-0
+• Nature news: https://www.nature.com/articles/d41586-025-01594-5
+• Transplant center news: https://www.massgeneral.org/news/
+14) Alpha Centauri A planet candidate
+• NASA/ESA Webb release: https://science.nasa.gov/missions/webb/astronomers-find-evidence-of-planet-in-alpha-centauri-a-s-habitable-zone/
+• Universe Today explainer: https://www.universetoday.com/171391/jwst-may-have-found-a-planet-around-alpha-centauri-a/
+• Instrument (MIRI): https://esawebb.org/instruments/miri/
+15) “Sweating” cooling paint
+• Science paper: https://www.science.org/doi/10.1126/science.adt3372
+• University press (as available): https://news.mit.edu/topic/materials-science
+• Passive cooling context: https://www.nature.com/subjects/thermal-management
+16) Euclid UDG ‘bleeding stars’
+• ESO release: https://www.eso.org/public/news/eso2413/
+• Euclid mission science: https://www.esa.int/Science_Exploration/Space_Science/Euclid
+• Follow‑up gallery: https://www.esa.int/Science_Exploration/Space_Science/Euclid/Images
+17) 65 near‑complete human genomes
+• Nature paper: https://www.nature.com/articles/s41586-025-09140-6
+• Data (NCBI/ENA as available): https://www.ncbi.nlm.nih.gov/bioproject/
+• Pangenome project: https://humanpangenome.org/
+18) NIST HQC selection
+• NIST news: https://www.nist.gov/news-events/news/2025/03/nist-selects-hqc-fifth-algorithm-post-quantum-encryption
+• NIST IR 8545: https://nvlpubs.nist.gov/nistpubs/ir/2025/NIST.IR.8545.pdf
+• PQC project hub: https://csrc.nist.gov/projects/post-quantum-cryptography
+19) Muon g‑2 127 ppb
+• Fermilab result page: https://news.fnal.gov/2025/06/muon-g-2-most-precise-measurement-of-muon-magnetic-anomaly/
+• Theory Initiative (2025 WP): https://www.muon-g-2-theory.illinois.edu/
+• arXiv (exp. papers hub): https://arxiv.org/list/hep-ex/recent
+20) Chang’e‑6 far‑side samples
+• Nature Communications paper: https://www.nature.com/articles/s41467-025-53883-6
+• Mission background: https://www.planetary.org/space-missions/change-6
+• CNSA/CAST updates (as available): http://www.cnsa.gov.cn/
+21) SWOT submesoscales
+• Nature paper: https://www.nature.com/articles/s41586-025-08722-8
+• NASA mission: https://www.jpl.nasa.gov/missions/surface-water-and-ocean-topography-swot
+• Data portal: https://podaac.jpl.nasa.gov/swot
+22) Chip‑scale optical frequency division
+• Nature Photonics: https://www.nature.com/articles/s41566-025-01617-0
+• Group/lab (as available): https://www.nist.gov/pml/time-and-frequency-division
+• Microwave photonics context: https://www.nature.com/subjects/microwave-photonics
+23) T6P spray boosts wheat yields
+• Oxford release: https://www.ox.ac.uk/news/2025-04-30-new-biostimulant-treatment-significantly-boosts-wheat-yields-field-studies-confirm
+• Journal (Nat Biotech): https://www.nature.com/nbt/
+• Agronomy background: https://www.fao.org/agronomy
+24) Inavolisib OS benefit (INAVO120)
+• NEJM paper: https://www.nejm.org/doi/full/10.1056/NEJMoa2501796
+• Roche press: https://www.roche.com/media/releases/med-cor-2025-06-02
+• Trial (NCT): https://clinicaltrials.gov/ (search: INAVO120)
+25) Tarlatamab in relapsed SCLC
+• NEJM paper: https://www.nejm.org/doi/full/10.1056/NEJMoa2502099
+• Amgen press: https://www.amgen.com/newsroom/
+• Trial (NCT): https://clinicaltrials.gov/ (search: tarlatamab)
+26) Brain‑to‑voice neuroprosthesis
+• Nature Neuroscience: https://www.nature.com/articles/s41593-025-01905-6
+• NIH news: https://www.nih.gov/news-events/nih-research-matters/
+• Lab/center page: https://neuroscience.ucsf.edu/
+27) Mauna Loa CO₂ records
+• NOAA GML monthly: https://gml.noaa.gov/ccgg/trends/monthly.html
+• Scripps Keeling Curve: https://keelingcurve.ucsd.edu/
+• Global context: https://ourworldindata.org/co2-and-greenhouse-gas-emissions
+28) Quasi‑solid Na battery (~50k cycles)
+• Nature Communications: https://www.nature.com/articles/s41467-025-60842-x
+• Battery fundamentals: https://www.nature.com/subjects/batteries
+• Lab page (as available): https://www.materials.ox.ac.uk/
+29) Sodium–air battery (~1,000 cycles)
+• Nature Communications: https://www.nature.com/articles/s41467-025-60840-z
+• Metal–air background: https://www.nature.com/subjects/metal-air-batteries
+• Project page (as available): https://www.imperial.ac.uk/energy-futures-lab/
+30) Single‑solvent Li‑metal electrolyte
+• Nature Communications: https://www.nature.com/articles/s41467-025-59967-w
+• Electrolyte design context: https://www.nature.com/subjects/electrolytes
+• Lab page (as available): https://cheme.stanford.edu/
+31) Indoor‑light perovskites (~37.6%)
+• News coverage: https://www.livescience.com/technology/your-gadgets-could-soon-be-battery-free-thanks-to-new-solar-cells-powered-by-indoor-light
+• Perovskite fundamentals: https://www.nrel.gov/pv/perovskite-solar-cells.html
+• Research group (as available): https://solar.kaust.edu.sa/
+32) AI‑designed radiative‑cooling paints
+• Coverage: https://www.theguardian.com/technology/2025/jul/02/ai-helps-find-formula-for-paint-to-keep-buildings-cooler
+• Passive cooling overview: https://www.nature.com/subjects/thermal-management
+• Related Science paper (sweating paint): https://www.science.org/doi/10.1126/science.adt3372
+33) VERVE‑102 LDL‑C base editing
+• Program page: https://www.vervetx.com/our-programs/verve-102
+• Conference press: https://www.acc.org/
+• Trial registry: https://clinicaltrials.gov/ (search: VERVE‑102)
+34) Neonatal base editing (CPS1)
+• NEJM case: https://www.nejm.org/doi/full/10.1056/NEJMoa2504747
+• Hospital/PI news (as available): https://www.childrenshospital.org/news-and-events
+• Urea cycle context: https://www.ncbi.nlm.nih.gov/books/NBK1444/
+35) AlphaGenome regulatory model
+• Nature paper: https://www.nature.com/articles/s41586-025-09038-3
+• Code/data (as available): https://github.com/
+• Genomic ML background: https://genomebiology.biomedcentral.com/
+36) Inner‑speech BCI
+• Cell article: https://www.cell.com/ (search: inner speech 2025)
+• Stanford/press (example): https://med.stanford.edu/news.html
+• Ethics framework: https://www.nature.com/articles/s41591-023-02577-2
+37) WAIS tipping‑like behavior
+• Nature Communications Earth & Environment: https://www.nature.com/articles/s43247-025-02366-2
+• British Antarctic Survey: https://www.bas.ac.uk/
+• IPCC sea‑level context: https://www.ipcc.ch/report/ar6/wg1/
+38) MethaneSAT anomaly
+• SpaceNews coverage: https://spacenews.com/methanesat-mission-in-anomaly-after-loses-contact/
+• Mission hub (EDF): https://www.edf.org/methanesat
+• Data background: https://www.methanesat.org/
+39) Lunar negative ions (Chang’e‑6)
+• Eos article: https://eos.org/articles/chang%E2%80%99e-6-detects-negative-ions-near-lunar-surface
+• Instrument concept: https://www.sciencedirect.com/topics/earth-and-planetary-sciences/ion-analyzer
+• Mission page: https://www.planetary.org/space-missions/change-6
+40) Uranian moon ‘Curhatan’
+• NASA Webb blog: https://science.nasa.gov/mission/webb/science/our-solar-system/new-uranus-moon-curhatan/
+• Popular coverage: https://www.space.com/uranus-new-moon-curhatan-discovery
+• IAU nomenclature: https://www.iau.org/public/themes/naming/
+41) RH5.1/Matrix‑M malaria vaccine
+• PubMed entry: https://pubmed.ncbi.nlm.nih.gov/39672183/
+• Jenner Institute: https://www.jenner.ac.uk/
+• WHO malaria vaccines: https://www.who.int/teams/immunization-vaccines-and-biologicals/diseases/malaria
+42) CRISPR potato drought tolerance
+• Frontiers paper: https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2025.1598947/full
+• Crop improvement context: https://www.isaaa.org/
+• FAO drought resources: https://www.fao.org/drought
+43) Integrated photonic accelerator
+• Nature article: https://www.nature.com/articles/s41586-025-08786-6
+• Lab page (example): https://optoelectronics.caltech.edu/
+• Photonic AI overview: https://www.nature.com/subjects/neuromorphic-photonics
+44) ‘Majorana 1’ topological‑qubit claim
+• Microsoft post: https://azure.microsoft.com/en-us/blog/quantum/2025/02/19/microsoft-unveils-majorana-1-the-worlds-first-quantum-processor-powered-by-topological-qubits/
+• APS Physics explainer: https://physics.aps.org/articles/v18/68
+• Community updates: https://scirate.com/search?q=majorana
+45) CO₂→ethylene electrocatalysis
+• Nature Catalysis paper: https://www.nature.com/articles/s41929-025-01148-3
+• Electrolyzer context: https://www.nrel.gov/chemistry/
+• Review article (background): https://www.nature.com/articles/s41570-020-0183-8
+(Appendix will continue to expand as we add more items.)
+Appendix A — Expanding Links (Batch 2)
+Additional high‑quality sources and data portals for deeper dives (items 1–25).
+1) NIF 8.6 MJ fusion yield
+• NIF publications hub: https://lasers.llnl.gov/publications
+• LLNL fusion science explainer: https://lasers.llnl.gov/science/for-fusion
+• U.S. DOE fusion energy overview: https://www.energy.gov/science/fes/fusion-energy-sciences
+2) Perovskite–Si tandem 34.85%
+• NREL research‑cell records (interactive): https://www.nrel.gov/pv/cell-efficiency.html
+• U.S. DOE Perovskite PV Initiative: https://www.energy.gov/eere/solar/perovskite-photovoltaics
+• Perovskite Stability Consortium (context): https://perovskite-info.com/tags/stability
+3) Global coral bleaching (4th event)
+• NOAA Coral Reef Watch “HotSpot” maps: https://coralreefwatch.noaa.gov/satellite/bleaching5km/index.php
+• ReefBase (global reef datasets): https://www.reefbase.org/
+• AIMS reef monitoring (AU): https://www.aims.gov.au/
+4) Arctic winter maximum record low
+• NSIDC Sea Ice Index (data): https://nsidc.org/data/seaice_index
+• EUMETSAT OSI SAF sea‑ice products: https://osi-saf.eumetsat.int/
+• ESA CryoSat‑2 mission page: https://www.esa.int/Applications/Observing_the_Earth/CryoSat
+5) KATRIN neutrino mass <0.45 eV
+• University of Bonn press: https://www.uni-bonn.de/en/news/057-2025
+• Experiment overview: https://www.katrin.kit.edu/
+• Neutrino mass reviews (PDG): https://pdg.lbl.gov/
+6) Euclid Q1 public data
+• Euclid Public Archive (ESDC): https://www.cosmos.esa.int/web/euclid/euclid-archive
+• Euclid Collaboration papers (arXiv query): https://arxiv.org/search/?query=Euclid&searchtype=all
+• Euclid calibration & pipeline docs: https://www.cosmos.esa.int/web/euclid/science-documents
+7) SKA‑Low first sky image
+• SKA science data processing: https://www.skao.int/en/science/sdp
+• SKA performance & design docs: https://skao.int/en/science/ska-technical
+• ASKAP/MWA context (precursors): https://www.atnf.csiro.au/projects/askap/ ; https://www.mwatelescope.org/
+8) QEC beyond break‑even (bosonic/GKP)
+• APS Physics Viewpoint (context): https://physics.aps.org/
+• arXiv preprint (GKP qudit): https://arxiv.org/abs/2409.15065
+• UChicago Quantum Newsroom: https://quantum.uchicago.edu/news/
+9) CHALLENGE exercise RCT
+• ClinicalTrials.gov (NCT01043458): https://clinicaltrials.gov/study/NCT01043458
+• ASCO meeting library: https://meetinglibrary.asco.org/
+• Exercise oncology overview (NCI): https://www.cancer.gov/about-cancer/treatment/side-effects/exercise
+10) 1,019 long‑read genomes
+• HPRC data portal: https://humanpangenome.org/data/
+• Nature Research Briefing (if available): https://www.nature.com/nature/briefing/
+• EGA archive (access‑controlled): https://ega-archive.org/
+11) Hadal cold‑seep ecosystems
+• JAMSTEC expedition overview: https://www.jamstec.go.jp/e/cruises/
+• Nature “Research Briefing” (search): https://www.nature.com/subjects/research-briefing
+• NOAA deep‑sea resources: https://oceanexplorer.noaa.gov/
+12) AIPL1 gene therapy (LCA)
+• Trial registry (search): https://clinicaltrials.gov/
+• Moorfields Eye Hospital news: https://www.moorfields.nhs.uk/news
+• Foundation Fighting Blindness (context): https://www.fightingblindness.org/
+13) Pig lung xenotransplant (brain‑dead)
+• MGH press room: https://www.massgeneral.org/news/press-release/
+• Harvard Medical School news: https://hms.harvard.edu/news
+• Xenotransplantation journal (context): https://onlinelibrary.wiley.com/journal/13993089
+14) Alpha Centauri A planet candidate
+• MIRI instrument handbook: https://esawebb.org/instruments/miri/
+• JWST documentation (STScI): https://jwst-docs.stsci.edu/
+• exoplanet.eu catalog (context): http://exoplanet.eu/
+15) “Sweating” cooling paint
+• Science supplementary materials (see article page): https://www.science.org/doi/10.1126/science.adt3372
+• Radiative cooling primer: https://www.nature.com/articles/s41586-019-1709-1
+• Building energy datasets (NREL): https://openei.org/datasets/
+16) Euclid UDG ‘bleeding stars’
+• ESA Euclid feature: https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_bags_elusive_galaxies
+• Perseus cluster background (ESA): https://www.esa.int/Science_Exploration/Space_Science/Euclid
+• Follow‑up telescope network (e.g., VLT/MUSE): https://www.eso.org/sci/facilities/paranal/instruments/muse.html
+17) 65 near‑complete human genomes
+• NCBI BioProject (search): https://www.ncbi.nlm.nih.gov/bioproject/
+• Telomere‑to‑Telomere Consortium: https://sites.google.com/ucsc.edu/t2tworkinggroup/home
+• Genome Reference Consortium (context): https://www.ncbi.nlm.nih.gov/grc/
+18) NIST HQC selection
+• NIST PQC status report (IR 8545): https://nvlpubs.nist.gov/nistpubs/ir/2025/NIST.IR.8545.pdf
+• PQC migration guidance: https://csrc.nist.gov/Projects/post-quantum-cryptography/transition
+• IETF CFRG docs (crypto standards): https://datatracker.ietf.org/wg/cfrg/documents/
+19) Muon g‑2 127 ppb
+• Fermilab analysis note (PDF link on result page): https://muspace.fnal.gov/
+• Muon g‑2 Theory Initiative site: https://muon-g-2-theory.illinois.edu/
+• Inspire HEP search: https://inspirehep.net/
+20) Chang’e‑6 far‑side samples
+• Planetary Society guide: https://www.planetary.org/space-missions/change-6
+• CNSA mission updates: http://www.cnsa.gov.cn/
+• LPSC conference abstracts (search): https://www.hou.usra.edu/meetings/
+21) SWOT submesoscales
+• JPL PODAAC SWOT collection: https://podaac.jpl.nasa.gov/swot
+• Mission science team: https://swot.jpl.nasa.gov/
+• ECCO ocean state estimate (context): https://ecco-group.org/
+22) Chip‑scale optical frequency division
+• NIST Time & Frequency: https://www.nist.gov/pml/time-and-frequency-division
+• OFD tutorial (review): https://www.osapublishing.org/ao/fulltext.cfm?uri=ao-59-34-G
+• Frequency‑comb primer: https://www.nature.com/articles/s41566-018-0256-5
+23) T6P spray boosts wheat yields
+• Nature Biotechnology journal: https://www.nature.com/nbt/
+• ICAR wheat program (context): https://icar.org.in/
+• CGIAR Wheat Initiative: https://www.wheatinitiative.org/
+24) Inavolisib OS benefit (INAVO120)
+• Roche media release: https://www.roche.com/media/releases/med-cor-2025-06-02
+• ESMO resources: https://www.esmo.org/
+• NCCN Guidelines (context): https://www.nccn.org/guidelines/guidelines-detail?category=1&id=1419
+25) Tarlatamab in relapsed SCLC
+• Amgen newsroom: https://www.amgen.com/newsroom/
+• SCLC background (NCI): https://www.cancer.gov/types/lung/hp/small-cell-lung-treatment-pdq
+• ASCO Post coverage: https://ascopost.com/
+(Next batch will extend items 26–45 with more deep links.)
+Appendix A — Expanding Links (Batch 3)
+More deep‑dive sources for items 26–45 (papers, datasets, labs, and authoritative context).
+26) Real‑time brain‑to‑voice neuroprosthesis
+• Article (Nature Neuroscience): https://www.nature.com/articles/s41593-025-01905-6
+• NIH Research Matters summary: https://www.nih.gov/news-events/nih-research-matters/brain-computer-interface-restores-natural-speech-after-paralysis
+• UCSF/Center press hub: https://www.ucsf.edu/news
+27) Mauna Loa CO₂ monthly record highs
+• NOAA GML CSV (monthly Mauna Loa): https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.csv
+• Scripps Keeling Curve (explainer): https://keelingcurve.ucsd.edu/
+• Our World in Data (global context): https://ourworldindata.org/co2-and-greenhouse-gas-emissions
+28) Quasi–solid‑state sodium battery (~50k cycles)
+• Nature Communications article: https://www.nature.com/articles/s41467-025-60842-x
+• Battery research overview (Nature Subject): https://www.nature.com/subjects/batteries
+• U.S. DOE Storage Program (context): https://www.energy.gov/eere/vehicles/energy-storage
+29) Sodium–air battery (~1,000 cycles)
+• Nature Communications article: https://www.nature.com/articles/s41467-025-60840-z
+• Metal–air batteries (Nature Subject): https://www.nature.com/subjects/metal-air-batteries
+• Imperial College Energy Futures Lab: https://www.imperial.ac.uk/energy-futures-lab/
+30) Single‑solvent Li‑metal electrolyte
+• Nature Communications article: https://www.nature.com/articles/s41467-025-59967-w
+• Electrolyte design (review context): https://www.nature.com/articles/s41570-020-0183-8
+• Electrochemistry Society (ECS) resources: https://www.electrochem.org/
+31) High‑efficiency perovskites for indoor light
+• Perovskite PV basics (NREL): https://www.nrel.gov/pv/perovskite-solar-cells.html
+• Indoor photovoltaics (topic overview): https://www.sciencedirect.com/topics/engineering/indoor-photovoltaics
+• General device stability resources: https://www.nature.com/subjects/photovoltaic-devices
+32) AI‑designed radiative‑cooling paints
+• Passive cooling overview (Nature review): https://www.nature.com/articles/s41586-019-1709-1
+• U.S. DOE — Cool Roofs guidance (context): https://www.energy.gov/eere/buildings/cool-roofs
+• Related Science paper (sweating paint): https://www.science.org/doi/10.1126/science.adt3372
+33) In vivo PCSK9 base editing (VERVE‑102)
+• Company program page: https://www.vervetx.com/our-programs/verve-102
+• ClinicalTrials.gov (search VERVE‑102): https://clinicaltrials.gov/
+• ACC scientific sessions (context): https://accscientificsession.acc.org/
+34) Neonatal base editing for CPS1 deficiency
+• NEJM case report: https://www.nejm.org/doi/full/10.1056/NEJMoa2504747
+• Urea Cycle Disorders Consortium: https://rarediseasesnetwork.org/networks/ucdc
+• Children’s hospital research news: https://www.childrenshospital.org/news-and-events
+35) AlphaGenome regulatory‑activity foundation model
+• Nature article: https://www.nature.com/articles/s41586-025-09038-3
+• ENCODE Registry of cCREs (context): https://screen.encodeproject.org/
+• Genome tools community (Bioconda): https://bioconda.github.io/
+36) Inner‑speech BCI with privacy activation
+• Cell journal (search inner speech 2025): https://www.cell.com/action/doSearch?searchType=quick&searchText=inner%20speech%202025
+• Stanford Medicine news: https://med.stanford.edu/news.html
+• IEEE Brain (neuroethics/BCI resources): https://brain.ieee.org/
+37) West Antarctic Ice Sheet tipping‑like behavior
+• Nature Communications Earth & Environment paper: https://www.nature.com/articles/s43247-025-02366-2
+• IMBIE (ice‑sheet mass balance): https://www.imbie.org/
+• BAS (British Antarctic Survey) resources: https://www.bas.ac.uk/
+38) MethaneSAT anomaly / mission
+• Mission hub (EDF): https://www.methanesat.org/
+• Complementary satellites — Sentinel‑5P: https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-5p
+• GHGSat (commercial methane monitoring): https://www.ghgsat.com/en/
+39) Chang’e‑6 negative ions near the lunar surface
+• Eos article: https://eos.org/articles/chang%E2%80%99e-6-detects-negative-ions-near-lunar-surface
+• Lunar exosphere primer (AGU/Ann. Geophys. topic): https://www.ann-geophys.net/
+• Planetary Society — Chang’e‑6 mission: https://www.planetary.org/space-missions/change-6
+40) New Uranian moon ‘Curhatan’ (S/2025 U1)
+• NASA Webb blog: https://science.nasa.gov/mission/webb/science/our-solar-system/new-uranus-moon-curhatan/
+• JPL Solar System Dynamics—Uranus satellites: https://ssd.jpl.nasa.gov/sats/uranus.html
+• IAU/WGPSN nomenclature: https://planetarynames.wr.usgs.gov/
+41) RH5.1/Matrix‑M malaria vaccine efficacy
+• PubMed entry: https://pubmed.ncbi.nlm.nih.gov/39672183/
+• Jenner Institute: https://www.jenner.ac.uk/
+• WHO Malaria Vaccine implementation resources: https://www.who.int/teams/immunization-vaccines-and-biologicals/diseases/malaria
+42) CRISPR potato drought tolerance
+• Frontiers article: https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2025.1598947/full
+• International Potato Center (CIP): https://cipotato.org/
+• FAO — Drought and agriculture: https://www.fao.org/drought
+43) Integrated photonic accelerator
+• Nature article: https://www.nature.com/articles/s41586-025-08786-6
+• Nature Subject — Silicon photonics: https://www.nature.com/subjects/silicon-photonics
+• Caltech Optoelectronics (example lab): https://optoelectronics.caltech.edu/
+44) ‘Majorana 1’ topological‑qubit prototype
+• Microsoft announcement: https://azure.microsoft.com/en-us/blog/quantum/2025/02/19/microsoft-unveils-majorana-1-the-worlds-first-quantum-processor-powered-by-topological-qubits/
+• APS Physics explainer: https://physics.aps.org/articles/v18/68
+• Station Q / academic partner news (as available): https://news.ucsb.edu/
+45) CO₂→ethylene electrocatalysis (high partial currents)
+• Nature Catalysis article: https://www.nature.com/articles/s41929-025-01148-3
+• IEA — CO₂ utilization (context): https://www.iea.org/reports/ccus-in-clean-energy-transitions
+• DOE CO₂ electrolysis R&D overview: https://www.energy.gov/eere/fuelcells/carbon-dioxide-electrolysis
+(Appendix will continue to grow alongside new items we add.)

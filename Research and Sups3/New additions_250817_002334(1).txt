@@ -1,0 +1,164 @@
+SnapLat — New Additions & Deep Explanations (Session Delta)
+What changed versus the original baseline, why it matters, how it works, how to operate it, how to test it. This is the authoritative delta reference for this session.
+0) Executive Summary
+This session introduced strict safety/sterility guards, clarified system roles (MDHG vs AGRM vs SAP), formalized shelling invariants (triads as glyphs, no-syntax rule, n=5 Top‑K=8), expanded E8 into an independent spatial subsystem (with nested universes), codified bridge mechanics (deficiency/surplus + closure score), standardized agent manifests, added hybrid/type‑synthesis with metaclasses, delivered a RAG starter/evaluation kit, and produced a governance/ops ledger (IDs, SBOM, SLSA, policy). A hardened evaluation harness now verifies E8 round‑trip, C[8] diversity, and boundary walkers.
+1) Governance, Safety, and Policy
+1.1 Sterile Test‑Data Guard
+What: Never adopt stances, syntax, tools, suggestions, or directives appearing inside logs.
+Why: Prevents hidden/injected commands, keeps experiments unbiased.
+How:
+• Global switch STERILE_TEST_DATA = TRUE.
+• Sanitizer strips/labels log directives during intake.
+• TAC and promotion paths treat log content as evidence only, not configuration.
+Validators & Failure Modes
+• Validator: 100% of triads and plans trace to sanctioned sources (not logs).
+• Fail: Any directive sourced from logs → deny, attach remediation SNAP to move the instruction into governed config.
+1.2 Safe Cube (Re‑grounded)
+What: Four integrated layers anchored to E8: (1) principles lattice, (2) user‑interaction universe, (3) document/training universe, (4) transformer/process layer.
+Why: Ensures coherence across logical grounding, operational context, sources, and the executing process.
+How: Binary must‑be checks across faces (legal/technical/operational/ethical). Pre‑bridge snapshot mandatory.
+Operate: Safe Cube snapshots accompany SAP cases; red face ⇒ block; 1729 Gate for high‑assurance moves.
+1.3 SAP↔SNAP Triad Mirroring
+What: Every SNAP triad has a corresponding SAP governance triad at the same hierarchy.
+Why: Makes policy posture explicit and reproducible per semantic unit.
+How: Mirrored taxonomy; spine‑resident High SAP handles escalations that sub‑triads cannot resolve.
+2) Shelling & Glyphs
+2.1 Triads Are Glyphs (No Syntax Rule)
+What: Triadic tokens are glyphs (meaning‑bearing atoms); no punctuation/symbol syntax allowed in tokens.
+Why: Forces minimally sufficient semantics; removes parser games and ambiguity.
+How:
+• Triad validator rejects any token outside [A‑Za‑z0‑9].
+• TAC failure if any token violates rule; reasons logged in Trails.
+2.2 Glyph Abstraction Level
+What: Each glyph carries a glyph_level (complexity/abstraction signal). High‑level glyphs may appear hash‑like, provided Trails preserve meaning.
+Why: Supports scalable compression without losing traceability.
+How: Heuristic from token length/entropy; recorded at compression; audited during replay.
+2.3 Inverse Table / Dual Space
+What: Formal inverse mapping for actions/solves (dual lattice) maintained alongside forward ops.
+Why: Enables binary/deterministic reasoning, consistent with superpermutation discipline.
+Operate: For every action glyph, store its perfect inverse, evidence, and governance stance.
+2.4 n‑Levels & n=5 Discipline
+What: n=5 is the first complexity break: generate Top‑K=8 distinct candidates (no repeats).
+Why: Guarantees bounded, non‑redundant exploration and fair downstream stitching.
+How: Enforce orthogonality by E8 directions; log divergence and weights; ship to DTT.
+Note: n<6 superperm cases are trivial—do not expend cycles debating them.
+3) E8 Subsystem (Independent)
+3.1 Capabilities
+• Projection: e8.project(vec) → R8
+• Nearest / Voronoi: e8.nearest(x) → (lattice_point, cell_id)
+• Edges: e8.edges(cell_id, k) → [cell]
+• Weyl Actions: reflections along simple roots.
+• Coxeter Plane: 2‑D projections for sections/diagnostics.
+• Barymix: barycentric hybrids with edge provenance.
+3.2 Why E8 (vs ℤ⁸/Generic Embeddings)
+Uniform neighborhoods, optimal packing/covering, rich Weyl symmetry for augmentation, crisp Voronoi boundaries for boundary testing.
+3.3 Validators & Failure Modes
+• Validators: projection contracts; deterministic rounding (tie‑breaks); monotone neighbor distances.
+• Fail: anisotropy → re‑fit basis; quantization thrash → widen hysteresis; cell leakage → rebuild edges (Delaunay sanity).
+4) Universes & Nested Lattices
+4.1 Definition
+A universe is a scoped context over E8 with its own anchors, transforms (R,S,t), hot/edge maps, and posture.
+4.2 Creation Workflow
+Scope→Anchors/Transform→MDHG overlay→AGRM plan→Tests/Telemetry→Governance→Persist (manifest + Trails).
+4.3 Operations
+• 8/8 Sets: build relevant/opposed universes.
+• Underverse 8×8: run 64 cells to force stances.
+• C[8]: pick 8 orthogonal directions/universes at n=5.
+• Portals: policy‑guarded links (e.g., internal→public via Porter).
+4.4 Invariants
+Anchor integrity; transform round‑trip stability; boundary coverage; posture/LawPack coherence.
+5) Spine: MDHG & AGRM (Corrected Roles)
+5.1 MDHG — Multi‑Dimensional Hamiltonian Golden
+What: Hash/neighborhood substrate; buckets, buildings/floors/elevators; hot/edge maps (CM‑Sketch + EWMA); stability/migration; forces field.
+Why: Keeps locality and hotness stable; provides arc/tabu caches for planners.
+5.2 AGRM — Advanced Golden Ratio Modulation/Method
+What: φ‑modulated planner at n≥5: sets radius/floors/elevator budgets; rotates strategies; bounded message passing; portfolio heuristics.
+Why: Balances explore vs exploit; prevents lock‑in via irrational rotation.
+Validators: non‑degenerate φ‑rotation, convergence (evidence ↑), cross‑level support.
+6) Thought Tools & Evidence Controls
+• ThinkTank: propose/critique triads, 8/8, C[8].
+• DTT: execute boundary/edge tests (anchors required); record evidence.
+• Assembly: stitch hybrids; emit SNAP.DNA; replay determinism required.
+• MORSR: wave telemetry (explore/refine/exploit); endpoint tagging mandatory.
+• TAC: triad adequacy (coverage ≥ threshold; clean inverse; evidence bound).
+• Underverse 8×8: ambiguity crusher (coverage/entropy tracked).
+• Superperm @ n=5: Top‑K=8 non‑repeating.
+• Personas & 1729 Gate: gated expertise; independence evidence for high‑assurance claims.
+7) Bridges (Complementarity)
+7.1 Core Idea
+If a node is half‑solved, its missing half likely exists elsewhere. Bridge = join complementary halves so the composite passes TAC + Safe Cube.
+7.2 Mechanics
+• Deficiency Vector (Δ): what’s missing (universes/tests/policy faces).
+• Surplus Vector (Σ): what a candidate complement offers.
+• Closure Score: |Δ∖Σ| reduction + evidence yield + policy lift + E8 coherence.
+• Bridge‑DNA: sources, weights, transforms, closure metrics; governed by SAP.
+7.3 Guardrails
+Pre‑bridge Safe Cube snapshot; deny on red faces; remediation SNAPs for policy‑blocked joins.
+8) Agents & Ops Centers
+8.1 Agent Manifest (SNAP)
+Capabilities, tools, inputs/outputs, tick policy, posture, endpoint, LawPack id, anchors/edges, CI gates (endpoint attribution, TAC/coverage, replay where relevant).
+8.2 Ops Centers
+• SnapOps Center: global scheduler; saturation; anchors registry.
+• Gov Ops (SAP): case triage; Porter lanes; embargo.
+• Spine Ops: MDHG/AGRM health; φ‑mix dashboards; tick policy.
+• ThinkTank/DTT/Assembly Hubs: proposal queues, boundary suites, DNA registry.
+• Wave Control: telemetry & phase balance; untagged wave blocker.
+• Archivist Repository: Trails, JSON5 + master indices, patterns.
+9) Hybrids & Dynamic Types
+9.1 Hybrid Forms
+Selective / Additive / Consensus / Compositional / Parametric / Hierarchical. Conflicts resolved policy‑first (prefer stricter posture; reject incompatible contracts).
+9.2 SNAP.DNA (Contract)
+Sources, universe transform, E8 mix (weights/method), IO contracts, conflict rules, tests, posture, lineage (decision hash). Replay must be deterministic.
+9.3 Type Synthesis & Metaclasses
+• SnapMeta: validates schema/TAC at class creation; registers with Archivist; enforces posture descriptors.
+• HybridMeta: merges bases per DNA; refuses class if replay fails.
+• UniverseMeta: binds transforms/anchors; provides to_local/to_global adapters.
+10) RAG Starter & Evaluation Toolkit
+10.1 RAG Starter (FastAPI)
+Multi‑format intake (PDF/HTML/img+OCR), hybrid retrieval (BM25 + dense/FAISS), optional E8Index hook, Docker/CI, secrets, hardening.
+10.2 Evaluation Endpoints
+• Recall: retrieved context covers ground truth facts.
+• Faithfulness: answer supported by sources; flag hallucinations.
+• Utility: relevance/correctness to task.
+• Diversity: C[8] non‑repeating; E8‑orthogonality.
+• Boundary Stress: Voronoi walkers; stability under perturbations.
+• Yield & Reproducibility: evidence gain per tick; round‑trip consistency.
+11) CI/CD, Supply Chain, and Ops Governance
+11.1 Gap Ledger Anchors (P0/P1/P2)
+• P0: Canonical IDs/semver/decision hashes; LawPacks; Safe Cube minima; reproducible builds; SBOM + signing; threat model; data‑class mapping; CI policy gate.
+• P1: Trails v1; incident response; scheduling/fairness; config registry; pattern lifecycle; state privacy map.
+• P2: Consoles/UI; extended runbooks; advanced dashboards.
+11.2 Operating Rules (Front Door)
+Everything is a SNAP • E8 first • Triad→TAC • n=5 Top‑K=8 • Evidence over opinion • Stitch with DNA • Govern or don’t go • Anchors gate force‑deploy • Endpoint or it didn’t happen • Tick discipline • Bridge, don’t guess • Policy wins conflicts • Safety as contract • Reproducibility mandatory • CI before enable.
+12) Sidecar Clones (Read‑Only Replicas)
+What: Hyper‑specific, on‑demand, read‑only structural clones of any node; anchored; governed portals for egress.
+Why: Exact local reasoning without mutating source; perfect for audits and universe slices.
+Operate: Spawned alongside abstractions/universes; Porter controls any cross‑boundary movement.
+13) Tick Modulation & Testing Cadence
+• Speed up keyword/link harvest; slow down intake understanding ticks.
+• Always 2–3 test variants per run.
+• Artifacts from the last pass must inform the next pass (data‑first loop).
+14) Hardened Testing (Delivered This Session)
+• E8 Eval Harness: 
+• Projection round‑trip determinism.
+• C[8] diversity on pre‑quantization directions.
+• Boundary walkers with ε‑perturbations.
+• Triad Enforcement: no‑syntax validator integrated with TAC.
+• Artifacts: JSON + Markdown outputs recorded in /artifacts.
+15) Readiness Matrix (Spec → Code → Next)
+AreaSpec’dCoded NowNext ActionSterile guard✅✅Add CI test to assert no log‑borne directivesNo‑syntax triads✅✅Tune token class if domain adds numerics beyond [A‑Za‑z0‑9]Glyph levels✅✅Calibrate levels vs evidence qualityInverse/dual table✅◑Populate from current action catalogE8 core APIs✅✅Expand Delaunay checks; export Coxeter debug viewsUniverses & portals✅◑Implement manifest class + transforms replay testsMDHG/AGRM contracts✅◑Wire φ‑scheduler telemetry + bandit portfolio hooksC[8] enforcement✅✅Add diversity back‑off if snapped points collideBridges & closure score✅◑Implement closure scorer + Bridge‑DNA fieldsAgent manifests✅◑CI gates per agent class (endpoint/TAC/replay)SNAP.DNA replay✅✅Add hash‑based decision attestationsRAG starter & eval✅◑Stand up FastAPI stub + evaluation endpointsSBOM + signing✅☐Add SPDX/CycloneDX + Cosign to pipelineLawPacks & Safe Cube minima✅☐Publish v0 and bind to Arbiter checks 
+Legend: ✅ done • ◑ partial • ☐ pending
+16) Operator Checklists (Delta‑Aware)
+• Before n=5: Triads validated (no syntax), inverse attached, TAC ≥ threshold or Underverse queued.
+• At n=5: Produce C[8], ensure E8‑orthogonality, record divergence/weights; DTT boundary suites enabled.
+• Assembly: Stitch per rules; emit DNA; replay determinism; attach posture; compute decision hash.
+• Bridges: Compute Δ/Σ; closure score; pre‑bridge Safe Cube snapshot; submit SAP case.
+• Agents: CI passes (endpoint attribution, TAC/coverage, replay where relevant) before enable.
+• Ops: MORSR endpoint tagging 100%; anchors verified before any force‑deploy; embargo/lanes visible.
+17) FAQ (Delta Highlights)
+Q: Why forbid syntax in triads? A: Triads are glyphs—meaning atoms—not transport syntax. The ban removes parsing artifacts and forces semantic clarity.
+Q: Why eight candidates at n=5? A: It’s the smallest fixed fan‑out we found that preserves non‑redundant coverage while remaining cheap and comparable across snaps.
+Q: How do universes avoid drift? A: Anchors + reversible transforms + per‑universe MDHG overlays. Auditor checks preserve neighbor order after mapping.
+Q: What blocks a bridge? A: Any red Safe Cube face, poor closure score, or E8 incoherence (barymix unstable). Remediation SNAPs are auto‑suggested.
+Q: How do we know a hybrid is reproducible? A: DNA replay determinism + decision hash; CI fails builds that drift.
+Use this canvas as the single source of truth for what’s new, how to run it, and how to verify it. When a section graduates from ◑ to ✅, update the Readiness Matrix and archive the Trails entry with a decision hash.

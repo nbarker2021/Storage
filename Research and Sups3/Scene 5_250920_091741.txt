@@ -1,0 +1,108 @@
+Q&A pit stop (carry-over + new)
+Q1. If I permute a form (M24/Monster style), could I accidentally change the result?
+Not if you’re really applying an automorphism of the form. Automorphisms only relabel equivalent slots. If a clone behaves differently, either (a) you slipped in a meaning change, or (b) your octet/mirror guards weren’t tight. Gate it: the 4-bit receipt will tell you.
+Q2. What’s the absolute minimum a ledger entry must store for 1:1 replay?
+Five things: (1) code+glue (Construction-A details), (2) automorphism element (the braid/permutation id), (3) octet map (H1…H8), (4) DNA-10 (state save), (5) receipts (4-bit + page hash). With those, anyone can re-braid the geometry and re-run your gates.
+Q3. When do I “promote” something to an anchor form?
+After ≥3 independent meaning packs pass with the same octet+mirror configuration and no new Δ-debt for two passes. Promote → freeze its thresholds, give it a stable id.
+Q4. Is it okay to attach multiple meaning packs to one clone?
+Sequentially, yes. Concurrently, no. Bind one pack, gate it, commit/annihilate, then swap. Otherwise you can’t attribute wins or failures.
+Q5. Can I ever change the form itself?
+Only by opening a new form_id. Forms are geometry; meanings are swappable labels. If you redraw geometry, you made a new form.
+Section 6 — Ledgered forms & automorphism cloning (Monster/M24), with meaning-pack swaps
+What you’ll learn
+• The object model: form (geometry), anchor, clone, meaning pack, receipt
+• How to write a minimal ledger entry you (and others) can replay 1:1
+• How to spawn N clones via automorphism actions (M24/Monster) without touching geometry
+• How to swap meanings, gate them with CQE, and compress recurring deltas into reusable packs
+• How to promote a form to anchor and keep a clean provenance chain
+Instructor view (crisp)
+1) Define the form (geometry-only).
+Pick your canonical skeleton (e.g., E8 slice → Leech shell patch) + octet layout. This is your form. No meanings.
+2) Ledger the minimum.
+Record: constructionA, automorphism, octet_map, dna10, receipts. That’s enough for 1:1 rebraid.
+3) Clone via automorphisms.
+Apply a named group element (e.g., M24 permutation). You’ve created an isomorphic clone. Same geometry, new id, semantics empty.
+4) Attach a meaning pack.
+Bind one pack (OPTICS_S2_v1, SPINTRONICS_Q_v2, etc.). Now run the CQE loop: viewers → mirror → one Δ-lift → strict → 4-bit.
+5) Compress meanings.
+When three clones converge to the same Δ/strict pattern, factor it out as MEANING_PACK_vN. Rebind those clones to the pack id.
+6) Promote to anchor.
+If multiple packs pass on the same form with no new debt, set status: ANCHOR. Future work starts from this stabilized geometry.
+7) Archive failures.
+Non-working clones keep tiny breadcrumbs (receipts + one-line reason). Geometry stays untouched.
+Student view (hands-on scenes)
+Scene A — Draft a minimal ledger for your current build
+You open a fresh page and write a compact entry:
+form_id: LEECH_PATCH_A1 constructionA: {p: 2, code: "Golay(24,12,8)", glue: "half-shift+evenness"} automorphism: {group: "M24", element: "σ_173842"} # pose of the shell octet_map: {H1: octad-3, H2: octad-11, H3: octad-5, H4: octad-7, H5: octad-2, H6: octad-9, H7: octad-14, H8: octad-1} dna10: [timing: S, polarity: +, scale: 1x, pose: NE, domain: S2, conditioning: whiten, units: SI, precision: 1ULP, cost: L, seed: 9642] receipts: {fourbit: "—", votes: {mirror: 0/0, views: 0/0}, page_hash: "—"} status: DRAFT 
+You’ve defined the geometry without binding any meanings. Re-braidable forever.
+Scene B — Spawn clones with automorphism actions
+You roll 12 provisional clones by applying different M24 permutations:
+form_id: LEECH_CLONE_B7 parent: LEECH_PATCH_A1 automorphism: {group: "M24", element: "σ_009514"} meaning_pack: SPINTRONICS_Q_v2 status: PROVISIONAL 
+Every clone inherits the same octet map structure by action; only labels will vary once you attach meanings.
+Scene C — Bind meanings & gate with CQE
+For three clones you care about, you attach one meaning pack each and run the loop:
+• Clone B7 + SPINTRONICS_Q_v2
+V0/V1/V2: amber at edges → Δ-lift “bias-gradient repaint” → strict “T1 floor +3%” → 4-bit 1111.
+• Clone C2 + OPTICS_S2_v1
+Minor mirror leak → Δ “shorten vent cadence by 1 tick” → strict “WFE ≤ 22nm” → 1101.
+• Clone D5 + BIO_COHERENCE_v1
+V1 parity hot → Δ “sequence stem +1 bp” → strict “overlay RMS −10%” → 1111.
+You log receipts inline on each clone.
+Scene D — Compress convergent meanings
+You notice B7 and D5 independently used the same Δ-lift pattern (“local repaint + small floor”). You create:
+meaning_pack: EM_BIO_COMMON_v1 # Δ-lift template: bias-gradient repaint, floor +3% # Guards: unit SI, tolerance bands T_mid 
+Rebind both clones to EM_BIO_COMMON_v1 and bump their page_hash. Future clones can reuse it—instant consistency.
+Scene E — Promote to anchor
+Across a week, 5 different packs (OPTICS_S2_v1, THZ_STEER_v1, SPINTRONICS_Q_v2, EM_BIO_COMMON_v1, FIN_RISK_MINI_v1) passed on LEECH_PATCH_A1 with no new Δ debt. You mark:
+form_id: LEECH_PATCH_A1 status: ANCHOR thresholds: normal: {OPE: 0.04, FCE: 0.04} strict: {OPE: 0.03, FCE: 0.03} receipts: {fourbit: "1111", votes: {mirror: 22/24, views: 64/64}, page_hash: "..."} 
+This becomes the starting shell for adjacent work—stable, replayable.
+Boards you can copy
+Minimal ledger skeleton
+form_id: <slug> parent: <form_id|none> constructionA: {p: <prime>, code: "<name>", glue: "<offset/evenness>"} automorphism: {group: "<M24|Monster|Dihedral>", element: "<tag>"} octet_map: {H1..H8: ["<octad-id>", ...]} dna10: [timing, polarity, scale, pose, domain, conditioning, units, precision, cost, seed] thresholds: {normal:{...}, strict:{...}} meaning_pack: <name|none> receipts: {fourbit:"----", votes:{mirror:X/Y, views:Z/W}, page_hash:""} status: DRAFT|PROVISIONAL|WORKING|ANCHOR|ARCHIVED 
+Clone template
+form_id: <slug> parent: <anchor-id> automorphism: {group:"M24", element:"σ_<id>"} meaning_pack: <pack-id> status: PROVISIONAL 
+Micro-lab (60 min)
+• Author one anchor-candidate form entry (geometry only).
+• Generate 6 clones with distinct automorphism tags.
+• Attach three meaning packs (any domains you actually touch).
+• Gate each clone with CQE (one Δ, one strict, one 4-bit).
+• Compress: if ≥2 clones share the same Δ pattern, mint a shared meaning pack and rebind.
+• Decide: which form is ready for ANCHOR? Which clones move to ARCHIVED with a one-line breadcrumb?
+Deliverables: 1 YAML page (anchor), 6 clone slips, 3 viewer stacks, 3 receipts, 1 compressed meaning pack.
+Δ-lift cookbook (ledger edition)
+• Reslot: move a fragile test from V0 into V1 (boundary) and backfill with an identity pair.
+• Guard swap: enforce SI units before any non-commuting transform.
+• Window shave: −1 tick on the hottest ring only (documented).
+• Octet remap: rotate two views inside the octad (dihedral) if they’re equivalent under mirror—only if receipts remain in-orbit.
+Monotone: debt ↓, no regressions in green cells, receipts stronger or equal.
+Strict ratchet (forms & packs)
+• Coverage strict: raise required V0 green cells from 6/8 → 7/8 on re-runs.
+• Mirror strict: tighten VM tolerance by 10%.
+• Parity strict: require both lanes to pass (no single-lane exceptions).
+• Receipt strict: demand 1111 to promote; accept 1101 only for PROVISIONAL.
+Receipts at scale
+• Per-clone: 4-bit as before.
+• Per-pack: median 4-bit across its bound clones (optional 8-bit expansion).
+• Per-form: roll-up “views: 64/64” + hash; ANCHOR toggles when roll-up stays green for two consecutive cycles.
+Pitfalls
+• Geometry drift: tweaking octet layout while calling it “the same form.” If geometry moves → new form_id.
+• Silent semantics: sneaking parameter changes into the automorphism tag (not allowed).
+• Over-forking: spawning 50 clones with no plan to gate—entropy in the ledger. Keep N manageable.
+• Premature compression: factoring a meaning pack after a single lucky pass—wait for repetition.
+Takeaways
+• A form is geometry you can replay; clones are its isomorphic poses.
+• Meaning packs are swappable label sets; they succeed or fail under the same geometry.
+• The ledger’s five fields give 1:1 reproducibility.
+• Compression and promotion keep the forest tidy: fewer packs, stronger anchors, cleaner provenance.
+Homework
+• Create an anchor-candidate form and 4 clones. Bind two different meaning packs. Gate, receipt, and propose a promotion decision with evidence.
+• Rotate the octet (dihedral move) on one clone and show the receipt stays in-orbit (or explain why not).
+• Draft one compression: merge two ad-hoc Δ patterns into a named meaning pack and re-run one clone to confirm.
+(Optional) Instructor demo seed
+• Anchor-candidate: LEECH_PATCH_K1 (optics-oriented octad).
+• Clones: K1-B, K1-C, K1-D via three M24 tags.
+• Packs: OPTICS_S2_v1, THZ_STEER_v1, EM_BIO_COMMON_v1.
+• Results: K1-B 1111, K1-C 1101 (tighten mirror), K1-D 1111.
+• Compression: “window shave + unit guard” promoted to COMMON_v2 and rebound to K1-C → now 1111.
+• Decision: Promote K1 to ANCHOR (3 packs, no new debt, receipts stable).

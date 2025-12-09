@@ -1,0 +1,101 @@
+Q&A pit stop (from last section)
+Q1. Why does n=3 “create quads” instead of just adding a third symbol?
+Because the palindromic hinge from n=2 (ABA) makes two mirrored lanes. Adding a third symbol while keeping determinism + mirror yields four mirrored insertion slots (S1..S4). That scaffold is the proto-4×4 grid.
+Q2. Is the n=4 palindromic rest really unique?
+Up to pose/color, yes under our guards (determinism, one local Δ repair allowed, idempotent replay, mirrored tolerance). Any alternate weave accumulates fixable local defects and canonicalizes back to the same pal rest.
+Q3. Why exactly eight classes at n=5? Why not 6 or 12?
+With parity-aware dihedral symmetries, the 16 raw placements quotient to 8 inequivalent insertion classes that survive the gates (determinism + ≤1 Δ + idempotence). It’s the minimal set that keeps mirror and lanes consistent on a saturated 4×4.
+Q4. Do we “assume E8,” or does it fall out?
+We don’t assume it. Once the octad exists, two synchronized 8-bit lanes form the natural shoulder for a Construction-A snap-in to an E8-like form. It’s bookkeeping on top of the octad, not a new axiom.
+Q5. What’s the practical meaning of the 4-bit commit?
+It’s a tiny reproducible receipt: “this run passed mirror + octet + Δ + strict.” It caps the local hot zone, prevents drift, and lets you replay exactly what succeeded.
+Section 5 — The Octet Engine: viewers, mirror, and the E8 snap-in
+What you’ll learn
+• How to build an octet viewer stack (local 8×8, neighborhood 4×4×4×4, parity 2×2×2×2, + mirror)
+• How to run Δ-lift and strict ratchet with those viewers without adding new gates
+• How the octad pattern naturally hosts an E8/Construction-A snap-in for stability & cloning
+• How to produce qubit-like caps (4-bit commits) on hot zones and keep going
+Instructor view (crisp)
+• Viewer stack
+• V0: 8×8 local — the octet views × their interactions.
+• V1: 4×4×4×4 ring — the immediate surroundings; catches bleed, subharmonics, and near-field aliasing.
+• V2: 2×2×2×2 inner/outer parity — guard rails for mirror/anti-mirror behavior.
+• VM: full mirror pair — forward⟷inverse palindromic rest check.
+• Run loop
+Stand-ins → DNA-10 → V0/V1/V2 pass → VM pal rest → Δ-lift (one local rewrite) → strict (tighten bounds) → 4-bit commit.
+• E8 snap-in (optional, not assumed)
+Map octad lanes to two synchronized 8-bit rails; apply a Construction-A parity check to stabilize and clone forms (for replay & ledger).
+• Caps, not walls
+Use the 4-bit receipt to cap hot zones (qubit-like), then proceed. Caps are reversible: if a future mirror fails, you reopen, Δ-lift again, and re-cap.
+Student view (hands-on scenes)
+Scene A — Building the viewer stack
+• You draw an 8×8 grid. Label columns as your eight n=5 classes (G1..G8). Rows are tests (unit, stress, band, pose, slice, parity-neighbor, time-shift, noise).
+• Next page: 4×4×4×4 cubes. Each 4×4 is a neighborhood ring around your local problem—up, down, left, right; the second “×4” is four regimes (low, mid, high, edge); third “×4” are four boundary conditions; fourth “×4” are four time offsets.
+• Third page: 2×2×2×2 parity shells. Inside vs outside, lane A vs lane B, mirror vs anti-mirror, early vs late tick.
+You now have three layers that “hum” together: local, ring, parity. Clip them together with a paper binder; that’s your viewer stack.
+Scene B — Running the loop on a real thing
+Pick a concrete micro-task (e.g., a tiny optics PSF check, a toy chip-timing sanity, or a three-class classifier slice).
+• Stand-ins: write 6–10 token cards (units, guards).
+• DNA-10: fill timing, pose, precision, seed, etc.
+• V0 pass: mark ticks in the 8×8; circle any red cells.
+• V1 pass: if a V0 column is hot, look for a matching hot ring—often a boundary or aliasing issue.
+• V2 pass: check the mirror/anti-mirror shells—many “mystery” failures are parity leaks.
+• Mirror (VM): run forward⟷inverse; write the pal rest delta.
+• Δ-lift: one local rewrite (e.g., “swap fragile non-identity for identity,” “shorten vent window by 1,” “unit guard to SI”).
+• Strict: tighten one bound (MTF floor +3%, ΔT per tick −0.2 K, MAE −5%).
+• Receipt: shade your 4 boxes. Done.
+Scene C — The E8 snap-in (stability & cloning)
+On a fresh sheet, draw two 8-slot rails (Lane A, Lane B). Copy your octad labels on A; mirror them on B. Now trace a simple parity check across both rails (think “evenness” modulo 2 on chosen positions). This is your Construction-A snap-in:
+• If your viewer passes and parity holds, stamp E8-OK (a small green dot).
+• E8-OK entries are easy to clone: you can permute (Monster/M24-style) without re-deriving, because the form—not the meaning—carries the legality.
+Board sketches (you trace this)
+V0: 8×8 local Tests → [ t1 t2 t3 t4 t5 t6 t7 t8 ] Gates ↓ [ G1 G2 G3 G4 G5 G6 G7 G8 ] ✓/•/× V1: 4×4×4×4 ring [neighbors][regime][boundary][time] (cube of cubes) V2: 2×2×2×2 parity shells [inside/out][lane A/B][mirror/anti][early/late] VM: palindromic rest forward ∘ inverse ≈ I (within strict tolerance) 
+Micro-lab (30–45 min)
+• Choose a tiny dataset/model/subsystem you actually have (anything).
+• Fill 8 stand-ins, 1 DNA-10.
+• Run V0/V1/V2 + VM.
+• Perform exactly one Δ-lift.
+• Tighten exactly one strict bound.
+• Issue a 4-bit commit.
+• Optional: mark E8-OK if your lanes balance.
+Deliverables: three viewer sheets, one Δ card, one strict card, one 4-bit box shaded.
+Δ-lift cookbook (examples you can use today)
+• Identity swap: replace a fragile non-commuting step with a commuting identity pair (e.g., normalize→transform vs transform→normalize).
+• Window shave: shorten a window (time, space, frequency) by one tick to avoid bleed.
+• Unit guard: recast every quantity in one canonical unit system before evaluation.
+• Local repaint: raise a floor (MTF, SNR) by a fixed small increment with no global retune.
+Monotone rule: debt ↓, no regressions on already-green viewers.
+Strict ratchet (pick one per pass)
+• Tolerance −10% (error bands)
+• Floor +3% (stability/quality)
+• Range −1 tick (window)
+• ULP −1 (numeric error)
+Monotone rule: thresholds only tighten after a pass.
+Receipts (what the 4 bits can mean)
+• bit 1: V0 passed (local octet)
+• bit 2: V1/V2 passed (ring/parity)
+• bit 3: VM passed (pal rest)
+• bit 4: Δ-lift + strict applied with no regressions
+Examples:
+1111 = clean pass; 1101 = parity & mirror good, strict applied, but ring needed work; 1011 = local good, parity shaky, mirror + strict good (revisit V2).
+Pitfalls
+• Running V0 only (and missing that the issue is in V1 boundary conditions).
+• Doing two Δ-lifts at once (you won’t know which fixed it).
+• Tightening multiple stricts per pass (hard to attribute wins).
+• Treating the E8 snap-in as required (it’s optional stability/clone tooling).
+Takeaways
+• The octet viewer stack gives you coverage (local, ring, parity, mirror) without inventing new gates.
+• One Δ, one strict, one receipt per pass keeps motion small and legible.
+• The E8 snap-in is a convenience layer for stability & cloning—borne by the octad, not assumed a priori.
+• Caps (4-bit) are qubit-like: they freeze a hot zone safely and let you move on.
+Homework
+• Print three viewer sheets (V0, V1, V2) and run them on one real subsystem you care about. Deliver the three sheets + Δ card + strict card + 4-bit.
+• Try the E8 snap-in: map your octad to two lanes, apply one simple parity check, and mark E8-OK where it holds.
+• Rotate the octad labels (a dihedral permutation) and confirm your passes permute but remain inside the same octad orbit.
+(Optional) Instructor demo seed you can copy
+• Domain: tiny optics PSF.
+• Δ-lift: remove residual astig term (Z2) via single actuator micro-step.
+• Strict: MTF floor +3% at 0.5 cycles/pixel.
+• Result: V0 all green, V1 east-ring amber→green after Δ, V2 stable mirror, VM within tolerance, 4-bit 1111, E8-OK marked.
+—
+*When you’re ready, we’ll roll into Section 6: From octad to ledgered forms—automorphisms, cloning forms with Monster/M24-style permutations, and meaning-pack swaps without moving the geometry.*

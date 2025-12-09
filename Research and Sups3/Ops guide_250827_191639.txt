@@ -1,0 +1,104 @@
+End-to-End Operational Guide for the Superpermutation Framework
+This guide provides a full start-to-finish workflow for using the superpermutation + braid/lattice + φ-modulation framework. It is written as if onboarding a capable new user into the system. It covers methodology, reasoning, and key helper data at every step.
+1. Core Idea
+The framework treats research logs (documents, session notes, experiments) as seeds in a combinatorial exploration engine. Each seed is:
+• Broken into chunks.
+• Tagged with buckets (major conceptual domains).
+• Refined into primitives (atomic terms of meaning).
+• Organized into shells (n-level decomposition, from broad n=9 to primitive n=1).
+This transforms qualitative text into a structured, machine-testable object we call a macro-seed.
+2. Pipeline Overview
+Step 1: Intake → Chunking
+• Documents are split into overlapping ~900-character chunks.
+• Each chunk is a retrievable unit.
+Step 2: Detection → Buckets & Primitives
+• Buckets: 8 global categories capture all domain content (lattice coding, φ-modulation, braids/bridges, superperms, orientation/PLL, metrics, grammar/governance, expansion/lifts, logging/audit are used as some examples ).
+• Primitives: Regex patterns extract atomic elements (e.g., even_parity, construction_A, phi_pll).
+Step 3: Shell assignment
+• Each chunk is given a shell_hint (n9 broad → n1 primitive) based on its content.
+• This supports decomposition/recomposition workflows.
+Step 4: Graph construction
+• Build a relations graph with nodes:
+• Documents
+• Chunks
+• Buckets
+• Primitives
+• Shells
+• Metrics (derived per-doc stats)
+• Edges encode provenance: chunk → bucket, primitive → bucket, chunk → shell, etc.
+Step 5: RAG (Retrieval Augmented Generation) enablement
+• Store chunks with metadata in JSONL (rag_chunks.jsonl).
+• Supports vector search + graph traversal.
+Step 6: Orbital Layout (n=9–10 superperm representation)
+• Treat each doc as an orbital around a holistic center.
+• Angle (θ): position in a greedy order maximizing overlap.
+• Radius (r): stability proxy (governance+metrics content proportion).
+• Edges: thematic overlaps (Jaccard ≥ 0.35).
+Step 7: Relevance analysis
+• Global relevance: degree centrality, bucket breadth, stability proxy.
+• Local relevance: top-3 buckets & primitive richness per doc.
+Step 8: Composite macro-seed synthesis
+• Aggregate primitive frequencies across all docs.
+• Select top primitives per bucket (max 4).
+• Recommend seed order (by degree centrality and breadth).
+3. Reasoning Behind Steps
+• Chunking prevents context loss and enables fine-grained retrieval.
+• Buckets ensure coverage across the conceptual space; they are stable anchors.
+• Primitives allow precise testing (e.g., toggling phi_pll on/off).
+• Shells provide a hierarchical grammar for decomposition/recomposition.
+• Graph construction supports explainability (why something was retrieved).
+• RAG integration enables hybrid retrieval: semantic + symbolic.
+• Orbital layout visualizes interplay across all seeds (docs) in a holistic context.
+• Global/local relevance identifies which seeds are most central or locally rich.
+• Composite macro-seed encodes the best-of-all into a testable input.
+4. Practical Use Cases
+• Single-doc seeding: Run one document through the pipeline → generate a test seed.
+• Cross-doc synthesis: Combine 9 seeds into one macro-seed; test across braids/metrics/φ.
+• Kernel isolation: Disable kernel components (e.g., no braids) to measure contributions.
+• Explainability: Trace every result back through buckets/primitives/shells to its origin.
+• Visualization: Use orbital plots to see document relationships and kernel structure.
+5. Key Helper Data (Cheat Sheet)
+Buckets (9)
+• lattice_coding
+• phi_modulation
+• braids_bridges
+• superperms
+• orientation_pll
+• metrics_observables
+• grammar_governance
+• expansion_lifts
+• logging_audit
+Example Primitives
+• lattice_coding: even_parity, construction_A, rm13_to_h84
+• phi_modulation: phi_const, phi_pll, golden_angle
+• braids_bridges: artin_generators, parity_bridges, interior_braid
+• metrics_observables: bridge_density, helix_coherence, chirality_score
+Shells
+• n9: broad bucket theme
+• n7–n8: lattice & expansion lifts
+• n3–n4: governance & φ-mod
+• n1: primitives (lowest-level terms)
+6. Outputs Generated
+• rag_chunks.jsonl (retrieval-ready chunks)
+• relation_graph_nodes_v2.json & relation_graph_edges_v2.csv
+• orbital_layout.png (doc orbitals)
+• relevance_global.csv & relevance_local.csv
+• composite_macro_seed.json
+7. How to Start as a New User
+• Pick one document and run it through the pipeline → learn how chunking, buckets, and shells work.
+• Examine the relations graph for that doc → see how explainability emerges.
+• Add more docs, generate orbital layout → see holistic context.
+• Review global/local relevance tables → know where to focus.
+• Generate a composite macro-seed → test empirically.
+8. The Holistic Kernel
+From the 9-doc synthesis, the consistent kernel is:
+• braids_bridges (present in all 9)
+• metrics_observables (7/9)
+• phi_modulation (4/9)
+These three domains form the spine of the synthesis engine. Focus testing here first.
+9. Next Steps
+• Build automation: every new doc runs through this pipeline automatically.
+• Expand primitives: continue refining regex → more atomic terms.
+• Add metrics: log coverage, bridge density, chirality from test runs.
+• Extend visualization: primitive-level orbital layouts.
+In summary: This operational guide defines how to move from raw R&D logs → structured seeds → explainable tests → composite synthesis. It is end-to-end, auditable, and extendable.

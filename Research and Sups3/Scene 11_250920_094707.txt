@@ -1,0 +1,78 @@
+Section XI — Attaching Domain Sidecars to the Shell & Running a Mixed Pass
+(We now bolt real work onto the shells you just built. Same CQE cadence; the shells (E8 / Leech slice on a 10-D torus primitive with the double-helix rest) give you geometry; sidecars give you meaning. We’ll wire up OPTICS, THERMAL, POLAR, SOUND/ACOUSTICS, and ENTROPY/INFO, then do one mixed, live-by-hand pass.)
+0) Quick Q&A warm-up
+Q: Do I change the lattice when I change domains?
+A: No. Form stays; meaning swaps. You’re only swapping the meaning pack (tokens + viewers + mirror pairs). The ledger keeps them separate.
+Q: Do I really need eight views for every domain?
+A: You need up to eight. You can start with 4, but the n=5 hinge forces an octad when you scale. You’ll feel it when a 5th case shows up—coverage gaps appear unless you open the full eight.
+Q: Where do the “10-D torus with double-helix rest” and E8/Leech sit in practice?
+A: Treat every primitive datum as that torus; E8/Leech are the legal snap grids inside it. Your sidecar observers dock to those axes. That’s why parity/mirror tests are uniform across domains.
+1) Kit recap (what’s on the bench)
+• Shell: E8 anchor (or Leech slice) already committed with a 4-bit receipt.
+• DNA-10 card: timing, polarity, scale, pose, domain, conditioning, units, precision, cost, seed.
+• Meaning pack(s): domain tokens + octet viewer plan + mirror pair definitions + Δ-cookbook + strict thresholds.
+• Hot-zone viewer: 8×8 local pane per item; 4×4×4×4 surround; 2×2×2×2 parity surround of the surround.
+• Parity loom + tracing mirror: for visual parity/mirror checks.
+• 4-bit strip & receipts: for commit.
+2) Attaching a sidecar (the universal 8-step)
+• Choose anchor shell: E8 or Leech slice (status ANCHOR).
+• Mount meaning pack: load tokens + DNA-10; don’t bind interpretations yet.
+• Define octet viewers: eight materially independent slices for that domain.
+• Declare mirror pairs: forward ⟷ inverse (must approximately commute to identity under set tolerances).
+• Run octet: sketch all 8 views; run mirror checks; mark any mismatches.
+• Δ-lift local repairs: from your cookbook (only local, monotone rewrites).
+• Strict ratchet: tighten tolerances only after a pass.
+• Receipts: votes, hashes, 4-bit commit if ≥4 independent passes hold.
+(If a view fails and can’t be locally repaired, it goes to the Non-Working album as a breadcrumb; the geometry stays.)
+3) What it looks like — three quick scenes
+Scene A: OPTICS (imaging rail)
+• Octet (H1..H8): pupil→PSF (FFT), PSF→pupil (iFFT), Zernike fit, phase retrieval, pol. L/R, spectral A/B, field angle in/out, jitter on/off.
+• Mirror: FFT ⟷ iFFT; pol-swap L ⟷ R; spectrum A ⟷ B.
+• Δ-lift: replace fragile phase unwrap with a stable Cauchy warp (local), or zero a single weak Zernike term that flips under mirror.
+• Strict: WFE 25→22 nm RMS after pass; pol. extinction ≤ −20 dB.
+• Receipt (example): mirror votes 6/8, views 7/8 pass, 4-bit 1011.
+Scene B: THERMAL (conduction/convection/radiation rail)
+• Octet: steady conduction (Fourier), transient pulse, convection on/off, radiator view factor hi/lo, emissivity bands (ε1..ε3), vent cadence, pose flip.
+• Mirror: forward transient solve ⟷ time-reversed replay (energy budget), emissivity band swap.
+• Δ-lift: isolate a stiff node and replace explicit step with Crank–Nicolson (local stability lift).
+• Strict: ΔT/tick 1.0→0.8 K after pass; heat-balance residual ≤ 0.5%.
+• Receipt: 5/8 pass, 4-bit 1101.
+Scene C: SOUND / ACOUSTICS (mechanical wave rail)
+• Octet: plane wave f₀, broadband burst, reflection (impedance jump), absorption (lossy layer), near→far Helmholtz, modal cavity n=1..2, subharmonic probe (guarded), deconvolution test.
+• Mirror: forward propagate ⟷ time-reversal (matched filter); input spectrum ⟷ recovered via deconv.
+• Δ-lift: swap a naive deconvolution for Tikhonov regularization; clamp condition number in the local band.
+• Strict: reconstruction SNR ≥ 20 dB; group delay error ≤ 2%.
+• Receipt: 6/8 pass, 4-bit 1001.
+(You can similarly mount POLAR (spin/LHCP/RHCP), SPINTRONICS (T₁/T₂ rails), ENTROPY/INFO (Landauer rails), etc. The moves don’t change—only tokens, viewers, mirrors.)
+4) Installing the hot-zone viewers (how we aim attention)
+• 8×8 local pane on each active view: shows pass/fail tiles (green/amber/red) for micro-assertions (units, bounds, residuals, invertibility, stability).
+• 4×4×4×4 surround: four nearest transforms × four parameter nudges × four bandwidths × four poses—catches “edge-of-validity” behavior.
+• 2×2×2×2 parity surround of the surround: minimal pal test wrapping the 4-stack; if this parity layer fails, you know it’s a global fracture, not a local wart.
+Result: the viewer rig highlights hot zones where Δ-lift pays off most, and tells you if the issue is local (fixable) or global (re-spec a view).
+5) Meaning glyph hashes (labeling without over-binding)
+• Choose glyph sets that echo the data’s native language (e.g., optics uses λ, NA, PSF icons; acoustics uses ; thermal uses ).
+• Freeze a hash for each glyph tuple in the ledger row (the label can be arbitrary, but the hash is the identity you replay).
+• During a run, semantics are provisional; only upon commit do you bind glyph → interpretation.
+6) Mixed pass (one shell, three sidecars, one ledger)
+Shell: E8 ANCHOR_E8_A1
+Sidecars mounted: OPTICS_v3, THERMAL_v2, ACOUSTICS_v1
+• Run octets & mirrors.
+• Apply Δ-lifts only where hot-zone viewer flags local repair.
+• Ratchet strict after each domain’s pass.
+• Tally receipts:
+receipts: optics: fourbit "1011", votes {mirror:6/8, views:7/8} thermal: fourbit "1101", votes {mirror:5/8, views:6/8} acoustics: fourbit "1001", votes {mirror:6/8, views:6/8} master_fourbit: "1110" # quorum rule: any 2 domains pass + parity surround passes page_hash: "…" status: WORKING 
+(Master four-bit is a cap over the domain 4-bits; our quorum rule here is illustrative—pick yours and stick to it.)
+7) What if something breaks? (diagnostics you actually use)
+• Local red only (8×8 tile flickers): write a Δ-lift; don’t touch thresholds.
+• 4×4×4×4 surround amber: you’re on an edge—increase one view’s budget or split the view into two sub-views.
+• 2×2×2×2 parity surround red: global inconsistency—re-pose the viewer (mirror choice or bandwidth split) before any Δ.
+Remember: Δ is local and monotone; strict only tightens after a pass; never widen a threshold to “get green”.
+8) Ledger template (drop-in)
+form_id: E8_ANCHOR_A1 constructionA: {p: 2, code: "Hamming(8,4,4)", glue: "half-shift+evenness"} automorphism: {group: "Weyl(E8)", element: "rα rβ rγ"} # if cloned, else omit for anchor octet_map: H1: optics/FFT H2: optics/iFFT H3: thermal/transient H4: thermal/conduction H5: acoustics/forward H6: acoustics/time-reverse H7: polar/L↔R H8: entropy/Landauer-rail dna10: [timing, polarity, scale, pose, domain, conditioning, units, precision, cost, seed] thresholds: normal: {WFE_nm: 25, ΔT_per_tick_K: 1.0, SNR_dB: 15} strict: {WFE_nm: 22, ΔT_per_tick_K: 0.8, SNR_dB: 20} glyph_hashes: optics: "λ·NA·PSF▥" thermal: "k|ε|σT⁴" acoustics: "f|v|Z" receipts: optics: {fourbit: "1011", votes: {mirror:6/8, views:7/8}} thermal: {fourbit: "1101", votes: {mirror:5/8, views:6/8}} acoustics: {fourbit: "1001", votes: {mirror:6/8, views:6/8}} master_fourbit: "1110" page_hash: "…" status: WORKING 
+9) Exercises you can do now
+• Mount two sidecars on your E8 anchor (pick any two of OPTICS/THERMAL/ACOUSTICS/POLAR/ENTROPY). Define octets, choose mirror pairs, and run the hot-zone viewer. Log at least one Δ-lift per domain.
+• Parity surround test: deliberately introduce a small asymmetry in one view and observe which surround layer flags it first. Undo with a minimal Δ.
+• Automorphism clone: apply one recorded Weyl reflection (or M24 permutation on a Leech slice), replay the run, and verify receipts are form-equivalent.
+• Strict ratchet drill: prove (with your numbers) that thresholds only tightened after verifiable passes—write the before/after deltas in gold.
+10) Where we go next
+Next, we’ll weave the ENTROPY/INFO rail (Shannon ↔ von Neumann ↔ Landauer) directly into OPTICS/THERMAL/ACOUSTICS so that every transformation carries an explicit information-theoretic budget—and we’ll introduce the 4-bit qubit-cap for hot zones, showing how a tiny, domain-agnostic cap resolves local instabilities while preserving global parity.

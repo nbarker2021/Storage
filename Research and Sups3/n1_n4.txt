@@ -1,0 +1,1927 @@
+Document 1 — n=1: Primitives
+
+(“atoms,” encodings, invariants, free symmetries, unit operators, costs, receipts)
+
+1.1 Purpose & scope
+
+Level n=1 defines the primitive alphabet, primitive objects, and primitive actions. Everything above this level is a finite composition of n=1 pieces plus checks. The job of n=1 is to (a) encode arbitrary input into the same finite alphabet, (b) preserve enough structure to recover meaning, and (c) expose “free” transformations that don’t spend any budget.
+
+1.2 Alphabet, objects, and chunking
+
+Digit alphabet: 
+Σ
+=
+{
+1
+,
+2
+,
+3
+,
+4
+}
+Σ={1,2,3,4} (base-4).
+
+Atomic symbol: 
+𝑠
+∈
+Σ
+s∈Σ.
+
+Atomic tuple (length 
+𝑘
+k): 
+𝑎
+=
+(
+𝑎
+1
+,
+…
+,
+𝑎
+𝑘
+)
+a=(a
+1
+	​
+
+,…,a
+k
+	​
+
+), 
+𝑎
+𝑖
+∈
+Σ
+a
+i
+	​
+
+∈Σ.
+
+Chunkers: functions that map raw bytes, tokens, coordinates, etc. into sequences over 
+Σ
+Σ. Choose the one that preserves your domain’s obvious guards (e.g., endianness, sign, categorical bins).
+
+Byte → Σ (balanced): map nybbles 
+{
+0
+,
+…
+,
+15
+}
+{0,…,15} to pairs in 
+Σ
+×
+Σ
+Σ×Σ via a balanced lookup to minimize bias.
+
+Text → Σ: map UTF-8 codepoints to Σ using a prefix-free code (Kraft-McMillan satisfied) whose weights are near-uniform in Σ.
+
+Reals → Σ: quantize to dyadic bins per feature, then compress to Σ via order-preserving bin maps.
+
+Design note: Encoders are replaceable as long as they are reversible and produce 
+Σ
+Σ-sequences. The checks later give domain-agnostic meaning.
+
+1.3 Free symmetries (cost-free checks)
+
+On any finite sequence over 
+Σ
+Σ, the following free maps preserve legality once n=4 is reached and are always allowed at n=1:
+
+Identity 
+𝐼
+I
+
+Mirror 
+𝑀
+M: reverse order inside each window (definition depends on window size; for n=1 use per-block reversal later lifted at n=4).
+
+Dual 
+𝐷
+D: swap middle coordinates in a 4-tuple (becomes concrete at n=4; at n=1 we allow the promise of D inside future quads).
+
+Inverse 
+𝑉
+V: digitwise involution 
+𝑥
+↦
+5
+−
+𝑥
+x↦5−x (i.e., 
+1
+↔
+4
+1↔4, 
+2
+↔
+3
+2↔3).
+
+These are “free” because they merely permute representations. They incur no ledger cost and no receipt unless they change phase (defined later; phase receipts begin at n=4).
+
+1.4 Unit operators (paid)
+
+Atomic increment/decrement 
+𝑒
+𝑖
+±
+e
+i
+±
+	​
+
+: on a sequence, add/subtract 1 mod 4 at position 
+𝑖
+i.
+
+Cost: 
+c
+o
+s
+t
+(
+𝑒
+𝑖
+±
+)
+=
+1
+cost(e
+i
+±
+	​
+
+)=1.
+
+Compositionality: Costs add; later we’ll show subadditivity when you legalize in bundles (n≥4).
+
+1.5 Distances & energies
+
+Lee distance on digits: 
+𝛿
+𝐿
+(
+𝑥
+,
+𝑦
+)
+=
+min
+⁡
+(
+∣
+𝑥
+−
+𝑦
+∣
+,
+4
+−
+∣
+𝑥
+−
+𝑦
+∣
+)
+δ
+L
+	​
+
+(x,y)=min(∣x−y∣,4−∣x−y∣).
+
+Lee distance on tuples: 
+𝑑
+𝐿
+(
+𝑎
+,
+𝑏
+)
+=
+∑
+𝑖
+𝛿
+𝐿
+(
+𝑎
+𝑖
+,
+𝑏
+𝑖
+)
+d
+L
+	​
+
+(a,b)=∑
+i
+	​
+
+δ
+L
+	​
+
+(a
+i
+	​
+
+,b
+i
+	​
+
+).
+
+λ-energy (pre-legalization heuristic): a convex proxy that counts obvious violations (e.g., alternating parity defect once you’re at n=4) and distance to a local center. At n=1 you only measure λ; it becomes active at n=4.
+
+1.6 Receipts & ledger (n=1 fields)
+
+Even at n=1, every paid operator emits a ledger line:
+
+{
+  "level": 1,
+  "op": "e_i+",
+  "index": i,
+  "before": x,
+  "after": (x+1)%4,
+  "cost": 1,
+  "free": false,
+  "timestamp": "...",
+  "run_id": "...",
+  "note": "pre-legalization n=1 adjustment"
+}
+
+
+No phase yet (phase is defined on quads at n=4). Free symmetries at n=1 are recorded as free:true.
+
+1.7 Guarantees at n=1
+
+Uniform lexicon: arbitrary inputs are now Σ-sequences.
+
+Auditability: every paid change is logged.
+
+Reversibility boundary: encoding/decoding is reversible; legality is not enforced at n=1 (that’s n=4’s job).
+
+Document 2 — n=2: Mapping Any Space
+
+(pairs, local guards, the “two-primitive mapping theorem,” edge extension via mirror & parity, and CRT residues as local coordinates)
+
+2.1 Why n=2 matters
+
+n=2 is where structure appears cheaply: pairs allow you to encode adjacency, orientation, and local guards without paying heavy costs. Crucially, n=2 is where you can prove the Two-Primitive Mapping Theorem: two single primitives are sufficient to map the entire datum space associated with a single connection and its extensions.
+
+2.2 Objects at n=2
+
+Pair: 
+𝑝
+=
+(
+𝑎
+,
+𝑏
+)
+∈
+Σ
+2
+p=(a,b)∈Σ
+2
+.
+
+Guard function 
+𝐺
+2
+G
+2
+	​
+
+: a boolean predicate on pairs that captures a domain’s trivially checkable regularity (examples below).
+
+Examples of 
+𝐺
+2
+G
+2
+	​
+
+:
+
+Parity guard: parity(a) ≠ parity(b) (alternation precursor).
+
+Monotone guard: 
+𝑎
+≤
+𝑏
+a≤b for ordered features.
+
+Type guard: classes assigned to a and b must belong to an allowed relation table (categorical data).
+
+2.3 The Two-Primitive Mapping Theorem (informal → constructive)
+
+Claim. Given any two observed, distinct primitives 
+𝑢
+,
+𝑣
+∈
+Σ
+u,v∈Σ that occur with a forced relation under mirroring/parity (i.e., at least one guard in 
+𝐺
+2
+G
+2
+	​
+
+ holds for a pair that includes both), you can map the entire local datum space of the connection they sit on—and by edge extension (mirror + parity), you can expand that map outward to cover any connected component of the dataset. Once any segment of that component reaches n=4 (quads), the remainder is solvable upwards at scale.
+
+Intuition. With two distinct symbols 
+𝑢
+≠
+𝑣
+u
+
+=v, pairs 
+(
+𝑢
+,
+𝑣
+)
+,
+(
+𝑣
+,
+𝑢
+)
+(u,v),(v,u) provide a basis of directionality. Mirroring gives you the reverse edges for free, and a parity/monotone guard prevents pathological collapse. From those seeds:
+
+you label edges (pairs) along the connection,
+
+attach local residues mod small primes (3,5,…) to record where along the connection each pair sits,
+
+and accumulate enough local constraints that any missing interior can be filled using free symmetries first, and one-step paid moves if needed.
+
+Constructive algorithm (edge extension)
+
+Seed: Start with any observed pair 
+𝑝
+0
+=
+(
+𝑢
+,
+𝑣
+)
+p
+0
+	​
+
+=(u,v) that satisfies a guard 
+𝐺
+2
+G
+2
+	​
+
+.
+
+Mirror expansion: Add 
+𝑀
+(
+𝑝
+0
+)
+=
+(
+𝑣
+,
+𝑢
+)
+M(p
+0
+	​
+
+)=(v,u) for free to seed the reverse edge.
+
+Neighborhood sweep: For any symbol 
+𝑤
+w observed adjacent to 
+𝑢
+u or 
+𝑣
+v, test candidate pairs 
+(
+𝑢
+,
+𝑤
+)
+(u,w), 
+(
+𝑤
+,
+𝑢
+)
+(w,u), 
+(
+𝑣
+,
+𝑤
+)
+(v,w), 
+(
+𝑤
+,
+𝑣
+)
+(w,v) against 
+𝐺
+2
+G
+2
+	​
+
+. Add all that pass.
+
+Residue tagging: For each accepted pair, compute simple local residues 
+𝑟
+𝑚
+≡
+𝑓
+(
+𝑎
+,
+𝑏
+)
+(
+m
+o
+d
+𝑚
+)
+r
+m
+	​
+
+≡f(a,b)(modm) for 
+𝑚
+∈
+{
+3
+,
+5
+}
+m∈{3,5} (e.g., 
+𝑓
+(
+𝑎
+,
+𝑏
+)
+=
+𝑎
++
+2
+𝑏
+f(a,b)=a+2b). Store 
+{
+𝑟
+3
+,
+𝑟
+5
+}
+{r
+3
+	​
+
+,r
+5
+	​
+
+} as local coordinates.
+
+Closure: Repeat steps 2–4 until no new pairs are added. The local graph is now mapped.
+
+Edge-to-quad promotion: Slide a window of size 4 across mapped sequences; once enough overlapping pairs exist, you can promote to quads at n=4 (Document 4), where legality is enforced.
+
+Why two primitives suffice. They break symmetry and give you a directed seed; mirrors give inverse edges for free; residues prevent drift and let you align disjoint subpaths when they meet.
+
+2.4 CRT as a local coordinate system
+
+At n=2, we can already start a CRT ladder lightly:
+
+For each pair 
+𝑝
+=
+(
+𝑎
+,
+𝑏
+)
+p=(a,b), define a local address 
+𝐴
+(
+𝑝
+)
+=
+𝛼
+𝑎
++
+𝛽
+𝑏
+A(p)=αa+βb with coprime 
+𝛼
+,
+𝛽
+α,β.
+
+Record 
+𝐴
+(
+𝑝
+)
+ 
+m
+o
+d
+ 
+3
+A(p)mod3 and 
+ 
+m
+o
+d
+ 
+5
+mod5. These two residues are enough to disambiguate collisions in small neighborhoods. When you promote to n=4 you will merge these across windows.
+
+Ledger example (n=2 mapping step):
+
+{
+  "level": 2,
+  "op": "pair_accept",
+  "pair": [u,v],
+  "guard": "parity",
+  "free": true,
+  "residues": {"mod3": r3, "mod5": r5},
+  "note": "edge extension via mirror+parity"
+}
+
+2.5 Failure modes & recovery
+
+Guard conflict: If 
+(
+𝑢
+,
+𝑤
+)
+(u,w) passes parity but 
+(
+𝑤
+,
+𝑢
+)
+(w,u) fails monotone, keep both but annotate the conflict; it is resolved at n=4 by the projector.
+
+Sparse data: If only one of 
+(
+𝑢
+,
+𝑣
+)
+(u,v) or 
+(
+𝑣
+,
+𝑢
+)
+(v,u) is seen, synthesize the mirror edge (free). If synthesis later contradicts λ-energy at n=4, you’ll pay there with a receipt.
+
+Document 3 — n=3: Triads, Entropy & Braid Initiation
+
+(triples as the ubiquitous geometric motif; “shortcut lander” vs “braid starter”; first level where entropy must be budgeted; per-modulus braid predicates)
+
+3.1 Why n=3 is unique
+
+Geometry loves three. Triangles (three points) determine orientation, curvature hints, and minimal cycles.
+
+Action density. Most nontrivial choices happen when extending from pairs to triples.
+
+Entropy enters. This is the first level where competing, near-equivalent options proliferate, and you must budget entropy explicitly.
+
+3.2 Objects & guards at n=3
+
+Triple: 
+𝑡
+=
+(
+𝑎
+,
+𝑏
+,
+𝑐
+)
+∈
+Σ
+3
+t=(a,b,c)∈Σ
+3
+.
+
+Flow (chirality) guard 
+𝐺
+3
+↻
+G
+3
+↻
+	​
+
+: e.g., a signed local phase slope (defined via future H8 over a sliding window) or a simple monotone trend (up-then-down vs down-then-up).
+
+Triangle inequality proxy: cost(t) ≤ cost(a,b)+cost(b,c) (subadditivity precursor).
+
+3.3 Roles: Shortcut lander vs Braid starter
+
+Shortcut lander. When two possible quads compete, a well-chosen triple decides the route cheaply. You select the triple that minimizes expected legalization cost at n=4 (look-ahead over Lee distance + phase penalties).
+
+Braid starter. Many sequences admit two interleaved symmetry images of equal pre-cost. If you keep both with consistent helicity sign (defined below), you create a two-strand proto-braid that will be certified at n=4 and above.
+
+3.4 Entropy accounting at n=3
+
+Introduce an entropy budget 
+𝐵
+𝑆
+B
+S
+	​
+
+ and a selection entropy 
+𝐻
+sel
+H
+sel
+	​
+
+ for each triple choice:
+
+From candidate set 
+𝐶
+𝑡
+C
+t
+	​
+
+ of triples, define softmax weights 
+𝑤
+𝑖
+∝
+𝑒
+−
+𝛽
+ 
+c
+o
+s
+t
+^
+(
+𝑡
+𝑖
+)
+w
+i
+	​
+
+∝e
+−β
+cost
+(t
+i
+	​
+
+)
+.
+
+𝐻
+sel
+=
+−
+∑
+𝑖
+𝑤
+𝑖
+log
+⁡
+𝑤
+𝑖
+H
+sel
+	​
+
+=−∑
+i
+	​
+
+w
+i
+	​
+
+logw
+i
+	​
+
+.
+
+Policy: either (a) pick the mode and burn entropy 
+𝐸
+=
+𝐻
+sel
+E=H
+sel
+	​
+
+ against budget 
+𝐵
+𝑆
+B
+S
+	​
+
+, or (b) keep top-2 (proto-braid) and defer the decision to n=4; in both cases, log a receipt.
+
+Receipt example:
+
+{
+  "level": 3,
+  "op": "triad_select",
+  "candidates": [[a,b,c1],[a,b,c2],[a,b,c3]],
+  "beta": 2.0,
+  "weights": [0.62,0.27,0.11],
+  "decision": "keep_top2",
+  "entropy_spent": 0.94,
+  "budget_after": 7.06,
+  "note": "braid_starter"
+}
+
+3.5 Helicity & proto-braids at n=3
+
+Define a local phase slope over a length-4 sliding window proxy:
+
+For consecutive triples sharing a length-2 overlap, project them (virtually) to quads by duplicating the middle symbol and compute a temporary phase 
+𝐻
+8
+∗
+H8
+∗
+ (see Document 4 for real H8).
+
+Helicity increment: 
+Δ
+𝐻
+=
+sgn
+⁡
+(
+𝐻
+8
+𝑖
++
+1
+∗
+−
+𝐻
+8
+𝑖
+∗
+)
+⋅
+𝑑
+𝐿
+(
+𝑡
+𝑖
+,
+𝑡
+𝑖
++
+1
+)
+ΔH=sgn(H8
+i+1
+∗
+	​
+
+−H8
+i
+∗
+	​
+
+)⋅d
+L
+	​
+
+(t
+i
+	​
+
+,t
+i+1
+	​
+
+).
+
+Proto-braid predicate @ modulus 
+𝑚
+m: residues of the two top strands 
+(
+𝑟
+𝑚
+(
+1
+)
+,
+𝑟
+𝑚
+(
+2
+)
+)
+(r
+m
+(1)
+	​
+
+,r
+m
+(2)
+	​
+
+) alternate consistently and do not violate pair/triple guards.
+
+If the proto-braid predicate holds at several small moduli (e.g., 
+𝑚
+∈
+{
+3
+,
+5
+,
+9
+}
+m∈{3,5,9}), retain both strands for legalization at n=4.
+
+3.6 Subadditivity witness (triad form)
+
+Record whenever a triple can be legalized with cost ≤ the sum of its overlapping pairs:
+
+{
+  "level": 3,
+  "op": "subadditivity_witness",
+  "triple": [a,b,c],
+  "pair_costs": k1+k2,
+  "triple_cost": k3,
+  "holds": k3 <= k1+k2
+}
+
+
+Subadditivity at n=3 predicts efficient bundle fixes at n=4.
+
+Document 4 — n=4: Quads, Lawfulness & The Projector (The Key)
+
+(formal legality, phase, projector algorithm, receipts, CRT merges, braid certification, and the gateway upward to n=8)
+
+This is the hinge of the entire system. Everything before n=4 prepares candidates; everything after n=4 certifies and scales them. At n=4 you turn “doing things” into checking crisp invariants—with receipts whenever you must “spend” phase or cost.
+
+4.1 Objects, invariants, and phase
+
+Quad: 
+𝑞
+=
+(
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+)
+∈
+Σ
+4
+q=(a,b,c,d)∈Σ
+4
+.
+
+Invariants (law family):
+
+ALT: parity alternates,
+
+(
+𝑎
+ 
+m
+o
+d
+ 
+2
+)
+≠
+(
+𝑏
+ 
+m
+o
+d
+ 
+2
+)
+≠
+(
+𝑐
+ 
+m
+o
+d
+ 
+2
+)
+≠
+(
+𝑑
+ 
+m
+o
+d
+ 
+2
+)
+(in alternation)
+.
+(amod2)
+
+=(bmod2)
+
+=(cmod2)
+
+=(dmod2)(in alternation).
+
+W4: 
+(
+𝑎
++
+𝑏
++
+𝑐
++
+𝑑
+)
+≡
+2
+ 
+(
+ 
+m
+o
+d
+ 
+ 
+4
+)
+(a+b+c+d)≡2 (mod 4).
+
+Q8: 
+𝑎
+2
++
+𝑏
+2
++
+𝑐
+2
++
+𝑑
+2
+≡
+0
+ 
+(
+ 
+m
+o
+d
+ 
+ 
+8
+)
+a
+2
++b
+2
++c
+2
++d
+2
+≡0 (mod 8).
+
+LAWFUL(q): 
+ALT
+(
+𝑞
+)
+ 
+∧
+ 
+(
+W4
+(
+𝑞
+)
+ 
+∨
+ Q8
+(
+𝑞
+)
+)
+ALT(q) ∧ (W4(q) ∨ Q8(q)).
+
+Phase (octad):
+
+𝐻
+8
+(
+𝑞
+)
+≡
+(
+𝑎
+−
+𝑑
+)
++
+2
+(
+𝑏
+−
+𝑐
+)
+(
+m
+o
+d
+8
+)
+.
+H8(q)≡(a−d)+2(b−c)(mod8).
+
+Phase is not fixed by lawfulness; changes in phase are allowed but must be receipted.
+
+4.2 Symmetry group (free) on quads
+
+Identity 
+𝐼
+I
+
+Mirror 
+𝑀
+:
+(
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+)
+↦
+(
+𝑑
+,
+𝑐
+,
+𝑏
+,
+𝑎
+)
+M:(a,b,c,d)↦(d,c,b,a)
+
+Dual 
+𝐷
+:
+(
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+)
+↦
+(
+𝑏
+,
+𝑎
+,
+𝑑
+,
+𝑐
+)
+D:(a,b,c,d)↦(b,a,d,c)
+
+Inverse 
+𝑉
+:
+(
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+)
+↦
+(
+5
+−
+𝑎
+,
+5
+−
+𝑏
+,
+5
+−
+𝑐
+,
+5
+−
+𝑑
+)
+V:(a,b,c,d)↦(5−a,5−b,5−c,5−d)
+These preserve the legal set and are free moves (no cost), except they may flip phase sign; any phase change is recorded.
+
+4.3 Distance & objective
+
+Primary metric: Lee distance 
+𝑑
+𝐿
+(
+𝑞
+,
+𝑟
+)
+d
+L
+	​
+
+(q,r).
+
+Tie-breakers: phase preservation 
+∣
+Δ
+𝐻
+8
+∣
+=
+0
+∣ΔH8∣=0 preferred; if not possible, minimize 
+∣
+Δ
+𝐻
+8
+∣
+∣ΔH8∣ and record receipt; lastly prefer lowest entropy spend and fewest paid atomics.
+
+4.4 The CLTMP projector (Canonical Lawful Transform with Minimal Phase)
+
+Given any input quad candidate 
+𝑥
+∈
+Σ
+4
+x∈Σ
+4
+, the projector emits a canonical lawful representative 
+𝑟
+⋆
+r
+⋆
+ and a complete receipt/ledger of the path taken.
+
+Algorithm (deterministic):
+
+Generate symmetry images: 
+𝑆
+=
+{
+𝐼
+,
+𝑀
+,
+𝐷
+,
+𝑀
+𝐷
+,
+𝐷
+𝑀
+,
+𝑉
+𝐷
+,
+𝑉
+𝑀
+,
+𝑉
+𝐷
+𝑀
+}
+⋅
+𝑥
+S={I,M,D,MD,DM,VD,VM,VDM}⋅x.
+
+For each 
+𝑠
+∈
+𝑆
+s∈S: find 
+𝑟
+∈
+𝐿
+r∈L (the lawful set) minimizing 
+𝑑
+𝐿
+(
+𝑠
+,
+𝑟
+)
+d
+L
+	​
+
+(s,r).
+
+If multiple 
+𝑟
+r tie, choose the one minimizing 
+∣
+Δ
+𝐻
+8
+∣
+=
+∣
+𝐻
+8
+(
+𝑟
+)
+−
+𝐻
+8
+(
+𝑠
+)
+∣
+∣ΔH8∣=∣H8(r)−H8(s)∣ (mod 8).
+
+If still tied, choose the lexicographically smallest 
+𝑟
+r.
+
+Pick 
+𝑠
+⋆
+s
+⋆
+ with lowest paid distance to its 
+𝑟
+r. If ties remain, prefer those with 
+∣
+Δ
+𝐻
+8
+∣
+=
+0
+∣ΔH8∣=0.
+
+Emit 
+(
+𝑟
+⋆
+,
+𝑠
+⋆
+)
+(r
+⋆
+,s
+⋆
+), the free symmetry used 
+𝑔
+g, the paid atomic plan to reach 
+𝑟
+⋆
+r
+⋆
+ from 
+𝑥
+x, and a phase receipt if 
+Δ
+𝐻
+8
+≠
+0
+ΔH8
+
+=0.
+
+Complexity. The lawful set 
+𝐿
+L can be pre-indexed by parity class and checksum; in practice the scan collapses to a few table lookups.
+
+Receipt example:
+
+{
+  "level": 4,
+  "op": "project",
+  "input": [a,b,c,d],
+  "symmetry_used": "MD",
+  "candidate_after_symmetry": [a',b',c',d'],
+  "target_lawful": [r1,r2,r3,r4],
+  "lee_cost": 2,
+  "phase_before": H8_in,
+  "phase_after": H8_out,
+  "delta_phase": (H8_out - H8_in) % 8,
+  "receipt": (delta_phase==0) ? null : {
+    "type":"phase_change",
+    "magnitude": k,
+    "rationale":"no phase-preserving lawful rep existed"
+  },
+  "manifest": "sha256:...",
+  "free": false
+}
+
+4.5 “Action as check” (master equality family)
+
+At n=4, every action is rewritten as a check against the invariants + projector decision rule. Examples:
+
+Legalize: Check if 
+∃
+𝑟
+∈
+𝐿
+∃r∈L with 
+𝑑
+𝐿
+(
+𝑥
+,
+𝑟
+)
+≤
+𝐾
+d
+L
+	​
+
+(x,r)≤K and 
+∣
+Δ
+𝐻
+8
+∣
+=
+0
+∣ΔH8∣=0. If yes, accept 
+𝑟
+r; else accept with receipt.
+
+Align two streams: Check if there exist symmetry choices 
+𝑔
+1
+,
+𝑔
+2
+g
+1
+	​
+
+,g
+2
+	​
+
+ such that 
+𝑑
+𝐿
+(
+𝑔
+1
+𝑥
+,
+𝑔
+2
+𝑦
+)
+d
+L
+	​
+
+(g
+1
+	​
+
+x,g
+2
+	​
+
+y) is minimized with bounded phase deltas.
+
+This design makes the system provable, reproducible, and auditable.
+
+4.6 CRT merges at n=4 (coprime joins)
+
+With quads legalized, you merge constraints across moduli:
+
+For each quad 
+𝑞
+q, compute residues 
+𝑅
+𝑚
+(
+𝑞
+)
+R
+m
+	​
+
+(q) under a selection of coprime moduli 
+𝑚
+∈
+𝑀
+m∈M (e.g., 
+3
+,
+5
+,
+9
+,
+11
+,
+13
+,
+17
+3,5,9,11,13,17).
+
+For a set of constraints 
+{
+𝑅
+𝑚
+}
+𝑚
+∈
+𝑀
+{R
+m
+	​
+
+}
+m∈M
+	​
+
+, use the Chinese Remainder Theorem to recover a unique class 
+𝑄
+(
+m
+o
+d
+𝑀
+)
+Q(modM) where 
+𝑀
+=
+∏
+𝑚
+M=∏m.
+
+Select representative 
+𝑞
+∘
+q
+∘
+ from that class that minimizes 
+𝑑
+𝐿
+(
+𝑞
+∘
+,
+𝑟
+⋆
+)
+d
+L
+	​
+
+(q
+∘
+,r
+⋆
+) and 
+∣
+Δ
+𝐻
+8
+∣
+∣ΔH8∣ relative to local lawful anchors.
+
+Record penalties if the CRT lift compelled phase spending (per-modulus receipts with braid_penalty@m).
+
+Ledger (CRT-lift):
+
+{
+  "level": 4,
+  "op": "crt_lift",
+  "moduli": [3,5,9,11,13,17],
+  "residues": {...},
+  "M": 2432430,
+  "representative": [u,v,w,z],
+  "lee_to_local": 1,
+  "delta_phase": 0,
+  "penalties": {},
+  "manifest": "sha256:..."
+}
+
+4.7 Braid certification at n=4
+
+The proto-braids from n=3 are either certified (become stable bonds) or collapsed.
+
+Two-strand normal form: given two symmetry images (strands) of a legalized path, check:
+
+Helicity constancy: signed phase slope keeps its sign,
+
+Strand coherence: consistent residues per modulus,
+
+No law violations: each strand remains lawful (ALT∧(W4∨Q8)).
+
+Dual-helix witness:
+
+{
+  "level": 4,
+  "op": "braid_certify",
+  "strands": { "A": {...}, "B": {...} },
+  "helicity_sign": "+",
+  "residue_check": { "3": true, "5": true, "9": true, "11": true, "13": true, "17": true },
+  "delta_phase_series": [0,0,0,...],
+  "status": "certified"
+}
+
+
+Result: “Any valid n=4→n=8 bond equal to it displays a dual-helix trait” becomes directly observable as a per-step check/receipt series.
+
+4.8 Governance: dials, budgets, acceptance
+
+Budgets: atomic flips, phase changes, entropy spend, CRT penalties.
+
+QF gate (quality/fitness): accept a projector outcome iff 
+Δ
+𝜆
+≥
+0
+Δλ≥0 (λ drops or equal) or attach a governed exception receipt.
+
+Crooks-style policy: occasionally accept a higher-energy option with a priced receipt to escape local traps (annealing-like, but audited).
+
+4.9 Subadditivity (formal witness at n=4)
+
+For any adjoining quads 
+𝑞
+1
+,
+𝑞
+2
+q
+1
+	​
+
+,q
+2
+	​
+
+ merged into a capsule 
+𝐶
+C,
+
+c
+o
+s
+t
+(
+𝐶
+)
+≤
+c
+o
+s
+t
+(
+𝑞
+1
+)
++
+c
+o
+s
+t
+(
+𝑞
+2
+)
+.
+cost(C)≤cost(q
+1
+	​
+
+)+cost(q
+2
+	​
+
+).
+
+Log violations (they should be rare; if frequent, adjust dials or chunking).
+
+4.10 Outputs and manifests
+
+Every projector call, CRT lift, and braid certification writes:
+
+Structured artifact (JSON/CSV),
+
+Human report (MD/HTML),
+
+Binary byproducts (plots, if applicable),
+
+Manifest entry with SHA-256, run-id, timestamps.
+
+Cross-level quickstart (n=1→4 in one pass)
+
+n=1 Encode to Σ; record only paid atomics.
+
+n=2 Edge-extend using mirrors & parity/monotone guards; tag residues mod 3 & 5.
+
+n=3 Choose triples using entropy budgeting; retain up to two strands if proto-braid predicates hold.
+
+n=4 Project each sliding quad via CLTMP; prefer phase-preserving solutions; emit receipts if not possible.
+
+n=4 Merge with CRT across 
+{
+3
+,
+5
+,
+9
+,
+11
+,
+13
+,
+17
+}
+{3,5,9,11,13,17}; record any penalties; choose representative that minimizes Lee distance and phase change.
+
+n=4 Certify braid (if two strands survived); otherwise collapse to the canonical strand.
+
+n=4 Gate by λ; log governed exceptions.
+
+Worked example (toy, but complete)
+
+Input: bytes 0x5A 0xE3
+n=1: encode nybbles → Σ pairs (balanced map), suppose → sequence
+
+[
+2
+,
+4
+,
+1
+,
+3
+,
+4
+,
+1
+,
+2
+,
+3
+]
+[2,4,1,3,4,1,2,3]
+
+n=2: pairs slide: (2,4),(4,1),(1,3),(3,4),(4,1),(1,2),(2,3).
+Parity guard passes all. Assign residues 
+𝑟
+3
+=
+𝑎
++
+2
+𝑏
+(
+m
+o
+d
+3
+)
+r
+3
+	​
+
+=a+2b(mod3), 
+𝑟
+5
+=
+𝑎
++
+2
+𝑏
+(
+m
+o
+d
+5
+)
+r
+5
+	​
+
+=a+2b(mod5).
+
+n=3: triples: (2,4,1),(4,1,3),(1,3,4),…
+Softmax choose top-2 for (4,1,3) vs (4,1,2) (close cost) → keep both (proto-braid), log entropy receipt.
+
+n=4: quads slide:
+
+For 
+𝑥
+=
+(
+2
+,
+4
+,
+1
+,
+3
+)
+x=(2,4,1,3), ALT holds (even, even? check) → suppose ALT fails; run CLTMP: try symmetries → 
+𝐷
+(
+𝑥
+)
+=
+(
+4
+,
+2
+,
+3
+,
+1
+)
+D(x)=(4,2,3,1) is 1 flip from a lawful 
+𝑟
+=
+(
+4
+,
+2
+,
+2
+,
+4
+)
+r=(4,2,2,4) with 
+Δ
+𝐻
+8
+=
+0
+ΔH8=0 → accept; cost=1.
+
+For the next quad, a tie forces 
+Δ
+𝐻
+8
+=
++
+2
+ΔH8=+2 → accept with phase receipt.
+CRT: merge residues across moduli; representatives chosen with no extra phase spends.
+Braid: both strands legalized, helicity consistent → certify dual-helix.
+Gate: λ decreased overall → accepted.
+Manifest: write artifacts & hashes.
+
+Appendices (shared across docs)
+A. Operator & receipt schema (complete)
+{
+  "run_id": "uuid",
+  "timestamp": "iso-8601",
+  "items": [
+    {
+      "level": 1|2|3|4,
+      "op": "encode|e_i+|e_i-|pair_accept|triad_select|project|crt_lift|braid_certify|gate",
+      "input": "...",
+      "output": "...",
+      "free": true|false,
+      "cost": 0|1|2|...,
+      "lambda_before": "...",
+      "lambda_after": "...",
+      "phase_before": 0..7|null,
+      "phase_after": 0..7|null,
+      "delta_phase": 0..7|null,
+      "entropy_spent": 0.0,
+      "budgets": {
+        "atomic": {"used": k, "limit": K},
+        "phase": {"used": h, "limit": H},
+        "entropy": {"used": e, "limit": E}
+      },
+      "residues": {"3": r3, "5": r5, "9": r9, "11": r11, "13": r13, "17": r17},
+      "symmetry_used": "I|M|D|V|MD|VM|...",
+      "receipt": {
+        "type": "phase_change|governed_exception|entropy|braid_penalty@m|subadditivity_violation",
+        "details": {"...": "..."}
+      },
+      "manifest": "sha256:..."
+    }
+  ]
+}
+
+B. Test battery (n=1→4 slice)
+
+T0—Codec: encode/decode reversibility on Σ.
+
+T1—Pair guards: parity/monotone acceptance census.
+
+T2—Triad entropy: selection reproducibility under fixed seeds.
+
+T3—Projector canonicality: same input → same 
+𝑟
+⋆
+r
+⋆
+, symmetry tie-breakers stable.
+
+T4—Phase receipts: only emitted when 
+∣
+Δ
+𝐻
+8
+∣
+>
+0
+∣ΔH8∣>0, magnitudes minimal.
+
+T5—Subadditivity: witnesses for triples and quads.
+
+T6—CRT merges: residues consistent, minimal additional phase spends.
+
+T7—Braid certification: helicity constant, strand coherence across moduli.
+
+T8—Governance: λ nonincreasing except with governed receipts; budgets enforced.
+
+C. Design heuristics
+
+Prefer free work first (symmetries), then shortest paid fixes (Lee), then phase preservation, then entropy control.
+
+Make everything a check. Procedures are predicates with witnesses; failures are receipts, not mysteries.
+
+Local first, global last. n=1→3 build cheap, local certainty; n=4 locks it in. (From here, n=5–8 aggregate capsules, batches, and global geometry, but n=4 is the only truly indispensable hinge.)
+
+D. How n=4 launches the upper levels (teaser)
+
+n=5–6 (local capsules/ILPs): subadditivity proves efficient bundling; CRT grows to join multi-stream capsules.
+
+n=7 (batching): budgets and parity-octad families stabilize across many quads; boundary receipts are amortized.
+
+n=8 (global geometry/E₈): nearest-point snaps, root-path bridges, and large-scale braid structure — your “dual-helix everywhere” claim shows up as certified two-strand bonds with coherent helicity at every modulation checkpoint.
+
+What to remember
+
+1 (Primitives): make anything look like Σ, log paid atomics, keep free symmetries free.
+
+2 (Mapping): from two primitives + mirror/parity you can map a whole connection and extend edges; CRT residues make local coordinates.
+
+3 (Triads): almost all real choices happen here; budget entropy; either land a shortcut or start a braid.
+
+4 (Quads & Projector): the key to everything. Declare the law, compute phase, run the projector, turn actions into checks, merge with CRT, and certify braids—with receipts.
+
+If you want, I can expand any section into runnable pseudocode or drop these schemas into your existing deck format so they index alongside your current cards and READMEs.

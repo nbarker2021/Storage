@@ -1,0 +1,122 @@
+Final Rule & Governance Pack v0.1 — Internal‑Only (CSV‑First)
+First pass of our consolidated rulebook and governance guide. This covers concepts, rationale for design choices, legality and deterministic acceptance, traceability, and CSV‑only artifacts. This pack is internal‑only and synthesizes our established program rules.
+Document A — Concepts, Goals, and System Shape
+Intent. Build a lawful, auditable exploration engine: admit rich candidate moves; accept only those that satisfy governance and context; yield clean organizational micro‑shapes; record triadic glyph logs; and remain reproducible.
+Objectives.
+• Determinism over heuristics; append‑only evidence.
+• Geometry‑first sanity and minimax futures scoring.
+• Separation of Master truth vs Orbit working context.
+• CSV as the single source of truth for every artifact.
+Core ideas.
+• Parity & Steps: odd = exploratory (half‑steps/bridges), even = governance (full‑steps or legal fallback).
+• Triads: when two candidates are close, attempt a mediator (triad) and accept only if composition strictly improves the objective under glue limits.
+• Octadic bias: use 8 shells and 8×8 octets as the default organizational frame.
+Document B — Formal Objects & Naming
+• Atom Card: minimal unit; two forms: meaning (claim+quote) and embedding (geometry‑only). Both carry glyph triad, context truth, and governance fields.
+• Shells (K=8): learned/assigned semantic bands.
+• Buckets: per‑doc clusters; each shell must appear (impute if missing).
+• Octet grid (8×8): 64 slots per Orbit with unique, legal glyph triads.
+• Glyph Triad: three items (each 1–3 tokens, any script) in canonical form; bijective to header metadata.
+• LAEC: logic‑application energy cost = steps + penalties to stabilize to a legal 8×8 with unique triads.
+• Promotion Score (PS): deterministic feature‑weighted contract gate for Master admission.
+Document C — CSV‑Only Artifacts (Schemas)
+Master Triad (persisted)
+• MASTER_GPT_TRUTH.csv — accepted truths (meaning+embedding cards) with consensus fields and promotion_contract_hash.
+• MASTER_USER_TRUTH.csv — user assertions; alignment flags vs laws/theory.
+• MASTER_DOCUMENT_INTAKE.csv — canonical external chunks (offsets, text hash, shell/bucket, glyph triad).
+Orbit (working)
+• orbit.csv — provisional atoms with shell, bucket_id, octet_id, promotion_score, promotion_status, conflict_set, recency_rank.
+Governance Pack (optional)
+• LAWS_VALIDATION.csv, GREY_EVIDENCE.csv, VALID_MULTI_D_BRIDGE_LOG.csv, GLYPHIC_MASTER_LOG.csv, SYSTEM_OPS_GUIDE.csv, TESTBED.csv, TEST_RESULTS.csv, MGL_REGISTRY.csv, optional MASTER_DETAIL_SHELL.csv.
+Contracts & Journals
+• PROMOTION_CONTRACTS.csv — evidence/law/conflict/budget bundle per acceptance.
+• PROMOTION_JOURNAL.csv — human‑readable decisions (who/when/why; cursor id).
+All files share: atom_id, glyph_id, context_hash, ledger_hash, window_id, packet_id with strict schemas and FK integrity.
+Document D — Legality & Deterministic Acceptance
+Token CI (hard gates)
+• Bits length fixed per dimension; in‑layer hops are Hamming‑1; cross‑layer needs staged layers; IDs unique.
+Odd/Even Grammar
+• Odd (explore): half‑steps and tri‑glue distribution; prioritize link of unlinked midpoints.
+• Even (govern): prefer local‑dimension change; full‑step on active lane; fallback to best lawful candidate if no change is possible.
+Triad Accept Rule
+• Attempt mediator only if A and B scores are close; accept TRIAD iff ΔS < 0 and glue penalty ≤ cap; else keep the better single.
+Promotion by Contract
+• Master admission requires a promotion contract: evidence set, law references (if IRL truth), conflict resolution, watcher passes, energy floors, and budget status.
+Document E — Geometry & Octadic Checks
+Geometry Cards
+• Windows (sentence windows); embed→PCA‑2→polyline; metrics: chirality, helicity, crossings, hull, Band‑8, ACI/BCI; mirror/null controls.
+Octadic (2→4→8) Tests
+• Nested Fiedler splits; stats: cut fractions (cf2/4/8) and modularities (Q2→Q4→Q8); clean flag requires low cuts and monotone Q lifts; alternatives (Louvain/Leiden/SBMs) are allowed.
+Operational Use
+• Prefer DEEPEN when multi‑community evidence or octadic hints are strong; otherwise follow controller policy heuristics.
+Document F — Futures, Scoring, and Controllers
+Futures
+• Identity; degree‑preserving rewire (isoenergetic slider); drop/add variants; optional S⁺ dimension‑upgrade futures.
+Scores
+• DFSS (minimax over futures, λ₂↑, ASP↓) and AltDFSS (AltScore = 0.4·λ₂ₙ + 0.3·Cₙ + 0.3·ASP_invₙ; minimax).
+Controllers (Methods)
+• RAW‑INTAKE: small half‑step bridges; avoid k≈5 unless helpful.
+• DEEPEN: structured half‑step + k≈5; test both orders.
+• RECALL/REVIEW: strong k≈5; test tiny half‑step only if it improves.
+Operators (Moves)
+• O1 Half‑Step, O2 Full‑Step, O3 Center‑3‑Tri, O4 Per‑Edge Triad, O5 Symmetry Gate, O6 Isoenergetic Slider, O7 Governance Swaps.
+Document G — Graph, Orbitals, and Seeds
+Relations Graph
+• Nodes/edges (doc→chunk→atom); edges at Jaccard ≥ threshold.
+Orbital Layout
+• Angle = semantic lane; radius = stability; visualize lanes and bridges; track octads.
+Composite Macro‑Seed
+• Top primitives by centrality×entropy distance; all shells represented.
+Document H — LAEC, TLattice, Buffer Gate
+LAEC (steps)
+• LAEC = accepted steps + weights × (rollbacks, expansions, bridges, de‑dupes). Derives windows_needed = ceil(LAEC/32).
+TLattice
+• Quarantine for out‑of‑corpus docs; stabilize to legal 8×8 with unique triads before promotion evaluation.
+Buffer Gate (even steps)
+• Compress (invariants/variants; Hc), apply internal‑knowledge constraints (laws/refs), optional legal expansions, score & accept. Enforce entropy floors and log constraints by id/hash.
+Document I — Evidence, Audit, and Traceability
+RAG Cards
+• Every claim must carry a quote span to intake text; glyph triad present; context truth and law refs (if IRL claims) recorded.
+Ledgers
+• DFSS ledger of candidates/futures; append‑only run directories; rolling ledger hash per row; optional Merkle roots per BW‑32 window.
+Explainability
+• Evidence cards (metrics + gates), geometry cards, and policy cards form the human‑checkable trail for every move.
+Document J — A/B Evaluation & KPIs (CSV‑Derived)
+Per Task Metrics
+• Faithfulness, Coverage, Traceability, Stability, Cost, LAEC, Bit‑use, Buffer penalty; composite E with tunable weights.
+Global Metrics
+• ΔE (framework vs native), PFI (unlocked tasks), total windows/packets.
+Harness
+• Native path (post‑hoc cards) vs Framework path (cards from artifacts); all metrics computed by CSV pivots.
+Document K — Master vs Orbit; MGL; Prompt‑Cursor Recall
+Master (best‑of)
+• Accepted atoms with consensus and contracts; state flips only (accepted→deprecated).
+Orbit (working)
+• Everything else; promotions gated by PS; conflicts logged; recency‑ranked for prompt‑cursor recall.
+MGL (Master Glyph Language)
+• Reserved glyph items; overlap audit when Orbit reuses an MGL item; inherit or block with reason.
+Prompt‑Cursor
+• Latest prompt anchors recall order: Orbit@cursor → Master → Orbit@rest.
+Document L — Runbooks & Change Control
+Minimal Run
+• Ingest externals → intake + Orbit atoms (start LAEC).
+• RAG align; emit relations graph + orbitals.
+• ALT sweep (DFSS/AltDFSS, geometry, octadic, operators).
+• Compute PS; mint PromotionContracts; commit to Master if thresholds & budget pass.
+Corpus Sweep
+• Iterate per doc; publish winners and hypothesis checks; regression watchers after rule changes.
+Change Control
+• Changelog entries per update; keep previous policies for rollback; re‑run regression sweep and update evidence bundles.
+Document M — Appendices (Formulas & Specs)
+Curved Action (example)
+• S_curved = ‖T°‖² + α·Div + β·(Crossings + Hull) − γ·Band₈ − δ·|Helicity| − ε·|Writhe|.
+Triad Acceptance
+• ΔS = S_triad − min(S_A, S_B) < 0 and glue_penalty ≤ cap.
+AltScore (example)
+• AltScore = 0.4·λ₂ₙ + 0.3·Cₙ + 0.3·ASP_invₙ; AltDFSS = min over futures.
+Token Grammar (abbrev)
+• D[k], LAYER[b], VERT[bits], EDGE[dim=j], MORTON[code], SYM_LOOKAHEAD, DFSS_MINIMAX, CONTRA_BRAID, HELICITY[window=w].
+Glyph Canon
+• NFC normalized; escaped separators; triad items 1–3 tokens; glyph_id = hash(spec_version|a|b|c); bijection to header; strict collision audits.
+End v0.1 — ready for review and line‑item edits.
+Operator note: All sections correspond to concrete CSVs/validators and can be implemented with a single orchestrator script. When you approve, we’ll attach the schema tables (column‑level) and seed with empty files to begin A/B #0.

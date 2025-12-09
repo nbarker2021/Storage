@@ -1,0 +1,82 @@
+import React, { useMemo, useState } from "react"; // StudioForge MVP — Possibility Engine (UI + Minimal Runtime) // --------------------------------------------------------- // This single-file React app demonstrates the "topic & scene datum" → possibilities flow. // It uses CQE "blank lattices" (narrative/character/production) as typed slots, // enumerates candidate scenes, scores them (r_story, r_schedule, novelty), // and lets users export a package zip (JSON + Fountain previews). // Tailwind CSS is assumed available. All state is local (no backend required). // // NOTE: This is an MVP for interaction & UX. In a full build, move types and // engines into modules; wire to a CLI/daemon for heavy compute and ledger signing.
+// --- Types -------------------------------------------------------------
+type Tone = { bleak: number; hopeful: number; quiet: number; stylized: number };
+type TopicSheet = { loglines: string[]; genre: string[]; theme: string[]; // short words/phrases tone: Tone; motifs: string[]; taboos: string[]; format: { type: "feature" | "episode"; target_pages: number }; };
+type Character = { id: string; archetype?: string; avail?: [string, string][]; // ISO date ranges };
+type Location = { id: string; int: boolean; ext: boolean; day: boolean; night: boolean; cluster: string; // e.g., "A", "B" };
+type Prop = { id: string; clearance?: "ok" | "review" | "hold" };
+type Datum = { characters: Character[]; locations: Location[]; props: Prop[]; stunts?: { id: string; tier: 1 | 2 | 3 }[]; constraints: { budget_tier: "indie" | "tier1" | "tier2" | "studio"; shoot_days: number; }; };
+type Candidate = { id: string; slugline: string; // Fountain slug synopsis: string; // 1-2 lines characters: string[]; location: string; when: "DAY" | "NIGHT"; intExt: "INT" | "EXT" | "INT/EXT"; props: string[]; stunts: string[]; motifs: string[]; r_story: number; // lower is better r_schedule: number; // lower is better novelty: number; // higher is better warnings: string[]; fountain: string; // minimal scene text };
+// --- Utility helpers ---------------------------------------------------
+function clamp01(x: number) { return Math.max(0, Math.min(1, x)); }
+function hashStr(s: string) { let h = 0; for (let i=0;i<s.length;i++){ h = (h<<5)-h + s.charCodeAt(i); h |= 0; } return Math.abs(h); }
+function pick(arr: T[], n = 1): T[] { if (n >= arr.length) return [...arr]; const copy = [...arr]; const out: T[] = []; while (out.length < n && copy.length) { const i = Math.floor(Math.random()*copy.length); out.push(copy.splice(i,1)[0]); } return out; }
+function jitter(base: number, scale=0.15) { return clamp01(base + (Math.random()*2-1)*scale); }
+// naive novelty distance (Jaccard-like over motifs+props+chars+loc) function noveltyDistance(a: Candidate, b: Candidate) { const setA = new Set([...a.motifs, ...a.props, ...a.characters, a.location]); const setB = new Set([...b.motifs, ...b.props, ...b.characters, b.location]); const inter = [...setA].filter(x => setB.has(x)).length; const union = new Set([...setA, ...setB]).size; return union === 0 ? 0 : 1 - inter/union; }
+// submodular greedy selection: maximize utility = -a rs - b rsch + c nov function selectDiverse(cands: Candidate[], k: number, a=0.6, b=0.3, c=0.4) { const chosen: Candidate[] = []; const remaining = [...cands]; while (chosen.length < k && remaining.length) { let bestIdx = 0; let bestScore = -Infinity; for (let i=0;i<remaining.length;i++) { const cand = remaining[i]; const noveltyBoost = chosen.length === 0 ? cand.novelty : chosen.reduce((acc, ch) => acc + noveltyDistance(cand, ch), 0) / chosen.length; const utility = -acand.r_story - bcand.r_schedule + c*noveltyBoost; if (utility > bestScore) { bestScore = utility; bestIdx = i; } } chosen.push(remaining.splice(bestIdx,1)[0]); } return chosen; }
+// --- Engines -----------------------------------------------------------
+function enumerateCandidates(topic: TopicSheet, datum: Datum, count=120): Candidate[] { const seeds = Array.from({length: count}, (_,i)=>i); const motifs = topic.motifs.length ? topic.motifs : ["motif"]; const locs = datum.locations.length ? datum.locations : [{id:"DEFAULT", int:true, ext:false, day:true, night:true, cluster:"A"}]; const chars = datum.characters.length ? datum.characters : [{id:"PROTAG"}]; const props = datum.props.length ? datum.props : [{id:"PROP"}]; const stunts = datum.stunts ?? [];
+return seeds.map(idx => { const L = pick(locs, 1)[0]; const dayNight = Math.random() < 0.5 ? (L.day ? "DAY" : "NIGHT") : (L.night ? "NIGHT" : "DAY"); const intExt: Candidate["intExt"] = L.int && L.ext ? "INT/EXT" : L.int ? "INT" : "EXT"; const charsPick = pick(chars.map(c=>c.id), Math.min(2 + Math.floor(Math.random()*2), Math.max(2, chars.length))); const propsPick = pick(props.map(p=>p.id), Math.min(2, Math.max(1, props.length))); const stuntPick = Math.random() < 0.25 && stunts.length ? pick(stunts.map(s=>s.id), 1) : []; const motifsPick = pick(motifs, Math.min(2, motifs.length));
+const slug = `${intExt}. ${L.id} – ${dayNight}`; const ll = topic.loglines[hashStr(slug+idx) % Math.max(1, topic.loglines.length)] || ""; const synopsis = ll ? `A beat echoing: ${ll.slice(0, 70)}…` : `A moment where ${charsPick.join(" & ")} collide around ${motifsPick.join("/")}.`; // r_story heuristic: penalties for unmet motif parity & pacing (randomized for MVP) const motifPenalty = motifsPick.length ? 0.15 : 0.35; const parityPenalty = Math.random() < 0.2 ? 0.25 : 0.05; // 20% unmet setup/payoff const toneBalance = (topic.tone.quiet*0.5 + topic.tone.hopeful*0.3 + (1-topic.tone.bleak)*0.2); const r_story = clamp01(0.25*motifPenalty + 0.3*parityPenalty + 0.45*(1-toneBalance) + Math.random()*0.15); // r_schedule heuristic: night/ext increase; stunts increase; cluster A cheaper const nightCost = dayNight === "NIGHT" ? 0.25 : 0.05; const extCost = intExt.includes("EXT") ? 0.15 : 0.05; const stuntCost = stuntPick.length ? 0.3 : 0.05; const clusterAdj = L.cluster === "A" ? -0.05 : 0.05; const r_schedule = clamp01(0.4*nightCost + 0.3*extCost + 0.25*stuntCost + 0.05 + clusterAdj + Math.random()*0.1); const novelty = clamp01(0.5 + Math.random()*0.5); const warnings: string[] = []; if (parityPenalty > 0.2) warnings.push("Parity: setup/payoff at risk"); if (stuntCost > 0.2) warnings.push("SFX/Stunt risk"); const fountain = `${slug}\nAction: ${synopsis}\n\n`; return { id: `CAND_${idx.toString().padStart(3,"0")}`, slugline: slug, synopsis, characters: charsPick, location: L.id, when: dayNight, intExt, props: propsPick, stunts: stuntPick, motifs: motifsPick, r_story, r_schedule, novelty, warnings, fountain } as Candidate; 
+}); }
+// --- UI ----------------------------------------------------------------
+const Chip: React.FC<{label: string}> = ({label}) => ( {label} );
+const Meter: React.FC<{label: string; value: number; invert?: boolean}> = ({label, value, invert}) => { const pct = Math.round(value*100); const bar = invert ? 100-pct : pct; const color = invert ? (bar>70?"bg-emerald-500":"bg-amber-500") : (bar>70?"bg-emerald-500":"bg-amber-500"); return ( 
+{label}{pct}%
+<div className={h-2 ${color} rounded} style={{width: ${bar}%}} /> 
+); }; 
+const Section: React.FC<{title: string; children: React.ReactNode; right?: React.ReactNode}> = ({title, children, right}) => (
+{title}
+{right} 
+{children} 
+); 
+const defaultTopic: TopicSheet = { loglines: ["A glassblower’s fabricated visions expose real debts."], genre: ["thriller","drama"], theme: ["truth","cost","trust"], tone: { bleak: 0.4, hopeful: 0.6, quiet: 0.7, stylized: 0.3 }, motifs: ["glass","refraction","blue_light"], taboos: ["harm_to_minors"], format: { type: "feature", target_pages: 100 } };
+const defaultDatum: Datum = { characters: [{id:"AVA", archetype:"seeker"}, {id:"MARCO", archetype:"skeptic"}, {id:"GRACE", archetype:"confessor"}], locations: [ {id:"FACTORY", int:true, ext:false, day:true, night:true, cluster:"A"}, {id:"ROOFTOP", int:false, ext:true, day:false, night:true, cluster:"B"}, {id:"HALLWAY", int:true, ext:false, day:true, night:true, cluster:"A"} ], props: [{id:"BLUE_KEYCARD"}, {id:"CRACKED_PHONE"}, {id:"LED_PANEL"}], stunts: [{id:"GLASS_SHOWER", tier:2}], constraints: { budget_tier: "indie", shoot_days: 20 } };
+function TopicPanel({topic, setTopic}:{topic: TopicSheet; setTopic: (t:TopicSheet)=>void}){ const [loglines, setLL] = useState(topic.loglines.join("\n")); const [motifs, setMotifs] = useState(topic.motifs.join(", ")); const [theme, setTheme] = useState(topic.theme.join(", ")); const update = () => setTopic({...topic, loglines: loglines.split("\n").map(s=>s.trim()).filter(Boolean), motifs: motifs.split(",").map(s=>s.trim()).filter(Boolean), theme: theme.split(",").map(s=>s.trim()).filter(Boolean), }); return ( <Section title="Topic Sheet" right={Update}> 
+Loglines <textarea className="w-full border rounded p-2" rows={4} value={loglines} onChange={e=>setLL(e.target.value)}/> 
+Motifs (comma‑sep) <input className="w-full border rounded p-2" value={motifs} onChange={e=>setMotifs(e.target.value)} /> 
+Theme (comma‑sep) <input className="w-full border rounded p-2" value={theme} onChange={e=>setTheme(e.target.value)} /> 
+{(["bleak","hopeful","quiet","stylized"] as (keyof Tone)[]).map(k=> ( 
+{k} <input type="range" min={0} max={1} step={0.01} value={topic.tone[k]} onChange={e=>setTopic({...topic, tone:{...topic.tone, [k]: parseFloat(e.target.value)}})} className="w-full"/> 
+))} 
+); } 
+function DatumPanel({datum, setDatum}:{datum: Datum; setDatum: (d:Datum)=>void}){ const addChar = () => setDatum({...datum, characters:[...datum.characters, {id:CHAR_${datum.characters.length+1}}]}); const addLoc = () => setDatum({...datum, locations:[...datum.locations, {id:LOC_${datum.locations.length+1}, int:true, ext:false, day:true, night:false, cluster:"A"}]}); const addProp = () => setDatum({...datum, props:[...datum.props, {id:PROP_${datum.props.length+1}}]}); return ( 
+Characters
++ Add
+{datum.characters.map((c, i)=> ( 
+<input className="border rounded p-1 flex-1" value={c.id} onChange={e=>{ const cs=[...datum.characters]; cs[i] = {...c, id:e.target.value}; setDatum({...datum, characters: cs}); }} /> 
+))} 
+Locations
++ Add
+{datum.locations.map((L, i)=> ( 
+<input className="border rounded p-1 col-span-2" value={L.id} onChange={e=>{ const ls=[...datum.locations]; ls[i] = {...L, id:e.target.value}; setDatum({...datum, locations: ls}); }}/> <input type="checkbox" checked={L.int} onChange={e=>{ const ls=[...datum.locations]; ls[i] = {...L, int:e.target.checked}; setDatum({...datum, locations: ls}); }}/> INT <input type="checkbox" checked={L.ext} onChange={e=>{ const ls=[...datum.locations]; ls[i] = {...L, ext:e.target.checked}; setDatum({...datum, locations: ls}); }}/> EXT <select className="border rounded p-1" value={L.cluster} onChange={e=>{ const ls=[...datum.locations]; ls[i] = {...L, cluster:e.target.value}; setDatum({...datum, locations: ls}); }}> {"ABC".split("").map(k=> 
+{k})} <input type="checkbox" checked={L.day} onChange={e=>{ const ls=[...datum.locations]; ls[i] = {...L, day:e.target.checked}; setDatum({...datum, locations: ls}); }}/> DAY <input type="checkbox" checked={L.night} onChange={e=>{ const ls=[...datum.locations]; ls[i] = {...L, night:e.target.checked}; setDatum({...datum, locations: ls}); }}/> NIGHT ))} 
+Props
++ Add
+{datum.props.map((p,i)=> ( 
+<input className="border rounded p-1 flex-1" value={p.id} onChange={e=>{ const ps=[...datum.props]; ps[i] = {...p, id:e.target.value}; setDatum({...datum, props: ps}); }} /> 
+))} 
+); }
+function PossibilityCard({c}:{c: Candidate}){ return ( 
+{c.id}
+{c.intExt} / {c.when}
+{c.slugline}
+{c.synopsis}
+{[...c.characters].map(x=> )} {c.props.map(x=> )} {c.motifs.map(x=> <Chip key={x} label={• ${x}} />)} 
+{c.warnings.length>0 && ( 
+{c.warnings.join(" • ")} 
+)} 
+); } 
+function download(text: string, filename: string) { const blob = new Blob([text], {type: "application/json"}); const url = URL.createObjectURL(blob); const a = document.createElement("a"); a.href = url; a.download = filename; a.click(); URL.revokeObjectURL(url); }
+function PackageBar({selected}:{selected: Candidate[]}){ const exportPack = () => { // For MVP, export a single JSON with all scenes + embedded Fountain strings. const pack = { metadata: { created: new Date().toISOString(), count: selected.length, hashHint: Math.random().toString(36).slice(2,10) }, scenes: selected.map(s=> ({ id: s.id, slugline: s.slugline, synopsis: s.synopsis, characters: s.characters, location: s.location, when: s.when, intExt: s.intExt, props: s.props, stunts: s.stunts, motifs: s.motifs, scores: { r_story: s.r_story, r_schedule: s.r_schedule, novelty: s.novelty }, fountain: s.fountain })) }; download(JSON.stringify(pack, null, 2), possibility_pack_${Date.now()}.json); }; return ( 
+Selected: {selected.length} scenes
+Export Package (JSON) 
+); } 
+export default function StudioForgeMVP(){ const [topic, setTopic] = useState(defaultTopic); const [datum, setDatum] = useState(defaultDatum); const [count, setCount] = useState(120); const [keep, setKeep] = useState(24); const [candidates, setCandidates] = useState<Candidate[]>([]); const [selected, setSelected] = useState<Candidate[]>([]);
+const generated = useMemo(()=> candidates.length ? candidates : enumerateCandidates(topic, datum, count), [candidates, topic, datum, count]); const picks = useMemo(()=> selectDiverse(generated, keep), [generated, keep]);
+return ( 
+StudioForge — Possibility Engine (MVP)
+Generate <input type="number" className="w-16 border rounded p-1 mx-1" value={count} min={24} max={500} onChange={e=>setCount(parseInt(e.target.value||"120"))}/> candidates; keep <input type="number" className="w-16 border rounded p-1 ml-1" value={keep} min={6} max={72} onChange={e=>setKeep(parseInt(e.target.value||"24"))}/> 
+<button onClick={()=>{ setCandidates(enumerateCandidates(topic, datum, count)); setSelected([]); }} className="px-3 py-2 rounded-xl bg-gray-900 text-white text-sm">Generate 
+<div className="grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className="space-y-6 lg:col-span-1"> <TopicPanel topic={topic} setTopic={setTopic} /> <DatumPanel datum={datum} setDatum={setDatum} /> </div> <div className="lg:col-span-2 space-y-6"> <Section title="Possibilities"> {picks.length === 0 ? ( <div className="text-sm text-gray-500">No candidates yet. Click <em>Generate</em> to enumerate and select a diverse set.</div> ) : ( <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"> {picks.map(c => ( <div key={c.id} onClick={()=> setSelected(sel=> sel.find(x=>x.id===c.id) ? sel.filter(x=>x.id!==c.id) : [...sel, c])} className={`cursor-pointer ${selected.find(x=>x.id===c.id) ? "ring-2 ring-emerald-400" : ""}`}> <PossibilityCard c={c} /> </div> ))} </div> )} </Section> </div> </div> {selected.length>0 && <PackageBar selected={selected} />} <div className="text-xs text-gray-400 pt-6"> <p>Scoring is illustrative. In the full system: r_story/r_schedule are computed via CQE lattices, parity checks, and a hybrid comparator. This MVP focuses on UX and artifact flow.</p> </div> </div> </div> 
+); }

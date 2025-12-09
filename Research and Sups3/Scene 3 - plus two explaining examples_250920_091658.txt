@@ -1,0 +1,233 @@
+Section 3 — The tiny hinges (n=1→2, n=2→3) and the first real hinge (n=4→5)
+“Small alphabets teach the rules: pairs create lanes, triples create quads, five forces the octad.”
+(Same teacher/student scene; paper-first, no mystery moves.)
+Scene 0 — Why bother with the baby cases?
+Teacher (T): You already know the headline: n=5 forces 8 gates. But you’ll trust it more once you feel how the smaller steps behave.
+Student (S): We start at n=1→2→3?
+T: Yes. Each step adds one symbol to a lawful covering and shows a new structural obligation:
+• n=1→2: a pair creates mirror lanes (left↔right) and parity bookkeeping.
+• n=2→3: a third symbol creates a quad of insertion contexts (four slots) yet stays linear to solve.
+• n=4→5: the first non-linear explosion—exactly eight inequivalent insertions (your octad).
+We’ll do them by hand on paper. No code, just finite checks.
+Scene 1 — Baseline: n=1 (one symbol, one rest)
+Object: Alphabet {A}.
+Goal: A covering string that contains every permutation of {A} as contiguous factors (trivial).
+Construction: A.
+Mirror: reverse(A) = A.
+Idempotence: canonicalize( A ) = A.
+Receipts (mini 4-bit): b1=mirror✓, b2=guards✓, b3=Δ-lift not needed, b4=strict fixed → 1111.
+S: Nothing to do.
+T: Right—this is your palindromic rest of size 1. Keep it pinned: we add one symbol at a time.
+Scene 2 — Tiny hinge: n=1 → n=2 (pairs create lanes)
+Object: Extend {A} to {A,B}. We need a string whose length is minimal and that contains AB and BA as contiguous factors.
+By hand (draw it):
+Start from A. To include AB and BA in one pass, you must share overlap. The shortest is
+A B A (length 3).
+Check: contains AB (positions 1–2) and BA (2–3).
+What appeared that wasn’t here before?
+• A two-lane mirror: left/right positions become meaningful—A mirrors A, B sits on the hinge.
+• A parity ledger: there are now two distinct orderings. You must account for both to be complete.
+Why it’s a hinge (even if tiny):
+You cannot lawfully extend A to cover both permutations with fewer than 3 characters; and the solution forces a palindrome (ABA). The lanes (left/right) are born here.
+Mini 4-bit on the tile: 1111 (mirror holds, guards hold, no Δ needed, strict locked).
+Takeaway 1: Pairs create lanes. From n=2 on, your mirror sheet becomes a real artifact (two lanes that must agree).
+Scene 3 — Quiet escalation: n=2 → n=3 (triples create quads, still linear)
+Object: Extend {A,B} to {A,B,C}. We must cover all 6 permutations as substrings with a minimal string.
+Known minimal superpermutation (and it’s palindromic):
+A B C A B A C B A (length 9)
+Read it backwards—same string. Check any list of 6 substrings of length 3—you’ll find all permutations.
+Do it by hand from n=2 rest (ABA):
+Mark the four legal insertion slots relative to the palindromic spine:
+_ A _ B _ A _ (underscores are slots) S1 S2 S3 S4 
+• S1: before the first A
+• S2: between A and B
+• S3: between B and A
+• S4: after the last A
+These are the quad contexts the third symbol C “sees.” Because the spine is palindromic, S1≡S4 by mirror and S2≡S3 by mirror, but you still must pick across the four-slot geometry to avoid dead ends. A lawful greedy path exists that yields the 9-length palindrome above.
+Why this is still “linear”:
+• Every insertion choice you make can be repaired by a single local move (Δ-lift) without forking; the Eulerian path through the permutation-overlap graph is unique up to symmetry.
+• No new gate classes are forced beyond the quad of slots; the quad collapses under symmetry during canonicalization.
+Viewer reading (how you’d see it on the page):
+• Local 8×8: only the order-swap column (C5) flickers amber when you choose the “wrong” slot; a one-move Δ (“slide C across a mirrored pair”) fixes it.
+• Parity 2×2×2×2 core: all greens after the slide; strict can ratchet.
+• Receipts per tile remain 1111 post-fix.
+Takeaway 2: Triples create quads. You now have four structural slots around a palindromic pair; the solve is still a single chain with local repairs—no octad yet.
+Scene 4 — The first real hinge (recap): n=4 → n=5 (octad forced)
+You’ve seen this spine already; here’s the crisp restatement:
+• At n=4, all lawful coverings collapse to a single palindromic rest on a 4×4 parity grid (up to rigid pose).
+• Trying to add a fifth symbol into a saturated 4×4 rest reveals exactly eight inequivalent, locally minimal insertion classes once parity + mirror are honored: 
+• 4 axis fixed-points (vertical/horizontal + their diagonal mirrors)
+• 4 anti-fixed (off-axis) positions that are no longer conjugate under parity
+• One of the eight re-canonicalizes to a global palindrome; the other seven stabilize as invariant non-palindromes.
+• That octad is the minimal gate set that every downstream construction rides on (E8 at n=8, Leech legality at n=24, two-slice codec at n=32).
+Takeaway 3: Five forces eight. This is the first non-linear hinge: you no longer collapse back to fewer gates under symmetry.
+Scene 5 — Paper drills (you can do them tonight)
+Drill A — n=1→2 (3 minutes):
+Write A, extend to ABA. Mark left/right lanes. Check both permutations appear. Stamp 1111.
+Drill B — n=2→3 (7–10 minutes):
+Start ABA. Draw slots S1–S4. Insert C at S2, then perform one slide (Δ) if needed to land ABCABACBA.
+• Viewer note: One amber at C5 (order-swap) cools after the slide.
+• Receipt: OPE↓, FCE↓, strict ×0.8, commit 1111.
+Drill C — n=4→5 (evening exercise):
+Take your 4×4 parity sheet. Attempt inserting 5 in each of 16 cells; run local repairs without >1 Joker. Group by symmetry with parity—your eight classes will surface. Circle the one that recovers a palindrome. Log the other seven as invariant forms.
+Scene 6 — How the tiny hinges show up in your viewers
+• n=1→2: In local 8×8, columns C1–C4 all green instantly; the mirror lane becomes meaningful for the first time (there’s something to compare).
+• n=2→3: In local 8×8, only C5 (order-swap) or C3 (energy/variance) blink amber during a bad slot; a single Δ clears it. In the parity core 2×2×2×2, you’ll see a clean quad pattern (pairs of equivalent tiles).
+• n=4→5: In the parity core, eight distinct red motifs appear in one sweep—the octad—and they don’t collapse under symmetry.
+Scene 7 — Why this matters for CQE discipline
+• You don’t assume structure; you discover it.
+Pairs → lanes; triples → quads; fives → octad. The viewer shows when collapse stops.
+• Δ-lift cookbook stays local until n=5.
+Before five, one Δ move repairs; after five, you must choose among 8 lawful gates (where the cookbook becomes a menu).
+• Strict ratchet is safe early.
+For n≤3 you can tighten aggressively; by n=5 you ratchet only after an octad page is clean.
+Scene 8 — Minimal lemmas (hand-checkable)
+• Lemma A (n=2 palindrome): Any lawful 2-symbol covering with both permutations present and minimal length canonicalizes to ABA up to renaming and pose.
+• Lemma B (n=3 quad): From the ABA rest, the set of single-C insertions partitions into four slot types; under mirror, these reduce to two equivalence classes, and a unique (up to symmetry) linear extension exists to the length-9 palindrome.
+• Lemma C (n=5 octad): From a saturated 4×4 parity rest, 5-insertions that (i) keep determinism, (ii) allow ≤1 local repair, and (iii) end idempotently, form exactly eight non-conjugate classes under dihedral×parity.
+Scene 9 — What it looks like when you “feel” the hinges
+S (inner voice while sketching):
+With A I have a point. With ABA I now see lanes. Adding C I get a tidy four-slot dance—one slide and the string settles back into a palindrome. When I step to five, the page refuses to fold back to fewer choices—eight distinct lights stay put. That’s the first time the paper tells me, “You have to run the octet.”
+T (quiet):
+Good. You’ve earned the octet, not assumed it.
+Section-3 Checklist (you pass if…)
+• [ ] You produced ABA from A, and labeled the mirror lanes.
+• [ ] You extended to ABCABACBA from ABA using the four slots, performing at most one Δ slide, and logged 1111.
+• [ ] On your parity sheet, you can explain why four slots exist at n=3 (and why they collapse).
+• [ ] You can state, without peeking, the reason n=5 cannot collapse (eight inequivalent classes persist under parity).
+• [ ] Your viewer notes: which local columns blink at n=3 (and why), and what clears them.
+Next up
+• Section 4 — The n=5 octad in slow motion. We’ll enumerate the eight insertion classes on paper, show the 1 palindromic + 7 invariant split, and braid them on the parity loom so you see the same octad in geometry and viewers.
+
+Section 4 — The baby solves (n=1→4), why parity shows up immediately, and why n=5 is the last new expansion
+Tagline: Pairs create lanes → triples create quads → fours saturate the 4×4 → five forces the octad. After that, every “bigger” case is just the same machine repeating.
+A tiny viewer legend (same kit as before)
+• Mirror lanes: left/right (palindromic check).
+• Quad slots: the four insertion contexts around a palindromic pair.
+• 4×4 parity grid: the “board” that gets saturated at n=4.
+• Octad gates (8): the only new gate family—first appears at n=5.
+I’ll teach; you do each by hand on paper next to me. Same single observer token A carried through all steps so you feel continuity.
+Demo 0 — n=1 (seed & silent parity)
+Alphabet: {A}
+Covering: A (trivial).
+Mirror: A ←→ A (palindromic by default).
+What we already learn: Even with one symbol, the mirror lane exists (it’s just degenerate). Keep that thought—parity is not something we “turn on” later; it’s there from move one.
+Receipt 4-bit: 1111
+Demo 1 — n=1→2 (the first step forces parity lanes)
+Alphabet: {A,B}
+Goal: contain AB and BA as contiguous factors.
+Shortest lawful covering: A B A (length 3).
+Why this already forces parity:
+Write ABA and fold the page:
+A B A ^ ^ 
+• The end As are mirror mates.
+• Left/right lanes are now meaningful; you literally cannot cover both permutations without a palindromic hinge.
+Slogan: Pairs create lanes.
+Viewer notes: Mirror ✓, no defects; strict can ratchet.
+Receipt: 1111
+Demo 2 — n=2→3 (triples create quads, and they’re already “prepping space for four”)
+Alphabet: {A,B,C}
+Start from the palindromic pair: A B A
+Mark the four insertion slots around the ABA spine:
+_ A _ B _ A _ S1 S2 S3 S4 
+• By mirror: S1 ≡ S4, S2 ≡ S3.
+• Insert C so all six 3-permutations appear. One lawful path (with at most one slide Δ) yields the canonical palindrome:
+A B C A B A C B A 
+Why this is “prepping space for four”:
+Those four slots are not a quirk; they’re the first appearance of the 2×2 structure you’ll need to tile the 4×4 parity grid at n=4. In other words, n=3 already projects a quad that n=4 will fill.
+Slogan: Triples create quads. (And those quads are the scaffolding for the 4×4.)
+Viewer notes: You may see a single amber (order-swap) during a clumsy insert; one Δ slide clears it; mirror re-locks; strict tightens.
+Receipt: 1111
+Demo 3 — n=3→4 (fours saturate the 4×4 parity grid)
+Alphabet: {A,B,C,D}
+Start state conceptually: your n=3 palindrome lays quad tiles around the ABA hinge.
+What n=4 does: it doesn’t introduce a new kind of slot; it fills the available 4×4 parity grid those quads implied. Think of it like snapping the last pieces into a jigsaw that already had the frame:
+• The lanes (from n=2) and the quad (from n=3) now multiply: 2 (lanes) × 2 (quad rows) × 2 (quad columns) × 2 (mirror depth) → a 4×4 palette of lawful overlaps.
+• Under CQE’s mirror/Δ rules, all legal n=4 coverings canonicalize to a single palindromic rest (up to pose/color). That’s the saturated 4×4 you’ve heard us cite.
+Slogan: Fours saturate the board. No new gate family appears at n=4; you just fully occupy the space the n=3 quads foretold.
+Viewer notes: The board goes quiet—no persistent ambers; all quads close; mirror lanes lock.
+Receipt: 1111
+The hinge — n=4→5 (why five “only needs” the octet, and why that’s the last new space)
+What changes at five: You try to insert a fifth symbol into a finished 4×4. The board is saturated—no room to “just tuck it in” without opening new gate structure.
+What the board tells you (not a guess, a hand-check):
+• Enumerate all 16 geometric positions and enforce CQE constraints (determinism, ≤1 local repair, idempotent end-state, mirror/parity honored).
+• They partition into exactly 8 inequivalent insertion classes once parity is accounted: 
+• 4 axis fixed-points (vertical/horizontal axes and their diagonal mirrors),
+• 4 anti-fixed off-axis positions that cease being conjugate under parity.
+One of the eight recovers a global palindrome; the other seven freeze as non-palindromic invariants. That 8 is not assumed—it is forced by the attempt to extend a finished 4×4 without violating the rules.
+Slogan: Five forces eight. (This is the only genuinely new expansion step.)
+And why this is the last unique expansion:
+• The “newness” here is the appearance of the octad gate family.
+• For n ≥ 6, every further symbol faces the same octad menu: you don’t get “more than eight” fundamental gates; you get octad repeats mapped by symmetry (automorphisms).
+• In lattice language: this is the step where the board’s local symmetry reaches the E8-friendly cardinality; higher n just permutes or stitches octad choices—no new gate cardinalities are born.
+Viewer notes: At n=5 you’ll see eight stable red islands (before repairs) that do not collapse under mirror. After you pick one gate and clean locally, the page settles—but the other seven remain as equally lawful alternatives.
+Receipt: 1 palindromic class logs 1111; the 7 invariants log 1101 or 1110 depending on your strict ratchet plan (both acceptable in a provisional pass).
+One-page intuition map
+n=1 point → silent mirror proto-lane n=2 pairs → explicit mirror lanes (ABA) n=3 triples → four slots (quad) around the hinge; *preps* the 4×4 n=4 fours → saturate the 4×4 parity grid; one palindromic rest (up to pose) n=5 five → cannot fit unless opening *exactly eight* inequivalent gates (octad) n≥6 repeats → same octad menu; no larger fundamental gate family appears 
+What the student sees on paper (quick scenes)
+n=1→2:
+“Why is ABA forced? Because if I don’t mirror it, I lose BA. So parity isn’t optional; it’s born here.”
+n=2→3:
+“I mark S1–S4, drop C into S2, do one slide, the nine-letter palindrome appears. Huh—those four slots feel like a 2×2 tiling. That’s the skeleton of a 4×4.”
+n=3→4:
+“I’m not inventing new moves; I’m finishing the tiling. The board goes quiet; there’s a single clean rest. It feels saturated.”
+n=4→5:
+“I try to sneak E in. The page pops eight distinct red shapes that won’t fold into fewer. I pick one gate, fix locally, record the rest as alternative lawful classes. Oh. That’s why we need an octet viewer.”
+Why this framing is practical (not just pretty)
+• It tells you when to expand your viewer:
+• Up to n=4: lanes + quads suffice.
+• At n=5: install the octet panel—you’ll need it forever after.
+• It tells you when to grow the geometry:
+• The octad is the first moment an E8 embedding feels “native”; later steps can use the same gates with different meaning packs (your sidecars).
+• It keeps your strict ratchet sane:
+• Aggressive tightening n≤3, careful at n=4, octad-aware tightening at n≥5.
+Your 20-minute drill (to make this muscle memory)
+• Write A, ABA, ABCABACBA from scratch. Mark lanes and S1–S4.
+• Sketch a 4×4 grid; label which tiles your n=3 quad would grow into. Put a ✔️ in each tile as you “mentally place” D.
+• Take a 4×4 with A,B,C,D and, on tracing paper, attempt sixteen E insertions. Circle the eight that survive canon+mirror in ≤1 Δ. Star the one that re-palindromes.
+• Write one-liners for all eight classes (your octad legend). You’ll use this legend for every larger problem.
+Do that once, and the rest of CQE’s big claims will feel obvious: the board told you when parity mattered, when quads appeared, when the grid saturated, and when eight gates were unavoidable—and why nothing truly new happens after that.
+
+Section 4 — Baby solves & the hinge (n=1→5)
+What you’ll learn
+• Why parity lanes appear at n=2
+• How quad slots appear at n=3 and pre-frame the 4×4
+• How n=4 saturates the 4×4 parity grid (one pal rest)
+• Why n=5 forces an octad (the only new gate family)
+Instructor view (crisp)
+• n=1: trivial point; mirror exists but degenerate.
+• n=2: to contain AB and BA, you must hinge on a palindrome (ABA). Parity lanes are now real.
+• n=3: the palindrome creates four mirrored insertion slots (a quad) around the hinge; this is the scaffold of the 4×4.
+• n=4: you fill the scaffold; canonicalization yields a single palindromic rest (pose/color aside).
+• n=5: attempting to extend a finished 4×4 yields exactly 8 lawful insertion classes under mirror/parity; one re-palindromes, seven are stable non-palindromic invariants.
+Student view (do it on paper)
+• n=1 → 2: write A, then A B A. Fold the line: end-As mirror. Note: both AB and BA now exist only because of the mirror hinge.
+• n=2 → 3: mark four slots around ABA: _ A _ B _ A _ (S1..S4 with S1≡S4, S2≡S3). Insert C, allow one local slide if needed: reach the 9-char palindrome ABCABACBA.
+• n=3 → 4: imagine the 4×4 parity grid the quad implies; place D by filling tiles—no new gate type appears. Canonicalize to the pal rest.
+• n=4 → 5: on tracing paper, try all 16 placements for E; keep those that (i) keep determinism, (ii) need ≤1 local Δ-repair, (iii) end idempotently under mirror. You’ll retain 8 inequivalent classes (parity-aware). Star the single palindromic one.
+Board sketch (you trace this)
+n=2: A B A (lanes born) n=3: _ A _ B _ A _ S1 S2 S3 S4 (quad scaffold) n=4: 4×4 parity grid filled → one pal rest n=5: ◻︎×16 probes → 8 inequivalent gates (octad) {4 axis fixed-points + 4 off-axis classes} 
+Micro-lab (15 min)
+• Build A, ABA, ABCABACBA. Mark lanes & S1–S4.
+• Sketch a 4×4; tick tiles as you “place” D.
+• Run the 16 E insertions; circle the 8 survivors; star the re-palindromic class.
+• Name your octad: G1…G8 with one-line cues (e.g., “axis-V”, “axis-H”, “diag-I”, “diag-II”, “off-1..4”).
+Ledger (what to record)
+• DNA-10: timing/pose/units for your hand run.
+• Octet map: labels G1..G8.
+• Mirror/Δ: note any single local repair allowed.
+• Receipts (4-bit): 
+• n=1–4 pal runs: 1111
+• n=5 pal class: 1111
+• n=5 invariant classes: 1101 (or 1110) under your strict plan
+Common pitfalls
+• Treating n=3 as “free insert” (ignoring the mirrored S1..S4).
+• Expecting a new gate at n=4 (it’s just saturation).
+• Missing that parity breaks some D8 symmetries at n=5, leaving 8 (not 4 or 16).
+Takeaways
+• Pairs create lanes (n=2), triples create quads (n=3), fours saturate (n=4).
+• Five forces eight: the only genuinely new gate family (octad).
+• For n≥6, you reuse the same octad—no new cardinalities appear; only permutations/meaning packs change.
+Homework (light)
+A) Repeat with alphabet {1,2,3,4,5}; produce your octad legend and 4-bit receipts.
+B) Rotate/reflect your n=5 classes; verify they stay within the octad orbit (labels permute, set stable).

@@ -1,0 +1,5 @@
+LFAI — NOTICE
+
+This repository is released under the **LFAI Restricted License (Personal Permission Required) v1.0**.
+Use is prohibited unless a signed Permission Notice is granted by the Licensor.
+See LICENSE.txt and PERMISSION_NOTICE_TEMPLATE.md.

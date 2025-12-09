@@ -1,0 +1,71 @@
+Text file: ORGANIZATION_REPORT.txt
+Latest content with line numbers:
+1	STAGE 2: CONTENT ORGANIZATION REPORT
+2	================================================================================
+3	
+4	ORGANIZATION STATISTICS
+5	--------------------------------------------------------------------------------
+6	Total files processed: 12128
+7	Files skipped: 12769
+8	Duplicates found: 0
+9	
+10	FILES BY CATEGORY
+11	--------------------------------------------------------------------------------
+12	other                 4,131 files -> OTHER
+13	python_code           2,920 files -> python
+14	tests                 1,331 files -> TESTS
+15	other_code            1,090 files -> other
+16	markdown_docs           590 files -> markdown
+17	text_docs               513 files -> text
+18	monoliths               491 files -> MONOLITHS
+19	json_data               224 files -> json
+20	pdf_docs                177 files -> pdf
+21	csv_data                164 files -> csv
+22	other_data              148 files -> other
+23	images                  140 files -> images
+24	archives                 73 files -> NESTED_ARCHIVES
+25	javascript               44 files -> javascript
+26	examples                 37 files -> EXAMPLES
+27	config                   36 files -> CONFIG
+28	word_docs                16 files -> word
+29	diagrams                  3 files -> diagrams
+30	
+31	
+32	FILE TYPE DISTRIBUTION
+33	--------------------------------------------------------------------------------
+34	.py              4,777 files      79.8 MB
+35	.rst             1,120 files       9.5 MB
+36	(no extension)     956 files      10.4 MB
+37	.md                592 files       5.9 MB
+38	.c                 549 files      22.2 MB
+39	.txt               516 files      27.5 MB
+40	.h                 440 files       5.5 MB
+41	.pyc               435 files       5.3 MB
+42	.pyi               276 files       1.4 MB
+43	.pdf               177 files     130.7 MB
+44	.json              172 files       3.5 MB
+45	.csv               164 files       5.2 MB
+46	.f                 150 files       1.6 MB
+47	.npz               146 files      21.8 MB
+48	.build             117 files       0.2 MB
+49	.mat               113 files       0.1 MB
+50	.png                94 files      10.1 MB
+51	.yml                91 files       0.2 MB
+52	.pyx                73 files       1.6 MB
+53	.f90                68 files       0.0 MB
+54	.sh                 63 files       0.1 MB
+55	.cpp                63 files       1.4 MB
+56	.src                57 files       1.4 MB
+57	.jsonl              52 files       1.8 MB
+58	.sav                47 files       0.2 MB
+59	.pxd                45 files       0.2 MB
+60	.js                 44 files       4.1 MB
+61	.svg                43 files       2.4 MB
+62	.dat                43 files       1.7 MB
+63	.zip                42 files     239.5 MB
+64	
+65	
+66	DUPLICATE FILES
+67	--------------------------------------------------------------------------------
+68	No duplicates found
+69	
