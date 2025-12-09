@@ -1,0 +1,88 @@
+Doc C — CSV Artifacts & FK Maps (Full Tables + Validator Stubs)
+This chapter enumerates every CSV artifact in the CSV‑first runtime, provides column‑level tables with constraints, a complete foreign‑key (FK) map, and validator stubs. It also includes quick dashboards (as CSV‑only queries/pseudocode), init headers, and a sample ops.yml excerpt. Treat this as the contract your scripts enforce before any write to disk.
+C1. Artifact Index (what exists & why)
+FilePurposePersistenceMASTER_GPT_TRUTH.csvAccepted truths (meaning/embedding) with contracts and consensus fieldsPersisted (Master Triad)MASTER_USER_TRUTH.csvUser assertions/beliefs, alignment flags & adjudicationPersisted (Master Triad)MASTER_DOCUMENT_INTAKE.csvCanonical external chunks (offsets, hash, triad)Persisted (Master Triad)orbit.csvWorking atoms; shells/buckets/octets, PS featuresWorking (Orbit)PROMOTION_CONTRACTS.csvHashable proof bundles for each acceptancePersistedPROMOTION_JOURNAL.csvHuman‑readable decision log (who/when/why/cursor)PersistedLAWS_VALIDATION.csvIRL laws/definitions, tools, validityPersisted (Governance)GREY_EVIDENCE.csvStrong but non‑decisive refsPersisted (Governance)VALID_MULTI_D_BRIDGE_LOG.csvMulti‑hop (≥4) legal bridges and saved stepsPersisted (Governance)GLYPHIC_MASTER_LOG.csvMaster glyph registry, collisions, bridge linksPersisted (Governance)SYSTEM_OPS_GUIDE.csvProcesses, rationales, math refs, examplesPersisted (Governance)TESTBED.csvCandidate cases/datasets to test unclear partsPersisted (Governance)TEST_RESULTS.csv5W+H results linking to artifactsPersisted (Governance)MASTER_DETAIL_SHELL.csvOptional fine‑grain mirrors for Master atomsPersisted (Optional)MGL_REGISTRY.csvReserved Master glyph items (overlap audits)Persisted 
+C2. Column Tables (authoritative)
+Types: str, int, float, bool, json. Constraints: REQ, PK, UQ, FK. Empty string "" denotes null.
+C2.1 MASTER_GPT_TRUTH.csv
+ColumnTypeConstraintsNotesrun_idstrREQDeterministic per runatom_idstrPKUUIDv5 over canonical payloaddoc_idstrREQFK→MASTER_DOCUMENT_INTAKE.doc_idchunk_idstrREQFK→MASTER_DOCUMENT_INTAKE.chunk_idspan_startintRequired when card_type=meaningspan_endintRequired when card_type=meaningcard_typestrREQ{meaning, embedding}primitivestrREQNamed feature/topicmeta_bucketstrREQLocal cluster idparity_setstrREQ{E/O}/{L/R/N}context_idstrREQStable key for contextcontext_labelstrREQControlled vocab (Doc B)truth_valuestrREQ{T,F,U}context_sourcestrREQ{native, uploaded, IRL}context_hashstrREQFK→LAWS_VALIDATION.law_hash when IRLglyph_astrREQCanonical item (1–3 tokens)glyph_bstrREQglyph_cstrREQglyph_idstrUQSHA256(specglyph_spec_versionstrREQe.g., mgl_v1claim_textstrRequired when meaningquote_textstrRequired when meaningembed_space_idstre.g., E8, R^12, ada002embed_dimintembed_encodingstr{float32_csv, sparse_json, b64pack}embed_valuesstrAs per encodingembed_spec_hashstrHash of embedding speclaec_stepsintREQSteps + penalties (Doc A/H)s_accintAccepted stepsr_backintRollbacksb_expintBuffer expansionse_brintBridgesd_dupintDe‑dupestlattice_idstrQuarantine id (outliers)stabilizedboolTrue before promotionbuffer_HcfloatCompressive entropyconstraints_appliedjsonConstraint ids+hashesledger_hashstrREQRolling hashstep_indexintREQWithin windowwindow_idintREQ0..9 within packetpacket_idintREQMonotone per runmaster_statestrREQ{accepted, deprecated}consensus_levelstrREQ{doc, corpus, global}evidence_strengthfloat0..1stability_scorefloat0..1agreement_ratefloat0..1origin_orbit_idsjsonTrace listlast_reviewed_atstrISO‑8601reviewer_idstrpromotion_contract_hashstrREQFK→PROMOTION_CONTRACTS.contract_hash 
+C2.2 MASTER_USER_TRUTH.csv
+Same as GPT_TRUTH plus: user_id:str REQ, alignment:str REQ, alignment_basis:json, challenge_status:str REQ.
+C2.3 MASTER_DOCUMENT_INTAKE.csv
+ColumnTypeConstraintsNotesdoc_idstrPKchunk_idstrPKoffset_startintREQoffset_endintREQtext_hashstrUQ REQtext_excerptstrREQ≤240 charssource_uristror upload_idupload_idstror source_uriingest_timestrREQISO‑8601shellintREQ1..8bucket_idintREQlocal cluster idglyph_triadstrREQaledger_hashstrREQ 
+C2.4 orbit.csv
+ColumnTypeConstraintsNotesrun_idstrREQorbit_idstrPKatom_idstrREQUUIDv5doc_idstrREQchunk_idstrREQspan_startintRequired when meaningspan_endintRequired when meaningcard_typestrREQprimitivestrREQmeta_bucketstrREQparity_setstrREQcontext_idstrREQcontext_labelstrREQtruth_valuestrREQcontext_sourcestrREQcontext_hashstrREQglyph_astrREQglyph_bstrREQglyph_cstrREQglyph_idstrUQUnique within (doc_id, shell) octet gridglyph_spec_versionstrREQlaec_stepsintREQs_accintr_backintb_expinte_brintd_dupinttlattice_idstrstabilizedboolbuffer_Hcfloatconstraints_appliedjsonledger_hashstrREQstep_indexintREQwindow_idintREQpacket_idintREQshellintREQ1..8bucket_idintREQoctet_idintREQ1..64promotion_scorefloat0..1promotion_statusstr{proposed, accepted_to_master, rework, retired}conflict_setjsonlist of atom_idsrecency_rankintprompt‑cursor order 
+C2.5 PROMOTION_CONTRACTS.csv
+ColumnTypeConstraintscontract_idstrPKatom_idstrREQps_valuefloatREQweightsjsonREQtheta_acceptfloatREQbudget_okboolREQevidence_setjsonREQlaw_refsjsonconflict_resolutionjsonwatchers_passedjsonREQenergy_floors_okboolREQwindow_useintREQpacket_idsjsonREQcontract_hashstrUQ REQ 
+C2.6 PROMOTION_JOURNAL.csv
+ColumnTypeConstraintswhenstrREQwhostrREQatom_idstrREQdecisionstrREQcontract_idstrrationalestrcursor_idstr 
+C2.7 LAWS_VALIDATION.csv
+ColumnTypeConstraintslaw_idstrPKtitlestrREQdomainstrREQtextstrREQsource_refstrobservation_toolsjsonvaliditystrREQapplies_tojsonlast_checked_atstrchecker_idstrlaw_hashstrUQ REQ 
+C2.8 GREY_EVIDENCE.csv
+ColumnTypeConstraintsevidence_idstrPKdescriptionstrREQsource_refstrstrengthstrREQrelevance_tagsjsonnotesstr 
+C2.9 VALID_MULTI_D_BRIDGE_LOG.csv
+ColumnTypeConstraintsbridge_idstrPKstart_atom_idstrREQend_atom_idstrREQhop_countintREQ (>=4)pathjsonREQlegalitystrREQsaved_stepsintsaved_windowsintjustificationstrcreated_atstrREQ 
+C2.10 GLYPHIC_MASTER_LOG.csv
+ColumnTypeConstraintsglyph_idstrPKglyph_astrREQglyph_bstrREQglyph_cstrREQspec_versionstrREQscopestrREQcollisionsjsonrelated_bridgesjson 
+C2.11 SYSTEM_OPS_GUIDE.csv
+ColumnTypeConstraintsop_idstrPKprocess_namestrREQrationalestrREQmath_spec_refstrexample_refstrversionstrREQ 
+C2.12 TESTBED.csv / TEST_RESULTS.csv
+As in Doc B; unchanged.
+C2.13 MASTER_DETAIL_SHELL.csv
+As in Doc B; unchanged.
+C2.14 MGL_REGISTRY.csv
+As in Doc B; unchanged.
+C3. Foreign‑Key Map (complete)
+Primary relations
+• MASTER_GPT_TRUTH.(doc_id,chunk_id) → MASTER_DOCUMENT_INTAKE.(doc_id,chunk_id)
+• MASTER_GPT_TRUTH.context_hash → LAWS_VALIDATION.law_hash (when IRL)
+• MASTER_GPT_TRUTH.promotion_contract_hash → PROMOTION_CONTRACTS.contract_hash
+• MASTER_USER_TRUTH.(doc_id,chunk_id) → MASTER_DOCUMENT_INTAKE
+• PROMOTION_CONTRACTS.atom_id → orbit.atom_id (or Master atom for re‑contracts)
+• VALID_MULTI_D_BRIDGE_LOG.(start_atom_id,end_atom_id) → {orbit, MASTER_GPT_TRUTH}.atom_id
+• MASTER_DETAIL_SHELL.master_atom_id → MASTER_GPT_TRUTH.atom_id
+• PROMOTION_JOURNAL.contract_id → PROMOTION_CONTRACTS.contract_id
+Integrity rules
+• Meaning cards require span_start/end and valid quote overlap with the intake chunk by text_hash.
+• Octet uniqueness: For each (doc_id, shell), COUNT(DISTINCT glyph_id)=64 before promotion evaluation.
+C4. Validator Stubs (deterministic; refuse on fail)
+C4.1 Schema & Types
+class SchemaValidator: def enforce(self, df, schema): # exact columns, order optional; reject extras missing = set(schema.cols) - set(df.columns) extras = set(df.columns) - set(schema.cols) assert not missing and not extras, (missing, extras) # types & enums for col, spec in schema.types.items(): assert spec.validate(df[col]), col 
+C4.2 Foreign Keys
+class FKValidator: def link(self, left_df, right_df, left_cols, right_cols): key = tuple(left_df[c] for c in left_cols) ref = tuple(right_df[c] for c in right_cols) missing = key_not_in_ref(key, ref) assert not missing, missing 
+C4.3 Glyph Bijection & Canon
+def canonicalize_item(s): toks = tokenize_nfc(s) return " ".join(sorted(toks)) def glyph_id(a,b,c,spec='mgl_v1'): return sha256(f"{spec}|{a}|{b}|{c}") class GlyphValidator: def check(self, row, specmap): a = canonicalize_item(row.glyph_a) b = canonicalize_item(row.glyph_b) c = canonicalize_item(row.glyph_c) assert row.glyph_id == glyph_id(a,b,c,row.glyph_spec_version) headers = specmap.decode(a,b,c) assert headers == (row.shell,row.bucket_id,row.octet_id,row.parity_set,row.doc_id,row.chunk_id) 
+C4.4 Parity Audit & Octet Legality
+class ParityAudit: def check(self, row): assert row.parity_set in {"E/L","E/R","E/N","O/L","O/R","O/N"} class OctetLegality: def check64(self, orbit): for g in orbit.groupby(["doc_id","shell"]): assert g["glyph_id"].nunique() == 64 
+C4.5 Evidence Grounding & Laws
+class EvidenceValidator: def check_quote(self, row, intake): chunk = lookup(intake, row.doc_id, row.chunk_id) assert chunk.offset_start <= row.span_start < row.span_end <= chunk.offset_end # optional: substring overlap by text_hash class LawsValidator: def check_irl(self, row, laws): if row.context_source == "IRL" and row.truth_value == "T": assert row.context_hash in set(laws.law_hash) 
+C4.6 Ledger & Merkle
+class Ledger: def recompute(self, rows): h = ZERO for r in ordered(rows): h = sha256(h + r.glyph_id + r.atom_id + str(r.step_index)) assert h == r.ledger_hash 
+C4.7 Budget (LAEC → windows)
+class Budget: def enforce(self, orbit, windows_per_run): orbit["windows_needed"] = np.ceil(orbit.laec_steps/32).astype(int) used = orbit[orbit.promotion_status=="proposed"]["windows_needed"].sum() return used <= windows_per_run 
+C4.8 Promotion Contracts
+class ContractValidator: def check(self, contract, orbit, laws): assert contract.ps_value >= contract.theta_accept assert contract.budget_ok is True assert all(a in set(orbit.atom_id) for a in contract.evidence_set) if contract.law_refs: assert all(l in set(laws.law_id) for l in contract.law_refs) # hash assert contract.contract_hash == sha256(json.dumps(contract,sort_keys=True)) 
+C5. Dashboards (CSV‑only queries)
+C5.1 A/B Scoreboard (per task)
+• Faithfulness (f): COUNT(claims_with_quote)/COUNT(claims) from Master/Orbit.
+• Coverage (v): top‑k primitives in intake vs claims present.
+• Traceability (τ): % rows with (glyph_id, shell, bucket, span).
+• Stability (σ): 1 − normalized (parity fails + octet unclean + contradictions).
+• Cost (k): normalized (chars + α·#cards); LAEC (ℓ): 1 − min(1, LAEC/Lmax).
+Pandas sketch:
+f = (cards.quote_text.ne("").mean()) 
+C5.2 Watchers
+• Symmetry: count of glyphs mirrored w.r.t. spec map.
+• 5→8 Coverage: shells present per doc.
+• Regression: diffs of PS and evidence_strength vs previous run.
+C6. Init Headers (empty files)
+# MASTER_GPT_TRUTH.csv (header only) run_id,atom_id,doc_id,chunk_id,span_start,span_end,card_type,primitive,meta_bucket,parity_set,context_id,context_label,truth_value,context_source,context_hash,glyph_a,glyph_b,glyph_c,glyph_id,glyph_spec_version,claim_text,quote_text,embed_space_id,embed_dim,embed_encoding,embed_values,embed_spec_hash,laec_steps,s_acc,r_back,b_exp,e_br,d_dup,tlattice_id,stabilized,buffer_Hc,constraints_applied,ledger_hash,step_index,window_id,packet_id,master_state,consensus_level,evidence_strength,stability_score,agreement_rate,origin_orbit_ids,last_reviewed_at,reviewer_id,promotion_contract_hash 
+(Repeat for each file; see C2 tables.)
+C7. Sample ops.yml Excerpt
+master: require_promotion_contract: true mgl: { enforce: true, overlap_audit: strict } promotion: theta_accept: 0.65 theta_retire: 0.35 ps_weights: { evidence: 0.25, stability: 0.20, consistency: 0.15, recency: 0.10, human: 0.10, agreement: 0.10, cost: 0.10 } budget: windows_per_run: 40 enforce: true governance_pack: buffer_gate: { entropy_floor_eps: 0.0, require_constraints: true } watchers: { symmetry: true, five_to_eight: true, regression: true } validators: schema_strict: true foreign_keys_strict: true 
+C8. Orchestrator Skeleton (CSV‑only)
+# mac_orbit_master.py (skeleton) load_ops() intake = read_csv("MASTER_DOCUMENT_INTAKE.csv") orbit = build_orbit_atoms(intake) validate_orbit(orbit) # schema, glyph, parity, octet orbit = run_rag_align(orbit,intake) features = run_alt_and_geometry(orbit) contracts = compute_ps_and_contracts(orbit, features, laws) append_master(contracts, orbit) # writes MASTER_* and JOURNAL update_ledgers_and_merkle() emit_dashboards() 
+C9. Change Control
+• Manifest: manifest.json with file SHA256s, schema versions, ops.yml hash, and run_id.
+• Changelog: CHANGELOG.md per run with highlights, incidents, and parameter diffs.
+End Doc C. The tables, FK map, validators, and init headers enable immediate implementation without ambiguity. Next: Doc D — Legality & Deterministic Acceptance (Acceptance Grammar, Odd/Even Rules, and Contracts).

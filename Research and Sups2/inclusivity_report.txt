@@ -1,0 +1,34 @@
+
+--- RAG Card Content Coverage ---
+WARNING: RAG keyword 'gap' not explicitly found in any white paper.
+WARNING: RAG keyword 'coprime' not explicitly found in any white paper.
+WARNING: RAG keyword 'uniformity' not explicitly found in any white paper.
+WARNING: RAG keyword 'spectrum' not explicitly found in any white paper.
+WARNING: RAG keyword 'vortices' not explicitly found in any white paper.
+WARNING: RAG keyword 'fermions' not explicitly found in any white paper.
+WARNING: RAG keyword 'gaps' not explicitly found in any white paper.
+WARNING: RAG keyword 'tunneling' not explicitly found in any white paper.
+WARNING: RAG keyword 'cdws' not explicitly found in any white paper.
+WARNING: RAG keyword 'gauge' not explicitly found in any white paper.
+WARNING: RAG keyword 'spacetime' not explicitly found in any white paper.
+WARNING: RAG keyword 'cantor' not explicitly found in any white paper.
+WARNING: RAG keyword 'lisi' not explicitly found in any white paper.
+WARNING: RAG keyword 'vortex' not explicitly found in any white paper.
+WARNING: RAG keyword 'cdw' not explicitly found in any white paper.
+WARNING: RAG keyword 'depinning' not explicitly found in any white paper.
+WARNING: RAG keyword 'creep' not explicitly found in any white paper.
+WARNING: RAG keyword 'gravity' not explicitly found in any white paper.
+WARNING: RAG keyword 'dry' not explicitly found in any white paper.
+WARNING: RAG keyword 'generations' not explicitly found in any white paper.
+WARNING: RAG keyword 'CRT' not explicitly found in any white paper.
+
+--- Log Content Coverage ---
+WARNING: Log phrase 'Quadratic Law Harness' not explicitly found in any white paper.
+WARNING: Log phrase 'EMCP' not explicitly found in any white paper.
+WARNING: Log phrase 'TQF' not explicitly found in any white paper.
+WARNING: Log phrase 'builds work' not explicitly found in any white paper.
+WARNING: Log phrase 'unified idea' not explicitly found in any white paper.
+WARNING: Log phrase 'Chinese Remainder Theorem' not explicitly found in any white paper.
+
+--- Consistency Check (Conceptual) ---
+A full consistency check for contradictions or major discrepancies requires advanced semantic analysis and reasoning, which is beyond the scope of simple keyword matching. However, the white papers were generated with an emphasis on internal consistency and alignment with the four proposed laws.

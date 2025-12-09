@@ -1,0 +1,54 @@
+Doc O — End‑to‑End Example Run (Packet 001, Minimal Corpus)
+Purpose: Walk a single packet from raw text to Master promotion using the CSV‑first runtime. This is a realistic dry‑run you can reproduce locally with the repo spec from Doc N. All values are deterministic examples; you can paste the CSV rows as‑is to sanity‑check validators.
+O1. Inputs & Setup
+• Corpus: two tiny text files (example excerpts) 
+• docA.txt: “Locked‑core coils reduce phase jitter in band‑8 lanes.”
+• docB.txt: “Content credentials embed provenance metadata at capture.”
+• ops.yml (key toggles) 
+• seed: 1729, windows_per_run: 4, mgl_overlap_audit: strict, expand_policy: minimal.
+• Packet layout: 10 windows available; we’ll use ≤ 2.
+O2. INTAKE → MASTER_DOCUMENT_INTAKE.csv
+Chunking (P1): single 1‑chunk docs.
+doc_id,chunk_id,offset_start,offset_end,text_hash,text_excerpt,source_uri,ingest_time,shell,bucket_id,glyph_triad,ledger_hash A,0,0,63,sha256:a1..,"Locked‑core coils reduce…",file://docA,2025‑08‑28,5,b42,"Δphase|locked_core|band‑8",h:00… B,0,0,59,sha256:b2..,"Content credentials embed…",file://docB,2025‑08‑28,2,b07,"prov|capture|cred",h:00… 
+Orbit Atom Cards → orbit.csv (abbrev; one meaning card per chunk)
+run_id,orbit_id,atom_id,doc_id,chunk_id,card_type,primitive,meta_bucket,parity_set,glyph_a,glyph_b,glyph_c,glyph_id,shell,bucket_id,octet_id,promotion_score,promotion_status,recency_rank r1,o001,a001,A,0,meaning,locked_core,stability,Odd|L,Δphase,locked_core,band‑8,g:11..,5,b42,12,0.62,proposed,0 r1,o002,a002,B,0,meaning,content_credentials,provenance,Even|R,prov,capture,cred,g:22..,2,b07,05,0.66,proposed,0 
+LAEC counters (window 0): s_acc=2 accepted writes (two cards) → LAEC=2, windows_needed=ceil(2/32)=1 so far.
+O3. ALIGN (RAG) → EVIDENCE_LINKS.csv
+Exact span anchors for both claims.
+run_id,atom_id,doc_id,chunk_id,span_start,span_end,text_hash,quote_excerpt,alignment_method,alignment_score,is_master r1,a001,A,0,0,63,sha256:a1..,"Locked‑core coils reduce phase jitter in band‑8 lanes.",exact_span,1.000,false r1,a002,B,0,0,59,sha256:b2..,"Content credentials embed provenance metadata at capture.",exact_span,1.000,false 
+O4. GEOMETRY & OCTADIC → geometry_cards.csv, octadic_checks.csv
+• Doc A polyline (lanes mapped from glyphs): Band‑8 occupancy 0.78, crossings=0, helicity=+1 → lower curved action 𝒜.
+• Doc B: neutral geometry; clean‑flag still true.
+doc_id,band8,curvature2,div,cross,hull,helicity,writhe,clean A,0.78,190,0.13,0,0.45,1,2,true B,0.55,240,0.18,0,0.40,0,1,true 
+Octadic 2→4→8 splits (clean)
+doc_id,cf2,cf4,cf8,Q2,Q4,Q8,variance,clean A,0.11,0.16,0.21,0.44,0.58,0.70,0.12,true B,0.13,0.18,0.22,0.41,0.55,0.66,0.14,true 
+O5. FUTURES & POLICY (DFSS) → policy_cards.json
+• Futures enumerate: {promote a001}, {promote a002}, {promote both}
+• Scores (normalized): a001=0.74, a002=0.69, both=0.71 → choose {a001, a002} separately (legal and within budget).
+O6. BUFFER (even step) → buffer_events.csv
+Compute compressive entropy on tiles; constraints include IRL‑law presence for provenance claims.
+run_id,window_id,step_index,Hc_in,Hc_out,entropy_ok,constraints_applied,expand_policy,b_exp,accepted r1,0,1,1.82,1.85,true,"[LAWS: none for A]",minimal,0,true r1,0,2,1.85,1.88,true,"[LAWS: provenance policy present]",minimal,1,true 
+LAEC adds b_exp=1 → cumulative LAEC=3, still within windows_per_run.
+O7. CONTRACTS → PROMOTION_CONTRACTS.csv
+contract_id,atom_id,ps_value,theta_accept,budget_ok,evidence_set,law_refs,watchers_passed,energy_floors_ok,window_use,packet_ids,contract_hash pc001,a001,0.74,0.60,true,"{ev:a001@A:0..63}","{}",all,true,1,[0],h:c1.. pc002,a002,0.69,0.60,true,"{ev:a002@B:0..59}","{prov‑001}",all,true,1,[0],h:c2.. 
+O8. PROMOTE → MASTER_GPT_TRUTH.csv & PROMOTION_JOURNAL.csv
+Master rows appended with rolling ledger.
+run_id,atom_id,doc_id,chunk_id,card_type,primitive,glyph_id,ledger_hash,window_id,packet_id,master_state,evidence_strength,promotion_contract_hash r1,a001,A,0,meaning,locked_core,g:11..,h:10..,0,0,accepted,0.92,h:c1.. r1,a002,B,0,meaning,content_credentials,g:22..,h:11..,0,0,accepted,0.89,h:c2.. 
+Journal
+run_id,atom_id,cursor_id,action,reason,ts r1,a001,h:pmt..,accept,"PS>=θ; clean; budget ok",2025‑08‑28T10:15:04Z r1,a002,h:pmt..,accept,"PS>=θ; law ref present",2025‑08‑28T10:15:09Z 
+O9. AUDIT → LEDGER_WINDOWS.csv (+ optional Merkle)
+run_id,packet_id,window_id,first_ledger_hash,last_ledger_hash,row_count r1,0,0,h:00..,h:11..,6 
+Packet audit recomputes the chain and passes. (Merkle optional.)
+O10. LAEC & Budget Recap
+• Counters across window 0: s_acc=6 (two intake rows + two evidence + two master appends), b_exp=1 → LAEC=7.
+• windows_needed=ceil(7/32)=1 (budget ≤ 4 windows) → green.
+O11. Outputs Snapshot
+• Master now carries two accepted atoms with evidence, contracts, and ledger continuity.
+• Orbit cleared (promotion_status=accepted_to_master for a001/a002) or retired if superseded later.
+• Dashboards (Doc J) show faithfulness f=1.0, traceability τ=1.0, integrity η=1.0 for this packet.
+O12. Reproduce This Run
+• Scaffold repo from Doc N.
+• Place the two example lines into examples/minimal_input.
+• Run make packet.
+• Inspect csv/ outputs; verify hashes with make audit.
+End Doc O — a complete, auditable packet from text to Master, within a single BW‑32 window.

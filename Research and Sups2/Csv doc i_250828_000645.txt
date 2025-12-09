@@ -1,0 +1,123 @@
+Doc I — Evidence, Audit, and Traceability (RAG, Ledgers, Merkle, Provenance)
+Purpose: Make every accepted move reconstructible from CSVs alone. This chapter defines evidence cards, quote ↔ span anchoring, promotion proof bundles, rolling ledgers & optional Merkle checkpoints, audit workflows, incident triage, and the exact validators that enforce faithfulness and traceability across Master and Orbit. All artifacts are CSV‑first; no hidden state.
+I1. Evidence Layer Overview
+• Evidence = RAG grounding + lineage. Every meaning Atom Card must be supported by quotes that map to canonical chunks. Embedding cards inherit lineage from their sibling meaning cards or explicit references.
+• Two planes: 
+• Orbit (working) — provisional evidence, multiple candidate quotes, contradictions permitted and logged.
+• Master (best‑of) — accepted evidence with a PromotionContract and zero unresolved contradictions.
+• Proof bundle: Promotion to Master requires a PromotionContract referencing evidence sets, law refs, watchers, and energy terms.
+Outputs (CSV/JSON):
+• EVIDENCE_LINKS.csv — flattened claim ↔ quote ↔ chunk mapping.
+• evidence_cards.json — structured evidence packs per candidate (Doc F).
+• LEDGER_WINDOWS.csv & (optional) MERKLE_WINDOWS.csv — rolling hashes and Merkle roots.
+• AUDIT_TRAIL.csv — audit actions and outcomes.
+• CONTRADICTIONS.csv — detected contradictions and resolution status.
+I2. Evidence Objects
+I2.1 Meaning Atom Card (recap)
+Minimal unit with claim_text, quote_text, span_start/end, doc_id, chunk_id, glyph triad, and governance fields. See Docs A–D schemas.
+I2.2 Evidence Link (flattened)
+One row per (claim atom ↔ quote span) association.
+Schema — EVIDENCE_LINKS.csv
+run_id,atom_id,doc_id,chunk_id,span_start,span_end,text_hash,quote_excerpt,alignment_method,alignment_score,law_ref,law_hash,is_master,created_at 
+• alignment_method: {exact_span, fuzzy_jaccard, fuzzy_cosine} (deterministic; thresholds fixed in ops.yml).
+• alignment_score: float 0..1 (round to 4 decimals).
+• law_ref: optional law_id when the evidence directly supports an IRL claim.
+• is_master: true if the claim has been promoted; else false.
+Validation:
+• text_hash must match MASTER_DOCUMENT_INTAKE.text_hash for (doc_id, chunk_id).
+• span_start..span_end must lie within the chunk offsets.
+• quote_excerpt equals canonical substring of the chunk after NFC normalization.
+I2.3 Evidence Cards (structured)
+evidence_cards.json (Doc F) groups the links with geometry/octadic facts and is referenced by policy and contracts. Deterministic fields only; no RNG.
+I3. Ledger & Merkle — Tamper Evident
+I3.1 Rolling Ledger (per window)
+• Every accepted row carries a ledger_hash = SHA256(prev_ledger_hash | glyph_id | atom_id | step_index).
+• LEDGER_WINDOWS.csv provides window headers and continuity.
+run_id,packet_id,window_id,first_ledger_hash,last_ledger_hash,row_count,created_at 
+I3.2 Merkle (optional)
+• For each window, compute a Merkle tree over ordered (glyph_id | atom_id | step_index) leaves; store root in MERKLE_WINDOWS.csv.
+run_id,packet_id,window_id,merkle_root,hash_fn,tree_order 
+• Validation allows external proof via leaf→root paths.
+I3.3 Determinism requirements
+• Row order within a window is (step_index, atom_id).
+• Hash function, normalization, and concatenation scheme are frozen per ops.yml.
+I4. Promotion Proof Bundle
+A Master row is illegal without a contract and evidence links.
+Bundle contents (all IDs/hashes must resolve):
+• PromotionContract (Doc D) with contract_hash.
+• Evidence set from EVIDENCE_LINKS.csv (≥1 link for meaning cards).
+• Law refs from LAWS_VALIDATION.csv when context_source=IRL and truth_value=T.
+• Policy/Evidence cards (Doc F) used in the decision.
+• Buffer Gate snapshots (Doc H) for the even acceptance step.
+• Ledger/Merkle header for the window/packet.
+Validation: Recompute hashes and confirm all foreign keys; reject Master append if any component fails.
+I5. Audit Workflows (CSV‑only)
+I5.1 Spot Check (single claim)
+• Get the Master row by atom_id.
+• Follow promotion_contract_hash → PROMOTION_CONTRACTS.csv.
+• Join to EVIDENCE_LINKS.csv by atom_id.
+• Verify spans and quote_excerpt against MASTER_DOCUMENT_INTAKE by (doc_id,chunk_id,text_hash).
+• Recompute ledger_hash path through LEDGER_WINDOWS.csv (and MERKLE_WINDOWS.csv if enabled).
+• Record result in AUDIT_TRAIL.csv.
+Schema — AUDIT_TRAIL.csv
+run_id,audit_id,atom_id,auditor_id,scope,outcome,issues,ts 
+• scope: {spot, packet, corpus}; outcome: {pass, fail, partial}.
+I5.2 Packet Audit
+• Verify all rows in a window: recompute rolling hashes; (optionally) Merkle proofs.
+• Check Buffer Gate events for entropy floors and constraint IDs/hashes.
+I5.3 Corpus Audit / Golden Master
+• Keep golden_master/ directory with frozen CSVs for a reference corpus.
+• Re‑run pipeline and diff CSVs (except created_at) → differences must be explainable via ops.yml changes; else fail.
+I6. Contradictions & Resolutions
+• During Orbit, a claim may have conflicts with other atoms (same scope, opposite truth).
+• Record in CONTRADICTIONS.csv with adjudication outcomes.
+run_id,atom_id_a,atom_id_b,scope,reason,status,resolution_atom_id,ts 
+• Status: {open, resolved, retired}.
+• Master cannot admit a claim with an open contradiction unless explicitly waived by governance; waiver must be recorded in the contract.
+I7. Validators (Evidence & Audit)
+• Span overlap: (span_start..span_end) lies within chunk offsets; quote_excerpt matches canonical substring (NFC).
+• Quote alignment method: if {fuzzy_jaccard,fuzzy_cosine}, score ≥ thresholds; exact match preferred.
+• Law linkage: IRL truth=T must FK to LAWS_VALIDATION; else demote to U.
+• Ledger integrity: re‑hash per window; first/last hashes match LEDGER_WINDOWS headers.
+• Merkle integrity (optional): recompute root; match MERKLE_WINDOWS.
+• Contract completeness: evidence set non‑empty for meaning cards; contract hash equals recomputed JSON hash.
+• Audit logging: every failed check writes an AUDIT_TRAIL.csv row and an incident with details.
+I8. KPIs & Dashboards (computed from CSV)
+• Faithfulness (f) = COUNT(EVIDENCE_LINKS where is_master=true) / COUNT(MASTER_GPT_TRUTH meaning cards).
+• Traceability (τ) = % Master rows with glyph_id + span + evidence links + contract hash.
+• Lawfulness (ℓIRL) = % IRL truths with valid law refs.
+• Integrity (η) = packet audits passed / packets.
+• Resolution rate (ρ) = resolved / (resolved+open) in CONTRADICTIONS.
+• Audit coverage (α) = audited atoms / total Master atoms.
+(Optional CSV — EVIDENCE_SCOREBOARD.csv)
+run_id,f,τ,ℓIRL,η,ρ,α 
+I9. Operator Checklists
+Before Orbit write
+• [ ] Meaning cards include quote spans and excerpts
+• [ ] EVIDENCE_LINKS rows created for each quote
+Before Master promotion
+• [ ] Evidence set referenced in contract; all FKs resolve
+• [ ] Law refs present for IRL truths
+• [ ] Packet/window hashes recorded
+Audits
+• [ ] Spot checks for top‑impact atoms
+• [ ] Packet audits after each run
+• [ ] Golden‑master regression diff after config changes
+I10. Examples
+I10.1 Exact‑span evidence
+• Claim atom a:… cites (docX, chunk 12, 103..154); text_hash = sha256:…. NFC substring matches quote_excerpt. alignment_method=exact_span, alignment_score=1.0.
+I10.2 Fuzzy alignment with law
+• Claim uses paraphrase; alignment_method=fuzzy_jaccard, score 0.83 ≥ τ=0.8. Law EM‑001 linked; contract OK.
+I10.3 Ledger + Merkle verification
+• Recompute per‑row rolling hash → last hash equals LEDGER_WINDOWS.last_ledger_hash. Merkle root rederived from ordered leaves matches MERKLE_WINDOWS.merkle_root.
+I11. Governance, Privacy, and Redaction
+• Redaction: if a quote contains sensitive data, store a hashed mask in quote_excerpt and keep the exact span for audit under access control; the text_hash still validates integrity.
+• PII: flag in EVIDENCE_LINKS with scope=restricted; audits require elevated role.
+• Retention: Master evidence is append‑only; deprecations mark state flips, never deletes.
+I12. Interfaces
+• Doc D: Contracts enumerate evidence sets; audits verify.
+• Doc F: Evidence cards tie to futures; policy selections cite evidence.
+• Doc H: Buffer events included in proof bundle; energy terms verified.
+• Doc C: Validators for schema/FKs/types; init headers for new CSVs.
+I13. Summary
+This chapter guarantees faithful grounding (quotes → spans → chunks), tamper‑evident ledgers (rolling/Merkle), and complete promotion proofs (contracts + evidence + laws + buffers + ledgers). With these artifacts and validators, any claim can be independently reconstructed, audited, and reproduced from CSVs alone.

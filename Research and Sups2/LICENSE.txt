@@ -1,0 +1,109 @@
+LFAI RESTRICTED LICENSE (Personal Permission Required) v1.0
+===========================================================
+Copyright (c) 2025, Licensor: Nick. All rights reserved.
+
+This is a source-available, permission-only license. No rights are granted
+unless and until Licensor issues a signed Permission Notice. See Sections 2–3.
+
+1) Definitions
+--------------
+Software: the LFAI codebase, examples, SDKs, docs, schemas, configs, and updates.
+Service: any hosted instance or API implementing the Software.
+Outputs: any artifacts produced by or derived from the Software or Service.
+Physical Access: obtaining, copying, hosting, executing, or otherwise using the
+  Software on any hardware or storage you control.
+Intellectual Access: using the Software or Outputs to create, train, tune,
+  evaluate, or improve any models, datasets, systems, or workflows—including
+  using Outputs as training data or ground truth.
+Permission Notice: a written instrument (email, PDF, or signed file) issued by
+  Licensor that identifies the Grantee, Scope, and Term and is verifiably from
+  the Licensor.
+
+2) Grant
+--------
+Subject to full compliance with this License and a valid Permission Notice,
+Licensor grants Grantee a limited, personal, non-transferable, non-sublicensable,
+revocable license to (i) access and internally use the Software and Outputs
+solely within the Scope, Territory, and Term set forth in the Permission Notice;
+and (ii) make a reasonable number of internal copies solely to exercise (i).
+No rights are granted absent a Permission Notice.
+
+3) Restrictions
+---------------
+Unless expressly allowed in the Permission Notice, Grantee must NOT:
+(a) distribute, publish, disclose, or make available the Software, Service, or
+    Outputs to any third party (including via SaaS or API);
+(b) modify, translate, adapt, create derivative works, or port the Software,
+    except for configuration needed to deploy it as provided;
+(c) reverse engineer, decompile, disassemble, or otherwise attempt to derive
+    source code, models, weights, or trade secrets, except to the minimal
+    extent required by law for interoperability and only after written notice;
+(d) use the Software or Outputs for model training, dataset creation, evaluation,
+    benchmarking, or publishing performance claims without explicit written permission;
+(e) use the Software or Outputs to train, tune, or improve any system other than
+    the Licensed instance defined in the Permission Notice;
+(f) remove or alter proprietary notices, anchors, ledgers, or parity paints; or
+    circumvent gating, legality checks, or commit rules;
+(g) rent, lease, lend, sell, sublicense, assign, or transfer the Software, Service,
+    or any rights hereunder;
+(h) use the Software unlawfully or to violate third-party rights.
+All use must honor both Physical and Intellectual access controls.
+
+4) Confidentiality
+------------------
+Software and non‑public Outputs are Licensor Confidential Information. Grantee
+must protect them with at least reasonable care and not disclose except as
+permitted in the Permission Notice.
+
+5) Ownership; Feedback
+----------------------
+Licensor retains all right, title, and interest in and to the Software, Outputs,
+and all IP therein. No implied licenses. Feedback is voluntary; Licensor may use
+it without restriction.
+
+6) Patents
+----------
+No patent rights are granted except the bare right necessary to use the Software
+as permitted by an active Permission Notice. No patent license is granted for
+derivative works or other implementations.
+
+7) Compliance & Audit
+---------------------
+Upon reasonable notice during the Term and for one (1) year after, Grantee will
+provide logs/attestations sufficient to verify compliance (anchors/ledgers are
+sufficient if enabled). Licensor may revoke the Permission Notice for material
+breach or misuse.
+
+8) Term; Termination
+--------------------
+Effective upon issuance of a valid Permission Notice; ends at the earlier of
+the Term end date or Licensor termination for breach. Upon expiration/termination,
+all rights cease and Grantee must cease use and destroy or return Software and
+non‑public Outputs (except as required by law).
+
+9) Warranty Disclaimer
+----------------------
+THE SOFTWARE AND OUTPUTS ARE PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, NON‑INFRINGEMENT, OR ACCURACY.
+
+10) Limitation of Liability
+---------------------------
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, LICENSOR WILL NOT BE LIABLE FOR ANY
+INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES,
+OR FOR LOSS OF PROFITS, REVENUE, DATA, OR GOODWILL. LICENSOR’S TOTAL LIABILITY
+WILL NOT EXCEED US$100.
+
+11) Export; Compliance
+----------------------
+Grantee must comply with applicable laws, including export controls and sanctions.
+
+12) Governing Law; Venue
+------------------------
+As specified in the Permission Notice; if unspecified, the law and venue of
+Licensor’s principal place of business apply, excluding conflicts rules and CISG.
+
+13) Entire Agreement; Precedence
+--------------------------------
+This License + any Permission Notice are the entire agreement for the subject
+matter. Conflicts: Permission Notice > this License.

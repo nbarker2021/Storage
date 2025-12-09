@@ -1,0 +1,378 @@
+Entropy in the System — v2 (with empirical update)
+1) What “entropy” means here
+
+Ledger-entropy = a priced measure of decision uncertainty you intentionally keep when multiple near-equivalent lawful futures exist.
+
+You spend entropy only when you retain optionality (e.g., keeping top-2 triads at n=3).
+
+Everywhere else the pipeline is designed to be deterministic (canonical): projector, CRT merges, braid certification, E₈ snap.
+
+Entropy here is accounting for choice retention, not thermodynamic heat.
+
+2) Where entropy lives (by level)
+
+n=1 (Primitives): deterministic encoding to Σ; no entropy spend.
+
+n=2 (Pairs): guards decide cheaply; ties broken by fixed canonical order; no entropy.
+
+n=3 (Triads): primary and intended entropy valve.
+
+Score candidate triples by expected n=4 legalization cost.
+
+Either commit to the mode (no spend) or keep top-2 (spend selection entropy 
+𝐻
+sel
+H
+sel
+	​
+
+).
+
+n=4 (Quads / Projector / CRT / Braid): deterministic under fixed tie-breaks; no entropy spend.
+
+n=5–8 (Capsules/Batching/E₈): deterministic proofs; no entropy spend.
+
+3) Pricing & cost model (now pinned by tests)
+3.1 Paid cost (per the definitive bundles)
+
+Unit edit cost: each 
+𝑒
+𝑖
+±
+e
+i
+±
+	​
+
+ costs 1.
+
+Phase receipt cost: each phase change (ΔH8 ≠ 0) incurs CARRY_COST = 4.
+
+Symmetry moves: free (no cost, ΔH8 policy below).
+
+Total paid cost for a run:
+
+COST
+=
+#
+unit edits
+  
++
+  
+4
+×
+#
+phase receipts
+.
+COST=#unit edits+4×#phase receipts.
+3.2 Projector policy (QHP defaults refined)
+
+QHP = symmetry-first CLTMP with phase lock: prefer ΔH8 = 0.
+
+At most one phase receipt per quad when unavoidable (hard dial).
+
+Tie-break order: (Lee distance, |ΔH8|, quadratic witness delta, lexicographic).
+
+3.3 What counts as “entropy” vs “penalties”
+
+Entropy: only the n=3 keep-top-2 decision (you’re paying to hold two lawful futures).
+
+Penalties: residue edits at CRT; phase spends (ΔH8); these are priced costs or receipts, not entropy.
+
+4) Empirical confirmation (“Free-Move Law”)
+
+From the definitive test bundles:
+
+Symmetry-first QHP vs Greedy (no symmetries) baseline.
+
+Sign test: 25 wins / 0 losses for QHP (two-sided 
+𝑝
+≈
+5.96
+×
+10
+−
+8
+p≈5.96×10
+−8
+).
+
+Global cost delta: −672 in QHP’s favor over 9,416 quads.
+
+Receipts totals: QHP 8,403 vs Greedy 8,571.
+
+“Fair” accounting (including receipts on both sides, 10 files, 4,811 quads):
+
+Avg cost/quad: QHP 4.9206, Greedy 5.0012.
+
+Totals: QHP 23,673 vs Greedy 24,061.
+
+Native entropy (dataset feature): mean ~1.83–1.88 bits/digit (not a spend; describes source variability).
+
+Takeaway: once you price only receipted work, free symmetries first + phase-lock is strictly better in practice. This validates making entropy spending rare and local (n=3 only).
+
+5) Entropy mechanics at n=3 (the only spend)
+5.1 Selection & spend
+
+Given candidate triples 
+𝑡
+𝑖
+t
+i
+	​
+
+ with predicted costs 
+𝑐
+^
+𝑖
+c
+i
+	​
+
+:
+
+𝑤
+𝑖
+∝
+𝑒
+−
+𝛽
+𝑐
+^
+𝑖
+,
+𝐻
+sel
+=
+−
+∑
+𝑖
+𝑤
+𝑖
+log
+⁡
+𝑤
+𝑖
+.
+w
+i
+	​
+
+∝e
+−β
+c
+i
+	​
+
+,H
+sel
+	​
+
+=−
+i
+∑
+	​
+
+w
+i
+	​
+
+logw
+i
+	​
+
+.
+
+Commit mode: pick argmin 
+𝑐
+^
+𝑖
+c
+i
+	​
+
+ → no entropy spend.
+
+Keep top-2: spend 
+𝐸
+=
+𝐻
+sel
+E=H
+sel
+	​
+
+; log a triad_select receipt with weights, 
+𝛽
+β, and expected ROI (see below).
+
+5.2 Budget & dial
+
+Entropy budget 
+𝐵
+𝑆
+B
+S
+	​
+
+: e.g., 4 per 1,000 quads (default).
+
+Temperature 
+𝛽
+β: default 2.0 (peaky, stable).
+
+Every spend decrements 
+𝐵
+𝑆
+B
+S
+	​
+
+; exceeding the budget requires a governed exception receipt (rationale must cite expected gains).
+
+5.3 ROI (why it’s worth it)
+
+For each kept alternative, record the expected future savings:
+
+ROI
+=
+𝐸
+[
+−
+Δ
+𝜆
+]
+  
++
+  
+𝐸
+[
+phase receipts avoided
+]
+×
+4
+  
++
+  
+𝐸
+[
+CRT penalties avoided
+]
+  
+−
+  
+𝐸
+.
+ROI=E[−Δλ]+E[phase receipts avoided]×4+E[CRT penalties avoided]−E.
+
+If ROI ≤ 0, don’t keep the second route.
+
+6) Interactions with other budgets
+
+Phase: spending entropy at n=3 often enables a ΔH8-preserving projector choice at n=4, saving 4× per avoided phase receipt.
+
+CRT: alternative routes may avoid higher-prime residue edits.
+
+λ-energy gate: even with entropy spend, n=4 acceptance still requires Δλ ≤ 0 (or a governed exception with rationale).
+
+7) Determinism & seeding
+
+All stochasticity is made replayable:
+
+Seed = hash(run_id || manifest_root); store it in receipts.
+
+If you commit (no optionality kept), you spent 0 entropy even if a sampler was used.
+
+Only retained optionality counts against the entropy budget.
+
+8) Receipts (canonical fields)
+8.1 Triad entropy spend
+{
+  "level": 3,
+  "op": "triad_select",
+  "candidates": [[a,b,c1],[a,b,c2],[a,b,c3]],
+  "beta": 2.0,
+  "weights": [0.62,0.27,0.11],
+  "decision": "keep_top2",
+  "entropy_spent": 0.94,
+  "expected_roi": 1.75,
+  "budget_after": 7.06,
+  "seed": "…"
+}
+
+8.2 Deterministic projector (no entropy)
+{
+  "level": 4,
+  "op": "project",
+  "symmetry_used": "MD",
+  "lee_cost": 2,
+  "phase_before": 3,
+  "phase_after": 3,
+  "delta_phase": 0,
+  "carry_cost": 0
+}
+
+8.3 Governed exception (not entropy)
+{
+  "level": 4,
+  "op": "accept_exception",
+  "reason": "preserve CRT@13 and braid helicity",
+  "delta_lambda": +1,
+  "entropy_spent": 0.0,
+  "policy": "rationale_id"
+}
+
+9) Metrics, tests, and reporting schema
+9.1 Run-level metrics
+
+Entropy spend rate: E_{\text{perK}} = \frac{\sum \text{entropy_spent}}{\text{quads}/1000}.
+
+Proto-braid yield: fraction of entropy spends that later certify as braids.
+
+Entropy ROI: avg expected vs realized savings per spend.
+
+Avg cost/quad (fair): includes phase receipts at 4×.
+
+9.2 Tests to pin
+
+T2 — Triad entropy reproducibility: with fixed seed & 
+𝛽
+β, entropy_spent and chosen top-2 are identical across runs.
+
+Free-Move Law check: QHP vs Greedy sign test and global cost delta reported per bundle (fields below).
+
+9.3 Standard report fields (from the bundles)
+
+Per file (CSV/JSON):
+
+n_quads,
+QHP_cost, QHP_receipts,
+Greedy_cost, Greedy_receipts,
+QHP_cost_including_receipts, Greedy_cost_including_receipts,   # “fair” runs
+Delta_cost(QHP-Greedy),
+H_nat_bits_per_digit
+
+
+Aggregate:
+
+wins, losses, p_value_sign_test,
+total_quads, total_cost_QHP, total_cost_Greedy,
+total_receipts_QHP, total_receipts_Greedy
+
+10) Recommended defaults (post-update)
+
+CARRY_COST = 4 per phase receipt.
+
+Symmetries free, with phase-lock, and ≤1 phase receipt per quad when unavoidable.
+
+Entropy only at n=3, with β = 2.0 and B_S = 4 per 1,000 quads.
+
+Tie-breaks (projector): (Lee, |ΔH8|, quadratic witness delta, lexicographic).
+
+CRT moduli order: {3,5,9,11,13,17}; price edits as penalties, not entropy.
+
+Bottom line
+
+Entropy is a single, focused tool you deploy only at n=3 to keep exactly as much optionality as future savings justify. Everything else is proof-driven and deterministic. With the updated pricing (unit edits + 4× phase receipts) and the empirical QHP-over-Greedy results, the policy “free symmetries first, phase-lock, receipts-only entropy” is both theoretically clean and experimentally validated.
+
+Note: unclear if there are n=1 instances during stuck non choice moves. possibly removed via Golden Ratio modulation handled via braiding and chirality effects. to be studided.

@@ -1,0 +1,104 @@
+Initializing Morphonic Lock-In Experiment...
+Initialized Geometric Transformer:
+  Base dimension: 1,024D
+  E8 sublattices: 128
+  Attention heads: 16
+  Layers: 4
+Initialized Aletheia Token System:
+  Embedding dimension: 1,024D
+  E8 sublattices: 128
+
+======================================================================
+EXPERIMENT 1: MORPHONIC LOCK-IN VALIDATION
+======================================================================
+
+======================================================================
+Testing context: orbital_transfer
+======================================================================
+  Solve  0: hit_rate=0.500, js_dist=0.000000, ΔΦ=-0.251953
+  Solve  5: hit_rate=0.917, js_dist=0.000000, ΔΦ=0.000000
+  Solve 10: hit_rate=0.955, js_dist=0.000000, ΔΦ=0.000000
+  Solve 15: hit_rate=0.969, js_dist=0.000000, ΔΦ=0.000000
+  Solve 20: hit_rate=0.976, js_dist=0.000000, ΔΦ=0.000000
+  Solve 25: hit_rate=0.981, js_dist=0.000000, ΔΦ=0.000000
+
+  Idempotence test: ✓ PASS
+
+======================================================================
+Testing context: ocr_invoice_parse
+======================================================================
+  Solve  0: hit_rate=0.500, js_dist=0.000000, ΔΦ=-0.251647
+  Solve  5: hit_rate=0.917, js_dist=0.000000, ΔΦ=0.000000
+  Solve 10: hit_rate=0.955, js_dist=0.000000, ΔΦ=0.000000
+  Solve 15: hit_rate=0.969, js_dist=0.000000, ΔΦ=0.000000
+  Solve 20: hit_rate=0.976, js_dist=0.000000, ΔΦ=0.000000
+  Solve 25: hit_rate=0.981, js_dist=0.000000, ΔΦ=0.000000
+
+  Idempotence test: ✓ PASS
+
+======================================================================
+Testing context: code_search
+======================================================================
+  Solve  0: hit_rate=0.500, js_dist=0.000000, ΔΦ=-0.251738
+  Solve  5: hit_rate=0.917, js_dist=0.000000, ΔΦ=0.000000
+  Solve 10: hit_rate=0.955, js_dist=0.000000, ΔΦ=0.000000
+  Solve 15: hit_rate=0.969, js_dist=0.000000, ΔΦ=0.000000
+  Solve 20: hit_rate=0.976, js_dist=0.000000, ΔΦ=0.000000
+  Solve 25: hit_rate=0.981, js_dist=0.000000, ΔΦ=0.000000
+
+  Idempotence test: ✓ PASS
+
+======================================================================
+ANALYSIS
+======================================================================
+
+Context: orbital_transfer
+  Final hit rate: 0.983
+  Hit rate monotonic: 100.0%
+  Final JS distance: 0.000000
+
+Context: ocr_invoice_parse
+  Final hit rate: 0.983
+  Hit rate monotonic: 100.0%
+  Final JS distance: 0.000000
+
+Context: code_search
+  Final hit rate: 0.983
+  Hit rate monotonic: 100.0%
+  Final JS distance: 0.000000
+
+======================================================================
+SUCCESS CRITERIA
+======================================================================
+
+Context: orbital_transfer
+  1. Hit rate ↑ monotonically: ✓ PASS
+     (ratio: 100.0%)
+  2. JS distance ↓ geometrically: ✗ FAIL (insufficient data)
+  3. Final hit rate > 0.8: ✓ PASS
+     (rate: 0.983)
+
+Context: ocr_invoice_parse
+  1. Hit rate ↑ monotonically: ✓ PASS
+     (ratio: 100.0%)
+  2. JS distance ↓ geometrically: ✗ FAIL (insufficient data)
+  3. Final hit rate > 0.8: ✓ PASS
+     (rate: 0.983)
+
+Context: code_search
+  1. Hit rate ↑ monotonically: ✓ PASS
+     (ratio: 100.0%)
+  2. JS distance ↓ geometrically: ✗ FAIL (insufficient data)
+  3. Final hit rate > 0.8: ✓ PASS
+     (rate: 0.983)
+
+======================================================================
+OVERALL: ✗ SOME CRITERIA FAILED
+======================================================================
+
+Results saved to /home/ubuntu/experiment_1_results
+
+======================================================================
+EXPERIMENT COMPLETE
+======================================================================
+Success: False

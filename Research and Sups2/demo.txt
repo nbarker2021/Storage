@@ -1,0 +1,29 @@
+Section 24 — e8mdhg/demo.py
+from .mdhg import MDHGAdapter
+from .universe import UniverseBuilder
+from .neighbors import NeighborEngine
+from .triangles import TriangleBuilder
+from .facets import FacetBuilder
+from .incidence import IncidenceBuilder
+from .chambers import ChamberBuilder
+from .exporters_atlas_viewer import AtlasHTMLExporterV3
+from .atlas import UniverseRegistry, AtlasBuilder, AtlasStableBuilder
+from .validation import ValidationEngine
+
+def bootstrap_demo():
+    store = MDHGAdapter()
+    ub = UniverseBuilder(store)
+    ucid = ub.build_standard_e8()
+    # neighbors etc per-universe
+    NeighborEngine(store).build_neighbors(ucid)
+    TriangleBuilder(store, ub.proj).build(ucid)
+    FacetBuilder(store).build_facets(ucid)
+    IncidenceBuilder(store).build_incidence(ucid)
+    ChamberBuilder(store).build(ucid)
+    # registry, atlas, viewer bundle
+    UniverseRegistry(store).register(ucid)
+    atlas = AtlasBuilder(store).snapshot()
+    viewer = AtlasHTMLExporterV3(store, ub.proj).bundle(atlas)
+    # validation
+    ValidationEngine(store).write_report()
+    return ucid, ub, viewer

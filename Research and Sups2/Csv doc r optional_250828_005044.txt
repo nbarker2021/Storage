@@ -1,0 +1,82 @@
+Doc R — Pre‑CSV Runtime Retrospective & Operating Model (What We Ran Before the CSV‑Only Pivot)
+Purpose: Describe how the system operated prior to the CSV‑first redesign—its architecture, data flow, persistence model, determinism gaps, governance, and failure modes—and provide a cross‑walk to the CSV runtime. This is a factual retrospective and an operator’s guide for emulation/migration.
+R1. Executive Summary
+Before the CSV pivot, the framework already used the 15‑module rule set (CHUNK→SHELL→PRIM→…→DFMODE). However, state lived primarily in memory and ad‑hoc stores (vector indices, transient caches, notebooks), with decisions logged sparsely. Determinism depended on careful operator practice (fixed seeds, pinned models) rather than enforced artifacts. The CSV runtime (Docs A–N) preserves intent while externalizing all state into append‑only CSVs with validators, ledgers, and contracts.
+R2. Architecture (Pre‑CSV)
+Layers (in order of execution):
+• Ingest & CHUNK — Text split to ~900‑char overlapping windows (semantic continuity ±1 concept).
+• SHELL — Prototype modeling assigned each chunk to 1 of 8 shells; missing shells imputed at doc level.
+• PRIM — Regex and small parsers extracted atomic primitives; stored as Python objects with provenance fields.
+• BUCKET — Per‑doc k‑means (K∈[5,16]) yielded buckets; cohesion/separation computed in‑memory.
+• VALID — Inward/outward validation; failed moves rolled back to last entropy‑stable state (kept as Python snapshots).
+• GRAPH — Relation graph in memory (NetworkX) or a local graph store; edges by Jaccard/Cosine; thresholds in config.
+• ORBIT — SVD/UMAP lanes and stability radii; angles mapped to 8 lanes; parity/chirality bins updated.
+• MACRO‑SEED — Per‑bucket top‑4 primitives; braid chain with greedy overlap; 8‑slot palindromic fold A–B–C–D–D–C–B–A.
+• SUP — Greedy overlap across bucket heads; compression by n=5 folding; IO gate insertion; legality heuristics.
+• GATE — Pair checks (SOI/Buffer/SOI parity) implemented as assertions with fallbacks; no artifact emission.
+• B320 — 10‑octet packet logic tracked in code; gray‑flag recorded in logs only.
+• LOG — Console/file logs; occasional JSON dumps; not canonical.
+• HELIX — Dual‑helix assembly for parity checks; metrics in memory.
+• EXC — Quarantine upon ≥3 shell failures; reassignment logged sparsely.
+• DFMODE — Bits→DataFrames existed as conceptual tiles (in‑RAM DataFrames), not persisted.
+Key characteristics: mixed persistence (RAM + notebook cells + ad‑hoc JSON), implicit ledgers (timestamped logs), and soft governance (operator sign‑off rather than signed contracts).
+R3. Data Flow (Operator’s View)
+raw docs → chunk windows → assign shells → extract primitives → cluster → validate → build graph → compute lanes/radii → pick centers/bridges → build seeds → assemble braid (SUP) → gate checks → enumerate futures (DFSS) → pick controller/operator → accept/rollback → (optional) push summaries 
+Where state lived: graphs, seeds, and legality flags were Python objects; promotion was a function call that mutated in‑memory structures and printed a log line.
+R4. Persistence & Storage (Pre‑CSV)
+• Vector store (optional): transient FAISS/Annoy indexes for similarity and recall.
+• Notebook/JSON dumps: sporadic snapshots after milestones (graph, seeds, policy).
+• Logs: stdout/stderr; grep‑friendly but non‑canonical for reconstruction.
+• No canonical ledger/merkle; recomputation relied on re‑running cells with the same environment.
+R5. Determinism Gaps & Mitigations
+GapSymptomTypical MitigationEmbedding nondeterminismUMAP/TSNE jitter; lane flipsForce PCA or fix random_state; cache embeddingsSeed driftDFSS ranking flickerHardcode seed=1729; freeze weights; export policy snapshotLibrary driftNumPy/BLAS changesPin requirements.txt; containerizeTime‑of‑day inputsRecency biasDisable time‑weighted recall during eval runsChunk boundary shiftsPrimitive set differencesPersist chunk maps; use stable tokenizersLedger absenceAudit difficultyManual run‑logs; operator signatures 
+Even with mitigations, auditors could not replay step‑for‑step without the original runtime and environment.
+R6. Governance & Evidence (Pre‑CSV)
+• Promotion: based on policy reports + operator judgment; no machine‑verifiable contract.
+• Evidence: quotes captured in notebooks; alignments sometimes fuzzy without span hashes.
+• Budgets: LAEC tracked informally (counters in code); no packet/window mapping enforced.
+• MGL: implied conventions; overlap audits were advisory, not blocking.
+R7. Legality & Gates (Operational Reality)
+• CI/Parity/SOI: implemented as Python assertions; failing checks triggered try/repair loops.
+• Buffer Gate: conceptual (entropy proxy computed), but no floor enforcement artifact; overrides weren’t journaled.
+• Octet uniqueness: checked, but duplicate triads sometimes slipped until later consolidation.
+R8. Performance & Quality Signals
+• Stability: geometry 𝒜 deltas and clean‑flag tracked in memory; no CSV trail.
+• Scoring: DFSS/AltDFSS produced ranked dicts; screenshots or JSON blobs used as proof.
+• A/B: occasional spot comparisons; no standardized scoreboards or CI.
+R9. Failure Modes (Observed)
+• Octet collision cascades after lane realignment.
+• Parity drift when bridges applied without re‑binning chirality.
+• Braid collapse if seed order violated palindromic fold under edits.
+• Recall loops due to recency bias (prompt‑local reinforcement).
+• Irreproducible audits when logs missed intermediate states.
+R10. Why the Pivot to CSV
+• Reproducibility: full recompute from files + ops.yml.
+• Auditability: ledgers/merkle; packet audits.
+• Governance: contracts, budgets, watchers.
+• Portability: vendor‑neutral artifacts; simple diffs.
+• Interoperability: adapters to C2PA/Sigstore/OTel/lakehouse.
+R11. Emulation Profile (Run "Legacy" inside CSV Runtime)
+To faithfully recreate pre‑CSV behavior for backtests or parity checks, run with this profile:
+ops.yml: scoring_policy: alt detector_policy: spectral buffer_gate: expand_policy: aggressive entropy_floor_eps: 0.0 mgl_overlap_audit: warn laec: windows_per_run: 9999 recall_policy: explore_first strict_even: false 
+• Disable hard floors; allow aggressive expansions; treat MGL overlaps as warnings; relax budgets; prefer Orbit@cursor recall.
+• Evidence: allow fuzzy align (τ_jaccard=0.8) but still log links in EVIDENCE_LINKS.csv.
+R12. Old→New Cross‑Walk
+Pre‑CSV artifact/behaviorCSV‑first replacementIn‑RAM graph (NetworkX)relation_graph_nodes.csv, relation_graph_edges.csv + deterministic buildNotebook policy dictpolicy_cards.json (+ POLICY_SUMMARY.csv)Console promotion notePROMOTION_CONTRACTS.csv + PROMOTION_JOURNAL.csvAd‑hoc evidence snippetsEVIDENCE_LINKS.csv with span+hashImplicit ledgerLEDGER_WINDOWS.csv (+ MERKLE_WINDOWS.csv)Hand‑tracked LAECenergy_budget.csv with counters and windowsConceptual tilesdf_* CSVs or views (DFMODE materialized)Advisory MGLMGL_REGISTRY.csv + overlap audits (strict/warn) 
+R13. Minimal Repro (Legacy‑style)
+• Set emulation profile (R11).
+• Run a packet (Doc N orchestrator).
+• Compare outputs to pre‑CSV notebook using policy order and Orbit states.
+• Tighten gates incrementally until parity with modern pipeline.
+R14. Migration Checklist
+• [ ] Export any notebook JSON blobs into CSV headers.
+• [ ] Rebuild graphs from intake using fixed thresholds.
+• [ ] Re‑compute lanes/radii with PCA (seeded).
+• [ ] Materialize seeds and palindromic fold; record lineage.
+• [ ] Convert evidence snippets into span‑anchored links.
+• [ ] Create PromotionContracts for accepted truths.
+• [ ] Run packet audit; store manifest.
+• [ ] Freeze ops.yml; tag run_id.
+R15. Takeaways
+The pre‑CSV system captured most of the logic but not the guarantees. The CSV runtime makes every decision replayable, every override explicit, and every audit mechanical, without losing the original braid‑driven synthesis or legality stack.
+End Doc R — This is your authoritative map of “what we used to run,” why it was insufficient for audit, and how to emulate it safely within the CSV‑first runtime.

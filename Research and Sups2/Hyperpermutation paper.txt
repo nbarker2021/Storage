@@ -1,0 +1,1153 @@
+Hyperpermutation: Context-Bounded Superpermutation Architecture under The Quadratic Framework
+
+Authors: Nick + Assistant
+Date: September 2025
+
+Abstract
+
+We formalize Hyperpermutation (HP): a composite, law-governed object that represents an idea 
+𝐼
+I by the totality of its contents and sub-contents as nested superpermutations, organized in an 
+2
+×
+4
+2×4 dual-parity layout and stitched together under The Quadratic Framework (TQF). Each facet is projected onto TQF’s legality rails (ALT, W4
+4
+4
+/W4
+3
+3
+, L8, Q8), repaired by minimal-work operators, conserved by a mod-8 phase ledger, and audited via receipts. The eight facets define a bounded, auditable region 
+𝐵
+(
+𝐼
+)
+B(I) in which lawful states of 
+𝐼
+I live; observations that cannot be replayed into 
+𝐵
+(
+𝐼
+)
+B(I) under the rules are labeled Outside (exogenous). The construction is compatible with UCPL (Universal Contextual Packing Law) and slots beneath LSDT—Layered Simulation Dimensional Theory as a substrate-level mechanism. We provide formal definitions, construction algorithms, the Inside/Outside test, a concrete “Book” example, and a falsifiable evaluation plan.
+
+1. Stack Position and Scope
+
+LSDT (ToE layer): meta-architecture for layered simulation and observers.
+
+TQF (substrate): algebraic lawbook on 
+Σ
+=
+{
+1
+,
+2
+,
+3
+,
+4
+}
+Σ={1,2,3,4} governing legality, minimal-work operators, conservation, and audit.
+
+UCPL (law): guarantees lawful projection, bounded receipts, and cross-domain comparability.
+
+Hyperpermutation (this paper): a composite object built on top of TQF/UCPL that (i) enumerates all main content-sets of an idea as nested superpermutations, (ii) arranges them as 
+2
+×
+4
+2×4 dual-parity facets on the n=0 shell (Weyl-chamber view), and (iii) stitches them into a bounded, auditable region 
+𝐵
+(
+𝐼
+)
+B(I).
+
+2. Canonical Definitions
+2.1 Idea and Encoders
+
+Let 
+𝐼
+I be a main idea (e.g., “a specific book” or “the concept of a book”). Fix four primary content-sets
+
+𝑆
+=
+{
+𝑆
+1
+,
+𝑆
+2
+,
+𝑆
+3
+,
+𝑆
+4
+}
+S={S
+1
+	​
+
+,S
+2
+	​
+
+,S
+3
+	​
+
+,S
+4
+	​
+
+}
+
+that jointly exhaust the salient dimensions of 
+𝐼
+I. For each 
+𝑆
+𝑗
+S
+j
+	​
+
+ define two dual parities 
+𝑆
+𝑗
++
+,
+𝑆
+𝑗
+−
+S
+j
++
+	​
+
+,S
+j
+−
+	​
+
+ (e.g., mirror/dual, left/right, complementary readings). For each facet choose a fixed, injective encoder
+
+𝐸
+𝑗
+±
+:
+ 
+𝑆
+𝑗
+±
+⟶
+Σ
+\*
+E
+j
+±
+	​
+
+: S
+j
+±
+	​
+
+⟶Σ
+\*
+
+into 
+Σ
+=
+{
+1
+,
+2
+,
+3
+,
+4
+}
+Σ={1,2,3,4}.
+
+2.2 Nested Superpermutation
+
+For a finite alphabet 
+𝐴
+A, a superpermutation covers all permutations of 
+𝐴
+A as contiguous substrings. A nested superpermutation 
+S
+P
+(
+𝑆
+𝑗
+±
+)
+SP(S
+j
+±
+	​
+
+) recursively applies this notion to composite primitives: for any element that itself decomposes, include a superpermutation of its constituents, and so on. We require coverage, not shortest length.
+
+2.3 Facet Legality and TQF Rails
+
+Partition sequences into overlapping 4-windows 
+𝑤
+=
+(
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+)
+w=(a,b,c,d). TQF legality uses:
+
+ALT parity: 
+(
+𝑑
+1
++
+𝑑
+3
+)
+≡
+(
+𝑑
+2
++
+𝑑
+4
+)
+ 
+(
+m
+o
+d
+ 
+2
+)
+(d
+1
+	​
+
++d
+3
+	​
+
+)≡(d
+2
+	​
+
++d
+4
+	​
+
+) (mod 2)
+
+W4
+4
+4
+: 
+∑
+𝑖
+=
+1
+4
+𝑑
+𝑖
+≡
+0
+ 
+(
+m
+o
+d
+ 
+4
+)
+∑
+i=1
+4
+	​
+
+d
+i
+	​
+
+≡0 (mod 4) and W4
+3
+3
+ for 3-slot rails
+
+L8: 
+(
+(
+𝑎
+−
+𝑑
+)
++
+2
+(
+𝑏
+−
+𝑐
+)
+)
+≡
+0
+ 
+(
+m
+o
+d
+ 
+8
+)
+((a−d)+2(b−c))≡0 (mod 8)
+
+Q8: 
+(
+𝑎
+−
+𝑑
+)
+2
++
+(
+𝑏
+−
+𝑐
+)
+2
+≡
+0
+ 
+(
+m
+o
+d
+ 
+8
+)
+(a−d)
+2
++(b−c)
+2
+≡0 (mod 8)
+
+Global acceptance uses W8/W80 plus MSS
++
+12
+𝑑
++12d
+	​
+
+. Phase tag 
+𝐻
+8
+=
+(
+(
+𝑎
+−
+𝑑
+)
++
+2
+(
+𝑏
+−
+𝑐
+)
+)
+ 
+m
+o
+d
+ 
+8
+H8=((a−d)+2(b−c)) mod 8 with Parity-Octad bits 
+(
+𝜅
+,
+𝜀
+,
+𝜒
+)
+(κ,ε,χ).
+
+2.4 Hyperpermutation (formal)
+
+A Hyperpermutation of 
+𝐼
+I is the lawful composite
+
+H
+P
+(
+𝐼
+)
+  
+=
+  
+\bigJOIN
+𝑗
+=
+1
+4
+ 
+(
+Ω
+𝑗
++
+ 
+⋈
+ 
+Ω
+𝑗
+−
+)
+HP(I)=\bigJOIN
+j=1
+4
+	​
+
+ (Ω
+j
++
+	​
+
+ ⋈ Ω
+j
+−
+	​
+
+)
+
+where:
+
+Ω
+𝑗
+±
+=
+closure
+⁡
+𝜎
+,
+ 
+o
+p
+s
+:
+ 
+c
+o
+s
+t
+≤
+𝐶
+(
+Π
+𝐿
+(
+S
+P
+(
+𝑆
+𝑗
+±
+)
+)
+)
+Ω
+j
+±
+	​
+
+=closure
+σ, ops: cost≤C
+	​
+
+(Π
+L
+	​
+
+(SP(S
+j
+±
+	​
+
+)))
+is the facet span obtained by projecting 
+S
+P
+(
+𝑆
+𝑗
+±
+)
+SP(S
+j
+±
+	​
+
+) to the legality set 
+𝐿
+=
+A
+L
+T
+∩
+(
+W
+4
+4
+∪
+Q
+8
+)
+L=ALT∩(W4
+4
+∪Q8) on the n=0 shell, then applying free isometries 
+𝜎
+∈
+{
+M
+i
+r
+r
+o
+r
+,
+D
+u
+a
+l
+,
+I
+n
+v
+e
+r
+s
+e
+}
+σ∈{Mirror,Dual,Inverse} and costed operators up to budget 
+𝐶
+C under the Quarter-Fix gate (HOLD legal; SWAP only if 
+Δ
+Λ
+<
+0
+ΔΛ<0 or with a receipt).
+
+⋈
+⋈ is a dual-bonded join (Resonant→Braided with 
+𝐽
+=
+{
+0
+,
+±
+1
+}
+J={0,±1} offsets) that respects the Parity-Octad rule (χ flips only via braided batches).
+
+\JOIN
+\JOIN composes the four dual pairs, enforcing W8/W80 and MSS
++
+12
+𝑑
++12d
+	​
+
+.
+
+The bounded region (total bounds) is
+
+𝐵
+(
+𝐼
+)
+=
+closure
+⁡
+joins, acceptance
+(
+H
+P
+(
+𝐼
+)
+)
+.
+B(I)=closure
+joins, acceptance
+	​
+
+(HP(I)).
+2.5 Inside/Outside Predicate
+
+Given an observation 
+𝑋
+X and encoder 
+𝐸
+E,
+
+I
+n
+s
+i
+d
+e
+(
+𝐼
+,
+𝑋
+)
+  
+⟺
+  
+∃
+𝑅
+ (receipts)
+:
+ 
+Replay
+⁡
+(
+𝐸
+(
+𝑋
+)
+,
+𝑅
+)
+∈
+𝐵
+(
+𝐼
+)
+,
+  
+Δ
+∈
+{
+0
+,
+1
+}
+,
+  
+c
+o
+v
+e
+r
+a
+g
+e
+(
+𝑋
+;
+𝐹
+)
+≥
+𝜏
+,
+Inside(I,X)⟺∃R (receipts): Replay(E(X),R)∈B(I),  Δ∈{0,1},  coverage(X;F)≥τ,
+
+otherwise Outside. Coverage is the share of windows mapped into some facet span; 
+𝜏
+τ is a policy threshold.
+
+3. Construction Algorithm (informal)
+
+Input: idea 
+𝐼
+I; facet sets 
+{
+𝑆
+𝑗
+±
+}
+𝑗
+=
+1
+4
+{S
+j
+±
+	​
+
+}
+j=1
+4
+	​
+
+; encoders 
+𝐸
+𝑗
+±
+E
+j
+±
+	​
+
+; operator budget 
+𝐶
+C; acceptance policy (E-scalars, MSS); join offsets 
+𝐽
+J.
+Output: 
+𝐵
+(
+𝐼
+)
+B(I); receipts & ledger; Inside/Outside classifier.
+
+Facet enumeration. For each 
+𝑆
+𝑗
+±
+S
+j
+±
+	​
+
+, enumerate primitives and recursive decompositions.
+
+Nested SP. Build 
+S
+P
+(
+𝑆
+𝑗
+±
+)
+SP(S
+j
+±
+	​
+
+) (coverage-complete).
+
+Projection. Apply CLTMP on the n=0 shell to 
+𝐿
+L; try free σ; apply Quarter-Fix gate. Emit receipts for non-monotone moves (ΔΛ, ΔH8).
+
+Span closure. Allow costed operators up to 
+𝐶
+C to obtain 
+Ω
+𝑗
+±
+Ω
+j
+±
+	​
+
+.
+
+Stitch duals. Join 
+Ω
+𝑗
++
+Ω
+j
++
+	​
+
+ with 
+Ω
+𝑗
+−
+Ω
+j
+−
+	​
+
+ using Resonant (≤8, coprime) or Braided 3-set with CRT/Bézout witnesses and Parity-Octad rules.
+
+Global acceptance. Enforce W8/W80 + MSS
++
+12
+𝑑
++12d
+	​
+
+ across stitched facets; update ledger (ΣH8 conserved mod 8).
+
+E8/CRT certification (as needed). For tight manifolds, certify paths via E8 lift (degree-240 adjacency) and CRT ladders.
+
+Bounds & classifier. Record 
+𝐵
+(
+𝐼
+)
+B(I) fingerprint and implement Inside/Outside by replay + coverage + Δ∈{0,1}.
+
+4. Theoretical Guarantees (under UCPL/TQF)
+
+Existence & minimal work. UCPL guarantees lawful projection and a feasible operator plan minimizing work 
++
+ 
+𝜆
+ 
+𝑑
+8
+(
+Δ
+)
++ λd
+8
+	​
+
+(Δ).
+
+Conservation with audit. Ledger conserves ΣH8 modulo 8; any deviation appears as a receipt.
+
+Boundary discipline (16+1). Palindromic 8-spans require at most a single boundary phase unit (
+Δ
+∈
+{
+0
+,
+1
+}
+Δ∈{0,1}).
+
+Weyl-chamber tiling. The 
+2
+×
+4
+2×4 layout matches n=0 reflection chambers; σ isometries tile chambers at cost 0.
+
+Bridgeability. Two lawful regions connect iff they intersect or admit an E8 path within the 16+1 bound and budgets.
+
+5. Pseudocode (high level)
+BUILD_HP(I, S[1..4]^±, Encoders, Budget C, Policy P):
+  for j in 1..4:
+    for parity in {+,−}:
+      SP := NESTED_SUPERPERM(S[j]^parity, Encoders[j]^parity)
+      Omega[j]^parity := SP
+      for each 4-window w in SP:
+        w' := CLTMP_to_L(w) using σ∈{Mirror,Dual,Inverse}
+        if QF_gate_allows(w→w'): accept; else attach RECEIPT(w→w')
+      Omega[j]^parity := CLOSURE_under_ops(Omega[j]^parity, C)
+    Pair[j] := JOIN(Omega[j]^+, Omega[j]^−; J, Resonant→Braided, CRT/Bézout)
+  HP := JOIN(Pair[1], Pair[2], Pair[3], Pair[4]) with global acceptance (W8,W80,MSS+12d)
+  B(I) := CLOSURE_under_joins_and_acceptance(HP); COMMIT_LEDGER()
+  return B(I), LEDGER, RECEIPTS
+
+INSIDE_OUTSIDE(I, X, Encoder E, τ):
+  R := FIND_RECEIPTS_TO_REPLAY(E(X)) into B(I) with Δ ∈ {0,1}
+  cov := COVERAGE(E(X); facets of B(I))
+  if R exists and cov ≥ τ: return INSIDE
+  else: return OUTSIDE with diagnosis (invariant fail | Δ≥2 | χ-flip w/o braid | budget bust)
+
+6. Example: Book
+
+Facet sets (dual pairs):
+
+Semantics — Theme graph (+) / Frame semantics (−)
+
+Form — Syntax trees (+) / Orthography & layout (−)
+
+Lifecycle — Production chain (+) / Distribution & use (−)
+
+Governance — IP & editions (+) / Cultural context (−)
+
+Apply the algorithm: encode, nested SP per facet, legalize on n=0, join duals (Resonant first; else Braided 3-set with CRT witnesses), enforce W8/W80 + MSS
++
+12
+𝑑
++12d
+	​
+
+, maintain ledger. The resulting 
+𝐵
+(
+Book
+)
+B(Book) is the auditable bound. A shock driven purely by external media (e.g., a sudden film adaptation) that cannot be replayed into 
+𝐵
+B with 
+Δ
+∈
+{
+0
+,
+1
+}
+Δ∈{0,1} and sufficient coverage is formally Outside.
+
+7. Evaluation Plan (falsifiable and repeatable)
+
+Stage 0 — Synthetic sanity.
+Prove pipeline correctness on constructed data: legality rates, QF gate monotonicity, receipt emission, 16+1 on enumerated 8-spans.
+
+Stage 1 — Real domains.
+Instantiate HP for several ideas (Book, Research Article, Software Package, Regulation). Fixed encoders. Report:
+
+Legality rate per facet; receipts/K; 
+Δ
+∈
+{
+0
+,
+1
+}
+Δ∈{0,1} coverage; resonant vs braided share; ΣH8 conservation (should be exact); planner cost; E8 steps.
+
+Stage 2 — Inside/Outside validation.
+Hold out perturbations (edits, reorderings, exogenous events). Verify Inside replay for lawful edits; Outside for exogenous effects (requires Δ≥2, forbidden χ-flip, or budget bust).
+
+Stage 3 — Ablations.
+Remove individual rails (ALT, W4
+4
+4
+, Q8) or disable ledger; quantify degradation: higher receipt rates, conservation failures, acceptance drops.
+
+Stage 4 — Replication.
+Freeze seeds/encoders; containerized replay reproduces ledger/receipts bit-exactly.
+
+8. Testable Predictions and Refuters
+
+P1 (Projection existence). Every facet SP admits a lawful projection under UCPL with receipts priced; failure ⇒ encoder/facet mis-spec or UCPL refuter.
+P2 (16+1). All palindromic closures need 
+Δ
+∈
+{
+0
+,
+1
+}
+Δ∈{0,1}; any observed 
+Δ
+≥
+2
+Δ≥2 falsifies boundary discipline.
+P3 (Parity-Octad). χ only flips within braided batches; a χ-flip without such a receipt falsifies governance.
+P4 (Resonant dominance). A majority of joins resolve resonantly (≤8, coprime) across ideas; systematic failure implies facet redesign.
+P5 (Ledger integrity). ΣH8 is conserved mod 8; drift without receipts falsifies audit.
+P6 (Inside/Outside). Held-out exogenous perturbations trigger Outside with explicit diagnosis.
+
+9. Reproducibility & Audit
+
+Receipts schema: inputs, σ, operator counts, 
+Δ
+Λ
+ΔΛ, 
+Δ
+𝐻
+8
+ΔH8, CRT/E8 certificates, spec-delta IDs, seeds, timestamps.
+
+Ledger: ordered receipts with running ΣH8 mod 8.
+
+Replay: deterministically reproduces 
+𝐵
+(
+𝐼
+)
+B(I), acceptance outcomes, and ledger state.
+
+10. Limitations and Scope
+
+HP coverage relies on facet choice and encoder design; poor choices shrink 
+𝐵
+(
+𝐼
+)
+B(I) and inflate “Outside.”
+
+Nested superpermutation growth is mitigated by coverage, not minimal length; complexity is managed by legality projection and operator budgets.
+
+UCPL assumptions (fixed encoders; legality rails; 16+1) are empirical where not proven; evaluation includes explicit refuters.
+
+11. Glossary (selected)
+
+Facet: one of the eight 
+2
+×
+4
+2×4 dual-parity slices 
+𝑆
+𝑗
+±
+S
+j
+±
+	​
+
+.
+
+Nested superpermutation: coverage of all permutations at each decomposition level.
+
+CLTMP: nearest lawful representative under Lee/L¹ with deterministic ties.
+
+Quarter-Fix gate: HOLD legal; SWAP allowed if 
+Δ
+Λ
+<
+0
+ΔΛ<0 or with receipt.
+
+Resonant / Braided 3-set: primary and fallback joins; braided requires CRT/Bézout, may flip χ with receipts.
+
+Inside/Outside: replay-within-bounds vs exogenous, determined by receipts, coverage, and Δ bound.
+
+Appendix A — Formal Objects
+
+Facet span: 
+Ω
+𝑗
+±
+=
+closure
+⁡
+𝜎
+,
+ 
+o
+p
+s
+:
+ 
+c
+o
+s
+t
+≤
+𝐶
+(
+Π
+𝐿
+(
+S
+P
+(
+𝑆
+𝑗
+±
+)
+)
+)
+Ω
+j
+±
+	​
+
+=closure
+σ, ops: cost≤C
+	​
+
+(Π
+L
+	​
+
+(SP(S
+j
+±
+	​
+
+)))
+
+Bounded region: 
+𝐵
+(
+𝐼
+)
+=
+closure
+⁡
+joins, acceptance
+(
+\JOIN
+𝑗
+(
+Ω
+𝑗
++
+⋈
+Ω
+𝑗
+−
+)
+)
+B(I)=closure
+joins, acceptance
+	​
+
+(\JOIN
+j
+	​
+
+(Ω
+j
++
+	​
+
+⋈Ω
+j
+−
+	​
+
+))
+
+Inside predicate: replay into 
+𝐵
+(
+𝐼
+)
+B(I) with 
+Δ
+∈
+{
+0
+,
+1
+}
+Δ∈{0,1} and coverage ≥ 
+𝜏
+τ.
+
+Appendix B — Proof Sketch Outlines
+
+Existence: UCPL gives 
+Π
+𝐿
+Π
+L
+	​
+
+ and a finite-cost plan for each window; closure under finite budgets yields 
+Ω
+𝑗
+±
+Ω
+j
+±
+	​
+
+.
+
+Conservation: receipts/ledger enforce ΣH8 modulo 8 invariance; batch groupoid algebra handles annihilation/compose.
+
+Boundary: the 16+1 law restricts palindromic closure costs; join composition preserves the bound.
+
+Bridgeability: either intersection exists or an E8 path yields a certified connection within budgets.
+
+Closing
+
+Hyperpermutation turns “all the contents and their sub-contents” of an idea into a lawful, bounded, auditable object. The 
+2
+×
+4
+2×4 layout ties naturally to the n=0 Weyl-chamber picture; TQF’s rails and UCPL’s guarantees do the heavy lifting; receipts and the ledger keep us honest. This paper defines the object and the tests. When you’re ready to stage the companion paper, we can layer it into LSDT and show how simulators act over these bounds without breaking the law.

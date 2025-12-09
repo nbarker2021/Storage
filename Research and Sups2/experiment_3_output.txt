@@ -1,0 +1,48 @@
+Initializing Operational Closure Experiment...
+Initialized Geometric Transformer:
+  Base dimension: 1,024D
+  E8 sublattices: 128
+  Attention heads: 16
+  Layers: 4
+Initialized Aletheia Token System:
+  Embedding dimension: 1,024D
+  E8 sublattices: 128
+  Generated corpus: 1000 items
+
+======================================================================
+EXPERIMENT 3: OPERATIONAL AGI CLOSURE VALIDATION
+======================================================================
+
+Measuring η_embed (embedding throughput)...
+  Embedded 5200 tokens in 1.64s
+  η_embed = 3171.64 morphons/s
+
+Measuring η_reason (reasoning throughput)...
+  Processed 100 queries in 0.07s
+  η_reason = 1490.87 queries/s
+  Valid queries: 100/100 (100.0%)
+
+Estimated R_novel (new media rate): 1.00 items/s
+
+Estimated R_ask (query rate): 10.00 queries/s
+
+======================================================================
+CLOSURE INEQUALITY CHECK
+======================================================================
+
+1. η_embed ≥ R_novel: ✓ PASS
+   3171.64 ≥ 1.00 (ratio: 3171.64x)
+
+2. η_reason ≫ R_ask: ✓ PASS
+   1490.87 ≫ 10.00 (ratio: 149.09x, target: >10x)
+
+======================================================================
+OPERATIONAL CLOSURE: ✓ REACHED
+======================================================================
+
+Results saved to /home/ubuntu/experiment_3_results
+
+======================================================================
+EXPERIMENT COMPLETE
+======================================================================
+Closure reached: True

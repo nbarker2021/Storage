@@ -1,0 +1,111 @@
+Doc E — Geometry & Octadic Checks (Metrics, Clean‑Flag, Operational Use)
+Purpose: Define the geometry layer and the octadic (2→4→8) stability checks that gate decisions and inform controllers. This chapter specifies CSV‑first artifacts, formulas/metrics, detector alternatives, clean‑flag criteria, operational toggles, validators, and worked examples. It preserves the original rigor while remaining fully deterministic and auditable.
+E1. Overview
+The geometry layer turns token/window sequences into orbit polylines and computes invariant metrics used for stability, tie‑breaks, and promotion. The octadic checker tests whether the relation structure supports clean splits at 2, 4, and 8 communities, yielding a clean‑flag and quantitative stats used by operators and DFSS.
+Outputs (CSV‑first):
+• geometry_cards.csv — one row per window/doc with geometry metrics and mirror/null controls.
+• octadic_checks.csv — per document (and per candidate graph) with 2→4→8 statistics and clean‑flag.
+E2. Geometry Pipeline (window → polyline → metrics)
+E2.1 Windowing
+• Use BW‑32 windows (default). For text, a window ≈ sentence/paragraph; for signals, a fixed span.
+• Each window produces a set of Atom Cards (meaning/embedding). For geometry, we construct an ordered polyline over points derived from embeddings or symbolic coordinates.
+E2.2 Embedding → Plane
+• Choose an embedding space (optional): embed_space_id with embed_spec_hash.
+• Dimensionality reduction (deterministic): PCA→2D (or fixed random seed for t‑SNE/UMAP if expressly allowed).
+• Normalization: translate to zero mean; scale to unit variance per axis.
+E2.3 Polyline Construction
+• Order points by token/step index; tie‑break with glyph order.
+• Compute edge list E = {(p_i, p_{i+1})} and sample at fixed arc‑length for stability.
+E2.4 Geometry Metrics (recorded in geometry_cards.csv)
+For each window:
+• Curved Action proxy (𝒜)
+• Terms: 
+• ‖κ‖²: integrated squared curvature along the polyline (discrete sum).
+• Div: divergence proxy = mean absolute turn‑angle difference.
+• Cross: #edge crossings; Hull: convex hull area (normalized).
+• Band8: fraction of samples inside the 8‑lane angular bands (see E3).
+• Helicity/Writhe: signed/unsigned twist counts under configured projection.
+• Coefficients stored per run in ops.yml.
+• Chirality: sign of oriented area (positive/negative), binned into {L,R,N} used in parity_set.
+• Helicity: net twist sign; Writhe: total twist magnitude.
+• ACI / BCI (Action/Bridge Compactness Indices):
+• ACI = normalized 𝒜 vs median for the doc;
+• BCI = mean edge length / mean bridge length (lower is tighter bridges).
+• Band‑8 Occupancy: fraction of samples whose polar angle falls into configured 8 equal sectors.
+• Mirror/Null checks:
+• Mirror: recompute metrics under reflection across major axis; significant metric change → mirror_alert=true.
+• Null: add small IID noise (fixed seed); large variance → null_instability=true.
+Schema (geometry_cards.csv):
+doc_id,window_id,packet_id,orbit_id,𝒜,curvature_l2,div,crossings,hull_area,band8,helicity,writhe,chirality_bin,ACI,BCI,mirror_alert,null_instability,coeff_alpha,coeff_beta,coeff_gamma,coeff_delta,coeff_epsilon 
+E3. Lane & Band Geometry (link to shells)
+• Lanes: Map angles θ∈[−π,π) to 8 lanes: lane = floor(((θ+π)/(2π))*8)+1.
+• Band‑8: For each sample angle θ, count in‑band if |θ − θ_lane_center| ≤ Δ (Δ fixed per run). Band‑8 occupancy promotes lane adherence and is rewarded in 𝒜.
+• Shell coupling: Lanes 1..8 map to shells 1..8; chirality bin contributes to parity_set (L/R/N).
+E4. Octadic Checker (2→4→8 splits)
+E4.1 Base Graph
+• Build relation graph G(V,E) where V are Atom Cards and E connect similar items (e.g., Jaccard ≥ τ or cosine ≥ τ). Deterministic threshold τ from ops.yml.
+E4.2 Spectral Splits
+• 2‑way: compute Laplacian L, eigenvector v₂ (Fiedler). Split by sign(v₂).
+• 4‑way: recurse spectral split on each part.
+• 8‑way: repeat to depth 3.
+E4.3 Statistics (computed at each level)
+• cf2, cf4, cf8: cut fractions (cut edges / total edges) at 2, 4, 8.
+• Q2, Q4, Q8: modularity at 2, 4, 8 partitions (normalized 0..1).
+• Monotone lift: require Q₂ ≤ Q₄ ≤ Q₈ − ε_Q; small slack ε_Q from config.
+• Balance: cluster size variance at each level (prefer balanced splits).
+E4.4 Detector Alternatives (voting)
+• Louvain/Leiden community detection.
+• SBM (Stochastic Block Models) with fixed seeds.
+• Vote: clean if spectral AND at least one alternative meets thresholds; otherwise unclean.
+E4.5 Clean‑Flag
+• clean=true if: 
+• cf₂, cf₄, cf₈ ≤ τ_cf, and
+• Q₂ ≤ Q₄ ≤ Q₈ − ε_Q, and
+• balance variance ≤ τ_var, and
+• (detector vote supports or detector_policy=single_spectral).
+• Unclean otherwise.
+Schema (octadic_checks.csv):
+doc_id,graph_id,tau_edge,cf2,cf4,cf8,Q2,Q4,Q8,monotone_lift,variance2,variance4,variance8,detector_policy,vote_support,clean_flag 
+E5. Operational Use
+• Controller Guidance 
+• If clean_flag=true and Q8 high → DEEPEN (structured progression).
+• If clean_flag=false but Q4 strong → RECALL/REVIEW (repair moves).
+• If cf* high (fragmented) → RAW‑INTAKE with small half‑steps.
+• Promotion Weighting 
+• stability_score draws from: low crossings, low curvature, high Band‑8, monotone Q lift, and clean‑flag.
+• consistency_across_shells uses balance and Band‑8 lane adherence.
+• DFSS Input 
+• Futures impact 𝒜, cf*, Q*; AltDFSS consumes these metrics as part of AltScore.
+E6. Validators
+• Deterministic Embedding: embedding choice & seed fixed by embed_spec_hash.
+• Polyline Order: must match step index; ties resolved by glyph order.
+• Metric Recompute: recomputing geometry_cards from intake must match row values.
+• Octadic Recompute: re‑running spectral splits yields identical cf*/Q* values.
+• Voting Policy: detector policy recorded; vote reproducible (seeds fixed).
+E7. Examples
+E7.1 Geometry Card (sample row)
+docA,4,1,o:19,0.742,1.83,0.21,2,0.34,0.78,-1,3,R,0.61,0.47,false,false,1.0,0.3,0.4,0.2,0.1 
+Interpretation: moderate curvature, low crossings, strong Band‑8 adherence (0.78), right‑hand chirality; stable window.
+E7.2 Octadic Check (sample row)
+docA,g:default,0.35,0.12,0.19,0.22,0.41,0.55,0.68,true,0.09,0.12,0.15,hybrid,true,true 
+Interpretation: monotone modularity lift; clean splits; recommend DEEPEN.
+E8. Toggles & Ops
+• embed_method: pca2 | tsne2 | umap2 (PCA default; others require fixed seeds)
+• edge_threshold: 0.35 | 0.45 | 0.55
+• detector_policy: spectral | louvain | leiden | sbm | hybrid
+• epsilon_Q: 0.03 (monotone slack)
+• band8_delta: 0.125π (lane half‑width)
+• mirror_check: on|off, null_check: on|off
+E9. Implementation Sketch
+poly = make_polyline(window_atoms) metrics = compute_metrics(poly, ops) write_geometry_card(metrics) G = build_graph(window_atoms, ops.edge_threshold) octa = spectral_2_4_8(G); vote = detector_vote(G, ops) write_octadic_checks(octa, vote) 
+E10. Checklist
+• [ ] Deterministic embed spec logged
+• [ ] Polyline order verified
+• [ ] Geometry metrics serialized
+• [ ] Spectral splits & alt detector run
+• [ ] Clean‑flag computed, stored
+• [ ] Controller recommendation emitted
+E11. Notes
+• If embeddings are absent, compute geometry on symbolic coordinates (e.g., shell/lane angles from glyphs). The metrics remain valid.
+• Geometry guides—not overrides—legality: it feeds stability_score and controller choice; legality still governed by CI, Buffer, SOI, Watchers, Budget, and Contract.
+End Doc E — Geometry & Octadic Checks.

@@ -1,0 +1,91 @@
+Doc N — Implementation Cheat‑Sheets & Repo Starter Spec (CSV‑First Runtime)
+Purpose: Ship a minimal, deterministic starter repo that implements the CSV‑first runtime defined in Docs A–M. This document combines cheat‑sheets (one‑page runbooks, command recipes, API stubs) with a repo layout, empty CSV headers, Python runner skeletons, tests/CI, and Makefile targets. Copy this structure to initialize a working project.
+N1. Quick Overview
+• Design goals: deterministic, audit‑ready, CSV‑only source of truth; no hidden state.
+• What you get: folder tree, headers for all Master/Orbit/Governance CSVs, ops/eval configs, validator stubs, orchestrator skeleton, tests, CI, and quick‑start tasks.
+• Compatibility: aligns with schemas & rules in Docs B–M.
+N2. Repo Layout (starter)
+repo/ ├─ csv/ # source-of-truth CSVs (checked in) │ ├─ MASTER_GPT_TRUTH.csv # headers only │ ├─ MASTER_USER_TRUTH.csv │ ├─ MASTER_DOCUMENT_INTAKE.csv │ ├─ orbit.csv │ ├─ PROMOTION_CONTRACTS.csv │ ├─ PROMOTION_JOURNAL.csv │ ├─ LAWS_VALIDATION.csv │ ├─ GREY_EVIDENCE.csv │ ├─ VALID_MULTI_D_BRIDGE_LOG.csv │ ├─ GLYPHIC_MASTER_LOG.csv │ ├─ SYSTEM_OPS_GUIDE.csv │ ├─ TESTBED.csv │ ├─ TEST_RESULTS.csv │ ├─ MASTER_DETAIL_SHELL.csv │ ├─ MGL_REGISTRY.csv │ ├─ geometry_cards.csv │ ├─ octadic_checks.csv │ ├─ EVIDENCE_LINKS.csv │ ├─ LEDGER_WINDOWS.csv │ ├─ MERKLE_WINDOWS.csv │ ├─ energy_budget.csv │ ├─ tlattice_log.csv │ ├─ buffer_events.csv │ └─ manifests/ # SHA256s and snapshots │ └─ MANIFEST.json ├─ ops/ │ ├─ ops.yml # thresholds, seeds, weights, budgets │ └─ eval_config.yml # A/B harness seeds & weights ├─ orchestrator/ │ ├─ run_packet.py # packet-level pipeline │ ├─ run_window.py # window-level loop │ └─ io_utils.py # CSV IO, hashing, ordering ├─ scripts/ │ ├─ intake.py # chunk→intake; create Orbit atoms │ ├─ align.py # quotes→spans; EVIDENCE_LINKS │ ├─ geom_octadic.py # geometry_cards & octadic_checks │ ├─ dfss.py # futures→scores→policy_cards │ ├─ buffer_gate.py # compress→constrain→expand │ ├─ contracts.py # promotion contracts & PS │ ├─ promote.py # Master append & journal │ ├─ audits.py # ledger/merkle; packet audits │ ├─ tlattice.py # quarantine stabilization │ └─ dashboards.py # KPIs & A/B scoreboards ├─ validators/ │ ├─ schema_validator.py │ ├─ fk_validator.py │ ├─ glyph_validator.py │ ├─ parity_audit.py │ ├─ octet_legality.py │ ├─ evidence_validator.py │ ├─ laws_validator.py │ ├─ ledger_merkle.py │ ├─ budget_validator.py │ └─ contract_validator.py ├─ tests/ │ ├─ test_schemas.py │ ├─ test_determinism.py │ ├─ test_octet_legality.py │ ├─ test_buffer_entropy.py │ ├─ test_contracts_fk.py │ └─ golden/ # frozen packet for CI comparison │ └─ packet_000.json ├─ examples/ │ ├─ minimal_input/ # tiny doc & laws for dry runs │ │ ├─ docA.txt │ │ └─ laws.yaml │ └─ sample_ops.yml ├─ ci/ │ └─ workflow.yml # CI: validate→dry-run→diff ├─ Makefile ├─ requirements.txt └─ README.md 
+N3. CSV Headers (drop‑in)
+Paste these as the first row (header) in each file under csv/.
+MASTER_GPT_TRUTH.csv
+run_id,atom_id,doc_id,chunk_id,span_start,span_end,card_type,primitive,meta_bucket,parity_set,context_id,context_label,truth_value,context_source,context_hash,glyph_a,glyph_b,glyph_c,glyph_id,glyph_spec_version,claim_text,quote_text,embed_space_id,embed_dim,embed_encoding,embed_values,embed_spec_hash,laec_steps,s_acc,r_back,b_exp,e_br,d_dup,tlattice_id,stabilized,buffer_Hc,constraints_applied,ledger_hash,step_index,window_id,packet_id,master_state,consensus_level,evidence_strength,stability_score,agreement_rate,origin_orbit_ids,last_reviewed_at,reviewer_id,promotion_contract_hash 
+MASTER_USER_TRUTH.csv
+run_id,atom_id,doc_id,chunk_id,span_start,span_end,card_type,primitive,meta_bucket,parity_set,context_id,context_label,truth_value,context_source,context_hash,glyph_a,glyph_b,glyph_c,glyph_id,glyph_spec_version,claim_text,quote_text,embed_space_id,embed_dim,embed_encoding,embed_values,embed_spec_hash,laec_steps,s_acc,r_back,b_exp,e_br,d_dup,tlattice_id,stabilized,buffer_Hc,constraints_applied,ledger_hash,step_index,window_id,packet_id,user_id,alignment,alignment_basis,challenge_status 
+MASTER_DOCUMENT_INTAKE.csv
+doc_id,chunk_id,offset_start,offset_end,text_hash,text_excerpt,source_uri,upload_id,ingest_time,shell,bucket_id,glyph_triad,ledger_hash 
+orbit.csv
+run_id,orbit_id,atom_id,doc_id,chunk_id,span_start,span_end,card_type,primitive,meta_bucket,parity_set,context_id,context_label,truth_value,context_source,context_hash,glyph_a,glyph_b,glyph_c,glyph_id,glyph_spec_version,laec_steps,s_acc,r_back,b_exp,e_br,d_dup,tlattice_id,stabilized,buffer_Hc,constraints_applied,ledger_hash,step_index,window_id,packet_id,shell,bucket_id,octet_id,promotion_score,promotion_status,conflict_set,recency_rank 
+PROMOTION_CONTRACTS.csv
+contract_id,atom_id,ps_value,weights,theta_accept,budget_ok,evidence_set,law_refs,conflict_resolution,watchers_passed,energy_floors_ok,window_use,packet_ids,contract_hash 
+(Repeat headers for remaining CSVs per Doc C tables.)
+N4. Orchestrator Skeletons (Python)
+orchestrator/run_packet.py
+from orchestrator.io_utils import load_ops, load_csvs, save_csvs from scripts import intake, align, geom_octadic, dfss, buffer_gate, contracts, promote, audits ops = load_ops("ops/ops.yml") state = load_csvs("csv") for w in range(10): # 10 windows per packet state = intake.run(state, ops) state = align.run(state, ops) state = geom_octadic.run(state, ops) policy = dfss.run(state, ops) state = buffer_gate.run(state, policy, ops) state, pcards = contracts.run(state, policy, ops) state = promote.run(state, pcards, ops) state = audits.packet_audit(state, ops) # ledger & merkle save_csvs(state, "csv") 
+validators/glyph_validator.py (stub)
+def canonicalize_item(s: str) -> str: # NFC normalize, collapse spaces (outside quote_text), escape separators ... def glyph_id(a,b,c,spec="mgl_v1") -> str: return sha256(f"{spec}|{a}|{b}|{c}") def validate_bijection(row, specmap): a = canonicalize_item(row.glyph_a) b = canonicalize_item(row.glyph_b) c = canonicalize_item(row.glyph_c) assert row.glyph_id == glyph_id(a,b,c,row.glyph_spec_version) assert specmap.decode(a,b,c) == (row.shell,row.bucket_id,row.octet_id,row.parity_set,row.doc_id,row.chunk_id) 
+scripts/buffer_gate.py (compress→constrain→expand)
+def run(state, policy, ops): Hc_in = entropy(state.tiles) constraints = ops.get("constraints", {}) applied = apply_constraints(state, constraints) state, b_exp = maybe_expand(state, policy, ops) Hc_out = entropy(state.tiles) assert Hc_out + ops["buffer_gate"]["entropy_floor_eps"] >= Hc_in log_buffer_event(state, Hc_in, Hc_out, applied, b_exp) return state 
+N5. Makefile (tasks)
+.PHONY: init lint test dryrun packet audit clean init: 	python -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt lint: 	ruff orchestrator scripts validators tests test: 	pytest -q dryrun: 	python orchestrator/run_packet.py --dry-run packet: 	python orchestrator/run_packet.py audit: 	python scripts/audits.py --packet-latest clean: 	rm -f csv/*/*.tmp 
+N6. requirements.txt (minimal)
+pandas numpy pyyaml networkx scikit-learn python-dateutil ruff pytest 
+N7. ops/ops.yml (starter)
+seed: 1729 edge_tau: { jaccard: 0.35, cosine: 0.25 } detector_policy: hybrid band8_delta: 0.3927 # ≈0.125π laec: { weights: { rollback: 1, buffer_expansion: 2, bridge: 1, dedupe: 1 }, windows_per_run: 40 } scoring_policy: dfss ps_weights: { evidence: 0.25, stability: 0.20, consistency: 0.15, recency: 0.10, human: 0.10, agreement: 0.10, cost: 0.10 } watchers: { symmetry: true, five_to_eight: true, regression: true } strict_even: false mgl_overlap_audit: strict 
+ops/eval_config.yml
+splits: seed: 1729 kfold: 5 stratify_by: [doc_type, shell_coverage] metric_weights: f: 0.25; v: 0.15; tau: 0.2; sigma: 0.15; ell: 0.15; k: 0.05; b: 0.05 
+N8. Cheat‑Sheets (one‑pagers)
+N8.1 Intake & Align
+• Goal: create canonical MASTER_DOCUMENT_INTAKE rows and Orbit atoms, then ground claims with EVIDENCE_LINKS.
+• Commands: make packet (or python scripts/intake.py && python scripts/align.py).
+• Gates: Schema, Glyph bijection, Parity; then Span overlap.
+• Artifacts: MASTER_DOCUMENT_INTAKE.csv, orbit.csv, EVIDENCE_LINKS.csv.
+N8.2 Geometry & Octadic
+• Goal: compute geometry_cards and octadic_checks.
+• Tip: If embeddings absent, use symbolic lane mapping from glyphs (Doc E).
+N8.3 Futures & Policy
+• Goal: emit policy_cards.json with DFSS/AltDFSS scores.
+• Guardrails: deterministic enumeration; fixed weights & seeds.
+N8.4 Buffer & Contracts
+• Goal: enforce entropy floors; mint PromotionContracts.
+• Red flag: any entropy dip without GOV override → halt.
+N8.5 Promotion & Audit
+• Goal: append to Master; run packet audit (ledger+merkle).
+• Rule: Master appends must have valid contracts & evidence.
+N9. Tests & CI
+tests/test_determinism.py ensures same inputs → identical outputs (hash compare of CSVs).
+ci/workflow.yml runs: lint → unit tests → make dryrun → golden diff.
+CI diff policy: only created_at timestamps may differ; all hashes must match.
+N10. Quick‑Start (5 steps)
+• make init
+• Copy examples/minimal_input into data/ and run make packet
+• Inspect csv/ outputs; run make audit
+• Open policy_cards.json and PROMOTION_JOURNAL.csv
+• Tweak ops.yml thresholds; re‑run and compare manifests.
+N11. Extensibility Hooks
+• Alt detectors: plug into scripts/geom_octadic.py with fixed seeds.
+• New CSVs: add schema to validators/schema_validator.py and headers to csv/.
+• Migrations: add script under scripts/migrations/ and log migration_report.csv.
+N12. Governance Defaults
+• MGL: strict overlap audits; collisions block promotions.
+• IRL truths: require LAWS_VALIDATION FK.
+• Through‑Mode: auto‑enable on watcher red; promotions deferred until green.
+N13. Reference Map (Docs ↔ Repo)
+• Doc B → validators/schema_validator.py, headers in csv/.
+• Doc D → validators/parity_audit.py, scripts/contracts.py.
+• Doc E → scripts/geom_octadic.py.
+• Doc F → scripts/dfss.py, policy_cards.json.
+• Doc G → scripts/intake.py (graph build), scripts/dashboards.py (seeds/centers view).
+• Doc H → scripts/buffer_gate.py, csv/energy_budget.csv.
+• Doc I → scripts/audits.py, LEDGER_WINDOWS.csv, MERKLE_WINDOWS.csv.
+• Doc J → scripts/dashboards.py (A/B), ops/eval_config.yml.
+• Doc K → validators/glyph_validator.py (MGL), orchestrator/run_window.py (cursor/recency).
+N14. Safety & Privacy Cheats
+• Redact sensitive quotes; store hashed mask; keep span indices.
+• Enforce role‑based access for Master evidence.
+• Never change CSVs in place; append only; deprecate via state flips.
+N15. Done‑For‑You Stubs (copy/paste)
+• Incident CSV row and Migration report templates (Doc L §L11).
+• Policy/Evidence cards JSON templates (Doc F §F7).
+• Contract JSON template (Doc B §B8.2).
+End Doc N — You now have a turnkey, deterministic repo spec with cheat‑sheets. Wire these files up and you can execute a full packet run and audit it using only CSVs and these scripts.

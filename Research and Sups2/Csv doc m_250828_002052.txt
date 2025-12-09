@@ -1,0 +1,123 @@
+Doc M — Math & Formulas Compendium (Determinism, Geometry, Spectral, Energetics)
+Purpose: Consolidate the formal math behind legality, geometry, spectral octadic checks, energetics (LAEC), scoring (DFSS/AltDFSS/PS), hashing (ledger/Merkle), glyph bijection, and determinism guarantees. This compendium provides exact formulas, invariants, proof sketches, complexity notes, and numeric examples. All results are CSV‑first and reproducible.
+M1. Notation & Preliminaries
+• Scalars: lowercase (a, b, …); vectors: bold (**v*); sets: calligraphic ().
+• Windows (BW‑32): index w ∈ {0..9} within packet p.
+• Orbit atoms A = {a_i} with headers (shell s, bucket b, octet o, parity π, doc d, chunk c) and glyph triad (g_a,g_b,g_c).
+• Graph G=(V,E) with nodes V = atoms; edge weights w_{ij} = 1 - sim(a_i,a_j).
+• All logs are natural log; hashes are SHA‑256 over NFC‑normalized byte strings.
+M2. IDs, Hashes, and Ordering (Determinism Core)
+Canonicalization canon(x) = NFC( trim spaces; collapse internal spaces except in quote_text; escape separators in glyphs ).
+Identifiers
+• glyph_id = H( spec | canon(g_a) | canon(g_b) | canon(g_c) ).
+• atom_id = UUIDv5("atom", canon(JSON(row_without_ids_hashes))).
+• ledger_hash_t = H( ledger_hash_{t-1} | glyph_id_t | atom_id_t | step_index_t ), ledger_hash_0 = H(0).
+• cursor_id = H(latest_prompt_string).
+Merkle (optional)
+• Leaves L_t = H( glyph_id_t | atom_id_t | step_index_t ), ordered by (step_index, atom_id).
+• Internal nodes N = H( left | right ) → root per window.
+Ordering
+• Within a window, sort by (step_index, atom_id).
+• Tie‑breakers: glyph lexicographic, then (doc_id, chunk_id).
+M3. Glyph Algebra & Bijection
+Let F be the decoding map from a triad to headers:
+F:\ (g_a,g_b,g_c) \mapsto (s, b, o, \pi, d, c)\,. 
+• Injective on the valid glyph language (no two valid triads decode to different headers for same spec).
+• Total on headers admitted by spec (every header has at least one triad).
+• Canonical: triad items are 1–3 tokens, item‑internal tokens sorted lexicographically; spec version v fixes the decoding table.
+Inverse map G = F^{-1} exists on the image of F and is tabulated in the glyph spec map.
+Collision condition
+• A collision occurs iff H(spec|a|b|c) equals an existing glyph_id while (a,b,c)≠(a',b',c') or F(a,b,c)≠F(a',b',c') for same spec. Collisions are blocked; entries recorded in GLYPHIC_MASTER_LOG.
+Chirality & Parity
+• π ∈ {E/O} × {L/R/N} is derived from lane bins (Doc E) and step parity.
+M4. Acceptance Grammar (Automaton)
+Define a deterministic finite automaton over states S = {Explore, Govern, TLattice, Halt} with alphabet of operator symbols Σ = {O1..O7} and guard predicates Γ = {CI, Parity, Octet, Buffer, SOI, Watchers, Budget, Contract}.
+Transition function
+\delta(Explore, O1) = Explore \text{ if } CI\wedge Parity\wedge Buffer \\ \delta(Explore, O2) = Govern \text{ if } CI\wedge Parity\wedge Octet\wedge Buffer \\ \delta(\cdot,\cdot) = TLattice \text{ if } \neg Octet \vee (\neg SOI) \\ \delta(\cdot,\cdot) = Halt \text{ if } LedgerFail \vee AuditFail \\ 
+M5. Geometry — Discrete Metrics
+Given ordered points P = (p_1,…,p_n) in 2D.
+Curvature (discrete)
+\kappa_i = \arccos\!\left( \frac{\langle p_{i}-p_{i-1},\ p_{i+1}-p_i \rangle}{\|p_{i}-p_{i-1}\|\,\|p_{i+1}-p_i\|} \right),\quad \mathcal{K}_2 = \sum_{i=2}^{n-1} \kappa_i^2. 
+Divergence proxy 
+Crossings count intersections of segments (p_i,p_{i+1}) and (p_j,p_{j+1}) with |i-j|>1.
+Hull area \mathrm{Hull} = area of convex hull / area of bounding box (normalized 0..1).
+Chirality via oriented area 
+Helicity/Writhe (2D proxy) Helicity = signed count of orientation‑preserving turns; Writhe = total turns magnitude.
+Curved Action (used in Docs D/E)
+\mathcal{A} = \mathcal{K}_2 + \alpha\,\mathrm{Div} + \beta(\mathrm{Cross}+\mathrm{Hull}) - \gamma\,\mathrm{Band8} - \delta|\mathrm{Helicity}| - \epsilon|\mathrm{Writhe}|. 
+M6. Spectral Octadic Checks
+Graph Laplacian L = D - W with degrees D_{ii} = \sum_j w_{ij} and weights W_{ij}=w_{ij} for admitted edges.
+Fiedler vector v₂ solves Lv = \lambda v with the second smallest eigenvalue \lambda_2.
+Recursive splits
+• 2‑way: sign of v₂.
+• 4‑way: apply Fiedler split within each 2‑way part.
+• 8‑way: repeat to depth 3.
+Cut fractions cf_k = (\text{cut edges at level }k) / |E|.
+Modularity (undirected, unweighted version for clarity)
+Q = \frac{1}{2m} \sum_{ij} \big( A_{ij} - \tfrac{k_i k_j}{2m} \big) \delta(c_i,c_j),\quad m=|E|. 
+Monotone lift: require Q₂ ≤ Q₄ ≤ Q₈ - \epsilon_Q with slack \epsilon_Q.
+Balance variance across clusters \sigma^2_k = \mathrm{Var}(\{ |C_i|/|V| \}_{i=1..k}).
+Clean‑flag = true iff cf_k ≤ τ_cf (all k), monotone lift holds, and variance ≤ τ_var. Detector vote optional.
+M7. DFSS/AltDFSS — Scoring & Minimax
+Let normalized features per future f be λ₂ₙ, Cₙ, ASP^{-1}_n, Δ\mathcal{A}_n, Band8_n, ΔQ_{8n}, ΔLAEC_n.
+DFSS
+S_{\text{DFSS}}(f)=w_\lambda\,\lambda_{2n}+w_C\,C_n+w_{ASP}\,ASP^{-1}_n+w_G(-Δ\mathcal{A}_n+Band8_n)+w_O(ΔQ_{8n}+\mathrm{lift})-w_KΔLAEC_n. 
+AltDFSS
+S_{\text{Alt}}(f)=0.4\,\lambda_{2n}+0.3\,C_n+0.3\,ASP^{-1}_n+\beta_1\,\mathrm{clean}+\beta_2\,Band8_n-\beta_3\,Δ\mathcal{A}_n-\beta_4\,ΔLAEC_n. 
+Minimax: choose \arg\max_f \min_{a∈\mathcal{A}} S(f; a) where adversaries \mathcal{A} include mirror/null perturbations with fixed seeds.
+Total order: Legality → Score → Geometry (lower 𝒜) → ΔJ tie → glyph lexicographic → doc id.
+M8. Buffer Gate Entropy & Floors
+Tile counts per window: T = {t_i} over (glyph class, lane, parity bin).
+Compressive entropy
+H_c(T) = - \sum_i p_i \log p_i,\quad p_i = t_i/\sum_j t_j. 
+Floor condition Expansion is only by enumerated legal variants consistent with constraints K; b_exp increments per admitted variant.
+M9. Energetics — LAEC & Budgets
+Counters per window (s_{acc}, r_{back}, b_{exp}, e_{br}, d_{dup}) with weights (1, w_r, w_b, w_e, w_d).
+LAEC
+\mathrm{LAEC} = s_{acc}+w_r r_{back}+w_b b_{exp}+w_e e_{br}+w_d d_{dup}. 
+Windows/Packets 
+Bridge savings If a legal bridge short‑cuts ΔS accepted steps with cost e_{br}=1, saved windows = \lceil ΔS/32 \rceil. Economy E_{br} = ΔS/(1+Δ\mathrm{LAEC}).
+M10. PromotionScore (PS) & Calibration
+Let features per accepted candidate be evidence_strength E, stability_score S, consistency C, recency R, human H, agreement A, and cost penalty K(ΔLAEC).
+Linear PS 
+Logistic acceptance (optional) Accept iff \hat{y} ≥ θ or PS ≥ θ_{PS} (deterministic thresholds).
+M11. Proof Sketches (Determinism & Invariants)
+• Ledger immutability: with fixed order and SHA‑256 collision resistance, any edit changes ledger_hash and Merkle root; packet audit detects mismatch.
+• Glyph bijection: Given fixed spec and canonicalization, F is functional; inverse G on the image exists; collisions are prevented by registry checks and by blocking duplicate glyph_id in octet grids.
+• Octet uniqueness: With 64 slots and glyph_id uniqueness enforced per (doc,shell), injective mapping to slots yields a legal grid; duplicates are rejected → stabilization terminates when 64 distinct triads exist.
+• Reproducibility: All randomness replaced by fixed seeds and deterministic algebra; every value is a function of input CSVs + ops.yml.
+• Entropy non‑decrease: Buffer floor check forbids H_c reduction unless governance override; ledger/journal make overrides explicit.
+M12. Complexity & Storage
+• Chunking & RAG alignment: O(N).
+• Graph build: O(|E|) with degree cap; similarity evals bounded.
+• Spectral splits: Power iteration ~ O(|E|·k) per split.
+• Geometry metrics: O(T) per window with T points.
+• DFSS enumeration: O(B_max) per window; scoring O(B_max).
+• Ledger/Merkle: O(R) per window where R rows accepted.
+• Storage: Each atom row O(1) fields; evidence links dominate in meaning‑heavy corpora.
+M13. Numeric Worked Examples
+M13.1 Geometry
+Given n=6 points with turns (deg): [30, 20, 40, 10] → \mathcal{K}_2 = 30^2+20^2+40^2+10^2 = 3000. Div = (|20-30|+|40-20|+|10-40|)/3 = (10+20+30)/3 = 20. Crossings=1, Hull=0.40, Band8=0.75, Helicity=+2, Writhe=3. With (α,β,γ,δ,ε)=(0.3,0.2,0.4,0.1,0.05), (Absolute scale not important; deltas drive decisions.)
+M13.2 Spectral & Clean‑flag
+Suppose cf2=0.12, cf4=0.19, cf8=0.22, Q2=0.41, Q4=0.55, Q8=0.68, ε_Q=0.03 → monotone lift holds; if τ_cf=0.25, τ_var=0.16 and variance below τ_var → clean=true.
+M13.3 DFSS
+Z‑scores: λ₂ₙ=0.8, Cₙ=0.4, ASP^{-1}_n=0.3, Δ\mathcal{A}_n=-0.2, Band8_n=0.7, ΔQ_{8n}=0.5, ΔLAEC_n=0.03. With weights (0.25,0.2,0.2,0.2,0.15) grouped as in DFSS formula → S≈0.69 (matches Doc F example scale).
+M13.4 LAEC → Windows
+Counters (23,2,3,1,1) with weights (1,2,1,1) → LAEC=33; W=⌈33/32⌉=2, P=⌈33/320⌉=1.
+M13.5 Ledger/Merkle
+Assume two rows with leaves L1, L2. root = H( H(L1|L2) ) for 2‑leaf tree (degenerate); verifying root recomputes from L1,L2 in order.
+M14. Toggles & Sensitivity
+• edge_tau ↑ → fewer edges, higher spectral variance; may lower Q but reduce cf*.
+• band8_delta ↑ → more in‑band samples, lower 𝒜; but can mask lane drift; keep within [0.1π, 0.2π].
+• w_b (expansion cost) ↑ → discourages Buffer expansions; increases stability at throughput cost.
+• degree_cap ↓ → sparser graph; faster but possibly lower centrality signal.
+M15. Reference Pseudocode (Calculators)
+# Geometry A = K2(P) + a*Div(P) + b*(Cross(P)+Hull(P)) - g*Band8(P) - d*abs(Hel(P)) - e*abs(Wri(P)) # Spectral 2→4→8 parts2 = split_by_fiedler(L) parts4 = ⋃ split_by_fiedler(L|part) parts8 = ⋃ split_by_fiedler(L|part) # DFSS scoring def DFSS(f): z = normalize(features(f)) return wλ*z.λ2 + wC*z.C + wASP*z.ASPi + wG*(-z.dA + z.band8) + wO*(z.dQ8 + lift) - wK*z.dLAEC # Buffer floor assert Hc(T_out) + eps >= Hc(T_in) # LAEC → budgets W = ceil(LAEC/32); P = ceil(LAEC/320) 
+M16. Cross‑References
+• Doc B: exact schemas for IDs/hashes; glyph spec versioning.
+• Doc D: acceptance automaton and contracts.
+• Doc E: geometry definitions, lane mapping, clean‑flag.
+• Doc F: DFSS/AltDFSS math and minimax.
+• Doc H: LAEC counters and Buffer floors.
+• Doc I: ledger and Merkle hashing.
+End Doc M — This compendium is the mathematical backbone for the CSV‑first, deterministic system. It enables independent recomputation and formal audits of all gates and decisions.

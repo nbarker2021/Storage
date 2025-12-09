@@ -1,0 +1,135 @@
+Doc H — LAEC, TLattice, and Buffer Gate (Energetics, Stabilization, Compression/Expansion)
+Purpose: Specify Logic‑Application Energy Cost (LAEC), the Temporary Lattice (TLattice) stabilization process, and the Buffer Gate (compress→constrain→expand) that governs even‑step acceptance. This chapter defines formulas, CSV artifacts, budgets, validators, incident handling, and worked examples so energetics and stabilization are deterministic and auditable in a CSV‑only runtime.
+H1. Overview
+Energetics provide a hard, deterministic accounting of the work required to reach legality and promote truths. LAEC is the accounting unit; BW‑32 windows and Base‑320 packets are the scheduling units. TLattice quarantines out‑of‑corpus or unstable material until it stabilizes into a legal 8×8 octet grid. The Buffer Gate ensures compressive sanity, constraint compliance, and lawful expansions before any even‑step acceptance.
+H2. LAEC — Definition, Units, and Mapping
+H2.1 LAEC formula
+Let a run window accumulate the following counters (all integers ≥0):
+• s_acc — accepted steps (legalized writes)
+• r_back — rollbacks (revert to last ledger hash)
+• b_exp — Buffer expansions (candidate inflations under constraints)
+• e_br — legalized bridges committed
+• d_dup — deduplications (glyph or content de‑dupes)
+LAEC per window:
+LAEC = s_acc + w_r*r_back + w_b*b_exp + w_e*e_br + w_d*d_dup 
+Weights (w_r,w_b,w_e,w_d) are fixed in ops.yml (defaults: 1,2,1,1). LAEC is additive across windows in a packet.
+H2.2 Windows and Packets
+• Windows needed for a promotion batch:
+windows_needed = ceil(LAEC / 32) 
+• Packets used:
+packets_used = ceil(LAEC / 320) 
+• Each packet comprises 10 windows (BW‑32). We log window_id ∈ {0..9} and packet_id for every accepted row.
+H2.3 Budgets
+• Run budget: windows_per_run in ops.yml; promotions exceeding budget are deferred (journaled; budget_ok=false in the contract).
+• Per‑doc soft budget (optional): cap windows consumed by a single doc per run to avoid starvation.
+• Emergency budget (Through‑Mode): allow temporary burst with governance approval; must be repaid (reduction in subsequent windows) and logged.
+Artifacts
+• energy_budget.csv — window/packet usage and remaining budget by run and document.
+run_id,packet_id,window_id,doc_id,laec,windows_needed,windows_used,windows_remaining,policy,approved_by,ledger_hash 
+H3. TLattice — Quarantine & Stabilization
+H3.1 Entry Criteria
+• Document is out‑of‑corpus (shell coverage < 8 within N windows), or
+• Repeated octet illegality (non‑unique glyph triads) after K attempts, or
+• SOI/Buffer violations ≥ threshold in one packet.
+Mark all its Orbit atoms with tlattice_id and stabilized=false.
+H3.2 Stabilization Loop (deterministic)
+• Re‑impute shells to reach coverage 8 (Doc B/G rules).
+• Glyph repair: propose alternative triads using MGL‑aware overlap audits; block collisions.
+• Octet legalization: enforce 64 unique glyph triads per (doc,shell); reject until satisfied.
+• Parity cleaning: ensure odd/even distribution and chirality bins fit lanes.
+• Geometry check: Band‑8 occupancy above threshold; crossings and curvature not pathological.
+• Octadic check: spectral 2→4→8 splits with monotone Q lift or acceptable variance.
+• Buffer Gate: pass compress→constrain→expand with floors (H5).
+Exit when all checks pass; set stabilized=true. Only then may promotions be evaluated.
+Artifacts
+• tlattice_log.csv — one row per attempt.
+run_id,tlattice_id,doc_id,attempt,issue,resolution,unique64_ok,parity_ok,band8_ok,octadic_ok,stabilized,laec_delta,ledger_hash,timestamp 
+H4. Buffer Gate — Compression, Constraints, Expansion
+Runs at every even step before acceptance. Guarantees there is no entropy magic and that additional candidates arise only under explicit, logged constraints.
+H4.1 Inputs
+• Snapshot S_t (ledger state entering the gate)
+• Candidate set C from odd step(s)
+• Constraint set K (laws, internal knowledge, policy cards)
+H4.2 Steps
+• Compress 
+• Compute compressive entropy buffer_Hc on invariant/variant tile decomposition.
+• Serialize tiles with counts and roles.
+• Constrain 
+• Apply K: laws (LAWS_VALIDATION), internal references, operational constraints.
+• Record constraints_applied as JSON of {id,hash}; refuse if any hash is missing from governance.
+• Expand (optional) 
+• Generate legal variants consistent with K (e.g., per‑edge triads); increment b_exp.
+• Expansion policies: none|minimal|aggressive per ops.yml.
+• Score & Accept 
+• Lexicographic order: Legality → Rank gain → ΔJ tie‑breakers.
+• Update LAEC counters and write ledger rows.
+• Floor 
+• Forbid Hc_out + ε < Hc_in unless override_reason is journaled by governance.
+Artifacts
+• buffer_events.csv — every gate pass.
+run_id,packet_id,window_id,step_index,Hc_in,Hc_out,entropy_ok,constraints_applied,expand_policy,b_exp,accepted,override_reason,ledger_hash 
+H4.3 Entropy Definition (deterministic proxy)
+• Let tiles be (glyph triad class, lane, parity bin) counts within the window.
+• Hc = - Σ p_i log p_i (natural log) over normalized counts; deterministic since tiles and counts are fixed by headers and glyphs.
+H5. Contracts & Energetics
+Promotion contracts (Doc D) carry budget terms and energy floors:
+• window_use and packet_ids from the actual LAEC consumed by the acceptance path.
+• energy_floors_ok=true if Buffer Gate never violated floors.
+• budget_ok=true if Σ windows_needed ≤ windows_per_run.
+Validator recomputes LAEC and confirms the contract numbers match ledger rows.
+H6. Validators (must refuse on fail)
+• LAEC recompute: recompute counters per window; match recorded laec_steps and windows_needed.
+• Octet uniqueness (64 glyphs) for any Orbit evaluated for promotion.
+• Buffer Gate integrity: Hc_out + ε ≥ Hc_in; all constraints present in governance; expansion policy logged.
+• TLattice exit conditions: stabilized=true requires unique64, parity_ok, band8_ok, octadic_ok.
+• Budget enforcement: proposed promotions fit within windows_per_run.
+• Contract energy: window_use and packet_ids equal to recomputed values; energy_floors_ok true unless override present.
+H7. Examples (auditable)
+H7.1 LAEC → Windows mapping
+• Counters: s_acc=23, r_back=2, b_exp=3, e_br=1, d_dup=1 with weights (1,2,1,1).
+• LAEC = 23 + 1*2 + 2*3 + 1*1 + 1*1 = 33
+• windows_needed = ceil(33/32) = 2 → fits budget if windows_per_run ≥ 2.
+H7.2 TLattice stabilization
+• Attempt 1: duplicate glyphs in shell 5 → unique64_ok=false; propose new triads.
+• Attempt 2: Band‑8 below threshold → expand minimal per‑edge triads; band8_ok=true.
+• Attempt 3: Clean octadic achieved; all checks pass → stabilized=true; promotions allowed.
+H7.3 Buffer Gate with expansion
+• Hc_in=1.92; constraints include IRL law EM‑001 and internal policy card PC‑07.
+• Minimal expansion adds 2 legal variants (b_exp=2), select 1; Hc_out=1.95 → entropy ok.
+• Ledger rows append; LAEC counters updated; budget recomputed.
+H7.4 Budget deferral
+• Proposed promotions need 44 LAEC → ceil(44/32)=2 windows. Budget left = 1 window → defer lower‑PS items; journal entries created; contracts stamped budget_ok=false (queued).
+H8. Incident Handling & Watchers
+• Incidents (governance_incidents.csv): record Buffer floor violations, missing constraints, TLattice thrashes (N consecutive failures), and budget overruns.
+run_id,incident_id,type,doc_id,tlattice_id,window_id,details,action,timestamp 
+• Watchers (Doc D): 
+• five_to_eight (shell coverage),
+• symmetry (mirrored glyph drift),
+• regression (score drops). Incidents auto‑add cases to TESTBED.
+H9. Operational Toggles (ops.yml)
+laec: weights: { rollback: 1, buffer_expansion: 2, bridge: 1, dedupe: 1 } windows_per_run: 40 per_doc_soft_cap: 8 buffer_gate: entropy_floor_eps: 0.0 expand_policy: minimal # none|minimal|aggressive require_constraints: true override_policy: governance_only lattice: unique64_attempts: 3 band8_threshold: 0.65 clean_octadic_policy: spectral_vote 
+H10. Checklists
+Per window
+• [ ] LAEC counters updated
+• [ ] Buffer Gate run (Hc in/out computed; constraints hashed)
+• [ ] Any expansions logged and b_exp incremented
+Per doc in TLattice
+• [ ] Shell coverage imputed to 8
+• [ ] Unique 64 glyph triads per shell
+• [ ] Parity/chirality bins aligned to lanes
+• [ ] Band‑8 and octadic checks pass
+Before promotion
+• [ ] windows_needed within budget
+• [ ] stabilized=true if came from TLattice
+• [ ] Contract energy fields verified (window_use, packet_ids)
+H11. Failure Modes & Remedies
+• Persistent duplicate glyphs → invoke MGL overlap audit; if conflict, retire offending triads; propose new canonical triads.
+• Entropy floor dips → tighten constraints; disable expansions; require governance override with rationale.
+• Budget starvation → re‑rank by PS; defer; optionally increase windows_per_run next cycle with changelog.
+• TLattice thrash → escalate to RECALL controller; run O6 isoenergetic slider; consider per‑doc soft cap relaxation.
+H12. Interfaces (to other docs)
+• Doc D: PromotionContract must include energy terms; Buffer/SOI gate outputs feed contract fields.
+• Doc E: Geometry & octadic metrics used for parity cleaning and TLattice exit.
+• Doc G: Bridge savings recorded into VALID_MULTI_D_BRIDGE_LOG; centers/bridges affect LAEC via e_br and saved steps.
+• Doc F: DFSS futures consume budgets and may propose expansions; costs booked to LAEC.
+End Doc H — LAEC, TLattice, and Buffer Gate. This completes the energetics and stabilization backbone for the CSV‑first, deterministic system.

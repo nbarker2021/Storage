@@ -1,0 +1,162 @@
+Doc D — Legality & Deterministic Acceptance (Grammar, Gates, Contracts)
+Purpose: Define exactly when a move is legal, how it is accepted or rejected, and why each decision is reproducible. This chapter formalizes the acceptance grammar, odd/even parity rules, Buffer & SOI gates, watchers, LAEC budgets, TLattice stabilization, and the PromotionContract. It includes decision tables, math, and validator pseudocode. All artifacts are CSV‑only.
+D1. Overview
+A move transitions the system from state S_t → S_{t+1} by appending rows to CSVs. Acceptance is deterministic if and only if all relevant validators pass and a contract (when required) is minted. Illegal or under‑specified moves are rejected, never silently coerced.
+Acceptance stack (top→down)
+• Token CI (structural legality)
+• Parity Audit (odd/even, bridges, chirality)
+• Octet Legality (64 unique triads per (doc,shell))
+• Buffer Gate (entropy floors + constraints)
+• SOI Gate (Symmetry, Observation, Inverse)
+• Watchers (5→8 coverage, symmetry, regression)
+• Budget Gate (LAEC windows/packets)
+• PromotionContract (Master‑only)
+All eight must pass for Master promotion; items 1–6 must pass for any Orbit append.
+D2. Acceptance Grammar
+Let a candidate c carry (glyph triad g, headers h, features F).
+Legal(c) iff all are true:
+• CI.1 h.bits conform to bit‑lens and layer; in‑layer hops are Hamming‑1; cross‑layer moves occur only at allowed step indices.
+• PA.1 Parity is consistent (odd for explorations, even for governance).
+• PA.2 Bridge legality holds (bridge only at allowed indices; chirality in allowed bins).
+• OL.1 The target (doc,shell) octet grid remains 64‑unique in glyph_id.
+• BG.1 Entropy floor not violated; BG.2 constraints applied and logged by id+hash.
+• SOI.1–3 Symmetry/Observation/Inverse checks pass (see D6).
+• W.1–3 Watchers green or explicitly waived with reason (logged).
+• BUD.1 LAEC windows within budget if promotion is requested.
+• CON.1 (Master only) a valid PromotionContract exists, ties to evidence/law, and hashes match.
+If any predicate fails: Reject(c) and write an incident.
+D3. Token CI (structural)
+• Bit‑lengths: The vector of fields mapped to bits (shell, bucket, octet, parity flags) must match the config’d lens.
+• In‑layer hop: Only one bit flips in the active lane (Hamming‑1).
+• Cross‑layer hop: Requires a staged pair (odd half‑step proposal followed by even acceptance); both recorded.
+Validator sketch
+assert len(bits(lane)) == L assert hamming(prev.bits, curr.bits) in {0,1} # 0 allowed at even fallback only 
+D4. Parity Audit (odd/even, bridges, chirality)
+• Odd (explore): half‑steps are allowed; bridges may be proposed but not committed until even step.
+• Even (govern): full‑step preferred; if no local‑rank improvement is possible, a lawful fallback may record an even step with Δrank=0 (configurable strict_even may forbid this).
+• Bridge legality: Bridges must originate and terminate within allowed shells and keep chirality in permitted bins.
+Computed fields: parity_set = {E/O}/{L/R/N}.
+Validator sketch
+if step%2==1: assert row.parity_set.startswith('O') if step%2==0: assert row.parity_set.startswith('E') check_bridge_legality(row) check_chirality_bin(row) 
+D5. Octet Legality (8×8 uniqueness)
+For every (doc_id, shell), the set {glyph_id} across the 8×8 octet grid must have cardinality 64. Duplicates block acceptance and send the doc to TLattice if needed.
+Validator sketch
+for (doc,shell), g in orbit.groupby(['doc_id','shell']): assert g['glyph_id'].nunique() == 64 
+D6. Buffer Gate (entropy + constraints)
+Runs before any even‑step acceptance.
+Inputs: snapshot S_t, constraints K (internal knowledge & laws), candidate set C.
+Steps
+• Compress: compute buffer_Hc (compressive entropy), produce invariant/variant tile split.
+• Constrain: apply K; record constraints_applied as a JSON list of ids+hashes.
+• Expand (optional): admit legal candidates consistent with K; increment b_exp (LAEC cost).
+• Score & Accept: lexicographic order: Legality → Rank gain → ΔJ tie‑breakers.
+• Floor: forbid entropy dips beyond entropy_floor_eps unless override_reason is logged.
+Validator sketch
+assert ledger_entropy_out + eps >= ledger_entropy_in assert all(c in registry for c in constraints_applied) 
+D7. SOI Gate (Symmetry, Observation, Inverse)
+• Symmetry: transformation under the configured group leaves required invariants unchanged; otherwise reject.
+• Observation: empirical constraints (e.g., quote spans, law tools) are present and consistent.
+• Inverse: local reversibility check—if applying the inverse map fails to reconstruct prior headers, reject or quarantine.
+Validator sketch
+assert symmetry_ok(row) assert observation_ok(row) # quotes present, tools recorded assert inverse_ok(row) # glyph decode replays headers 
+D8. Watchers (must be green or waived)
+• W1: 5→8 Coverage: each document covers all eight shells (impute allowed) within N windows.
+• W2: Symmetry: abnormal drift in mirrored glyph counts triggers warning.
+• W3: Regression: significant drops in promotion_score, evidence_strength, or stability_score vs previous run flag a regression.
+Outputs: df_watchers.csv with watcher_id, status, reason.
+D9. LAEC Budgets (windows & packets)
+• LAEC = s_acc + w_r*r_back + w_b*b_exp + w_e*e_br + w_d*d_dup.
+• windows_needed = ceil(LAEC/32); packets = ceil(LAEC/320).
+• Budget rule: Sum of windows_needed for all proposed promotions must not exceed windows_per_run; overflow promotions are deferred and recorded with budget_ok=false.
+Validator sketch
+used = orbit[proposed].windows_needed.sum() assert used <= windows_per_run 
+D10. TLattice (quarantine & stabilization)
+When: out‑of‑corpus documents or those failing octet legality/entropy repeatedly.
+Goal: reach a legal 8×8 with 64 unique triads, parity‑clean, before promotion evaluation.
+Trace: tlattice_id, stabilized=true before any Master promotion can reference the atoms.
+D11. PromotionContract (Master‑only)
+A contract is a JSON bundle that justifies acceptance.
+Fields (must exist)
+• contract_id, atom_id, ps_value, weights, theta_accept
+• budget_ok (true)
+• evidence_set (array of atom_ids with quotes)
+• law_refs (ids into LAWS_VALIDATION for IRL truths, else empty)
+• conflict_resolution (reasons for overruling conflicting atoms)
+• watchers_passed (map), energy_floors_ok
+• window_use, packet_ids
+• contract_hash (SHA256 of sorted JSON)
+Acceptance rule: Master append requires a valid contract; row stores promotion_contract_hash.
+D12. Rollbacks & Exceptions
+• Rollback: On failure in any gate ≥ Buffer, revert to last ledger hash; count r_back += 1.
+• Quarantine: Three Buffer failures or any SOI failure → TLattice.
+• Override: Only governance may allow an entropy floor override; requires journal entry.
+D13. Decision Tables
+D13.1 Even‑Step Acceptance
+ConditionActionCI/Parity failReject; incident logOctet duplicateReject; TLattice if persistentBuffer entropy dropReject; require constraints or overrideSOI failReject; TLatticeWatcher redReject or waive with reasonBudget overflow (promotion)Defer; journal + budget_ok=falseAll passAccept; ledger advance 
+D13.2 Master Promotion
+ConditionActionContract missing/invalidRejectLaw refs missing for IRL TReject or set truth=UAll gates pass + contract validAppend to MASTER; journal 
+D14. Math — Triad Acceptance & Curved Action
+Let S(x) measure curved‑action cost of structure x in a window.
+• Given candidates A, B with similar scores, test a mediated TRIAD T(A,B).
+• Accept TRIAD iff:
+ΔS = S(T) − min(S(A), S(B)) < 0 and glue_penalty(T) ≤ cap.
+• Otherwise accept the better of A or B.
+Curved Action proxy (illustrative):
+S = ||T°||^2 + α·Div + β·(Crossings + Hull) - γ·Band8 - δ·|Helicity| - ε·|Writhe| 
+Weights are fixed per run in ops.yml.
+D15. Pseudocode (acceptance loop)
+for step in window: C = propose_candidates() C = [c for c in C if token_CI_ok(c) and parity_ok(c)] enforce_octet_uniqueness(C) Hc_in = entropy(ledger) C = buffer_constrain_expand(C) assert entropy(ledger_after) + eps >= Hc_in for c in C: if not soi_ok(c) or not watchers_ok(): continue ledger.append(c); update_hash() if promoting: for a in proposed: if budget_ok(a) and make_contract(a): master.append(a) 
+D16. Worked Examples
+D16.1 Even‑step fallback (strict_even=false)
+• No local‑rank improvement available.
+• Even step recorded with Δrank=0; parity audit passes; Buffer constraints logged.
+• Allowed only if strict_even=false.
+D16.2 IRL truth without law ref
+• Candidate meaning card has truth=T, context_source=IRL, but no context_hash match in LAWS_VALIDATION.
+• Reject for Master; downgrade to truth=U in Orbit until law is added.
+D16.3 Octet duplicate glyph
+• glyph_id collision detected in (doc, shell) grid.
+• Reject and send to TLattice if recurrent; require a new legal triad.
+D17. Validator Pack (must‑pass suite)
+• Schema & Enums across all CSVs.
+• FK integrity (Master↔Intake, Laws, Contracts).
+• Glyph bijection & collisions.
+• Parity audit.
+• Octet legality (64 unique).
+• Evidence grounding (quote spans).
+• Buffer entropy floor and constraint logging.
+• SOI pass.
+• Watchers (all green or justified).
+• LAEC budget.
+• PromotionContract validity.
+• Ledger/Merkle recomputation.
+D18. Operational Stances (legality profiles)
+• IRL‑First: require law refs for any truth=T; strict_even=true; LAEC budgets tight; ALT off by default.
+• Research: allow truth=U with GREY_EVIDENCE links; ALT wide; buffer expansions allowed; budgets loose.
+• Through‑Mode: auto‑enable ALT on entropy wobble; defer promotions; contracts queued.
+• Ops‑Prod: frozen primitive catalog; narrow DFSS; incident auto‑escalation to TESTBED.
+D19. Checklists
+Before Orbit append
+• [ ] Token CI pass
+• [ ] Parity audit pass
+• [ ] Octet uniqueness maintained
+• [ ] Buffer constraints hashed
+• [ ] SOI + watchers pass
+Before Master promotion
+• [ ] LAEC windows within budget
+• [ ] Contract minted (evidence, laws, conflicts, watchers, floors)
+• [ ] Journal written
+• [ ] Ledger advanced (packet recorded)
+D20. Failure Handling
+• Reject & log: Any gate fail.
+• Quarantine: Repeated Buffer/SOI failures.
+• Defer: Budget overflow.
+• Override: Governance‑approved entropy floor waivers with explicit rationale.
+D21. Glossary (quick)
+• CI: Configuration Integrity of token/bit structure.
+• Parity: Odd (explore), Even (govern).
+• SOI: Symmetry/Observation/Inverse gate bundle.
+• TLattice: Temporary lattice for outliers.
+• LAEC: Logic‑Application Energy Cost (→ windows/packets).
+• Contract: Hashable proof bundle for Master acceptance.
+End Doc D. Next: Doc E — Geometry & Octadic Checks (metrics, clean‑flag, and operational use).

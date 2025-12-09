@@ -1,0 +1,99 @@
+================================================================================
+
+Perplexity sessions/cqe_complete_system.py
+  Lines: 573
+  Classes (18): ResidueVector, ALENAOps, ShellingCompressor, NHyperTower, EnhancedMORSRExplorer, SchemaExpander, TenArmSpiralWrapper, FiveWFiveHWeighting, CQERAG, WorldForge, LambdaTerm, PureMathCalculus, StructuralLanguageCalculus, SemanticLexiconCalculus, ChaosLambdaCalculus, ProducerEndpoint, MainSpace, CQEKernal
+  Functions (2): ladder_hook, mainspace_context
+
+CQE build option 1/script (40).py
+  Lines: 997
+  Classes (15): ValidationResult, MathematicalClaimValidator, E8GeometryValidator, PvsNPValidator, RiemannValidator, ComprehensiveTestSuite, TestValidationFramework, E8SpecializedTester, CrossProblemValidator, ReproducibilityTester, PerformanceMonitor, ProofDevelopmentFramework, CollaborativeResearchPlatform, ContinuousImprovementEngine, YourCustomValidator
+  Functions (1): integrate_with_research_pipeline
+
+Phone data/cqe_harness (1).py
+  Lines: 599
+  Classes (14): Face, SliceObservables, SliceSensors, Actuators, GateResult, Validators, Policy, State, Receipt, LPCRow, Keys, Objective, ReceiptWriter, CQEController
+  Functions (4): now_stamp, sha256_hex, text_to_faces, main
+
+Phone data/cqe_harness (2).py
+  Lines: 571
+  Classes (13): Face, SliceObservables, SliceSensors, Actuators, GateResult, Validators, Policy, Receipt, LPCRow, Keys, Objective, ReceiptWriter, CQEController
+  Functions (5): now_stamp, _json_default, sha256_hex, text_to_faces, main
+
+code and visuals/complete_system.py
+  Lines: 854
+  Classes (13): AdvancedGovernanceType, GlyphType, GlyphBridge, BraidConfig, EntropyConfig, DimensionalConfig, DynamicGlyphBridger, AdvancedShellingOperator, ExtendedThermodynamicsEngine, AdvancedBraidingEngine, LedgerEntropyManager, DimensionalEnforcementEngine, UltimateCQESystem
+  Functions (1): create_ultimate_cqe_system
+
+code and visuals/cqe_ultimate_system.py
+  Lines: 1134
+  Classes (10): CQEOperationMode, ProcessingPriority, GovernanceType, UniversalAtom, E8LatticeProcessor, SacredGeometryProcessor, MandelbrotFractalProcessor, ToroidalGeometryProcessor, CQEValidationFramework, UltimateCQESystem
+  Functions (1): demonstrate_complete_cqe_system
+
+former write ups/cqe_ultimate_system.py
+  Lines: 1134
+  Classes (10): CQEOperationMode, ProcessingPriority, GovernanceType, UniversalAtom, E8LatticeProcessor, SacredGeometryProcessor, MandelbrotFractalProcessor, ToroidalGeometryProcessor, CQEValidationFramework, UltimateCQESystem
+  Functions (1): demonstrate_complete_cqe_system
+
+code and visuals/unified_system.py
+  Lines: 623
+  Classes (9): GovernanceType, WindowType, TQFConfig, UVIBSConfig, SceneConfig, TQFEncoder, UVIBSProjector, SceneDebugger, EnhancedCQESystem
+  Functions (1): create_enhanced_cqe_system
+
+CQE build option 1/cqe/enhanced/unified_system.py
+  Lines: 623
+  Classes (9): GovernanceType, WindowType, TQFConfig, UVIBSConfig, SceneConfig, TQFEncoder, UVIBSProjector, SceneDebugger, EnhancedCQESystem
+  Functions (1): create_enhanced_cqe_system
+
+CQE build option 1/script (57).py
+  Lines: 509
+  Classes (9): CQERunner, DomainAdapter, E8Lattice, ParityChannels, CQEObjectiveFunction, MORSRExplorer, ChamberBoard, ConstructionType, PolicyChannel
+  Functions (0): 
+
+former write ups/golden_test_suite.py
+  Lines: 775
+  Classes (8): TestE8LatticeFoundations, TestSacredGeometryValidation, TestMandelbrotFractalStorage, TestToroidalGeometryAnalysis, TestUniversalAtomOperations, TestValidationFramework, TestPerformanceBenchmarks, TestSystemIntegration
+  Functions (1): run_golden_test_suite
+
+code and visuals/cqe_interface_manager.py
+  Lines: 1020
+  Classes (7): InterfaceType, InteractionMode, ResponseFormat, InterfaceRequest, InterfaceResponse, UserSession, CQEInterfaceManager
+  Functions (0): 
+
+code and visuals/cqe_reasoning_engine.py
+  Lines: 975
+  Classes (7): ReasoningType, LogicSystem, InferenceRule, LogicalStatement, ReasoningStep, ReasoningChain, CQEReasoningEngine
+  Functions (0): 
+
+CQE build option 1/script (23).py
+  Lines: 722
+  Classes (7): ProblemType, E8PathType, E8Configuration, ExplorationResult, E8LatticeComputer, PathwayExplorer, ComprehensiveHarness
+  Functions (0): 
+
+CQE build option 1/e8_millennium_exploration_harness.py
+  Lines: 670
+  Classes (7): ProblemType, E8PathType, E8Configuration, ExplorationResult, E8LatticeComputer, PathwayExplorer, ComprehensiveHarness
+  Functions (0): 
+
+code and visuals/test_cqe_system.py
+  Lines: 458
+  Classes (7): TestDomainAdapter, TestParityChannels, TestE8Lattice, TestObjectiveFunction, TestMORSRExplorer, TestValidationFramework, TestCQESystem
+  Functions (0): 
+
+CQE build option 1/cqe/tests/test_cqe_system.py
+  Lines: 458
+  Classes (7): TestDomainAdapter, TestParityChannels, TestE8Lattice, TestObjectiveFunction, TestMORSRExplorer, TestValidationFramework, TestCQESystem
+  Functions (0): 
+
+code and visuals/ultimate_unified_cqe_system.py
+  Lines: 1077
+  Classes (6): SacredBinaryPattern, AtomCombinationType, UniversalAtom, UniversalAtomFactory, AtomicCombinationEngine, UniversalAtomicSpace
+  Functions (1): demonstrate_ultimate_unified_system
+
+code and visuals/cqe_mandelbrot_fractal_integration.py
+  Lines: 705
+  Classes (6): FractalBehavior, SacredFractalPattern, MandelbrotPoint, MandelbrotSacredGeometry, FractalDataProcessor, MandelbrotVisualization
+  Functions (1): demonstrate_mandelbrot_sacred_geometry
+
+code and visuals/cqe_toroidal_sacred_geometry.py
+  Lines: 651

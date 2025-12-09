@@ -1,0 +1,1079 @@
+The one function (discrete, exact)
+
+Let a quad be 
+𝑞
+=
+(
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+)
+∈
+Σ
+4
+q=(a,b,c,d)∈Σ
+4
+ with 
+Σ
+=
+{
+1
+,
+2
+,
+3
+,
+4
+}
+Σ={1,2,3,4} (interpreted mod 4 with 
+4
+↦
+0
+4↦0).
+Let 
+𝐿
+⊂
+Σ
+4
+L⊂Σ
+4
+ be the lawful set: 
+A
+L
+T
+(
+𝑞
+)
+∧
+(
+W
+4
+(
+𝑞
+)
+∨
+Q
+8
+(
+𝑞
+)
+)
+ALT(q)∧(W4(q)∨Q8(q)).
+Let 
+𝐺
+=
+{
+id
+,
+mirror
+,
+dual
+,
+inverse
+}
+G={id,mirror,dual,inverse} be the symmetry group.
+Let 
+𝐻
+8
+(
+𝑞
+)
+=
+(
+𝑎
+−
+𝑑
+)
++
+2
+(
+𝑏
+−
+𝑐
+)
+(
+m
+o
+d
+8
+)
+H8(q)=(a−d)+2(b−c)(mod8).
+Let 
+𝑑
+Lee
+(
+⋅
+,
+⋅
+)
+d
+Lee
+	​
+
+(⋅,⋅) be the Lee distance on 
+Σ
+4
+Σ
+4
+.
+Let 
+Δ
+(
+𝑞
+ ⁣
+→
+ ⁣
+𝑟
+)
+=
+(
+𝐻
+8
+(
+𝑟
+)
+−
+𝐻
+8
+(
+𝑞
+)
+)
+ 
+m
+o
+d
+ 
+8
+Δ(q→r)=(H8(r)−H8(q))mod8 wrapped to 
+[
+−
+4
+,
+3
+]
+[−4,3].
+Let 
+𝜒
+χ be the receipt unit cost (your 
+CARRY_COST
+=
+4
+CARRY_COST=4).
+
+For a stream 
+𝑄
+=
+(
+𝑞
+1
+,
+…
+,
+𝑞
+𝑇
+)
+Q=(q
+1
+	​
+
+,…,q
+T
+	​
+
+), define the Universal Operator Action:
+
+	
+𝑆
+(
+𝑄
+)
+  
+=
+  
+min
+⁡
+𝑔
+𝑡
+∈
+𝐺
+
+
+𝑟
+𝑡
+∈
+𝐿
+
+
+Π
+∈
+𝐵
+  
+∑
+𝑡
+=
+1
+𝑇
+𝑑
+Lee
+(
+𝑔
+𝑡
+ ⁣
+⋅
+ ⁣
+𝑞
+𝑡
+,
+  
+𝑟
+𝑡
+)
+  
++
+  
+𝜒
+∑
+𝐵
+∈
+Π
+∣
+⨁
+𝑡
+∈
+𝐵
+Δ
+ ⁣
+(
+𝑔
+𝑡
+ ⁣
+⋅
+ ⁣
+𝑞
+𝑡
+→
+𝑟
+𝑡
+)
+∣
+8
+		
+(1)
+S(Q)=
+g
+t
+	​
+
+∈G
+r
+t
+	​
+
+∈L
+Π∈B
+	​
+
+min
+	​
+
+t=1
+∑
+T
+	​
+
+d
+Lee
+	​
+
+(g
+t
+	​
+
+⋅q
+t
+	​
+
+,r
+t
+	​
+
+)+χ
+B∈Π
+∑
+	​
+
+	​
+
+t∈B
+⨁
+	​
+
+Δ(g
+t
+	​
+
+⋅q
+t
+	​
+
+→r
+t
+	​
+
+)
+	​
+
+8
+	​
+
+	​
+
+(1)
+
+The first sum is atomic edit cost after you’ve applied the best symmetry 
+𝑔
+𝑡
+g
+t
+	​
+
+.
+
+The second sum is the n=7 batching of receipts: you partition indices 
+Π
+∈
+𝐵
+Π∈B into batches 
+𝐵
+B and pay only the net phase in each batch. The 
+⊕
+⊕ is mod-8 add; 
+∣
+⋅
+∣
+8
+∣⋅∣
+8
+	​
+
+ is absolute value with wrap (
+[
+−
+4
+,
+3
+]
+[−4,3]).
+
+n=4 CLTMP is the inner minimization over 
+𝑔
+𝑡
+g
+t
+	​
+
+ and 
+𝑟
+𝑡
+r
+t
+	​
+
+; n=7 is the partition 
+Π
+Π; n=8 closure is when the net phase in batches cancels globally.
+
+Everything you do—symmetry, projection, receipts, batching—is just “choose 
+𝑔
+𝑡
+,
+𝑟
+𝑡
+,
+Π
+g
+t
+	​
+
+,r
+t
+	​
+
+,Π” to minimize 
+𝑆
+S.
+
+The Free-Move Law is built in: symmetries are free (they happen inside the min before any cost), atomic Lee steps cost 1, phase carries cost 
+𝜒
+χ.
+
+If you need E₈ or CRT terms, add them as penalties to the first sum, e.g. 
++
+𝛽
+ 
+𝜙
+𝐸
+8
+(
+𝑟
+𝑡
+)
++βϕ
+E8
+	​
+
+(r
+t
+	​
+
+) or a CRT mismatch term; it’s still one action.
+
+From the argmin of (1) you read off:
+
+the lawful stream 
+𝑅
+\*
+ ⁣
+=
+ ⁣
+(
+𝑟
+𝑡
+\*
+)
+R
+\*
+=(r
+t
+\*
+	​
+
+),
+
+the symmetry plan 
+𝐺
+\*
+ ⁣
+=
+ ⁣
+(
+𝑔
+𝑡
+\*
+)
+G
+\*
+=(g
+t
+\*
+	​
+
+),
+
+the receipt batches 
+Π
+\*
+Π
+\*
+,
+
+and your ledger is just the decomposition of 
+𝑑
+Lee
++
+𝜒
+⋅
+(
+⋅
+)
+d
+Lee
+	​
+
++χ⋅(⋅) into edits and receipts.
+
+A differentiable surrogate (so you can take derivatives)
+
+The argmin of (1) is discrete (piecewise-constant); to get gradients, relax it:
+
+Soft digits. Represent each position as a probability vector over 
+{
+1
+,
+2
+,
+3
+,
+4
+}
+{1,2,3,4} (one-hot relaxed):
+
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+∈
+Δ
+4
+a,b,c,d∈Δ
+4
+. Map to residues 
+𝜌
+=
+[
+1
+,
+2
+,
+3
+,
+0
+]
+ρ=[1,2,3,0].
+
+Soft phase. The expected residue of 
+𝑎
+a is 
+⟨
+𝑎
+,
+𝜌
+⟩
+⟨a,ρ⟩. Then
+
+𝐻
+8
+~
+(
+𝑞
+)
+=
+⟨
+𝑎
+,
+𝜌
+⟩
+−
+⟨
+𝑑
+,
+𝜌
+⟩
+  
++
+  
+2
+(
+⟨
+𝑏
+,
+𝜌
+⟩
+−
+⟨
+𝑐
+,
+𝜌
+⟩
+)
+,
+H8
+~
+(q)=⟨a,ρ⟩−⟨d,ρ⟩+2(⟨b,ρ⟩−⟨c,ρ⟩),
+
+with exact (linear) gradients
+
+∂
+𝐻
+8
+~
+∂
+𝑎
+=
+𝜌
+,
+  
+  
+∂
+𝐻
+8
+~
+∂
+𝑏
+=
+2
+𝜌
+,
+  
+  
+∂
+𝐻
+8
+~
+∂
+𝑐
+=
+−
+2
+𝜌
+,
+  
+  
+∂
+𝐻
+8
+~
+∂
+𝑑
+=
+−
+𝜌
+.
+∂a
+∂
+H8
+~
+	​
+
+=ρ,
+∂b
+∂
+H8
+~
+	​
+
+=2ρ,
+∂c
+∂
+H8
+~
+	​
+
+=−2ρ,
+∂d
+∂
+H8
+~
+	​
+
+=−ρ.
+
+Soft Lee distance. Use a circular surrogate on mod-4:
+
+𝑑
+~
+Lee
+(
+𝑥
+,
+𝑦
+)
+  
+≈
+  
+2
+(
+1
+−
+cos
+⁡
+(
+𝜋
+2
+(
+𝑥
+−
+𝑦
+)
+)
+)
+,
+d
+~
+Lee
+	​
+
+(x,y)≈2(1−cos(
+2
+π
+	​
+
+(x−y))),
+
+and take expectations under 
+𝑞
+q and one-hot target 
+𝑟
+r. Its gradient is
+
+∂
+𝑑
+~
+Lee
+∂
+𝑥
+  
+=
+  
+𝜋
+2
+sin
+⁡
+ ⁣
+(
+𝜋
+2
+(
+𝑥
+−
+𝑦
+)
+)
+.
+∂x
+∂
+d
+~
+Lee
+	​
+
+	​
+
+=
+2
+π
+	​
+
+sin(
+2
+π
+	​
+
+(x−y)).
+
+Soft legality. Penalize violations with smooth barriers (or Lagrange multipliers) 
+𝛼
+ 
+Φ
+ALT
++
+𝜆
+ 
+Φ
+W4/Q8
+αΦ
+ALT
+	​
+
++λΦ
+W4/Q8
+	​
+
+ where 
+Φ
+Φ are sigmoids or squared residuals to the legal manifolds.
+
+Soft receipts. Replace 
+∣
+⋅
+∣
+8
+∣⋅∣
+8
+	​
+
+ by 
+(
+w
+r
+a
+p
+8
+(
+⋅
+)
+)
+2
++
+𝜀
+(wrap
+8
+	​
+
+(⋅))
+2
++ε
+	​
+
+.
+Soft batching. Let attention weights 
+𝑤
+𝑡
+,
+𝑏
+w
+t,b
+	​
+
+ assign each quad to a batch 
+𝑏
+b (Gumbel-Softmax); batch residual 
+𝑅
+𝑏
+=
+w
+r
+a
+p
+8
+(
+∑
+𝑡
+𝑤
+𝑡
+,
+𝑏
+ 
+Δ
+𝑡
+)
+R
+b
+	​
+
+=wrap
+8
+	​
+
+(∑
+t
+	​
+
+w
+t,b
+	​
+
+Δ
+t
+	​
+
+).
+
+Soft symmetries. Mix symmetries with softmax weights 
+𝜋
+𝑔
+π
+g
+	​
+
+ over 
+𝐺
+G; each 
+𝑔
+g has a permutation matrix 
+𝐴
+𝑔
+A
+g
+	​
+
+ acting on the soft digits.
+
+Put it together:
+
+	
+𝑆
+~
+(
+𝑄
+)
+=
+  
+𝐸
+𝑔
+∼
+𝜋
+ ⁣
+[
+∑
+𝑡
+𝑑
+~
+Lee
+(
+𝐴
+𝑔
+𝑞
+𝑡
+,
+𝑟
+𝑡
+)
+]
++
+𝜒
+∑
+𝑏
+𝑅
+𝑏
+2
++
+𝜀
++
+𝛼
+ 
+Φ
+ALT
++
+𝜆
+ 
+Φ
+W4/Q8
+		
+(2)
+S
+~
+(Q)=E
+g∼π
+	​
+
+[
+t
+∑
+	​
+
+d
+~
+Lee
+	​
+
+(A
+g
+	​
+
+q
+t
+	​
+
+,r
+t
+	​
+
+)]+χ
+b
+∑
+	​
+
+R
+b
+2
+	​
+
++ε
+	​
+
++αΦ
+ALT
+	​
+
++λΦ
+W4/Q8
+	​
+
+	​
+
+(2)
+
+∇
+𝑞
+𝑡
+𝑆
+~
+∇
+q
+t
+	​
+
+	​
+
+S
+~
+ follows by chain rule from the explicit gradients above.
+
+∇
+𝜋
+𝑆
+~
+∇
+π
+	​
+
+S
+~
+ (over symmetries) comes from the softmax/Gumbel relaxation.
+
+If you add 
+𝜙
+𝐸
+8
+ϕ
+E8
+	​
+
+ (squared distance to the nearest E₈ coset), use a soft-min over the two D₈ cosets (or straight-through estimator).
+
+In practice: use (2) to differentiate, then snap solutions back to the discrete plan in (1) (straight-through). That gives you both the clean ledger and usable gradients.
+
+Why this is “everything in one line”
+
+n=4 CLTMP → the inner 
+min
+⁡
+𝑔
+𝑡
+,
+𝑟
+𝑡
+min
+g
+t
+	​
+
+,r
+t
+	​
+
+	​
+
+ term.
+
+Free moves → symmetries inside the min, zero cost.
+
+Receipts → the phase term (with or without batching).
+
+n=7 → partition 
+Π
+Π / soft attention 
+𝑤
+𝑡
+,
+𝑏
+w
+t,b
+	​
+
+.
+
+n=8 → global cancellation (plan drives residuals to 0).
+
+E₈/CRT → optional additive terms; they don’t change the architecture.
+
+If you want, I can drop this into the repo as spec/universal_action.md with a matching loss.py that implements (2) (the soft version) and emits the discrete plan (1) + ledger by argmin.

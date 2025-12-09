@@ -1,0 +1,22 @@
+Here’s the quick, high-signal picture for dimensions —what’s proven, what’s best-known, and which super-symmetric structures people actually use.
+1) What’s proven (global optimality)
+• No dimensions beyond 24 are solved. The only dimensions with provably densest packings among all packings remain (E8 and the Leech in 8 & 24). Above 24, optimality is open. 
+2) Best known packings (records) for 
+• The authoritative up-to-date scoreboard is Nebe’s “Densest packings presently known” table. It lists, for each , the best lattice packing (and when known, a denser non-lattice periodic packing in parentheses). Use it to check any specific dimension. 
+• Broad trend: in many dimensions above 24, the densest known constructions are periodic non-lattices built from coding-theory gluing (e.g., Construction A/B/D from good linear codes) and sections/stackings of the Leech (a.k.a. antipode or cross-section constructions). A 2025 paper gives new packings via an “antipode” recipe that explicitly starts from E8/Leech (and 48-dim extremal lattices) and takes suitable sections. 
+3) Canonical high-symmetry families you should know (>24D)
+A. Barnes–Wall lattices (dims 32, 64, 128, …)
+• Extremely symmetric (automorphism group contains a real Clifford group) and give very high kissing numbers; they are standard references for dimensions (not always record-densest, but close and highly structured). 
+B. Extremal even unimodular lattices (dims )
+• “Extremal” means they hit the upper bound on minimum norm for even unimodular lattices; many exist in 32, 40, 48, 56, 72, 80, etc., and several 48-dimensional examples (, , ) have been analyzed in depth (automorphism groups, uniqueness under constraints). These are go-to exemplars of “near-perfect symmetry” beyond 24D. 
+C. Code-lattice hybrids via Construction A/B (and variants)
+• Dense packings in many are obtained from self-dual / quadratic-residue codes mapped to lattices; historically this route produced Leech in 24D and its higher-dim analogs (e.g., some 48D extremals), and still underlies many best-known non-lattice periodic packings. 
+For any specific , check Nebe’s table first; if the entry shows a parenthesized density, that’s a non-lattice periodic record that beats the best lattice in that dimension. 
+4) “Near-perfect symmetry” indicators above 24D
+• Huge automorphism groups. Example: has (a very large 2-group by an orthogonal group), reflecting strong regularity. 
+• Large kissing numbers from structured families: classic bounds and data for show Barnes–Wall-based and code-based lattices dominate explicit constructions. 
+5) High-dimension bounds (why everything gets “thin”)
+• Upper bounds. The best general asymptotic upper bound remains Kabatiansky–Levenshtein: packing density . Cohn–Zhao proved the (numerical) Cohn–Elkies linear-programming method is at least as strong as KL and improved constants in moderate . 
+• Lower bounds. Minkowski/Hlawka give up to poly factors; modern work shows at least in general, and number-theoretic (Hurwitz/adelic) constructions improve constants and achieve better growth in infinite subsequences of dimensions. 
+What to do next
+• Tell me the exact dimensions you care about (e.g., 32, 36, 48, 64). I’ll pull from Nebe’s table the record densities, whether the record is lattice or non-lattice, and list the named structure (Barnes–Wall, , code-derived, etc.) with kissing numbers and known automorphism facts—dimension by dimension.

@@ -1,0 +1,40 @@
+Here’s the mental model that makes one point in SnapLat “wear many hats” without contradiction. The trick is that role = context + contract. A point’s raw coordinates don’t change; how we treat it does—by switching which universe it belongs to, which contract it carries, and which evidence is attached.
+1) A single node
+• What it is: a plain SNAP with E8 coordinates and minimal shell.
+• Contract: SNAP.json5 (id, taxonomy, indices.e8.coords, provenance, posture).
+• Use: addressable, comparable, and storable; nothing else implied.
+• Invariants: anchored to E8 (nearest cell), endpoint-tagged, recorded in Trails.
+{ id: "snap:log#42", indices: { e8: { coords: [ … 8d … ], edges: [] } }, shell: { n: 1, triad: ["parse","log","error"], inverse: ["accept","signal","success"] } } 
+2) An interior node (same or different lattice)
+• What it is: the same point reinterpreted inside a universe (a scoped, nested lattice) where it sits off the Voronoi faces (i.e., not on a boundary).
+• How: apply the universe transform φ (R,S,t) and re-index neighbors; now it’s “interior” relative to that universe’s anchors.
+• Why: interior nodes are better for local reasoning, caching, and fast DTT that shouldn’t be dominated by edge behavior.
+• Invariants: round-trip tolerance (φ⁻¹(φ(x))≈x), neighbor rank preserved to τ.
+// Universe rebind (same point, new context) { id: "uni:syntax", transform:{R:"…",S:"1.2",t:[…]}, anchors:["cell:a1"], members: ["snap:log#42"] } 
+3) A glyph (same or different lattice)
+• What it is: a compressed symbol for everything that snap “means” up to a shell level (e.g., n=5→n=6 lift). It points back to the full state and can be rehydrated.
+• How: pass TAC (triad adequacy) and 8/8 context checks; if ambiguity is low, promote to a glyph; optionally lift into another universe as that universe’s symbol.
+• Why: glyphs let you reason at higher layers without recomputing the internals; they’re how “remember/review” walks top-down fast.
+• Invariants: glyph ↔ shells are loss-bounded; Trails keep the rehydration link.
+{ id:"glyph:log#42", from:"snap:log#42", shells:"n<=6", universe:"uni:syntax" } 
+4) A bridge to a new lattice
+• What it is: a governed link that uses this node as one half of a complementary pair (your “half-solve” idea) to complete understanding in another universe or dataset.
+• How: compute a deficiency vector for this node, find a surplus in another place, score closure, run DTT boundary tests, and stitch bridge-DNA. SAP/ Safe Cube must green-light the move.
+• Why: “bridge the gap in understanding”—export only when the combined artifact passes tests and policy.
+• Invariants: pre-bridge Safe Cube snapshot; deterministic replay; closure metrics logged.
+{ id: "bridge:uuid", source:{ snap:"snap:log#42", universe:"uni:syntax" }, target:{ snap:"snap:parser#7", universe:"uni:parsing" }, deficiency:["missing-schema","weak-edges"], surplus:["schema","edge-cases"], closure_metrics:{ coverage_gain:0.31, yield:0.44 }, dna:"dna:…" } 
+5) A single datum that is itself all of these
+• What it is: treat the datum as a micro-universe—a nested lattice whose root node is this point. Inside, it has its own interior nodes, glyphs, and bridges. Outside, the root still behaves as a single node in the parent lattice.
+• How: create a Universe Manifest whose members and anchors are the datum’s internal structure (tokens of a text, AST of code, metrics of a run…). The root’s glyph is the capsule that summarizes it.
+• Why: this gives true fractal composability: every “atom” can be opened into a local world, worked on, stitched, and re-compressed.
+• Invariants: parent↔child transforms (φ) recorded; rehydration succeeds; governance/posture propagate inward; Trails tie the layers.
+{ id:"uni:log#42", anchors:["cell:r0"], root: "snap:log#42", members:["snap:tok#0","snap:tok#1", "…"], transform:{R:"I",S:"1.0",t:[0,0,0,0,0,0,0,0]} } 
+Putting it together: the “five views” of one point
+ViewWhat changesWhat stays the sameSingle nodeNothing—bare SNAPE8 coords, identityInterior nodeUniverse (φ, anchors)Underlying coords (up to φ), identityGlyphRepresentation (compressed)Link to full shells & TrailsBridgeRole (complement join), policy postureSource identity part of bridge-DNADatum-as-universeScale (becomes container)Root maps back to same node 
+In SnapLat terms: a node is a locus; roles are contracts you bind to that locus:
+• Universe contract → interior/exterior status, neighbors, tick policy;
+• Glyph contract → compression/rehydration guarantees;
+• Bridge contract → complementarity and egress governance;
+• Datum-as-universe contract → nested membership and transforms.
+Because every role is contract-driven, the same point can legally be all five at once (in different Trails or ticks), and you can switch roles without losing determinism: Trails and DNA make each transition replayable; SAP/Safe Cube make each transition permissible.
+If you want, I can show a tiny end-to-end using the code stack we shipped: take one synthetic point → bind it to a universe (interior), promote to glyph, find a complement to bridge into a “parsing” universe, then open it as a micro-universe with a couple of members and re-compress.

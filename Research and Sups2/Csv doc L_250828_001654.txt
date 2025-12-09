@@ -1,0 +1,144 @@
+Doc L — Runbooks & Change Control (Procedures, Watchers, Rollback)
+Purpose: Provide operator playbooks for every lifecycle stage (ingest→policy→promotion→audit), define watchers & gates that halt or escalate, and codify change control (versioning, migrations, rollbacks). All procedures are CSV‑first and reference Docs A–K. This is the day‑to‑day manual for safe, deterministic operation.
+L1. Roles & Responsibility Model
+• Operator (OP): executes runbooks; files incidents; curates TESTBED cases.
+• Governance (GOV): approves contracts overrides, Buffer floor waivers, budget bursts; manages MGL and LAWS.
+• Maintainer (ENG): updates schemas/validators; runs migrations; maintains CI.
+• Auditor (AUD): performs spot/packet/corpus audits; certifies releases.
+Separation of duties: GOV alone can authorize
+• entropy‑floor overrides (Doc H),
+• promotion during freeze windows,
+• MGL reservations (Doc K).
+L2. Job Graph & Scheduling (deterministic)
+Jobs are DAG‑scheduled; each node writes CSVs and updates LEDGER_WINDOWS (Doc I). Default cadence: packet as the atomic publish unit.
+INTAKE → ALIGN → GEOM+OCTADIC → DFSS → BUFFER → CONTRACTS → PROMOTE → JOURNAL → DASHBOARDS → AUDITS ↘──────────── TLATTICE RECOVERY ───────────↗ 
+L2.1 Packets & Windows
+• Window = BW‑32 actions; Packet = 10 windows (Base‑320). Publish after packet audit passes.
+• Freeze window: final window of a packet; only GOV may authorize promotions.
+L2.2 Schedules
+• Continuous: INTAKE/ALIGN/GEOM run on arrival; DFSS/BUFFER batched per window.
+• Batch: full DAG per packet with promotion at end.
+• Through‑Mode: auto‑enabled if entropy wobble or watcher red; promotions deferred.
+L3. Runbooks (operator playbooks)
+Each runbook lists inputs, steps, gates, artifacts, KPIs, failures.
+L3.1 INTAKE (P1 — Native)
+• Inputs: raw docs/signals
+• Steps: chunk → MASTER_DOCUMENT_INTAKE; form Orbit Atom Cards with glyphs; assign shells/buckets; start LAEC.
+• Gates: Schema/Type (Doc C), Glyph Bijection (Doc B), Parity CI (Doc D).
+• Artifacts: MASTER_DOCUMENT_INTAKE.csv, orbit.csv (initial rows).
+• KPIs: coverage of 8 shells, duplicate glyphs rate.
+• Failures: glyph collision → log GLYPHIC_MASTER_LOG and retry with alternative triads.
+L3.2 ALIGN (P2 — RAG)
+• Steps: compute quote spans, evidence links; write EVIDENCE_LINKS; update relation graph.
+• Gates: span overlap; quote alignment thresholds (Doc I).
+• Artifacts: EVIDENCE_LINKS.csv, relation_graph_nodes/edges.csv.
+L3.3 GEOM+OCTADIC (P2.5)
+• Steps: Polyline metrics; octadic 2→4→8 splits; clean‑flag and controller hints.
+• Gates: embedding determinism; re‑compute check (Doc E).
+• Artifacts: geometry_cards.csv, octadic_checks.csv.
+L3.4 DFSS (P3 — Futures)
+• Steps: enumerate futures; compute features/scores; minimax; choose controller/operator.
+• Gates: deterministic enumeration; feature recompute; operator legality (Doc F).
+• Artifacts: policy_cards.json, evidence_cards.json, POLICY_SUMMARY.csv.
+L3.5 BUFFER (Even‑Step Gate)
+• Steps: compress→constrain→expand; compute entropy; log constraints.
+• Gates: entropy floors; constraints present; octet uniqueness intact (Doc H).
+• Artifacts: buffer_events.csv.
+L3.6 CONTRACTS (Promotion preparation)
+• Steps: compute PS; assemble PromotionContract (evidence, laws, watchers, energy, budget); hash.
+• Gates: schema/JSON hash; FK resolves to orbit/laws/evidence; budgets (Doc D/H/I).
+• Artifacts: PROMOTION_CONTRACTS.csv.
+L3.7 PROMOTE (Master append)
+• Steps: append Master rows; set master_state=accepted; write journal.
+• Gates: contract validity; TLattice exit (if any); watchers green.
+• Artifacts: MASTER_GPT_TRUTH.csv, PROMOTION_JOURNAL.csv.
+L3.8 AUDITS (I/O integrity)
+• Steps: packet audit (ledger & merkle); spot audits; contradiction scan.
+• Gates: LEDGER/MERKLE recompute; law linkage for IRL truths; no open contradictions.
+• Artifacts: LEDGER_WINDOWS.csv, MERKLE_WINDOWS.csv, AUDIT_TRAIL.csv, CONTRADICTIONS.csv.
+L3.9 TLATTICE RECOVERY
+• Triggers: shell coverage <8; repeated octet illegality; SOI/Buffer failures ≥ threshold.
+• Steps: re‑impute shells, glyph repair, legalize octet, parity clean, geometry/octadic, Buffer pass.
+• Exit: stabilized=true then promotion may proceed.
+L3.10 A/B HARNESS (Doc J)
+• Steps: run A (Native) and B (Framework) on the same split; compute metrics; publish scoreboards.
+• Artifacts: df_eval_scores.csv, df_eval_unlocks.csv, df_eval_global.csv, eval_ci.csv.
+L4. Watchers & Halt Conditions
+Watchers run per window and packet (Doc D):
+• five_to_eight: shell coverage trajectory.
+• symmetry: mirrored glyph drift beyond τ.
+• regression: drops in PS/evidence/stability.
+Halt conditions:
+• Buffer floor violation without GOV override.
+• LEDGER/MERKLE mismatch in packet audit.
+• IRL truth=T without LAWS FK during promotion.
+Actions: auto‑escalate to TESTBED; freeze promotions; notify GOV.
+L5. Change Control (ops, schemas, policies)
+L5.1 Ops config lifecycle (ops.yml)
+• Every run stores ops.yml hash in manifests; changes mandate new run_id.
+• Immutable parameters within a run: scoring weights, thresholds, seeds, packet size.
+L5.2 Schema versioning
+• Each CSV has # schema_version header; migrations bump minor/major.
+• Backward‑compatible (additive columns) vs breaking (rename, type change) flagged in CHANGELOG.md.
+L5.3 Migrations
+• Deterministic scripts with --dry‑run mode; write migration_report.csv (row counts, hashes before/after).
+• Rollback plan must exist before execution (snapshot current CSVs with SHA256 manifest).
+L5.4 Policy updates
+• DFSS/AltDFSS weights, detector policies, Buffer expansion profiles updated only between packets; requires regression sweep.
+L5.5 Freeze windows
+• Final window in a packet: promotions paused unless GOV signs an Emergency Promotion with contract note freeze_override=true.
+L6. Rollbacks & Disaster Recovery
+• Soft rollback: revert to last packet whose LEDGER/MERKLE passed; deprecate affected Master rows; journal rationale.
+• Hard rollback: restore CSVs from golden manifest; re‑run audits; new run_id issued.
+• DR plan: nightly snapshots of all Master/Governance CSVs; 30‑day retention; integrity check on restore.
+Artifacts: MANIFEST.json (file hashes), RESTORE_LOG.csv.
+L7. Incidents & TESTBED Integration
+• Incident types: buffer_floor, ledger_mismatch, law_missing, tlattice_thrash, regression.
+• Workflow: incident → add case to TESTBED.csv with hypothesis and priority → schedule fix → run TEST_RESULTS.csv.
+• SLOs: acknowledge ≤ 4 hours; mitigations ≤ 72 hours unless packet freeze extends.
+L8. CI/CD & Quality Gates
+• Pre‑merge checks: schema validator, FK checks, glyph bijection tests, determinism tests (re‑run with same seed), unit tests for calculators.
+• Staging runs: dry‑run packets against synthetic corpus; compare against golden packet.
+• Release gates: integrity η ≥ 0.95; ΔE ≥ target; no red watchers.
+L9. Privacy, Redaction, and Access Control
+• PII handling: flag rows in EVIDENCE_LINKS with scope=restricted; require AUD role to view non‑masked excerpts.
+• Redaction: store hashed masks; maintain span indices for audit (Doc I).
+• Access: Master CSVs are read‑only to OP; GOV approves any deprecation or override.
+L10. Capacity & Budgeting
+• LAEC planning: set windows_per_run from historical LAEC medians + 2σ.
+• Capacity alerts: if Σ windows_needed projected > 0.9·budget, auto‑defer low‑PS promotions.
+• Bridge savings: read VALID_MULTI_D_BRIDGE_LOG to adjust next‑run budgets and prioritize compute‑saving routes.
+L11. Templates & Snippets
+L11.1 Incident template
+incident_id,type,doc_id,window_id,details,action,owner,opened_at,closed_at 
+L11.2 Migration report row
+run_id,script,from_schema,to_schema,rows_in,rows_out,hash_before,hash_after,dry_run,notes 
+L11.3 Emergency promotion note (contract field)
+"freeze_override": true, "governance_ticket": "GOV-2025-0827" 
+L12. Checklists (quick)
+Before starting a packet
+• [ ] ops.yml frozen and hashed
+• [ ] budgets set; watchers thresholds confirmed
+• [ ] golden manifest available
+Per window
+• [ ] run DFSS/BUFFER; record buffer events
+• [ ] contract candidates assembled; budgets checked
+At packet end
+• [ ] packet audit: LEDGER/MERKLE
+• [ ] promotions executed or deferred
+• [ ] dashboards and scoreboards updated
+On change
+• [ ] migration dry‑run and report
+• [ ] regression sweep passes
+• [ ] changelog entry and new run_id
+L13. Interfaces
+• Docs A–D: legality stack, contracts required for promotion.
+• Doc E: geometry/octadic clean‑flags feed controllers.
+• Doc F: DFSS/AltDFSS cards drive candidate selection.
+• Doc G: seeds and bridges impact budgets & recall.
+• Doc H: LAEC, TLattice, Buffer Gate form the energetics backbone.
+• Doc I: ledgers, merkle, evidence in audits.
+• Doc J: scoreboards determine release gating.
+• Doc K: MGL governance and prompt‑cursor affect recall and overlap audits.
+L14. Summary
+This document operationalizes the CSV‑first system: predictable jobs, packetized publishing, rigorous watchers, governed change, safe rollbacks, and clear incident workflows. Following these runbooks preserves determinism, legality, and auditability while enabling continuous improvement.

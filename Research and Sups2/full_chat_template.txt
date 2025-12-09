@@ -1,0 +1,2 @@
+# Paste full chat transcript below this line. Keep plain text.
+# Save as /mnt/data/full_chat.txt and tell me to re-run.

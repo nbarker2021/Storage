@@ -1,0 +1,27 @@
+Here’s a crisp map of “what’s known” above 8-D, plus the high-symmetry structures that are provably perfect (i.e., densest possible) or very nearly so.
+What’s proven optimal for sphere packing (all packings)
+• 24-D – Leech lattice : densest packing among all packings (not just lattices), and the unique optimal periodic packing. Proof by Cohn–Kumar–Miller–Radchenko–Viazovska (Annals 2017). Later, Leech (and E8) were shown universally optimal energy minimizers, underscoring their exceptional symmetry. 
+(For context outside your “>8-D” request: 1-D (), 2-D (hexagonal ), 3-D (FCC/HCP density ), 8-D (E8) are also solved; E8’s proof is Viazovska 2016/Annals 2017.) 
+What’s now solved among lattices above 8-D
+• 9-D – Λ_9 (laminated lattice): proved densest among lattices in Aug 2025 via a full Voronoi-perfect enumeration; Hermite constant . (This does not settle non-lattice packings in 9-D.) 
+Best known high-symmetry lattices in 9–24 D (near-optimal)
+In the remaining dimensions , exact optimal packings are open; the best known lattice densities are overwhelmingly achieved by the laminated lattices and a few standouts. A reliable, continually updated table is maintained by Nebe (RWTH). Highlights:
+• 12-D – Coxeter–Todd : record densest lattice in 12-D; an even integral, highly symmetric lattice related to Leech via a 3-fold automorphism. 
+• 16-D – Barnes–Wall : record densest lattice in 16-D; an order-2 fixed-point sublattice of Leech; symmetry and Voronoi region studied extensively. 
+• General 9–24 D: laminated lattices (Conway–Sloane) typically furnish the densest known lattice packings up to 24 D; is exactly the Leech lattice. 
+For a dimension-by-dimension “best known” density (lattice and, where known, non-lattice), use Nebe’s Densest Packings Presently Known table. 
+“Near-perfect symmetry” and why E8/Leech are special
+• Symmetry groups:
+• E8 lattice has Weyl (Coxeter) symmetry of order 696,729,600. Its kissing number is 240 (maximal in 8-D). 
+• Leech lattice has automorphism group Co_0 (Conway group), order ; kissing number 196,560 (maximal in 24-D). 
+• Spherical designs (tight codes): the minimal vectors of E8 form a tight 7-design on ; those of Leech form a tight 11-design on . This “averages like a sphere” property reflects extreme uniformity. 
+• Universal optimality: E8 (8-D) and Leech (24-D) minimize energy for every completely monotone radial potential (Annals 2022), vastly strengthening their optimality beyond packing. 
+“Perfect lattices”, “extreme” lattices, and local optimality
+Voronoi showed any lattice maximizer of packing density must be perfect; perfect + (eu)tactic ⇒ extreme (a local maximum of packing density). This framework underpins the 9-D Λ_9 result and many record lattices. 
+Pointers & further reading
+• Core references: Sphere Packings, Lattices and Groups (Conway–Sloane); laminated lattices chapters; history and constructions. 
+• Viazovska (Annals 2017) and Cohn–Kumar–Miller–Radchenko–Viazovska (Annals 2017) for E8 & Leech optimality; Annals 2022 for universal optimality. 
+• Nebe’s density table for the current best-known packings (lattice & non-lattice) up to 128 D. 
+Quick cheat sheet (above 8-D)
+DimObject (lattice)StatusNotable symmetry/notes9Λ_9Densest lattice (proved 2025)Solved via full Voronoi perfect-form enumeration; . 10–11Λ_{10}_{11}Best known latticesLaminated family; global optimality open. 12K_{12}Best known latticeCoxeter–Todd; high symmetry; Leech-related. 13–15Λ_{13}…Best known latticesLaminated family. 16Λ_{16}Best known latticeBarnes–Wall; Leech fixed-point; rich automorphisms. 17–23Λ_{17}_{23}Best known latticesLaminated family; optimality open. 24Leech Densest among all packings (proved)Conway group Co_0; universal optimality; 196,560 neighbors. 
+If you want, I can zoom into any specific dimension (say 12, 16, 20) and pull exact densities, kissing numbers, and automorphism facts from Nebe’s table and the primary literature.

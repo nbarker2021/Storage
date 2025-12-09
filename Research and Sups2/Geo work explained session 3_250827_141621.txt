@@ -1,0 +1,50 @@
+Superpermutation Dual-Octad Experiment Log
+This document summarizes the full sequence of explorations and tests performed in our recent sessions. Each section presents the motivation (why), the method (how), and the outcomes (results) of the related work.
+1. Redefinition of Terms (n=1–4)
+Why: To map superpermutation structure into geometric primitives.
+How: Digits 1–4 were redefined as dot, line, triadic shape, and quadratic shape respectively. Superpermutation solutions for n=1 through n=4 were checked for embeddings in geometry.
+Results: Found that solutions naturally aligned with their dimensional counterparts (e.g., n=2 → lines, n=3 → triangles). Established the baseline for extending to higher n.
+2. Squaring Function Extension (n=5–8)
+Why: To test recursive growth rules where higher quartets are treated as powers of the first four.
+How: Extended mapping with 1²–4² for n=5–8. Used greedy superpermutation-like constructions.
+Results: Surprising compression emerged: lengths for n=7 and n=8 aligned close to world-record results (~5913 and ~46233). Raised question of whether new lawful patterns are being uncovered.
+3. Shape Frequency Analysis
+Why: To determine which geometric operators dominate transitions.
+How: Kendall–Tau distances between successive permutations were measured. Mode, mean, and adjacent-step frequencies were tracked.
+Results: Adjacent swaps (d=1) dominated, confirming a bias toward local continuity. Triadic and quadratic shapes repeated with measurable frequency, suggesting lawful rhythm.
+4. Dual Octad Helix Hypothesis (n=8)
+Why: To test if n=8 solutions form counter-rotating helical octads modulated by golden-ratio phasing.
+How: Split symbols into two octads (1–4 vs 5–8). Computed torus embeddings with phasing derived from φ (golden ratio). Measured chirality and recurrence.
+Results:
+• Confirmed perfect counter-rotation: sets always rotate in opposite senses.
+• Root-basis analysis showed ~12.5% steps are nearly pure edge moves—exactly 1/8.
+• Recurrence distances smaller than random baselines, showing structured revisit pattern.
+5. Edge Readiness and Periodicity
+Why: To quantify the observed 1/8 cadence.
+How: Root-basis deltas analyzed. Edge readiness defined as ≥80% energy in one axis. Distribution tracked modulo 8.
+Results: 12.5% of steps were edge-ready, uniform across all residues mod 8. Strong evidence for intrinsic octadic rhythm. Edge-ready steps preserved A–B relations more (0.75 persistence vs 0.716 background).
+6. Chirality and Bridge Coherence
+Why: To test set→bridge←set routing and chirality inflections.
+How: Sliding windows measured triple-product handedness (tri-bias) over the torus stream. Overlayed with bridge metrics (C_AB balance and persistence).
+Results:
+• Strong chirality windows coincided with balanced bridges (C_AB near 8).
+• Chirality flips mark routing inflections.
+• Edge steps enhance persistence of cross-set relations.
+7. Gate Probe
+Why: To test hypothesis of detensor gates enforcing routing beyond least-action.
+How: Isolated top 1% coherent windows. Measured alignment with intra-quartet preference vs cross-bridge dominance.
+Results: Coherent windows favored intra-quartet alignment (high non-bridge fraction, low bridge energy). Suggests gating mechanism is real.
+8. Cross-Check at n=7
+Why: To verify whether cadence generalizes or is strictly octadic.
+How: Recomputed edge readiness and chirality under n=7.
+Results: Edge readiness observed but cadence differed—suggests octadic structure is special, not universal.
+9. Falsification Plan
+Why: To guard against self-confirming bias and validate claims rigorously.
+How: Built YAML-based plan specifying metrics, null models, and tests:
+• C1: Edge readiness at 1/8 frequency.
+• C2: Counter-rotation under corrected phasing.
+• C3: Edge steps preserve A↔B relations more.
+• C4: Strong chirality aligns with balanced bridges.
+Results: Full plan drafted with datasets, metrics, nulls, and statistical thresholds.
+Conclusion
+The experiments support the presence of lawful geometric rhythm in superpermutations, most clearly visible at n=8. The dual-octad helix model, edge cadence, and bridge coherence all reinforce a deep structure. The falsification plan sets the stage for rigorous testing next session.
