@@ -1,0 +1,41 @@
+{
+    "ActionableInsights": [
+        {
+            "Phase": "Phase 1",
+            "Insights": [
+                "Insights generated for Phase 1 using minimal changes.",
+                "No updates were made directly during this phase."
+            ],
+            "Recommendation": "Review insights from Phase 1 for integration into future experiments."
+        },
+        {
+            "Phase": "Phase 2",
+            "Insights": [
+                "Insights generated for Phase 2 using minimal changes.",
+                "No updates were made directly during this phase."
+            ],
+            "Recommendation": "Review insights from Phase 2 for integration into future experiments."
+        },
+        {
+            "Phase": "Phase 3",
+            "Insights": [
+                "Insights generated for Phase 3 using minimal changes.",
+                "No updates were made directly during this phase."
+            ],
+            "Recommendation": "Review insights from Phase 3 for integration into future experiments."
+        },
+        {
+            "Phase": "Phase 4 (Optional)",
+            "Insights": [
+                "Insights generated for Phase 4 (Optional) using minimal changes.",
+                "No updates were made directly during this phase."
+            ],
+            "Recommendation": "Review insights from Phase 4 (Optional) for integration into future experiments."
+        }
+    ],
+    "NextSteps": [
+        "Review all generated insights.",
+        "Integrate meaningful insights into the framework and experiment designs.",
+        "Log any findings that suggest iterative refinements or adjustments."
+    ]
+}

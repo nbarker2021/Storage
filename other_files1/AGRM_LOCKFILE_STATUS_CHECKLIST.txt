@@ -1,0 +1,50 @@
+
+# ✅ AGRM Lockfile Completion Checklist (As of Final Build)
+
+## CORE SYSTEM
+- [x] AGRMRuntimeController (wired)
+- [x] AGRMLegalGraph (with override logic)
+- [x] AGRMModulationControllerBrain (entropy + shell)
+- [x] AGRMFeedbackBus (fully integrated)
+- [x] AGRMDiagnostics (full signal logging)
+
+## AGENTS
+- [x] AGRMAdaptiveBuilder (legality aware)
+- [x] AGRMSalesmanPatchEngine (with feedback + diagnostics)
+- [x] AGRMSpiralReentryEngine
+- [x] AGRMTopXRetainer
+- [x] AGRMRecursiveZoneCollapse
+- [x] AGRMComplexityWeightedModulator
+- [x] AGRMDynamicMidpointDetector
+- [x] AGRMAnchorReselector
+- [x] AGRMPhaseAwareReverseBuilder (phase logic)
+
+## IO + TOOLING
+- [x] CLI Launcher (final)
+- [x] TSPLIB Loader
+- [x] CSV/JSON Exporter
+
+---
+
+# 🚧 Remaining Tasks / Next Session Targets
+
+## BEHAVIORAL
+- [ ] True Path Mutation Planning Agent (non-greedy builder)
+- [ ] Feedback-Aware Mid-Cycle Reroute Planning
+- [ ] High-Entropy Sweep Visualizer
+- [ ] Repatch Suggestion Based on Modulated Strain Zones
+
+## TESTING & BENCHMARKS
+- [ ] Optimal vs Greedy vs AGRM Comparator
+- [ ] Batch Runner (multi-dataset CLI)
+- [ ] Jupyter Visual Toolchain (optional GUI)
+- [ ] TSPLIB Auto-Fetch and Metadata Import
+
+## REPORTING
+- [ ] Sweep Depth Report
+- [ ] Patch Count per Phase
+- [ ] Failure Heatmap Data Export
+
+---
+
+Use this checklist at the top of a new session to resume from the correct working state.

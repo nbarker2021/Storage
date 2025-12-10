@@ -1,0 +1,89 @@
+Alright—here’s the “all digits are operators” story, the accounting for total interior weight, and how the “combined lowest taxicab meeting point” (your CRT-style base/mod rendezvous) plugs into one master family formula. I’ll keep it crisp and self-contained.
+1) Any digit can be a state or an operator
+1.1 Digits-as-states
+We represent content with digits in a finite ring. In our base layer that’s (with wrap ). A quad is .
+• Legality (the “law” a quad must obey):
+• ALT: parity alternates along .
+• W4:  (or)
+• Q8: .
+• Phase (H8): an 8-way tag we try to keep fixed; changing it incurs a receipt.
+1.2 Digits-as-operators
+Each digit is also a move generator—a unit “nudge” along one coordinate:
+• Atomic operators (n=1):
+(mod 4); similarly .
+Cost per unit nudge.
+• Packed operators (n=2..8): structured bundles that apply multiple atomics in one lawful pattern (e.g., an n=4 governance block that legalizes a quad in one go).
+Cost for an -level operator.
+• Symmetries (cost ): Dual, Mirror, Inverse—they rearrange/reflect digits without consuming cost or changing distances on the boundary.
+So a “digit” is both the coordinate value you store and the elementary step you can take. The algebra works because both live in the same mod ring.
+2) “Resting operator state” and total interior weight
+2.1 Resting operator state (ROS)
+A window is at ROS when:
+• It is legal (ALT ∧ (W4 ∨ Q8)) and
+• Its phase H8 matches the inbound phase (no new receipt) and
+• The boundary energy (the penalty from ALT/W4/Q8) is at a local minimum—i.e., further legal moves don’t reduce it.
+Think: “it snaps onto a legal tile on the shell, phase-locked, and can rest.”
+2.2 Total interior weight 
+Given a starting quad , we may need a sequence of operators to reach ROS. The total interior weight is the minimal “work” to get there:
+W_{\text{int}}(q) =\min\Big\{\ \sum_{k} n_k \;+\; \lambda\,|\Delta H8|\ \Big\} 
+• Starting at , apply a multiset of operators (and any number of free symmetries) to reach a quad that is at ROS.
+• is the net phase change (0 if we succeed with phase lock; otherwise the minimal receipt we had to attach).
+• is your chosen penalty for changing phase (set if you only care about raw operator effort; set to strongly prefer phase lock).
+Interpretation:
+• If you only ever use atomics (n=1), is exactly the fewest ±1 digit edits needed (a Manhattan/L1 count).
+• If you use packed n=4/n=5/etc blocks, you may reduce cost further by replacing many atomics with fewer higher-level operators. The minimization accounts for that automatically.
+3) The “combined lowest taxicab meeting point” (CLTMP)
+Multiple modular constraints must be satisfied at once (ALT parity, W4 mod-4, Q8 mod-8, plus any task-specific congruences). The CLTMP is the closest (in L1/“taxicab”) simultaneous solution.
+3.1 Set up the congruences
+Write your constraints as a small system:
+• Parity (ALT) → linear constraints mod 2 on 
+• W4 → 
+• Q8 → 
+• Optional domain constraints → linear/quadratic congruences mod 
+Collect them as .
+3.2 Solve by CRT to a single target fiber
+Map the constraint family to a single modulus via CRT to get a family of legal targets (for the degrees of freedom you can change). The CLTMP is:
+\text{CLTMP}(q) =\arg\min_{y\in \mathcal F}\ \|y-q\|_{1,\text{edit}} 
+“” means fewest unit edits to turn into (taking into account that e.g. changing by 1 affects W4 by 2, etc.). Practically: solve a tiny integer program with L1 objective and modular constraints; for these small mod systems it’s a short closed-form or table lookup.
+3.3 Symmetry-first
+Because symmetries are free, always compute:
+\text{CLTMP}^\star(q) =\min_{g\in\{\text{Dual, Mirror, Inverse}\}^{\le 3}} \ \text{CLTMP}(g\cdot q) 
+4) The “master family formula” (unifying the pieces)
+Put it all together as one deterministic recipe you can compute for any digit system, any operator packing, and any derivative (variant) of the constraints.
+Variables
+• : counts (with signs) of level- operators you fire.
+• : effect matrices for level- operators on the editable coordinates (or their higher-dim analog).
+• : a free symmetry from the small group (Dual/Mirror/Inverse compositions).
+• : H8 phase jump (receipt), measured in Lee distance.
+Objective
+\min_{g,\ \{x_n\},\ \Delta}\quad \underbrace{\sum_{n=1}^8 n\,\|x_n\|_1}_{\text{operator work}} \;+\; \underbrace{\lambda\, d_8(\Delta)}_{\text{phase receipt}} 
+Subject to (the law, after symmetry)
+\begin{aligned} &\text{(a) ALT/W4/Q8 satisfied on } q' \ =\ g\cdot q\ +\ \sum_{n} B_n x_n \\ &\text{(b) }\Delta H8(q\to q') = \Delta \\ &\text{(c) Optional regime/network constraints (if at n=6..8).} \end{aligned} 
+Outputs
+• (your total interior weight),
+• the actual operator plan ,
+• and whether a receipt was needed ().
+This is the master family formula: it works unchanged for any base (swap for ), any CRT stack, any choice of packed operators (just change the matrices ), and any “derivative” of the constraint family (tweak the , recompute CRT, same objective).
+5) A tiny worked micro-example (you can do this on a napkin)
+Start with .
+• Symmetry-first: try Dual/Mirror/Inverse; pick the one that minimizes later edits (often Mirror for parity clashes).
+• CLTMP calculation (say you prefer W4): you need . 
+• Current sum: .
+• To reach 2 mod 4, change by (cost 1) since .
+• But that would break ALT (even/odd pattern). Fix ALT by also flipping by (cost 1).
+• Net: 2 atomic edits, phase unchanged → no receipt.
+• Pack if you like: Instead of two atomics (cost ), you could fire one n=4 governance block that legalizes the quad in one shot (cost ); which you choose depends on your regime.
+• Total interior weight: 
+• atomic plan: 
+• packed plan: 
+• if a phase jump had been unavoidable, add .
+That’s the calculation. The exact numbers change with your preference for W4 vs Q8 and which symmetry you pick, but the method is identical every time.
+6) “Any digit” and “any derivative”
+• Any digit system (e.g., base , mixed bases): change the rings , recompute the CRT merge , keep the same objective. The digits remain both values and operators (±1 steps in their ring).
+• Any derivative of the constraints (alternate legal planes, tightened parity, regime tweaks): just change the congruences . The CLTMP and the master formula don’t change—only the target set changes.
+• Any operator packing: redefine to reflect what your n=3, n=4, … packs do; the minimization will automatically trade atomics for blocks when it’s cheaper.
+TL;DR
+• A digit is both the thing you store and the smallest move you can make.
+• Total interior weight is “fewest steps to resting state,” counting higher-level bundles at their level cost and adding a penalty only if you must change phase.
+• The combined lowest taxicab meeting point is the nearest joint solution to all your mod constraints (found by CRT + L1 minimization, symmetry-first).
+• The master family formula above turns this into one deterministic computation that works for any base, any constraints, any operator palette.

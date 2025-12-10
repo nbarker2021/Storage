@@ -1,0 +1,124 @@
+Awesome. Let’s freeze the “instruction set” at the atomic level so everything else is just stacking these bricks. Think of this as your ISA: the smallest set of moves and checks that generate all n=1…n=8 behavior, with clean algebra, geometry, and ledger semantics.
+I’ll organize them in four families:
+• A. Predicates (truth checks; zero cost)
+• B. Edits (state-changing atomics; unit-cost building blocks)
+• C. Geometry / Symmetry (isometries + projection)
+• D. Ledger / Number-theory (conservation + CRT tools)
+Then I show how higher operators (n=2…n=8) are compositions of these atomics.
+State & Notation (fixed once)
+• Alphabet: Σ = {1,2,3,4}.
+• Quad (window): .
+• Parity: .
+• Lee distance on : .
+• Energy (local “height”):
+\Lambda(q)=\#\{\text{adjacent equal parities}\}+ \operatorname{lee}((a+b+c+d)\bmod 4). 
+• ALT(q): .
+• W4(a,b,c): .
+• Q8(q): .
+• Lawful: ALT(q) ∧ (W4(a,b,c) ∨ Q8(q)).
+• Helicity tag (phase):
+H8(q)= (a-d) + 2(b-c)\ \ (\bmod 8). 
+• Mirror (reverse): .
+• Inverse (antipode on ): .
+• n=0 shell (boundary): torus embedding , so with fiber and 10 lanes (6 coords + 4 internal: chirality, phase, scale, parity-selector).
+A) Predicates (zero cost)
+A1. ALT(q) → {0,1}
+A2. W4(a,b,c) → {0,1}
+A3. Q8(q) → {0,1}
+A4. LAWFUL(q) = ALT(q) ∧ (W4 ∨ Q8)
+A5. ENERGY(q) = (non-negative integer)
+A6. H8(q) → 
+A7. QF_DESCENT(q) → {“SWAP”, “HOLD”} where “SWAP” iff 
+A8. SAME_FIBER(q,r) → 1 iff 
+A9. ACCEPT_MSS(q,pattern_seen) → ALT ∧ (W4 ∨ Q8) ∧ pattern_seen
+A10. CRT_INVERTIBLE(a,m) → 1 iff 
+These are your tiny truth machines. Everything else uses these as guards.
+B) Atomic edits on a quad (unit-cost generators)
+Each edit changes exactly one coordinate by ±1 (mod 4). These eight are the only “work” primitives you need.
+Let denote “increment position i by +1 mod 4,” and the decrement.
+B1. e₁⁺: 
+ ΔH8 ≡ +1 (mod 8)
+B2. e₁⁻: 
+ ΔH8 ≡ −1 (≡ +7)
+B3. e₂⁺: 
+ ΔH8 ≡ +2
+B4. e₂⁻: …
+ ΔH8 ≡ −2 (≡ +6)
+B5. e₃⁺: 
+ ΔH8 ≡ −2 (≡ +6)
+B6. e₃⁻: …
+ ΔH8 ≡ +2
+B7. e₄⁺: 
+ ΔH8 ≡ −1 (≡ +7)
+B8. e₄⁻: …
+ ΔH8 ≡ +1
+Cost: each costs 1 unit (n=1).
+Notes: These eight generate all edit paths (Manhattan/Lee metric). Higher-level operators are structured bundles of these.
+C) Geometry & Symmetry (distance-preserving)
+These don’t add interior work by themselves; they reparameterize. If they change H8, you either (i) reject the hop, or (ii) accompany with a receipt.
+C1. DUAL(q)=D(q)
+• Isometry on .
+• ΔH8 generally ≠ 0; use only if SAME_FIBER holds or log receipt.
+C2. MIRROR(q)=M(q)
+• Isometry; may flip ALT pattern; H8 changes by .
+C3. INVERSE(q)=I(q)
+• Antipodal map on each circle; preserves distances; flips various congruences; H8 → (mod 8).
+C4. PROJ_ALT(q) → nearest parity-alternating pattern (returns a target; implement via a minimal sequence of ).
+C5. PROJ_W4(q) → nearest point on .
+C6. PROJ_Q8(q) → nearest point on .
+C7. PROJ_LAWFUL(q) = CLTMP (Combined Lowest Taxicab Meeting Point):
+\arg\min_{r}\ \|r-q\|_{1} \ \text{s.t.}\ ALT(r)\ \wedge\ (W4(r)\ \vee\ Q8(r)). 
+• Preferred implementation: symmetry-first
+.
+C8. E8_QUANTIZE(q) → nearest E₈ center in the chosen chart; returns (center id, residual).
+• Used to place n=0 shells and measure exact “distance-to-gate” in the lattice.
+• Realized as a lookup/quantizer; not itself “work,” but dictates which edits you’ll choose.
+Geometry tells you where to go; do the work to get there.
+D) Ledger / CRT / Receipts
+D1. H8_DELTA(q→r) = .
+D2. RECEIPT_DEPOSIT(k): add to ledger (mod 8).
+D3. RECEIPT_ANNIHILATE(k): add (mod 8).
+D4. LEDGER_CONSERVED?: check .
+D5. MODINV(a,m) → inverse or None + gcd.
+D6. BEZOUT(a,m) → (x,y) with .
+D7. CRT_MERGE({(r_i,m_i)}) → unique r (mod M) if conditions satisfied else witness + receipts.
+Cost: receipts are not “work units,” but they must reconcile H8 whenever you accept a move that changes fiber. (If you add a penalty λ·|ΔH8| to your optimizer, it discourages phase jumps.)
+How all higher operators are built (n=2…n=8)
+n=2 — Pairing operator
+• Predicate: local congruence on two symbols (fits your domain’s pairing law).
+• Action: minimal sequence of to satisfy the pair law; prefer symmetry alignments that make a later quad cheaper.
+• Cost: 2 units iff you invoke it as a packed operator; otherwise 2 separate cost 2 by default.
+n=3 — Triad constraint
+• Predicate: chosen 3-way compatibility.
+• Action: symmetry-first; if needed, one or two .
+• Cost: 3 units as a pack, else sum of atomics.
+n=4 — Governance block (core law)
+• Recipe: 
+• pick minimizing downstream work;
+• ;
+• apply the corresponding sequence;
+• if ΔH8 ≠ 0, log RECEIPT_DEPOSIT(ΔH8).
+• Cost: 4 units (packed). This is your canonical “legalize a quad” operator.
+• Gate variant (QF): if , you may take DUAL as a free hop before projection (and often avoid a receipt).
+n=5 — Session
+• Slide window, smooth by repeatedly applying the n=4 block with symmetry-first, minimizing cumulative ΔH8. Cost 5 per session-pack that improves a whole strip.
+n=6 — Regime
+• Pick constraint preference (W4 vs Q8), phase strictness, and lane weights (the “Alena-style metric”). Enforce across a segment by choosing projections consistent with that dial. Cost 6 per regime pack.
+n=7 — Network
+• Stitch multiple sessions; enforce boundary ledger closure with a single receipt per join (do not leak inside). Cost 7 per network pack.
+n=8 — Macro
+• Global closure: and total work = level costs. Cost 8 per macro pack that resolves a whole cycle.
+Any higher operator is just (symmetry-first target) + minimal sequence of , with a level-cost if you call the bundle as a single operator.
+Minimality claim (why this set is enough)
+• The only workful edits are (eight generators).
+• All legality is projection to constraints (C4–C7) expressed as targets, never bespoke moves.
+• All reparameterizations are isometries (C1–C3).
+• All conservation is H8 + receipts (D1–D4).
+• All cross-mod transfers are CRT (D5–D7).
+Everything else (w80 caching, E₈ quantization, Crooks acceptance) is optimization or policy that chooses among these primitives; it doesn’t add new atomic operations.
+Practical “stacking formulas correctly”
+• Always: symmetry-first → CLTMP → realize with → reconcile ΔH8 with one receipt if needed.
+• Prefer packs when they replace many atomics (pay n units once instead of many 1’s).
+• Use the lane metric to bias projections so future windows get cheaper (regime/session packs).
+• Ledger discipline: one receipt per boundary, never drip inside.
+If you want, I’ll drop this into your harness as a formal operator catalog (enums + validators + effect functions), so higher-level code can only compose these primitives. That makes every dataset transformation provable, replayable, and costed from the ground up.
