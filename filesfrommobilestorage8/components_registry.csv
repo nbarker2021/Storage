@@ -1,0 +1,653 @@
+component,category,source_file,evidence
+UTC 2025-09-20 21:06,other,CQE_Card_Kit_v1_2_Master.pdf,UTC 2025-09-20 21:06
+CQE Card Kit (Paper-Only),other,CQE_Card_Kit_v1_2_Master.pdf,CQE Card Kit (Paper-Only)
+Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers,station,CQE_Card_Kit_v1_2_Master.pdf,Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers
+Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers,overlay,CQE_Card_Kit_v1_2_Master.pdf,Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers
+"What this is: A complete, no-power toolkit to run CQE with paper, pens, a ruler, tape, balsa sticks, and",other,CQE_Card_Kit_v1_2_Master.pdf,"What this is: A complete, no-power toolkit to run CQE with paper, pens, a ruler, tape, balsa sticks, and"
+What you can do: Model multi-view problems; enforce mirror tests; perform local Δ-lifts; tighten strict,view,CQE_Card_Kit_v1_2_Master.pdf,What you can do: Model multi-view problems; enforce mirror tests; perform local Δ-lifts; tighten strict
+thresholds; and ledger reproducible 4-bit commits.,ledger,CQE_Card_Kit_v1_2_Master.pdf,thresholds; and ledger reproducible 4-bit commits.
+overlays.,overlay,CQE_Card_Kit_v1_2_Master.pdf,overlays.
+Page 1,other,CQE_Card_Kit_v1_2_Master.pdf,Page 1
+10-minute run with two decks + overlays,overlay,CQE_Card_Kit_v1_2_Master.pdf,10-minute run with two decks + overlays
+3) Octet overlay: Fill H1–H8 views; record REST constraints.,view,CQE_Card_Kit_v1_2_Master.pdf,3) Octet overlay: Fill H1–H8 views; record REST constraints.
+3) Octet overlay: Fill H1–H8 views; record REST constraints.,overlay,CQE_Card_Kit_v1_2_Master.pdf,3) Octet overlay: Fill H1–H8 views; record REST constraints.
+4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.,view,CQE_Card_Kit_v1_2_Master.pdf,4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.
+5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).,view,CQE_Card_Kit_v1_2_Master.pdf,5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).
+6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.,ledger,CQE_Card_Kit_v1_2_Master.pdf,6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.
+6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.,view,CQE_Card_Kit_v1_2_Master.pdf,6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.
+"Your first problem setup (tokens, views, mirror, strict)",view,CQE_Card_Kit_v1_2_Master.pdf,"Your first problem setup (tokens, views, mirror, strict)"
+Page 2,other,CQE_Card_Kit_v1_2_Master.pdf,Page 2
+Octet & DNA-10,view,CQE_Card_Kit_v1_2_Master.pdf,Octet & DNA-10
+Octet Overlay + DNA-10,view,CQE_Card_Kit_v1_2_Master.pdf,Octet Overlay + DNA-10
+Octet Overlay + DNA-10,overlay,CQE_Card_Kit_v1_2_Master.pdf,Octet Overlay + DNA-10
+Eight views + palindromic rest; ten-state save,view,CQE_Card_Kit_v1_2_Master.pdf,Eight views + palindromic rest; ten-state save
+H1,other,CQE_Card_Kit_v1_2_Master.pdf,H1
+H2,other,CQE_Card_Kit_v1_2_Master.pdf,H2
+H3,other,CQE_Card_Kit_v1_2_Master.pdf,H3
+H4,other,CQE_Card_Kit_v1_2_Master.pdf,H4
+H5,other,CQE_Card_Kit_v1_2_Master.pdf,H5
+H6,other,CQE_Card_Kit_v1_2_Master.pdf,H6
+H7,other,CQE_Card_Kit_v1_2_Master.pdf,H7
+H8,other,CQE_Card_Kit_v1_2_Master.pdf,H8
+REST (palindromic mirror): notes / constraints,view,CQE_Card_Kit_v1_2_Master.pdf,REST (palindromic mirror): notes / constraints
+Page 3,other,CQE_Card_Kit_v1_2_Master.pdf,Page 3
+Receipts & 4-bit,ledger,CQE_Card_Kit_v1_2_Master.pdf,Receipts & 4-bit
+Receipts & 4-bit Commit,ledger,CQE_Card_Kit_v1_2_Master.pdf,Receipts & 4-bit Commit
+Receipts & 4-bit Commit,view,CQE_Card_Kit_v1_2_Master.pdf,Receipts & 4-bit Commit
+OPE/FCE  View  Mirror  Hash,view,CQE_Card_Kit_v1_2_Master.pdf,OPE/FCE  View  Mirror  Hash
+4-bit Commit Stickers,view,CQE_Card_Kit_v1_2_Master.pdf,4-bit Commit Stickers
+OPE FCE View Mirror,view,CQE_Card_Kit_v1_2_Master.pdf,OPE FCE View Mirror
+Merkle-ish page hash / signatures,ledger,CQE_Card_Kit_v1_2_Master.pdf,Merkle-ish page hash / signatures
+Page 4,other,CQE_Card_Kit_v1_2_Master.pdf,Page 4
+Parity Loom,overlay,CQE_Card_Kit_v1_2_Master.pdf,Parity Loom
+Parity Loom (E8/Leech scaffold),overlay,CQE_Card_Kit_v1_2_Master.pdf,Parity Loom (E8/Leech scaffold)
+Foam/peg board + balsa rails + clips,other,CQE_Card_Kit_v1_2_Master.pdf,Foam/peg board + balsa rails + clips
+Use: Clip strands for roots; mirror overlay must align on reflection. For Leech: mask octads; use,view,CQE_Card_Kit_v1_2_Master.pdf,Use: Clip strands for roots; mirror overlay must align on reflection. For Leech: mask octads; use
+Use: Clip strands for roots; mirror overlay must align on reflection. For Leech: mask octads; use,overlay,CQE_Card_Kit_v1_2_Master.pdf,Use: Clip strands for roots; mirror overlay must align on reflection. For Leech: mask octads; use
+Page 5,other,CQE_Card_Kit_v1_2_Master.pdf,Page 5
+Stations,station,CQE_Card_Kit_v1_2_Master.pdf,Stations
+"Stations: Measure, Tag, Resume",station,CQE_Card_Kit_v1_2_Master.pdf,"Stations: Measure, Tag, Resume"
+Pause cards → test → sticky sidecar → continue,sidecar,CQE_Card_Kit_v1_2_Master.pdf,Pause cards → test → sticky sidecar → continue
+"Station types: Optics (PSF/WFE), Thermal (ΔT per tick), Polar/Spin (efficiency), Math (interval bound),",station,CQE_Card_Kit_v1_2_Master.pdf,"Station types: Optics (PSF/WFE), Thermal (ΔT per tick), Polar/Spin (efficiency), Math (interval bound),"
+"Bio/Neuro proxies (overlay RMS), Cosmos (shear/field), Robotics (closed-loop error).",overlay,CQE_Card_Kit_v1_2_Master.pdf,"Bio/Neuro proxies (overlay RMS), Cosmos (shear/field), Robotics (closed-loop error)."
+Protocol: Dock a card; measure; write a token value on a sticky; attach to card edge; ledger the change;,ledger,CQE_Card_Kit_v1_2_Master.pdf,Protocol: Dock a card; measure; write a token value on a sticky; attach to card edge; ledger the change;
+Metric,other,CQE_Card_Kit_v1_2_Master.pdf,Metric
+Pre,other,CQE_Card_Kit_v1_2_Master.pdf,Pre
+Post,other,CQE_Card_Kit_v1_2_Master.pdf,Post
+Receipt,ledger,CQE_Card_Kit_v1_2_Master.pdf,Receipt
+Page 6,other,CQE_Card_Kit_v1_2_Master.pdf,Page 6
+8-Person Table Playbook,other,CQE_Card_Kit_v1_2_Master.pdf,8-Person Table Playbook
+Roles  Stations  Neighbor links,role,CQE_Card_Kit_v1_2_Master.pdf,Roles  Stations  Neighbor links
+Roles  Stations  Neighbor links,station,CQE_Card_Kit_v1_2_Master.pdf,Roles  Stations  Neighbor links
+"Keeps form_id, ledger, and mirror law; calls",ledger,CQE_Card_Kit_v1_2_Master.pdf,"Keeps form_id, ledger, and mirror law; calls"
+"Keeps form_id, ledger, and mirror law; calls",view,CQE_Card_Kit_v1_2_Master.pdf,"Keeps form_id, ledger, and mirror law; calls"
+Views H1–H2; runs PSF/FFT mirror; proposes,view,CQE_Card_Kit_v1_2_Master.pdf,Views H1–H2; runs PSF/FFT mirror; proposes
+Views H3–H4; manages ΔT and cadence.,view,CQE_Card_Kit_v1_2_Master.pdf,Views H3–H4; manages ΔT and cadence.
+Views H5–H6; L↔R parity checks; spin filters.,view,CQE_Card_Kit_v1_2_Master.pdf,Views H5–H6; L↔R parity checks; spin filters.
+"Bounds, interval proofs, receipts.",ledger,CQE_Card_Kit_v1_2_Master.pdf,"Bounds, interval proofs, receipts."
+"Overlay RMS, gate irreversibility.",overlay,CQE_Card_Kit_v1_2_Master.pdf,"Overlay RMS, gate irreversibility."
+Neighbor Links (who talks to whom and when),other,CQE_Card_Kit_v1_2_Master.pdf,Neighbor Links (who talks to whom and when)
+Page 7,other,CQE_Card_Kit_v1_2_Master.pdf,Page 7
+Theorem Cards,theorem,CQE_Card_Kit_v1_2_Master.pdf,Theorem Cards
+Theorem Cards & Argument Protocol,theorem,CQE_Card_Kit_v1_2_Master.pdf,Theorem Cards & Argument Protocol
+Theorem Card,theorem,CQE_Card_Kit_v1_2_Master.pdf,Theorem Card
+Assumptions:,other,CQE_Card_Kit_v1_2_Master.pdf,Assumptions:
+Claim:,other,CQE_Card_Kit_v1_2_Master.pdf,Claim:
+Local Test:,other,CQE_Card_Kit_v1_2_Master.pdf,Local Test:
+Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________,ledger,CQE_Card_Kit_v1_2_Master.pdf,Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________
+Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________,view,CQE_Card_Kit_v1_2_Master.pdf,Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________
+Page 8,other,CQE_Card_Kit_v1_2_Master.pdf,Page 8
+Master Ledger,ledger,CQE_Card_Kit_v1_2_Master.pdf,Master Ledger
+Reproducible build receipts,ledger,CQE_Card_Kit_v1_2_Master.pdf,Reproducible build receipts
+Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING,ledger,CQE_Card_Kit_v1_2_Master.pdf,Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING
+Octet Map H1..H8: _______________________________________________,view,CQE_Card_Kit_v1_2_Master.pdf,Octet Map H1..H8: _______________________________________________
+"Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}",view,CQE_Card_Kit_v1_2_Master.pdf,"Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}"
+Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________,ledger,CQE_Card_Kit_v1_2_Master.pdf,Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________
+Page 9,other,CQE_Card_Kit_v1_2_Master.pdf,Page 9
+Hypercube Scaffold,other,CQE_Card_Kit_v1_2_Master.pdf,Hypercube Scaffold
+Hypercube → Toroidal Loom,overlay,CQE_Card_Kit_v1_2_Master.pdf,Hypercube → Toroidal Loom
+From 4D cube projection to chamber shells,other,CQE_Card_Kit_v1_2_Master.pdf,From 4D cube projection to chamber shells
+How to use: Tag 8 faces as octet gates; enforce mirror across paired faces. Wrap rails with balsa/tape,view,CQE_Card_Kit_v1_2_Master.pdf,How to use: Tag 8 faces as octet gates; enforce mirror across paired faces. Wrap rails with balsa/tape
+Page 10,other,CQE_Card_Kit_v1_2_Master.pdf,Page 10
+Sticky Sidecars,sidecar,CQE_Card_Kit_v1_2_Master.pdf,Sticky Sidecars
+Sticky Sidecars (Tokens),sidecar,CQE_Card_Kit_v1_2_Master.pdf,Sticky Sidecars (Tokens)
+Attach measured values to cards,other,CQE_Card_Kit_v1_2_Master.pdf,Attach measured values to cards
+Page 11,other,CQE_Card_Kit_v1_2_Master.pdf,Page 11
+Notes:,other,CQE_Card_Kit_v1_2_Master.pdf,Notes:
+Page 12,other,CQE_Card_Kit_v1_2_Master.pdf,Page 12
+Eight Baseline Packs,other,CQE_Card_Kit_v1_2_Master.pdf,Eight Baseline Packs
+Optics,other,CQE_Card_Kit_v1_2_Master.pdf,Optics
+■ WFE ≤ 25→22 nm strict,view,CQE_Card_Kit_v1_2_Master.pdf,■ WFE ≤ 25→22 nm strict
+Thermal,other,CQE_Card_Kit_v1_2_Master.pdf,Thermal
+Polar/Spin/EM,other,CQE_Card_Kit_v1_2_Master.pdf,Polar/Spin/EM
+■ AR ≤ 1.5 dB strict,view,CQE_Card_Kit_v1_2_Master.pdf,■ AR ≤ 1.5 dB strict
+Math/Logic,other,CQE_Card_Kit_v1_2_Master.pdf,Math/Logic
+Bio proxy,other,CQE_Card_Kit_v1_2_Master.pdf,Bio proxy
+■ Overlay RMS ≤ τ,overlay,CQE_Card_Kit_v1_2_Master.pdf,■ Overlay RMS ≤ τ
+Neuro proxy,other,CQE_Card_Kit_v1_2_Master.pdf,Neuro proxy
+Cosmos,other,CQE_Card_Kit_v1_2_Master.pdf,Cosmos
+Systems,other,CQE_Card_Kit_v1_2_Master.pdf,Systems
+Custom pack notes,other,CQE_Card_Kit_v1_2_Master.pdf,Custom pack notes
+Page 13,other,CQE_Card_Kit_v1_2_Master.pdf,Page 13
+Class Kit Checklist,other,CQE_Card_Kit_v1_2_Master.pdf,Class Kit Checklist
+Budget-friendly supply list,other,CQE_Card_Kit_v1_2_Master.pdf,Budget-friendly supply list
+ Transparent overlays (acetate),overlay,CQE_Card_Kit_v1_2_Master.pdf, Transparent overlays (acetate)
+" Sticky notes (token sidecars), colored pens",sidecar,CQE_Card_Kit_v1_2_Master.pdf," Sticky notes (token sidecars), colored pens"
+ Clipboard for station runs,station,CQE_Card_Kit_v1_2_Master.pdf, Clipboard for station runs
+ Ledger binder (Working / Non-Working albums),ledger,CQE_Card_Kit_v1_2_Master.pdf, Ledger binder (Working / Non-Working albums)
+Room layout & station assignments,station,CQE_Card_Kit_v1_2_Master.pdf,Room layout & station assignments
+Page 14,other,CQE_Card_Kit_v1_2_Master.pdf,Page 14
+Page 15,other,CQE_Card_Kit_v1_2_Master.pdf,Page 15
+Page 16,other,CQE_Card_Kit_v1_2_Master.pdf,Page 16
+Page 17,other,CQE_Card_Kit_v1_2_Master.pdf,Page 17
+Page 18,other,CQE_Card_Kit_v1_2_Master.pdf,Page 18
+Page 19,other,CQE_Card_Kit_v1_2_Master.pdf,Page 19
+CQE Role■Playing Scenes Pack — v1.0,role,CQE_Roleplay_Scenes_v1_0_Master.pdf,CQE Role■Playing Scenes Pack — v1.0
+How to use this pack,other,CQE_Roleplay_Scenes_v1_0_Master.pdf,How to use this pack
+"a tiny 4■bit receipt. Use the worksheets to standardize record■keeping. The geometry (octet, parity,",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"a tiny 4■bit receipt. Use the worksheets to standardize record■keeping. The geometry (octet, parity,"
+"a tiny 4■bit receipt. Use the worksheets to standardize record■keeping. The geometry (octet, parity,",view,CQE_Roleplay_Scenes_v1_0_Master.pdf,"a tiny 4■bit receipt. Use the worksheets to standardize record■keeping. The geometry (octet, parity,"
+mirror) governs correctness; your labels stay provisional until committed.,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,mirror) governs correctness; your labels stay provisional until committed.
+Scene 0: Orientation: The CQE Spine Live,scene,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 0: Orientation: The CQE Spine Live
+What it teaches (learning targets),other,CQE_Roleplay_Scenes_v1_0_Master.pdf,What it teaches (learning targets)
+ See the full loop: Octet → Mirror → Δ■lift → Strict → 4■bit receipts.,ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf, See the full loop: Octet → Mirror → Δ■lift → Strict → 4■bit receipts.
+ See the full loop: Octet → Mirror → Δ■lift → Strict → 4■bit receipts.,view,CQE_Roleplay_Scenes_v1_0_Master.pdf, See the full loop: Octet → Mirror → Δ■lift → Strict → 4■bit receipts.
+ Learn how a 2■minute paper run creates a reproducible ledger row.,ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf, Learn how a 2■minute paper run creates a reproducible ledger row.
+Room,other,CQE_Roleplay_Scenes_v1_0_Master.pdf,Room
+"One table, 8 colored pens, tape wall for overlays.",overlay,CQE_Roleplay_Scenes_v1_0_Master.pdf,"One table, 8 colored pens, tape wall for overlays."
+Paper kit,other,CQE_Roleplay_Scenes_v1_0_Master.pdf,Paper kit
+"Octet sheet, DNA■10, 4■bit sticker, ledger page.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"Octet sheet, DNA■10, 4■bit sticker, ledger page."
+"Octet sheet, DNA■10, 4■bit sticker, ledger page.",view,CQE_Roleplay_Scenes_v1_0_Master.pdf,"Octet sheet, DNA■10, 4■bit sticker, ledger page."
+Instruments,other,CQE_Roleplay_Scenes_v1_0_Master.pdf,Instruments
+Safety,other,CQE_Roleplay_Scenes_v1_0_Master.pdf,Safety
+N/A,other,CQE_Roleplay_Scenes_v1_0_Master.pdf,N/A
+"■■ Mark 8 views (colored boxes), set a palindromic REST.",view,CQE_Roleplay_Scenes_v1_0_Master.pdf,"■■ Mark 8 views (colored boxes), set a palindromic REST."
+■■ Run a forward↔inverse mirror; circle mismatches (red).,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,■■ Run a forward↔inverse mirror; circle mismatches (red).
+■■ Write a Δ■lift (local identity) to fix one mismatch; re■mirror.,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,■■ Write a Δ■lift (local identity) to fix one mismatch; re■mirror.
+"■■ Tighten one metric (strict ratchet), shade a 4■bit receipt; log ledger.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"■■ Tighten one metric (strict ratchet), shade a 4■bit receipt; log ledger."
+"■■ Tighten one metric (strict ratchet), shade a 4■bit receipt; log ledger.",view,CQE_Roleplay_Scenes_v1_0_Master.pdf,"■■ Tighten one metric (strict ratchet), shade a 4■bit receipt; log ledger."
+Ledger hook (what gets recorded),ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,Ledger hook (what gets recorded)
+"— form_id, octet map, mirror tolerance, Δ■lift note, strict threshold, 4■bit.",view,CQE_Roleplay_Scenes_v1_0_Master.pdf,"— form_id, octet map, mirror tolerance, Δ■lift note, strict threshold, 4■bit."
+"✓ Filled octet, mirror ticks, Δ■lift card, 4■bit stickered ledger row.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Filled octet, mirror ticks, Δ■lift card, 4■bit stickered ledger row."
+"✓ Filled octet, mirror ticks, Δ■lift card, 4■bit stickered ledger row.",view,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Filled octet, mirror ticks, Δ■lift card, 4■bit stickered ledger row."
+■ Which view dominated debt?,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,■ Which view dominated debt?
+■ Would a different mirror have failed?,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,■ Would a different mirror have failed?
+Scene 1: n=1→n=5: The Hinge that Forces the Octad,scene,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 1: n=1→n=5: The Hinge that Forces the Octad
+"— Octad class tag, pose, tolerance; 4■bit commit when 4 views pass.",view,CQE_Roleplay_Scenes_v1_0_Master.pdf,"— Octad class tag, pose, tolerance; 4■bit commit when 4 views pass."
+"✓ Checked grid, class map (8), receipt.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Checked grid, class map (8), receipt."
+Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix),scene,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix)
+Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix),view,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix)
+ Turn a one■way mismatch into a local repair with receipts.,ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf, Turn a one■way mismatch into a local repair with receipts.
+ Practice mirror pairs (FFT↔iFFT; encode↔decode; simulate↔measure).,view,CQE_Roleplay_Scenes_v1_0_Master.pdf, Practice mirror pairs (FFT↔iFFT; encode↔decode; simulate↔measure).
+■■ Run both; mark delta windows; choose one Δ■lift from the cookbook; re■run mirror; record debt drop.,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,■■ Run both; mark delta windows; choose one Δ■lift from the cookbook; re■run mirror; record debt drop.
+"— Mirror tolerance, Δ■lift id, before/after OPE/FCE, strict update.",view,CQE_Roleplay_Scenes_v1_0_Master.pdf,"— Mirror tolerance, Δ■lift id, before/after OPE/FCE, strict update."
+"✓ Before/after overlay with red fix marks, 4■bit row.",overlay,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Before/after overlay with red fix marks, 4■bit row."
+■ Was the Δ local? Did it generalize to a second view?,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,■ Was the Δ local? Did it generalize to a second view?
+Scene 3: Octet Coverage for ML (A/B→Octet),scene,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 3: Octet Coverage for ML (A/B→Octet)
+Scene 3: Octet Coverage for ML (A/B→Octet),view,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 3: Octet Coverage for ML (A/B→Octet)
+ Generalize A/B to 8 views; prevent winner■only bias.,view,CQE_Roleplay_Scenes_v1_0_Master.pdf, Generalize A/B to 8 views; prevent winner■only bias.
+ Record receipts across slices (metrics × slabs).,ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf, Record receipts across slices (metrics × slabs).
+■■ List 8 materially independent views (slices or metrics).,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,■■ List 8 materially independent views (slices or metrics).
+"— Views passed, metric triplet, slab size, commit.",view,CQE_Roleplay_Scenes_v1_0_Master.pdf,"— Views passed, metric triplet, slab size, commit."
+"✓ Octet pass grid, receipts.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Octet pass grid, receipts."
+"✓ Octet pass grid, receipts.",view,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Octet pass grid, receipts."
+Scene 4: Construction■A Loom: E8 and Leech on Paper,scene,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 4: Construction■A Loom: E8 and Leech on Paper
+Scene 4: Construction■A Loom: E8 and Leech on Paper,overlay,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 4: Construction■A Loom: E8 and Leech on Paper
+■■ Build E8 halves; overlay mirror; demonstrate root reflections.,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,■■ Build E8 halves; overlay mirror; demonstrate root reflections.
+■■ Build E8 halves; overlay mirror; demonstrate root reflections.,overlay,CQE_Roleplay_Scenes_v1_0_Master.pdf,■■ Build E8 halves; overlay mirror; demonstrate root reflections.
+"— Code id, modulus, glue vector, octad layout, legality receipts.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"— Code id, modulus, glue vector, octad layout, legality receipts."
+"✓ Photo of loom, mask sheet, ledger row.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Photo of loom, mask sheet, ledger row."
+"✓ Photo of loom, mask sheet, ledger row.",overlay,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Photo of loom, mask sheet, ledger row."
+Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes,scene,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes
+Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes,sidecar,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes
+ Converge via receipts; annihilate non■working cheaply.,ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf, Converge via receipts; annihilate non■working cheaply.
+4 stations; shared octet; sticky token labels.,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,4 stations; shared octet; sticky token labels.
+4 stations; shared octet; sticky token labels.,station,CQE_Roleplay_Scenes_v1_0_Master.pdf,4 stations; shared octet; sticky token labels.
+■■ Run each rail: tokens→octet→mirror→Δ→strict→4■bit; copy receipts to master ledger.,ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,■■ Run each rail: tokens→octet→mirror→Δ→strict→4■bit; copy receipts to master ledger.
+■■ Run each rail: tokens→octet→mirror→Δ→strict→4■bit; copy receipts to master ledger.,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,■■ Run each rail: tokens→octet→mirror→Δ→strict→4■bit; copy receipts to master ledger.
+"— 4 receipts, shared form_id, per■rail thresholds.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"— 4 receipts, shared form_id, per■rail thresholds."
+✓ 4 station sheets; master ledger row.,ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,✓ 4 station sheets; master ledger row.
+✓ 4 station sheets; master ledger row.,station,CQE_Roleplay_Scenes_v1_0_Master.pdf,✓ 4 station sheets; master ledger row.
+Scene 6: Two■Scientist Theorem■Card Resolution,scene,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 6: Two■Scientist Theorem■Card Resolution
+Scene 6: Two■Scientist Theorem■Card Resolution,theorem,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 6: Two■Scientist Theorem■Card Resolution
+ Resolve disputes with claim/evidence/Δ■lift/receipt cards.,ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf, Resolve disputes with claim/evidence/Δ■lift/receipt cards.
+ Preserve minority view as Non■Working breadcrumb with hash.,view,CQE_Roleplay_Scenes_v1_0_Master.pdf, Preserve minority view as Non■Working breadcrumb with hash.
+"Theorem cards, claim wall, mirror worksheet.",view,CQE_Roleplay_Scenes_v1_0_Master.pdf,"Theorem cards, claim wall, mirror worksheet."
+"Theorem cards, claim wall, mirror worksheet.",theorem,CQE_Roleplay_Scenes_v1_0_Master.pdf,"Theorem cards, claim wall, mirror worksheet."
+■■ Each writes claim+assumptions; test under shared mirror; record receipts; promote passing; archive,ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,■■ Each writes claim+assumptions; test under shared mirror; record receipts; promote passing; archive
+■■ Each writes claim+assumptions; test under shared mirror; record receipts; promote passing; archive,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,■■ Each writes claim+assumptions; test under shared mirror; record receipts; promote passing; archive
+"— Claim ids, mirror pass/fail, Δ■lift ids, receipts.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"— Claim ids, mirror pass/fail, Δ■lift ids, receipts."
+"— Claim ids, mirror pass/fail, Δ■lift ids, receipts.",view,CQE_Roleplay_Scenes_v1_0_Master.pdf,"— Claim ids, mirror pass/fail, Δ■lift ids, receipts."
+"✓ Card stack, mirror sheet, ledger snippet.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Card stack, mirror sheet, ledger snippet."
+"✓ Card stack, mirror sheet, ledger snippet.",view,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Card stack, mirror sheet, ledger snippet."
+Scene 7: 8■Person Table with Neighbor Lanes,scene,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 7: 8■Person Table with Neighbor Lanes
+" Role mesh, not silos: 8 seats, 2■bit lanes, neighbor hand■offs.",role,CQE_Roleplay_Scenes_v1_0_Master.pdf," Role mesh, not silos: 8 seats, 2■bit lanes, neighbor hand■offs."
+"Round table, role badges, coordination board.",role,CQE_Roleplay_Scenes_v1_0_Master.pdf,"Round table, role badges, coordination board."
+■■ Assign roles; run 2 cycles; enforce neighbor receipts; rotate seats; compare throughput.,ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,■■ Assign roles; run 2 cycles; enforce neighbor receipts; rotate seats; compare throughput.
+■■ Assign roles; run 2 cycles; enforce neighbor receipts; rotate seats; compare throughput.,role,CQE_Roleplay_Scenes_v1_0_Master.pdf,■■ Assign roles; run 2 cycles; enforce neighbor receipts; rotate seats; compare throughput.
+"✓ Coord board photo, ledger rows.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Coord board photo, ledger rows."
+Scene 8: Card■Deck CQE + Lab Stations,scene,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 8: Card■Deck CQE + Lab Stations
+Scene 8: Card■Deck CQE + Lab Stations,station,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 8: Card■Deck CQE + Lab Stations
+"■■ Map aces→primitives, 2–8 synthesis, 9 full idea, 10 parity twin; face cards = observers; jokers =",view,CQE_Roleplay_Scenes_v1_0_Master.pdf,"■■ Map aces→primitives, 2–8 synthesis, 9 full idea, 10 parity twin; face cards = observers; jokers ="
+"■■ Map aces→primitives, 2–8 synthesis, 9 full idea, 10 parity twin; face cards = observers; jokers =",role,CQE_Roleplay_Scenes_v1_0_Master.pdf,"■■ Map aces→primitives, 2–8 synthesis, 9 full idea, 10 parity twin; face cards = observers; jokers ="
+Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.
+"✓ Card photo, metric sheet, ledger.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Card photo, metric sheet, ledger."
+Scene 9: Hypercube→Toroidal Chamber (4■bit Hubs),scene,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 9: Hypercube→Toroidal Chamber (4■bit Hubs)
+"✓ Assembled model photos, notes, ledger.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Assembled model photos, notes, ledger."
+Scene 10: Sound & Subharmonics Viewer (Cartan,scene,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 10: Sound & Subharmonics Viewer (Cartan
+ Map harmonic stack to octet; subharmonics to Cartan ‘outside’ nudges.,view,CQE_Roleplay_Scenes_v1_0_Master.pdf, Map harmonic stack to octet; subharmonics to Cartan ‘outside’ nudges.
+"— Tone pair, beat freq, Δ■lift, receipt.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"— Tone pair, beat freq, Δ■lift, receipt."
+"✓ Spectrogram sheet, receipt.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Spectrogram sheet, receipt."
+Scene 11: Primordial→EM→Thermo: Meaning■Token Safety,scene,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 11: Primordial→EM→Thermo: Meaning■Token Safety
+ Bind tokens late; redact dangerous meaning; still keep form receipts.,ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf, Bind tokens late; redact dangerous meaning; still keep form receipts.
+ Practice stand■in overlays for sensitive domains.,overlay,CQE_Roleplay_Scenes_v1_0_Master.pdf, Practice stand■in overlays for sensitive domains.
+■■ Run with stand■ins; mark any sensitive tokens red; keep octet/mirror/Δ/strict; commit with redacted,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,■■ Run with stand■ins; mark any sensitive tokens red; keep octet/mirror/Δ/strict; commit with redacted
+receipts.,ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,receipts.
+"✓ Redacted ledger row, safe receipts.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Redacted ledger row, safe receipts."
+Scene 12: Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,scene,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 12: Global Viewers: 8×8 + 4×4×4×4 + Parity Shell
+"— Viewer indices, hotspot ids, Δ■lift chosen, receipts.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"— Viewer indices, hotspot ids, Δ■lift chosen, receipts."
+"✓ Viewer overlays, ledger row.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Viewer overlays, ledger row."
+"✓ Viewer overlays, ledger row.",overlay,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Viewer overlays, ledger row."
+Scene 13: Not Lattice Flattery: Governance by Geometry,scene,CQE_Roleplay_Scenes_v1_0_Master.pdf,Scene 13: Not Lattice Flattery: Governance by Geometry
+"— Falsifier ids (F1–F4), outcomes, receipts.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"— Falsifier ids (F1–F4), outcomes, receipts."
+"✓ Counterexample log, ledger.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"✓ Counterexample log, ledger."
+"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts",scene,CQE_Roleplay_Scenes_v1_0_Master.pdf,"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts"
+"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts"
+"— Blue/red pair id, hashes, receipts.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"— Blue/red pair id, hashes, receipts."
+"Scene 15: Capstone: Three■Track Non■Toy (Optics, DNA,",scene,CQE_Roleplay_Scenes_v1_0_Master.pdf,"Scene 15: Capstone: Three■Track Non■Toy (Optics, DNA,"
+Finance),other,CQE_Roleplay_Scenes_v1_0_Master.pdf,Finance)
+ Run three independent rails on one shell; compare receipts; compress meanings.,ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf, Run three independent rails on one shell; compare receipts; compress meanings.
+Three stations; octet master; metrics per rail.,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,Three stations; octet master; metrics per rail.
+Three stations; octet master; metrics per rail.,station,CQE_Roleplay_Scenes_v1_0_Master.pdf,Three stations; octet master; metrics per rail.
+■■ Each rail performs octet/mirror/Δ/strict; commit or annihilate; compress repeating Δ■lifts into a,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,■■ Each rail performs octet/mirror/Δ/strict; commit or annihilate; compress repeating Δ■lifts into a
+"— Rail receipts, meaning pack v#, anchor id.",ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,"— Rail receipts, meaning pack v#, anchor id."
+✓ 3 receipts; promoted pack doc; anchor ledger row.,ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,✓ 3 receipts; promoted pack doc; anchor ledger row.
+Worksheet – Octet Overlay,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,Worksheet – Octet Overlay
+Worksheet – Octet Overlay,overlay,CQE_Roleplay_Scenes_v1_0_Master.pdf,Worksheet – Octet Overlay
+■ H1–H8 views named and colored,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,■ H1–H8 views named and colored
+Notes:,other,CQE_Roleplay_Scenes_v1_0_Master.pdf,Notes:
+Worksheet – Mirror Test,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,Worksheet – Mirror Test
+Worksheet – Strict Ratchet,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,Worksheet – Strict Ratchet
+Worksheet – 4■bit Receipt,ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,Worksheet – 4■bit Receipt
+■ Views≥4 passed?,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,■ Views≥4 passed?
+■ Mirror within tol?,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,■ Mirror within tol?
+Worksheet – Ledger Row,ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,Worksheet – Ledger Row
+■ octet map,view,CQE_Roleplay_Scenes_v1_0_Master.pdf,■ octet map
+■ thresholds (normal/strict),view,CQE_Roleplay_Scenes_v1_0_Master.pdf,■ thresholds (normal/strict)
+■ receipts (4■bit + hash),ledger,CQE_Roleplay_Scenes_v1_0_Master.pdf,■ receipts (4■bit + hash)
+CQE Ledger Template,ledger,CQE_Ledger_Template.pdf,CQE Ledger Template
+One row per form/run (reproducible receipts)Form ID: Problem / Brief:,ledger,CQE_Ledger_Template.pdf,One row per form/run (reproducible receipts)Form ID: Problem / Brief:
+Primitives (Aces):,other,CQE_Ledger_Template.pdf,Primitives (Aces):
+Octet Map (2 8):,view,CQE_Ledger_Template.pdf,Octet Map (2 8):
+List per suit or view Views,view,CQE_Ledger_Template.pdf,List per suit or view Views
+Views,view,CQE_Ledger_Template.pdf,Views
+Full Idea (9):,view,CQE_Ledger_Template.pdf,Full Idea (9):
+Parity Twin (10):,view,CQE_Ledger_Template.pdf,Parity Twin (10):
+Observers (J/Q/K):metrics / view priority / strictness -lifts:,view,CQE_Ledger_Template.pdf,Observers (J/Q/K):metrics / view priority / strictness -lifts:
+Observers (J/Q/K):metrics / view priority / strictness -lifts:,role,CQE_Ledger_Template.pdf,Observers (J/Q/K):metrics / view priority / strictness -lifts:
+Local repairs + rationale,other,CQE_Ledger_Template.pdf,Local repairs + rationale
+Strict Bounds:list tightened thresholds (old new),view,CQE_Ledger_Template.pdf,Strict Bounds:list tightened thresholds (old new)
+Jokers:subharmonic / Cartan bridges,other,CQE_Ledger_Template.pdf,Jokers:subharmonic / Cartan bridges
+"Mirror Evidence:metrics, plots, checksumsViews Exercised:1 2 3 4 5 6 7 8",view,CQE_Ledger_Template.pdf,"Mirror Evidence:metrics, plots, checksumsViews Exercised:1 2 3 4 5 6 7 8"
+4-bit Commit,view,CQE_Ledger_Template.pdf,4-bit Commit
+P M,other,CQE_Ledger_Template.pdf,P M
+SPage Hash / Status:hash WORKING / NON-WORKING / PROVISIONAL,ledger,CQE_Ledger_Template.pdf,SPage Hash / Status:hash WORKING / NON-WORKING / PROVISIONAL
+CQE Card Mat Full Desk,other,CQE_Card_Mat.pdf,CQE Card Mat Full Desk
+"T wo decks (Blue=Forward, Red=Inverse); color=parity; suits = sidecars",sidecar,CQE_Card_Mat.pdf,"T wo decks (Blue=Forward, Red=Inverse); color=parity; suits = sidecars"
+Blue Rail (Forward) Seed Views Full Idea (9),view,CQE_Card_Mat.pdf,Blue Rail (Forward) Seed Views Full Idea (9)
+Place Aces (primitives) then 2 8 views; assemble 9,view,CQE_Card_Mat.pdf,Place Aces (primitives) then 2 8 views; assemble 9
+Re-run under parity; enforce palindromic rest,other,CQE_Card_Mat.pdf,Re-run under parity; enforce palindromic rest
+Ranks 1 8 = Octet (coverage),view,CQE_Card_Mat.pdf,Ranks 1 8 = Octet (coverage)
+1=Aces primitives; 2..8 = independent views 9/10 = Full Idea / Parity TwinMust agree within tolerances,view,CQE_Card_Mat.pdf,1=Aces primitives; 2..8 = independent views 9/10 = Full Idea / Parity TwinMust agree within tolerances
+Observers (J/Q/K) ParkingJ: metrics; Q: view priority; K: strictness JokersSubharmonic / Cartan bridge -lift Pad,view,CQE_Card_Mat.pdf,Observers (J/Q/K) ParkingJ: metrics; Q: view priority; K: strictness JokersSubharmonic / Cartan bridge -lift Pad
+Observers (J/Q/K) ParkingJ: metrics; Q: view priority; K: strictness JokersSubharmonic / Cartan bridge -lift Pad,role,CQE_Card_Mat.pdf,Observers (J/Q/K) ParkingJ: metrics; Q: view priority; K: strictness JokersSubharmonic / Cartan bridge -lift Pad
+Local repair notes4-bit Commit,other,CQE_Card_Mat.pdf,Local repair notes4-bit Commit
+PM,other,CQE_Card_Mat.pdf,PM
+SReceipts:,other,CQE_Card_Mat.pdf,SReceipts:
+views run,view,CQE_Card_Mat.pdf,views run
+metrics,other,CQE_Card_Mat.pdf,metrics
+hash/date,other,CQE_Card_Mat.pdf,hash/date
+Suits = Sidecars (assign per run):,sidecar,CQE_Card_Mat.pdf,Suits = Sidecars (assign per run):
+CQE Card Mini-Mat Travel,other,CQE_Card_Mat.pdf,CQE Card Mini-Mat Travel
+Compact combined rail with quick fields,other,CQE_Card_Mat.pdf,Compact combined rail with quick fields
+Combined Rail Workspace,other,CQE_Card_Mat.pdf,Combined Rail Workspace
+"Use left half as Blue, right half as Red",other,CQE_Card_Mat.pdf,"Use left half as Blue, right half as Red"
+"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4Blue",other,CQE_Card_Mat.pdf,"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4Blue"
+"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4RedSuits Sidecars:",sidecar,CQE_Card_Mat.pdf,"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4RedSuits Sidecars:"
+-lifts:,other,CQE_Card_Mat.pdf,-lifts:
+4-bit Commit,view,CQE_Card_Mat.pdf,4-bit Commit
+P M,other,CQE_Card_Mat.pdf,P M
+SHash:,other,CQE_Card_Mat.pdf,SHash:
+UTC 2025-09-20 21:06,other,extracted/CQE_Card_Kit_v1_2_Sheets/00_Cover.pdf,UTC 2025-09-20 21:06
+CQE Card Kit (Paper-Only),other,extracted/CQE_Card_Kit_v1_2_Sheets/00_Cover.pdf,CQE Card Kit (Paper-Only)
+Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers,station,extracted/CQE_Card_Kit_v1_2_Sheets/00_Cover.pdf,Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers
+Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers,overlay,extracted/CQE_Card_Kit_v1_2_Sheets/00_Cover.pdf,Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers
+"What this is: A complete, no-power toolkit to run CQE with paper, pens, a ruler, tape, balsa sticks, and",other,extracted/CQE_Card_Kit_v1_2_Sheets/00_Cover.pdf,"What this is: A complete, no-power toolkit to run CQE with paper, pens, a ruler, tape, balsa sticks, and"
+What you can do: Model multi-view problems; enforce mirror tests; perform local Δ-lifts; tighten strict,view,extracted/CQE_Card_Kit_v1_2_Sheets/00_Cover.pdf,What you can do: Model multi-view problems; enforce mirror tests; perform local Δ-lifts; tighten strict
+thresholds; and ledger reproducible 4-bit commits.,ledger,extracted/CQE_Card_Kit_v1_2_Sheets/00_Cover.pdf,thresholds; and ledger reproducible 4-bit commits.
+overlays.,overlay,extracted/CQE_Card_Kit_v1_2_Sheets/00_Cover.pdf,overlays.
+UTC 2025-09-20 21:06,other,extracted/CQE_Card_Kit_v1_2_Sheets/01_QuickStart.pdf,UTC 2025-09-20 21:06
+10-minute run with two decks + overlays,overlay,extracted/CQE_Card_Kit_v1_2_Sheets/01_QuickStart.pdf,10-minute run with two decks + overlays
+3) Octet overlay: Fill H1–H8 views; record REST constraints.,view,extracted/CQE_Card_Kit_v1_2_Sheets/01_QuickStart.pdf,3) Octet overlay: Fill H1–H8 views; record REST constraints.
+3) Octet overlay: Fill H1–H8 views; record REST constraints.,overlay,extracted/CQE_Card_Kit_v1_2_Sheets/01_QuickStart.pdf,3) Octet overlay: Fill H1–H8 views; record REST constraints.
+4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.,view,extracted/CQE_Card_Kit_v1_2_Sheets/01_QuickStart.pdf,4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.
+5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).,view,extracted/CQE_Card_Kit_v1_2_Sheets/01_QuickStart.pdf,5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).
+6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.,ledger,extracted/CQE_Card_Kit_v1_2_Sheets/01_QuickStart.pdf,6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.
+6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.,view,extracted/CQE_Card_Kit_v1_2_Sheets/01_QuickStart.pdf,6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.
+"Your first problem setup (tokens, views, mirror, strict)",view,extracted/CQE_Card_Kit_v1_2_Sheets/01_QuickStart.pdf,"Your first problem setup (tokens, views, mirror, strict)"
+Octet & DNA-10,view,extracted/CQE_Card_Kit_v1_2_Sheets/02_Octet_DNA10.pdf,Octet & DNA-10
+UTC 2025-09-20 21:06,other,extracted/CQE_Card_Kit_v1_2_Sheets/02_Octet_DNA10.pdf,UTC 2025-09-20 21:06
+Octet Overlay + DNA-10,view,extracted/CQE_Card_Kit_v1_2_Sheets/02_Octet_DNA10.pdf,Octet Overlay + DNA-10
+Octet Overlay + DNA-10,overlay,extracted/CQE_Card_Kit_v1_2_Sheets/02_Octet_DNA10.pdf,Octet Overlay + DNA-10
+Eight views + palindromic rest; ten-state save,view,extracted/CQE_Card_Kit_v1_2_Sheets/02_Octet_DNA10.pdf,Eight views + palindromic rest; ten-state save
+H1,other,extracted/CQE_Card_Kit_v1_2_Sheets/02_Octet_DNA10.pdf,H1
+H2,other,extracted/CQE_Card_Kit_v1_2_Sheets/02_Octet_DNA10.pdf,H2
+H3,other,extracted/CQE_Card_Kit_v1_2_Sheets/02_Octet_DNA10.pdf,H3
+H4,other,extracted/CQE_Card_Kit_v1_2_Sheets/02_Octet_DNA10.pdf,H4
+H5,other,extracted/CQE_Card_Kit_v1_2_Sheets/02_Octet_DNA10.pdf,H5
+H6,other,extracted/CQE_Card_Kit_v1_2_Sheets/02_Octet_DNA10.pdf,H6
+H7,other,extracted/CQE_Card_Kit_v1_2_Sheets/02_Octet_DNA10.pdf,H7
+H8,other,extracted/CQE_Card_Kit_v1_2_Sheets/02_Octet_DNA10.pdf,H8
+REST (palindromic mirror): notes / constraints,view,extracted/CQE_Card_Kit_v1_2_Sheets/02_Octet_DNA10.pdf,REST (palindromic mirror): notes / constraints
+Receipts & 4-bit,ledger,extracted/CQE_Card_Kit_v1_2_Sheets/03_Receipts_4bit.pdf,Receipts & 4-bit
+UTC 2025-09-20 21:06,other,extracted/CQE_Card_Kit_v1_2_Sheets/03_Receipts_4bit.pdf,UTC 2025-09-20 21:06
+Receipts & 4-bit Commit,ledger,extracted/CQE_Card_Kit_v1_2_Sheets/03_Receipts_4bit.pdf,Receipts & 4-bit Commit
+Receipts & 4-bit Commit,view,extracted/CQE_Card_Kit_v1_2_Sheets/03_Receipts_4bit.pdf,Receipts & 4-bit Commit
+OPE/FCE  View  Mirror  Hash,view,extracted/CQE_Card_Kit_v1_2_Sheets/03_Receipts_4bit.pdf,OPE/FCE  View  Mirror  Hash
+4-bit Commit Stickers,view,extracted/CQE_Card_Kit_v1_2_Sheets/03_Receipts_4bit.pdf,4-bit Commit Stickers
+OPE FCE View Mirror,view,extracted/CQE_Card_Kit_v1_2_Sheets/03_Receipts_4bit.pdf,OPE FCE View Mirror
+Merkle-ish page hash / signatures,ledger,extracted/CQE_Card_Kit_v1_2_Sheets/03_Receipts_4bit.pdf,Merkle-ish page hash / signatures
+Parity Loom,overlay,extracted/CQE_Card_Kit_v1_2_Sheets/04_Parity_Loom.pdf,Parity Loom
+UTC 2025-09-20 21:06,other,extracted/CQE_Card_Kit_v1_2_Sheets/04_Parity_Loom.pdf,UTC 2025-09-20 21:06
+Parity Loom (E8/Leech scaffold),overlay,extracted/CQE_Card_Kit_v1_2_Sheets/04_Parity_Loom.pdf,Parity Loom (E8/Leech scaffold)
+Foam/peg board + balsa rails + clips,other,extracted/CQE_Card_Kit_v1_2_Sheets/04_Parity_Loom.pdf,Foam/peg board + balsa rails + clips
+Use: Clip strands for roots; mirror overlay must align on reflection. For Leech: mask octads; use,view,extracted/CQE_Card_Kit_v1_2_Sheets/04_Parity_Loom.pdf,Use: Clip strands for roots; mirror overlay must align on reflection. For Leech: mask octads; use
+Use: Clip strands for roots; mirror overlay must align on reflection. For Leech: mask octads; use,overlay,extracted/CQE_Card_Kit_v1_2_Sheets/04_Parity_Loom.pdf,Use: Clip strands for roots; mirror overlay must align on reflection. For Leech: mask octads; use
+Stations,station,extracted/CQE_Card_Kit_v1_2_Sheets/05_Stations.pdf,Stations
+UTC 2025-09-20 21:06,other,extracted/CQE_Card_Kit_v1_2_Sheets/05_Stations.pdf,UTC 2025-09-20 21:06
+"Stations: Measure, Tag, Resume",station,extracted/CQE_Card_Kit_v1_2_Sheets/05_Stations.pdf,"Stations: Measure, Tag, Resume"
+Pause cards → test → sticky sidecar → continue,sidecar,extracted/CQE_Card_Kit_v1_2_Sheets/05_Stations.pdf,Pause cards → test → sticky sidecar → continue
+"Station types: Optics (PSF/WFE), Thermal (ΔT per tick), Polar/Spin (efficiency), Math (interval bound),",station,extracted/CQE_Card_Kit_v1_2_Sheets/05_Stations.pdf,"Station types: Optics (PSF/WFE), Thermal (ΔT per tick), Polar/Spin (efficiency), Math (interval bound),"
+"Bio/Neuro proxies (overlay RMS), Cosmos (shear/field), Robotics (closed-loop error).",overlay,extracted/CQE_Card_Kit_v1_2_Sheets/05_Stations.pdf,"Bio/Neuro proxies (overlay RMS), Cosmos (shear/field), Robotics (closed-loop error)."
+Protocol: Dock a card; measure; write a token value on a sticky; attach to card edge; ledger the change;,ledger,extracted/CQE_Card_Kit_v1_2_Sheets/05_Stations.pdf,Protocol: Dock a card; measure; write a token value on a sticky; attach to card edge; ledger the change;
+Metric,other,extracted/CQE_Card_Kit_v1_2_Sheets/05_Stations.pdf,Metric
+Pre,other,extracted/CQE_Card_Kit_v1_2_Sheets/05_Stations.pdf,Pre
+Post,other,extracted/CQE_Card_Kit_v1_2_Sheets/05_Stations.pdf,Post
+Receipt,ledger,extracted/CQE_Card_Kit_v1_2_Sheets/05_Stations.pdf,Receipt
+8-Person Table Playbook,other,extracted/CQE_Card_Kit_v1_2_Sheets/06_Table_Playbook.pdf,8-Person Table Playbook
+UTC 2025-09-20 21:06,other,extracted/CQE_Card_Kit_v1_2_Sheets/06_Table_Playbook.pdf,UTC 2025-09-20 21:06
+Roles  Stations  Neighbor links,role,extracted/CQE_Card_Kit_v1_2_Sheets/06_Table_Playbook.pdf,Roles  Stations  Neighbor links
+Roles  Stations  Neighbor links,station,extracted/CQE_Card_Kit_v1_2_Sheets/06_Table_Playbook.pdf,Roles  Stations  Neighbor links
+"Keeps form_id, ledger, and mirror law; calls",ledger,extracted/CQE_Card_Kit_v1_2_Sheets/06_Table_Playbook.pdf,"Keeps form_id, ledger, and mirror law; calls"
+"Keeps form_id, ledger, and mirror law; calls",view,extracted/CQE_Card_Kit_v1_2_Sheets/06_Table_Playbook.pdf,"Keeps form_id, ledger, and mirror law; calls"
+Views H1–H2; runs PSF/FFT mirror; proposes,view,extracted/CQE_Card_Kit_v1_2_Sheets/06_Table_Playbook.pdf,Views H1–H2; runs PSF/FFT mirror; proposes
+Views H3–H4; manages ΔT and cadence.,view,extracted/CQE_Card_Kit_v1_2_Sheets/06_Table_Playbook.pdf,Views H3–H4; manages ΔT and cadence.
+Views H5–H6; L↔R parity checks; spin filters.,view,extracted/CQE_Card_Kit_v1_2_Sheets/06_Table_Playbook.pdf,Views H5–H6; L↔R parity checks; spin filters.
+"Bounds, interval proofs, receipts.",ledger,extracted/CQE_Card_Kit_v1_2_Sheets/06_Table_Playbook.pdf,"Bounds, interval proofs, receipts."
+"Overlay RMS, gate irreversibility.",overlay,extracted/CQE_Card_Kit_v1_2_Sheets/06_Table_Playbook.pdf,"Overlay RMS, gate irreversibility."
+Neighbor Links (who talks to whom and when),other,extracted/CQE_Card_Kit_v1_2_Sheets/06_Table_Playbook.pdf,Neighbor Links (who talks to whom and when)
+Theorem Cards,theorem,extracted/CQE_Card_Kit_v1_2_Sheets/07_Theorem_Cards.pdf,Theorem Cards
+UTC 2025-09-20 21:06,other,extracted/CQE_Card_Kit_v1_2_Sheets/07_Theorem_Cards.pdf,UTC 2025-09-20 21:06
+Theorem Cards & Argument Protocol,theorem,extracted/CQE_Card_Kit_v1_2_Sheets/07_Theorem_Cards.pdf,Theorem Cards & Argument Protocol
+Theorem Card,theorem,extracted/CQE_Card_Kit_v1_2_Sheets/07_Theorem_Cards.pdf,Theorem Card
+Assumptions:,other,extracted/CQE_Card_Kit_v1_2_Sheets/07_Theorem_Cards.pdf,Assumptions:
+Claim:,other,extracted/CQE_Card_Kit_v1_2_Sheets/07_Theorem_Cards.pdf,Claim:
+Local Test:,other,extracted/CQE_Card_Kit_v1_2_Sheets/07_Theorem_Cards.pdf,Local Test:
+Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________,ledger,extracted/CQE_Card_Kit_v1_2_Sheets/07_Theorem_Cards.pdf,Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________
+Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________,view,extracted/CQE_Card_Kit_v1_2_Sheets/07_Theorem_Cards.pdf,Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________
+Master Ledger,ledger,extracted/CQE_Card_Kit_v1_2_Sheets/08_Master_Ledger.pdf,Master Ledger
+UTC 2025-09-20 21:06,other,extracted/CQE_Card_Kit_v1_2_Sheets/08_Master_Ledger.pdf,UTC 2025-09-20 21:06
+Reproducible build receipts,ledger,extracted/CQE_Card_Kit_v1_2_Sheets/08_Master_Ledger.pdf,Reproducible build receipts
+Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING,ledger,extracted/CQE_Card_Kit_v1_2_Sheets/08_Master_Ledger.pdf,Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING
+Octet Map H1..H8: _______________________________________________,view,extracted/CQE_Card_Kit_v1_2_Sheets/08_Master_Ledger.pdf,Octet Map H1..H8: _______________________________________________
+"Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}",view,extracted/CQE_Card_Kit_v1_2_Sheets/08_Master_Ledger.pdf,"Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}"
+Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________,ledger,extracted/CQE_Card_Kit_v1_2_Sheets/08_Master_Ledger.pdf,Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________
+Hypercube Scaffold,other,extracted/CQE_Card_Kit_v1_2_Sheets/09_Hypercube_Scaffold.pdf,Hypercube Scaffold
+UTC 2025-09-20 21:06,other,extracted/CQE_Card_Kit_v1_2_Sheets/09_Hypercube_Scaffold.pdf,UTC 2025-09-20 21:06
+Hypercube → Toroidal Loom,overlay,extracted/CQE_Card_Kit_v1_2_Sheets/09_Hypercube_Scaffold.pdf,Hypercube → Toroidal Loom
+From 4D cube projection to chamber shells,other,extracted/CQE_Card_Kit_v1_2_Sheets/09_Hypercube_Scaffold.pdf,From 4D cube projection to chamber shells
+How to use: Tag 8 faces as octet gates; enforce mirror across paired faces. Wrap rails with balsa/tape,view,extracted/CQE_Card_Kit_v1_2_Sheets/09_Hypercube_Scaffold.pdf,How to use: Tag 8 faces as octet gates; enforce mirror across paired faces. Wrap rails with balsa/tape
+Sticky Sidecars,sidecar,extracted/CQE_Card_Kit_v1_2_Sheets/10_Sticky_Sidecars.pdf,Sticky Sidecars
+UTC 2025-09-20 21:06,other,extracted/CQE_Card_Kit_v1_2_Sheets/10_Sticky_Sidecars.pdf,UTC 2025-09-20 21:06
+Sticky Sidecars (Tokens),sidecar,extracted/CQE_Card_Kit_v1_2_Sheets/10_Sticky_Sidecars.pdf,Sticky Sidecars (Tokens)
+Attach measured values to cards,other,extracted/CQE_Card_Kit_v1_2_Sheets/10_Sticky_Sidecars.pdf,Attach measured values to cards
+UTC 2025-09-20 21:06,other,extracted/CQE_Card_Kit_v1_2_Sheets/11_Blank_Cards.pdf,UTC 2025-09-20 21:06
+Notes:,other,extracted/CQE_Card_Kit_v1_2_Sheets/11_Blank_Cards.pdf,Notes:
+Eight Baseline Packs,other,extracted/CQE_Card_Kit_v1_2_Sheets/12_Baseline_Packs.pdf,Eight Baseline Packs
+UTC 2025-09-20 21:06,other,extracted/CQE_Card_Kit_v1_2_Sheets/12_Baseline_Packs.pdf,UTC 2025-09-20 21:06
+Optics,other,extracted/CQE_Card_Kit_v1_2_Sheets/12_Baseline_Packs.pdf,Optics
+■ WFE ≤ 25→22 nm strict,view,extracted/CQE_Card_Kit_v1_2_Sheets/12_Baseline_Packs.pdf,■ WFE ≤ 25→22 nm strict
+Thermal,other,extracted/CQE_Card_Kit_v1_2_Sheets/12_Baseline_Packs.pdf,Thermal
+Polar/Spin/EM,other,extracted/CQE_Card_Kit_v1_2_Sheets/12_Baseline_Packs.pdf,Polar/Spin/EM
+■ AR ≤ 1.5 dB strict,view,extracted/CQE_Card_Kit_v1_2_Sheets/12_Baseline_Packs.pdf,■ AR ≤ 1.5 dB strict
+Math/Logic,other,extracted/CQE_Card_Kit_v1_2_Sheets/12_Baseline_Packs.pdf,Math/Logic
+Bio proxy,other,extracted/CQE_Card_Kit_v1_2_Sheets/12_Baseline_Packs.pdf,Bio proxy
+■ Overlay RMS ≤ τ,overlay,extracted/CQE_Card_Kit_v1_2_Sheets/12_Baseline_Packs.pdf,■ Overlay RMS ≤ τ
+Neuro proxy,other,extracted/CQE_Card_Kit_v1_2_Sheets/12_Baseline_Packs.pdf,Neuro proxy
+Cosmos,other,extracted/CQE_Card_Kit_v1_2_Sheets/12_Baseline_Packs.pdf,Cosmos
+Systems,other,extracted/CQE_Card_Kit_v1_2_Sheets/12_Baseline_Packs.pdf,Systems
+Custom pack notes,other,extracted/CQE_Card_Kit_v1_2_Sheets/12_Baseline_Packs.pdf,Custom pack notes
+Class Kit Checklist,other,extracted/CQE_Card_Kit_v1_2_Sheets/13_Class_Checklist.pdf,Class Kit Checklist
+UTC 2025-09-20 21:06,other,extracted/CQE_Card_Kit_v1_2_Sheets/13_Class_Checklist.pdf,UTC 2025-09-20 21:06
+Budget-friendly supply list,other,extracted/CQE_Card_Kit_v1_2_Sheets/13_Class_Checklist.pdf,Budget-friendly supply list
+ Transparent overlays (acetate),overlay,extracted/CQE_Card_Kit_v1_2_Sheets/13_Class_Checklist.pdf, Transparent overlays (acetate)
+" Sticky notes (token sidecars), colored pens",sidecar,extracted/CQE_Card_Kit_v1_2_Sheets/13_Class_Checklist.pdf," Sticky notes (token sidecars), colored pens"
+ Clipboard for station runs,station,extracted/CQE_Card_Kit_v1_2_Sheets/13_Class_Checklist.pdf, Clipboard for station runs
+ Ledger binder (Working / Non-Working albums),ledger,extracted/CQE_Card_Kit_v1_2_Sheets/13_Class_Checklist.pdf, Ledger binder (Working / Non-Working albums)
+Room layout & station assignments,station,extracted/CQE_Card_Kit_v1_2_Sheets/13_Class_Checklist.pdf,Room layout & station assignments
+Scene 0: Orientation: The CQE Spine Live,scene,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,Scene 0: Orientation: The CQE Spine Live
+What it teaches (learning targets),other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,What it teaches (learning targets)
+ See the full loop: Octet → Mirror → Δ■lift → Strict → 4■bit receipts.,ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf, See the full loop: Octet → Mirror → Δ■lift → Strict → 4■bit receipts.
+ See the full loop: Octet → Mirror → Δ■lift → Strict → 4■bit receipts.,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf, See the full loop: Octet → Mirror → Δ■lift → Strict → 4■bit receipts.
+ Learn how a 2■minute paper run creates a reproducible ledger row.,ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf, Learn how a 2■minute paper run creates a reproducible ledger row.
+Room,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,Room
+"One table, 8 colored pens, tape wall for overlays.",overlay,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,"One table, 8 colored pens, tape wall for overlays."
+Paper kit,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,Paper kit
+"Octet sheet, DNA■10, 4■bit sticker, ledger page.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,"Octet sheet, DNA■10, 4■bit sticker, ledger page."
+"Octet sheet, DNA■10, 4■bit sticker, ledger page.",view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,"Octet sheet, DNA■10, 4■bit sticker, ledger page."
+Instruments,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,Instruments
+Safety,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,Safety
+N/A,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,N/A
+"■■ Mark 8 views (colored boxes), set a palindromic REST.",view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,"■■ Mark 8 views (colored boxes), set a palindromic REST."
+■■ Run a forward↔inverse mirror; circle mismatches (red).,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,■■ Run a forward↔inverse mirror; circle mismatches (red).
+■■ Write a Δ■lift (local identity) to fix one mismatch; re■mirror.,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,■■ Write a Δ■lift (local identity) to fix one mismatch; re■mirror.
+"■■ Tighten one metric (strict ratchet), shade a 4■bit receipt; log ledger.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,"■■ Tighten one metric (strict ratchet), shade a 4■bit receipt; log ledger."
+"■■ Tighten one metric (strict ratchet), shade a 4■bit receipt; log ledger.",view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,"■■ Tighten one metric (strict ratchet), shade a 4■bit receipt; log ledger."
+Ledger hook (what gets recorded),ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,Ledger hook (what gets recorded)
+"— form_id, octet map, mirror tolerance, Δ■lift note, strict threshold, 4■bit.",view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,"— form_id, octet map, mirror tolerance, Δ■lift note, strict threshold, 4■bit."
+"✓ Filled octet, mirror ticks, Δ■lift card, 4■bit stickered ledger row.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,"✓ Filled octet, mirror ticks, Δ■lift card, 4■bit stickered ledger row."
+"✓ Filled octet, mirror ticks, Δ■lift card, 4■bit stickered ledger row.",view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,"✓ Filled octet, mirror ticks, Δ■lift card, 4■bit stickered ledger row."
+■ Which view dominated debt?,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,■ Which view dominated debt?
+■ Would a different mirror have failed?,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_00.pdf,■ Would a different mirror have failed?
+Scene 1: n=1→n=5: The Hinge that Forces the Octad,scene,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_01.pdf,Scene 1: n=1→n=5: The Hinge that Forces the Octad
+What it teaches (learning targets),other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_01.pdf,What it teaches (learning targets)
+Room,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_01.pdf,Room
+Paper kit,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_01.pdf,Paper kit
+Instruments,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_01.pdf,Instruments
+Safety,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_01.pdf,Safety
+N/A,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_01.pdf,N/A
+Ledger hook (what gets recorded),ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_01.pdf,Ledger hook (what gets recorded)
+"— Octad class tag, pose, tolerance; 4■bit commit when 4 views pass.",view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_01.pdf,"— Octad class tag, pose, tolerance; 4■bit commit when 4 views pass."
+"✓ Checked grid, class map (8), receipt.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_01.pdf,"✓ Checked grid, class map (8), receipt."
+Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix),scene,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_02.pdf,Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix)
+Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix),view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_02.pdf,Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix)
+What it teaches (learning targets),other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_02.pdf,What it teaches (learning targets)
+ Turn a one■way mismatch into a local repair with receipts.,ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_02.pdf, Turn a one■way mismatch into a local repair with receipts.
+ Practice mirror pairs (FFT↔iFFT; encode↔decode; simulate↔measure).,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_02.pdf, Practice mirror pairs (FFT↔iFFT; encode↔decode; simulate↔measure).
+Room,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_02.pdf,Room
+Paper kit,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_02.pdf,Paper kit
+Instruments,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_02.pdf,Instruments
+Safety,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_02.pdf,Safety
+N/A,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_02.pdf,N/A
+■■ Run both; mark delta windows; choose one Δ■lift from the cookbook; re■run mirror; record debt drop.,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_02.pdf,■■ Run both; mark delta windows; choose one Δ■lift from the cookbook; re■run mirror; record debt drop.
+Ledger hook (what gets recorded),ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_02.pdf,Ledger hook (what gets recorded)
+"— Mirror tolerance, Δ■lift id, before/after OPE/FCE, strict update.",view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_02.pdf,"— Mirror tolerance, Δ■lift id, before/after OPE/FCE, strict update."
+"✓ Before/after overlay with red fix marks, 4■bit row.",overlay,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_02.pdf,"✓ Before/after overlay with red fix marks, 4■bit row."
+■ Was the Δ local? Did it generalize to a second view?,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_02.pdf,■ Was the Δ local? Did it generalize to a second view?
+Scene 3: Octet Coverage for ML (A/B→Octet),scene,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_03.pdf,Scene 3: Octet Coverage for ML (A/B→Octet)
+Scene 3: Octet Coverage for ML (A/B→Octet),view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_03.pdf,Scene 3: Octet Coverage for ML (A/B→Octet)
+What it teaches (learning targets),other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_03.pdf,What it teaches (learning targets)
+ Generalize A/B to 8 views; prevent winner■only bias.,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_03.pdf, Generalize A/B to 8 views; prevent winner■only bias.
+ Record receipts across slices (metrics × slabs).,ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_03.pdf, Record receipts across slices (metrics × slabs).
+Room,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_03.pdf,Room
+Paper kit,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_03.pdf,Paper kit
+Instruments,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_03.pdf,Instruments
+Safety,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_03.pdf,Safety
+N/A,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_03.pdf,N/A
+■■ List 8 materially independent views (slices or metrics).,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_03.pdf,■■ List 8 materially independent views (slices or metrics).
+Ledger hook (what gets recorded),ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_03.pdf,Ledger hook (what gets recorded)
+"— Views passed, metric triplet, slab size, commit.",view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_03.pdf,"— Views passed, metric triplet, slab size, commit."
+"✓ Octet pass grid, receipts.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_03.pdf,"✓ Octet pass grid, receipts."
+"✓ Octet pass grid, receipts.",view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_03.pdf,"✓ Octet pass grid, receipts."
+Scene 4: Construction■A Loom: E8 and Leech on Paper,scene,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_04.pdf,Scene 4: Construction■A Loom: E8 and Leech on Paper
+Scene 4: Construction■A Loom: E8 and Leech on Paper,overlay,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_04.pdf,Scene 4: Construction■A Loom: E8 and Leech on Paper
+What it teaches (learning targets),other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_04.pdf,What it teaches (learning targets)
+Room,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_04.pdf,Room
+Paper kit,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_04.pdf,Paper kit
+Instruments,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_04.pdf,Instruments
+Safety,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_04.pdf,Safety
+N/A,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_04.pdf,N/A
+■■ Build E8 halves; overlay mirror; demonstrate root reflections.,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_04.pdf,■■ Build E8 halves; overlay mirror; demonstrate root reflections.
+■■ Build E8 halves; overlay mirror; demonstrate root reflections.,overlay,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_04.pdf,■■ Build E8 halves; overlay mirror; demonstrate root reflections.
+Ledger hook (what gets recorded),ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_04.pdf,Ledger hook (what gets recorded)
+"— Code id, modulus, glue vector, octad layout, legality receipts.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_04.pdf,"— Code id, modulus, glue vector, octad layout, legality receipts."
+"✓ Photo of loom, mask sheet, ledger row.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_04.pdf,"✓ Photo of loom, mask sheet, ledger row."
+"✓ Photo of loom, mask sheet, ledger row.",overlay,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_04.pdf,"✓ Photo of loom, mask sheet, ledger row."
+Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes,scene,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_05.pdf,Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes
+Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes,sidecar,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_05.pdf,Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes
+What it teaches (learning targets),other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_05.pdf,What it teaches (learning targets)
+ Converge via receipts; annihilate non■working cheaply.,ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_05.pdf, Converge via receipts; annihilate non■working cheaply.
+Room,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_05.pdf,Room
+4 stations; shared octet; sticky token labels.,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_05.pdf,4 stations; shared octet; sticky token labels.
+4 stations; shared octet; sticky token labels.,station,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_05.pdf,4 stations; shared octet; sticky token labels.
+Paper kit,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_05.pdf,Paper kit
+Instruments,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_05.pdf,Instruments
+Safety,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_05.pdf,Safety
+N/A,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_05.pdf,N/A
+■■ Run each rail: tokens→octet→mirror→Δ→strict→4■bit; copy receipts to master ledger.,ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_05.pdf,■■ Run each rail: tokens→octet→mirror→Δ→strict→4■bit; copy receipts to master ledger.
+■■ Run each rail: tokens→octet→mirror→Δ→strict→4■bit; copy receipts to master ledger.,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_05.pdf,■■ Run each rail: tokens→octet→mirror→Δ→strict→4■bit; copy receipts to master ledger.
+Ledger hook (what gets recorded),ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_05.pdf,Ledger hook (what gets recorded)
+"— 4 receipts, shared form_id, per■rail thresholds.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_05.pdf,"— 4 receipts, shared form_id, per■rail thresholds."
+✓ 4 station sheets; master ledger row.,ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_05.pdf,✓ 4 station sheets; master ledger row.
+✓ 4 station sheets; master ledger row.,station,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_05.pdf,✓ 4 station sheets; master ledger row.
+Scene 6: Two■Scientist Theorem■Card Resolution,scene,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf,Scene 6: Two■Scientist Theorem■Card Resolution
+Scene 6: Two■Scientist Theorem■Card Resolution,theorem,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf,Scene 6: Two■Scientist Theorem■Card Resolution
+What it teaches (learning targets),other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf,What it teaches (learning targets)
+ Resolve disputes with claim/evidence/Δ■lift/receipt cards.,ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf, Resolve disputes with claim/evidence/Δ■lift/receipt cards.
+ Preserve minority view as Non■Working breadcrumb with hash.,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf, Preserve minority view as Non■Working breadcrumb with hash.
+Room,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf,Room
+"Theorem cards, claim wall, mirror worksheet.",view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf,"Theorem cards, claim wall, mirror worksheet."
+"Theorem cards, claim wall, mirror worksheet.",theorem,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf,"Theorem cards, claim wall, mirror worksheet."
+Paper kit,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf,Paper kit
+Instruments,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf,Instruments
+Safety,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf,Safety
+N/A,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf,N/A
+■■ Each writes claim+assumptions; test under shared mirror; record receipts; promote passing; archive,ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf,■■ Each writes claim+assumptions; test under shared mirror; record receipts; promote passing; archive
+■■ Each writes claim+assumptions; test under shared mirror; record receipts; promote passing; archive,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf,■■ Each writes claim+assumptions; test under shared mirror; record receipts; promote passing; archive
+Ledger hook (what gets recorded),ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf,Ledger hook (what gets recorded)
+"— Claim ids, mirror pass/fail, Δ■lift ids, receipts.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf,"— Claim ids, mirror pass/fail, Δ■lift ids, receipts."
+"— Claim ids, mirror pass/fail, Δ■lift ids, receipts.",view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf,"— Claim ids, mirror pass/fail, Δ■lift ids, receipts."
+"✓ Card stack, mirror sheet, ledger snippet.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf,"✓ Card stack, mirror sheet, ledger snippet."
+"✓ Card stack, mirror sheet, ledger snippet.",view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_06.pdf,"✓ Card stack, mirror sheet, ledger snippet."
+Scene 7: 8■Person Table with Neighbor Lanes,scene,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_07.pdf,Scene 7: 8■Person Table with Neighbor Lanes
+What it teaches (learning targets),other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_07.pdf,What it teaches (learning targets)
+" Role mesh, not silos: 8 seats, 2■bit lanes, neighbor hand■offs.",role,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_07.pdf," Role mesh, not silos: 8 seats, 2■bit lanes, neighbor hand■offs."
+Room,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_07.pdf,Room
+"Round table, role badges, coordination board.",role,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_07.pdf,"Round table, role badges, coordination board."
+Paper kit,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_07.pdf,Paper kit
+Instruments,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_07.pdf,Instruments
+Safety,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_07.pdf,Safety
+N/A,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_07.pdf,N/A
+■■ Assign roles; run 2 cycles; enforce neighbor receipts; rotate seats; compare throughput.,ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_07.pdf,■■ Assign roles; run 2 cycles; enforce neighbor receipts; rotate seats; compare throughput.
+■■ Assign roles; run 2 cycles; enforce neighbor receipts; rotate seats; compare throughput.,role,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_07.pdf,■■ Assign roles; run 2 cycles; enforce neighbor receipts; rotate seats; compare throughput.
+Ledger hook (what gets recorded),ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_07.pdf,Ledger hook (what gets recorded)
+"✓ Coord board photo, ledger rows.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_07.pdf,"✓ Coord board photo, ledger rows."
+Scene 8: Card■Deck CQE + Lab Stations,scene,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_08.pdf,Scene 8: Card■Deck CQE + Lab Stations
+Scene 8: Card■Deck CQE + Lab Stations,station,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_08.pdf,Scene 8: Card■Deck CQE + Lab Stations
+What it teaches (learning targets),other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_08.pdf,What it teaches (learning targets)
+Room,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_08.pdf,Room
+Paper kit,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_08.pdf,Paper kit
+Instruments,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_08.pdf,Instruments
+Safety,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_08.pdf,Safety
+N/A,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_08.pdf,N/A
+"■■ Map aces→primitives, 2–8 synthesis, 9 full idea, 10 parity twin; face cards = observers; jokers =",view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_08.pdf,"■■ Map aces→primitives, 2–8 synthesis, 9 full idea, 10 parity twin; face cards = observers; jokers ="
+"■■ Map aces→primitives, 2–8 synthesis, 9 full idea, 10 parity twin; face cards = observers; jokers =",role,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_08.pdf,"■■ Map aces→primitives, 2–8 synthesis, 9 full idea, 10 parity twin; face cards = observers; jokers ="
+Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_08.pdf,Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.
+Ledger hook (what gets recorded),ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_08.pdf,Ledger hook (what gets recorded)
+"✓ Card photo, metric sheet, ledger.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_08.pdf,"✓ Card photo, metric sheet, ledger."
+Scene 9: Hypercube→Toroidal Chamber (4■bit Hubs),scene,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_09.pdf,Scene 9: Hypercube→Toroidal Chamber (4■bit Hubs)
+What it teaches (learning targets),other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_09.pdf,What it teaches (learning targets)
+Room,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_09.pdf,Room
+Paper kit,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_09.pdf,Paper kit
+Instruments,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_09.pdf,Instruments
+Safety,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_09.pdf,Safety
+N/A,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_09.pdf,N/A
+Ledger hook (what gets recorded),ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_09.pdf,Ledger hook (what gets recorded)
+"✓ Assembled model photos, notes, ledger.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_09.pdf,"✓ Assembled model photos, notes, ledger."
+Scene 10: Sound & Subharmonics Viewer (Cartan,scene,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_10.pdf,Scene 10: Sound & Subharmonics Viewer (Cartan
+What it teaches (learning targets),other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_10.pdf,What it teaches (learning targets)
+ Map harmonic stack to octet; subharmonics to Cartan ‘outside’ nudges.,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_10.pdf, Map harmonic stack to octet; subharmonics to Cartan ‘outside’ nudges.
+Room,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_10.pdf,Room
+Paper kit,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_10.pdf,Paper kit
+Instruments,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_10.pdf,Instruments
+Safety,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_10.pdf,Safety
+N/A,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_10.pdf,N/A
+Ledger hook (what gets recorded),ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_10.pdf,Ledger hook (what gets recorded)
+"— Tone pair, beat freq, Δ■lift, receipt.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_10.pdf,"— Tone pair, beat freq, Δ■lift, receipt."
+"✓ Spectrogram sheet, receipt.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_10.pdf,"✓ Spectrogram sheet, receipt."
+Scene 11: Primordial→EM→Thermo: Meaning■Token Safety,scene,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_11.pdf,Scene 11: Primordial→EM→Thermo: Meaning■Token Safety
+What it teaches (learning targets),other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_11.pdf,What it teaches (learning targets)
+ Bind tokens late; redact dangerous meaning; still keep form receipts.,ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_11.pdf, Bind tokens late; redact dangerous meaning; still keep form receipts.
+ Practice stand■in overlays for sensitive domains.,overlay,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_11.pdf, Practice stand■in overlays for sensitive domains.
+Room,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_11.pdf,Room
+Paper kit,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_11.pdf,Paper kit
+Instruments,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_11.pdf,Instruments
+Safety,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_11.pdf,Safety
+N/A,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_11.pdf,N/A
+■■ Run with stand■ins; mark any sensitive tokens red; keep octet/mirror/Δ/strict; commit with redacted,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_11.pdf,■■ Run with stand■ins; mark any sensitive tokens red; keep octet/mirror/Δ/strict; commit with redacted
+receipts.,ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_11.pdf,receipts.
+Ledger hook (what gets recorded),ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_11.pdf,Ledger hook (what gets recorded)
+"✓ Redacted ledger row, safe receipts.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_11.pdf,"✓ Redacted ledger row, safe receipts."
+Scene 12: Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,scene,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_12.pdf,Scene 12: Global Viewers: 8×8 + 4×4×4×4 + Parity Shell
+What it teaches (learning targets),other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_12.pdf,What it teaches (learning targets)
+Room,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_12.pdf,Room
+Paper kit,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_12.pdf,Paper kit
+Instruments,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_12.pdf,Instruments
+Safety,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_12.pdf,Safety
+N/A,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_12.pdf,N/A
+Ledger hook (what gets recorded),ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_12.pdf,Ledger hook (what gets recorded)
+"— Viewer indices, hotspot ids, Δ■lift chosen, receipts.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_12.pdf,"— Viewer indices, hotspot ids, Δ■lift chosen, receipts."
+"✓ Viewer overlays, ledger row.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_12.pdf,"✓ Viewer overlays, ledger row."
+"✓ Viewer overlays, ledger row.",overlay,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_12.pdf,"✓ Viewer overlays, ledger row."
+Scene 13: Not Lattice Flattery: Governance by Geometry,scene,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_13.pdf,Scene 13: Not Lattice Flattery: Governance by Geometry
+What it teaches (learning targets),other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_13.pdf,What it teaches (learning targets)
+Room,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_13.pdf,Room
+Paper kit,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_13.pdf,Paper kit
+Instruments,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_13.pdf,Instruments
+Safety,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_13.pdf,Safety
+N/A,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_13.pdf,N/A
+Ledger hook (what gets recorded),ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_13.pdf,Ledger hook (what gets recorded)
+"— Falsifier ids (F1–F4), outcomes, receipts.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_13.pdf,"— Falsifier ids (F1–F4), outcomes, receipts."
+"✓ Counterexample log, ledger.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_13.pdf,"✓ Counterexample log, ledger."
+"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts",scene,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_14.pdf,"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts"
+"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_14.pdf,"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts"
+What it teaches (learning targets),other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_14.pdf,What it teaches (learning targets)
+Room,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_14.pdf,Room
+Paper kit,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_14.pdf,Paper kit
+Instruments,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_14.pdf,Instruments
+Safety,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_14.pdf,Safety
+N/A,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_14.pdf,N/A
+Ledger hook (what gets recorded),ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_14.pdf,Ledger hook (what gets recorded)
+"— Blue/red pair id, hashes, receipts.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_14.pdf,"— Blue/red pair id, hashes, receipts."
+"Scene 15: Capstone: Three■Track Non■Toy (Optics, DNA,",scene,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_15.pdf,"Scene 15: Capstone: Three■Track Non■Toy (Optics, DNA,"
+Finance),other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_15.pdf,Finance)
+What it teaches (learning targets),other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_15.pdf,What it teaches (learning targets)
+ Run three independent rails on one shell; compare receipts; compress meanings.,ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_15.pdf, Run three independent rails on one shell; compare receipts; compress meanings.
+Room,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_15.pdf,Room
+Three stations; octet master; metrics per rail.,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_15.pdf,Three stations; octet master; metrics per rail.
+Three stations; octet master; metrics per rail.,station,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_15.pdf,Three stations; octet master; metrics per rail.
+Paper kit,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_15.pdf,Paper kit
+Instruments,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_15.pdf,Instruments
+Safety,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_15.pdf,Safety
+N/A,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_15.pdf,N/A
+■■ Each rail performs octet/mirror/Δ/strict; commit or annihilate; compress repeating Δ■lifts into a,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_15.pdf,■■ Each rail performs octet/mirror/Δ/strict; commit or annihilate; compress repeating Δ■lifts into a
+Ledger hook (what gets recorded),ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_15.pdf,Ledger hook (what gets recorded)
+"— Rail receipts, meaning pack v#, anchor id.",ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_15.pdf,"— Rail receipts, meaning pack v#, anchor id."
+✓ 3 receipts; promoted pack doc; anchor ledger row.,ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Scene_15.pdf,✓ 3 receipts; promoted pack doc; anchor ledger row.
+Worksheet – Octet Overlay,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_01.pdf,Worksheet – Octet Overlay
+Worksheet – Octet Overlay,overlay,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_01.pdf,Worksheet – Octet Overlay
+■ H1–H8 views named and colored,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_01.pdf,■ H1–H8 views named and colored
+Notes:,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_01.pdf,Notes:
+Worksheet – Mirror Test,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_02.pdf,Worksheet – Mirror Test
+Notes:,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_02.pdf,Notes:
+Notes:,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_03.pdf,Notes:
+Worksheet – Strict Ratchet,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_04.pdf,Worksheet – Strict Ratchet
+Notes:,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_04.pdf,Notes:
+Worksheet – 4■bit Receipt,ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_05.pdf,Worksheet – 4■bit Receipt
+■ Views≥4 passed?,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_05.pdf,■ Views≥4 passed?
+■ Mirror within tol?,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_05.pdf,■ Mirror within tol?
+Notes:,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_05.pdf,Notes:
+Worksheet – Ledger Row,ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_06.pdf,Worksheet – Ledger Row
+■ octet map,view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_06.pdf,■ octet map
+■ thresholds (normal/strict),view,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_06.pdf,■ thresholds (normal/strict)
+■ receipts (4■bit + hash),ledger,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_06.pdf,■ receipts (4■bit + hash)
+Notes:,other,extracted/CQE_Roleplay_Scenes_v1_0_Sheets/Worksheet_06.pdf,Notes:

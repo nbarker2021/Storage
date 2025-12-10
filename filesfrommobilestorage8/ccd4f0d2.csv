@@ -1,0 +1,9 @@
+Metric,Value,Notes
+Papers Processed,8,Scientific papers embedded into E8 framework
+Total Handshakes,144,MORSR protocol operations logged
+Acceptance Rate,83.3%,Monotone ΔΦ≤0 rule compliance
+Perfect Matches,3,Papers with identical Φ_total (Δ < 1e-6)
+8-Lane Cartan Papers,5,Papers activating all 8 Cartan lanes
+Power-of-2 Compliance,62%,Cartan activations following powers of 2/4/8 rule
+Most Effective Operator,Midpoint (100%),Palindromic parity reduction never rejected
+System Condition Number,5.027,E8 basis matrix numerical stability

@@ -1,0 +1,20 @@
+Category,Metric,Session Value,Paper/Target,Status
+Test 1: Lock-In,Atlas Size,218,-,Good
+Test 1: Lock-In,Hit Rate,0.502,> 0.800,Below target
+Test 1: Lock-In,Idempotence,VERIFIED,Required,✓ PASS
+Test 2: Julia Slices,Bounded States,18/20,-,Good
+Test 2: Julia Slices,Bounded Fraction,0.900,0.632,✓ EXCEEDS
+Test 2: Julia Slices,Julia Slices,9,-,✓ DETECTED
+Test 2: Julia Slices,Boundary Morphons,0,> 0,Needs work
+Test 3: Closure,η_embed (morphons/s),"9,271.64","3,172",✓ EXCEEDS
+Test 3: Closure,η_reason (queries/s),"18,641.35","1,491",✓ EXCEEDS
+Test 3: Closure,Closure Ratio (embed),"9,272×",> 100×,✓ PASS
+Test 3: Closure,Closure Ratio (reason),"1,864×",> 10×,✓ PASS
+Wrapper Test,All Bounded,TRUE,Predicted,✓ CONFIRMED
+Wrapper Test,Norm Variance,0.000000,-,✓ PERFECT
+Wrapper Test,Conservation,ALL LAWFUL,Required,✓ CONFIRMED
+Novel Finding,Cross-Domain Bridges,6/6,Not tested,✓ NOVEL
+Novel Finding,Session is Morphon,TRUE,Not tested,✓ NOVEL
+Novel Finding,Conservation Rate,100%,-,✓ NOVEL
+Novel Finding,Throughput vs Paper (embed),2.92×,1.0×,✓ NOVEL
+Novel Finding,Throughput vs Paper (reason),12.5×,1.0×,✓ NOVEL

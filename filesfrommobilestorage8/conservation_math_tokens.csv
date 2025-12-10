@@ -1,0 +1,13 @@
+token,symbol,formula,units,notes
+PHYS::CONSERV::MASS,dm/dt,Rocket mass flow; staging handles discontinuities,kg/s,Mass is not conserved for vehicle; propellant is expelled; total system mass-energy conserved.
+PHYS::CONSERV::LIN_MOM,\vec p = m\vec v,Linear momentum conserved in isolated system,kg·m/s,Use for staging impulses and gravity-assist bookkeeping.
+PHYS::CONSERV::ANG_MOM,\vec L = \vec r \times m\vec v,Angular momentum conserved absent external torque,kg·m^2/s,Key for plane change budgeting.
+PHYS::VIS_VIVA,"v^2 = \mu\,(2/r - 1/a)",Orbital speed at radius r on conic with semi-major axis a,m^2/s^2,Core patched-conic relation.
+PHYS::HOHMANN,\Delta v = \sqrt{\mu/r_1} (\sqrt{2 r_2/(r_1+r_2)} - 1) + \sqrt{\mu/r_2} (1 - \sqrt{2 r_1/(r_1+r_2)}),Two-impulse coplanar transfer,m/s,Lower bound for simple transfers.
+PHYS::BI_ELLIPTIC,\Delta v_{BE},Three-impulse transfer via apoapsis r_b,m/s,Beats Hohmann for large r2/r1.
+PHYS::LAMBERT,\Delta v_{Lambert},"Two-point, time-of-flight constrained solution",m/s,Use for multi-rev windows.
+PHYS::V_INFINITY,v_\infty,Hyperbolic excess speed relative to a body,m/s,Invariants across SOI boundaries (patched conics).
+PHYS::SOI,r_{SOI} = a (m/M)^{2/5},Laplace sphere of influence radius,m,Transition scale for patched conics.
+PHYS::TISSERAND,T_p = a_p/a + 2\sqrt{(a/a_p)(1-e^2)}\cos i,Tisserand parameter wrt planet p,dimensionless,Gravity-assist feasibility check; approx in 3D.
+PHYS::JACOBI,C_J = 2\Omega - v^2,Jacobi integral (CR3BP),m^2/s^2,Manifold access; hill regions.
+PHYS::PATCHED_CONIC,"invariants: v_\infty, \hat{h}, E",Bookkeeping across body SOIs,—,Keeps CRT corridor legal between hops.

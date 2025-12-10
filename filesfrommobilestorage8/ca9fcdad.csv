@@ -1,0 +1,15 @@
+Metric,Value,Target,Status
+Atlas Size,218,-,N/A
+Hit Rate,0.502,0.800,FAIL
+Bounded Fraction,0.900,0.632,PASS
+Julia Slices,9,-,N/A
+Boundary Morphons,0,>0,NEEDS WORK
+η_embed,9271.64,3172,PASS
+η_reason,18641.35,1491,PASS
+Closure (embed),9271.6x,100x,PASS
+Closure (reason),1864.1x,10x,PASS
+Cross-Domain Bridges,6,-,NOVEL
+Wrapper Symmetry,0.000000,<0.1,NOVEL
+Session is Morphon,True,-,NOVEL
+Conservation Rate,100.0%,-,NOVEL
+Fractal Dimension,0.651,2.0,NEEDS WORK

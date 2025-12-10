@@ -1,0 +1,129 @@
+state_id,label_glyphs,form_tag,parity_lane,scale,pose,domain_hint,sidecars_active,octet_passes,mirror_hash,fourbit_commit,residues,status,notes
+S000,♠UM≜⊗🌡️≡🜄★,leech_patch,0,2,braid,MATH,"COMMS,INFO,LIGHT,MATH,OPTICS,PLASMA,SOUND,THERMAL,TOPOLOGY",11111001,dc7771ed4dfa,0110,aliasing_edge,provisional,stable under rotation
+S001,♧▲⇄🧪R⊚🝙☯B,monster_patch,0,32,weave,MATH,"COMMS,INFO,LIGHT,PLASMA,SOUND",01001111,b2643d71ae50,0101,aliasing_edge,working,ok in dry-run
+S002,✪E□☸⟁R✗🜔🜂,torus_d10_doublehelix,1,4,weave,BIO_COHERENCE,"EM_FIELD,ENTROPY,GRAVITY,LIGHT,SOUND,TOPOLOGY",10101111,577b0faec693,0110,vent_timing_bias,provisional,mirror parity clean
+S003,⊛🧬⊗✦⇄B📡♣A,torus_d10_singlehelix,1,8,weave,POLAR,"BIO,INFO,LIGHT,MATH,PLASMA,THERMAL",11011111,22d7c562e3f1,0111,minor_phase_error,provisional,thermal headroom tight
+S004,✼🜍✸R≡△L●📡,hypercube_slice,0,2,tilt,MATH,"COMMS,COSMOS,LIGHT,PLASMA,TOPOLOGY",10111111,067a3a2a3ece,0111,vent_timing_bias,working,prefers LHCP
+S005,U◆♢Z🧲🌡️≈⊗✼,torus_d10_singlehelix,0,1,rest,COSMOS,"BIO,COMMS,ENTROPY,MATH,OPTICS,PLASMA,SOUND,SPIN,TOPOLOGY",01110101,690714498940,0101,"units_guard,vent_timing_bias",provisional,stable under rotation
+S006,🜔R✗Q△●🌀↺∞,torus_d10_doublehelix,1,1,rest,BIO_COHERENCE,"BIO,ENTROPY,GRAVITY,LIGHT,PLASMA",10011110,84f3a0365942,0101,"units_guard,vent_timing_bias",provisional,ok in dry-run
+S007,⟡✷🝙N↕F□🎚️♣,hypercube_slice,0,32,weave,OPTICS,"ENTROPY,GRAVITY,MATH,OPTICS,PLASMA,SPIN,TOPOLOGY",10101011,5f21b2a884a8,0101,aliasing_edge,provisional,stable under rotation
+S008,R🎛️∵🎚️□↕Q☘♢,torus_d10_singlehelix,0,2,weave,COSMOS,"BIO,COMMS,COSMOS,EM_FIELD,GRAVITY,SOUND",11110111,fe156b9d531c,0111,"minor_phase_error,purity_drift",working,prefers LHCP
+S009,🟊⊗★🝔E◇∵B◁,monster_patch,1,16,weave,POLAR,"BIO,LIGHT,PLASMA,POLAR,SPIN",11111011,d2ef6e0ee43f,0111,none,working,ok in dry-run
+S010,U🧬♣■🜃✹✻R♢,leech_patch,1,2,weave,EM_FIELD,"BIO,EM_FIELD,ENTROPY,GRAVITY,INFO,LIGHT,MATH,POLAR",00100111,dfa2da0d92d5,0100,aliasing_edge,working,needs stricter ΔT bound
+S011,↻♧🜔🎚️∞ID✹▷,monster_patch,0,16,weave,OPTICS,"BIO,COSMOS,EM_FIELD,ENTROPY,GRAVITY,INFO,OPTICS,PLASMA,THERMAL,TOPOLOGY",01111111,09f5b053a352,0111,minor_phase_error,provisional,needs stricter ΔT bound
+S012,⇄Y■E🧬◆↔✓🧪,hypercube_slice,0,1,weave,BIO_COHERENCE,"BIO,COMMS,COSMOS,GRAVITY,MATH,OPTICS,SOUND,THERMAL",01011011,4ce76df70eca,0101,units_guard,provisional,needs stricter ΔT bound
+S013,✻⇆PQ🧪♢◆☸🝙,e8_octad,1,4,weave,COSMOS,"BIO,COMMS,COSMOS,INFO,LIGHT,OPTICS,SOUND,SPIN,TOPOLOGY",01101111,3f71f34e53eb,0110,none,working,mirror parity clean
+S014,🧪☘N♦Q✼✗♬⚛️,e8_octad,0,2,braid,THERMAL,"COMMS,COSMOS,MATH,SPIN,THERMAL,TOPOLOGY",11111000,ca098ddb9a88,0101,minor_phase_error,working,stable under rotation
+S015,🜁🝙▷◆≈R⊛■L,hypercube_slice,1,4,weave,THERMAL,"EM_FIELD,OPTICS,PLASMA,THERMAL,TOPOLOGY",01100111,22f656af5cd8,0101,none,provisional,thermal headroom tight
+S016,∵⊗U🜃♠✺⇆🟊I,hypercube_slice,1,4,braid,POLAR,"GRAVITY,INFO,POLAR,SPIN,TOPOLOGY",01010011,8f135f09678b,0100,units_guard,provisional,ok in dry-run
+S017,♠C⇆⊚🧬Y📡●↔,monster_patch,0,64,braid,SPINTRONICS,"COSMOS,ENTROPY,INFO,MATH,OPTICS,SOUND,SPIN",11111010,14d538cd2cf1,0110,units_guard,working,prefers LHCP
+S018,J≡🜔U♬♦↺≈🜂,monster_patch,0,1,tilt,MATH,"BIO,COMMS,LIGHT,MATH,PLASMA,POLAR",10011011,3de639b25866,0101,aliasing_edge,working,prefers LHCP
+S019,♦🌡️Z■K⟡📡☘✺,e8_octad,0,8,braid,POLAR,"COMMS,COSMOS,EM_FIELD,GRAVITY,LIGHT,PLASMA,POLAR,SOUND,SPIN,THERMAL",11101111,443912d38d0d,0111,"minor_phase_error,vent_timing_bias",provisional,stable under rotation
+S020,P⚛️⊛⊚🜃✸K♢✻,e8_octad,1,32,braid,POLAR,"BIO,COMMS,EM_FIELD,INFO,MATH,OPTICS,PLASMA,POLAR,TOPOLOGY",01010011,d201769362dc,0100,none,non-working,mirror parity clean
+S021,♢🝙○K✷🟊✪R↺,torus_d10_doublehelix,0,2,weave,SPINTRONICS,"COMMS,ENTROPY,GRAVITY,INFO,LIGHT,MATH,PLASMA,POLAR,SPIN,THERMAL",11101111,0dd11884ca56,0111,none,working,thermal headroom tight
+S022,⊙🟊↺♪△🧲⇆UO,torus_d10_singlehelix,1,2,braid,EM_FIELD,"COMMS,EM_FIELD,GRAVITY,MATH,PLASMA,POLAR,SOUND,THERMAL",11001001,0d97dad5c2a7,0100,"purity_drift,units_guard",provisional,stable under rotation
+S023,⚛️∴🟊✦✷H≜V✹,monster_patch,1,1,weave,MATH,"EM_FIELD,LIGHT,MATH,PLASMA,SOUND,THERMAL,TOPOLOGY",00101101,7f63307496b0,0100,units_guard,provisional,ok in dry-run
+S024,🜔K≜△🧪✗I⇆✸,torus_d10_doublehelix,0,8,weave,EM_FIELD,"BIO,COMMS,ENTROPY,INFO,OPTICS,PLASMA,SOUND,SPIN,THERMAL",01011111,9b1f951d4176,0110,units_guard,non-working,ok in dry-run
+S025,■✧O🧪🝔♪K☘∵,leech_patch,1,16,braid,BIO_COHERENCE,"BIO,COMMS,COSMOS,EM_FIELD,ENTROPY,LIGHT,PLASMA,SOUND,TOPOLOGY",11111101,dc4fbbcfe810,0111,vent_timing_bias,working,ok in dry-run
+S026,Y🌡️▷⊕✗🎛️∞♢C,hypercube_slice,0,64,braid,SPINTRONICS,"BIO,COMMS,GRAVITY,MATH,PLASMA,THERMAL",11111001,31cd1781ece2,0110,none,working,ok in dry-run
+S027,▷✧✺🧬⟁✸E🧪W,hypercube_slice,1,1,braid,OPTICS,"BIO,COSMOS,ENTROPY,GRAVITY,INFO,LIGHT,MATH,PLASMA,POLAR",11110010,6d58eeff0df7,0101,vent_timing_bias,working,ok in dry-run
+S028,↕WJ∵✦★🜁⊗🔮,e8_octad,0,64,braid,THERMAL,"COSMOS,EM_FIELD,GRAVITY,MATH,SOUND,TOPOLOGY",11011001,0eda1a7f9de8,0101,aliasing_edge,non-working,stable under rotation
+S029,🝔♥B⟡🎛️Z♪■≈,hypercube_slice,0,16,tilt,POLAR,"COSMOS,INFO,PLASMA,POLAR,SOUND,THERMAL,TOPOLOGY",10101111,86ebec4b8ae0,0110,aliasing_edge,working,ok in dry-run
+S030,☯□◇Y♣Z🜃✪🧬,hypercube_slice,0,8,tilt,BIO_COHERENCE,"COMMS,EM_FIELD,OPTICS,POLAR,TOPOLOGY",11101010,5979ee2f33e8,0101,vent_timing_bias,working,stable under rotation
+S031,◇✸▷⟁🟊🜄T◆Q,leech_patch,0,2,tilt,OPTICS,"COSMOS,EM_FIELD,ENTROPY,GRAVITY,LIGHT,MATH,OPTICS,PLASMA,POLAR,SPIN",11110111,c9ab000877d7,0111,"vent_timing_bias,aliasing_edge",provisional,mirror parity clean
+S032,⇆D♣✼🧬⊕A🝔⇄,torus_d10_singlehelix,1,4,tilt,BIO_COHERENCE,"COSMOS,PLASMA,POLAR,SPIN,THERMAL",10111111,4a6d6a50a35d,0111,"minor_phase_error,units_guard",working,ok in dry-run
+S033,🎛️■↻🟊○I✦J♥,hypercube_slice,0,4,weave,MATH,"COSMOS,EM_FIELD,ENTROPY,MATH,SPIN",11100010,2580f11bb1fa,0100,purity_drift,provisional,stable under rotation
+S034,♧↔⊛🧪⚛️L∞X∴,torus_d10_doublehelix,0,1,braid,EM_FIELD,"COMMS,COSMOS,ENTROPY,PLASMA,SOUND,SPIN,TOPOLOGY",01100101,9b92a729cbca,0100,vent_timing_bias,provisional,ok in dry-run
+S035,≜↺Q▷♥🔮⚛️∴B,monster_patch,0,2,weave,OPTICS,"BIO,COMMS,GRAVITY,MATH,OPTICS,THERMAL",11111110,71434bd503c1,0111,"aliasing_edge,purity_drift",provisional,mirror parity clean
+S036,H≜■🜍♥✸🎛️L✼,torus_d10_doublehelix,0,2,rest,POLAR,"COSMOS,EM_FIELD,GRAVITY,INFO,PLASMA,SOUND,SPIN,THERMAL",01011011,6d5323285bf5,0101,"minor_phase_error,vent_timing_bias",provisional,stable under rotation
+S037,●T✺∵🧲≡🜔♬A,torus_d10_doublehelix,0,32,weave,SPINTRONICS,"BIO,EM_FIELD,ENTROPY,GRAVITY,INFO,PLASMA,SOUND,SPIN,THERMAL,TOPOLOGY",10100101,c11d4b1396bd,0100,purity_drift,provisional,ok in dry-run
+S038,🜄♥🜃✪H♧Z☸✗,hypercube_slice,1,32,tilt,COSMOS,"COSMOS,MATH,POLAR,THERMAL,TOPOLOGY",11110100,543e71eb7f4c,0101,units_guard,provisional,mirror parity clean
+S039,⊚M↻🜔🜃W♧✸▷,e8_octad,1,32,weave,POLAR,"COSMOS,EM_FIELD,MATH,OPTICS,POLAR,THERMAL",10011001,58d6e876d994,0100,purity_drift,working,prefers LHCP
+S040,X⊛⊕🧬≈T✹🌡️☘,torus_d10_doublehelix,1,4,braid,OPTICS,"COMMS,EM_FIELD,ENTROPY,INFO,PLASMA,POLAR,SOUND,THERMAL,TOPOLOGY",11100010,415bd536275b,0100,units_guard,provisional,stable under rotation
+S041,☘M■🜂♢🜄∴E⇆,leech_patch,0,1,braid,MATH,"BIO,GRAVITY,MATH,POLAR,SPIN",11101111,ff7b6ef185bc,0111,vent_timing_bias,provisional,prefers LHCP
+S042,⇄✹U🝔☯⊗▲🎛️X,e8_octad,0,4,rest,EM_FIELD,"COMMS,GRAVITY,INFO,OPTICS,PLASMA,SOUND",01111101,74441c45304a,0110,purity_drift,provisional,thermal headroom tight
+S043,🔮✹N☸✻≈⊕U🝔,torus_d10_doublehelix,0,8,rest,EM_FIELD,"BIO,COSMOS,ENTROPY,GRAVITY,POLAR,SOUND,SPIN,TOPOLOGY",11011101,325603a9354c,0110,units_guard,non-working,stable under rotation
+S044,⇆Z✷∴🌀✦B🜁≡,torus_d10_singlehelix,0,8,braid,THERMAL,"BIO,EM_FIELD,ENTROPY,LIGHT,OPTICS,POLAR,SOUND,THERMAL",11101110,9d103991633b,0110,"aliasing_edge,minor_phase_error",working,needs stricter ΔT bound
+S045,♩♦🜍C🝔✧Y↻♣,torus_d10_singlehelix,1,4,rest,EM_FIELD,"COMMS,EM_FIELD,ENTROPY,GRAVITY,PLASMA,POLAR,THERMAL",11101111,514479b9f45a,0111,minor_phase_error,provisional,ok in dry-run
+S046,♪🝙♩🎚️✪V↕↺C,torus_d10_doublehelix,1,16,tilt,SPINTRONICS,"BIO,COMMS,COSMOS,OPTICS,PLASMA,POLAR,SOUND,THERMAL,TOPOLOGY",01101001,6e032c354533,0100,vent_timing_bias,working,thermal headroom tight
+S047,↻J✗☯🜁∞🝔M♥,torus_d10_singlehelix,0,2,rest,SPINTRONICS,"BIO,INFO,MATH,SPIN,THERMAL",11111101,ebecaf66df53,0111,purity_drift,non-working,ok in dry-run
+S048,S✗✧🜍○🌡️★T⊗,e8_octad,0,1,rest,BIO_COHERENCE,"COSMOS,GRAVITY,LIGHT,OPTICS,THERMAL,TOPOLOGY",11110011,2cad2a3b22bb,0110,"units_guard,minor_phase_error",provisional,thermal headroom tight
+S049,↕♥C↔●🧪🜔✻B,torus_d10_doublehelix,1,1,weave,COSMOS,"EM_FIELD,LIGHT,MATH,OPTICS,POLAR",01110101,ead08233f899,0101,"purity_drift,vent_timing_bias",working,prefers LHCP
+S050,🜂L⟡B✹✪▷🟊★,e8_octad,1,32,weave,OPTICS,"BIO,COMMS,COSMOS,EM_FIELD,LIGHT,MATH,OPTICS,SOUND,THERMAL,TOPOLOGY",11011111,61a3b834a628,0111,aliasing_edge,provisional,needs stricter ΔT bound
+S051,✹☯▷D🝔↔🔮✷K,monster_patch,1,4,tilt,EM_FIELD,"COSMOS,EM_FIELD,ENTROPY,GRAVITY,LIGHT,PLASMA,SPIN,THERMAL,TOPOLOGY",11010011,be060535ec76,0101,minor_phase_error,provisional,needs stricter ΔT bound
+S052,♤Y●📡◁🟊■V⊗,torus_d10_doublehelix,1,4,braid,EM_FIELD,"COMMS,COSMOS,EM_FIELD,LIGHT,OPTICS,POLAR,SOUND,SPIN,THERMAL,TOPOLOGY",11111101,c255cadf3e6d,0111,purity_drift,provisional,mirror parity clean
+S053,⟁⊚☯♤▲🧲P🜄K,leech_patch,0,8,rest,OPTICS,"BIO,COMMS,COSMOS,EM_FIELD,GRAVITY,INFO,SOUND,THERMAL",10001110,567305eb7ca4,0100,"purity_drift,vent_timing_bias",working,prefers LHCP
+S054,G∵U★≡🌡️🟊⇄○,monster_patch,1,1,weave,POLAR,"COMMS,ENTROPY,MATH,OPTICS,THERMAL",01111111,8dd467a74727,0111,units_guard,provisional,thermal headroom tight
+S055,↔M✸◆E♧🌡️📡♪,leech_patch,0,32,rest,THERMAL,"EM_FIELD,LIGHT,POLAR,SOUND,TOPOLOGY",11101101,062dacb4db44,0110,purity_drift,working,prefers LHCP
+S056,Y✗S🜂⇄↻⊙♧🝔,monster_patch,1,8,braid,BIO_COHERENCE,"COMMS,ENTROPY,GRAVITY,MATH,PLASMA,THERMAL,TOPOLOGY",11010010,472c53d59179,0100,vent_timing_bias,working,thermal headroom tight
+S057,◇EK∞↕🧲🔮⊙◁,leech_patch,0,4,weave,SPINTRONICS,"COMMS,ENTROPY,GRAVITY,INFO,PLASMA,SOUND,SPIN",10101111,d91bda311d70,0110,aliasing_edge,provisional,mirror parity clean
+S058,◇✧∵🝔🧬W✼K⟡,torus_d10_doublehelix,1,32,braid,THERMAL,"COMMS,COSMOS,EM_FIELD,GRAVITY,LIGHT,POLAR,TOPOLOGY",11011101,0974c6e52cf4,0110,aliasing_edge,working,ok in dry-run
+S059,⇄D♬◆🜃O✦■🜍,leech_patch,0,64,weave,THERMAL,"COMMS,EM_FIELD,ENTROPY,POLAR,THERMAL",10011011,185d89ad5c2f,0101,purity_drift,working,stable under rotation
+S060,♪Q🟊☯G🧪≜∴✹,torus_d10_singlehelix,0,64,tilt,SPINTRONICS,"COSMOS,GRAVITY,INFO,MATH,OPTICS,SPIN",10111010,f3576dfef6c8,0101,vent_timing_bias,working,thermal headroom tight
+S061,♩★≜□⊗E📡🝔V,monster_patch,0,4,rest,OPTICS,"COMMS,EM_FIELD,INFO,LIGHT,OPTICS,PLASMA,POLAR,SOUND,SPIN,THERMAL",11111110,3038616f3544,0111,none,working,prefers LHCP
+S062,🟊◁🝔⟡H✗P⊙∴,torus_d10_singlehelix,1,64,tilt,THERMAL,"BIO,COSMOS,GRAVITY,INFO,LIGHT,MATH,OPTICS,POLAR,SOUND,TOPOLOGY",11010100,7aace9013206,0100,"minor_phase_error,purity_drift",provisional,prefers LHCP
+S063,◁☘RW✷🎚️🜃∴⇄,torus_d10_doublehelix,1,2,weave,POLAR,"ENTROPY,GRAVITY,MATH,OPTICS,PLASMA,POLAR,SOUND,THERMAL",11111101,33055c02db14,0111,minor_phase_error,provisional,thermal headroom tight
+S064,🝔★⊙WG✸🎛️◇☯,torus_d10_doublehelix,1,1,tilt,MATH,"GRAVITY,INFO,OPTICS,PLASMA,SPIN,THERMAL,TOPOLOGY",11101101,43ac1ee3f875,0110,units_guard,working,stable under rotation
+S065,⟁🧪◁R♥☸📡F✷,torus_d10_singlehelix,0,64,braid,EM_FIELD,"BIO,EM_FIELD,INFO,MATH,OPTICS,PLASMA,POLAR,SOUND,SPIN,THERMAL",11110000,3b4624e4b39a,0100,"units_guard,minor_phase_error",working,mirror parity clean
+S066,🧬🜍○☸✧YX■⇆,monster_patch,0,2,weave,OPTICS,"BIO,COSMOS,EM_FIELD,ENTROPY,GRAVITY,INFO,LIGHT,MATH,OPTICS,THERMAL",11101011,d113ffe76974,0110,aliasing_edge,working,stable under rotation
+S067,B♦🌡️☸🎛️F✦✗↔,leech_patch,0,8,braid,BIO_COHERENCE,"COMMS,LIGHT,OPTICS,SPIN,THERMAL",11101101,2559d5e64224,0110,"minor_phase_error,purity_drift",provisional,thermal headroom tight
+S068,G↺⟁✻↕L🜁📡✹,leech_patch,1,32,rest,POLAR,"ENTROPY,GRAVITY,INFO,LIGHT,POLAR,SPIN,THERMAL,TOPOLOGY",01110111,59027661fc1a,0110,minor_phase_error,non-working,ok in dry-run
+S069,≡M⊙□∴🜄📡✹R,leech_patch,1,64,rest,BIO_COHERENCE,"BIO,GRAVITY,INFO,OPTICS,PLASMA,TOPOLOGY",00100111,c82418d453a9,0100,units_guard,provisional,mirror parity clean
+S070,✪EI○⇄🧲♦🌡️✹,torus_d10_doublehelix,1,2,tilt,OPTICS,"BIO,COSMOS,INFO,MATH,OPTICS,PLASMA,POLAR,SOUND,SPIN,THERMAL",00110111,49598819260b,0101,none,provisional,prefers LHCP
+S071,🝔≜L∵Q✦✷🝙⊕,torus_d10_doublehelix,0,8,weave,EM_FIELD,"COMMS,EM_FIELD,INFO,MATH,OPTICS,POLAR,THERMAL,TOPOLOGY",11111110,7fb28257d932,0111,units_guard,provisional,mirror parity clean
+S072,🔮∞U♥✓X✻⟡⚛️,torus_d10_doublehelix,0,16,tilt,BIO_COHERENCE,"BIO,COMMS,COSMOS,EM_FIELD,ENTROPY,PLASMA,POLAR,SPIN,THERMAL",11011011,9fa8540ca121,0110,units_guard,provisional,prefers LHCP
+S073,🜔♧NO⟡✺☯✧🟊,leech_patch,1,32,tilt,BIO_COHERENCE,"BIO,GRAVITY,LIGHT,POLAR,SPIN,TOPOLOGY",00101101,8f0da23d343b,0100,minor_phase_error,working,thermal headroom tight
+S074,🜁△H⇆▲P≜♤🌡️,e8_octad,1,8,braid,THERMAL,"COSMOS,GRAVITY,OPTICS,POLAR,SPIN,TOPOLOGY",10110001,1eb61e15bd6c,0100,vent_timing_bias,provisional,mirror parity clean
+S075,✓✧🧪KU🝙♪✗♠,leech_patch,0,32,rest,THERMAL,"COSMOS,EM_FIELD,ENTROPY,GRAVITY,INFO,MATH,OPTICS,POLAR,SOUND,SPIN",11111011,a77e72f62eb4,0111,minor_phase_error,working,stable under rotation
+S076,🜄≈∴⊙S◁♤🝔V,e8_octad,1,4,braid,SPINTRONICS,"EM_FIELD,ENTROPY,GRAVITY,INFO,MATH,SOUND",01011110,d15cc5491c75,0101,vent_timing_bias,non-working,needs stricter ΔT bound
+S077,↺🝔F⊙G∴✺🎛️∵,torus_d10_doublehelix,0,2,braid,OPTICS,"COSMOS,EM_FIELD,ENTROPY,SPIN,TOPOLOGY",11011111,8c72c6c69994,0111,"units_guard,purity_drift",working,ok in dry-run
+S078,▷☯🌡️F☘⇆✼U🝙,e8_octad,1,4,tilt,MATH,"BIO,COMMS,ENTROPY,INFO,POLAR,SOUND",10111111,3eafd9a848a4,0111,minor_phase_error,working,mirror parity clean
+S079,P◁⊙🧪♩🔮O☘⟡,leech_patch,0,2,rest,COSMOS,"COMMS,EM_FIELD,ENTROPY,GRAVITY,OPTICS,PLASMA,SPIN,TOPOLOGY",11111101,a7840f122adc,0111,minor_phase_error,provisional,thermal headroom tight
+S080,∞●◇🎛️🝔☘TE♤,leech_patch,0,1,rest,MATH,"BIO,EM_FIELD,ENTROPY,LIGHT,MATH,OPTICS,PLASMA,SOUND",11011100,d4ba2a467b21,0101,none,provisional,thermal headroom tight
+S081,🧪X✪☘▲🜁⟡✦E,hypercube_slice,0,1,braid,MATH,"COMMS,COSMOS,ENTROPY,POLAR,TOPOLOGY",11011111,ad4f19925cd8,0111,vent_timing_bias,working,mirror parity clean
+S082,⟁♩🟊✗✧JH🧲≈,hypercube_slice,1,8,braid,COSMOS,"BIO,COMMS,EM_FIELD,OPTICS,PLASMA,POLAR,THERMAL,TOPOLOGY",01111111,45a8b3a0fedd,0111,"units_guard,aliasing_edge",provisional,mirror parity clean
+S083,≜★🧬⊙⇄S🔮C⊛,monster_patch,0,32,rest,EM_FIELD,"COMMS,COSMOS,EM_FIELD,GRAVITY,MATH,SOUND,THERMAL,TOPOLOGY",10011111,f9f495494178,0110,aliasing_edge,working,ok in dry-run
+S084,◇✼🝙⊛S♦🎛️♠T,e8_octad,1,16,weave,MATH,"BIO,ENTROPY,GRAVITY,MATH,PLASMA,POLAR",10111111,46d9f4327ef5,0111,vent_timing_bias,working,thermal headroom tight
+S085,≈EW△☘🝔🧬✧■,torus_d10_singlehelix,0,1,braid,COSMOS,"COSMOS,EM_FIELD,INFO,MATH,PLASMA,TOPOLOGY",01110111,4473b8f5a50e,0110,"purity_drift,aliasing_edge",provisional,needs stricter ΔT bound
+S086,✻⟁⊙🔮🎚️♩GB⇄,torus_d10_singlehelix,0,8,rest,COSMOS,"GRAVITY,INFO,MATH,POLAR,THERMAL",01110011,50e7d294b463,0101,"units_guard,vent_timing_bias",provisional,prefers LHCP
+S087,≡U▷🜄🝙Y✼↺♣,leech_patch,0,16,braid,COSMOS,"BIO,COMMS,COSMOS,ENTROPY,INFO,LIGHT,MATH,OPTICS,THERMAL,TOPOLOGY",01110011,166e274fe9e5,0101,units_guard,provisional,prefers LHCP
+S088,🝙↺SM▷🜂✻◇♥,leech_patch,1,32,rest,OPTICS,"BIO,COMMS,COSMOS,EM_FIELD,LIGHT,MATH,POLAR,SOUND,TOPOLOGY",01010111,d021ca9aba3d,0101,vent_timing_bias,working,thermal headroom tight
+S089,⊛♧◆🧲⊙📡▲TX,e8_octad,1,8,braid,EM_FIELD,"BIO,COMMS,COSMOS,ENTROPY,LIGHT,POLAR,SOUND,TOPOLOGY",10111111,3881366e63ae,0111,vent_timing_bias,provisional,mirror parity clean
+S090,✓♦✻🜄S🧬✼∵E,torus_d10_singlehelix,0,32,weave,THERMAL,"BIO,COSMOS,EM_FIELD,GRAVITY,PLASMA,POLAR,TOPOLOGY",01011111,d0de95650fda,0110,purity_drift,provisional,stable under rotation
+S091,□🜃≡△📡∞M♣V,torus_d10_doublehelix,0,1,weave,SPINTRONICS,"COMMS,COSMOS,GRAVITY,MATH,POLAR,SPIN",01111111,8fe9079dfbcd,0111,none,working,stable under rotation
+S092,⟁D✗∵♥🌀🜔⇄P,leech_patch,0,64,weave,SPINTRONICS,"BIO,COSMOS,EM_FIELD,ENTROPY,LIGHT,PLASMA,POLAR,THERMAL,TOPOLOGY",00111110,73ed130822bf,0101,minor_phase_error,provisional,stable under rotation
+S093,✻▲□🜔T🔮X↻✸,torus_d10_singlehelix,1,4,tilt,OPTICS,"COMMS,ENTROPY,GRAVITY,INFO,SOUND,THERMAL",01110110,6c59281750f5,0101,vent_timing_bias,provisional,needs stricter ΔT bound
+S094,Z🟊♠⇆≡T⊗🝙✻,torus_d10_singlehelix,0,2,tilt,THERMAL,"BIO,ENTROPY,GRAVITY,INFO,LIGHT,OPTICS,PLASMA,POLAR,SPIN",00111010,5293141cf953,0100,vent_timing_bias,working,needs stricter ΔT bound
+S095,✺∵●U♪🧬H⊕🝙,e8_octad,0,1,braid,THERMAL,"COMMS,GRAVITY,INFO,LIGHT,MATH,OPTICS,SOUND,THERMAL,TOPOLOGY",11110111,6e9ba777e93d,0111,"units_guard,vent_timing_bias",provisional,needs stricter ΔT bound
+S096,↻☸✓○🎚️ID♬🌡️,leech_patch,1,8,braid,SPINTRONICS,"BIO,COMMS,ENTROPY,GRAVITY,MATH,OPTICS,POLAR,SPIN",01111101,ee8c824eabc6,0110,minor_phase_error,provisional,stable under rotation
+S097,✗≜♥🔮🜔RD☯✹,monster_patch,1,1,tilt,THERMAL,"COSMOS,EM_FIELD,ENTROPY,MATH,OPTICS,PLASMA,SPIN,TOPOLOGY",11110110,482038bc3d4a,0110,vent_timing_bias,working,mirror parity clean
+S098,∵🧪⇆T↔🎛️⊗G◁,e8_octad,1,4,tilt,MATH,"BIO,LIGHT,SOUND,SPIN,TOPOLOGY",11111101,287fc5a20046,0111,"vent_timing_bias,minor_phase_error",provisional,stable under rotation
+S099,S⇄✼🜄▷♢○V⚛️,leech_patch,1,32,tilt,SPINTRONICS,"BIO,COMMS,EM_FIELD,INFO,LIGHT,MATH,PLASMA,SPIN,THERMAL,TOPOLOGY",10110100,7b5fed848f65,0100,purity_drift,working,stable under rotation
+S100,I≈♩⊙✺Z♥🌀🧲,monster_patch,1,8,rest,POLAR,"BIO,COMMS,ENTROPY,GRAVITY,MATH,OPTICS,SPIN",10111001,b9b0400b878e,0101,"units_guard,minor_phase_error",working,ok in dry-run
+S101,○V▲W⊕≈∴🔮🝔,hypercube_slice,1,1,rest,MATH,"BIO,EM_FIELD,ENTROPY,GRAVITY,LIGHT,MATH,OPTICS,PLASMA,SOUND,SPIN",10001101,8e11213d9d5a,0100,vent_timing_bias,working,ok in dry-run
+S102,◁♢⟁N🜃E✧🜄↔,torus_d10_singlehelix,0,1,braid,OPTICS,"COMMS,COSMOS,EM_FIELD,GRAVITY,PLASMA,TOPOLOGY",11111011,4c63dfd07a2e,0111,aliasing_edge,non-working,prefers LHCP
+S103,🧪U♢♩♠P↕📡■,torus_d10_singlehelix,1,16,rest,MATH,"COMMS,EM_FIELD,ENTROPY,GRAVITY,INFO,MATH,PLASMA,POLAR,TOPOLOGY",11111011,e11f61fabf5c,0111,units_guard,provisional,stable under rotation
+S104,J↔★♤N🧲▲◁📡,torus_d10_singlehelix,0,32,tilt,COSMOS,"INFO,MATH,PLASMA,SOUND,TOPOLOGY",11101101,1c63e3790a0e,0110,"purity_drift,units_guard",provisional,thermal headroom tight
+S105,E♧↔∴🜁🌡️M✪♬,torus_d10_doublehelix,1,4,braid,EM_FIELD,"BIO,COMMS,COSMOS,EM_FIELD,ENTROPY,INFO,LIGHT,SOUND,SPIN",01111101,e6ed38401f2f,0110,aliasing_edge,provisional,mirror parity clean
+S106,●■🎚️◆OK⊗🎛️★,leech_patch,0,32,braid,EM_FIELD,"BIO,COMMS,COSMOS,EM_FIELD,GRAVITY,OPTICS,PLASMA,POLAR,SPIN,THERMAL",01111000,5dbf3428bc97,0100,"vent_timing_bias,purity_drift",provisional,thermal headroom tight
+S107,🜍U⚛️▷⟡↕○K♢,monster_patch,0,2,rest,POLAR,"BIO,COMMS,EM_FIELD,GRAVITY,MATH",10111011,b8e3edde76db,0110,vent_timing_bias,provisional,thermal headroom tight
+S108,⊚M🧬🌀U▷⇄□▲,torus_d10_doublehelix,0,64,rest,COSMOS,"GRAVITY,LIGHT,MATH,OPTICS,PLASMA,POLAR,THERMAL",10011011,3a75a0e31855,0101,units_guard,non-working,prefers LHCP
+S109,♤≜🎛️✧E★🝔⊗J,monster_patch,1,4,weave,OPTICS,"BIO,COMMS,COSMOS,GRAVITY,INFO,OPTICS,PLASMA,SOUND,SPIN",01011011,10de30723528,0101,vent_timing_bias,provisional,mirror parity clean
+S110,🌡️◆☯O∞▷H🌀⟁,monster_patch,1,2,tilt,MATH,"BIO,COSMOS,INFO,MATH,SOUND,SPIN,THERMAL",11101000,ce0787fd5fff,0100,units_guard,non-working,mirror parity clean
+S111,⊗⊕✸≈ZY🜔⇄🜄,monster_patch,0,8,weave,THERMAL,"BIO,COSMOS,EM_FIELD,GRAVITY,MATH,PLASMA",10101001,50e0db44cc9e,0100,"purity_drift,units_guard",provisional,ok in dry-run
+S112,↔✪✻⊕📡🜂T≡O,torus_d10_singlehelix,1,4,rest,OPTICS,"COMMS,ENTROPY,MATH,OPTICS,SPIN,THERMAL",11111001,81b1ab2e4391,0110,aliasing_edge,working,stable under rotation
+S113,♪≡U≜⟡🜔🌀Z□,hypercube_slice,1,1,braid,POLAR,"BIO,EM_FIELD,ENTROPY,GRAVITY,MATH,OPTICS,POLAR,THERMAL,TOPOLOGY",11101111,35d00d9c8fdd,0111,aliasing_edge,non-working,thermal headroom tight
+S114,↔◆🜍YX↕✼🜃↺,leech_patch,1,1,tilt,POLAR,"BIO,COMMS,COSMOS,ENTROPY,GRAVITY,INFO,LIGHT,MATH,THERMAL,TOPOLOGY",11001101,96f58512eb6a,0101,"vent_timing_bias,aliasing_edge",working,mirror parity clean
+S115,⟁S⊛🎛️✦🜔○♦T,monster_patch,0,8,braid,THERMAL,"COMMS,COSMOS,EM_FIELD,ENTROPY,INFO,OPTICS,PLASMA,POLAR,THERMAL",01011101,bada11a662e7,0101,purity_drift,working,stable under rotation
+S116,◆✹⇆🜔JX↔🔮⊗,torus_d10_doublehelix,0,16,tilt,OPTICS,"BIO,EM_FIELD,ENTROPY,GRAVITY,LIGHT,MATH,PLASMA,SOUND,THERMAL,TOPOLOGY",01001111,8710c033c0ee,0101,none,non-working,thermal headroom tight
+S117,S≈▷T🜔✺🜄✪♥,torus_d10_doublehelix,1,1,weave,EM_FIELD,"BIO,COMMS,COSMOS,GRAVITY,INFO,MATH,OPTICS,PLASMA,THERMAL,TOPOLOGY",11011111,2a92239bfa4b,0111,purity_drift,working,stable under rotation
+S118,L∞🜂☘✸Y⊙↔🟊,monster_patch,0,8,rest,OPTICS,"EM_FIELD,GRAVITY,LIGHT,OPTICS,PLASMA,POLAR,SPIN",10011111,dc507d915542,0110,minor_phase_error,provisional,needs stricter ΔT bound
+S119,↔Y✧☘🜂↻Z◆⚛️,hypercube_slice,0,1,weave,OPTICS,"BIO,COMMS,EM_FIELD,OPTICS,PLASMA",11001111,6f2b63321337,0110,none,working,ok in dry-run
+S120,🧪≜✻📡♧∵A⊙F,hypercube_slice,0,64,rest,THERMAL,"BIO,COMMS,COSMOS,GRAVITY,MATH,POLAR,SOUND,THERMAL",11100010,e00ccc90bcb7,0100,"aliasing_edge,vent_timing_bias",working,mirror parity clean
+S121,🜁∴✼N☯♥Y♩🎛️,leech_patch,0,1,weave,SPINTRONICS,"COMMS,INFO,MATH,OPTICS,PLASMA,SPIN,THERMAL",11010101,1a205dd4047e,0101,"aliasing_edge,purity_drift",working,prefers LHCP
+S122,⊙N⊛🧬⟁○U◁🜁,monster_patch,0,64,braid,COSMOS,"BIO,GRAVITY,INFO,LIGHT,MATH,POLAR,SOUND,SPIN,THERMAL",00111111,fe9c67c2ada1,0110,"units_guard,aliasing_edge",provisional,thermal headroom tight
+S123,V♬⇄🝙✪☘🜍♣K,torus_d10_singlehelix,1,1,weave,BIO_COHERENCE,"BIO,COMMS,GRAVITY,INFO,OPTICS,TOPOLOGY",11010111,58b7c81d9758,0110,aliasing_edge,provisional,ok in dry-run
+S124,🝙◇∴✧♪X♩W🜍,torus_d10_singlehelix,1,4,weave,SPINTRONICS,"EM_FIELD,INFO,LIGHT,PLASMA,SOUND,THERMAL,TOPOLOGY",11101101,dc369a9bceb1,0110,"units_guard,aliasing_edge",provisional,stable under rotation
+S125,🟊B✓↔∵F✦■🜃,hypercube_slice,0,8,weave,THERMAL,"ENTROPY,GRAVITY,LIGHT,MATH,SPIN",11111011,f9a0784065d3,0111,"units_guard,purity_drift",working,prefers LHCP
+S126,▷●G↻🜁□🧲✪V,torus_d10_doublehelix,1,4,braid,COSMOS,"GRAVITY,LIGHT,OPTICS,POLAR,SOUND,THERMAL,TOPOLOGY",01011101,fe348df27a48,0101,aliasing_edge,working,thermal headroom tight
+S127,🝔♧X⊕F🜍⇄⊛∵,hypercube_slice,1,4,braid,OPTICS,"COSMOS,ENTROPY,LIGHT,MATH,SPIN,TOPOLOGY",11011111,9a7a4ff01fa2,0111,vent_timing_bias,working,mirror parity clean

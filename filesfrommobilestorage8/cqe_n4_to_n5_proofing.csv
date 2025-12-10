@@ -1,0 +1,385 @@
+scene_num,scene_title,family,group,replicate,status,palindromic,cartan_present,half_step,half_step_defect,n4_to_n5
+0,Orientation: The CQE Spine Live,"E8/Hamming(8,4,4)",Weyl_E8,0,PROVISIONAL,False,False,False,,NO
+0,Orientation: The CQE Spine Live,"E8/Hamming(8,4,4)",Weyl_E8,1,NON-WORKING,False,False,True,bounds,HALF-STEP
+0,Orientation: The CQE Spine Live,"E8/Hamming(8,4,4)",Weyl_E8,2,PROVISIONAL,False,False,False,,NO
+0,Orientation: The CQE Spine Live,"E8/Hamming(8,4,4)",Weyl_E8,3,NON-WORKING,False,False,True,parity,HALF-STEP
+0,Orientation: The CQE Spine Live,"E8/Hamming(8,4,4):alt",Weyl_E8,0,NON-WORKING,False,False,False,,NO
+0,Orientation: The CQE Spine Live,"E8/Hamming(8,4,4):alt",Weyl_E8,1,NON-WORKING,False,False,False,,NO
+0,Orientation: The CQE Spine Live,"E8/Hamming(8,4,4):alt",Weyl_E8,2,NON-WORKING,False,False,False,,NO
+0,Orientation: The CQE Spine Live,"E8/Hamming(8,4,4):alt",Weyl_E8,3,NON-WORKING,False,False,False,,NO
+0,Orientation: The CQE Spine Live,"Leech/Golay(24,12,8)",Co0,0,NON-WORKING,False,True,False,,NO
+0,Orientation: The CQE Spine Live,"Leech/Golay(24,12,8)",Co0,1,NON-WORKING,False,False,False,,NO
+0,Orientation: The CQE Spine Live,"Leech/Golay(24,12,8)",Co0,2,NON-WORKING,False,True,False,,NO
+0,Orientation: The CQE Spine Live,"Leech/Golay(24,12,8)",Co0,3,NON-WORKING,False,True,False,,NO
+0,Orientation: The CQE Spine Live,"Leech/Golay(24,12,8):alt",Co1,0,NON-WORKING,False,True,False,,NO
+0,Orientation: The CQE Spine Live,"Leech/Golay(24,12,8):alt",Co1,1,NON-WORKING,False,True,False,,NO
+0,Orientation: The CQE Spine Live,"Leech/Golay(24,12,8):alt",Co1,2,NON-WORKING,False,True,True,parity,HALF-STEP
+0,Orientation: The CQE Spine Live,"Leech/Golay(24,12,8):alt",Co1,3,NON-WORKING,False,True,False,,NO
+0,Orientation: The CQE Spine Live,Monster/Moonshine,Monster,0,NON-WORKING,False,True,False,,NO
+0,Orientation: The CQE Spine Live,Monster/Moonshine,Monster,1,NON-WORKING,False,True,False,,NO
+0,Orientation: The CQE Spine Live,Monster/Moonshine,Monster,2,NON-WORKING,False,True,False,,NO
+0,Orientation: The CQE Spine Live,Monster/Moonshine,Monster,3,NON-WORKING,False,True,False,,NO
+0,Orientation: The CQE Spine Live,Identity/Default,default,0,NON-WORKING,False,False,True,parity,HALF-STEP
+0,Orientation: The CQE Spine Live,Identity/Default,default,1,NON-WORKING,False,False,True,parity,HALF-STEP
+0,Orientation: The CQE Spine Live,Identity/Default,default,2,NON-WORKING,False,False,False,,NO
+0,Orientation: The CQE Spine Live,Identity/Default,default,3,NON-WORKING,False,False,False,,NO
+1,n=1→n=5: The Hinge that Forces the Octad,"E8/Hamming(8,4,4)",Weyl_E8,0,NON-WORKING,False,False,True,bounds,HALF-STEP
+1,n=1→n=5: The Hinge that Forces the Octad,"E8/Hamming(8,4,4)",Weyl_E8,1,NON-WORKING,False,False,False,,NO
+1,n=1→n=5: The Hinge that Forces the Octad,"E8/Hamming(8,4,4)",Weyl_E8,2,NON-WORKING,False,False,True,bounds,HALF-STEP
+1,n=1→n=5: The Hinge that Forces the Octad,"E8/Hamming(8,4,4)",Weyl_E8,3,NON-WORKING,False,False,False,,NO
+1,n=1→n=5: The Hinge that Forces the Octad,"E8/Hamming(8,4,4):alt",Weyl_E8,0,NON-WORKING,False,False,True,metric,HALF-STEP
+1,n=1→n=5: The Hinge that Forces the Octad,"E8/Hamming(8,4,4):alt",Weyl_E8,1,NON-WORKING,False,False,False,,NO
+1,n=1→n=5: The Hinge that Forces the Octad,"E8/Hamming(8,4,4):alt",Weyl_E8,2,NON-WORKING,False,False,False,,NO
+1,n=1→n=5: The Hinge that Forces the Octad,"E8/Hamming(8,4,4):alt",Weyl_E8,3,NON-WORKING,False,False,False,,NO
+1,n=1→n=5: The Hinge that Forces the Octad,"Leech/Golay(24,12,8)",Co0,0,NON-WORKING,False,True,False,,NO
+1,n=1→n=5: The Hinge that Forces the Octad,"Leech/Golay(24,12,8)",Co0,1,NON-WORKING,False,True,False,,NO
+1,n=1→n=5: The Hinge that Forces the Octad,"Leech/Golay(24,12,8)",Co0,2,NON-WORKING,False,True,False,,NO
+1,n=1→n=5: The Hinge that Forces the Octad,"Leech/Golay(24,12,8)",Co0,3,NON-WORKING,False,True,False,,NO
+1,n=1→n=5: The Hinge that Forces the Octad,"Leech/Golay(24,12,8):alt",Co1,0,NON-WORKING,False,True,True,parity,HALF-STEP
+1,n=1→n=5: The Hinge that Forces the Octad,"Leech/Golay(24,12,8):alt",Co1,1,NON-WORKING,False,True,False,,NO
+1,n=1→n=5: The Hinge that Forces the Octad,"Leech/Golay(24,12,8):alt",Co1,2,NON-WORKING,False,True,False,,NO
+1,n=1→n=5: The Hinge that Forces the Octad,"Leech/Golay(24,12,8):alt",Co1,3,NON-WORKING,False,False,True,parity,HALF-STEP
+1,n=1→n=5: The Hinge that Forces the Octad,Monster/Moonshine,Monster,0,NON-WORKING,False,True,False,,NO
+1,n=1→n=5: The Hinge that Forces the Octad,Monster/Moonshine,Monster,1,NON-WORKING,False,False,False,,NO
+1,n=1→n=5: The Hinge that Forces the Octad,Monster/Moonshine,Monster,2,NON-WORKING,False,True,False,,NO
+1,n=1→n=5: The Hinge that Forces the Octad,Monster/Moonshine,Monster,3,NON-WORKING,False,True,False,,NO
+1,n=1→n=5: The Hinge that Forces the Octad,Identity/Default,default,0,NON-WORKING,False,False,True,parity,HALF-STEP
+1,n=1→n=5: The Hinge that Forces the Octad,Identity/Default,default,1,NON-WORKING,False,False,True,parity,HALF-STEP
+1,n=1→n=5: The Hinge that Forces the Octad,Identity/Default,default,2,NON-WORKING,False,False,True,parity,HALF-STEP
+1,n=1→n=5: The Hinge that Forces the Octad,Identity/Default,default,3,NON-WORKING,False,False,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),"E8/Hamming(8,4,4)",Weyl_E8,0,PROVISIONAL,False,False,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),"E8/Hamming(8,4,4)",Weyl_E8,1,NON-WORKING,False,False,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),"E8/Hamming(8,4,4)",Weyl_E8,2,PROVISIONAL,False,False,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),"E8/Hamming(8,4,4)",Weyl_E8,3,NON-WORKING,False,False,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),"E8/Hamming(8,4,4):alt",Weyl_E8,0,NON-WORKING,False,False,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),"E8/Hamming(8,4,4):alt",Weyl_E8,1,NON-WORKING,False,False,True,parity,HALF-STEP
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),"E8/Hamming(8,4,4):alt",Weyl_E8,2,PROVISIONAL,False,False,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),"E8/Hamming(8,4,4):alt",Weyl_E8,3,NON-WORKING,False,False,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),"Leech/Golay(24,12,8)",Co0,0,NON-WORKING,False,True,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),"Leech/Golay(24,12,8)",Co0,1,NON-WORKING,False,False,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),"Leech/Golay(24,12,8)",Co0,2,NON-WORKING,False,False,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),"Leech/Golay(24,12,8)",Co0,3,NON-WORKING,False,True,True,parity,HALF-STEP
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),"Leech/Golay(24,12,8):alt",Co1,0,NON-WORKING,False,True,True,parity,HALF-STEP
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),"Leech/Golay(24,12,8):alt",Co1,1,NON-WORKING,False,True,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),"Leech/Golay(24,12,8):alt",Co1,2,NON-WORKING,False,True,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),"Leech/Golay(24,12,8):alt",Co1,3,NON-WORKING,False,False,True,parity,HALF-STEP
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),Monster/Moonshine,Monster,0,NON-WORKING,False,True,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),Monster/Moonshine,Monster,1,NON-WORKING,False,True,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),Monster/Moonshine,Monster,2,NON-WORKING,False,True,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),Monster/Moonshine,Monster,3,NON-WORKING,False,True,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),Identity/Default,default,0,NON-WORKING,False,False,False,,NO
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),Identity/Default,default,1,NON-WORKING,False,False,True,parity,HALF-STEP
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),Identity/Default,default,2,NON-WORKING,False,False,True,parity,HALF-STEP
+2,Mirror & Δ■Lift Clinic (Bug■to■Fix),Identity/Default,default,3,NON-WORKING,False,False,False,,NO
+3,Octet Coverage for ML (A/B→Octet),"E8/Hamming(8,4,4)",Weyl_E8,0,NON-WORKING,False,False,True,metric,HALF-STEP
+3,Octet Coverage for ML (A/B→Octet),"E8/Hamming(8,4,4)",Weyl_E8,1,PROVISIONAL,False,False,False,,NO
+3,Octet Coverage for ML (A/B→Octet),"E8/Hamming(8,4,4)",Weyl_E8,2,NON-WORKING,False,False,True,parity,HALF-STEP
+3,Octet Coverage for ML (A/B→Octet),"E8/Hamming(8,4,4)",Weyl_E8,3,PROVISIONAL,False,False,False,,NO
+3,Octet Coverage for ML (A/B→Octet),"E8/Hamming(8,4,4):alt",Weyl_E8,0,NON-WORKING,False,False,True,parity,HALF-STEP
+3,Octet Coverage for ML (A/B→Octet),"E8/Hamming(8,4,4):alt",Weyl_E8,1,NON-WORKING,False,False,True,commit,HALF-STEP
+3,Octet Coverage for ML (A/B→Octet),"E8/Hamming(8,4,4):alt",Weyl_E8,2,NON-WORKING,False,False,True,bounds,HALF-STEP
+3,Octet Coverage for ML (A/B→Octet),"E8/Hamming(8,4,4):alt",Weyl_E8,3,NON-WORKING,False,False,False,,NO
+3,Octet Coverage for ML (A/B→Octet),"Leech/Golay(24,12,8)",Co0,0,NON-WORKING,False,True,True,parity,HALF-STEP
+3,Octet Coverage for ML (A/B→Octet),"Leech/Golay(24,12,8)",Co0,1,NON-WORKING,False,True,False,,NO
+3,Octet Coverage for ML (A/B→Octet),"Leech/Golay(24,12,8)",Co0,2,NON-WORKING,False,True,True,parity,HALF-STEP
+3,Octet Coverage for ML (A/B→Octet),"Leech/Golay(24,12,8)",Co0,3,NON-WORKING,False,True,False,,NO
+3,Octet Coverage for ML (A/B→Octet),"Leech/Golay(24,12,8):alt",Co1,0,NON-WORKING,False,False,False,,NO
+3,Octet Coverage for ML (A/B→Octet),"Leech/Golay(24,12,8):alt",Co1,1,NON-WORKING,False,True,False,,NO
+3,Octet Coverage for ML (A/B→Octet),"Leech/Golay(24,12,8):alt",Co1,2,NON-WORKING,False,True,False,,NO
+3,Octet Coverage for ML (A/B→Octet),"Leech/Golay(24,12,8):alt",Co1,3,NON-WORKING,False,True,True,parity,HALF-STEP
+3,Octet Coverage for ML (A/B→Octet),Monster/Moonshine,Monster,0,NON-WORKING,False,True,False,,NO
+3,Octet Coverage for ML (A/B→Octet),Monster/Moonshine,Monster,1,NON-WORKING,False,True,False,,NO
+3,Octet Coverage for ML (A/B→Octet),Monster/Moonshine,Monster,2,NON-WORKING,False,True,False,,NO
+3,Octet Coverage for ML (A/B→Octet),Monster/Moonshine,Monster,3,NON-WORKING,False,True,False,,NO
+3,Octet Coverage for ML (A/B→Octet),Identity/Default,default,0,NON-WORKING,False,False,True,parity,HALF-STEP
+3,Octet Coverage for ML (A/B→Octet),Identity/Default,default,1,NON-WORKING,False,False,False,,NO
+3,Octet Coverage for ML (A/B→Octet),Identity/Default,default,2,NON-WORKING,False,False,False,,NO
+3,Octet Coverage for ML (A/B→Octet),Identity/Default,default,3,NON-WORKING,False,False,True,parity,HALF-STEP
+4,Construction■A Loom: E8 and Leech on Paper,"E8/Hamming(8,4,4)",Weyl_E8,0,NON-WORKING,False,False,False,,NO
+4,Construction■A Loom: E8 and Leech on Paper,"E8/Hamming(8,4,4)",Weyl_E8,1,NON-WORKING,False,False,True,bounds,HALF-STEP
+4,Construction■A Loom: E8 and Leech on Paper,"E8/Hamming(8,4,4)",Weyl_E8,2,NON-WORKING,False,False,True,metric,HALF-STEP
+4,Construction■A Loom: E8 and Leech on Paper,"E8/Hamming(8,4,4)",Weyl_E8,3,PROVISIONAL,False,False,False,,NO
+4,Construction■A Loom: E8 and Leech on Paper,"E8/Hamming(8,4,4):alt",Weyl_E8,0,NON-WORKING,False,False,True,bounds,HALF-STEP
+4,Construction■A Loom: E8 and Leech on Paper,"E8/Hamming(8,4,4):alt",Weyl_E8,1,NON-WORKING,False,False,True,bounds,HALF-STEP
+4,Construction■A Loom: E8 and Leech on Paper,"E8/Hamming(8,4,4):alt",Weyl_E8,2,NON-WORKING,False,False,True,bounds,HALF-STEP
+4,Construction■A Loom: E8 and Leech on Paper,"E8/Hamming(8,4,4):alt",Weyl_E8,3,NON-WORKING,False,False,True,parity,HALF-STEP
+4,Construction■A Loom: E8 and Leech on Paper,"Leech/Golay(24,12,8)",Co0,0,NON-WORKING,False,True,False,,NO
+4,Construction■A Loom: E8 and Leech on Paper,"Leech/Golay(24,12,8)",Co0,1,NON-WORKING,False,True,False,,NO
+4,Construction■A Loom: E8 and Leech on Paper,"Leech/Golay(24,12,8)",Co0,2,NON-WORKING,False,True,False,,NO
+4,Construction■A Loom: E8 and Leech on Paper,"Leech/Golay(24,12,8)",Co0,3,NON-WORKING,False,True,False,,NO
+4,Construction■A Loom: E8 and Leech on Paper,"Leech/Golay(24,12,8):alt",Co1,0,NON-WORKING,False,True,True,parity,HALF-STEP
+4,Construction■A Loom: E8 and Leech on Paper,"Leech/Golay(24,12,8):alt",Co1,1,NON-WORKING,False,False,False,,NO
+4,Construction■A Loom: E8 and Leech on Paper,"Leech/Golay(24,12,8):alt",Co1,2,NON-WORKING,False,True,False,,NO
+4,Construction■A Loom: E8 and Leech on Paper,"Leech/Golay(24,12,8):alt",Co1,3,NON-WORKING,False,True,False,,NO
+4,Construction■A Loom: E8 and Leech on Paper,Monster/Moonshine,Monster,0,NON-WORKING,False,True,False,,NO
+4,Construction■A Loom: E8 and Leech on Paper,Monster/Moonshine,Monster,1,NON-WORKING,False,True,False,,NO
+4,Construction■A Loom: E8 and Leech on Paper,Monster/Moonshine,Monster,2,NON-WORKING,False,True,False,,NO
+4,Construction■A Loom: E8 and Leech on Paper,Monster/Moonshine,Monster,3,NON-WORKING,False,True,False,,NO
+4,Construction■A Loom: E8 and Leech on Paper,Identity/Default,default,0,NON-WORKING,False,False,True,parity,HALF-STEP
+4,Construction■A Loom: E8 and Leech on Paper,Identity/Default,default,1,NON-WORKING,False,False,True,parity,HALF-STEP
+4,Construction■A Loom: E8 and Leech on Paper,Identity/Default,default,2,NON-WORKING,False,False,True,parity,HALF-STEP
+4,Construction■A Loom: E8 and Leech on Paper,Identity/Default,default,3,NON-WORKING,False,False,False,,NO
+5,Sidecar Sprint: 4 Rails in 20 Minutes,"E8/Hamming(8,4,4)",Weyl_E8,0,NON-WORKING,False,False,False,,NO
+5,Sidecar Sprint: 4 Rails in 20 Minutes,"E8/Hamming(8,4,4)",Weyl_E8,1,NON-WORKING,False,False,True,bounds,HALF-STEP
+5,Sidecar Sprint: 4 Rails in 20 Minutes,"E8/Hamming(8,4,4)",Weyl_E8,2,NON-WORKING,False,False,False,,NO
+5,Sidecar Sprint: 4 Rails in 20 Minutes,"E8/Hamming(8,4,4)",Weyl_E8,3,NON-WORKING,False,False,True,bounds,HALF-STEP
+5,Sidecar Sprint: 4 Rails in 20 Minutes,"E8/Hamming(8,4,4):alt",Weyl_E8,0,NON-WORKING,False,False,True,bounds,HALF-STEP
+5,Sidecar Sprint: 4 Rails in 20 Minutes,"E8/Hamming(8,4,4):alt",Weyl_E8,1,NON-WORKING,False,False,True,commit,HALF-STEP
+5,Sidecar Sprint: 4 Rails in 20 Minutes,"E8/Hamming(8,4,4):alt",Weyl_E8,2,PROVISIONAL,False,False,False,,NO
+5,Sidecar Sprint: 4 Rails in 20 Minutes,"E8/Hamming(8,4,4):alt",Weyl_E8,3,NON-WORKING,False,False,True,parity,HALF-STEP
+5,Sidecar Sprint: 4 Rails in 20 Minutes,"Leech/Golay(24,12,8)",Co0,0,NON-WORKING,False,True,True,parity,HALF-STEP
+5,Sidecar Sprint: 4 Rails in 20 Minutes,"Leech/Golay(24,12,8)",Co0,1,NON-WORKING,False,True,False,,NO
+5,Sidecar Sprint: 4 Rails in 20 Minutes,"Leech/Golay(24,12,8)",Co0,2,NON-WORKING,False,True,False,,NO
+5,Sidecar Sprint: 4 Rails in 20 Minutes,"Leech/Golay(24,12,8)",Co0,3,NON-WORKING,False,True,True,parity,HALF-STEP
+5,Sidecar Sprint: 4 Rails in 20 Minutes,"Leech/Golay(24,12,8):alt",Co1,0,NON-WORKING,False,True,True,parity,HALF-STEP
+5,Sidecar Sprint: 4 Rails in 20 Minutes,"Leech/Golay(24,12,8):alt",Co1,1,NON-WORKING,False,True,True,parity,HALF-STEP
+5,Sidecar Sprint: 4 Rails in 20 Minutes,"Leech/Golay(24,12,8):alt",Co1,2,NON-WORKING,False,True,True,parity,HALF-STEP
+5,Sidecar Sprint: 4 Rails in 20 Minutes,"Leech/Golay(24,12,8):alt",Co1,3,NON-WORKING,False,True,False,,NO
+5,Sidecar Sprint: 4 Rails in 20 Minutes,Monster/Moonshine,Monster,0,NON-WORKING,False,True,False,,NO
+5,Sidecar Sprint: 4 Rails in 20 Minutes,Monster/Moonshine,Monster,1,NON-WORKING,False,True,False,,NO
+5,Sidecar Sprint: 4 Rails in 20 Minutes,Monster/Moonshine,Monster,2,NON-WORKING,False,True,False,,NO
+5,Sidecar Sprint: 4 Rails in 20 Minutes,Monster/Moonshine,Monster,3,NON-WORKING,False,True,False,,NO
+5,Sidecar Sprint: 4 Rails in 20 Minutes,Identity/Default,default,0,NON-WORKING,False,False,True,parity,HALF-STEP
+5,Sidecar Sprint: 4 Rails in 20 Minutes,Identity/Default,default,1,NON-WORKING,False,False,False,,NO
+5,Sidecar Sprint: 4 Rails in 20 Minutes,Identity/Default,default,2,NON-WORKING,False,False,False,,NO
+5,Sidecar Sprint: 4 Rails in 20 Minutes,Identity/Default,default,3,NON-WORKING,False,False,False,,NO
+6,Two■Scientist Theorem■Card Resolution,"E8/Hamming(8,4,4)",Weyl_E8,0,PROVISIONAL,False,False,False,,NO
+6,Two■Scientist Theorem■Card Resolution,"E8/Hamming(8,4,4)",Weyl_E8,1,PROVISIONAL,False,False,False,,NO
+6,Two■Scientist Theorem■Card Resolution,"E8/Hamming(8,4,4)",Weyl_E8,2,NON-WORKING,True,False,True,commit,HALF-STEP
+6,Two■Scientist Theorem■Card Resolution,"E8/Hamming(8,4,4)",Weyl_E8,3,NON-WORKING,False,False,True,bounds,HALF-STEP
+6,Two■Scientist Theorem■Card Resolution,"E8/Hamming(8,4,4):alt",Weyl_E8,0,NON-WORKING,False,False,True,bounds,HALF-STEP
+6,Two■Scientist Theorem■Card Resolution,"E8/Hamming(8,4,4):alt",Weyl_E8,1,NON-WORKING,False,False,True,commit,HALF-STEP
+6,Two■Scientist Theorem■Card Resolution,"E8/Hamming(8,4,4):alt",Weyl_E8,2,NON-WORKING,False,False,True,bounds,HALF-STEP
+6,Two■Scientist Theorem■Card Resolution,"E8/Hamming(8,4,4):alt",Weyl_E8,3,NON-WORKING,False,False,False,,NO
+6,Two■Scientist Theorem■Card Resolution,"Leech/Golay(24,12,8)",Co0,0,NON-WORKING,False,True,False,,NO
+6,Two■Scientist Theorem■Card Resolution,"Leech/Golay(24,12,8)",Co0,1,NON-WORKING,False,True,False,,NO
+6,Two■Scientist Theorem■Card Resolution,"Leech/Golay(24,12,8)",Co0,2,NON-WORKING,False,True,False,,NO
+6,Two■Scientist Theorem■Card Resolution,"Leech/Golay(24,12,8)",Co0,3,NON-WORKING,False,True,False,,NO
+6,Two■Scientist Theorem■Card Resolution,"Leech/Golay(24,12,8):alt",Co1,0,NON-WORKING,False,True,False,,NO
+6,Two■Scientist Theorem■Card Resolution,"Leech/Golay(24,12,8):alt",Co1,1,NON-WORKING,False,True,True,parity,HALF-STEP
+6,Two■Scientist Theorem■Card Resolution,"Leech/Golay(24,12,8):alt",Co1,2,NON-WORKING,False,True,True,parity,HALF-STEP
+6,Two■Scientist Theorem■Card Resolution,"Leech/Golay(24,12,8):alt",Co1,3,NON-WORKING,False,True,False,,NO
+6,Two■Scientist Theorem■Card Resolution,Monster/Moonshine,Monster,0,NON-WORKING,False,True,False,,NO
+6,Two■Scientist Theorem■Card Resolution,Monster/Moonshine,Monster,1,NON-WORKING,False,True,False,,NO
+6,Two■Scientist Theorem■Card Resolution,Monster/Moonshine,Monster,2,NON-WORKING,False,True,False,,NO
+6,Two■Scientist Theorem■Card Resolution,Monster/Moonshine,Monster,3,NON-WORKING,False,True,False,,NO
+6,Two■Scientist Theorem■Card Resolution,Identity/Default,default,0,NON-WORKING,False,False,True,parity,HALF-STEP
+6,Two■Scientist Theorem■Card Resolution,Identity/Default,default,1,NON-WORKING,False,False,False,,NO
+6,Two■Scientist Theorem■Card Resolution,Identity/Default,default,2,NON-WORKING,False,False,False,,NO
+6,Two■Scientist Theorem■Card Resolution,Identity/Default,default,3,NON-WORKING,False,False,False,,NO
+7,8■Person Table with Neighbor Lanes,"E8/Hamming(8,4,4)",Weyl_E8,0,NON-WORKING,False,False,True,bounds,HALF-STEP
+7,8■Person Table with Neighbor Lanes,"E8/Hamming(8,4,4)",Weyl_E8,1,NON-WORKING,False,False,False,,NO
+7,8■Person Table with Neighbor Lanes,"E8/Hamming(8,4,4)",Weyl_E8,2,NON-WORKING,False,False,False,,NO
+7,8■Person Table with Neighbor Lanes,"E8/Hamming(8,4,4)",Weyl_E8,3,NON-WORKING,False,False,False,,NO
+7,8■Person Table with Neighbor Lanes,"E8/Hamming(8,4,4):alt",Weyl_E8,0,NON-WORKING,False,False,True,bounds,HALF-STEP
+7,8■Person Table with Neighbor Lanes,"E8/Hamming(8,4,4):alt",Weyl_E8,1,PROVISIONAL,False,False,False,,NO
+7,8■Person Table with Neighbor Lanes,"E8/Hamming(8,4,4):alt",Weyl_E8,2,NON-WORKING,False,False,True,parity,HALF-STEP
+7,8■Person Table with Neighbor Lanes,"E8/Hamming(8,4,4):alt",Weyl_E8,3,PROVISIONAL,False,False,False,,NO
+7,8■Person Table with Neighbor Lanes,"Leech/Golay(24,12,8)",Co0,0,NON-WORKING,False,True,False,,NO
+7,8■Person Table with Neighbor Lanes,"Leech/Golay(24,12,8)",Co0,1,NON-WORKING,False,True,False,,NO
+7,8■Person Table with Neighbor Lanes,"Leech/Golay(24,12,8)",Co0,2,NON-WORKING,False,False,True,parity,HALF-STEP
+7,8■Person Table with Neighbor Lanes,"Leech/Golay(24,12,8)",Co0,3,NON-WORKING,False,True,False,,NO
+7,8■Person Table with Neighbor Lanes,"Leech/Golay(24,12,8):alt",Co1,0,NON-WORKING,False,False,True,parity,HALF-STEP
+7,8■Person Table with Neighbor Lanes,"Leech/Golay(24,12,8):alt",Co1,1,NON-WORKING,False,True,False,,NO
+7,8■Person Table with Neighbor Lanes,"Leech/Golay(24,12,8):alt",Co1,2,NON-WORKING,False,True,False,,NO
+7,8■Person Table with Neighbor Lanes,"Leech/Golay(24,12,8):alt",Co1,3,NON-WORKING,False,False,True,parity,HALF-STEP
+7,8■Person Table with Neighbor Lanes,Monster/Moonshine,Monster,0,NON-WORKING,False,True,False,,NO
+7,8■Person Table with Neighbor Lanes,Monster/Moonshine,Monster,1,NON-WORKING,False,False,False,,NO
+7,8■Person Table with Neighbor Lanes,Monster/Moonshine,Monster,2,NON-WORKING,False,True,False,,NO
+7,8■Person Table with Neighbor Lanes,Monster/Moonshine,Monster,3,NON-WORKING,False,True,False,,NO
+7,8■Person Table with Neighbor Lanes,Identity/Default,default,0,NON-WORKING,False,False,True,parity,HALF-STEP
+7,8■Person Table with Neighbor Lanes,Identity/Default,default,1,NON-WORKING,False,False,False,,NO
+7,8■Person Table with Neighbor Lanes,Identity/Default,default,2,NON-WORKING,False,False,True,parity,HALF-STEP
+7,8■Person Table with Neighbor Lanes,Identity/Default,default,3,NON-WORKING,False,False,False,,NO
+8,Card■Deck CQE + Lab Stations,"E8/Hamming(8,4,4)",Weyl_E8,0,NON-WORKING,False,False,True,bounds,HALF-STEP
+8,Card■Deck CQE + Lab Stations,"E8/Hamming(8,4,4)",Weyl_E8,1,NON-WORKING,False,False,True,bounds,HALF-STEP
+8,Card■Deck CQE + Lab Stations,"E8/Hamming(8,4,4)",Weyl_E8,2,NON-WORKING,False,False,False,,NO
+8,Card■Deck CQE + Lab Stations,"E8/Hamming(8,4,4)",Weyl_E8,3,NON-WORKING,False,False,True,commit,HALF-STEP
+8,Card■Deck CQE + Lab Stations,"E8/Hamming(8,4,4):alt",Weyl_E8,0,PROVISIONAL,False,False,False,,NO
+8,Card■Deck CQE + Lab Stations,"E8/Hamming(8,4,4):alt",Weyl_E8,1,NON-WORKING,False,False,False,,NO
+8,Card■Deck CQE + Lab Stations,"E8/Hamming(8,4,4):alt",Weyl_E8,2,PROVISIONAL,False,False,False,,NO
+8,Card■Deck CQE + Lab Stations,"E8/Hamming(8,4,4):alt",Weyl_E8,3,NON-WORKING,False,False,True,bounds,HALF-STEP
+8,Card■Deck CQE + Lab Stations,"Leech/Golay(24,12,8)",Co0,0,NON-WORKING,False,True,False,,NO
+8,Card■Deck CQE + Lab Stations,"Leech/Golay(24,12,8)",Co0,1,NON-WORKING,False,True,True,parity,HALF-STEP
+8,Card■Deck CQE + Lab Stations,"Leech/Golay(24,12,8)",Co0,2,NON-WORKING,False,True,False,,NO
+8,Card■Deck CQE + Lab Stations,"Leech/Golay(24,12,8)",Co0,3,NON-WORKING,False,True,False,,NO
+8,Card■Deck CQE + Lab Stations,"Leech/Golay(24,12,8):alt",Co1,0,NON-WORKING,False,True,False,,NO
+8,Card■Deck CQE + Lab Stations,"Leech/Golay(24,12,8):alt",Co1,1,NON-WORKING,False,True,True,parity,HALF-STEP
+8,Card■Deck CQE + Lab Stations,"Leech/Golay(24,12,8):alt",Co1,2,NON-WORKING,False,False,False,,NO
+8,Card■Deck CQE + Lab Stations,"Leech/Golay(24,12,8):alt",Co1,3,NON-WORKING,False,True,False,,NO
+8,Card■Deck CQE + Lab Stations,Monster/Moonshine,Monster,0,NON-WORKING,False,True,False,,NO
+8,Card■Deck CQE + Lab Stations,Monster/Moonshine,Monster,1,NON-WORKING,False,True,False,,NO
+8,Card■Deck CQE + Lab Stations,Monster/Moonshine,Monster,2,NON-WORKING,False,False,False,,NO
+8,Card■Deck CQE + Lab Stations,Monster/Moonshine,Monster,3,NON-WORKING,False,True,False,,NO
+8,Card■Deck CQE + Lab Stations,Identity/Default,default,0,NON-WORKING,False,False,False,,NO
+8,Card■Deck CQE + Lab Stations,Identity/Default,default,1,NON-WORKING,False,False,False,,NO
+8,Card■Deck CQE + Lab Stations,Identity/Default,default,2,NON-WORKING,False,False,False,,NO
+8,Card■Deck CQE + Lab Stations,Identity/Default,default,3,NON-WORKING,False,False,False,,NO
+9,Hypercube→Toroidal Chamber (4■bit Hubs),"E8/Hamming(8,4,4)",Weyl_E8,0,NON-WORKING,False,False,False,,NO
+9,Hypercube→Toroidal Chamber (4■bit Hubs),"E8/Hamming(8,4,4)",Weyl_E8,1,PROVISIONAL,False,False,False,,NO
+9,Hypercube→Toroidal Chamber (4■bit Hubs),"E8/Hamming(8,4,4)",Weyl_E8,2,NON-WORKING,False,False,True,bounds,HALF-STEP
+9,Hypercube→Toroidal Chamber (4■bit Hubs),"E8/Hamming(8,4,4)",Weyl_E8,3,NON-WORKING,False,False,True,bounds,HALF-STEP
+9,Hypercube→Toroidal Chamber (4■bit Hubs),"E8/Hamming(8,4,4):alt",Weyl_E8,0,NON-WORKING,False,False,False,,NO
+9,Hypercube→Toroidal Chamber (4■bit Hubs),"E8/Hamming(8,4,4):alt",Weyl_E8,1,NON-WORKING,False,False,False,,NO
+9,Hypercube→Toroidal Chamber (4■bit Hubs),"E8/Hamming(8,4,4):alt",Weyl_E8,2,NON-WORKING,False,False,True,bounds,HALF-STEP
+9,Hypercube→Toroidal Chamber (4■bit Hubs),"E8/Hamming(8,4,4):alt",Weyl_E8,3,NON-WORKING,False,False,True,bounds,HALF-STEP
+9,Hypercube→Toroidal Chamber (4■bit Hubs),"Leech/Golay(24,12,8)",Co0,0,NON-WORKING,False,False,True,parity,HALF-STEP
+9,Hypercube→Toroidal Chamber (4■bit Hubs),"Leech/Golay(24,12,8)",Co0,1,NON-WORKING,False,True,False,,NO
+9,Hypercube→Toroidal Chamber (4■bit Hubs),"Leech/Golay(24,12,8)",Co0,2,NON-WORKING,False,True,True,parity,HALF-STEP
+9,Hypercube→Toroidal Chamber (4■bit Hubs),"Leech/Golay(24,12,8)",Co0,3,NON-WORKING,False,True,True,parity,HALF-STEP
+9,Hypercube→Toroidal Chamber (4■bit Hubs),"Leech/Golay(24,12,8):alt",Co1,0,NON-WORKING,False,True,False,,NO
+9,Hypercube→Toroidal Chamber (4■bit Hubs),"Leech/Golay(24,12,8):alt",Co1,1,NON-WORKING,False,True,True,parity,HALF-STEP
+9,Hypercube→Toroidal Chamber (4■bit Hubs),"Leech/Golay(24,12,8):alt",Co1,2,NON-WORKING,False,True,False,,NO
+9,Hypercube→Toroidal Chamber (4■bit Hubs),"Leech/Golay(24,12,8):alt",Co1,3,NON-WORKING,False,True,False,,NO
+9,Hypercube→Toroidal Chamber (4■bit Hubs),Monster/Moonshine,Monster,0,NON-WORKING,False,True,False,,NO
+9,Hypercube→Toroidal Chamber (4■bit Hubs),Monster/Moonshine,Monster,1,NON-WORKING,False,True,False,,NO
+9,Hypercube→Toroidal Chamber (4■bit Hubs),Monster/Moonshine,Monster,2,NON-WORKING,False,False,False,,NO
+9,Hypercube→Toroidal Chamber (4■bit Hubs),Monster/Moonshine,Monster,3,NON-WORKING,False,True,False,,NO
+9,Hypercube→Toroidal Chamber (4■bit Hubs),Identity/Default,default,0,NON-WORKING,False,False,False,,NO
+9,Hypercube→Toroidal Chamber (4■bit Hubs),Identity/Default,default,1,NON-WORKING,False,False,False,,NO
+9,Hypercube→Toroidal Chamber (4■bit Hubs),Identity/Default,default,2,NON-WORKING,False,False,False,,NO
+9,Hypercube→Toroidal Chamber (4■bit Hubs),Identity/Default,default,3,NON-WORKING,False,False,True,parity,HALF-STEP
+10,Sound & Subharmonics Viewer (Cartan,"E8/Hamming(8,4,4)",Weyl_E8,0,NON-WORKING,False,False,False,,NO
+10,Sound & Subharmonics Viewer (Cartan,"E8/Hamming(8,4,4)",Weyl_E8,1,NON-WORKING,False,False,True,bounds,HALF-STEP
+10,Sound & Subharmonics Viewer (Cartan,"E8/Hamming(8,4,4)",Weyl_E8,2,NON-WORKING,False,False,True,bounds,HALF-STEP
+10,Sound & Subharmonics Viewer (Cartan,"E8/Hamming(8,4,4)",Weyl_E8,3,NON-WORKING,False,False,True,bounds,HALF-STEP
+10,Sound & Subharmonics Viewer (Cartan,"E8/Hamming(8,4,4):alt",Weyl_E8,0,NON-WORKING,False,False,True,commit,HALF-STEP
+10,Sound & Subharmonics Viewer (Cartan,"E8/Hamming(8,4,4):alt",Weyl_E8,1,NON-WORKING,False,False,False,,NO
+10,Sound & Subharmonics Viewer (Cartan,"E8/Hamming(8,4,4):alt",Weyl_E8,2,NON-WORKING,False,False,True,bounds,HALF-STEP
+10,Sound & Subharmonics Viewer (Cartan,"E8/Hamming(8,4,4):alt",Weyl_E8,3,PROVISIONAL,False,False,False,,NO
+10,Sound & Subharmonics Viewer (Cartan,"Leech/Golay(24,12,8)",Co0,0,NON-WORKING,False,False,False,,NO
+10,Sound & Subharmonics Viewer (Cartan,"Leech/Golay(24,12,8)",Co0,1,NON-WORKING,False,False,True,parity,HALF-STEP
+10,Sound & Subharmonics Viewer (Cartan,"Leech/Golay(24,12,8)",Co0,2,NON-WORKING,False,True,False,,NO
+10,Sound & Subharmonics Viewer (Cartan,"Leech/Golay(24,12,8)",Co0,3,NON-WORKING,False,True,True,parity,HALF-STEP
+10,Sound & Subharmonics Viewer (Cartan,"Leech/Golay(24,12,8):alt",Co1,0,NON-WORKING,False,True,False,,NO
+10,Sound & Subharmonics Viewer (Cartan,"Leech/Golay(24,12,8):alt",Co1,1,NON-WORKING,False,True,False,,NO
+10,Sound & Subharmonics Viewer (Cartan,"Leech/Golay(24,12,8):alt",Co1,2,NON-WORKING,False,True,False,,NO
+10,Sound & Subharmonics Viewer (Cartan,"Leech/Golay(24,12,8):alt",Co1,3,NON-WORKING,False,True,False,,NO
+10,Sound & Subharmonics Viewer (Cartan,Monster/Moonshine,Monster,0,NON-WORKING,False,False,False,,NO
+10,Sound & Subharmonics Viewer (Cartan,Monster/Moonshine,Monster,1,NON-WORKING,False,True,False,,NO
+10,Sound & Subharmonics Viewer (Cartan,Monster/Moonshine,Monster,2,NON-WORKING,False,True,False,,NO
+10,Sound & Subharmonics Viewer (Cartan,Monster/Moonshine,Monster,3,NON-WORKING,False,True,False,,NO
+10,Sound & Subharmonics Viewer (Cartan,Identity/Default,default,0,NON-WORKING,False,False,False,,NO
+10,Sound & Subharmonics Viewer (Cartan,Identity/Default,default,1,NON-WORKING,False,False,False,,NO
+10,Sound & Subharmonics Viewer (Cartan,Identity/Default,default,2,NON-WORKING,False,False,False,,NO
+10,Sound & Subharmonics Viewer (Cartan,Identity/Default,default,3,NON-WORKING,False,False,True,parity,HALF-STEP
+11,Primordial→EM→Thermo: Meaning■Token Safety,"E8/Hamming(8,4,4)",Weyl_E8,0,NON-WORKING,False,False,True,bounds,HALF-STEP
+11,Primordial→EM→Thermo: Meaning■Token Safety,"E8/Hamming(8,4,4)",Weyl_E8,1,NON-WORKING,False,False,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,"E8/Hamming(8,4,4)",Weyl_E8,2,NON-WORKING,False,False,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,"E8/Hamming(8,4,4)",Weyl_E8,3,NON-WORKING,False,False,True,bounds,HALF-STEP
+11,Primordial→EM→Thermo: Meaning■Token Safety,"E8/Hamming(8,4,4):alt",Weyl_E8,0,NON-WORKING,False,False,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,"E8/Hamming(8,4,4):alt",Weyl_E8,1,NON-WORKING,False,False,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,"E8/Hamming(8,4,4):alt",Weyl_E8,2,NON-WORKING,False,False,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,"E8/Hamming(8,4,4):alt",Weyl_E8,3,NON-WORKING,False,False,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,"Leech/Golay(24,12,8)",Co0,0,NON-WORKING,False,True,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,"Leech/Golay(24,12,8)",Co0,1,NON-WORKING,False,True,True,parity,HALF-STEP
+11,Primordial→EM→Thermo: Meaning■Token Safety,"Leech/Golay(24,12,8)",Co0,2,NON-WORKING,False,True,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,"Leech/Golay(24,12,8)",Co0,3,NON-WORKING,False,True,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,"Leech/Golay(24,12,8):alt",Co1,0,NON-WORKING,False,True,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,"Leech/Golay(24,12,8):alt",Co1,1,NON-WORKING,False,False,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,"Leech/Golay(24,12,8):alt",Co1,2,NON-WORKING,False,False,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,"Leech/Golay(24,12,8):alt",Co1,3,NON-WORKING,False,True,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,Monster/Moonshine,Monster,0,NON-WORKING,False,True,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,Monster/Moonshine,Monster,1,NON-WORKING,False,True,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,Monster/Moonshine,Monster,2,NON-WORKING,False,True,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,Monster/Moonshine,Monster,3,NON-WORKING,False,False,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,Identity/Default,default,0,NON-WORKING,False,False,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,Identity/Default,default,1,NON-WORKING,False,False,True,parity,HALF-STEP
+11,Primordial→EM→Thermo: Meaning■Token Safety,Identity/Default,default,2,NON-WORKING,False,False,False,,NO
+11,Primordial→EM→Thermo: Meaning■Token Safety,Identity/Default,default,3,NON-WORKING,False,False,False,,NO
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"E8/Hamming(8,4,4)",Weyl_E8,0,NON-WORKING,False,False,True,parity,HALF-STEP
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"E8/Hamming(8,4,4)",Weyl_E8,1,NON-WORKING,False,False,True,bounds,HALF-STEP
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"E8/Hamming(8,4,4)",Weyl_E8,2,NON-WORKING,False,False,True,metric,HALF-STEP
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"E8/Hamming(8,4,4)",Weyl_E8,3,PROVISIONAL,False,False,False,,NO
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"E8/Hamming(8,4,4):alt",Weyl_E8,0,NON-WORKING,False,False,False,,NO
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"E8/Hamming(8,4,4):alt",Weyl_E8,1,NON-WORKING,False,False,False,,NO
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"E8/Hamming(8,4,4):alt",Weyl_E8,2,NON-WORKING,False,False,True,bounds,HALF-STEP
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"E8/Hamming(8,4,4):alt",Weyl_E8,3,PROVISIONAL,False,False,False,,NO
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"Leech/Golay(24,12,8)",Co0,0,NON-WORKING,False,True,False,,NO
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"Leech/Golay(24,12,8)",Co0,1,NON-WORKING,False,True,True,parity,HALF-STEP
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"Leech/Golay(24,12,8)",Co0,2,NON-WORKING,False,True,False,,NO
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"Leech/Golay(24,12,8)",Co0,3,NON-WORKING,False,True,True,parity,HALF-STEP
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"Leech/Golay(24,12,8):alt",Co1,0,NON-WORKING,False,False,True,parity,HALF-STEP
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"Leech/Golay(24,12,8):alt",Co1,1,NON-WORKING,False,True,False,,NO
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"Leech/Golay(24,12,8):alt",Co1,2,NON-WORKING,False,True,False,,NO
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"Leech/Golay(24,12,8):alt",Co1,3,NON-WORKING,False,True,False,,NO
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,Monster/Moonshine,Monster,0,NON-WORKING,False,True,False,,NO
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,Monster/Moonshine,Monster,1,NON-WORKING,False,True,False,,NO
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,Monster/Moonshine,Monster,2,NON-WORKING,False,True,False,,NO
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,Monster/Moonshine,Monster,3,NON-WORKING,False,True,False,,NO
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,Identity/Default,default,0,NON-WORKING,False,False,False,,NO
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,Identity/Default,default,1,NON-WORKING,False,False,False,,NO
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,Identity/Default,default,2,NON-WORKING,False,False,True,parity,HALF-STEP
+12,Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,Identity/Default,default,3,NON-WORKING,False,False,False,,NO
+13,Not Lattice Flattery: Governance by Geometry,"E8/Hamming(8,4,4)",Weyl_E8,0,NON-WORKING,False,False,False,,NO
+13,Not Lattice Flattery: Governance by Geometry,"E8/Hamming(8,4,4)",Weyl_E8,1,NON-WORKING,False,False,True,parity,HALF-STEP
+13,Not Lattice Flattery: Governance by Geometry,"E8/Hamming(8,4,4)",Weyl_E8,2,NON-WORKING,False,False,True,bounds,HALF-STEP
+13,Not Lattice Flattery: Governance by Geometry,"E8/Hamming(8,4,4)",Weyl_E8,3,NON-WORKING,False,False,False,,NO
+13,Not Lattice Flattery: Governance by Geometry,"E8/Hamming(8,4,4):alt",Weyl_E8,0,NON-WORKING,False,False,False,,NO
+13,Not Lattice Flattery: Governance by Geometry,"E8/Hamming(8,4,4):alt",Weyl_E8,1,NON-WORKING,False,False,True,bounds,HALF-STEP
+13,Not Lattice Flattery: Governance by Geometry,"E8/Hamming(8,4,4):alt",Weyl_E8,2,NON-WORKING,False,False,True,bounds,HALF-STEP
+13,Not Lattice Flattery: Governance by Geometry,"E8/Hamming(8,4,4):alt",Weyl_E8,3,NON-WORKING,False,False,False,,NO
+13,Not Lattice Flattery: Governance by Geometry,"Leech/Golay(24,12,8)",Co0,0,NON-WORKING,False,False,True,parity,HALF-STEP
+13,Not Lattice Flattery: Governance by Geometry,"Leech/Golay(24,12,8)",Co0,1,NON-WORKING,False,True,False,,NO
+13,Not Lattice Flattery: Governance by Geometry,"Leech/Golay(24,12,8)",Co0,2,NON-WORKING,False,True,False,,NO
+13,Not Lattice Flattery: Governance by Geometry,"Leech/Golay(24,12,8)",Co0,3,NON-WORKING,False,True,False,,NO
+13,Not Lattice Flattery: Governance by Geometry,"Leech/Golay(24,12,8):alt",Co1,0,NON-WORKING,False,True,True,parity,HALF-STEP
+13,Not Lattice Flattery: Governance by Geometry,"Leech/Golay(24,12,8):alt",Co1,1,NON-WORKING,False,True,False,,NO
+13,Not Lattice Flattery: Governance by Geometry,"Leech/Golay(24,12,8):alt",Co1,2,NON-WORKING,False,True,True,parity,HALF-STEP
+13,Not Lattice Flattery: Governance by Geometry,"Leech/Golay(24,12,8):alt",Co1,3,NON-WORKING,False,False,False,,NO
+13,Not Lattice Flattery: Governance by Geometry,Monster/Moonshine,Monster,0,NON-WORKING,False,True,False,,NO
+13,Not Lattice Flattery: Governance by Geometry,Monster/Moonshine,Monster,1,NON-WORKING,False,True,False,,NO
+13,Not Lattice Flattery: Governance by Geometry,Monster/Moonshine,Monster,2,NON-WORKING,False,True,False,,NO
+13,Not Lattice Flattery: Governance by Geometry,Monster/Moonshine,Monster,3,NON-WORKING,False,True,False,,NO
+13,Not Lattice Flattery: Governance by Geometry,Identity/Default,default,0,NON-WORKING,False,False,False,,NO
+13,Not Lattice Flattery: Governance by Geometry,Identity/Default,default,1,NON-WORKING,False,False,True,parity,HALF-STEP
+13,Not Lattice Flattery: Governance by Geometry,Identity/Default,default,2,NON-WORKING,False,False,False,,NO
+13,Not Lattice Flattery: Governance by Geometry,Identity/Default,default,3,NON-WORKING,False,False,True,parity,HALF-STEP
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts","E8/Hamming(8,4,4)",Weyl_E8,0,NON-WORKING,False,False,True,parity,HALF-STEP
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts","E8/Hamming(8,4,4)",Weyl_E8,1,NON-WORKING,False,False,True,bounds,HALF-STEP
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts","E8/Hamming(8,4,4)",Weyl_E8,2,NON-WORKING,False,False,True,parity,HALF-STEP
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts","E8/Hamming(8,4,4)",Weyl_E8,3,NON-WORKING,False,False,False,,NO
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts","E8/Hamming(8,4,4):alt",Weyl_E8,0,NON-WORKING,False,False,True,commit,HALF-STEP
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts","E8/Hamming(8,4,4):alt",Weyl_E8,1,NON-WORKING,False,False,False,,NO
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts","E8/Hamming(8,4,4):alt",Weyl_E8,2,NON-WORKING,False,False,False,,NO
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts","E8/Hamming(8,4,4):alt",Weyl_E8,3,NON-WORKING,False,False,True,parity,HALF-STEP
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts","Leech/Golay(24,12,8)",Co0,0,NON-WORKING,False,True,True,parity,HALF-STEP
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts","Leech/Golay(24,12,8)",Co0,1,NON-WORKING,False,True,True,parity,HALF-STEP
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts","Leech/Golay(24,12,8)",Co0,2,NON-WORKING,False,False,True,parity,HALF-STEP
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts","Leech/Golay(24,12,8)",Co0,3,NON-WORKING,False,True,False,,NO
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts","Leech/Golay(24,12,8):alt",Co1,0,NON-WORKING,False,False,False,,NO
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts","Leech/Golay(24,12,8):alt",Co1,1,NON-WORKING,False,False,False,,NO
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts","Leech/Golay(24,12,8):alt",Co1,2,NON-WORKING,False,True,True,parity,HALF-STEP
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts","Leech/Golay(24,12,8):alt",Co1,3,NON-WORKING,False,True,True,parity,HALF-STEP
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts",Monster/Moonshine,Monster,0,NON-WORKING,False,True,False,,NO
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts",Monster/Moonshine,Monster,1,NON-WORKING,False,False,False,,NO
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts",Monster/Moonshine,Monster,2,NON-WORKING,False,True,False,,NO
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts",Monster/Moonshine,Monster,3,NON-WORKING,False,False,False,,NO
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts",Identity/Default,default,0,NON-WORKING,False,False,False,,NO
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts",Identity/Default,default,1,NON-WORKING,False,False,False,,NO
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts",Identity/Default,default,2,NON-WORKING,False,False,True,parity,HALF-STEP
+14,"Sandbox Red/Blue: Safety, Redaction, Receipts",Identity/Default,default,3,NON-WORKING,False,False,True,parity,HALF-STEP
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,","E8/Hamming(8,4,4)",Weyl_E8,0,NON-WORKING,False,False,False,,NO
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,","E8/Hamming(8,4,4)",Weyl_E8,1,NON-WORKING,False,False,True,parity,HALF-STEP
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,","E8/Hamming(8,4,4)",Weyl_E8,2,NON-WORKING,False,False,False,,NO
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,","E8/Hamming(8,4,4)",Weyl_E8,3,NON-WORKING,False,False,True,commit,HALF-STEP
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,","E8/Hamming(8,4,4):alt",Weyl_E8,0,PROVISIONAL,False,False,False,,NO
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,","E8/Hamming(8,4,4):alt",Weyl_E8,1,NON-WORKING,False,False,False,,NO
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,","E8/Hamming(8,4,4):alt",Weyl_E8,2,NON-WORKING,False,False,True,parity,HALF-STEP
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,","E8/Hamming(8,4,4):alt",Weyl_E8,3,NON-WORKING,False,False,False,,NO
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,","Leech/Golay(24,12,8)",Co0,0,NON-WORKING,False,True,False,,NO
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,","Leech/Golay(24,12,8)",Co0,1,NON-WORKING,False,False,True,parity,HALF-STEP
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,","Leech/Golay(24,12,8)",Co0,2,NON-WORKING,False,True,False,,NO
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,","Leech/Golay(24,12,8)",Co0,3,NON-WORKING,False,True,False,,NO
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,","Leech/Golay(24,12,8):alt",Co1,0,NON-WORKING,False,True,True,parity,HALF-STEP
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,","Leech/Golay(24,12,8):alt",Co1,1,NON-WORKING,False,True,True,parity,HALF-STEP
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,","Leech/Golay(24,12,8):alt",Co1,2,NON-WORKING,False,True,False,,NO
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,","Leech/Golay(24,12,8):alt",Co1,3,NON-WORKING,False,True,False,,NO
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,",Monster/Moonshine,Monster,0,NON-WORKING,False,True,False,,NO
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,",Monster/Moonshine,Monster,1,NON-WORKING,False,True,False,,NO
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,",Monster/Moonshine,Monster,2,NON-WORKING,False,True,False,,NO
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,",Monster/Moonshine,Monster,3,NON-WORKING,False,False,False,,NO
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,",Identity/Default,default,0,NON-WORKING,False,False,True,parity,HALF-STEP
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,",Identity/Default,default,1,NON-WORKING,False,False,False,,NO
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,",Identity/Default,default,2,NON-WORKING,False,False,True,parity,HALF-STEP
+15,"Capstone: Three■Track Non■Toy (Optics, DNA,",Identity/Default,default,3,NON-WORKING,False,False,False,,NO

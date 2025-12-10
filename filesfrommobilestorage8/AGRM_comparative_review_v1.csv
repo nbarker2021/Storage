@@ -1,0 +1,25 @@
+path,exists,in_final_tree,bytes,lines,imports_numpy,imports_unified,imports_agrm,imports_mdhg,imports_franken,has_cli,classes,funcs,todo_fixme,truncated_ellipses,importable_in_final,notes
+/mnt/data/_bestof_unpack/bestof_agrm/agrm/AGRM.py,True,False,130865,2559,True,False,True,True,False,True,9,95,1,27,,
+/mnt/data/final_build_r1_src_3/src/unified/embedder/cand_6_AGRM_py.py,True,True,130865,2559,True,False,True,True,False,True,9,95,1,27,False,import_error: No module named 'numpy'
+/mnt/data/final_build_r1_src_2/src/unified/embedder/cand_6_AGRM_py.py,True,False,130865,2559,True,False,True,True,False,True,9,95,1,27,,
+/mnt/data/_bestof_unpack/bestof_agrm/agrm/agrm_cli_allrun (1).py,True,False,2291,68,False,False,True,False,False,True,0,3,0,0,,
+/mnt/data/_bestof_unpack/bestof_agrm/agrm/agrm_cli_launcher (2).py,True,False,4768,130,False,False,True,False,False,True,1,7,0,2,,
+/mnt/data/_bestof_unpack/bestof_agrm/agrm/agrm_core_loop.py,True,False,2249,56,False,False,True,False,False,False,1,4,0,1,,
+/mnt/data/_bestof_unpack/bestof_agrm/agrm/agrm_cli_allrun.py,True,False,3914,115,False,False,True,False,False,True,1,7,0,2,,
+/mnt/data/_bestof_unpack/bestof_agrm/agrm/agrm_cli_launcher (3).py,True,False,1698,51,False,False,True,False,False,True,0,1,0,2,,
+/mnt/data/final_build_r1_src_3/src/unified/integration/agrm_adapter.py,True,True,1492,39,False,True,True,False,False,False,1,2,0,0,False,import_error: No module named 'unified.agrm'
+/mnt/data/_bestof_unpack/bestof_agrm/agrm/agrm_runtime_controller (1).py,True,False,2319,68,False,False,True,False,False,False,2,5,0,0,,
+/mnt/data/_bestof_unpack/bestof_agrm/agrm/agrm_runtime_controller.py,True,False,2977,81,False,False,True,False,False,False,4,12,0,4,,
+/mnt/data/final_build_r1_src_3/src/unified/integration/bridge.py,True,True,1100,28,True,True,True,False,False,False,0,1,0,0,False,import_error: No module named 'numpy'
+/mnt/data/SNAP_findings/final_build_r1_src_2/src/unified/integration/agrm_adapter.py,True,False,1492,39,False,True,True,False,False,False,1,2,0,0,,
+/mnt/data/SNAP_findings/final_build_r1_src_3/src/unified/integration/agrm_adapter.py,True,False,1492,39,False,True,True,False,False,False,1,2,0,0,,
+/mnt/data/_bestof_unpack/bestof_agrm/agrm/__init__.py,True,False,313,8,False,False,True,False,False,False,0,0,0,0,,
+/mnt/data/_bestof_unpack/bestof_agrm/agrm/agrm_profiler_diagnostics (1).py,True,False,1693,63,False,False,True,False,False,False,2,10,0,0,,
+/mnt/data/_bestof_unpack/bestof_agrm/agrm/agrm_profiler_diagnostics.py,True,False,1692,62,False,False,True,False,False,False,2,10,0,0,,
+/mnt/data/_bestof_unpack/bestof_agrm/agrm/agrm_results_export (1).py,True,False,1785,44,False,False,True,False,False,False,0,3,0,0,,
+/mnt/data/_bestof_unpack/bestof_agrm/agrm/agrm_results_export.py,True,False,1784,43,False,False,True,False,False,False,0,3,0,0,,
+/mnt/data/final_build_r1_src_2/src/unified/integration/agrm_adapter.py,True,False,1492,39,False,True,True,False,False,False,1,2,0,0,,
+/mnt/data/final_build_r1_src_3/src/unified/franken/__init__.py,True,True,0,1,False,False,False,False,False,False,0,0,0,0,False,import_error: No module named 'unified.franken.__init__'
+/mnt/data/final_build_r1_src_3/src/unified/franken/agrm_franken.py,False,True,,,False,False,False,False,False,False,0,0,0,0,,missing
+/mnt/data/final_build_r1_src_3/src/unified/franken/tsp_franken.py,False,True,,,False,False,False,False,False,False,0,0,0,0,,missing
+/mnt/data/final_build_r1_src_3/src/unified/franken/util_franken.py,False,True,,,False,False,False,False,False,False,0,0,0,0,,missing

@@ -1,0 +1,2074 @@
+source,target,weight,evidence_count
+Notes:,Primitive/Idea: ____________________________________,408,6
+Primitive/Idea: ____________________________________,Suit: ____ Rank: ____,408,6
+Notes:,Suit: ____ Rank: ____,396,6
+Context: ________,Value: __________ Units: ____,380,6
+Token: __________,Value: __________ Units: ____,380,6
+Context: ________,Hash: __________,380,6
+Context: ________,Token: __________,378,6
+Hash: __________,Value: __________ Units: ____,378,6
+Hash: __________,Token: __________,376,6
+Blank Cards (3×3),UTC 2025-09-20 21:06,153,6
+Props & setup,Room,130,6
+N/A,Safety,128,6
+Blocking (5–15 minutes),N/A,128,6
+Instruments,Safety,126,6
+Instruments,Paper kit,124,6
+Hand■ins (artifacts to keep),Ledger hook (what gets recorded),122,6
+Debrief (2–3 prompts),Hand■ins (artifacts to keep),108,6
+Blocking (5–15 minutes),Safety,96,6
+Paper kit,Room,96,6
+Instruments,N/A,94,6
+Paper kit,Safety,90,6
+Blocking (5–15 minutes),Ledger hook (what gets recorded),88,6
+Paper kit,Props & setup,64,6
+Props & setup,What it teaches (learning targets),62,6
+Blocking (5–15 minutes),Instruments,62,6
+Instruments,Room,60,6
+N/A,Paper kit,58,6
+Ledger hook (what gets recorded),N/A,58,6
+Claim:,Local Test:,48,6
+Assumptions:,Theorem Card,48,6
+Counterexample? ■ Yes ■ No,Local Test:,48,6
+Counterexample? ■ Yes ■ No,Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________,48,6
+Assumptions:,Claim:,48,6
+Claim:,Counterexample? ■ Yes ■ No,46,6
+Assumptions:,Local Test:,46,6
+Claim:,Theorem Card,46,6
+Local Test:,Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________,46,6
+Claim:,Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________,44,6
+Debrief (2–3 prompts),Ledger hook (what gets recorded),44,6
+Assumptions:,Counterexample? ■ Yes ■ No,44,6
+Local Test:,Theorem Card,44,6
+Assumptions:,Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________,42,6
+Counterexample? ■ Yes ■ No,Theorem Card,42,6
+Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________,Theorem Card,40,6
+Blank Cards (3×3),Cut lines. Use dry-erase sleeves if available.,36,6
+"Construction A: p=__, code=______________, glue=________________",Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING,32,6
+DNA-10: ________________________________________________________,"Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}",32,6
+DNA-10: ________________________________________________________,Octet Map H1..H8: _______________________________________________,32,6
+Ledger hook (what gets recorded),Safety,32,6
+"Automorphism: group=________, element=________________","Construction A: p=__, code=______________, glue=________________",32,6
+Blocking (5–15 minutes),Hand■ins (artifacts to keep),32,6
+Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________,"Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}",32,6
+Blank Cards (3×3),Suit: ____ Rank: ____,32,6
+"Automorphism: group=________, element=________________",Octet Map H1..H8: _______________________________________________,32,6
+Merkle-ish page hash / signatures,OPE FCE View Mirror,30,6
+Cut lines. Use dry-erase sleeves if available.,Suit: ____ Rank: ____,30,6
+4-bit Commit Stickers,OPE FCE View Mirror,30,6
+Room,What it teaches (learning targets),30,6
+Blank Cards (3×3),Notes:,29,6
+Instruments,Props & setup,28,6
+Room,Safety,28,6
+Blocking (5–15 minutes),Paper kit,28,6
+Debrief (2–3 prompts),What it teaches (learning targets),25,6
+Cut lines. Use dry-erase sleeves if available.,UTC 2025-09-20 21:06,24,6
+Blank Cards (3×3),Primitive/Idea: ____________________________________,24,6
+Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING,Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________,24,6
+"Automorphism: group=________, element=________________",Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING,24,6
+"Construction A: p=__, code=______________, glue=________________",Octet Map H1..H8: _______________________________________________,24,6
+Octet Map H1..H8: _______________________________________________,"Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}",24,6
+DNA-10: ________________________________________________________,Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________,24,6
+"Automorphism: group=________, element=________________",DNA-10: ________________________________________________________,24,6
+Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING,Octet Map H1..H8: _______________________________________________,22,6
+"Automorphism: group=________, element=________________","Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}",22,6
+"Construction A: p=__, code=______________, glue=________________",DNA-10: ________________________________________________________,22,6
+Octet Map H1..H8: _______________________________________________,Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________,22,6
+DNA-10: ________________________________________________________,Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING,20,6
+"Construction A: p=__, code=______________, glue=________________","Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}",20,6
+"Automorphism: group=________, element=________________",Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________,20,6
+Receipts & 4-bit,UTC 2025-09-20 21:06,19,6
+Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING,"Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}",18,6
+Cut lines. Use dry-erase sleeves if available.,Primitive/Idea: ____________________________________,18,6
+OPE FCE View Mirror,OPE/FCE  View  Mirror  Hash,18,6
+"Construction A: p=__, code=______________, glue=________________",Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________,18,6
+Suit: ____ Rank: ____,UTC 2025-09-20 21:06,17,6
+Primitive/Idea: ____________________________________,UTC 2025-09-20 21:06,16,6
+Master Ledger,UTC 2025-09-20 21:06,15,6
+Eight Baseline Packs,UTC 2025-09-20 21:06,15,6
+Notes:,UTC 2025-09-20 21:06,15,6
+8-Person Table Playbook,UTC 2025-09-20 21:06,15,6
+Class Kit Checklist,UTC 2025-09-20 21:06,15,6
+Quick Start,UTC 2025-09-20 21:06,15,6
+4-bit Commit Stickers,OPE/FCE  View  Mirror  Hash,12,6
+Receipts & 4-bit Commit,UTC 2025-09-20 21:06,12,6
+Cut lines. Use dry-erase sleeves if available.,Notes:,12,6
+OPE/FCE  View  Mirror  Hash,Receipts & 4-bit Commit,11,6
+Ledger hook (what gets recorded),"— Pose, hub ids, mid■slice tags, 4■bit example.",10,6
+Ledger hook (what gets recorded),"— Tone pair, beat freq, Δ■lift, receipt.",10,6
+Hand■ins (artifacts to keep),"— Tone pair, beat freq, Δ■lift, receipt.",10,6
+Ledger hook (what gets recorded),faces.,10,6
+Ledger hook (what gets recorded),"— Blue/red pair id, hashes, receipts.",10,6
+Hand■ins (artifacts to keep),"— Blue/red pair id, hashes, receipts.",10,6
+Debrief (2–3 prompts),"✓ Blue packet, red sealed packet.",10,6
+Hand■ins (artifacts to keep),"✓ Before/after overlay with red fix marks, 4■bit row.",10,6
+Hand■ins (artifacts to keep),"— Pose, hub ids, mid■slice tags, 4■bit example.",10,6
+Ledger hook (what gets recorded),"— Deck id, card set, measurement token, 4■bit commit.",10,6
+Hand■ins (artifacts to keep),"— Mirror tolerance, Δ■lift id, before/after OPE/FCE, strict update.",10,6
+Metric,Pre,10,6
+Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.,Ledger hook (what gets recorded),10,6
+Ledger hook (what gets recorded),"— Mirror tolerance, Δ■lift id, before/after OPE/FCE, strict update.",10,6
+Hand■ins (artifacts to keep),✓ 3 receipts; promoted pack doc; anchor ledger row.,10,6
+Post,Pre,10,6
+Debrief (2–3 prompts),"✓ Before/after overlay with red fix marks, 4■bit row.",10,6
+Post,Δ,10,6
+Metric,rejoin table play.,10,6
+Hand■ins (artifacts to keep),"— Deck id, card set, measurement token, 4■bit commit.",10,6
+Hand■ins (artifacts to keep),"✓ Card photo, metric sheet, ledger.",10,6
+Eight Baseline Packs,Optics  Thermal  Polar/Spin/EM  Math/Logic  Bio  Neuro  Cosmos  Systems,10,6
+Ledger hook (what gets recorded),log a 4■bit after retune.,10,6
+Hand■ins (artifacts to keep),"— Rail receipts, meaning pack v#, anchor id.",10,6
+Hand■ins (artifacts to keep),"✓ Blue packet, red sealed packet.",10,6
+Ledger hook (what gets recorded),"— Rail receipts, meaning pack v#, anchor id.",10,6
+Hand■ins (artifacts to keep),"✓ Assembled model photos, notes, ledger.",10,6
+Hand■ins (artifacts to keep),"✓ Card stack, mirror sheet, ledger snippet.",10,6
+Hand■ins (artifacts to keep),"✓ Spectrogram sheet, receipt.",10,6
+5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).,6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.,10,6
+Ledger hook (what gets recorded),receipts.,10,6
+Ledger hook (what gets recorded),"— 4 receipts, shared form_id, per■rail thresholds.",10,6
+Ledger hook (what gets recorded),"— Stand■in map, redaction count, hash■only attachments.",10,6
+Hand■ins (artifacts to keep),"— 4 receipts, shared form_id, per■rail thresholds.",10,6
+Hand■ins (artifacts to keep),"— Stand■in map, redaction count, hash■only attachments.",10,6
+Hand■ins (artifacts to keep),✓ 4 station sheets; master ledger row.,10,6
+Hand■ins (artifacts to keep),"✓ Redacted ledger row, safe receipts.",10,6
+Props & setup, Why the octad is discovered (not assumed) and how it governs later structure.,10,6
+Hand■ins (artifacts to keep),"— Falsifier ids (F1–F4), outcomes, receipts.",10,6
+Ledger hook (what gets recorded),"— Falsifier ids (F1–F4), outcomes, receipts.",10,6
+6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.,7) Iterate: Promote validated cards to your deck top; archive non-working slips.,10,6
+4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.,5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).,10,6
+Ledger hook (what gets recorded),"— Seat map, cycle count, debt burn, commits.",10,6
+3) Octet overlay: Fill H1–H8 views; record REST constraints.,4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.,10,6
+Debrief (2–3 prompts),✓ 4 station sheets; master ledger row.,10,6
+10-minute run with two decks + overlays,Quick Start,10,6
+Ledger hook (what gets recorded),accordingly; compare debt drop.,10,6
+Ledger hook (what gets recorded),failing with hash.,10,6
+Ledger hook (what gets recorded),"— Viewer indices, hotspot ids, Δ■lift chosen, receipts.",10,6
+Hand■ins (artifacts to keep),"— Viewer indices, hotspot ids, Δ■lift chosen, receipts.",10,6
+Ledger hook (what gets recorded),"— Claim ids, mirror pass/fail, Δ■lift ids, receipts.",10,6
+License: CC-BY 4.0  Generated 2025-09-20,overlays.,10,6
+Hand■ins (artifacts to keep),"✓ Viewer overlays, ledger row.",10,6
+Hand■ins (artifacts to keep),"— Claim ids, mirror pass/fail, Δ■lift ids, receipts.",10,6
+"Grid board (4×4), parity markers.",Room,10,6
+Peg grid (8×8). Mark parity lanes and half-glue ticks.,steps.,10,6
+Debrief (2–3 prompts),"✓ Coord board photo, ledger rows.",10,6
+Hand■ins (artifacts to keep),"— Octad class tag, pose, tolerance; 4■bit commit when 4 views pass.",10,6
+Debrief (2–3 prompts),"✓ Counterexample log, ledger.",10,6
+Hand■ins (artifacts to keep),"✓ Counterexample log, ledger.",10,6
+Ledger hook (what gets recorded),meaning pack; promote anchor.,10,6
+Budget-friendly supply list,Class Kit Checklist,10,6
+Debrief (2–3 prompts),"✓ Checked grid, class map (8), receipt.",10,6
+8-Person Table Playbook,Roles  Stations  Neighbor links,10,6
+Hand■ins (artifacts to keep),"✓ Checked grid, class map (8), receipt.",10,6
+Hand■ins (artifacts to keep),"✓ Coord board photo, ledger rows.",10,6
+Ledger hook (what gets recorded),"— Octad class tag, pose, tolerance; 4■bit commit when 4 views pass.",10,6
+Master Ledger,Reproducible build receipts,10,6
+Hand■ins (artifacts to keep),"— Seat map, cycle count, debt burn, commits.",10,6
+Sticky Sidecars,UTC 2025-09-20 21:06,9,6
+Blank Cards (3×3),Page 15,9,6
+Full Idea (9):,Views,9,6
+inequivalent insertions., Why the octad is discovered (not assumed) and how it governs later structure.,9,6
+Blank Cards (3×3),Page 16,9,6
+4-bit Commit Stickers,Receipts & 4-bit Commit,9,6
+Blank Cards (3×3),Page 17,9,6
+OPE FCE View Mirror,UTC 2025-09-20 21:06,9,6
+List per suit or view Views,Views,9,6
+OPE FCE View Mirror,Receipts & 4-bit Commit,9,6
+Props & setup, Preserve minority view as Non■Working breadcrumb with hash.,8,6
+Paper kit,Three stations; octet master; metrics per rail.,8,6
+Theorem Cards,UTC 2025-09-20 21:06,8,6
+Room,Three stations; octet master; metrics per rail.,8,6
+Blocking (5–15 minutes),meaning pack; promote anchor.,8,6
+Room,"Theorem cards, claim wall, mirror worksheet.",8,6
+Paper kit,"Theorem cards, claim wall, mirror worksheet.",8,6
+Props & setup, Show that form stays fixed while semantics swap.,8,6
+Debrief (2–3 prompts),■ Which rail constrained the others? Why?,8,6
+Blocking (5–15 minutes),failing with hash.,8,6
+failing with hash.,"— Claim ids, mirror pass/fail, Δ■lift ids, receipts.",8,6
+Debrief (2–3 prompts),■ Which 4 were necessary and sufficient?,8,6
+Closed-loop error; safety ratchets.,Neighbor Links (who talks to whom and when),8,6
+Props & setup, Visualize 8■twine E8 and 24■twine Leech masks with octads.,8,6
+Attach measured values to cards,Token: __________,8,6
+8. Systems/Robotics,Closed-loop error; safety ratchets.,8,6
+8. Systems/Robotics,Shear/field rails; anomaly notes.,8,6
+"— Claim ids, mirror pass/fail, Δ■lift ids, receipts.","✓ Card stack, mirror sheet, ledger snippet.",8,6
+Assumptions  Claim  Local Test  Counterexample,Theorem Card,8,6
+"Foam board, pegs, 8 & 24 strings, clip set.",Room,8,6
+meaning pack; promote anchor.,"— Rail receipts, meaning pack v#, anchor id.",8,6
+Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING,Reproducible build receipts,8,6
+Hypercube → Toroidal Loom,UTC 2025-09-20 21:06,8,6
+4 stations; shared octet; sticky token labels.,Paper kit,8,6
+Instruments,Ledger hook (what gets recorded),8,6
+Hand■ins (artifacts to keep),"— Code id, modulus, glue vector, octad layout, legality receipts.",8,6
+Ledger hook (what gets recorded),"— Code id, modulus, glue vector, octad layout, legality receipts.",8,6
+Hand■ins (artifacts to keep),N/A,8,6
+"— Rail receipts, meaning pack v#, anchor id.",✓ 3 receipts; promoted pack doc; anchor ledger row.,8,6
+4 stations; shared octet; sticky token labels.,Room,8,6
+"— 4 receipts, shared form_id, per■rail thresholds.",✓ 4 station sheets; master ledger row.,8,6
+Ledger hook (what gets recorded),■■ Mask octads for a Leech slice; show legality via parity.,8,6
+■■ Build E8 halves; overlay mirror; demonstrate root reflections.,■■ Mask octads for a Leech slice; show legality via parity.,8,6
+UTC 2025-09-20 21:06,into a toroidal chamber. Mark parity lanes; add Leech masks as needed.,8,6
+From 4D cube projection to chamber shells,into a toroidal chamber. Mark parity lanes; add Leech masks as needed.,8,6
+Debrief (2–3 prompts),✓ 3 receipts; promoted pack doc; anchor ledger row.,8,6
+■■ Build E8 halves; overlay mirror; demonstrate root reflections.,■■ Lay code parity rows; mark syndrome pad.,8,6
+Hand■ins (artifacts to keep),"✓ Photo of loom, mask sheet, ledger row.",8,6
+Page 10,UTC 2025-09-20 21:06,8,6
+Debrief (2–3 prompts),"✓ Photo of loom, mask sheet, ledger row.",8,6
+Debrief (2–3 prompts),■ What fails if glue parity flips?,8,6
+Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING,Master Ledger,8,6
+"Foam board, pegs, 8 & 24 strings, clip set.",Paper kit,8,6
+Debrief (2–3 prompts),■ Which Δ■lift generalized across rails?,8,6
+Hypercube Scaffold,UTC 2025-09-20 21:06,8,6
+Blocking (5–15 minutes),■■ Lay code parity rows; mark syndrome pad.,8,6
+Props & setup, Converge via receipts; annihilate non■working cheaply.,8,6
+Debrief (2–3 prompts),"✓ Octet pass grid, receipts.",8,6
+■ Expected debt drop,■ Safety notes (side effects),8,6
+■ DNA■10,■ octet map,8,6
+Notes:,■ Safety notes (side effects),8,6
+Room layout & station assignments, Ledger binder (Working / Non-Working albums),8,6
+Props & setup,inequivalent insertions.,8,6
+ Clipboard for station runs, Ledger binder (Working / Non-Working albums),8,6
+ A4/Letter cardstock for cards, Clipboard for station runs,8,6
+■ DNA■10,■ thresholds (normal/strict),8,6
+ A4/Letter cardstock for cards, Printed kit (this PDF),8,6
+Room, Why the octad is discovered (not assumed) and how it governs later structure.,8,6
+ Printed kit (this PDF)," Sticky notes (token sidecars), colored pens",8,6
+"Grid board (4×4), parity markers.",Props & setup,8,6
+" Sticky notes (token sidecars), colored pens", Transparent overlays (acetate),8,6
+" Balsa sticks, foam board / peg board, paper clips", Transparent overlays (acetate),8,6
+Page 14,UTC 2025-09-20 21:06,8,6
+"Grid board (4×4), parity markers.",Paper kit,8,6
+■ receipts (4■bit + hash),■ thresholds (normal/strict),8,6
+" Balsa sticks, foam board / peg board, paper clips"," Ruler, tape, scissors, hole punch",8,6
+ Dry-erase sleeves + fine-tip markers," Ruler, tape, scissors, hole punch",8,6
+Paper kit,"n=1→4 worksheets, insertion checklist, class bins (8).",8,6
+Instruments,"n=1→4 worksheets, insertion checklist, class bins (8).",8,6
+ 2+ decks of cards (different back colors) per table, Dry-erase sleeves + fine-tip markers,8,6
+Budget-friendly supply list, 2+ decks of cards (different back colors) per table,8,6
+Class Kit Checklist, 2+ decks of cards (different back colors) per table,8,6
+Notes:,■ receipts (4■bit + hash),8,6
+Blocking (5–15 minutes),"■■ Build n=1 rest, show first parity choice at n=2.",8,6
+"■■ Build n=1 rest, show first parity choice at n=2.","■■ Complete n=3, point to latent 4■cell cross.",8,6
+■ automorphism id,■ octet map,8,6
+■ Was the Δ■lift local and monotone?,■ Would a different mirror have failed?,8,6
+Hand■ins (artifacts to keep),"✓ Octet pass grid, receipts.",8,6
+ See the full loop: Octet → Mirror → Δ■lift → Strict → 4■bit receipts., Understand stand■ins (tokens) vs. form (geometry) vs. meaning (labels).,8,6
+Instruments,None (paper■only).,8,6
+Instruments,"Octet sheet, DNA■10, 4■bit sticker, ledger page.",8,6
+"Octet sheet, DNA■10, 4■bit sticker, ledger page.",Paper kit,8,6
+"One table, 8 colored pens, tape wall for overlays.",Paper kit,8,6
+Blocking (5–15 minutes),■■ Pick a tiny question (≤1 min).,8,6
+"One table, 8 colored pens, tape wall for overlays.",Room,8,6
+Notes:,■ Justification (evidence),8,6
+"■■ Mark 8 views (colored boxes), set a palindromic REST.",■■ Pick a tiny question (≤1 min).,8,6
+Props & setup, Learn how a 2■minute paper run creates a reproducible ledger row.,8,6
+■ Justification (evidence),■ New (tighter) threshold,8,6
+ Learn how a 2■minute paper run creates a reproducible ledger row., Understand stand■ins (tokens) vs. form (geometry) vs. meaning (labels).,8,6
+"■■ Mark 8 views (colored boxes), set a palindromic REST.",■■ Run a forward↔inverse mirror; circle mismatches (red).,8,6
+■■ Run a forward↔inverse mirror; circle mismatches (red).,■■ Write a Δ■lift (local identity) to fix one mismatch; re■mirror.,8,6
+Page 15,UTC 2025-09-20 21:06,8,6
+"■■ Tighten one metric (strict ratchet), shade a 4■bit receipt; log ledger.",■■ Write a Δ■lift (local identity) to fix one mismatch; re■mirror.,8,6
+Ledger hook (what gets recorded),"■■ Tighten one metric (strict ratchet), shade a 4■bit receipt; log ledger.",8,6
+Ledger hook (what gets recorded),"— form_id, octet map, mirror tolerance, Δ■lift note, strict threshold, 4■bit.",8,6
+■ Mirror within tol?,■ Views≥4 passed?,8,6
+Notes:,■ Mirror within tol?,8,6
+Hand■ins (artifacts to keep),"— form_id, octet map, mirror tolerance, Δ■lift note, strict threshold, 4■bit.",8,6
+Hand■ins (artifacts to keep),"✓ Filled octet, mirror ticks, Δ■lift card, 4■bit stickered ledger row.",8,6
+Debrief (2–3 prompts),"✓ Filled octet, mirror ticks, Δ■lift card, 4■bit stickered ledger row.",8,6
+Debrief (2–3 prompts),■ Which view dominated debt?,8,6
+Page 17,UTC 2025-09-20 21:06,8,6
+Page 16,UTC 2025-09-20 21:06,8,6
+■ Was the Δ■lift local and monotone?,■ Which view dominated debt?,8,6
+■■ Canonicalize n=4 palindrome (up to pose).,"■■ Complete n=3, point to latent 4■cell cross.",8,6
+Ledger hook (what gets recorded),■■ Canonicalize n=4 palindrome (up to pose).,8,6
+Custom pack notes,■ Latency within bound,8,6
+7. Cosmos/Fields,Shear/field rails; anomaly notes.,8,6
+■ AR ≤ 1.5 dB strict,■ Spin filter eff ≥ 80%,8,6
+■ LHCP/RHCP swap,■ Spin filter eff ≥ 80%,8,6
+Polar/Spin/EM,■ LHCP/RHCP swap,8,6
+Polar/Spin/EM,■ Pulse symmetry,8,6
+"— Mirror tolerance, Δ■lift id, before/after OPE/FCE, strict update.","✓ Before/after overlay with red fix marks, 4■bit row.",8,6
+■ Pulse symmetry,■ Vent cadence stable,8,6
+■ Vent cadence stable,■ ΔT/tick ≤ 1.0→0.8 K,8,6
+Thermal,■ ΔT/tick ≤ 1.0→0.8 K,8,6
+Debrief (2–3 prompts),■ Was the Δ local? Did it generalize to a second view?,8,6
+Thermal,■ FFT↔iFFT closure,8,6
+■ FFT↔iFFT closure,■ WFE ≤ 25→22 nm strict,8,6
+■ PSF match (SC≥0.98),■ WFE ≤ 25→22 nm strict,8,6
+Optics,■ PSF match (SC≥0.98),8,6
+■ Latency within bound,■ Safety ratchets ✓,8,6
+Optics,Optics  Thermal  Polar/Spin/EM  Math/Logic  Bio  Neuro  Cosmos  Systems,8,6
+Props & setup, Record receipts across slices (metrics × slabs).,8,6
+Eight Baseline Packs,Optics,8,6
+Cards for 8 data slices; metric stickers.,Room,8,6
+Notes:,■ Pass/fail marks; debt notes,8,6
+Cards for 8 data slices; metric stickers.,Paper kit,8,6
+Blocking (5–15 minutes),■■ List 8 materially independent views (slices or metrics).,8,6
+■■ List 8 materially independent views (slices or metrics).,■■ Require ≥4 pass post■Δ■lift before commit; log 4■bit.,8,6
+Ledger hook (what gets recorded),■■ Require ≥4 pass post■Δ■lift before commit; log 4■bit.,8,6
+Page 11,UTC 2025-09-20 21:06,8,6
+Ledger hook (what gets recorded),"— Views passed, metric triplet, slab size, commit.",8,6
+Hand■ins (artifacts to keep),"— Views passed, metric triplet, slab size, commit.",8,6
+Ledger hook (what gets recorded),■■ Pick the forward pipeline; write its inverse.,8,6
+Math/Logic,■ AR ≤ 1.5 dB strict,8,6
+Blocking (5–15 minutes),■■ Pick the forward pipeline; write its inverse.,8,6
+Math/Logic,■ Interval proofs,8,6
+"— Octad class tag, pose, tolerance; 4■bit commit when 4 views pass.","✓ Checked grid, class map (8), receipt.",8,6
+■ Closed-loop error ↓,■ Safety ratchets ✓,8,6
+Systems,■ Closed-loop error ↓,8,6
+Systems,■ Redshift bins stable,8,6
+Debrief (2–3 prompts),■ What would ‘<8 classes’ break downstream?,8,6
+■ Redshift bins stable,■ Seed B-fields consistent,8,6
+■ Seed B-fields consistent,■ Shear fields coherent,8,6
+Cosmos,■ Shear fields coherent,8,6
+■ How does rotation act on class labels?,■ What would ‘<8 classes’ break downstream?,8,6
+Cosmos,■ Noise floor stable,8,6
+■ Mode switch detected,■ Noise floor stable,8,6
+■ Mode switch detected,■ Ripple content decoded,8,6
+Notes:,■ Δ■lift candidates listed,8,6
+Neuro proxy,■ Ripple content decoded,8,6
+Neuro proxy,■ Batch day variance ok,8,6
+■ Mismatch windows circled,■ Δ■lift candidates listed,8,6
+■ Batch day variance ok,■ Irreversibility ✓,8,6
+Props & setup, Practice mirror pairs (FFT↔iFFT; encode↔decode; simulate↔measure).,8,6
+■ Irreversibility ✓,■ Overlay RMS ≤ τ,8,6
+Bio proxy,■ Overlay RMS ≤ τ,8,6
+Room,"Whiteboard, printed spectra pair or time series twin.",8,6
+Paper kit,"Whiteboard, printed spectra pair or time series twin.",8,6
+Bio proxy,■ Type checks pass,8,6
+■ OPE/FCE debt ↓,■ Type checks pass,8,6
+■ Interval proofs,■ OPE/FCE debt ↓,8,6
+4-bit Commit,P M,8,6
+None (paper■only).,Safety,8,6
+"— Stand■in map, redaction count, hash■only attachments.","✓ Redacted ledger row, safe receipts.",8,6
+"— Blue/red pair id, hashes, receipts.","✓ Blue packet, red sealed packet.",8,6
+H6,H7,8,6
+"Decks, sleeves, sticky notes, cheap sensors (thermometer, lux meter, calipers).",Room,8,6
+"Decks, sleeves, sticky notes, cheap sensors (thermometer, lux meter, calipers).",Paper kit,8,6
+Receipt,Δ,8,6
+4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.,6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.,8,6
+Debrief (2–3 prompts),■ Which constraint felt most ‘non■negotiable’?,8,6
+10. Seed,9. Cost,8,6
+Props & setup, Pause→measure→resume loop without losing context.,8,6
+Pre,Δ,8,6
+5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).,7) Iterate: Promote validated cards to your deck top; archive non-working slips.,8,6
+Blocking (5–15 minutes),Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.,8,6
+Metric,Post,8,6
+Pre,rejoin table play.,8,6
+ Map harmonic stack to octet; subharmonics to Cartan ‘outside’ nudges., Use beats as a quick hot■zone detector for Δ■lifts.,8,6
+3) Octet overlay: Fill H1–H8 views; record REST constraints.,5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).,8,6
+Props & setup, Find hot■zones to focus Δ■lifts first.,8,6
+Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.,"— Deck id, card set, measurement token, 4■bit commit.",8,6
+7. Units,8. Precision,8,6
+2. Optics,commits.,8,6
+1) Deal primitives: Aces = primitives. Write domain glyphs on them.,10-minute run with two decks + overlays,8,6
+"— Seat map, cycle count, debt burn, commits.","✓ Coord board photo, ledger rows.",8,6
+Room,"Viewer templates, highlighters.",8,6
+"Keeps form_id, ledger, and mirror law; calls",commits.,8,6
+Debrief (2–3 prompts),■ Which Δ■lift removed the beat?,8,6
+1) Deal primitives: Aces = primitives. Write domain glyphs on them.,3) Octet overlay: Fill H1–H8 views; record REST constraints.,8,6
+Debrief (2–3 prompts),"✓ Card stack, mirror sheet, ledger snippet.",8,6
+1. Anchor,"Keeps form_id, ledger, and mirror law; calls",8,6
+Props & setup, Use beats as a quick hot■zone detector for Δ■lifts.,8,6
+Debrief (2–3 prompts),■ Which neighbor interface was hottest?,8,6
+1. Anchor,Roles  Stations  Neighbor links,8,6
+1. Anchor,8-Person Table Playbook,8,6
+Debrief (2–3 prompts),■ Was any crucial info missing on blue?,8,6
+H5,H6,8,6
+7) Iterate: Promote validated cards to your deck top; archive non-working slips.,"Your first problem setup (tokens, views, mirror, strict)",8,6
+2. Optics,Views H1–H2; runs PSF/FFT mirror; proposes,8,6
+Blocking (5–15 minutes),faces.,8,6
+Paper kit,"Two clipboards (blue/red), hash stickers.",8,6
+Paper kit,"Printed nets, tape, colored thread for hubs.",8,6
+Eight views + palindromic rest; ten-state save,H1,8,6
+Parity Loom,UTC 2025-09-20 21:06,8,6
+Room,"Two clipboards (blue/red), hash stickers.",8,6
+Props & setup, Practice stand■in overlays for sensitive domains.,8,6
+faces.,"— Pose, hub ids, mid■slice tags, 4■bit example.",8,6
+Debrief (2–3 prompts),■ What would break if hubs were 3 or 9?,8,6
+Red/blue pens; redaction tape; safety policy sheet.,Room,8,6
+H2,H3,8,6
+Debrief (2–3 prompts),"✓ Assembled model photos, notes, ledger.",8,6
+"— Pose, hub ids, mid■slice tags, 4■bit example.","✓ Assembled model photos, notes, ledger.",8,6
+OPE/FCE  View  Mirror  Hash,UTC 2025-09-20 21:06,8,6
+H1,H2,8,6
+"Printed nets, tape, colored thread for hubs.",Room,8,6
+Paper kit,Red/blue pens; redaction tape; safety policy sheet.,8,6
+"— Deck id, card set, measurement token, 4■bit commit.","✓ Card photo, metric sheet, ledger.",8,6
+H4,H5,8,6
+Debrief (2–3 prompts),■ Did redaction block reproducibility? How fixed?,8,6
+Stations,UTC 2025-09-20 21:06,8,6
+Debrief (2–3 prompts),"✓ Redacted ledger row, safe receipts.",8,6
+Debrief (2–3 prompts),"✓ Card photo, metric sheet, ledger.",8,6
+Page 5,UTC 2025-09-20 21:06,8,6
+Debrief (2–3 prompts),■ What metric flipped a decision?,8,6
+receipts.,"— Stand■in map, redaction count, hash■only attachments.",8,6
+Props & setup," Understand why geometry, not taste, governs the shell.",8,6
+Octet & DNA-10,UTC 2025-09-20 21:06,8,6
+Blocking (5–15 minutes),receipts.,8,6
+permutation cards to rethread.,steps.,8,6
+H3,H4,8,6
+"— Falsifier ids (F1–F4), outcomes, receipts.","✓ Counterexample log, ledger.",8,6
+Props & setup, Always leave a 4■bit and a hash trail.,8,6
+"Constraint cards, counterexample wall.",Paper kit,8,6
+8. Precision,9. Cost,8,6
+Blocking (5–15 minutes),accordingly; compare debt drop.,8,6
+4. Polar/Spin,Views H3–H4; manages ΔT and cadence.,8,6
+Debrief (2–3 prompts),■ Which viewer best predicted success?,8,6
+H8,REST (palindromic mirror): notes / constraints,8,6
+Page 1,UTC 2025-09-20 21:06,8,6
+Debrief (2–3 prompts),"✓ Spectrogram sheet, receipt.",8,6
+decks of cards.,thresholds; and ledger reproducible 4-bit commits.,8,6
+"— Viewer indices, hotspot ids, Δ■lift chosen, receipts.","✓ Viewer overlays, ledger row.",8,6
+Blocking (5–15 minutes),log a 4■bit after retune.,8,6
+Paper kit,"Tone generator app, small speaker, paper spectrogram.",8,6
+5. Math/Logic,"Bounds, interval proofs, receipts.",8,6
+Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers,decks of cards.,8,6
+Props & setup, How a 10■minute cadence creates stable throughput.,8,6
+"— Tone pair, beat freq, Δ■lift, receipt.","✓ Spectrogram sheet, receipt.",8,6
+"Constraint cards, counterexample wall.",Room,8,6
+6. Bio/Neuro proxy,"Bounds, interval proofs, receipts.",8,6
+Debrief (2–3 prompts),"✓ Viewer overlays, ledger row.",8,6
+overlays.,thresholds; and ledger reproducible 4-bit commits.,8,6
+4. Polar/Spin,Views H5–H6; L↔R parity checks; spin filters.,8,6
+5. Domain,6. Conditioning,8,6
+3. Thermal,Views H3–H4; manages ΔT and cadence.,8,6
+1. Timing,REST (palindromic mirror): notes / constraints,8,6
+Room,"Tone generator app, small speaker, paper spectrogram.",8,6
+Room,"Round table, role badges, coordination board.",8,6
+4. Pose,5. Domain,8,6
+2. Polarity,3. Scale,8,6
+log a 4■bit after retune.,"— Tone pair, beat freq, Δ■lift, receipt.",8,6
+1) Deal primitives: Aces = primitives. Write domain glyphs on them.,Quick Start,8,6
+H7,H8,8,6
+Paper kit,"Viewer templates, highlighters.",8,6
+7. Cosmos/Fields,"Overlay RMS, gate irreversibility.",8,6
+Views H1–H2; runs PSF/FFT mirror; proposes,Δ-lifts.,8,6
+Props & setup, How parity+glue legality forces the shell.,8,6
+3. Scale,4. Pose,8,6
+accordingly; compare debt drop.,"— Viewer indices, hotspot ids, Δ■lift chosen, receipts.",8,6
+Debrief (2–3 prompts),■ Did any claim survive only after a Δ■lift?,8,6
+5. Math/Logic,Views H5–H6; L↔R parity checks; spin filters.,8,6
+6. Conditioning,7. Units,8,6
+1. Timing,2. Polarity,8,6
+ Run three independent rails on one shell; compare receipts; compress meanings., Show that form stays fixed while semantics swap.,8,6
+6. Bio/Neuro proxy,"Overlay RMS, gate irreversibility.",8,6
+3. Thermal,Δ-lifts.,8,6
+Paper kit,"Round table, role badges, coordination board.",8,6
+Page 2,UTC 2025-09-20 21:06,7,6
+Page 8,UTC 2025-09-20 21:06,7,6
+Notes:,■ Expected debt drop,7,6
+ Parity checks → membership; half■shift glue → evenness/unimodularity., Visualize 8■twine E8 and 24■twine Leech masks with octads.,7,6
+Attach measured values to cards,Sticky Sidecars (Tokens),7,6
+Theorem Cards & Argument Protocol,UTC 2025-09-20 21:06,7,6
+ Preserve minority view as Non■Working breadcrumb with hash., Resolve disputes with claim/evidence/Δ■lift/receipt cards.,7,6
+What it teaches (learning targets), Map harmonic stack to octet; subharmonics to Cartan ‘outside’ nudges.,7,6
+Sticky Sidecars (Tokens),UTC 2025-09-20 21:06,7,6
+Page 13,UTC 2025-09-20 21:06,7,6
+What it teaches (learning targets), Run three independent rails on one shell; compare receipts; compress meanings.,7,6
+ Bind tokens late; redact dangerous meaning; still keep form receipts., Practice stand■in overlays for sensitive domains.,7,6
+Octet Overlay + DNA-10,UTC 2025-09-20 21:06,7,6
+" Understand why geometry, not taste, governs the shell.", Wrap a tesseract into the torus; locate 4■bit hubs; see 1→64→1 codec sketch.,7,6
+Page 7,UTC 2025-09-20 21:06,7,6
+Eight views + palindromic rest; ten-state save,Octet Overlay + DNA-10,7,6
+ Generalize A/B to 8 views; prevent winner■only bias., Record receipts across slices (metrics × slabs).,7,6
+Foam/peg board + balsa rails + clips,Parity Loom (E8/Leech scaffold),7,6
+■ Palindromic REST documented,■ Pass/fail marks; debt notes,7,6
+Page 3,UTC 2025-09-20 21:06,7,6
+Parity Loom (E8/Leech scaffold),UTC 2025-09-20 21:06,7,6
+Page 4,UTC 2025-09-20 21:06,7,6
+ Practice mirror pairs (FFT↔iFFT; encode↔decode; simulate↔measure)., Turn a one■way mismatch into a local repair with receipts.,7,6
+Receipts & 4-bit,Receipts & 4-bit Commit,7,6
+"Stations: Measure, Tag, Resume",UTC 2025-09-20 21:06,7,6
+Assumptions  Claim  Local Test  Counterexample,Theorem Cards & Argument Protocol,7,6
+■ FCE reproduction ok?,■ Views≥4 passed?,7,6
+Page 9,UTC 2025-09-20 21:06,7,6
+■ Current threshold,■ New (tighter) threshold,7,6
+Notes:,■ Views≥4 passed?,7,6
+ Converge via receipts; annihilate non■working cheaply., Parallelize OPTICS/THERMAL/POLAR/MATH on same form; swap token packs only.,7,6
+ How parity+glue legality forces the shell., Why E8/Leech/Monster emerge from constraints; not taste.,7,6
+What it teaches (learning targets), See the full loop: Octet → Mirror → Δ■lift → Strict → 4■bit receipts.,7,6
+Page 18,UTC 2025-09-20 21:06,7,6
+Notes:,■ New (tighter) threshold,7,6
+Page 6,UTC 2025-09-20 21:06,7,6
+" Paper■only run with decks, sticky tokens, and quick metrics.", Pause→measure→resume loop without losing context.,7,6
+■ Expected debt drop,■ Preconditions,7,6
+ Add viewers without changing work: local 8×8; meso 4×4×4×4; parity 2×2×2×2., Find hot■zones to focus Δ■lifts first.,7,6
+■ Inverse pipeline defined,■ Mismatch windows circled,7,6
+■ automorphism id,■ constructionA (code/modulus/glue),7,6
+ How a 10■minute cadence creates stable throughput.," Role mesh, not silos: 8 seats, 2■bit lanes, neighbor hand■offs.",7,6
+Page 12,UTC 2025-09-20 21:06,7,6
+Pause cards → test → sticky sidecar → continue,"Stations: Measure, Tag, Resume",7,6
+ Always leave a 4■bit and a hash trail., Operate dual■rail safety: blue = open; red = internal only.,7,6
+Notes:,■ Mismatch windows circled,7,6
+09_Hypercube_Scaffold,UTC 2025-09-20 21:06,7,6
+From 4D cube projection to chamber shells,UTC 2025-09-20 21:06,7,6
+From 4D cube projection to chamber shells,Hypercube → Toroidal Loom,7,6
+H3,H5,6,6
+■ Noise floor stable,■ Ripple content decoded,6,6
+What it teaches (learning targets), Bind tokens late; redact dangerous meaning; still keep form receipts.,6,6
+Notes:,■ Preconditions,6,6
+2. Polarity,REST (palindromic mirror): notes / constraints,6,6
+■ Closed-loop error ↓,■ Latency within bound,6,6
+Systems,■ Seed B-fields consistent,6,6
+Debrief (2–3 prompts),■ How does rotation act on class labels?,6,6
+Class Kit Checklist,Page 13,6,6
+■ What would ‘<8 classes’ break downstream?,"✓ Checked grid, class map (8), receipt.",6,6
+Neuro proxy,■ Mode switch detected,6,6
+■ Batch day variance ok,■ Ripple content decoded,6,6
+Cosmos,■ Seed B-fields consistent,6,6
+Room, Practice stand■in overlays for sensitive domains.,6,6
+H6,H8,6,6
+■ Redshift bins stable,■ Shear fields coherent,6,6
+Hand■ins (artifacts to keep),log a 4■bit after retune.,6,6
+Octet Map (2 8):,Views,6,6
+What it teaches (learning targets), Turn a one■way mismatch into a local repair with receipts.,6,6
+N/A,"■■ Build n=1 rest, show first parity choice at n=2.",6,6
+Cosmos,■ Mode switch detected,6,6
+H2,H4,6,6
+■ Which constraint felt most ‘non■negotiable’?,"✓ Counterexample log, ledger.",6,6
+Ledger hook (what gets recorded),"■■ Complete n=3, point to latent 4■cell cross.",6,6
+Parity Twin (10):,Views,6,6
+Systems,■ Safety ratchets ✓,6,6
+Props & setup, Bind tokens late; redact dangerous meaning; still keep form receipts.,6,6
+"■■ Build n=1 rest, show first parity choice at n=2.",■■ Canonicalize n=4 palindrome (up to pose).,6,6
+Ledger hook (what gets recorded),"✓ Checked grid, class map (8), receipt.",6,6
+"— Octad class tag, pose, tolerance; 4■bit commit when 4 views pass.",■■ Canonicalize n=4 palindrome (up to pose).,6,6
+H7,REST (palindromic mirror): notes / constraints,6,6
+Debrief (2–3 prompts),"— Octad class tag, pose, tolerance; 4■bit commit when 4 views pass.",6,6
+Blocking (5–15 minutes),"■■ Complete n=3, point to latent 4■cell cross.",6,6
+H5,H7,6,6
+H4,H6,6,6
+■ Closed-loop error ↓,■ Redshift bins stable,6,6
+■ Noise floor stable,■ Shear fields coherent,6,6
+Custom pack notes,■ Safety ratchets ✓,6,6
+■ Local identity name,■ Preconditions,6,6
+1. Timing,H8,6,6
+■ Which Δ■lift removed the beat?,"✓ Spectrogram sheet, receipt.",6,6
+Ledger hook (what gets recorded),"✓ Spectrogram sheet, receipt.",6,6
+"Overlay RMS, gate irreversibility.",Shear/field rails; anomaly notes.,6,6
+H1,H3,6,6
+Props & setup,Red/blue pens; redaction tape; safety policy sheet.,6,6
+■■ Pick a tiny question (≤1 min).,■■ Run a forward↔inverse mirror; circle mismatches (red).,6,6
+Page 1,Quick Start,6,6
+What it teaches (learning targets), Understand stand■ins (tokens) vs. form (geometry) vs. meaning (labels).,6,6
+■ Current threshold,■ Justification (evidence),6,6
+■ FCE reproduction ok?,■ OPE debt ok?,6,6
+"■■ Mark 8 views (colored boxes), set a palindromic REST.",■■ Write a Δ■lift (local identity) to fix one mismatch; re■mirror.,6,6
+Instruments,"Viewer templates, highlighters.",6,6
+Scene 0: Orientation: The CQE Spine Live,What it teaches (learning targets),6,6
+■■ Run a forward↔inverse mirror; circle mismatches (red).,"■■ Tighten one metric (strict ratchet), shade a 4■bit receipt; log ledger.",6,6
+Ledger hook (what gets recorded),■■ Write a Δ■lift (local identity) to fix one mismatch; re■mirror.,6,6
+"— form_id, octet map, mirror tolerance, Δ■lift note, strict threshold, 4■bit.","■■ Tighten one metric (strict ratchet), shade a 4■bit receipt; log ledger.",6,6
+■ FCE reproduction ok?,■ Mirror within tol?,6,6
+Props & setup,"Viewer templates, highlighters.",6,6
+10-minute run with two decks + overlays,3) Octet overlay: Fill H1–H8 views; record REST constraints.,6,6
+"— form_id, octet map, mirror tolerance, Δ■lift note, strict threshold, 4■bit.","✓ Filled octet, mirror ticks, Δ■lift card, 4■bit stickered ledger row.",6,6
+OPE FCE View Mirror,Receipts & 4-bit,6,6
+"Constraint cards, counterexample wall.",Instruments,6,6
+Room, Find hot■zones to focus Δ■lifts first.,6,6
+1) Deal primitives: Aces = primitives. Write domain glyphs on them.,4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.,6,6
+ Learn how a 2■minute paper run creates a reproducible ledger row., See the full loop: Octet → Mirror → Δ■lift → Strict → 4■bit receipts.,6,6
+N/A,accordingly; compare debt drop.,6,6
+Props & setup, Understand stand■ins (tokens) vs. form (geometry) vs. meaning (labels).,6,6
+"Octet sheet, DNA■10, 4■bit sticker, ledger page.","One table, 8 colored pens, tape wall for overlays.",6,6
+What it teaches (learning targets), Why E8/Leech/Monster emerge from constraints; not taste.,6,6
+N/A,None (paper■only).,6,6
+Props & setup, Why E8/Leech/Monster emerge from constraints; not taste.,6,6
+None (paper■only).,"Octet sheet, DNA■10, 4■bit sticker, ledger page.",6,6
+Room, How parity+glue legality forces the shell.,6,6
+CQE Card Kit (Paper-Only),Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers,6,6
+CQE Card Kit (Paper-Only),decks of cards.,6,6
+■ Which viewer best predicted success?,"✓ Viewer overlays, ledger row.",6,6
+N/A,■■ Pick a tiny question (≤1 min).,6,6
+"Constraint cards, counterexample wall.",Props & setup,6,6
+License: CC-BY 4.0  Generated 2025-09-20,thresholds; and ledger reproducible 4-bit commits.,6,6
+Ledger hook (what gets recorded),"✓ Viewer overlays, ledger row.",6,6
+"One table, 8 colored pens, tape wall for overlays.",Props & setup,6,6
+Hand■ins (artifacts to keep),accordingly; compare debt drop.,6,6
+Blocking (5–15 minutes),"■■ Mark 8 views (colored boxes), set a palindromic REST.",6,6
+Room, Learn how a 2■minute paper run creates a reproducible ledger row.,6,6
+00_Cover,UTC 2025-09-20 21:06,6,6
+Notes:,■ FCE reproduction ok?,6,6
+■ Which view dominated debt?,"✓ Filled octet, mirror ticks, Δ■lift card, 4■bit stickered ledger row.",6,6
+Props & setup, Add viewers without changing work: local 8×8; meso 4×4×4×4; parity 2×2×2×2.,6,6
+■ Current threshold,■ Metric name & unit,6,6
+H1,Octet Overlay + DNA-10,6,6
+"Grid board (4×4), parity markers.", Why the octad is discovered (not assumed) and how it governs later structure.,6,6
+Ledger hook (what gets recorded),"✓ Counterexample log, ledger.",6,6
+ Printed kit (this PDF), Transparent overlays (acetate),6,6
+N/A,receipts.,6,6
+" Balsa sticks, foam board / peg board, paper clips"," Sticky notes (token sidecars), colored pens",6,6
+■ DNA■10,■ receipts (4■bit + hash),6,6
+" Ruler, tape, scissors, hole punch", Transparent overlays (acetate),6,6
+Instruments,Red/blue pens; redaction tape; safety policy sheet.,6,6
+" Balsa sticks, foam board / peg board, paper clips", Dry-erase sleeves + fine-tip markers,6,6
+Room,inequivalent insertions.,6,6
+■ Preconditions,■ Safety notes (side effects),6,6
+"Grid board (4×4), parity markers.","n=1→4 worksheets, insertion checklist, class bins (8).",6,6
+ 2+ decks of cards (different back colors) per table," Ruler, tape, scissors, hole punch",6,6
+Debrief (2–3 prompts),"— Falsifier ids (F1–F4), outcomes, receipts.",6,6
+Eight views + palindromic rest; ten-state save,H2,6,6
+Budget-friendly supply list, Dry-erase sleeves + fine-tip markers,6,6
+Safety,"n=1→4 worksheets, insertion checklist, class bins (8).",6,6
+Notes:,■ thresholds (normal/strict),6,6
+ A4/Letter cardstock for cards," Sticky notes (token sidecars), colored pens",6,6
+ Clipboard for station runs, Printed kit (this PDF),6,6
+■ constructionA (code/modulus/glue),■ form_id,6,6
+What it teaches (learning targets),inequivalent insertions.,6,6
+3) Octet overlay: Fill H1–H8 views; record REST constraints.,6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.,6,6
+Debrief (2–3 prompts),■ Was the Δ■lift local and monotone?,6,6
+4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.,7) Iterate: Promote validated cards to your deck top; archive non-working slips.,6,6
+■ Which view dominated debt?,■ Would a different mirror have failed?,6,6
+Blank Cards (3×3),Page 14,6,6
+■ constructionA (code/modulus/glue),■ octet map,6,6
+What it teaches (learning targets), Add viewers without changing work: local 8×8; meso 4×4×4×4; parity 2×2×2×2.,6,6
+Notes:,■ Current threshold,6,6
+■ DNA■10,■ automorphism id,6,6
+Hand■ins (artifacts to keep),receipts.,6,6
+6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.,"Your first problem setup (tokens, views, mirror, strict)",6,6
+Blocking (5–15 minutes),"— Falsifier ids (F1–F4), outcomes, receipts.",6,6
+Room layout & station assignments, Clipboard for station runs,6,6
+■ Did redaction block reproducibility? How fixed?,"✓ Redacted ledger row, safe receipts.",6,6
+1. Timing,3. Scale,6,6
+ A4/Letter cardstock for cards, Ledger binder (Working / Non-Working albums),6,6
+Ledger hook (what gets recorded),"✓ Redacted ledger row, safe receipts.",6,6
+■ octet map,■ thresholds (normal/strict),6,6
+Neuro proxy,■ Irreversibility ✓,6,6
+■ LHCP/RHCP swap,■ Pulse symmetry,6,6
+Props & setup, Turn a one■way mismatch into a local repair with receipts.,6,6
+What it teaches (learning targets)," Paper■only run with decks, sticky tokens, and quick metrics.",6,6
+Ledger hook (what gets recorded),✓ 3 receipts; promoted pack doc; anchor ledger row.,6,6
+■ What fails if glue parity flips?,"✓ Photo of loom, mask sheet, ledger row.",6,6
+Post,Receipt,6,6
+Hand■ins (artifacts to keep),meaning pack; promote anchor.,6,6
+"Decks, sleeves, sticky notes, cheap sensors (thermometer, lux meter, calipers).",Instruments,6,6
+Debrief (2–3 prompts),"— Blue/red pair id, hashes, receipts.",6,6
+"Decks, sleeves, sticky notes, cheap sensors (thermometer, lux meter, calipers).",Props & setup,6,6
+Room, Pause→measure→resume loop without losing context.,6,6
+Props & setup," Paper■only run with decks, sticky tokens, and quick metrics.",6,6
+8-Person Table Playbook,Page 6,6,6
+4 stations; shared octet; sticky token labels.,Props & setup,6,6
+■ Was any crucial info missing on blue?,"✓ Blue packet, red sealed packet.",6,6
+■ Which neighbor interface was hottest?,"✓ Coord board photo, ledger rows.",6,6
+What it teaches (learning targets), Parallelize OPTICS/THERMAL/POLAR/MATH on same form; swap token packs only.,6,6
+"Keeps form_id, ledger, and mirror law; calls",Roles  Stations  Neighbor links,6,6
+Debrief (2–3 prompts),"— Seat map, cycle count, debt burn, commits.",6,6
+"Construction A: p=__, code=______________, glue=________________",Reproducible build receipts,6,6
+Props & setup, Parallelize OPTICS/THERMAL/POLAR/MATH on same form; swap token packs only.,6,6
+1. Anchor,commits.,6,6
+Room, Converge via receipts; annihilate non■working cheaply.,6,6
+Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.,N/A,6,6
+"— Code id, modulus, glue vector, octad layout, legality receipts.","✓ Photo of loom, mask sheet, ledger row.",6,6
+Metric,Δ,6,6
+Post,rejoin table play.,6,6
+What it teaches (learning targets), Parity checks → membership; half■shift glue → evenness/unimodularity.,6,6
+Blocking (5–15 minutes),"— Blue/red pair id, hashes, receipts.",6,6
+Sticky Sidecars (Tokens),Token: __________,6,6
+Props & setup, Parity checks → membership; half■shift glue → evenness/unimodularity.,6,6
+■ Batch day variance ok,■ Overlay RMS ≤ τ,6,6
+Room, Visualize 8■twine E8 and 24■twine Leech masks with octads.,6,6
+"Foam board, pegs, 8 & 24 strings, clip set.",Props & setup,6,6
+■ What metric flipped a decision?,"✓ Card photo, metric sheet, ledger.",6,6
+"Foam board, pegs, 8 & 24 strings, clip set.",Instruments,6,6
+■ Which Δ■lift generalized across rails?,✓ 3 receipts; promoted pack doc; anchor ledger row.,6,6
+N/A,■■ Lay code parity rows; mark syndrome pad.,6,6
+Blocking (5–15 minutes),■■ Build E8 halves; overlay mirror; demonstrate root reflections.,6,6
+Ledger hook (what gets recorded),"✓ Card photo, metric sheet, ledger.",6,6
+■■ Lay code parity rows; mark syndrome pad.,■■ Mask octads for a Leech slice; show legality via parity.,6,6
+Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.,Hand■ins (artifacts to keep),6,6
+Hypercube → Toroidal Loom,into a toroidal chamber. Mark parity lanes; add Leech masks as needed.,6,6
+Ledger hook (what gets recorded),■■ Build E8 halves; overlay mirror; demonstrate root reflections.,6,6
+Ledger hook (what gets recorded),"✓ Blue packet, red sealed packet.",6,6
+"— Code id, modulus, glue vector, octad layout, legality receipts.",■■ Mask octads for a Leech slice; show legality via parity.,6,6
+2. Optics,"Keeps form_id, ledger, and mirror law; calls",6,6
+Master Ledger,Page 8,6,6
+What it teaches (learning targets), Wrap a tesseract into the torus; locate 4■bit hubs; see 1→64→1 codec sketch.,6,6
+N/A,failing with hash.,6,6
+What it teaches (learning targets), Resolve disputes with claim/evidence/Δ■lift/receipt cards.,6,6
+Props & setup,Three stations; octet master; metrics per rail.,6,6
+Props & setup, Resolve disputes with claim/evidence/Δ■lift/receipt cards.,6,6
+What it teaches (learning targets)," Role mesh, not silos: 8 seats, 2■bit lanes, neighbor hand■offs.",6,6
+Room, Preserve minority view as Non■Working breadcrumb with hash.,6,6
+Props & setup,"Theorem cards, claim wall, mirror worksheet.",6,6
+5. Math/Logic,6. Bio/Neuro proxy,6,6
+Room, Show that form stays fixed while semantics swap.,6,6
+Instruments,"Theorem cards, claim wall, mirror worksheet.",6,6
+What it teaches (learning targets), Show that form stays fixed while semantics swap.,6,6
+Ledger hook (what gets recorded),"✓ Coord board photo, ledger rows.",6,6
+"Bounds, interval proofs, receipts.","Overlay RMS, gate irreversibility.",6,6
+Props & setup, Run three independent rails on one shell; compare receipts; compress meanings.,6,6
+8. Systems/Robotics,Neighbor Links (who talks to whom and when),6,6
+Hand■ins (artifacts to keep),failing with hash.,6,6
+6. Bio/Neuro proxy,7. Cosmos/Fields,6,6
+Closed-loop error; safety ratchets.,Shear/field rails; anomaly notes.,6,6
+Ledger hook (what gets recorded),"✓ Card stack, mirror sheet, ledger snippet.",6,6
+■ Did any claim survive only after a Δ■lift?,"✓ Card stack, mirror sheet, ledger snippet.",6,6
+7. Cosmos/Fields,8. Systems/Robotics,6,6
+"Bounds, interval proofs, receipts.",Views H5–H6; L↔R parity checks; spin filters.,6,6
+Theorem Card,Theorem Cards & Argument Protocol,6,6
+Instruments,Three stations; octet master; metrics per rail.,6,6
+Assumptions  Claim  Local Test  Counterexample,Assumptions:,6,6
+Views H1–H2; runs PSF/FFT mirror; proposes,commits.,6,6
+Blocking (5–15 minutes),"— Seat map, cycle count, debt burn, commits.",6,6
+4 stations; shared octet; sticky token labels.,Instruments,6,6
+N/A,meaning pack; promote anchor.,6,6
+2. Optics,Δ-lifts.,6,6
+Blocking (5–15 minutes),"— 4 receipts, shared form_id, per■rail thresholds.",6,6
+Instruments,"Round table, role badges, coordination board.",6,6
+Ledger hook (what gets recorded),✓ 4 station sheets; master ledger row.,6,6
+3. Thermal,Views H1–H2; runs PSF/FFT mirror; proposes,6,6
+Views H3–H4; manages ΔT and cadence.,Δ-lifts.,6,6
+Props & setup,"Round table, role badges, coordination board.",6,6
+Finance),What it teaches (learning targets),6,6
+3. Thermal,4. Polar/Spin,6,6
+Room, How a 10■minute cadence creates stable throughput.,6,6
+Views H3–H4; manages ΔT and cadence.,Views H5–H6; L↔R parity checks; spin filters.,6,6
+Debrief (2–3 prompts),"— 4 receipts, shared form_id, per■rail thresholds.",6,6
+Props & setup," Role mesh, not silos: 8 seats, 2■bit lanes, neighbor hand■offs.",6,6
+4. Polar/Spin,5. Math/Logic,6,6
+■ Which rail constrained the others? Why?,✓ 4 station sheets; master ledger row.,6,6
+Attach measured values to cards,Value: __________ Units: ____,6,6
+04_Parity_Loom,UTC 2025-09-20 21:06,6,6
+■ Was the Δ local? Did it generalize to a second view?,"✓ Before/after overlay with red fix marks, 4■bit row.",6,6
+Instruments,"Tone generator app, small speaker, paper spectrogram.",6,6
+■ AR ≤ 1.5 dB strict,■ Interval proofs,6,6
+Thermal,■ WFE ≤ 25→22 nm strict,6,6
+N/A,■■ Pick the forward pipeline; write its inverse.,6,6
+Math/Logic,■ OPE/FCE debt ↓,6,6
+4. Pose,6. Conditioning,6,6
+Hot■Zones),What it teaches (learning targets),6,6
+■ FFT↔iFFT closure,■ PSF match (SC≥0.98),6,6
+■ Interval proofs,■ Type checks pass,6,6
+■ FFT↔iFFT closure,■ ΔT/tick ≤ 1.0→0.8 K,6,6
+What it teaches (learning targets), Generalize A/B to 8 views; prevent winner■only bias.,6,6
+Props & setup, Operate dual■rail safety: blue = open; red = internal only.,6,6
+Optics,■ WFE ≤ 25→22 nm strict,6,6
+N/A,log a 4■bit after retune.,6,6
+Instruments,"Whiteboard, printed spectra pair or time series twin.",6,6
+Bio proxy,■ OPE/FCE debt ↓,6,6
+Optics  Thermal  Polar/Spin/EM  Math/Logic  Bio  Neuro  Cosmos  Systems,■ PSF match (SC≥0.98),6,6
+Notes:,■ Inverse pipeline defined,6,6
+■ Forward pipeline defined,■ Inverse pipeline defined,6,6
+Room, Record receipts across slices (metrics × slabs).,6,6
+7. Units,9. Cost,6,6
+6. Conditioning,8. Precision,6,6
+Math/Logic,■ Spin filter eff ≥ 80%,6,6
+■ AR ≤ 1.5 dB strict,■ LHCP/RHCP swap,6,6
+"— Mirror tolerance, Δ■lift id, before/after OPE/FCE, strict update.",■■ Pick the forward pipeline; write its inverse.,6,6
+Polar/Spin/EM,■ Spin filter eff ≥ 80%,6,6
+Room, Use beats as a quick hot■zone detector for Δ■lifts.,6,6
+5. Domain,7. Units,6,6
+Ledger hook (what gets recorded),"✓ Before/after overlay with red fix marks, 4■bit row.",6,6
+Thermal,■ Vent cadence stable,6,6
+Props & setup, Map harmonic stack to octet; subharmonics to Cartan ‘outside’ nudges.,6,6
+Polar/Spin/EM,■ Vent cadence stable,6,6
+What it teaches (learning targets), Operate dual■rail safety: blue = open; red = internal only.,6,6
+10. Seed,8. Precision,6,6
+■ Pulse symmetry,■ ΔT/tick ≤ 1.0→0.8 K,6,6
+Debrief (2–3 prompts),"— Mirror tolerance, Δ■lift id, before/after OPE/FCE, strict update.",6,6
+What it teaches (learning targets), Use beats as a quick hot■zone detector for Δ■lifts.,6,6
+Room, Always leave a 4■bit and a hash trail.,6,6
+Props & setup, Generalize A/B to 8 views; prevent winner■only bias.,6,6
+3. Scale,5. Domain,6,6
+Merkle-ish page hash / signatures,UTC 2025-09-20 21:06,6,6
+Props & setup,"Two clipboards (blue/red), hash stickers.",6,6
+N/A,faces.,6,6
+Instruments,"Printed nets, tape, colored thread for hubs.",6,6
+Blank Cards (3×3),Page 11,6,6
+Ledger hook (what gets recorded),■■ List 8 materially independent views (slices or metrics).,6,6
+"Printed nets, tape, colored thread for hubs.",Props & setup,6,6
+Instruments,"Two clipboards (blue/red), hash stickers.",6,6
+"— Views passed, metric triplet, slab size, commit.",■■ Require ≥4 pass post■Δ■lift before commit; log 4■bit.,6,6
+Bio proxy,■ Irreversibility ✓,6,6
+Room," Understand why geometry, not taste, governs the shell.",6,6
+"— Views passed, metric triplet, slab size, commit.","✓ Octet pass grid, receipts.",6,6
+Foam/peg board + balsa rails + clips,permutation cards to rethread.,6,6
+■ H1–H8 views named and colored,■ Palindromic REST documented,6,6
+■ Which 4 were necessary and sufficient?,"✓ Octet pass grid, receipts.",6,6
+Props & setup, Wrap a tesseract into the torus; locate 4■bit hubs; see 1→64→1 codec sketch.,6,6
+Peg grid (8×8). Mark parity lanes and half-glue ticks.,permutation cards to rethread.,6,6
+Room, Practice mirror pairs (FFT↔iFFT; encode↔decode; simulate↔measure).,6,6
+■ What would break if hubs were 3 or 9?,"✓ Assembled model photos, notes, ledger.",6,6
+■ Inverse pipeline defined,■ Δ■lift candidates listed,6,6
+03_Receipts_4bit,OPE FCE View Mirror,6,6
+Hand■ins (artifacts to keep),faces.,6,6
+Cards for 8 data slices; metric stickers.,Props & setup,6,6
+Eight Baseline Packs,Page 12,6,6
+Ledger hook (what gets recorded),"✓ Assembled model photos, notes, ledger.",6,6
+Cards for 8 data slices; metric stickers.,Instruments,6,6
+Notes:,■ Palindromic REST documented,6,6
+N/A,■■ List 8 materially independent views (slices or metrics).,6,6
+Props & setup,"Tone generator app, small speaker, paper spectrogram.",6,6
+Blocking (5–15 minutes),■■ Require ≥4 pass post■Δ■lift before commit; log 4■bit.,6,6
+4-bit Commit Stickers,UTC 2025-09-20 21:06,6,6
+■ Overlay RMS ≤ τ,■ Type checks pass,6,6
+2. Polarity,4. Pose,6,6
+Props & setup,"Whiteboard, printed spectra pair or time series twin.",6,6
+Scene 6: Two■Scientist Theorem■Card Resolution,What it teaches (learning targets),5,5
+Scene 13: Not Lattice Flattery: Governance by Geometry,What it teaches (learning targets),5,5
+Scene 7: 8■Person Table with Neighbor Lanes,What it teaches (learning targets),5,5
+"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts",What it teaches (learning targets),5,5
+Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix),What it teaches (learning targets),5,5
+Finance), Run three independent rails on one shell; compare receipts; compress meanings.,5,5
+What it teaches (learning targets), Preserve minority view as Non■Working breadcrumb with hash.,5,5
+What it teaches (learning targets), Practice mirror pairs (FFT↔iFFT; encode↔decode; simulate↔measure).,5,5
+What it teaches (learning targets), How a 10■minute cadence creates stable throughput.,5,5
+Notes:,■ Local identity name,5,5
+What it teaches (learning targets)," Understand why geometry, not taste, governs the shell.",5,5
+Worksheet – Δ■lift Cookbook,■ Local identity name,5,5
+What it teaches (learning targets), Pause→measure→resume loop without losing context.,5,5
+Scene 4: Construction■A Loom: E8 and Leech on Paper,What it teaches (learning targets),5,5
+Scene 9: Hypercube→Toroidal Chamber (4■bit Hubs),What it teaches (learning targets),5,5
+What it teaches (learning targets), Visualize 8■twine E8 and 24■twine Leech masks with octads.,5,5
+■ H1–H8 views named and colored,■ Pass/fail marks; debt notes,5,5
+What it teaches (learning targets), Why the octad is discovered (not assumed) and how it governs later structure.,5,5
+Scene 1: n=1→n=5: The Hinge that Forces the Octad,What it teaches (learning targets),5,5
+Notes:,■ Metric name & unit,5,5
+Worksheet – Strict Ratchet,■ Metric name & unit,5,5
+Scene 12: Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,What it teaches (learning targets),5,5
+What it teaches (learning targets), Find hot■zones to focus Δ■lifts first.,5,5
+Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes,What it teaches (learning targets),5,5
+■ Expected debt drop,■ Local identity name,5,5
+Hot■Zones),Scene 10: Sound & Subharmonics Viewer (Cartan,5,5
+■ Forward pipeline defined,■ Mismatch windows circled,5,5
+What it teaches (learning targets), Record receipts across slices (metrics × slabs).,5,5
+Scene 8: Card■Deck CQE + Lab Stations,What it teaches (learning targets),5,5
+Notes:,■ Forward pipeline defined,5,5
+What it teaches (learning targets), Converge via receipts; annihilate non■working cheaply.,5,5
+Scene 3: Octet Coverage for ML (A/B→Octet),What it teaches (learning targets),5,5
+Worksheet – Octet Overlay,■ H1–H8 views named and colored,5,5
+What it teaches (learning targets), Practice stand■in overlays for sensitive domains.,5,5
+■ Metric name & unit,■ New (tighter) threshold,5,5
+Hot■Zones), Map harmonic stack to octet; subharmonics to Cartan ‘outside’ nudges.,5,5
+Finance),"Scene 15: Capstone: Three■Track Non■Toy (Optics, DNA,",5,5
+What it teaches (learning targets), Always leave a 4■bit and a hash trail.,5,5
+Scene 11: Primordial→EM→Thermo: Meaning■Token Safety,What it teaches (learning targets),5,5
+Worksheet – Mirror Test,■ Forward pipeline defined,5,5
+What it teaches (learning targets), How parity+glue legality forces the shell.,5,5
+Local repair notes4-bit Commit,PM,5,5
+01_QuickStart,UTC 2025-09-20 21:06,5,5
+04_Parity_Loom,Peg grid (8×8). Mark parity lanes and half-glue ticks.,5,5
+■ OPE debt ok?,■ Views≥4 passed?,5,5
+Assumptions  Claim  Local Test  Counterexample,UTC 2025-09-20 21:06,5,5
+Budget-friendly supply list,UTC 2025-09-20 21:06,5,5
+08_Master_Ledger,UTC 2025-09-20 21:06,5,5
+Optics  Thermal  Polar/Spin/EM  Math/Logic  Bio  Neuro  Cosmos  Systems,UTC 2025-09-20 21:06,5,5
+Foam/peg board + balsa rails + clips,UTC 2025-09-20 21:06,5,5
+02_Octet_DNA10,UTC 2025-09-20 21:06,5,5
+10_Sticky_Sidecars,UTC 2025-09-20 21:06,5,5
+13_Class_Checklist,UTC 2025-09-20 21:06,5,5
+10-minute run with two decks + overlays,UTC 2025-09-20 21:06,5,5
+03_Receipts_4bit,UTC 2025-09-20 21:06,5,5
+Worksheet – Ledger Row,■ form_id,5,5
+11_Blank_Cards,Notes:,5,5
+Eight views + palindromic rest; ten-state save,UTC 2025-09-20 21:06,5,5
+Reproducible build receipts,UTC 2025-09-20 21:06,5,5
+OPE/FCE  View  Mirror  Hash,Receipts & 4-bit,5,5
+■ automorphism id,■ form_id,5,5
+12_Baseline_Packs,UTC 2025-09-20 21:06,5,5
+07_Theorem_Cards,UTC 2025-09-20 21:06,5,5
+Scene 0: Orientation: The CQE Spine Live,mirror) governs correctness; your labels stay provisional until committed.,5,5
+11_Blank_Cards,UTC 2025-09-20 21:06,5,5
+Worksheet – 4■bit Receipt,■ OPE debt ok?,5,5
+Notes:,■ OPE debt ok?,5,5
+SReceipts:,views run,5,5
+Scene 0: Orientation: The CQE Spine Live, See the full loop: Octet → Mirror → Δ■lift → Strict → 4■bit receipts.,5,5
+Attach measured values to cards,UTC 2025-09-20 21:06,5,5
+Page 10,Sticky Sidecars,5,5
+05_Stations,UTC 2025-09-20 21:06,5,5
+PM,SReceipts:,5,5
+09_Hypercube_Scaffold,into a toroidal chamber. Mark parity lanes; add Leech masks as needed.,5,5
+00_Cover,License: CC-BY 4.0  Generated 2025-09-20,5,5
+metrics,views run,5,5
+Roles  Stations  Neighbor links,UTC 2025-09-20 21:06,5,5
+Pause cards → test → sticky sidecar → continue,UTC 2025-09-20 21:06,5,5
+06_Table_Playbook,UTC 2025-09-20 21:06,5,5
+4. Polar/Spin,"Bounds, interval proofs, receipts.",4,4
+-lifts:,Deck Mapping:Blue=________ Red=________,4,4
+P M,SHash:,4,4
+Blocking (5–15 minutes),"— Claim ids, mirror pass/fail, Δ■lift ids, receipts.",4,4
+Neighbor Links (who talks to whom and when),Shear/field rails; anomaly notes.,4,4
+6. Bio/Neuro proxy,Shear/field rails; anomaly notes.,4,4
+Scene 7: 8■Person Table with Neighbor Lanes," Role mesh, not silos: 8 seats, 2■bit lanes, neighbor hand■offs.",4,4
+6. Bio/Neuro proxy,Views H5–H6; L↔R parity checks; spin filters.,4,4
+Debrief (2–3 prompts),"— Claim ids, mirror pass/fail, Δ■lift ids, receipts.",4,4
+Finance), Show that form stays fixed while semantics swap.,4,4
+Scene 7: 8■Person Table with Neighbor Lanes,■ Did any claim survive only after a Δ■lift?,4,4
+5. Math/Logic,"Overlay RMS, gate irreversibility.",4,4
+7. Cosmos/Fields,Closed-loop error; safety ratchets.,4,4
+7. Cosmos/Fields,"Bounds, interval proofs, receipts.",4,4
+failing with hash.,"✓ Card stack, mirror sheet, ledger snippet.",4,4
+8. Systems/Robotics,"Overlay RMS, gate irreversibility.",4,4
+5. Math/Logic,Views H3–H4; manages ΔT and cadence.,4,4
+Hand■ins (artifacts to keep),■ Did any claim survive only after a Δ■lift?,4,4
+-lifts:,4-bit Commit,4,4
+Scene 6: Two■Scientist Theorem■Card Resolution,■ Which rail constrained the others? Why?,4,4
+Views H1–H2; runs PSF/FFT mirror; proposes,Views H3–H4; manages ΔT and cadence.,4,4
+Scene 0 — Orientation: The CQE Spine Live, See the full loop: Octet → Mirror → Δ■lift → Strict → 4■bit receipts.,4,4
+Scene 0 — Orientation: The CQE Spine Live,"■■ Tighten one metric (strict ratchet), shade a 4■bit receipt; log ledger.",4,4
+"Decks, sleeves, sticky notes, cheap sensors (thermometer, lux meter, calipers).", Pause→measure→resume loop without losing context.,4,4
+Room," Paper■only run with decks, sticky tokens, and quick metrics.",4,4
+Hand■ins (artifacts to keep),■ Was any crucial info missing on blue?,4,4
+Scene 8: Card■Deck CQE + Lab Stations," Paper■only run with decks, sticky tokens, and quick metrics.",4,4
+Scene 0 — Orientation: The CQE Spine Live,"✓ Filled octet, mirror ticks, Δ■lift card, 4■bit stickered ledger row.",4,4
+1. Anchor,UTC 2025-09-20 21:06,4,4
+Scene 8: Card■Deck CQE + Lab Stations,■ Which neighbor interface was hottest?,4,4
+"Scene 15: Capstone: Three■Track Non■Toy (Optics, DNA,",■ Was any crucial info missing on blue?,4,4
+8-Person Table Playbook,"Keeps form_id, ledger, and mirror law; calls",4,4
+Hand■ins (artifacts to keep),■ Which neighbor interface was hottest?,4,4
+Roles  Stations  Neighbor links,commits.,4,4
+1. Anchor,2. Optics,4,4
+3. Thermal,Views H5–H6; L↔R parity checks; spin filters.,4,4
+"Keeps form_id, ledger, and mirror law; calls",Views H1–H2; runs PSF/FFT mirror; proposes,4,4
+commits.,Δ-lifts.,4,4
+N/A,"— Seat map, cycle count, debt burn, commits.",4,4
+"Round table, role badges, coordination board.",Safety,4,4
+2. Optics,3. Thermal,4,4
+"Octet sheet, DNA■10, 4■bit sticker, ledger page.",Scene 0 — Orientation: The CQE Spine Live,4,4
+"Scene 15: Capstone: Three■Track Non■Toy (Optics, DNA,",What it teaches (learning targets),4,4
+Safety,failing with hash.,4,4
+"Round table, role badges, coordination board.", How a 10■minute cadence creates stable throughput.,4,4
+4. Polar/Spin,Δ-lifts.,4,4
+Room," Role mesh, not silos: 8 seats, 2■bit lanes, neighbor hand■offs.",4,4
+06_Table_Playbook,Neighbor Links (who talks to whom and when),4,4
+Theorem Card,UTC 2025-09-20 21:06,4,4
+=____ =____ =____ =____,Deck Mapping:Blue=________ Red=________,4,4
+CQE Card Mini-Mat Travel,Color = Parity (Black/Red),4,4
+Blocking (5–15 minutes),"— Rail receipts, meaning pack v#, anchor id.",4,4
+Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes, Parallelize OPTICS/THERMAL/POLAR/MATH on same form; swap token packs only.,4,4
+Color = Parity (Black/Red),Suits = Sidecars (assign per run):,4,4
+08_Master_Ledger,Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________,4,4
+Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes,■ What fails if glue parity flips?,4,4
+meaning pack; promote anchor.,✓ 3 receipts; promoted pack doc; anchor ledger row.,4,4
+Hand■ins (artifacts to keep),■ What fails if glue parity flips?,4,4
+Suits = Sidecars (assign per run):,hash/date,4,4
+Debrief (2–3 prompts),"— Code id, modulus, glue vector, octad layout, legality receipts.",4,4
+Ledger hook (what gets recorded),"✓ Photo of loom, mask sheet, ledger row.",4,4
+hash/date,metrics,4,4
+Hand■ins (artifacts to keep),■■ Mask octads for a Leech slice; show legality via parity.,4,4
+Hypercube Scaffold,Page 9,4,4
+Hypercube Scaffold,Hypercube → Toroidal Loom,4,4
+"— Code id, modulus, glue vector, octad layout, legality receipts.",■■ Build E8 halves; overlay mirror; demonstrate root reflections.,4,4
+Debrief (2–3 prompts),"— Rail receipts, meaning pack v#, anchor id.",4,4
+Ledger hook (what gets recorded),■■ Lay code parity rows; mark syndrome pad.,4,4
+SReceipts:,metrics,4,4
+Blocking (5–15 minutes),■■ Mask octads for a Leech slice; show legality via parity.,4,4
+N/A,■■ Build E8 halves; overlay mirror; demonstrate root reflections.,4,4
+09_Hypercube_Scaffold,Page 10,4,4
+Safety,■■ Lay code parity rows; mark syndrome pad.,4,4
+Hand■ins (artifacts to keep),■ Which Δ■lift generalized across rails?,4,4
+"Foam board, pegs, 8 & 24 strings, clip set.",Safety,4,4
+Sticky Sidecars,Sticky Sidecars (Tokens),4,4
+"Automorphism: group=________, element=________________",Reproducible build receipts,4,4
+"Construction A: p=__, code=______________, glue=________________",Master Ledger,4,4
+Room, Run three independent rails on one shell; compare receipts; compress meanings.,4,4
+Room, Parallelize OPTICS/THERMAL/POLAR/MATH on same form; swap token packs only.,4,4
+Safety,"Theorem cards, claim wall, mirror worksheet.",4,4
+"Theorem cards, claim wall, mirror worksheet.", Preserve minority view as Non■Working breadcrumb with hash.,4,4
+"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4RedSuits Sidecars:",=____ =____ =____ =____,4,4
+Room, Resolve disputes with claim/evidence/Δ■lift/receipt cards.,4,4
+Page 7,Theorem Cards,4,4
+Three stations; octet master; metrics per rail., Show that form stays fixed while semantics swap.,4,4
+Theorem Cards,Theorem Cards & Argument Protocol,4,4
+"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4Blue","1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4RedSuits Sidecars:",4,4
+Scene 6: Two■Scientist Theorem■Card Resolution, Resolve disputes with claim/evidence/Δ■lift/receipt cards.,4,4
+"Decks, sleeves, sticky notes, cheap sensors (thermometer, lux meter, calipers).",Safety,4,4
+"Octet sheet, DNA■10, 4■bit sticker, ledger page.",Safety,4,4
+Safety,Three stations; octet master; metrics per rail.,4,4
+Assumptions:,Theorem Cards & Argument Protocol,4,4
+"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4Blue","Use left half as Blue, right half as Red",4,4
+Hand■ins (artifacts to keep),■ Which rail constrained the others? Why?,4,4
+Assumptions  Claim  Local Test  Counterexample,Claim:,4,4
+Combined Rail Workspace,"Use left half as Blue, right half as Red",4,4
+07_Theorem_Cards,Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________,4,4
+N/A,"— 4 receipts, shared form_id, per■rail thresholds.",4,4
+Safety,meaning pack; promote anchor.,4,4
+Combined Rail Workspace,Compact combined rail with quick fields,4,4
+4 stations; shared octet; sticky token labels.,Safety,4,4
+CQE Card Mini-Mat Travel,Compact combined rail with quick fields,4,4
+4 stations; shared octet; sticky token labels., Converge via receipts; annihilate non■working cheaply.,4,4
+Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING,UTC 2025-09-20 21:06,4,4
+05_Stations,Receipt,4,4
+Hand■ins (artifacts to keep),■ What metric flipped a decision?,4,4
+Pre,Receipt,4,4
+Eight views + palindromic rest; ten-state save,H3,4,4
+Scene 12: Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,■ Did redaction block reproducibility? How fixed?,4,4
+01_QuickStart,"Your first problem setup (tokens, views, mirror, strict)",4,4
+Hand■ins (artifacts to keep),■ Did redaction block reproducibility? How fixed?,4,4
+Debrief (2–3 prompts),"— Stand■in map, redaction count, hash■only attachments.",4,4
+receipts.,"✓ Redacted ledger row, safe receipts.",4,4
+Blocking (5–15 minutes),"— Stand■in map, redaction count, hash■only attachments.",4,4
+Octet & DNA-10,Page 2,4,4
+Octet & DNA-10,Octet Overlay + DNA-10,4,4
+Safety,receipts.,4,4
+Red/blue pens; redaction tape; safety policy sheet.,Safety,4,4
+H1,UTC 2025-09-20 21:06,4,4
+H2,Octet Overlay + DNA-10,4,4
+Red/blue pens; redaction tape; safety policy sheet., Practice stand■in overlays for sensitive domains.,4,4
+Room, Bind tokens late; redact dangerous meaning; still keep form receipts.,4,4
+Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.,Safety,4,4
+H1,H4,4,4
+H2,H5,4,4
+Hand■ins (artifacts to keep),■ Which constraint felt most ‘non■negotiable’?,4,4
+H3,H6,4,4
+Scene 11: Primordial→EM→Thermo: Meaning■Token Safety, Bind tokens late; redact dangerous meaning; still keep form receipts.,4,4
+Scene 8 — Card■Deck CQE + Lab Stations,"■■ Map aces→primitives, 2–8 synthesis, 9 full idea, 10 parity twin; face cards = observers; jokers =",4,4
+H4,H7,4,4
+Scene 11: Primordial→EM→Thermo: Meaning■Token Safety,■ Which Δ■lift removed the beat?,4,4
+"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts",■ Which constraint felt most ‘non■negotiable’?,4,4
+H5,H8,4,4
+Hand■ins (artifacts to keep),■ Which Δ■lift removed the beat?,4,4
+H6,REST (palindromic mirror): notes / constraints,4,4
+Debrief (2–3 prompts),"— Tone pair, beat freq, Δ■lift, receipt.",4,4
+5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).,"Your first problem setup (tokens, views, mirror, strict)",4,4
+N/A,"— Falsifier ids (F1–F4), outcomes, receipts.",4,4
+Scene 12: Global Viewers: 8×8 + 4×4×4×4 + Parity Shell, Add viewers without changing work: local 8×8; meso 4×4×4×4; parity 2×2×2×2.,4,4
+3) Octet overlay: Fill H1–H8 views; record REST constraints.,7) Iterate: Promote validated cards to your deck top; archive non-working slips.,4,4
+Scene 13: Not Lattice Flattery: Governance by Geometry, Why E8/Leech/Monster emerge from constraints; not taste.,4,4
+CQE Card Kit (Paper-Only),UTC 2025-09-20 21:06,4,4
+Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers,UTC 2025-09-20 21:06,4,4
+Room, Why E8/Leech/Monster emerge from constraints; not taste.,4,4
+Scene 13: Not Lattice Flattery: Governance by Geometry,■ Which viewer best predicted success?,4,4
+UTC 2025-09-20 21:06,decks of cards.,4,4
+Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers,thresholds; and ledger reproducible 4-bit commits.,4,4
+Hand■ins (artifacts to keep),■ Which viewer best predicted success?,4,4
+"Constraint cards, counterexample wall.", How parity+glue legality forces the shell.,4,4
+decks of cards.,overlays.,4,4
+Debrief (2–3 prompts),"— Viewer indices, hotspot ids, Δ■lift chosen, receipts.",4,4
+00_Cover,overlays.,4,4
+accordingly; compare debt drop.,"✓ Viewer overlays, ledger row.",4,4
+"Scene 15 — Capstone: Three■Track Non■Toy (Optics, DNA,",Three stations; octet master; metrics per rail.,4,4
+License: CC-BY 4.0  Generated 2025-09-20,UTC 2025-09-20 21:06,4,4
+Blocking (5–15 minutes),"— Viewer indices, hotspot ids, Δ■lift chosen, receipts.",4,4
+00_Cover,Page 1,4,4
+Safety,accordingly; compare debt drop.,4,4
+Safety,"Viewer templates, highlighters.",4,4
+1) Deal primitives: Aces = primitives. Write domain glyphs on them.,UTC 2025-09-20 21:06,4,4
+3) Octet overlay: Fill H1–H8 views; record REST constraints.,Quick Start,4,4
+"Viewer templates, highlighters.", Find hot■zones to focus Δ■lifts first.,4,4
+10-minute run with two decks + overlays,4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.,4,4
+Room, Add viewers without changing work: local 8×8; meso 4×4×4×4; parity 2×2×2×2.,4,4
+1) Deal primitives: Aces = primitives. Write domain glyphs on them.,5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).,4,4
+"Constraint cards, counterexample wall.",Safety,4,4
+Scene 12 — Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"✓ Viewer overlays, ledger row.",4,4
+1. Timing,H7,4,4
+Scene 7 — 8■Person Table with Neighbor Lanes,■■ Assign roles; run 2 cycles; enforce neighbor receipts; rotate seats; compare throughput.,4,4
+log a 4■bit after retune.,"✓ Spectrogram sheet, receipt.",4,4
+Page 3,Receipts & 4-bit,4,4
+faces.,"✓ Assembled model photos, notes, ledger.",4,4
+03_Receipts_4bit,Merkle-ish page hash / signatures,4,4
+Blocking (5–15 minutes),"— Pose, hub ids, mid■slice tags, 4■bit example.",4,4
+Scene 4 — Construction■A Loom: E8 and Leech on Paper,■■ Build E8 halves; overlay mirror; demonstrate root reflections.,4,4
+Safety,faces.,4,4
+"Printed nets, tape, colored thread for hubs.",Safety,4,4
+Page 4,Parity Loom,4,4
+Scene 3 — Octet Coverage for ML (A/B→Octet),"✓ Octet pass grid, receipts.",4,4
+Parity Loom,Parity Loom (E8/Leech scaffold),4,4
+"Printed nets, tape, colored thread for hubs."," Understand why geometry, not taste, governs the shell.",4,4
+Room, Wrap a tesseract into the torus; locate 4■bit hubs; see 1→64→1 codec sketch.,4,4
+Parity Loom (E8/Leech scaffold),permutation cards to rethread.,4,4
+Safety,"Two clipboards (blue/red), hash stickers.",4,4
+04_Parity_Loom,steps.,4,4
+Scene 9: Hypercube→Toroidal Chamber (4■bit Hubs), Wrap a tesseract into the torus; locate 4■bit hubs; see 1→64→1 codec sketch.,4,4
+N/A,"— Blue/red pair id, hashes, receipts.",4,4
+Peg grid (8×8). Mark parity lanes and half-glue ticks.,UTC 2025-09-20 21:06,4,4
+Scene 9: Hypercube→Toroidal Chamber (4■bit Hubs),■ What metric flipped a decision?,4,4
+04_Parity_Loom,Page 5,4,4
+"Foam board, pegs, 8 & 24 strings, clip set.", Visualize 8■twine E8 and 24■twine Leech masks with octads.,4,4
+Debrief (2–3 prompts),"— Deck id, card set, measurement token, 4■bit commit.",4,4
+Page 5,Stations,4,4
+Stations,"Stations: Measure, Tag, Resume",4,4
+Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.,"✓ Card photo, metric sheet, ledger.",4,4
+Blocking (5–15 minutes),"— Deck id, card set, measurement token, 4■bit commit.",4,4
+Pause cards → test → sticky sidecar → continue,rejoin table play.,4,4
+rejoin table play.,Δ,4,4
+Scene 4 — Construction■A Loom: E8 and Leech on Paper,"✓ Photo of loom, mask sheet, ledger row.",4,4
+Debrief (2–3 prompts),"— Pose, hub ids, mid■slice tags, 4■bit example.",4,4
+2. Polarity,H8,4,4
+"Two clipboards (blue/red), hash stickers.", Always leave a 4■bit and a hash trail.,4,4
+3. Scale,REST (palindromic mirror): notes / constraints,4,4
+Blocking (5–15 minutes),"— Tone pair, beat freq, Δ■lift, receipt.",4,4
+1. Timing,4. Pose,4,4
+Scene 6 — Two■Scientist Theorem■Card Resolution,"✓ Card stack, mirror sheet, ledger snippet.",4,4
+2. Polarity,5. Domain,4,4
+Scene 6 — Two■Scientist Theorem■Card Resolution,"— Claim ids, mirror pass/fail, Δ■lift ids, receipts.",4,4
+Safety,log a 4■bit after retune.,4,4
+"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts", Operate dual■rail safety: blue = open; red = internal only.,4,4
+Safety,"Tone generator app, small speaker, paper spectrogram.",4,4
+3. Scale,6. Conditioning,4,4
+4. Pose,7. Units,4,4
+Scene 6 — Two■Scientist Theorem■Card Resolution,■■ Each writes claim+assumptions; test under shared mirror; record receipts; promote passing; archive,4,4
+5. Domain,8. Precision,4,4
+"Tone generator app, small speaker, paper spectrogram.", Use beats as a quick hot■zone detector for Δ■lifts.,4,4
+Scene 6 — Two■Scientist Theorem■Card Resolution,"Theorem cards, claim wall, mirror worksheet.",4,4
+Room, Map harmonic stack to octet; subharmonics to Cartan ‘outside’ nudges.,4,4
+6. Conditioning,9. Cost,4,4
+10. Seed,7. Units,4,4
+Hot■Zones), Use beats as a quick hot■zone detector for Δ■lifts.,4,4
+02_Octet_DNA10,10. Seed,4,4
+Scene 5 — Sidecar Sprint: 4 Rails in 20 Minutes,✓ 4 station sheets; master ledger row.,4,4
+Scene 10: Sound & Subharmonics Viewer (Cartan,What it teaches (learning targets),4,4
+Room, Operate dual■rail safety: blue = open; red = internal only.,4,4
+Scene 10: Sound & Subharmonics Viewer (Cartan,■ What would break if hubs were 3 or 9?,4,4
+Scene 5 — Sidecar Sprint: 4 Rails in 20 Minutes,■■ Run each rail: tokens→octet→mirror→Δ→strict→4■bit; copy receipts to master ledger.,4,4
+4 stations; shared octet; sticky token labels.,Scene 5 — Sidecar Sprint: 4 Rails in 20 Minutes,4,4
+Hand■ins (artifacts to keep),■ What would break if hubs were 3 or 9?,4,4
+PM,views run,4,4
+Page 18,Receipts & 4-bit,4,4
+Cosmos,■ Ripple content decoded,4,4
+Blocking (5–15 minutes),"— Mirror tolerance, Δ■lift id, before/after OPE/FCE, strict update.",4,4
+"Grid board (4×4), parity markers.",Instruments,4,4
+4-bit Commit,"Mirror Evidence:metrics, plots, checksumsViews Exercised:1 2 3 4 5 6 7 8",4,4
+Worksheet – Mirror Test,■ Inverse pipeline defined,4,4
+■ WFE ≤ 25→22 nm strict,■ ΔT/tick ≤ 1.0→0.8 K,4,4
+Notes:,■ DNA■10,4,4
+■ Local identity name,■ Safety notes (side effects),4,4
+Hand■ins (artifacts to keep),■ Was the Δ local? Did it generalize to a second view?,4,4
+Class Kit Checklist, Dry-erase sleeves + fine-tip markers,4,4
+■ FFT↔iFFT closure,■ Vent cadence stable,4,4
+UTC 2025-09-20 21:06, 2+ decks of cards (different back colors) per table,4,4
+Thermal,■ Pulse symmetry,4,4
+Jokers:subharmonic / Cartan bridges,"Mirror Evidence:metrics, plots, checksumsViews Exercised:1 2 3 4 5 6 7 8",4,4
+Polar/Spin/EM,■ ΔT/tick ≤ 1.0→0.8 K,4,4
+N/A,"n=1→4 worksheets, insertion checklist, class bins (8).",4,4
+Safety,"■■ Build n=1 rest, show first parity choice at n=2.",4,4
+■ LHCP/RHCP swap,■ Vent cadence stable,4,4
+Hand■ins (artifacts to keep),■■ Pick the forward pipeline; write its inverse.,4,4
+N/A,"■■ Complete n=3, point to latent 4■cell cross.",4,4
+■ Pulse symmetry,■ Spin filter eff ≥ 80%,4,4
+Budget-friendly supply list," Ruler, tape, scissors, hole punch",4,4
+Room,"n=1→4 worksheets, insertion checklist, class bins (8).",4,4
+Scene 3: Octet Coverage for ML (A/B→Octet),■ Was the Δ local? Did it generalize to a second view?,4,4
+Scene 3: Octet Coverage for ML (A/B→Octet), Generalize A/B to 8 views; prevent winner■only bias.,4,4
+■ DNA■10,■ constructionA (code/modulus/glue),4,4
+Eight Baseline Packs,■ PSF match (SC≥0.98),4,4
+13_Class_Checklist,Room layout & station assignments,4,4
+Optics  Thermal  Polar/Spin/EM  Math/Logic  Bio  Neuro  Cosmos  Systems,■ WFE ≤ 25→22 nm strict,4,4
+Room layout & station assignments, A4/Letter cardstock for cards,4,4
+Notes:,Worksheet – Mirror Test,4,4
+■ automorphism id,■ thresholds (normal/strict),4,4
+ Ledger binder (Working / Non-Working albums), Printed kit (this PDF),4,4
+Full Idea (9):,Parity Twin (10):,4,4
+Thermal,■ PSF match (SC≥0.98),4,4
+ A4/Letter cardstock for cards, Transparent overlays (acetate),4,4
+"Grid board (4×4), parity markers.",inequivalent insertions.,4,4
+" Balsa sticks, foam board / peg board, paper clips", Printed kit (this PDF),4,4
+■ octet map,■ receipts (4■bit + hash),4,4
+Optics,■ FFT↔iFFT closure,4,4
+" Ruler, tape, scissors, hole punch"," Sticky notes (token sidecars), colored pens",4,4
+ Dry-erase sleeves + fine-tip markers, Transparent overlays (acetate),4,4
+ 2+ decks of cards (different back colors) per table," Balsa sticks, foam board / peg board, paper clips",4,4
+Jokers:subharmonic / Cartan bridges,Strict Bounds:list tightened thresholds (old new),4,4
+Polar/Spin/EM,■ AR ≤ 1.5 dB strict,4,4
+Optics,UTC 2025-09-20 21:06,4,4
+Blocking (5–15 minutes),■■ Canonicalize n=4 palindrome (up to pose).,4,4
+■ Redshift bins stable,■ Safety ratchets ✓,4,4
+■ Closed-loop error ↓,■ Seed B-fields consistent,4,4
+List per suit or view Views,Octet Map (2 8):,4,4
+Room, Turn a one■way mismatch into a local repair with receipts.,4,4
+Bio proxy,■ Batch day variance ok,4,4
+Observers (J/Q/K):metrics / view priority / strictness -lifts:,Parity Twin (10):,4,4
+Neuro proxy,■ Overlay RMS ≤ τ,4,4
+Hand■ins (artifacts to keep),■ What would ‘<8 classes’ break downstream?,4,4
+Systems,■ Shear fields coherent,4,4
+Cosmos,■ Redshift bins stable,4,4
+■ How does rotation act on class labels?,"✓ Checked grid, class map (8), receipt.",4,4
+■ Irreversibility ✓,■ Ripple content decoded,4,4
+■ Noise floor stable,■ Seed B-fields consistent,4,4
+■ Mode switch detected,■ Shear fields coherent,4,4
+■ Batch day variance ok,■ Mode switch detected,4,4
+Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix),■ How does rotation act on class labels?,4,4
+Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix), Turn a one■way mismatch into a local repair with receipts.,4,4
+Neuro proxy,■ Noise floor stable,4,4
+Notes:,Worksheet – Δ■lift Cookbook,4,4
+■ Irreversibility ✓,■ Type checks pass,4,4
+Systems,■ Latency within bound,4,4
+"Whiteboard, printed spectra pair or time series twin.", Practice mirror pairs (FFT↔iFFT; encode↔decode; simulate↔measure).,4,4
+Safety,"Whiteboard, printed spectra pair or time series twin.",4,4
+Math/Logic,■ LHCP/RHCP swap,4,4
+Ledger hook (what gets recorded),"■■ Build n=1 rest, show first parity choice at n=2.",4,4
+■ Interval proofs,■ Spin filter eff ≥ 80%,4,4
+Local repairs + rationale,Strict Bounds:list tightened thresholds (old new),4,4
+Primitives (Aces):,Suit Mapping:=____ =____ =____ =____,4,4
+Safety,■■ Pick the forward pipeline; write its inverse.,4,4
+■ AR ≤ 1.5 dB strict,■ OPE/FCE debt ↓,4,4
+12_Baseline_Packs,Custom pack notes,4,4
+"— Octad class tag, pose, tolerance; 4■bit commit when 4 views pass.","■■ Complete n=3, point to latent 4■cell cross.",4,4
+Worksheet – Δ■lift Cookbook,■ Preconditions,4,4
+Math/Logic,■ Type checks pass,4,4
+Bio proxy,■ Interval proofs,4,4
+Custom pack notes,■ Closed-loop error ↓,4,4
+Hand■ins (artifacts to keep),■■ Canonicalize n=4 palindrome (up to pose).,4,4
+Local repairs + rationale,Observers (J/Q/K):metrics / view priority / strictness -lifts:,4,4
+■ Forward pipeline defined,■ Δ■lift candidates listed,4,4
+■ OPE/FCE debt ↓,■ Overlay RMS ≤ τ,4,4
+Octet Map (2 8):,Primitives (Aces):,4,4
+Scene 1: n=1→n=5: The Hinge that Forces the Octad,inequivalent insertions.,4,4
+ Clipboard for station runs," Sticky notes (token sidecars), colored pens",4,4
+■ Mirror within tol?,■ OPE debt ok?,4,4
+N/A,"■■ Mark 8 views (colored boxes), set a palindromic REST.",4,4
+What it teaches (learning targets), Learn how a 2■minute paper run creates a reproducible ledger row.,4,4
+Blocking (5–15 minutes),■■ Run a forward↔inverse mirror; circle mismatches (red).,4,4
+Hand■ins (artifacts to keep),■■ Require ≥4 pass post■Δ■lift before commit; log 4■bit.,4,4
+Props & setup, See the full loop: Octet → Mirror → Δ■lift → Strict → 4■bit receipts.,4,4
+Room, Understand stand■ins (tokens) vs. form (geometry) vs. meaning (labels).,4,4
+Ranks 1 8 = Octet (coverage),Re-run under parity; enforce palindromic rest,4,4
+Scene 4: Construction■A Loom: E8 and Leech on Paper, Parity checks → membership; half■shift glue → evenness/unimodularity.,4,4
+Scene 4: Construction■A Loom: E8 and Leech on Paper,■ Which 4 were necessary and sufficient?,4,4
+"One table, 8 colored pens, tape wall for overlays.", Learn how a 2■minute paper run creates a reproducible ledger row.,4,4
+Sticky Sidecars (Tokens),Value: __________ Units: ____,4,4
+Ledger hook (what gets recorded),"✓ Filled octet, mirror ticks, Δ■lift card, 4■bit stickered ledger row.",4,4
+"— Views passed, metric triplet, slab size, commit.",■■ List 8 materially independent views (slices or metrics).,4,4
+Safety,■■ Pick a tiny question (≤1 min).,4,4
+Worksheet – Octet Overlay,■ Which Δ■lift generalized across rails?,4,4
+Attach measured values to cards,Context: ________,4,4
+Hand■ins (artifacts to keep),"■■ Tighten one metric (strict ratchet), shade a 4■bit receipt; log ledger.",4,4
+Notes:,Worksheet – Ledger Row,4,4
+10_Sticky_Sidecars,Hash: __________,4,4
+Hand■ins (artifacts to keep),■ Which 4 were necessary and sufficient?,4,4
+■ Justification (evidence),■ Metric name & unit,4,4
+■■ Pick a tiny question (≤1 min).,■■ Write a Δ■lift (local identity) to fix one mismatch; re■mirror.,4,4
+"■■ Mark 8 views (colored boxes), set a palindromic REST.","■■ Tighten one metric (strict ratchet), shade a 4■bit receipt; log ledger.",4,4
+Debrief (2–3 prompts),"— Views passed, metric triplet, slab size, commit.",4,4
+Local repair notes4-bit Commit,SReceipts:,4,4
+What it teaches (learning targets),mirror) governs correctness; your labels stay provisional until committed.,4,4
+Page 19,UTC 2025-09-20 21:06,4,4
+Ledger hook (what gets recorded),■■ Run a forward↔inverse mirror; circle mismatches (red).,4,4
+Worksheet – Octet Overlay,■ Palindromic REST documented,4,4
+Scene 0: Orientation: The CQE Spine Live, Understand stand■ins (tokens) vs. form (geometry) vs. meaning (labels).,4,4
+"— form_id, octet map, mirror tolerance, Δ■lift note, strict threshold, 4■bit.",■■ Write a Δ■lift (local identity) to fix one mismatch; re■mirror.,4,4
+Ledger hook (what gets recorded),"✓ Octet pass grid, receipts.",4,4
+Worksheet – 4■bit Receipt,■ FCE reproduction ok?,4,4
+Place Aces (primitives) then 2 8 views; assemble 9,Re-run under parity; enforce palindromic rest,4,4
+Merkle-ish page hash / signatures,Receipts & 4-bit,4,4
+Worksheet – Strict Ratchet,■ Current threshold,4,4
+Cards for 8 data slices; metric stickers.,Safety,4,4
+Token: __________,UTC 2025-09-20 21:06,4,4
+Blocking (5–15 minutes),None (paper■only).,4,4
+P M,SPage Hash / Status:hash WORKING / NON-WORKING / PROVISIONAL,4,4
+■ form_id,■ octet map,4,4
+Debrief (2–3 prompts),■ Would a different mirror have failed?,4,4
+N/A,■■ Require ≥4 pass post■Δ■lift before commit; log 4■bit.,4,4
+Notes:,Worksheet – 4■bit Receipt,4,4
+■ Was the Δ■lift local and monotone?,"✓ Filled octet, mirror ticks, Δ■lift card, 4■bit stickered ledger row.",4,4
+Worksheet – Ledger Row,■ constructionA (code/modulus/glue),4,4
+Cards for 8 data slices; metric stickers., Record receipts across slices (metrics × slabs).,4,4
+None (paper■only).,Paper kit,4,4
+Notes:,■ H1–H8 views named and colored,4,4
+Safety,■■ List 8 materially independent views (slices or metrics).,4,4
+Hand■ins (artifacts to keep),■ Which view dominated debt?,4,4
+Instruments,"One table, 8 colored pens, tape wall for overlays.",4,4
+"Octet sheet, DNA■10, 4■bit sticker, ledger page.",Room,4,4
+Notes:,Worksheet – Strict Ratchet,4,4
+Debrief (2–3 prompts),"— form_id, octet map, mirror tolerance, Δ■lift note, strict threshold, 4■bit.",4,4
+Room, Parity checks → membership; half■shift glue → evenness/unimodularity.,4,4
+Room, Generalize A/B to 8 views; prevent winner■only bias.,4,4
+Scene 1: n=1→n=5: The Hinge that Forces the Octad,■ Would a different mirror have failed?,4,4
+UTC 2025-09-20 21:06,overlays.,3,3
+Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix),■ What would ‘<8 classes’ break downstream?,3,3
+Pause cards → test → sticky sidecar → continue,Stations,3,3
+Scene 13: Not Lattice Flattery: Governance by Geometry, How parity+glue legality forces the shell.,3,3
+Primitives (Aces):,Views,3,3
+Attach measured values to cards,Sticky Sidecars,3,3
+Foam/peg board + balsa rails + clips,Parity Loom,3,3
+What it teaches (learning targets),■ Which viewer best predicted success?,3,3
+Page 5,Peg grid (8×8). Mark parity lanes and half-glue ticks.,3,3
+UTC 2025-09-20 21:06,permutation cards to rethread.,3,3
+List per suit or view Views,Primitives (Aces):,3,3
+Debrief (2–3 prompts),Scene 9: Hypercube→Toroidal Chamber (4■bit Hubs),3,3
+Debrief (2–3 prompts),Scene 13: Not Lattice Flattery: Governance by Geometry,3,3
+What it teaches (learning targets),■ What metric flipped a decision?,3,3
+Scene 9: Hypercube→Toroidal Chamber (4■bit Hubs)," Understand why geometry, not taste, governs the shell.",3,3
+UTC 2025-09-20 21:06,steps.,3,3
+Octet Map (2 8):,Suit Mapping:=____ =____ =____ =____,3,3
+License: CC-BY 4.0  Generated 2025-09-20,Page 1,3,3
+Debrief (2–3 prompts),"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts",3,3
+03_Receipts_4bit,Page 4,3,3
+13_Class_Checklist,Page 14,3,3
+Worksheet – Ledger Row,■ Mirror within tol?,3,3
+UTC 2025-09-20 21:06,"Your first problem setup (tokens, views, mirror, strict)",3,3
+01_QuickStart,Page 2,3,3
+Notes:,■ form_id,3,3
+Blank Cards (3×3),Page 18,3,3
+"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts", Always leave a 4■bit and a hash trail.,3,3
+Eight views + palindromic rest; ten-state save,Octet & DNA-10,3,3
+Worksheet – Ledger Row,■ automorphism id,3,3
+Scene 11: Primordial→EM→Thermo: Meaning■Token Safety, Practice stand■in overlays for sensitive domains.,3,3
+Debrief (2–3 prompts),Scene 12: Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,3,3
+Scene 1: n=1→n=5: The Hinge that Forces the Octad,■ Was the Δ■lift local and monotone?,3,3
+What it teaches (learning targets),■ Would a different mirror have failed?,3,3
+Room layout & station assignments,UTC 2025-09-20 21:06,3,3
+13_Class_Checklist, Ledger binder (Working / Non-Working albums),3,3
+What it teaches (learning targets),■ Which Δ■lift removed the beat?,3,3
+Scene 1: n=1→n=5: The Hinge that Forces the Octad, Why the octad is discovered (not assumed) and how it governs later structure.,3,3
+What it teaches (learning targets),■ Which constraint felt most ‘non■negotiable’?,3,3
+Debrief (2–3 prompts),Scene 11: Primordial→EM→Thermo: Meaning■Token Safety,3,3
+01_QuickStart,7) Iterate: Promote validated cards to your deck top; archive non-working slips.,3,3
+02_Octet_DNA10,9. Cost,3,3
+mirror) governs correctness; your labels stay provisional until committed., See the full loop: Octet → Mirror → Δ■lift → Strict → 4■bit receipts.,3,3
+Scene 12: Global Viewers: 8×8 + 4×4×4×4 + Parity Shell, Find hot■zones to focus Δ■lifts first.,3,3
+12_Baseline_Packs,■ Latency within bound,3,3
+4-bit Commit Stickers,Receipts & 4-bit,3,3
+Worksheet – 4■bit Receipt,■ Views≥4 passed?,3,3
+How to use this pack,mirror) governs correctness; your labels stay provisional until committed.,3,3
+Date: Deck Mapping:Blue=____ Red=____,Primitives (Aces):,3,3
+Custom pack notes,UTC 2025-09-20 21:06,3,3
+Worksheet – Strict Ratchet,■ Safety notes (side effects),3,3
+Worksheet – Δ■lift Cookbook,■ Expected debt drop,3,3
+Date: Deck Mapping:Blue=____ Red=____,Suit Mapping:=____ =____ =____ =____,3,3
+Scene 10: Sound & Subharmonics Viewer (Cartan, Map harmonic stack to octet; subharmonics to Cartan ‘outside’ nudges.,3,3
+Page 19,Receipts & 4-bit,3,3
+02_Octet_DNA10,Page 3,3,3
+Debrief (2–3 prompts),Scene 10: Sound & Subharmonics Viewer (Cartan,3,3
+12_Baseline_Packs,Page 13,3,3
+Worksheet – Strict Ratchet,■ New (tighter) threshold,3,3
+Hot■Zones),■ What would break if hubs were 3 or 9?,3,3
+10. Seed,UTC 2025-09-20 21:06,3,3
+What it teaches (learning targets),■ Did redaction block reproducibility? How fixed?,3,3
+What it teaches (learning targets),■ How does rotation act on class labels?,3,3
+Worksheet – 4■bit Receipt,■ Justification (evidence),3,3
+Worksheet – Mirror Test,■ Pass/fail marks; debt notes,3,3
+What it teaches (learning targets),■ Did any claim survive only after a Δ■lift?,3,3
+10_Sticky_Sidecars,Page 11,3,3
+4-bit Commit,Jokers:subharmonic / Cartan bridges,3,3
+4-bit Commit,Deck Mapping:Blue=________ Red=________,3,3
+Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes, Converge via receipts; annihilate non■working cheaply.,3,3
+CQE Card Mini-Mat Travel,Suits = Sidecars (assign per run):,3,3
+"Mirror Evidence:metrics, plots, checksumsViews Exercised:1 2 3 4 5 6 7 8",Strict Bounds:list tightened thresholds (old new),3,3
+-lifts:,P M,3,3
+Worksheet – Mirror Test,■ Mismatch windows circled,3,3
+Debrief (2–3 prompts),Scene 7: 8■Person Table with Neighbor Lanes,3,3
+Hash: __________,UTC 2025-09-20 21:06,3,3
+07_Theorem_Cards,Counterexample? ■ Yes ■ No,3,3
+10_Sticky_Sidecars,Context: ________,3,3
+What it teaches (learning targets),■ What fails if glue parity flips?,3,3
+Worksheet – Octet Overlay,■ Pass/fail marks; debt notes,3,3
+4-bit Commit,SHash:,3,3
+Scene 7: 8■Person Table with Neighbor Lanes, How a 10■minute cadence creates stable throughput.,3,3
+Debrief (2–3 prompts),Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes,3,3
+"Scene 15: Capstone: Three■Track Non■Toy (Optics, DNA,", Run three independent rails on one shell; compare receipts; compress meanings.,3,3
+Jokers:subharmonic / Cartan bridges,Local repairs + rationale,3,3
+Color = Parity (Black/Red),hash/date,3,3
+Local repair notes4-bit Commit,Ranks 1 8 = Octet (coverage),3,3
+Observers (J/Q/K):metrics / view priority / strictness -lifts:,Strict Bounds:list tightened thresholds (old new),3,3
+-lifts:,=____ =____ =____ =____,3,3
+06_Table_Playbook,Closed-loop error; safety ratchets.,3,3
+Debrief (2–3 prompts),Scene 3: Octet Coverage for ML (A/B→Octet),3,3
+What it teaches (learning targets),■ Was the Δ local? Did it generalize to a second view?,3,3
+"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4Blue",Combined Rail Workspace,3,3
+Compact combined rail with quick fields,"Use left half as Blue, right half as Red",3,3
+4-bit Commit,SPage Hash / Status:hash WORKING / NON-WORKING / PROVISIONAL,3,3
+Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________,UTC 2025-09-20 21:06,3,3
+Debrief (2–3 prompts),Scene 6: Two■Scientist Theorem■Card Resolution,3,3
+What it teaches (learning targets),■ Which rail constrained the others? Why?,3,3
+"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4RedSuits Sidecars:","Use left half as Blue, right half as Red",3,3
+11_Blank_Cards,Primitive/Idea: ____________________________________,3,3
+CQE Card Mini-Mat Travel,Combined Rail Workspace,3,3
+07_Theorem_Cards,Page 8,3,3
+Assumptions  Claim  Local Test  Counterexample,Theorem Cards,3,3
+Scene 6: Two■Scientist Theorem■Card Resolution, Preserve minority view as Non■Working breadcrumb with hash.,3,3
+Scene 3: Octet Coverage for ML (A/B→Octet), Record receipts across slices (metrics × slabs).,3,3
+"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4Blue",=____ =____ =____ =____,3,3
+"Mirror Evidence:metrics, plots, checksumsViews Exercised:1 2 3 4 5 6 7 8",P M,3,3
+06_Table_Playbook,Page 7,3,3
+Color = Parity (Black/Red),Compact combined rail with quick fields,3,3
+Blue Rail (Forward) Seed Views Full Idea (9),Place Aces (primitives) then 2 8 views; assemble 9,3,3
+"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4RedSuits Sidecars:",Deck Mapping:Blue=________ Red=________,3,3
+Neighbor Links (who talks to whom and when),UTC 2025-09-20 21:06,3,3
+Blue Rail (Forward) Seed Views Full Idea (9),Re-run under parity; enforce palindromic rest,3,3
+Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________,UTC 2025-09-20 21:06,3,3
+08_Master_Ledger,"Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}",3,3
+05_Stations,Page 6,3,3
+Receipt,UTC 2025-09-20 21:06,3,3
+What it teaches (learning targets),■ Which 4 were necessary and sufficient?,3,3
+What it teaches (learning targets),■ Which neighbor interface was hottest?,3,3
+■ H1–H8 views named and colored,■ Which Δ■lift generalized across rails?,3,3
+Full Idea (9):,Observers (J/Q/K):metrics / view priority / strictness -lifts:,3,3
+Scene 8: Card■Deck CQE + Lab Stations, Pause→measure→resume loop without losing context.,3,3
+09_Hypercube_Scaffold,From 4D cube projection to chamber shells,3,3
+PM,metrics,3,3
+Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix), Practice mirror pairs (FFT↔iFFT; encode↔decode; simulate↔measure).,3,3
+Observers (J/Q/K):metrics / view priority / strictness -lifts:,Views,3,3
+Debrief (2–3 prompts),Scene 8: Card■Deck CQE + Lab Stations,3,3
+Page 10,into a toroidal chamber. Mark parity lanes; add Leech masks as needed.,3,3
+Scene 4: Construction■A Loom: E8 and Leech on Paper, Visualize 8■twine E8 and 24■twine Leech masks with octads.,3,3
+UTC 2025-09-20 21:06,Value: __________ Units: ____,3,3
+Debrief (2–3 prompts),Worksheet – Octet Overlay,3,3
+05_Stations,Δ,3,3
+09_Hypercube_Scaffold,Sticky Sidecars,3,3
+Local repair notes4-bit Commit,views run,3,3
+Worksheet – Δ■lift Cookbook,■ Δ■lift candidates listed,3,3
+From 4D cube projection to chamber shells,Hypercube Scaffold,3,3
+11_Blank_Cards,Page 12,3,3
+Finance),■ Was any crucial info missing on blue?,3,3
+Suits = Sidecars (assign per run):,metrics,3,3
+Local repairs + rationale,Parity Twin (10):,3,3
+08_Master_Ledger,Page 9,3,3
+Debrief (2–3 prompts),Scene 4: Construction■A Loom: E8 and Leech on Paper,3,3
+hash/date,views run,3,3
+Debrief (2–3 prompts),"Scene 15: Capstone: Three■Track Non■Toy (Optics, DNA,",3,3
+Scene 11 — Primordial→EM→Thermo: Meaning■Token Safety, Bind tokens late; redact dangerous meaning; still keep form receipts.,2,2
+Scene 10 — Sound & Subharmonics Viewer (Cartan,"✓ Spectrogram sheet, receipt.",2,2
+Ledger hook (what gets recorded),"Scene 14 — Sandbox Red/Blue: Safety, Redaction, Receipts",2,2
+"Scene 14 — Sandbox Red/Blue: Safety, Redaction, Receipts","— Blue/red pair id, hashes, receipts.",2,2
+Scene 13 — Not Lattice Flattery: Governance by Geometry,"— Falsifier ids (F1–F4), outcomes, receipts.",2,2
+Local repair notes4-bit Commit,metrics,2,2
+Scene 10 — Sound & Subharmonics Viewer (Cartan,"— Tone pair, beat freq, Δ■lift, receipt.",2,2
+PM,Ranks 1 8 = Octet (coverage),2,2
+Color = Parity (Black/Red),Combined Rail Workspace,2,2
+Ledger hook (what gets recorded),Scene 10 — Sound & Subharmonics Viewer (Cartan,2,2
+Color = Parity (Black/Red),metrics,2,2
+"Scene 15 — Capstone: Three■Track Non■Toy (Optics, DNA,",✓ 3 receipts; promoted pack doc; anchor ledger row.,2,2
+"Scene 15 — Capstone: Three■Track Non■Toy (Optics, DNA,",Worksheet – Octet Overlay,2,2
+Notes:,■ constructionA (code/modulus/glue),2,2
+Re-run under parity; enforce palindromic rest,"T wo decks (Blue=Forward, Red=Inverse); color=parity; suits = sidecars",2,2
+Scene 11 — Primordial→EM→Thermo: Meaning■Token Safety, Practice stand■in overlays for sensitive domains.,2,2
+CQE Card Mini-Mat Travel,"Use left half as Blue, right half as Red",2,2
+Props & setup,Scene 13: Not Lattice Flattery: Governance by Geometry,2,2
+Scene 10 — Sound & Subharmonics Viewer (Cartan, Map harmonic stack to octet; subharmonics to Cartan ‘outside’ nudges.,2,2
+Scene 13 — Not Lattice Flattery: Governance by Geometry,"✓ Counterexample log, ledger.",2,2
+Scene 9 — Hypercube→Toroidal Chamber (4■bit Hubs),"✓ Assembled model photos, notes, ledger.",2,2
+Worksheet – Strict Ratchet,■ Justification (evidence),2,2
+Place Aces (primitives) then 2 8 views; assemble 9,"T wo decks (Blue=Forward, Red=Inverse); color=parity; suits = sidecars",2,2
+Ledger hook (what gets recorded),Scene 9 — Hypercube→Toroidal Chamber (4■bit Hubs),2,2
+Instruments,meaning pack; promote anchor.,2,2
+Worksheet – Ledger Row,■ octet map,2,2
+Scene 8 — Card■Deck CQE + Lab Stations,"✓ Card photo, metric sheet, ledger.",2,2
+"— Rail receipts, meaning pack v#, anchor id.",■ Which Δ■lift generalized across rails?,2,2
+"Constraint cards, counterexample wall.",N/A,2,2
+Worksheet – 4■bit Receipt,■ New (tighter) threshold,2,2
+■ Mirror within tol?,■ form_id,2,2
+SReceipts:,hash/date,2,2
+CQE Card Mini-Mat Travel,hash/date,2,2
+Safety,"— Falsifier ids (F1–F4), outcomes, receipts.",2,2
+Worksheet – Ledger Row,■ Views≥4 passed?,2,2
+"Scene 15 — Capstone: Three■Track Non■Toy (Optics, DNA,",■■ Each rail performs octet/mirror/Δ/strict; commit or annihilate; compress repeating Δ■lifts into a,2,2
+Ledger hook (what gets recorded),Scene 12 — Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,2,2
+Place Aces (primitives) then 2 8 views; assemble 9,Ranks 1 8 = Octet (coverage),2,2
+N/A,"— Rail receipts, meaning pack v#, anchor id.",2,2
+Ledger hook (what gets recorded),"Scene 15 — Capstone: Three■Track Non■Toy (Optics, DNA,",2,2
+Scene 11 — Primordial→EM→Thermo: Meaning■Token Safety,"✓ Redacted ledger row, safe receipts.",2,2
+■ Palindromic REST documented,■ Which Δ■lift generalized across rails?,2,2
+Worksheet – 4■bit Receipt,■ Mirror within tol?,2,2
+Debrief (2–3 prompts),■ H1–H8 views named and colored,2,2
+Ledger hook (what gets recorded),Scene 13 — Not Lattice Flattery: Governance by Geometry,2,2
+Compact combined rail with quick fields,Suits = Sidecars (assign per run):,2,2
+Ledger hook (what gets recorded),Scene 11 — Primordial→EM→Thermo: Meaning■Token Safety,2,2
+Paper kit, How parity+glue legality forces the shell.,2,2
+■ Justification (evidence),■ OPE debt ok?,2,2
+Blocking (5–15 minutes),"✓ Counterexample log, ledger.",2,2
+Suits = Sidecars (assign per run):,views run,2,2
+"Scene 15 — Capstone: Three■Track Non■Toy (Optics, DNA,","— Rail receipts, meaning pack v#, anchor id.",2,2
+Scene 11 — Primordial→EM→Thermo: Meaning■Token Safety,receipts.,2,2
+"Scene 15 — Capstone: Three■Track Non■Toy (Optics, DNA,", Run three independent rails on one shell; compare receipts; compress meanings.,2,2
+"Constraint cards, counterexample wall.", Why E8/Leech/Monster emerge from constraints; not taste.,2,2
+Notes:,Worksheet – Octet Overlay,2,2
+Scene 11 — Primordial→EM→Thermo: Meaning■Token Safety,■■ Run with stand■ins; mark any sensitive tokens red; keep octet/mirror/Δ/strict; commit with redacted,2,2
+Scene 12 — Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"— Viewer indices, hotspot ids, Δ■lift chosen, receipts.",2,2
+"Scene 14 — Sandbox Red/Blue: Safety, Redaction, Receipts","Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts",2,2
+Ledger hook (what gets recorded),Scene 2 — Mirror & Δ■Lift Clinic (Bug■to■Fix),2,2
+Ledger hook (what gets recorded),Scene 8 — Card■Deck CQE + Lab Stations,2,2
+Date: Deck Mapping:Blue=____ Red=____,Octet Map (2 8):,2,2
+List per suit or view Views,Suit Mapping:=____ =____ =____ =____,2,2
+Scene 0 — Orientation: The CQE Spine Live,"— form_id, octet map, mirror tolerance, Δ■lift note, strict threshold, 4■bit.",2,2
+Scene 3 — Octet Coverage for ML (A/B→Octet),"— Views passed, metric triplet, slab size, commit.",2,2
+Debrief (2–3 prompts),Finance),2,2
+Ledger hook (what gets recorded),Scene 0 — Orientation: The CQE Spine Live,2,2
+Scene 0 — Orientation: The CQE Spine Live,■■ Write a Δ■lift (local identity) to fix one mismatch; re■mirror.,2,2
+Paper kit, Always leave a 4■bit and a hash trail.,2,2
+Scene 4 — Construction■A Loom: E8 and Leech on Paper,Scene 4: Construction■A Loom: E8 and Leech on Paper,2,2
+Scene 0 — Orientation: The CQE Spine Live,■■ Run a forward↔inverse mirror; circle mismatches (red).,2,2
+Parity Twin (10):,Strict Bounds:list tightened thresholds (old new),2,2
+Ledger hook (what gets recorded),Scene 3 — Octet Coverage for ML (A/B→Octet),2,2
+Ledger hook (what gets recorded),Scene 4 — Construction■A Loom: E8 and Leech on Paper,2,2
+Scene 4 — Construction■A Loom: E8 and Leech on Paper,"— Code id, modulus, glue vector, octad layout, legality receipts.",2,2
+Scene 0 — Orientation: The CQE Spine Live,"■■ Mark 8 views (colored boxes), set a palindromic REST.",2,2
+What it teaches (learning targets),■ Was any crucial info missing on blue?,2,2
+Worksheet – Mirror Test,■ Δ■lift candidates listed,2,2
+"One table, 8 colored pens, tape wall for overlays.",Scene 0 — Orientation: The CQE Spine Live,2,2
+Scene 0 — Orientation: The CQE Spine Live, Learn how a 2■minute paper run creates a reproducible ledger row.,2,2
+Jokers:subharmonic / Cartan bridges,Observers (J/Q/K):metrics / view priority / strictness -lifts:,2,2
+Scene 5 — Sidecar Sprint: 4 Rails in 20 Minutes,Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes,2,2
+Full Idea (9):,Local repairs + rationale,2,2
+"Scene 15: Capstone: Three■Track Non■Toy (Optics, DNA,","✓ Blue packet, red sealed packet.",2,2
+One row per form/run (reproducible receipts)Form ID: Problem / Brief:,Primitives (Aces):,2,2
+Blocking (5–15 minutes),"✓ Blue packet, red sealed packet.",2,2
+Scene 2 — Mirror & Δ■Lift Clinic (Bug■to■Fix),"— Mirror tolerance, Δ■lift id, before/after OPE/FCE, strict update.",2,2
+Worksheet – Δ■lift Cookbook,■ Mismatch windows circled,2,2
+Scene 2 — Mirror & Δ■Lift Clinic (Bug■to■Fix), Practice mirror pairs (FFT↔iFFT; encode↔decode; simulate↔measure).,2,2
+Scene 2 — Mirror & Δ■Lift Clinic (Bug■to■Fix),"✓ Before/after overlay with red fix marks, 4■bit row.",2,2
+Scene 2 — Mirror & Δ■Lift Clinic (Bug■to■Fix), Turn a one■way mismatch into a local repair with receipts.,2,2
+Scene 2 — Mirror & Δ■Lift Clinic (Bug■to■Fix),■ Was the Δ local? Did it generalize to a second view?,2,2
+■ Local identity name,■ Δ■lift candidates listed,2,2
+Scene 2 — Mirror & Δ■Lift Clinic (Bug■to■Fix),Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix),2,2
+Scene 3 — Octet Coverage for ML (A/B→Octet),Scene 3: Octet Coverage for ML (A/B→Octet),2,2
+Scene 1 — n=1→n=5: The Hinge that Forces the Octad,"✓ Checked grid, class map (8), receipt.",2,2
+Scene 3 — Octet Coverage for ML (A/B→Octet),■■ List 8 materially independent views (slices or metrics).,2,2
+Scene 3 — Octet Coverage for ML (A/B→Octet), Generalize A/B to 8 views; prevent winner■only bias.,2,2
+Scene 3 — Octet Coverage for ML (A/B→Octet), Record receipts across slices (metrics × slabs).,2,2
+Scene 1 — n=1→n=5: The Hinge that Forces the Octad,"— Octad class tag, pose, tolerance; 4■bit commit when 4 views pass.",2,2
+Ledger hook (what gets recorded),Scene 1 — n=1→n=5: The Hinge that Forces the Octad,2,2
+"— Blue/red pair id, hashes, receipts.",■ Was any crucial info missing on blue?,2,2
+Scene 0 — Orientation: The CQE Spine Live,■ Would a different mirror have failed?,2,2
+Safety,"— Blue/red pair id, hashes, receipts.",2,2
+N/A,"Two clipboards (blue/red), hash stickers.",2,2
+Scene 0 — Orientation: The CQE Spine Live,■ Which view dominated debt?,2,2
+Scene 5 — Sidecar Sprint: 4 Rails in 20 Minutes, Converge via receipts; annihilate non■working cheaply.,2,2
+Local repairs + rationale,"Mirror Evidence:metrics, plots, checksumsViews Exercised:1 2 3 4 5 6 7 8",2,2
+"— Falsifier ids (F1–F4), outcomes, receipts.",■ Which constraint felt most ‘non■negotiable’?,2,2
+Paper kit, Show that form stays fixed while semantics swap.,2,2
+Scene 7 — 8■Person Table with Neighbor Lanes," Role mesh, not silos: 8 seats, 2■bit lanes, neighbor hand■offs.",2,2
+"Round table, role badges, coordination board.",Scene 7 — 8■Person Table with Neighbor Lanes,2,2
+■ constructionA (code/modulus/glue),■ thresholds (normal/strict),2,2
+=____ =____ =____ =____,"Use left half as Blue, right half as Red",2,2
+Ledger hook (what gets recorded),Scene 7 — 8■Person Table with Neighbor Lanes,2,2
+Worksheet – Strict Ratchet,■ Expected debt drop,2,2
+Scene 2 — Mirror & Δ■Lift Clinic (Bug■to■Fix),■■ Run both; mark delta windows; choose one Δ■lift from the cookbook; re■run mirror; record debt drop.,2,2
+"Mirror Evidence:metrics, plots, checksumsViews Exercised:1 2 3 4 5 6 7 8",SPage Hash / Status:hash WORKING / NON-WORKING / PROVISIONAL,2,2
+Scene 7 — 8■Person Table with Neighbor Lanes,"✓ Coord board photo, ledger rows.",2,2
+"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4RedSuits Sidecars:",Combined Rail Workspace,2,2
+■ Forward pipeline defined,■ Pass/fail marks; debt notes,2,2
+"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts","✓ Counterexample log, ledger.",2,2
+Worksheet – Mirror Test,■ Palindromic REST documented,2,2
+Scene 8 — Card■Deck CQE + Lab Stations,Scene 8: Card■Deck CQE + Lab Stations,2,2
+N/A,Three stations; octet master; metrics per rail.,2,2
+■ Metric name & unit,■ Safety notes (side effects),2,2
+Blue Rail (Forward) Seed Views Full Idea (9),"T wo decks (Blue=Forward, Red=Inverse); color=parity; suits = sidecars",2,2
+"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4Blue",Compact combined rail with quick fields,2,2
+Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.,Scene 8 — Card■Deck CQE + Lab Stations,2,2
+■ DNA■10,■ form_id,2,2
+Three stations; octet master; metrics per rail., Run three independent rails on one shell; compare receipts; compress meanings.,2,2
+■ automorphism id,■ receipts (4■bit + hash),2,2
+"Two clipboards (blue/red), hash stickers.", Operate dual■rail safety: blue = open; red = internal only.,2,2
+Finance),Props & setup,2,2
+"Scene 15: Capstone: Three■Track Non■Toy (Optics, DNA,", Show that form stays fixed while semantics swap.,2,2
+-lifts:,SHash:,2,2
+One row per form/run (reproducible receipts)Form ID: Problem / Brief:,Suit Mapping:=____ =____ =____ =____,2,2
+Ledger hook (what gets recorded),Scene 5 — Sidecar Sprint: 4 Rails in 20 Minutes,2,2
+Date: Deck Mapping:Blue=____ Red=____,One row per form/run (reproducible receipts)Form ID: Problem / Brief:,2,2
+Scene 5 — Sidecar Sprint: 4 Rails in 20 Minutes,"— 4 receipts, shared form_id, per■rail thresholds.",2,2
+Props & setup,"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts",2,2
+Worksheet – Δ■lift Cookbook,■ Safety notes (side effects),2,2
+Deck Mapping:Blue=________ Red=________,P M,2,2
+4-bit Commit,Strict Bounds:list tightened thresholds (old new),2,2
+"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4Blue",Deck Mapping:Blue=________ Red=________,2,2
+Scene 6 — Two■Scientist Theorem■Card Resolution,Scene 6: Two■Scientist Theorem■Card Resolution,2,2
+Scene 6 — Two■Scientist Theorem■Card Resolution, Resolve disputes with claim/evidence/Δ■lift/receipt cards.,2,2
+Scene 6 — Two■Scientist Theorem■Card Resolution, Preserve minority view as Non■Working breadcrumb with hash.,2,2
+4-bit Commit,=____ =____ =____ =____,2,2
+Notes:,■ octet map,2,2
+-lifts:,"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4RedSuits Sidecars:",2,2
+Ledger hook (what gets recorded),Scene 6 — Two■Scientist Theorem■Card Resolution,2,2
+Jokers:subharmonic / Cartan bridges,P M,2,2
+ Operate dual■rail safety: blue = open; red = internal only.,■ Which constraint felt most ‘non■negotiable’?,2,2
+Worksheet – Octet Overlay,✓ 3 receipts; promoted pack doc; anchor ledger row.,2,2
+CQE Card Kit v1.2,UTC 2025-09-20 21:06,2,2
+13_Class_Checklist, Clipboard for station runs,2,2
+"Stations: Measure, Tag, Resume",rejoin table play.,2,2
+UTC 2025-09-20 21:06,Δ,2,2
+Notes:,Page 18,2,2
+Blank Cards (3×3),Receipts & 4-bit,2,2
+05_Stations,Post,2,2
+Page 18,Receipts & 4-bit Commit,2,2
+Metric,Receipt,2,2
+Metric,Pause cards → test → sticky sidecar → continue,2,2
+Merkle-ish page hash / signatures,Page 19,2,2
+Page 5,"Stations: Measure, Tag, Resume",2,2
+UTC 2025-09-20 21:06, Dry-erase sleeves + fine-tip markers,2,2
+Generated: 2025-09-20T21:12:56.562731Z,How to use this pack,2,2
+Generated: 2025-09-20T21:12:56.562731Z,mirror) governs correctness; your labels stay provisional until committed.,2,2
+04_Parity_Loom,Stations,2,2
+How to use this pack,Scene 0: Orientation: The CQE Spine Live,2,2
+mirror) governs correctness; your labels stay provisional until committed., Understand stand■ins (tokens) vs. form (geometry) vs. meaning (labels).,2,2
+Scene 0: Orientation: The CQE Spine Live, Learn how a 2■minute paper run creates a reproducible ledger row.,2,2
+Room, See the full loop: Octet → Mirror → Δ■lift → Strict → 4■bit receipts.,2,2
+Page 5,steps.,2,2
+Notes:,Page 17,2,2
+Page 6,Receipt,2,2
+Notes:,Page 16,2,2
+05_Stations,8-Person Table Playbook,2,2
+Budget-friendly supply list," Balsa sticks, foam board / peg board, paper clips",2,2
+ 2+ decks of cards (different back colors) per table, Transparent overlays (acetate),2,2
+ Dry-erase sleeves + fine-tip markers," Sticky notes (token sidecars), colored pens",2,2
+ Printed kit (this PDF)," Ruler, tape, scissors, hole punch",2,2
+ A4/Letter cardstock for cards," Balsa sticks, foam board / peg board, paper clips",2,2
+ Clipboard for station runs, Transparent overlays (acetate),2,2
+ Ledger binder (Working / Non-Working albums)," Sticky notes (token sidecars), colored pens",2,2
+Room layout & station assignments, Printed kit (this PDF),2,2
+1. Anchor,Views H1–H2; runs PSF/FFT mirror; proposes,2,2
+ Why E8/Leech/Monster emerge from constraints; not taste.,■ Which viewer best predicted success?,2,2
+2. Optics,Roles  Stations  Neighbor links,2,2
+UTC 2025-09-20 21:06, Ledger binder (Working / Non-Working albums),2,2
+8-Person Table Playbook,commits.,2,2
+Page 14,Room layout & station assignments,2,2
+"Keeps form_id, ledger, and mirror law; calls",UTC 2025-09-20 21:06,2,2
+13_Class_Checklist,Blank Cards (3×3),2,2
+Notes:,Page 15,2,2
+"One table, 8 colored pens, tape wall for overlays.", Understand stand■ins (tokens) vs. form (geometry) vs. meaning (labels).,2,2
+Paper kit, Learn how a 2■minute paper run creates a reproducible ledger row.,2,2
+"Octet sheet, DNA■10, 4■bit sticker, ledger page.",Props & setup,2,2
+Merkle-ish page hash / signatures,Page 4,2,2
+Props & setup,Scene 1: n=1→n=5: The Hinge that Forces the Octad,2,2
+Paper kit, Why the octad is discovered (not assumed) and how it governs later structure.,2,2
+Props & setup,"n=1→4 worksheets, insertion checklist, class bins (8).",2,2
+"Grid board (4×4), parity markers.",Safety,2,2
+07_Theorem_Cards,Master Ledger,2,2
+Instruments,"■■ Build n=1 rest, show first parity choice at n=2.",2,2
+Safety,"■■ Complete n=3, point to latent 4■cell cross.",2,2
+N/A,■■ Canonicalize n=4 palindrome (up to pose).,2,2
+"— Octad class tag, pose, tolerance; 4■bit commit when 4 views pass.","■■ Build n=1 rest, show first parity choice at n=2.",2,2
+Hand■ins (artifacts to keep),"■■ Complete n=3, point to latent 4■cell cross.",2,2
+■■ Canonicalize n=4 palindrome (up to pose).,"✓ Checked grid, class map (8), receipt.",2,2
+"— Octad class tag, pose, tolerance; 4■bit commit when 4 views pass.",■ What would ‘<8 classes’ break downstream?,2,2
+Page 3,Receipts & 4-bit Commit,2,2
+Hand■ins (artifacts to keep),■ How does rotation act on class labels?,2,2
+02_Octet_DNA10,Receipts & 4-bit,2,2
+Debrief (2–3 prompts),Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix),2,2
+What it teaches (learning targets),■ What would ‘<8 classes’ break downstream?,2,2
+inequivalent insertions.,■ Would a different mirror have failed?,2,2
+What it teaches (learning targets),■ Was the Δ■lift local and monotone?,2,2
+04_Parity_Loom,permutation cards to rethread.,2,2
+03_Receipts_4bit,Parity Loom,2,2
+None (paper■only).,"One table, 8 colored pens, tape wall for overlays.",2,2
+N/A,"Octet sheet, DNA■10, 4■bit sticker, ledger page.",2,2
+None (paper■only).,■■ Pick a tiny question (≤1 min).,2,2
+Foam/peg board + balsa rails + clips,steps.,2,2
+Safety,"■■ Mark 8 views (colored boxes), set a palindromic REST.",2,2
+N/A,■■ Run a forward↔inverse mirror; circle mismatches (red).,2,2
+Blocking (5–15 minutes),■■ Write a Δ■lift (local identity) to fix one mismatch; re■mirror.,2,2
+■■ Pick a tiny question (≤1 min).,"■■ Tighten one metric (strict ratchet), shade a 4■bit receipt; log ledger.",2,2
+Ledger hook (what gets recorded),"■■ Mark 8 views (colored boxes), set a palindromic REST.",2,2
+"— form_id, octet map, mirror tolerance, Δ■lift note, strict threshold, 4■bit.",■■ Run a forward↔inverse mirror; circle mismatches (red).,2,2
+Hand■ins (artifacts to keep),■■ Write a Δ■lift (local identity) to fix one mismatch; re■mirror.,2,2
+"■■ Tighten one metric (strict ratchet), shade a 4■bit receipt; log ledger.","✓ Filled octet, mirror ticks, Δ■lift card, 4■bit stickered ledger row.",2,2
+"— form_id, octet map, mirror tolerance, Δ■lift note, strict threshold, 4■bit.",■ Which view dominated debt?,2,2
+Hand■ins (artifacts to keep),■ Was the Δ■lift local and monotone?,2,2
+■ Would a different mirror have failed?,"✓ Filled octet, mirror ticks, Δ■lift card, 4■bit stickered ledger row.",2,2
+Page 4,Parity Loom (E8/Leech scaffold),2,2
+Scene 1: n=1→n=5: The Hinge that Forces the Octad,■ Which view dominated debt?,2,2
+Class Kit Checklist," Ruler, tape, scissors, hole punch",2,2
+"Keeps form_id, ledger, and mirror law; calls",Δ-lifts.,2,2
+ Turn a one■way mismatch into a local repair with receipts.,■ How does rotation act on class labels?,2,2
+Neighbor Links (who talks to whom and when),Page 7,2,2
+Context: ________,UTC 2025-09-20 21:06,2,2
+Theorem Card,Theorem Cards,2,2
+Hash: __________,Page 11,2,2
+Page 7,Theorem Cards & Argument Protocol,2,2
+10_Sticky_Sidecars,Blank Cards (3×3),2,2
+11_Blank_Cards,Suit: ____ Rank: ____,2,2
+06_Table_Playbook,Theorem Cards,2,2
+Notes:,Page 12,2,2
+Closed-loop error; safety ratchets.,UTC 2025-09-20 21:06,2,2
+3. Thermal,commits.,2,2
+11_Blank_Cards,Eight Baseline Packs,2,2
+UTC 2025-09-20 21:06,■ PSF match (SC≥0.98),2,2
+Eight Baseline Packs,■ WFE ≤ 25→22 nm strict,2,2
+Optics  Thermal  Polar/Spin/EM  Math/Logic  Bio  Neuro  Cosmos  Systems,■ FFT↔iFFT closure,2,2
+Optics,Thermal,2,2
+06_Table_Playbook,8. Systems/Robotics,2,2
+■ PSF match (SC≥0.98),■ ΔT/tick ≤ 1.0→0.8 K,2,2
+■ Vent cadence stable,■ WFE ≤ 25→22 nm strict,2,2
+10_Sticky_Sidecars,Value: __________ Units: ____,2,2
+Assumptions:,UTC 2025-09-20 21:06,2,2
+Attach measured values to cards,Hash: __________,2,2
+Context: ________,Sticky Sidecars (Tokens),2,2
+"Automorphism: group=________, element=________________",Master Ledger,2,2
+Octet Map H1..H8: _______________________________________________,Reproducible build receipts,2,2
+Page 8,Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________,2,2
+08_Master_Ledger,DNA-10: ________________________________________________________,2,2
+"Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}",UTC 2025-09-20 21:06,2,2
+Counterexample? ■ Yes ■ No,UTC 2025-09-20 21:06,2,2
+Page 9,Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________,2,2
+07_Theorem_Cards,Local Test:,2,2
+08_Master_Ledger,Hypercube Scaffold,2,2
+Hypercube → Toroidal Loom,Page 9,2,2
+Hypercube Scaffold,into a toroidal chamber. Mark parity lanes; add Leech masks as needed.,2,2
+09_Hypercube_Scaffold,Hypercube → Toroidal Loom,2,2
+Assumptions  Claim  Local Test  Counterexample,Local Test:,2,2
+Sticky Sidecars,into a toroidal chamber. Mark parity lanes; add Leech masks as needed.,2,2
+Page 10,Sticky Sidecars (Tokens),2,2
+Claim:,Theorem Cards & Argument Protocol,2,2
+Sticky Sidecars,Token: __________,2,2
+■ FFT↔iFFT closure,■ Pulse symmetry,2,2
+Polar/Spin/EM,Thermal,2,2
+■ LHCP/RHCP swap,■ ΔT/tick ≤ 1.0→0.8 K,2,2
+■ Noise floor stable,■ Redshift bins stable,2,2
+"Bounds, interval proofs, receipts.",Shear/field rails; anomaly notes.,2,2
+■ Closed-loop error ↓,■ Shear fields coherent,2,2
+■ Safety ratchets ✓,■ Seed B-fields consistent,2,2
+■ Latency within bound,■ Redshift bins stable,2,2
+5. Math/Logic,7. Cosmos/Fields,2,2
+Custom pack notes,Systems,2,2
+12_Baseline_Packs,■ Safety ratchets ✓,2,2
+"Overlay RMS, gate irreversibility.",Views H5–H6; L↔R parity checks; spin filters.,2,2
+4. Polar/Spin,6. Bio/Neuro proxy,2,2
+UTC 2025-09-20 21:06,■ Latency within bound,2,2
+"Bounds, interval proofs, receipts.",Views H3–H4; manages ΔT and cadence.,2,2
+Custom pack notes,Page 13,2,2
+3. Thermal,5. Math/Logic,2,2
+12_Baseline_Packs,Class Kit Checklist,2,2
+Views H5–H6; L↔R parity checks; spin filters.,Δ-lifts.,2,2
+4. Polar/Spin,Views H1–H2; runs PSF/FFT mirror; proposes,2,2
+2. Optics,Views H3–H4; manages ΔT and cadence.,2,2
+Cosmos,Systems,2,2
+■ Mode switch detected,■ Seed B-fields consistent,2,2
+■ Spin filter eff ≥ 80%,■ Vent cadence stable,2,2
+■ Ripple content decoded,■ Shear fields coherent,2,2
+■ AR ≤ 1.5 dB strict,■ Pulse symmetry,2,2
+Math/Logic,Polar/Spin/EM,2,2
+■ Interval proofs,■ LHCP/RHCP swap,2,2
+7. Cosmos/Fields,Neighbor Links (who talks to whom and when),2,2
+■ OPE/FCE debt ↓,■ Spin filter eff ≥ 80%,2,2
+■ AR ≤ 1.5 dB strict,■ Type checks pass,2,2
+Bio proxy,Math/Logic,2,2
+Closed-loop error; safety ratchets.,"Overlay RMS, gate irreversibility.",2,2
+■ Interval proofs,■ Overlay RMS ≤ τ,2,2
+■ Irreversibility ✓,■ OPE/FCE debt ↓,2,2
+■ Batch day variance ok,■ Type checks pass,2,2
+6. Bio/Neuro proxy,8. Systems/Robotics,2,2
+Bio proxy,Neuro proxy,2,2
+■ Overlay RMS ≤ τ,■ Ripple content decoded,2,2
+■ Irreversibility ✓,■ Mode switch detected,2,2
+■ Batch day variance ok,■ Noise floor stable,2,2
+Cosmos,Neuro proxy,2,2
+10. Seed,Page 3,2,2
+Blocking (5–15 minutes),"n=1→4 worksheets, insertion checklist, class bins (8).",2,2
+N/A,"Round table, role badges, coordination board.",2,2
+01_QuickStart,6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.,2,2
+" Paper■only run with decks, sticky tokens, and quick metrics.",■ Which neighbor interface was hottest?,2,2
+1) Deal primitives: Aces = primitives. Write domain glyphs on them.,6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.,2,2
+Props & setup,Scene 8: Card■Deck CQE + Lab Stations,2,2
+"Decks, sleeves, sticky notes, cheap sensors (thermometer, lux meter, calipers)."," Paper■only run with decks, sticky tokens, and quick metrics.",2,2
+Paper kit, Pause→measure→resume loop without losing context.,2,2
+"Decks, sleeves, sticky notes, cheap sensors (thermometer, lux meter, calipers).",N/A,2,2
+Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.,Instruments,2,2
+N/A,"— Deck id, card set, measurement token, 4■bit commit.",2,2
+"— Deck id, card set, measurement token, 4■bit commit.",■ What metric flipped a decision?,2,2
+10-minute run with two decks + overlays,5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).,2,2
+Scene 9: Hypercube→Toroidal Chamber (4■bit Hubs),"✓ Card photo, metric sheet, ledger.",2,2
+4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.,Quick Start,2,2
+3) Octet overlay: Fill H1–H8 views; record REST constraints.,UTC 2025-09-20 21:06,2,2
+ Wrap a tesseract into the torus; locate 4■bit hubs; see 1→64→1 codec sketch.,■ What metric flipped a decision?,2,2
+Props & setup,Scene 9: Hypercube→Toroidal Chamber (4■bit Hubs),2,2
+"Printed nets, tape, colored thread for hubs.", Wrap a tesseract into the torus; locate 4■bit hubs; see 1→64→1 codec sketch.,2,2
+Paper kit," Understand why geometry, not taste, governs the shell.",2,2
+4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.,"Your first problem setup (tokens, views, mirror, strict)",2,2
+Scene 8: Card■Deck CQE + Lab Stations,"✓ Coord board photo, ledger rows.",2,2
+Props & setup,Scene 6: Two■Scientist Theorem■Card Resolution,2,2
+7) Iterate: Promote validated cards to your deck top; archive non-working slips.,UTC 2025-09-20 21:06,2,2
+Paper kit, Preserve minority view as Non■Working breadcrumb with hash.,2,2
+N/A,"Theorem cards, claim wall, mirror worksheet.",2,2
+Instruments,failing with hash.,2,2
+N/A,"— Claim ids, mirror pass/fail, Δ■lift ids, receipts.",2,2
+"— Claim ids, mirror pass/fail, Δ■lift ids, receipts.",■ Did any claim survive only after a Δ■lift?,2,2
+Octet Overlay + DNA-10,Page 2,2,2
+Scene 7: 8■Person Table with Neighbor Lanes,"✓ Card stack, mirror sheet, ledger snippet.",2,2
+01_QuickStart,Octet & DNA-10,2,2
+" Role mesh, not silos: 8 seats, 2■bit lanes, neighbor hand■offs.",■ Did any claim survive only after a Δ■lift?,2,2
+Page 2,"Your first problem setup (tokens, views, mirror, strict)",2,2
+Props & setup,Scene 7: 8■Person Table with Neighbor Lanes,2,2
+"Round table, role badges, coordination board."," Role mesh, not silos: 8 seats, 2■bit lanes, neighbor hand■offs.",2,2
+Paper kit, How a 10■minute cadence creates stable throughput.,2,2
+9. Cost,UTC 2025-09-20 21:06,2,2
+Safety,"— Seat map, cycle count, debt burn, commits.",2,2
+Blocking (5–15 minutes),"✓ Coord board photo, ledger rows.",2,2
+"— Seat map, cycle count, debt burn, commits.",■ Which neighbor interface was hottest?,2,2
+N/A,"Printed nets, tape, colored thread for hubs.",2,2
+Instruments,faces.,2,2
+N/A,"— Pose, hub ids, mid■slice tags, 4■bit example.",2,2
+"— Pose, hub ids, mid■slice tags, 4■bit example.",■ What would break if hubs were 3 or 9?,2,2
+Props & setup,Scene 11: Primordial→EM→Thermo: Meaning■Token Safety,2,2
+Red/blue pens; redaction tape; safety policy sheet., Bind tokens late; redact dangerous meaning; still keep form receipts.,2,2
+Paper kit, Practice stand■in overlays for sensitive domains.,2,2
+N/A,Red/blue pens; redaction tape; safety policy sheet.,2,2
+Instruments,receipts.,2,2
+N/A,"— Stand■in map, redaction count, hash■only attachments.",2,2
+"— Stand■in map, redaction count, hash■only attachments.",■ Did redaction block reproducibility? How fixed?,2,2
+Scene 12: Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,"✓ Redacted ledger row, safe receipts.",2,2
+ Add viewers without changing work: local 8×8; meso 4×4×4×4; parity 2×2×2×2.,■ Did redaction block reproducibility? How fixed?,2,2
+Props & setup,Scene 12: Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,2,2
+"Viewer templates, highlighters.", Add viewers without changing work: local 8×8; meso 4×4×4×4; parity 2×2×2×2.,2,2
+Paper kit, Find hot■zones to focus Δ■lifts first.,2,2
+N/A,"Viewer templates, highlighters.",2,2
+Instruments,accordingly; compare debt drop.,2,2
+N/A,"— Viewer indices, hotspot ids, Δ■lift chosen, receipts.",2,2
+"— Viewer indices, hotspot ids, Δ■lift chosen, receipts.",■ Which viewer best predicted success?,2,2
+Scene 13: Not Lattice Flattery: Governance by Geometry,"✓ Viewer overlays, ledger row.",2,2
+ Bind tokens late; redact dangerous meaning; still keep form receipts.,■ Which Δ■lift removed the beat?,2,2
+CQE Card Kit v1.2,Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers,2,2
+CQE Card Kit v1.2,decks of cards.,2,2
+"Tone generator app, small speaker, paper spectrogram.", Map harmonic stack to octet; subharmonics to Cartan ‘outside’ nudges.,2,2
+00_Cover,Quick Start,2,2
+Scene 10: Sound & Subharmonics Viewer (Cartan,"✓ Assembled model photos, notes, ledger.",2,2
+Debrief (2–3 prompts),Hot■Zones),2,2
+What it teaches (learning targets),■ What would break if hubs were 3 or 9?,2,2
+Page 1,overlays.,2,2
+Scene 10: Sound & Subharmonics Viewer (Cartan, Use beats as a quick hot■zone detector for Δ■lifts.,2,2
+Hot■Zones),Props & setup,2,2
+Paper kit, Use beats as a quick hot■zone detector for Δ■lifts.,2,2
+Scene 11: Primordial→EM→Thermo: Meaning■Token Safety,"✓ Spectrogram sheet, receipt.",2,2
+N/A,"Tone generator app, small speaker, paper spectrogram.",2,2
+Instruments,log a 4■bit after retune.,2,2
+00_Cover,thresholds; and ledger reproducible 4-bit commits.,2,2
+N/A,"— Tone pair, beat freq, Δ■lift, receipt.",2,2
+"— Tone pair, beat freq, Δ■lift, receipt.",■ Which Δ■lift removed the beat?,2,2
+License: CC-BY 4.0  Generated 2025-09-20,decks of cards.,2,2
+CQE Card Kit (Paper-Only),thresholds; and ledger reproducible 4-bit commits.,2,2
+"Theorem cards, claim wall, mirror worksheet.", Resolve disputes with claim/evidence/Δ■lift/receipt cards.,2,2
+"Construction A: p=__, code=______________, glue=________________",UTC 2025-09-20 21:06,2,2
+Hand■ins (artifacts to keep),■■ List 8 materially independent views (slices or metrics).,2,2
+2. Polarity,6. Conditioning,2,2
+1. Timing,5. Domain,2,2
+N/A,"— Mirror tolerance, Δ■lift id, before/after OPE/FCE, strict update.",2,2
+Scene 4: Construction■A Loom: E8 and Leech on Paper,"✓ Octet pass grid, receipts.",2,2
+4. Pose,REST (palindromic mirror): notes / constraints,2,2
+3. Scale,H8,2,2
+2. Polarity,H7,2,2
+ Parity checks → membership; half■shift glue → evenness/unimodularity.,■ Which 4 were necessary and sufficient?,2,2
+1. Timing,H6,2,2
+H5,REST (palindromic mirror): notes / constraints,2,2
+Props & setup,Scene 4: Construction■A Loom: E8 and Leech on Paper,2,2
+"Foam board, pegs, 8 & 24 strings, clip set.", Parity checks → membership; half■shift glue → evenness/unimodularity.,2,2
+Instruments,■■ Pick the forward pipeline; write its inverse.,2,2
+ Generalize A/B to 8 views; prevent winner■only bias.,■ Was the Δ local? Did it generalize to a second view?,2,2
+Paper kit, Visualize 8■twine E8 and 24■twine Leech masks with octads.,2,2
+"Foam board, pegs, 8 & 24 strings, clip set.",N/A,2,2
+"— Views passed, metric triplet, slab size, commit.",■ Which 4 were necessary and sufficient?,2,2
+■■ Require ≥4 pass post■Δ■lift before commit; log 4■bit.,"✓ Octet pass grid, receipts.",2,2
+Safety,■■ Build E8 halves; overlay mirror; demonstrate root reflections.,2,2
+ Resolve disputes with claim/evidence/Δ■lift/receipt cards.,■ Which rail constrained the others? Why?,2,2
+10. Seed,6. Conditioning,2,2
+02_Octet_DNA10,8. Precision,2,2
+Scene 3: Octet Coverage for ML (A/B→Octet),"✓ Before/after overlay with red fix marks, 4■bit row.",2,2
+4. Pose,8. Precision,2,2
+Props & setup,Scene 3: Octet Coverage for ML (A/B→Octet),2,2
+CQE Card Kit (Paper-Only),CQE Card Kit v1.2,2,2
+Cards for 8 data slices; metric stickers., Generalize A/B to 8 views; prevent winner■only bias.,2,2
+3. Scale,7. Units,2,2
+"— Mirror tolerance, Δ■lift id, before/after OPE/FCE, strict update.",■ Was the Δ local? Did it generalize to a second view?,2,2
+Paper kit, Record receipts across slices (metrics × slabs).,2,2
+Cards for 8 data slices; metric stickers.,N/A,2,2
+Instruments,■■ List 8 materially independent views (slices or metrics).,2,2
+Safety,■■ Require ≥4 pass post■Δ■lift before commit; log 4■bit.,2,2
+■■ Pick the forward pipeline; write its inverse.,"✓ Before/after overlay with red fix marks, 4■bit row.",2,2
+Blocking (5–15 minutes),"— Views passed, metric triplet, slab size, commit.",2,2
+Instruments,■■ Lay code parity rows; mark syndrome pad.,2,2
+H4,H8,2,2
+N/A,"Whiteboard, printed spectra pair or time series twin.",2,2
+Props & setup,Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix),2,2
+H1,Octet & DNA-10,2,2
+H2,UTC 2025-09-20 21:06,2,2
+Scene 6: Two■Scientist Theorem■Card Resolution,✓ 4 station sheets; master ledger row.,2,2
+H3,Octet Overlay + DNA-10,2,2
+"— 4 receipts, shared form_id, per■rail thresholds.",■ Which rail constrained the others? Why?,2,2
+Blocking (5–15 minutes),✓ 4 station sheets; master ledger row.,2,2
+Safety,"— 4 receipts, shared form_id, per■rail thresholds.",2,2
+4 stations; shared octet; sticky token labels.,N/A,2,2
+Paper kit, Converge via receipts; annihilate non■working cheaply.,2,2
+N/A,■■ Mask octads for a Leech slice; show legality via parity.,2,2
+4 stations; shared octet; sticky token labels., Parallelize OPTICS/THERMAL/POLAR/MATH on same form; swap token packs only.,2,2
+Props & setup,Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes,2,2
+Eight views + palindromic rest; ten-state save,H4,2,2
+5. Domain,9. Cost,2,2
+"— Code id, modulus, glue vector, octad layout, legality receipts.",■■ Lay code parity rows; mark syndrome pad.,2,2
+"Whiteboard, printed spectra pair or time series twin.", Turn a one■way mismatch into a local repair with receipts.,2,2
+Hand■ins (artifacts to keep),■■ Build E8 halves; overlay mirror; demonstrate root reflections.,2,2
+H3,H7,2,2
+Paper kit, Practice mirror pairs (FFT↔iFFT; encode↔decode; simulate↔measure).,2,2
+"— Code id, modulus, glue vector, octad layout, legality receipts.",■ What fails if glue parity flips?,2,2
+Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes,"✓ Photo of loom, mask sheet, ledger row.",2,2
+■■ Mask octads for a Leech slice; show legality via parity.,"✓ Photo of loom, mask sheet, ledger row.",2,2
+H2,H6,2,2
+H1,H5,2,2
+ Parallelize OPTICS/THERMAL/POLAR/MATH on same form; swap token packs only.,■ What fails if glue parity flips?,2,2
+02_Octet_DNA10,7. Units,1,1
+"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4RedSuits Sidecars:",Compact combined rail with quick fields,1,1
+Combined Rail Workspace,Suits = Sidecars (assign per run):,1,1
+Local Test:,UTC 2025-09-20 21:06,1,1
+8. Precision,UTC 2025-09-20 21:06,1,1
+"Scene 15 — Capstone: Three■Track Non■Toy (Optics, DNA,",Worksheet – Strict Ratchet,1,1
+Counterexample? ■ Yes ■ No,Page 8,1,1
+"Scene 15 — Capstone: Three■Track Non■Toy (Optics, DNA,",■ octet map,1,1
+"Scene 15 — Capstone: Three■Track Non■Toy (Optics, DNA,",Worksheet – 4■bit Receipt,1,1
+"Scene 15 — Capstone: Three■Track Non■Toy (Optics, DNA,",■ thresholds (normal/strict),1,1
+"Scene 15 — Capstone: Three■Track Non■Toy (Optics, DNA,",■ Views≥4 passed?,1,1
+"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4Blue",CQE Card Mini-Mat Travel,1,1
+Master Ledger,Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________,1,1
+"Scene 15 — Capstone: Three■Track Non■Toy (Optics, DNA,",■ Mirror within tol?,1,1
+10. Seed,Receipts & 4-bit,1,1
+07_Theorem_Cards,Claim:,1,1
+Color = Parity (Black/Red),"Use left half as Blue, right half as Red",1,1
+"Scene 15 — Capstone: Three■Track Non■Toy (Optics, DNA,",Worksheet – Ledger Row,1,1
+Eight views + palindromic rest; ten-state save,Page 2,1,1
+Assumptions  Claim  Local Test  Counterexample,Page 7,1,1
+=____ =____ =____ =____,Combined Rail Workspace,1,1
+Page 6,Roles  Stations  Neighbor links,1,1
+8-Person Table Playbook,Receipt,1,1
+Octet & DNA-10,"Your first problem setup (tokens, views, mirror, strict)",1,1
+Page 6,Δ,1,1
+7) Iterate: Promote validated cards to your deck top; archive non-working slips.,Page 2,1,1
+Post,UTC 2025-09-20 21:06,1,1
+05_Stations,Pre,1,1
+6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.,UTC 2025-09-20 21:06,1,1
+01_QuickStart,5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).,1,1
+Deck Mapping:Blue=________ Red=________,SHash:,1,1
+Page 5,Pause cards → test → sticky sidecar → continue,1,1
+Peg grid (8×8). Mark parity lanes and half-glue ticks.,Stations,1,1
+=____ =____ =____ =____,P M,1,1
+10-minute run with two decks + overlays,Page 1,1,1
+License: CC-BY 4.0  Generated 2025-09-20,Quick Start,1,1
+"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4RedSuits Sidecars:",4-bit Commit,1,1
+06_Table_Playbook,Shear/field rails; anomaly notes.,1,1
+UTC 2025-09-20 21:06,thresholds; and ledger reproducible 4-bit commits.,1,1
+Foam/peg board + balsa rails + clips,Page 4,1,1
+8. Systems/Robotics,UTC 2025-09-20 21:06,1,1
+-lifts:,"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,4Blue",1,1
+Merkle-ish page hash / signatures,Parity Loom,1,1
+Closed-loop error; safety ratchets.,Page 7,1,1
+Deck Mapping:Blue=________ Red=________,"Use left half as Blue, right half as Red",1,1
+Neighbor Links (who talks to whom and when),Theorem Cards,1,1
+OPE FCE View Mirror,Page 4,1,1
+"Scene 15 — Capstone: Three■Track Non■Toy (Optics, DNA,",■ H1–H8 views named and colored,1,1
+OPE/FCE  View  Mirror  Hash,Page 3,1,1
+"Scene 15 — Capstone: Three■Track Non■Toy (Optics, DNA,",Worksheet – Mirror Test,1,1
+9. Cost,Page 3,1,1
+ How parity+glue legality forces the shell.,■ Which viewer best predicted success?,1,1
+Page 8,Reproducible build receipts,1,1
+ Visualize 8■twine E8 and 24■twine Leech masks with octads.,■ Which 4 were necessary and sufficient?,1,1
+■ Pass/fail marks; debt notes,■ Which Δ■lift generalized across rails?,1,1
+Hand■ins (artifacts to keep),Scene 4: Construction■A Loom: E8 and Leech on Paper,1,1
+Debrief (2–3 prompts),■ Palindromic REST documented,1,1
+What it teaches (learning targets),"✓ Octet pass grid, receipts.",1,1
+Debrief (2–3 prompts), Parity checks → membership; half■shift glue → evenness/unimodularity.,1,1
+■ H1–H8 views named and colored,✓ 3 receipts; promoted pack doc; anchor ledger row.,1,1
+Hand■ins (artifacts to keep),Worksheet – Octet Overlay,1,1
+ Preserve minority view as Non■Working breadcrumb with hash.,■ Which rail constrained the others? Why?,1,1
+Hand■ins (artifacts to keep),Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes,1,1
+What it teaches (learning targets),"✓ Photo of loom, mask sheet, ledger row.",1,1
+Debrief (2–3 prompts), Parallelize OPTICS/THERMAL/POLAR/MATH on same form; swap token packs only.,1,1
+ Converge via receipts; annihilate non■working cheaply.,■ What fails if glue parity flips?,1,1
+Hand■ins (artifacts to keep),Scene 6: Two■Scientist Theorem■Card Resolution,1,1
+What it teaches (learning targets),✓ 4 station sheets; master ledger row.,1,1
+Worksheet – Mirror Test,■ H1–H8 views named and colored,1,1
+ Record receipts across slices (metrics × slabs).,■ Was the Δ local? Did it generalize to a second view?,1,1
+■ Forward pipeline defined,■ Palindromic REST documented,1,1
+Debrief (2–3 prompts), Generalize A/B to 8 views; prevent winner■only bias.,1,1
+What it teaches (learning targets),"✓ Before/after overlay with red fix marks, 4■bit row.",1,1
+■ Inverse pipeline defined,■ Pass/fail marks; debt notes,1,1
+Hand■ins (artifacts to keep),Scene 3: Octet Coverage for ML (A/B→Octet),1,1
+ Practice mirror pairs (FFT↔iFFT; encode↔decode; simulate↔measure).,■ How does rotation act on class labels?,1,1
+Worksheet – Δ■lift Cookbook,■ Inverse pipeline defined,1,1
+ Turn a one■way mismatch into a local repair with receipts.,■ What would ‘<8 classes’ break downstream?,1,1
+■ Local identity name,■ Mismatch windows circled,1,1
+Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix),"✓ Checked grid, class map (8), receipt.",1,1
+■ Preconditions,■ Δ■lift candidates listed,1,1
+Worksheet – Strict Ratchet,■ Preconditions,1,1
+ Why the octad is discovered (not assumed) and how it governs later structure.,■ Would a different mirror have failed?,1,1
+inequivalent insertions.,■ Was the Δ■lift local and monotone?,1,1
+■ Expected debt drop,■ Metric name & unit,1,1
+Debrief (2–3 prompts), Resolve disputes with claim/evidence/Δ■lift/receipt cards.,1,1
+Hand■ins (artifacts to keep),Scene 7: 8■Person Table with Neighbor Lanes,1,1
+■ Current threshold,■ Safety notes (side effects),1,1
+ Practice stand■in overlays for sensitive domains.,■ Which Δ■lift removed the beat?,1,1
+Debrief (2–3 prompts), Operate dual■rail safety: blue = open; red = internal only.,1,1
+What it teaches (learning targets),"✓ Counterexample log, ledger.",1,1
+Hand■ins (artifacts to keep),Scene 11: Primordial→EM→Thermo: Meaning■Token Safety,1,1
+What it teaches (learning targets),"✓ Spectrogram sheet, receipt.",1,1
+Hand■ins (artifacts to keep),"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts",1,1
+Debrief (2–3 prompts), Bind tokens late; redact dangerous meaning; still keep form receipts.,1,1
+Hand■ins (artifacts to keep),Scene 12: Global Viewers: 8×8 + 4×4×4×4 + Parity Shell,1,1
+What it teaches (learning targets),"✓ Card stack, mirror sheet, ledger snippet.",1,1
+What it teaches (learning targets),"✓ Redacted ledger row, safe receipts.",1,1
+Debrief (2–3 prompts), Add viewers without changing work: local 8×8; meso 4×4×4×4; parity 2×2×2×2.,1,1
+ Find hot■zones to focus Δ■lifts first.,■ Did redaction block reproducibility? How fixed?,1,1
+Hand■ins (artifacts to keep),Scene 13: Not Lattice Flattery: Governance by Geometry,1,1
+What it teaches (learning targets),"✓ Viewer overlays, ledger row.",1,1
+Debrief (2–3 prompts), Why E8/Leech/Monster emerge from constraints; not taste.,1,1
+ Always leave a 4■bit and a hash trail.,■ Which constraint felt most ‘non■negotiable’?,1,1
+ Map harmonic stack to octet; subharmonics to Cartan ‘outside’ nudges.,■ What would break if hubs were 3 or 9?,1,1
+Hot■Zones),"✓ Assembled model photos, notes, ledger.",1,1
+Hand■ins (artifacts to keep),Scene 10: Sound & Subharmonics Viewer (Cartan,1,1
+" Understand why geometry, not taste, governs the shell.",■ What metric flipped a decision?,1,1
+Debrief (2–3 prompts), Wrap a tesseract into the torus; locate 4■bit hubs; see 1→64→1 codec sketch.,1,1
+What it teaches (learning targets),"✓ Card photo, metric sheet, ledger.",1,1
+Hand■ins (artifacts to keep),Scene 9: Hypercube→Toroidal Chamber (4■bit Hubs),1,1
+ Pause→measure→resume loop without losing context.,■ Which neighbor interface was hottest?,1,1
+Debrief (2–3 prompts)," Paper■only run with decks, sticky tokens, and quick metrics.",1,1
+Hand■ins (artifacts to keep),"Scene 15: Capstone: Three■Track Non■Toy (Optics, DNA,",1,1
+What it teaches (learning targets),"✓ Coord board photo, ledger rows.",1,1
+Hand■ins (artifacts to keep),Scene 8: Card■Deck CQE + Lab Stations,1,1
+Finance),"✓ Blue packet, red sealed packet.",1,1
+ Run three independent rails on one shell; compare receipts; compress meanings.,■ Was any crucial info missing on blue?,1,1
+ How a 10■minute cadence creates stable throughput.,■ Did any claim survive only after a Δ■lift?,1,1
+Debrief (2–3 prompts)," Role mesh, not silos: 8 seats, 2■bit lanes, neighbor hand■offs.",1,1
+What it teaches (learning targets),■ Which view dominated debt?,1,1
+Debrief (2–3 prompts),Scene 1: n=1→n=5: The Hinge that Forces the Octad,1,1
+Compact combined rail with quick fields,hash/date,1,1
+Optics  Thermal  Polar/Spin/EM  Math/Logic  Bio  Neuro  Cosmos  Systems,Page 12,1,1
+Page 12,Primitive/Idea: ____________________________________,1,1
+Eight Baseline Packs,Notes:,1,1
+CQE Card Mat Full Desk,Re-run under parity; enforce palindromic rest,1,1
+CQE Card Mat Full Desk,Place Aces (primitives) then 2 8 views; assemble 9,1,1
+Blue Rail (Forward) Seed Views Full Idea (9),CQE Card Mat Full Desk,1,1
+CQE Card Mat Full Desk,"T wo decks (Blue=Forward, Red=Inverse); color=parity; suits = sidecars",1,1
+Jokers:subharmonic / Cartan bridges,SPage Hash / Status:hash WORKING / NON-WORKING / PROVISIONAL,1,1
+Suit Mapping:=____ =____ =____ =____,Views,1,1
+P M,Strict Bounds:list tightened thresholds (old new),1,1
+4-bit Commit,Local repairs + rationale,1,1
+"Mirror Evidence:metrics, plots, checksumsViews Exercised:1 2 3 4 5 6 7 8",Observers (J/Q/K):metrics / view priority / strictness -lifts:,1,1
+Jokers:subharmonic / Cartan bridges,Parity Twin (10):,1,1
+Full Idea (9):,Strict Bounds:list tightened thresholds (old new),1,1
+Local repairs + rationale,Views,1,1
+Blank Cards (3×3),Hash: __________,1,1
+Blue Rail (Forward) Seed Views Full Idea (9),Ranks 1 8 = Octet (coverage),1,1
+Context: ________,Page 11,1,1
+Local repair notes4-bit Commit,Re-run under parity; enforce palindromic rest,1,1
+10_Sticky_Sidecars,Token: __________,1,1
+Ranks 1 8 = Octet (coverage),SReceipts:,1,1
+Attach measured values to cards,Page 10,1,1
+From 4D cube projection to chamber shells,Page 10,1,1
+PM,hash/date,1,1
+From 4D cube projection to chamber shells,Page 9,1,1
+SReceipts:,Suits = Sidecars (assign per run):,1,1
+Hypercube Scaffold,Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________,1,1
+Page 9,"Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}",1,1
+Color = Parity (Black/Red),views run,1,1
+DNA-10: ________________________________________________________,UTC 2025-09-20 21:06,1,1
+CQE Card Mini-Mat Travel,metrics,1,1
+08_Master_Ledger,Octet Map H1..H8: _______________________________________________,1,1
+Full Idea (9):,List per suit or view Views,1,1
+Date: Deck Mapping:Blue=____ Red=____,List per suit or view Views,1,1
+Worksheet – 4■bit Receipt,■ Current threshold,1,1
+Worksheet – Ledger Row,■ FCE reproduction ok?,1,1
+Page 18,Primitive/Idea: ____________________________________,1,1
+■ Mirror within tol?,■ constructionA (code/modulus/glue),1,1
+Notes:,Receipts & 4-bit,1,1
+■ Views≥4 passed?,■ form_id,1,1
+OPE/FCE  View  Mirror  Hash,Page 18,1,1
+OPE FCE View Mirror,Page 19,1,1
+CQE Role■Playing Scenes Pack — v1.0,Generated: 2025-09-20T21:12:56.562731Z,1,1
+12_Baseline_Packs,■ Closed-loop error ↓,1,1
+CQE Role■Playing Scenes Pack — v1.0,How to use this pack,1,1
+CQE Role■Playing Scenes Pack — v1.0,mirror) governs correctness; your labels stay provisional until committed.,1,1
+Generated: 2025-09-20T21:12:56.562731Z,Scene 0: Orientation: The CQE Spine Live,1,1
+How to use this pack,What it teaches (learning targets),1,1
+■ FCE reproduction ok?,■ Justification (evidence),1,1
+■ New (tighter) threshold,■ OPE debt ok?,1,1
+Page 17,Primitive/Idea: ____________________________________,1,1
+Notes:,■ automorphism id,1,1
+Page 16,Primitive/Idea: ____________________________________,1,1
+Page 15,Primitive/Idea: ____________________________________,1,1
+Blank Cards (3×3),Room layout & station assignments,1,1
+Page 14, Ledger binder (Working / Non-Working albums),1,1
+UTC 2025-09-20 21:06, Clipboard for station runs,1,1
+13_Class_Checklist, A4/Letter cardstock for cards,1,1
+Budget-friendly supply list,Page 13,1,1
+CQE Ledger Template,One row per form/run (reproducible receipts)Form ID: Problem / Brief:,1,1
+CQE Ledger Template,Date: Deck Mapping:Blue=____ Red=____,1,1
+CQE Ledger Template,Suit Mapping:=____ =____ =____ =____,1,1
+CQE Ledger Template,Primitives (Aces):,1,1
+Class Kit Checklist,Custom pack notes,1,1
+Page 13,■ Latency within bound,1,1
+UTC 2025-09-20 21:06,■ Safety ratchets ✓,1,1
+Octet Map (2 8):,One row per form/run (reproducible receipts)Form ID: Problem / Brief:,1,1
+"Scene 15 — Capstone: Three■Track Non■Toy (Optics, DNA,",■ receipts (4■bit + hash),1,1

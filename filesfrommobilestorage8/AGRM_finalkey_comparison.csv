@@ -1,0 +1,3 @@
+path,exists,in_final_tree,bytes,lines,imports_numpy,imports_unified,imports_agrm,imports_mdhg,imports_franken,has_cli,classes,funcs,todo_fixme,truncated_ellipses,importable_in_final,notes
+/mnt/data/final_build_r1_src_3/src/unified/integration/agrm_unified_adapter.py,True,True,1480,30,False,True,False,False,False,False,1,2,0,0,True,
+/mnt/data/final_build_r1_src_3/src/unified/agrm_unified/runner.py,True,True,246,7,False,False,False,False,False,False,0,1,0,0,True,

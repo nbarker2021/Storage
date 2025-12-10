@@ -1,0 +1,16 @@
+test_id,seed,frame_mods,expected_verdict,notes
+T006,seed:F,"{2,4,8,13}",REJECT,Wrong screw class (13A/13B mismatch) → phase drift → replay hash mismatch
+T007,seed:G,"{2,4,8,13}",STALL,All‑8 Gate violated (H3 strictly <0) → cadence does not advance
+T008,seed:H,"{2,4,8,13}",REJECT,Type‑I overlay executed without Even‑Lift (Return)
+T009,seed:I,"{2,4,8,13}",REJECT,Measure‑zero gating (faces == 0) → unstable latches
+T010,seed:J,"{2,4,8,13,5}",REJECT,"CRT residues inconsistent (mod13, mod5 contradict)"
+T011,seed:K,"{2,4,8}",AUTO‑PROMOTE,Declared R2 but 4 planes active → auto‑promotion to R8 (or policy REJECT)
+T012,seed:L,"{2,4,8,13}",REJECT,Mirror involution broken (J^2≠Id) → palindromic check fails
+T013,seed:M,"{2,4,8,13}",REJECT,Bounds pulse without witness contact (illegal H update)
+T014,seed:N,"{2,4,8,13}",REJECT,Ledger tamper (hash mismatch on rehydration)
+T015,seed:O,"{2,4,8,13}",REJECT,Idempotency violation (duplicate apply_delta accepted twice)
+T016,seed:P,"{2,4,8,16,13}",REJECT,Dyadic rest declared R16 but parity bits disagree with doubly‑even constraint
+T017,seed:Q,"{2,4,8,16,64,13}",REJECT,Anchor collision: identical E but divergent tags (phase13/tuple_n)
+T018,seed:R,"{2,4,8,13}",REJECT,Non‑commuting overlay order applied without compose‑proof
+T019,seed:S,"{2,4,8,13}",REJECT,Witness starvation: policy biases one lane so another never latches
+T020,seed:T,"{2,4,8,13}",REJECT,Negative‑zero tolerance: ε=0 causes flapping around H=0

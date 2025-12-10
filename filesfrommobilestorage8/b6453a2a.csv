@@ -1,0 +1,5 @@
+Test,Target,Result,Pass Rate,Key Finding
+Test 1: Algebraic,LCM harmonics,FAIL,0/1,Direct mixing insufficient
+Test 2: TCMT,Resonance buildup,FAIL,0/1,TCMT insufficient
+Test 3: Gauge Inv,Gauge invariance,PASS,1/1,Ring projection robust
+Test 4: Action Div,Energy savings,PARTIAL,0.5/1,SW overhead dominates

@@ -1,0 +1,374 @@
+concept,section,phrase
+DeltaLift,CONSTRAINTS,7) Iterate: Promote validated cards to your deck top; archive non-working slips.
+DeltaLift,INPUTS,05_Stations
+DeltaLift,INPUTS,1) Deal primitives: Aces = primitives. Write domain glyphs on them.
+DeltaLift,INPUTS,Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.
+DeltaLift,INPUTS,How to print: Print single-sided. Use card sleeves or 65lb cardstock for cards. Use transparent sheets for
+DeltaLift,INPUTS,Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers
+DeltaLift,INPUTS,Scene 11: Primordial→EM→Thermo: Meaning■Token Safety
+DeltaLift,INPUTS, Bind tokens late; redact dangerous meaning; still keep form receipts.
+DeltaLift,INPUTS, Understand stand■ins (tokens) vs. form (geometry) vs. meaning (labels).
+DeltaLift,INPUTS, Use beats as a quick hot■zone detector for Δ■lifts.
+DeltaLift,INPUTS,"— Deck id, card set, measurement token, 4■bit commit."
+DeltaLift,LEDGER,Ledger hook (what gets recorded)
+DeltaLift,OUTPUTS,6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.
+DeltaLift,OUTPUTS,Receipt
+DeltaLift,OUTPUTS,commits.
+DeltaLift,OUTPUTS,failing with hash.
+DeltaLift,OUTPUTS,receipts.
+DeltaLift,OUTPUTS,thresholds; and ledger reproducible 4-bit commits.
+DeltaLift,OUTPUTS, Map harmonic stack to octet; subharmonics to Cartan ‘outside’ nudges.
+DeltaLift,OUTPUTS, Preserve minority view as Non■Working breadcrumb with hash.
+DeltaLift,OUTPUTS,"— 4 receipts, shared form_id, per■rail thresholds."
+DeltaLift,OUTPUTS,"— Rail receipts, meaning pack v#, anchor id."
+DeltaLift,PROCESS,3) Octet overlay: Fill H1–H8 views; record REST constraints.
+DeltaLift,PROCESS,4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.
+DeltaLift,PROCESS,5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).
+DeltaLift,PROCESS,Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix)
+DeltaLift,PROCESS,Views H1–H2; runs PSF/FFT mirror; proposes
+DeltaLift,PROCESS,"What this is: A complete, no-power toolkit to run CQE with paper, pens, a ruler, tape, balsa sticks, and"
+DeltaLift,PROCESS,What you can do: Model multi-view problems; enforce mirror tests; perform local Δ-lifts; tighten strict
+DeltaLift,PROCESS,Worksheet – Octet Overlay
+DeltaLift,PROCESS,mirror) governs correctness; your labels stay provisional until committed.
+DeltaLift,PROCESS,overlays.
+DeltaLift,WITNESS,Debrief (2–3 prompts)
+FourBit,CONSTRAINTS,7) Iterate: Promote validated cards to your deck top; archive non-working slips.
+FourBit,CONSTRAINTS,Generated: 2025-09-20T21:12:56.562731Z
+FourBit,CONSTRAINTS,"Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}"
+FourBit,CONSTRAINTS, Operate dual■rail safety: blue = open; red = internal only.
+FourBit,CONSTRAINTS,■ New (tighter) threshold
+FourBit,CONSTRAINTS,■ thresholds (normal/strict)
+FourBit,INPUTS,05_Stations
+FourBit,INPUTS,4 stations; shared octet; sticky token labels.
+FourBit,INPUTS,How to use this pack
+FourBit,INPUTS,Scene 11: Primordial→EM→Thermo: Meaning■Token Safety
+FourBit,INPUTS,"Your first problem setup (tokens, views, mirror, strict)"
+FourBit,INPUTS,"a tiny 4■bit receipt. Use the worksheets to standardize record■keeping. The geometry (octet, parity,"
+FourBit,INPUTS, Bind tokens late; redact dangerous meaning; still keep form receipts.
+FourBit,INPUTS, Parallelize OPTICS/THERMAL/POLAR/MATH on same form; swap token packs only.
+FourBit,INPUTS, Understand stand■ins (tokens) vs. form (geometry) vs. meaning (labels).
+FourBit,INPUTS,■■ Run each rail: tokens→octet→mirror→Δ→strict→4■bit; copy receipts to master ledger.
+FourBit,LEDGER,08_Master_Ledger
+FourBit,LEDGER,CQE Ledger Template
+FourBit,LEDGER,Ledger hook (what gets recorded)
+FourBit,LEDGER,Master Ledger
+FourBit,LEDGER,"Pick any scene, lay out the props, and follow the blocking. Each scene ends with a ledgerable artifact and"
+FourBit,LEDGER,"✓ Counterexample log, ledger."
+FourBit,OUTPUTS,03_Receipts_4bit
+FourBit,OUTPUTS,4-bit Commit
+FourBit,OUTPUTS,4-bit Commit Stickers
+FourBit,OUTPUTS,6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.
+FourBit,OUTPUTS,"Bounds, interval proofs, receipts."
+FourBit,OUTPUTS,Date: Deck Mapping:Blue=____ Red=____
+FourBit,OUTPUTS,Deck Mapping:Blue=________ Red=________
+FourBit,OUTPUTS,Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING
+FourBit,OUTPUTS,Merkle-ish page hash / signatures
+FourBit,OUTPUTS,Octet Map H1..H8: _______________________________________________
+FourBit,PROCESS,3) Octet overlay: Fill H1–H8 views; record REST constraints.
+FourBit,PROCESS,4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.
+FourBit,PROCESS,5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).
+FourBit,PROCESS,"Mirror Evidence:metrics, plots, checksumsViews Exercised:1 2 3 4 5 6 7 8"
+FourBit,PROCESS,OPE FCE View Mirror
+FourBit,PROCESS,OPE/FCE  View  Mirror  Hash
+FourBit,PROCESS,One row per form/run (reproducible receipts)Form ID: Problem / Brief:
+FourBit,PROCESS,"Overlay RMS, gate irreversibility."
+FourBit,PROCESS,Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________
+FourBit,PROCESS,Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________
+FourBit,WITNESS,Debrief (2–3 prompts)
+FourBit,WITNESS,Views H5–H6; L↔R parity checks; spin filters.
+FullIdea,CONSTRAINTS,Observers (J/Q/K) ParkingJ: metrics; Q: view priority; K: strictness JokersSubharmonic / Cartan bridge -lift Pad
+FullIdea,CONSTRAINTS,Observers (J/Q/K):metrics / view priority / strictness -lifts:
+FullIdea,INPUTS,"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,44×4 WorkspaceUse sleeves; write labels on sleevesRed Rail (Inverse/Parity) Parity Twin (10) Inverse"
+FullIdea,INPUTS,Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.
+FullIdea,INPUTS,"— Deck id, card set, measurement token, 4■bit commit."
+FullIdea,LEDGER,08_Master_Ledger
+FullIdea,LEDGER,Ledger hook (what gets recorded)
+FullIdea,LEDGER,"✓ Assembled model photos, notes, ledger."
+FullIdea,LEDGER,"✓ Card photo, metric sheet, ledger."
+FullIdea,OUTPUTS,"■■ Map aces→primitives, 2–8 synthesis, 9 full idea, 10 parity twin; face cards = observers; jokers ="
+FullIdea,PROCESS,"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,44×4 WorkspaceAlternative order, constraints firstMirror (Blue Red)"
+FullIdea,PROCESS,Hypercube → Toroidal Loom
+FullIdea,PROCESS,Local repair notes4-bit Commit
+FullIdea,PROCESS,Local repairs + rationale
+FullIdea,PROCESS,Re-run under parity; enforce palindromic rest
+FullIdea,PROCESS,Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________
+FullIdea,WITNESS,Debrief (2–3 prompts)
+Ledger,CONSTRAINTS,7) Iterate: Promote validated cards to your deck top; archive non-working slips.
+Ledger,CONSTRAINTS,Generated: 2025-09-20T21:12:56.562731Z
+Ledger,CONSTRAINTS,License: CC-BY 4.0  Generated 2025-09-20
+Ledger,CONSTRAINTS,Observers (J/Q/K) ParkingJ: metrics; Q: view priority; K: strictness JokersSubharmonic / Cartan bridge -lift Pad
+Ledger,CONSTRAINTS,"Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}"
+Ledger,CONSTRAINTS, Operate dual■rail safety: blue = open; red = internal only.
+Ledger,CONSTRAINTS,■ New (tighter) threshold
+Ledger,CONSTRAINTS,■ thresholds (normal/strict)
+Ledger,CONSTRAINTS,■■ Enumerate 16 insertion tests for ‘5’; bucket into 8 legal classes; note 1 palindromic + 7 invariant.
+Ledger,INPUTS,05_Stations
+Ledger,INPUTS,4 stations; shared octet; sticky token labels.
+Ledger,INPUTS,Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.
+Ledger,INPUTS,How to print: Print single-sided. Use card sleeves or 65lb cardstock for cards. Use transparent sheets for
+Ledger,INPUTS,How to use this pack
+Ledger,INPUTS,Pause cards → test → sticky sidecar → continue
+Ledger,INPUTS,Protocol: Dock a card; measure; write a token value on a sticky; attach to card edge; ledger the change;
+Ledger,INPUTS,Roles  Stations  Neighbor links
+Ledger,INPUTS,Room layout & station assignments
+Ledger,INPUTS,Scene 11: Primordial→EM→Thermo: Meaning■Token Safety
+Ledger,LEDGER,08_Master_Ledger
+Ledger,LEDGER,CQE Ledger Template
+Ledger,LEDGER,Ledger hook (what gets recorded)
+Ledger,LEDGER,Master Ledger
+Ledger,LEDGER,"Octet sheet, DNA■10, 4■bit sticker, ledger page."
+Ledger,LEDGER,"Pick any scene, lay out the props, and follow the blocking. Each scene ends with a ledgerable artifact and"
+Ledger,LEDGER,Worksheet – Ledger Row
+Ledger,LEDGER, Ledger binder (Working / Non-Working albums)
+Ledger,LEDGER,"✓ Assembled model photos, notes, ledger."
+Ledger,LEDGER,"✓ Card photo, metric sheet, ledger."
+Ledger,OUTPUTS,03_Receipts_4bit
+Ledger,OUTPUTS,4-bit Commit
+Ledger,OUTPUTS,4-bit Commit Stickers
+Ledger,OUTPUTS,6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.
+Ledger,OUTPUTS,"Bounds, interval proofs, receipts."
+Ledger,OUTPUTS,Date: Deck Mapping:Blue=____ Red=____
+Ledger,OUTPUTS,Deck Mapping:Blue=________ Red=________
+Ledger,OUTPUTS,Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING
+Ledger,OUTPUTS,Hash: __________
+Ledger,OUTPUTS,Merkle-ish page hash / signatures
+Ledger,PROCESS,3) Octet overlay: Fill H1–H8 views; record REST constraints.
+Ledger,PROCESS,4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.
+Ledger,PROCESS,5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).
+Ledger,PROCESS,"Bio/Neuro proxies (overlay RMS), Cosmos (shear/field), Robotics (closed-loop error)."
+Ledger,PROCESS,"Keeps form_id, ledger, and mirror law; calls"
+Ledger,PROCESS,Local repair notes4-bit Commit
+Ledger,PROCESS,"Mirror Evidence:metrics, plots, checksumsViews Exercised:1 2 3 4 5 6 7 8"
+Ledger,PROCESS,OPE FCE View Mirror
+Ledger,PROCESS,OPE/FCE  View  Mirror  Hash
+Ledger,PROCESS,One row per form/run (reproducible receipts)Form ID: Problem / Brief:
+Ledger,WITNESS,13_Class_Checklist
+Ledger,WITNESS,Debrief (2–3 prompts)
+Ledger,WITNESS,Views H5–H6; L↔R parity checks; spin filters.
+Loom,INPUTS,1) Deal primitives: Aces = primitives. Write domain glyphs on them.
+Loom,INPUTS,Pause cards → test → sticky sidecar → continue
+Loom,INPUTS,Protocol: Dock a card; measure; write a token value on a sticky; attach to card edge; ledger the change;
+Loom,INPUTS,Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers
+Loom,INPUTS,"Station types: Optics (PSF/WFE), Thermal (ΔT per tick), Polar/Spin (efficiency), Math (interval bound),"
+Loom,INPUTS,"Stations: Measure, Tag, Resume"
+Loom,LEDGER,Ledger hook (what gets recorded)
+Loom,OUTPUTS,03_Receipts_4bit
+Loom,OUTPUTS,6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.
+Loom,OUTPUTS,"Bounds, interval proofs, receipts."
+Loom,OUTPUTS,"— Code id, modulus, glue vector, octad layout, legality receipts."
+Loom,OUTPUTS,✓ 3 receipts; promoted pack doc; anchor ledger row.
+Loom,OUTPUTS,"✓ Octet pass grid, receipts."
+Loom,PROCESS,10-minute run with two decks + overlays
+Loom,PROCESS,3) Octet overlay: Fill H1–H8 views; record REST constraints.
+Loom,PROCESS,4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.
+Loom,PROCESS,5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).
+Loom,PROCESS,"Bio/Neuro proxies (overlay RMS), Cosmos (shear/field), Robotics (closed-loop error)."
+Loom,PROCESS,How to use: Tag 8 faces as octet gates; enforce mirror across paired faces. Wrap rails with balsa/tape
+Loom,PROCESS,Hypercube → Toroidal Loom
+Loom,PROCESS,Octet Overlay + DNA-10
+Loom,PROCESS,"Overlay RMS, gate irreversibility."
+Loom,PROCESS,Parity Loom
+Loom,WITNESS,Debrief (2–3 prompts)
+Loom,WITNESS,Why: Parity checks are physical (clips + XOR pad). You can verify Construction-A membership with finite
+Loom,WITNESS, Parity checks → membership; half■shift glue → evenness/unimodularity.
+Loom,WITNESS,■ Type checks pass
+Mirror,CONSTRAINTS,7) Iterate: Promote validated cards to your deck top; archive non-working slips.
+Mirror,INPUTS,1) Deal primitives: Aces = primitives. Write domain glyphs on them.
+Mirror,INPUTS,Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.
+Mirror,INPUTS,How to print: Print single-sided. Use card sleeves or 65lb cardstock for cards. Use transparent sheets for
+Mirror,INPUTS,How to use this pack
+Mirror,INPUTS,Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers
+Mirror,INPUTS,Roles  Stations  Neighbor links
+Mirror,INPUTS,"Your first problem setup (tokens, views, mirror, strict)"
+Mirror,INPUTS,"a tiny 4■bit receipt. Use the worksheets to standardize record■keeping. The geometry (octet, parity,"
+Mirror,INPUTS, Understand stand■ins (tokens) vs. form (geometry) vs. meaning (labels).
+Mirror,INPUTS,"— Deck id, card set, measurement token, 4■bit commit."
+Mirror,LEDGER,Ledger hook (what gets recorded)
+Mirror,LEDGER,"Pick any scene, lay out the props, and follow the blocking. Each scene ends with a ledgerable artifact and"
+Mirror,LEDGER,Worksheet – Ledger Row
+Mirror,OUTPUTS,03_Receipts_4bit
+Mirror,OUTPUTS,4-bit Commit
+Mirror,OUTPUTS,4-bit Commit Stickers
+Mirror,OUTPUTS,6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.
+Mirror,OUTPUTS,Merkle-ish page hash / signatures
+Mirror,OUTPUTS,Receipts & 4-bit
+Mirror,OUTPUTS,Receipts & 4-bit Commit
+Mirror,OUTPUTS,SPage Hash / Status:hash WORKING / NON-WORKING / PROVISIONAL
+Mirror,OUTPUTS,commits.
+Mirror,OUTPUTS,failing with hash.
+Mirror,PROCESS,3) Octet overlay: Fill H1–H8 views; record REST constraints.
+Mirror,PROCESS,4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.
+Mirror,PROCESS,5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).
+Mirror,PROCESS,How to use: Tag 8 faces as octet gates; enforce mirror across paired faces. Wrap rails with balsa/tape
+Mirror,PROCESS,Hypercube → Toroidal Loom
+Mirror,PROCESS,"Keeps form_id, ledger, and mirror law; calls"
+Mirror,PROCESS,Local repairs + rationale
+Mirror,PROCESS,"Mirror Evidence:metrics, plots, checksumsViews Exercised:1 2 3 4 5 6 7 8"
+Mirror,PROCESS,OPE FCE View Mirror
+Mirror,PROCESS,OPE/FCE  View  Mirror  Hash
+Mirror,WITNESS,Debrief (2–3 prompts)
+Mirror,WITNESS,Why: Parity checks are physical (clips + XOR pad). You can verify Construction-A membership with finite
+Octet,CONSTRAINTS,7) Iterate: Promote validated cards to your deck top; archive non-working slips.
+Octet,CONSTRAINTS,Generated: 2025-09-20T21:12:56.562731Z
+Octet,CONSTRAINTS,Observers (J/Q/K) ParkingJ: metrics; Q: view priority; K: strictness JokersSubharmonic / Cartan bridge -lift Pad
+Octet,CONSTRAINTS,Observers (J/Q/K):metrics / view priority / strictness -lifts:
+Octet,CONSTRAINTS,"Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}"
+Octet,CONSTRAINTS,■ thresholds (normal/strict)
+Octet,CONSTRAINTS,■■ Enumerate 16 insertion tests for ‘5’; bucket into 8 legal classes; note 1 palindromic + 7 invariant.
+Octet,INPUTS,1) Deal primitives: Aces = primitives. Write domain glyphs on them.
+Octet,INPUTS,"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,44×4 WorkspaceUse sleeves; write labels on sleevesRed Rail (Inverse/Parity) Parity Twin (10) Inverse"
+Octet,INPUTS,4 stations; shared octet; sticky token labels.
+Octet,INPUTS,Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.
+Octet,INPUTS,How to print: Print single-sided. Use card sleeves or 65lb cardstock for cards. Use transparent sheets for
+Octet,INPUTS,How to use this pack
+Octet,INPUTS,Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers
+Octet,INPUTS,Three stations; octet master; metrics per rail.
+Octet,INPUTS,"Your first problem setup (tokens, views, mirror, strict)"
+Octet,INPUTS,"a tiny 4■bit receipt. Use the worksheets to standardize record■keeping. The geometry (octet, parity,"
+Octet,LEDGER,Ledger hook (what gets recorded)
+Octet,LEDGER,"Octet sheet, DNA■10, 4■bit sticker, ledger page."
+Octet,LEDGER,"Pick any scene, lay out the props, and follow the blocking. Each scene ends with a ledgerable artifact and"
+Octet,LEDGER,Worksheet – Ledger Row
+Octet,OUTPUTS,03_Receipts_4bit
+Octet,OUTPUTS,4-bit Commit Stickers
+Octet,OUTPUTS,6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.
+Octet,OUTPUTS,"Bounds, interval proofs, receipts."
+Octet,OUTPUTS,Date: Deck Mapping:Blue=____ Red=____
+Octet,OUTPUTS,Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING
+Octet,OUTPUTS,Merkle-ish page hash / signatures
+Octet,OUTPUTS,Octet Map (2 8):
+Octet,OUTPUTS,Octet Map H1..H8: _______________________________________________
+Octet,OUTPUTS,Receipts & 4-bit
+Octet,PROCESS,"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,44×4 WorkspaceAlternative order, constraints firstMirror (Blue Red)"
+Octet,PROCESS,10-minute run with two decks + overlays
+Octet,PROCESS,3) Octet overlay: Fill H1–H8 views; record REST constraints.
+Octet,PROCESS,4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.
+Octet,PROCESS,5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).
+Octet,PROCESS,How to use: Tag 8 faces as octet gates; enforce mirror across paired faces. Wrap rails with balsa/tape
+Octet,PROCESS,Hypercube → Toroidal Loom
+Octet,PROCESS,"Keeps form_id, ledger, and mirror law; calls"
+Octet,PROCESS,Local repair notes4-bit Commit
+Octet,PROCESS,Local repairs + rationale
+Octet,WITNESS,Debrief (2–3 prompts)
+Octet,WITNESS,Views H5–H6; L↔R parity checks; spin filters.
+ParityTwin,CONSTRAINTS,Observers (J/Q/K):metrics / view priority / strictness -lifts:
+ParityTwin,INPUTS,"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,44×4 WorkspaceUse sleeves; write labels on sleevesRed Rail (Inverse/Parity) Parity Twin (10) Inverse"
+ParityTwin,INPUTS,Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.
+ParityTwin,INPUTS,"— Deck id, card set, measurement token, 4■bit commit."
+ParityTwin,LEDGER,Ledger hook (what gets recorded)
+ParityTwin,OUTPUTS,"■■ Map aces→primitives, 2–8 synthesis, 9 full idea, 10 parity twin; face cards = observers; jokers ="
+ParityTwin,PROCESS,"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,44×4 WorkspaceAlternative order, constraints firstMirror (Blue Red)"
+ParityTwin,PROCESS,Local repairs + rationale
+ParityTwin,PROCESS,Re-run under parity; enforce palindromic rest
+ParityTwin,PROCESS,Strict Bounds:list tightened thresholds (old new)
+ParityTwin,PROCESS,"Whiteboard, printed spectra pair or time series twin."
+ParityTwin,PROCESS, Practice mirror pairs (FFT↔iFFT; encode↔decode; simulate↔measure).
+Roles,CONSTRAINTS,Generated: 2025-09-20T21:12:56.562731Z
+Roles,CONSTRAINTS,Observers (J/Q/K) ParkingJ: metrics; Q: view priority; K: strictness JokersSubharmonic / Cartan bridge -lift Pad
+Roles,CONSTRAINTS,Observers (J/Q/K):metrics / view priority / strictness -lifts:
+Roles,INPUTS,Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.
+Roles,INPUTS,How to use this pack
+Roles,INPUTS,Roles  Stations  Neighbor links
+Roles,INPUTS,"— Deck id, card set, measurement token, 4■bit commit."
+Roles,LEDGER,Ledger hook (what gets recorded)
+Roles,LEDGER,"Pick any scene, lay out the props, and follow the blocking. Each scene ends with a ledgerable artifact and"
+Roles,OUTPUTS,SReceipts:
+Roles,OUTPUTS,commits.
+Roles,OUTPUTS,"— Seat map, cycle count, debt burn, commits."
+Roles,OUTPUTS,"■■ Map aces→primitives, 2–8 synthesis, 9 full idea, 10 parity twin; face cards = observers; jokers ="
+Roles,PROCESS,"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,44×4 WorkspaceAlternative order, constraints firstMirror (Blue Red)"
+Roles,PROCESS,"Keeps form_id, ledger, and mirror law; calls"
+Roles,PROCESS,Local repair notes4-bit Commit
+Roles,PROCESS,Local repairs + rationale
+Roles,PROCESS,Strict Bounds:list tightened thresholds (old new)
+Roles,PROCESS,■■ Assign roles; run 2 cycles; enforce neighbor receipts; rotate seats; compare throughput.
+Sidecars,INPUTS,"1,1 1,2 1,3 1,42,1 2,2 2,3 2,43,1 3,2 3,3 3,44,1 4,2 4,3 4,44×4 WorkspaceUse sleeves; write labels on sleevesRed Rail (Inverse/Parity) Parity Twin (10) Inverse"
+Sidecars,INPUTS,Attach measured values to cards
+Sidecars,INPUTS,Pause cards → test → sticky sidecar → continue
+Sidecars,INPUTS,Protocol: Dock a card; measure; write a token value on a sticky; attach to card edge; ledger the change;
+Sidecars,INPUTS,"Station types: Optics (PSF/WFE), Thermal (ΔT per tick), Polar/Spin (efficiency), Math (interval bound),"
+Sidecars,INPUTS,Stations
+Sidecars,INPUTS,"Stations: Measure, Tag, Resume"
+Sidecars,INPUTS,Sticky Sidecars (Tokens)
+Sidecars,INPUTS,Token: __________
+Sidecars,INPUTS,"Use left half as Blue, right half as Red"
+Sidecars,OUTPUTS,Deck Mapping:Blue=________ Red=________
+Sidecars,OUTPUTS,hash/date
+Sidecars,OUTPUTS, Converge via receipts; annihilate non■working cheaply.
+Sidecars,PROCESS,"Bio/Neuro proxies (overlay RMS), Cosmos (shear/field), Robotics (closed-loop error)."
+Sidecars,PROCESS, Transparent overlays (acetate)
+Sidecars,PROCESS,"✓ Photo of loom, mask sheet, ledger row."
+Sidecars,WITNESS,Debrief (2–3 prompts)
+Stations,CONSTRAINTS,■■ Enumerate 16 insertion tests for ‘5’; bucket into 8 legal classes; note 1 palindromic + 7 invariant.
+Stations,INPUTS,05_Stations
+Stations,INPUTS,4 stations; shared octet; sticky token labels.
+Stations,INPUTS,Pause cards → test → sticky sidecar → continue
+Stations,INPUTS,Protocol: Dock a card; measure; write a token value on a sticky; attach to card edge; ledger the change;
+Stations,INPUTS,Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers
+Stations,INPUTS,Roles  Stations  Neighbor links
+Stations,INPUTS,Room layout & station assignments
+Stations,INPUTS,Scene 8: Card■Deck CQE + Lab Stations
+Stations,INPUTS,"Station types: Optics (PSF/WFE), Thermal (ΔT per tick), Polar/Spin (efficiency), Math (interval bound),"
+Stations,INPUTS,Stations
+Stations,LEDGER,Ledger hook (what gets recorded)
+Stations,LEDGER, Ledger binder (Working / Non-Working albums)
+Stations,LEDGER,"✓ Coord board photo, ledger rows."
+Stations,OUTPUTS,Receipt
+Stations,OUTPUTS,commits.
+Stations,OUTPUTS, Converge via receipts; annihilate non■working cheaply.
+Stations,OUTPUTS,"— 4 receipts, shared form_id, per■rail thresholds."
+Stations,OUTPUTS,"— Views passed, metric triplet, slab size, commit."
+Stations,OUTPUTS,■■ Require ≥4 pass post■Δ■lift before commit; log 4■bit.
+Stations,OUTPUTS,"✓ Checked grid, class map (8), receipt."
+Stations,PROCESS,04_Parity_Loom
+Stations,PROCESS,"Bio/Neuro proxies (overlay RMS), Cosmos (shear/field), Robotics (closed-loop error)."
+Stations,PROCESS,How to use: Tag 8 faces as octet gates; enforce mirror across paired faces. Wrap rails with balsa/tape
+Stations,PROCESS,Hypercube → Toroidal Loom
+Stations,PROCESS,"Keeps form_id, ledger, and mirror law; calls"
+Stations,PROCESS,Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix)
+Stations,PROCESS,"What this is: A complete, no-power toolkit to run CQE with paper, pens, a ruler, tape, balsa sticks, and"
+Stations,PROCESS,What you can do: Model multi-view problems; enforce mirror tests; perform local Δ-lifts; tighten strict
+Stations,PROCESS,"Whiteboard, printed spectra pair or time series twin."
+Stations,PROCESS, Pause→measure→resume loop without losing context.
+Stations,WITNESS,13_Class_Checklist
+Stations,WITNESS,Debrief (2–3 prompts)
+Strict,CONSTRAINTS,7) Iterate: Promote validated cards to your deck top; archive non-working slips.
+Strict,CONSTRAINTS,Observers (J/Q/K):metrics / view priority / strictness -lifts:
+Strict,CONSTRAINTS,"Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}"
+Strict,CONSTRAINTS,■ AR ≤ 1.5 dB strict
+Strict,CONSTRAINTS,■ Current threshold
+Strict,CONSTRAINTS,■ New (tighter) threshold
+Strict,CONSTRAINTS,■ WFE ≤ 25→22 nm strict
+Strict,CONSTRAINTS,■ thresholds (normal/strict)
+Strict,INPUTS,Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.
+Strict,INPUTS,How to print: Print single-sided. Use card sleeves or 65lb cardstock for cards. Use transparent sheets for
+Strict,INPUTS,Refined printable kit  Decks  Overlays  Loom  Stations  Ledgers
+Strict,INPUTS,"Your first problem setup (tokens, views, mirror, strict)"
+Strict,INPUTS, Understand stand■ins (tokens) vs. form (geometry) vs. meaning (labels).
+Strict,INPUTS,"— Deck id, card set, measurement token, 4■bit commit."
+Strict,INPUTS,■■ Run both; mark delta windows; choose one Δ■lift from the cookbook; re■run mirror; record debt drop.
+Strict,INPUTS,■■ Run each rail: tokens→octet→mirror→Δ→strict→4■bit; copy receipts to master ledger.
+Strict,INPUTS,■■ Run with stand■ins; mark any sensitive tokens red; keep octet/mirror/Δ/strict; commit with redacted
+Strict,LEDGER,08_Master_Ledger
+Strict,LEDGER,Ledger hook (what gets recorded)
+Strict,OUTPUTS,4-bit Commit
+Strict,OUTPUTS,6) Receipts: Shade a 4-bit commit; log votes/hashes in the ledger.
+Strict,OUTPUTS,Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING
+Strict,OUTPUTS,Octet Map H1..H8: _______________________________________________
+Strict,OUTPUTS,receipts.
+Strict,OUTPUTS,thresholds; and ledger reproducible 4-bit commits.
+Strict,OUTPUTS,"— 4 receipts, shared form_id, per■rail thresholds."
+Strict,OUTPUTS,"— Rail receipts, meaning pack v#, anchor id."
+Strict,OUTPUTS,"— Stand■in map, redaction count, hash■only attachments."
+Strict,OUTPUTS,■ octet map
+Strict,PROCESS,3) Octet overlay: Fill H1–H8 views; record REST constraints.
+Strict,PROCESS,4) Mirror test: Forward■Inverse ≈ identity. Mismatch → red Δ-lift card.
+Strict,PROCESS,5) Strict ratchet: Tighten thresholds only after a pass (gold sticker).
+Strict,PROCESS,Local repairs + rationale
+Strict,PROCESS,"Mirror Evidence:metrics, plots, checksumsViews Exercised:1 2 3 4 5 6 7 8"
+Strict,PROCESS,Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________
+Strict,PROCESS,Strict Bounds:list tightened thresholds (old new)
+Strict,PROCESS,"What this is: A complete, no-power toolkit to run CQE with paper, pens, a ruler, tape, balsa sticks, and"
+Strict,PROCESS,What you can do: Model multi-view problems; enforce mirror tests; perform local Δ-lifts; tighten strict
+Strict,PROCESS,Worksheet – Strict Ratchet
+Strict,WITNESS,Debrief (2–3 prompts)

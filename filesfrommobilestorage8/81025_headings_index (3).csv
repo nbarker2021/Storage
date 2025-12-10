@@ -1,0 +1,152 @@
+path,lineno,text
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,644,CMPLX / MDHG
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1033,---
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1050,---
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1077,"# Train semantic hash on synthetic pairs, save weights"
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1080,# Evaluate recall/latency/occupancy with or without weights
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1084,# Estimate churn before adopting new weights
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1095,---
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1130,# Build shells around a center and promote under default policy
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1133,# See promotion decisions (+ probe metrics)
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1144,---
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1179,# Budgeted query
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1182,# Tune α/β (offline) and set for a domain
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1194,---
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1213,# prints round-trip distortion and demonstrates capability-guarded KV writes
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1223,---
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1236,# Add conflicting claims for demo
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1240,# Enqueue a contradiction sweep
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1252,---
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1272,# Start service
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1275,# Create a tenant
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1278,# Operate as tenant
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1291,---
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1316,---
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1364,---
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1399,---
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1417,---
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1421,# Build and run
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1425,# Sanity check in another shell
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1428,# Open the dashboard
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1432,---
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1898,# Validate examples
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,1902,# Migrate an old manifest
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2202,3. GPT-5
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2332,# snap/service/writer.py  (new or replace existing writer)
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2337,# hard gate: this raises if invalid
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2359,# rest/app.py (create/update SNAP)
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2382,# ci/check_manifests.sh
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2415,# tests/test_e8_geometry.py
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2433,# each root should have the expected number of neighbors with inner product +1 (E8 property)
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2434,"# For a quick sanity check, ensure non-empty and symmetric:"
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2442,V = R[:3]
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2460,# cmplx/id_policy.py
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2475,# tools/cli.py
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2703,"# or, if you want rejects instead of failure:"
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2704,#   git apply --reject --whitespace=nowarn phase1_full.patch
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2733,# or individually:
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2787,# Apply patch at your repo root
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2790,# (Optional) run CLI comparison locally
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2795,# Run tests
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2849,# If you haven’t applied earlier patches yet:
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2850,#   git apply phase1_full.patch
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2851,#   git apply phase1_dual_stack.patch
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2853,# Run tests
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2856,# (Optional) run a shadow comparison SNAP
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2910,# Run tests
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,2913,# Try dual-compare mode locally:
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,3223,# 1) Stage all versions into one workspace
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,3226,# 2) Promote the highest full version’s geometry to canonical
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,3229,# 3) Preview import rewrites (dry-run)
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,3232,# 4) Apply the rewrites
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,3235,# 5) Sanity-check the canonical geometry
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,4505,(V))=V.
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,4745,∣N∣(∣N∣−1)
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6182,# in your v14+ repo root
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6256,"# Point to your code under test (e.g., the unified/ground-up build)"
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6259,# (Optional) use your own plan; otherwise example_plan.yml is used
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6262,# Run the orchestrated dry run + the pytest that checks it
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6264,# -> outputs ./dryrun_report.json with queue records + SAP events
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6338,# point to your code (merged build or ground-up kit)
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6341,# optional: adjust allowances (caps = 75% of these)
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6346,# -> emits dryrun_report.json with queue records + governance events + caps
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6417,# Point to your codebase (your unified build or ground_up_build)
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6420,# Optional: resource allowance; caps = 75% of these
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6424,# Choose plan (ground_up_plan uses your modules if present)
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6428,"# -> dryrun_report.json + artifacts/*.json (coverage_cert, superperm_candidate, dim3d_probe)"
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6523,# point to your codebase (if you want geometry/scorer available in import path)
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6526,# resource allowance (caps enforced at 75%)
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6530,# use the DRY plan (n=3 alphabet but n7 governance structure)
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6534,# → dryrun_report.json
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6535,"# → artifacts/coverage_cert.json, artifacts/superperm_candidate.json, artifacts/dim3d_probe.json"
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6584,CHANGELOG:
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6600,├─ LICENSE
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6675,-------
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6679,# Placeholder: construct 240 pseudo-roots with correct norm^2.
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6697,----------
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6755,----------
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,6831,# crude redundancy proxy
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,7175,#!/usr/bin/env bash
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,7249,# 1) Import an old code tree or zip
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,7251,# -> copies to legacy/YYYYMMDD/v14-canonical
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,7252,# -> writes artifacts/legacy_intake_v14-canonical_<date>.json
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,7254,# 2) (Optional) scan license
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,7257,# 3) Inventory report
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,7412,# Intake (unzips + fingerprints + manifests)
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,7415,# Optional: license scan
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,7418,# Inventory (sanity check)
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,7446,# adapters/legacy_shims.py usage examples
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,7449,"# Suppose legacy exposes legacy_scorer.score(q, D)"
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 chat log.txt,9054,FULL_CODE_MONOLITH
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,1,# Master Repository — E8 Reasoning Fabric (Canonical Monorepo with Atomic Docstrings)
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,6,---
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,8,## 0) Repo Layout (top-level)
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,14,├─ LICENSE
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,88,---
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,90,## 1) `pyproject.toml`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,115,## 2) `lattice_ai/geometry/e8_roots.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,136,-------
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,140,# Placeholder: construct 240 pseudo-roots with correct norm^2.
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,148,## 3) `lattice_ai/geometry/e8.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,162,----------
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,187,## 4) `lattice_ai/geometry/geodesic.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,216,## 5) `lattice_ai/cmplx/tier1_geom.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,228,----------
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,242,## 6) `lattice_ai/cmplx/tier2_semantic.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,260,## 7) `lattice_ai/cmplx/policy.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,276,## 8) `lattice_ai/router/houses.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,300,## 9) `lattice_ai/router/shells.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,320,# crude redundancy proxy
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,325,## 10) `lattice_ai/router/scorer.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,352,## 11) `lattice_ai/router/budget.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,369,## 12) `lattice_ai/snaps/schema.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,392,## 13) `lattice_ai/snaps/writer.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,426,## 14) `lattice_ai/snaps/validator.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,439,## 15) `lattice_ai/governance/sentinel.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,458,## 16) `lattice_ai/governance/porter.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,472,## 17) `lattice_ai/governance/arbiter.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,488,## 18) `lattice_ai/persona/dna.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,503,## 19) `lattice_ai/persona/variants.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,514,## 20) `lattice_ai/agrm/console.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,531,## 21) `lattice_ai/agrm/playbooks.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,542,## 22) `lattice_ai/datasets/superperm.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,570,## 23) `lattice_ai/datasets/stitcher.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,580,## 24) `lattice_ai/rest/app.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,595,## 25) `lattice_ai/rest/query.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,609,## 26) `lattice_ai/rest/shells.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,622,## 27) `lattice_ai/rest/snaps.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,635,## 28) `lattice_ai/utils/logging.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,653,## 29) `lattice_ai/utils/ids.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,664,## 30) `tests/test_geometry.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,678,## 31) `tests/test_cmplx.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,694,## 32) `tests/test_router.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,709,## 33) `tests/test_snaps.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,721,## 34) `tests/test_governance.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,732,## 35) `tests/test_superperm.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,744,## 36) `tests/test_rest.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,755,## 37) `docs/SYSTEM_OVERVIEW.md`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,761,## 38) `tools/migrate_imports.py`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,781,## 39) `tools/run_harness.sh`
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,784,#!/usr/bin/env bash
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,789,---
+/mnt/data/agrm_pkg/gpt gode for agrm-cmplx/starting docs/latest best of 81025 master codeblock.txt,791,### Notes
