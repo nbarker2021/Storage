@@ -1,0 +1,4 @@
+test_id,title,domain,required_pins,witnesses,scales,verdict_policy,notes
+NAV_MARS_HOHMANN_v0,"Mars Navigation (Hohmann transfer, scratch-only)",navigation,atm_density_kg_m3;dv_budget_m_s,"DFT,WHT,Parity,CRT,ConA","mods(2,4,8,32,13);ring(16);lambda(0.655)",PROVISIONAL-OPEN (NTER if any pin missing),Symbolic tokens ok; physical pins must come from cited sources for OPEN.
+ICE_PHASE_VII_v0,Ice phase under warm high-pressure (VII),ice_phase,pressure_gpa;temp_c,"DFT,WHT,Parity,CRT,ConA","mods(2,4,8,32,13);ring(16)",OPEN if all pins present and legal; else NTER,Stand-in pins must be numeric with units.
+CODON_DUPLEX_TWIN_v0,Codon–Anticodon Twin + Peptide Bond,bio_codon,,"Parity,CRT,ConA","mods(2,4,8,32)",OPEN (symbolic legality),No external physical pins required for pilot.

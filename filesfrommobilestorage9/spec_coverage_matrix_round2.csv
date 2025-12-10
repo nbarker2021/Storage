@@ -1,0 +1,26 @@
+test_id,spec_coverage,doc_refs,note
+F016,Partial,"Paper C, Paper E",Idempotent advance implied; needs explicit step monotonicity + race handling
+F017,Implicit,Paper C,Residue clocks exist; jitter window not specified
+F018,Implicit,Paper C,Latches described; monotonicity invariant not explicit
+F019,Implicit,Appendix II,Witness math; normalization policy not stated
+F020,Missing,Paper A/B,Numeric range/clamping policy unspecified
+F021,Partial,Paper E,API ok; overlay order canonicalization not dictated
+F022,Partial,Paper E/F,Version tags exist; anchor reindex policy not explicit
+F023,Partial,Appendix IV,Auto-promotion discussed informally; demotion policy missing
+F024,Partial,Paper F,Scopes described; concrete error codes/messages absent
+F025,Implicit,Paper F,Isolation assumed; cross-tenant composition policy not explicit
+F026,Missing,Paper E,Sagas/compensation not covered
+F027,Partial,Paper E,Ledger present; ordering guarantees not spelled out
+F028,Missing,Paper C/E,Pulse-order versioning absent
+F029,Implicit,Paper B/C,Gauge fixed; mid-cycle shift rule not explicit
+F030,Missing,Appendix II,Heterogeneous epsilon policy absent
+F031,Partial,Paper C,CRT discussed; rebase procedure missing
+F032,Missing,Paper F,Anti-replay on proofs not specified
+F033,Missing,Paper E,Tie-breakers for near-collisions unspecified
+F034,Implicit,Paper B,Phase wrap understood; unwrapping algorithm unspecified
+F035,Partial,Paper G/E,Moonshine id present; mismatch behavior not codified
+F036,Implicit,Appendix I,Geometry known; quantizer tie-break unspecified
+F037,Missing,Paper C,Fairness across cycles not defined
+F038,Implicit,Paper G,Decode pipeline implied; clamping policy not stated
+F039,Missing,Paper C,Null-delta advance rule not defined
+F040,Missing,Paper E,Canonical float serialization not defined

@@ -1,0 +1,7 @@
+tool,code_path,action,reusability,risk,deps,import,exports
+SNAPRecord,/mnt/data/_bestof_unpack/bestof_agrm/snap/__init__.py,Adopt (selective segment),segment-ready,low,,n/a,
+SNAPType,/mnt/data/_bestof_unpack/bestof_agrm/snap/__init__.py,Adopt (selective segment),segment-ready,low,,n/a,
+SNAPError,/mnt/data/_bestof_unpack/bestof_agrm/snap/__init__.py,Adopt (selective segment),segment-ready,low,,n/a,
+SNAPToken,/mnt/data/_bestof_unpack/bestof_agrm/snap/__init__.py,Adopt (selective segment),segment-ready,low,,n/a,
+SNAPDoc,/mnt/data/_bestof_unpack/bestof_agrm/snap/__init__.py,Adopt (selective segment),segment-ready,low,,n/a,
+SNAPKernel,/mnt/data/_bestof_unpack/bestof_agrm/snap/__init__.py,Adopt (selective segment),segment-ready,low,,n/a,

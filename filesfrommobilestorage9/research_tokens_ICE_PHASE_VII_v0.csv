@@ -1,0 +1,4 @@
+token_id,value,units,source,provenance,confidence
+pressure_gpa,2.5,GPa,stand-in,scratch,low
+temp_c,25,C,stand-in,scratch,low
+phase_label,VII_candidate,-,symbolic,spec,n/a

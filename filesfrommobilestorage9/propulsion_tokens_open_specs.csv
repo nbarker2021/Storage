@@ -1,0 +1,10 @@
+token,engine_name,org,propellants,cycle,thrust_sl_lbf,thrust_sl_kN,thrust_vac_lbf,thrust_vac_kN,isp_sl_s,isp_vac_s,chamber_pressure_psia,mixture_ratio,notes
+PROP::ENGINE::RS25,RS-25 (SSME),NASA / L3Harris (Aerojet Rocketdyne),LOX/LH2,Staged combustion,418000.0,1859.3566351788888,512300.0,2278.8239334979544,366.0,452.0,2994.0,6.0,109% power level figures
+PROP::ENGINE::RL10C-1-1,RL10C-1-1,L3Harris (Aerojet Rocketdyne),LOX/LH2,Expander,,,23825.0,105.9788799835814,,453.8,,5.5,Upper-stage vacuum engine
+PROP::ENGINE::MERLIN1D,Merlin 1D (sea level),SpaceX,LOX/RP-1,Gas generator,190000.0,845.1621068994949,,,,,,,Per-engine sea-level thrust; user guide confirms gas-generator cycle.
+PROP::ENGINE::BE4,BE-4 (sea level),Blue Origin,LOX/LCH4,Oxygen-rich staged combustion,550000.0,2446.521888393275,,,,,,,Per-engine sea-level thrust on Vulcan/NG
+PROP::ENGINE::VULCAIN21,Vulcain 2.1 (vacuum),ArianeGroup / ESA (Ariane 6),LOX/LH2,Gas generator,,,308213.0609897031,1371.0,,,,,Vacuum thrust from ESA/ArianeGroup
+PROP::ENGINE::RD180,RD-180 (sea level),NPO Energomash / ULA,LOX/RP-1,Oxygen-rich staged combustion,860200.0,3826.360233447082,,,,,,,Sea-level thrust per ULA
+PROP::ENGINE::RUTHERFORD_SL,Rutherford (sea level),Rocket Lab,LOX/RP-1,Electric pump-fed,5600.0,24.910041045458797,,,311.0,,,,Electron first stage
+PROP::ENGINE::RUTHERFORD_VAC,Rutherford (vacuum),Rocket Lab,LOX/RP-1,Electric pump-fed,,,5800.0,25.799685368510897,,343.0,,,Electron second stage
+PROP::ENGINE::LE9,LE-9 (sea level),JAXA / MHI (H3),LOX/LH2,Expander bleed,330918.7642427739,1472.0,,,,,,,Thrust per JAXA brochure; cycle per JAXA site

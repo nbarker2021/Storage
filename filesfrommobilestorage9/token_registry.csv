@@ -1,0 +1,29 @@
+token_id,name,type,B8_motifs,cqe_default,falsified,status,first_seen_source,rails_intro,updates_count,notes
+7d635528c2fa450197ff4d46c3,palindromic_rest,concept,10100000,True,False,viable,session,0000,0,Core rest snapshot; palindromic averaging & invariants
+c5c1674b16d94535883f30cce2,octad_rails_painting,policy,10100001,True,False,viable,session,0000,0,4 painted rails with chroma; 4-bit signature B
+051f31249eba4ee1b6549c7d5f,HLP_gentle_calibration,method,10100000,True,False,viable,session,0000,0,Low-gain alignment toward truth before any nudge
+057e1579422e409dbc5dc33d2e,VENT_iso_target,method,01100000,True,False,viable,session,0010,1,Iso-target micro-breathing to shed residues
+50fb555a682f43c0b6c434e8f0,ABL_amoebic_corridors,method,01100000,True,False,digest,session,0110,1,Pseudopods with DIGEST/EXO under iso-constraints
+29991b740a98450cb896aab6d4,DIGEST_commit,policy,01100000,True,False,viable,session,0000,0,Merge corridor only if B=1111 + receipts pass
+b577d3968bec440fae4c6d0cd4,EXO_non_commit,policy,01100000,True,False,exo,session,0110,1,Log and discard poor-to-context motif; no core pollution
+f260e582327d4c289fe5eabc71,single_rail_nudge,method,00100100,True,False,viable,session,0000,0,Surgical one-rail tweak when exactly one bit is off
+30492062009e4b53ad2e78d7c3,B_signature_4bit,artifact,00100000,True,False,viable,session,0000,0,Binary code of the four rails after sealing
+8740dd32d3e44ca8a23080dc60,receipts_ECE_white_rho_leak,artifact,01100000,True,False,viable,session,0000,0,"ECE, slope, whiteness_p, cross_rho, leakage"
+b8182881e77d4bc6bb34bd9c3b,phi_greedy_tiebreaker,policy,10101000,True,False,viable,session,0111,1,Golden-ratio biased tie-break for greedy scans
+b432efd32871445a8b2a86c3b1,n5_hinge_superperm,theory,10110000,True,False,viable,session,0000,0,n=5 hinge & superpermutation logic for phase jumps
+c6de87ae310440d58af74df588,E8_Weyl_Cartan_Golay_Leech,theory,10010000,True,False,viable,session,0000,0,Algebraic scaffolds; Construction A; parity mirroring
+64df0b614ce143a28e3149eec0,Monster_Moonshine_links,theory,10010000,True,False,viable,session,0000,0,"Monster, moonshine, and modular echoes in constraints"
+1536e521a52d44e6abe16a51b4,JWST_reframing_observable,claim,10000001,True,False,viable,session,0000,0,Observation scale reframes edge/center via resolution
+64822f1de95a4d138ff0cbf205,rogue_wave_residue_channel,claim,01000001,True,False,viable,session,0000,0,Turbulent systems need exhaust manifolds (VENT analogy)
+c1960edece61458cb5e05db8ad,QD_absorption_600_800,test,01100100,True,False,digest,session,1110,1,Quantum-dot twin-target rails with width/peak gates
+6252bf1a2d8a40f99b7a9871ef,Coherence_R_E_F_W,test,01100010,True,False,viable,session,1011,1,"Ramsey, Echo, Fidelity, Whiteness as rails"
+86cc039bc266418490fe5c29f7,BIO_qubit_fluor_protein_ODMR,claim,00100010,True,False,digest,session,0111,1,Fluorescent protein spin qubit ODMR as bio-rail
+5034dbde23a94ed3be56f67fc0,LiNbO3_photonic_gauges,claim,00100100,True,False,viable,session,0110,1,EO phase/bias control & synthetic gauge fields
+e9ce6fcc2d304f659e3bdf1ad3,LC_visible_time_crystal,claim,01100001,True,False,viable,session,1010,1,LC time-crystal analog; subharmonic lock under VENT
+acf3ce7bd1814107bf1a0ba2d6,Primordial_Bfield_0p02nG,claim,01100001,True,False,exo,session,1100,1,Cosmic web faint-field reconciliation via corridors
+28dee1f2bbd243cf9414ab9eb0,Skyrmion_spiral_spintronic,claim,00100110,True,False,digest,session,1101,1,Chiral textures; low-power spin logic rails
+278d9a7682ab4c5d912bb84586,Brain_rhythm_recall_explore,claim,01100010,True,False,viable,session,1001,1,Alternating LFP regimes as rail states
+613097b6c2bb456daca640cd59,Context_bundle_CB,meta,11100000,True,False,viable,session,0000,0,Multi-chunk wrap that behaves like a live session
+41ecb97e964f4409b8658e4385,Token_registry_system,meta,10100000,True,False,viable,session,0000,0,Provenance + versioning; CQE default medium
+3d6fd4a2354148fca571c85be1,Session_motif_octad,meta,11111111,True,False,viable,session,0000,0,B8 motif codes tagging every token
+1f85f61d29614b0cb0ffb9622e,Jacobs_ladder_comm,method,11100000,True,False,viable,session,0000,0,Eight-way parity communication between teams

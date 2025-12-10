@@ -1,0 +1,4 @@
+test_id,title,gate_arms,dual_witness,NTER_pins,verdict
+NAV_MARS_HOHMANN_v0,"Mars Navigation (Hohmann transfer, scratch-only)",1/1/1/1/1/1,GREEN/GREEN,,OPEN
+ICE_PHASE_VII_v0,Ice phase under warm high-pressure (VII),1/1/1/1/1/1,GREEN/GREEN,,OPEN
+CODON_DUPLEX_TWIN_v0,Codon–Anticodon Twin + Peptide Bond,1/1/1/1/1/1,GREEN/GREEN,,OPEN

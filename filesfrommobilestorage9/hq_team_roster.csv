@@ -1,0 +1,10 @@
+role,floor,duty
+Seeder,Ground,"Fix seed_id, freeze scope, set rng_seed, hash policy"
+Builder,L3,Enumerate legal transforms; keep K small (pre-pose)
+Mirror,L4,Chiral/anti reflections; certify dihedral class
+Gatekeeper,L1,Run CRT corridor and 6 governance arms
+Alena,L5,Choose minimal-defect lawful snap (λ≈0.66)
+Spectral,L7,DFT/WHT hygiene; one whitelisted odd-bin flip max
+Validation,L8,Cartan/Weyl/Golay/Conway/Monster checks
+Librarian,L6,Append ledger; HP/SP journals; triple-hash
+Reporter,Roof,Broadcast run; archive diffs & invariants

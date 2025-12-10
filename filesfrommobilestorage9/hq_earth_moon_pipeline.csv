@@ -1,0 +1,5 @@
+axis,path,least_action,witness_ok,w_parity_set,w_DFT,w_WHT,w_haptic,w_rf_lane,w_seismic,res_mod2,res_mod3,res_mod5,res_mod7,res_mod11,res_mod13,OPEN
+9,Ballistic-Capture,0.1365806951897717,True,True,True,True,False,True,False,1,1,3,6,4,1,False
+6,DRO,0.14801039384630263,True,True,False,False,False,True,False,1,1,0,6,6,1,False
+3,Free-Return,0.33780142184455686,True,True,True,True,False,True,False,1,1,3,6,6,1,False
+0,NRHO(L2),0.8431739929809585,True,True,True,False,False,True,False,1,1,3,6,6,1,False

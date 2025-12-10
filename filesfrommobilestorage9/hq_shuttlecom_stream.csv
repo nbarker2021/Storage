@@ -1,0 +1,8 @@
+t,who,channel,claim,justification,parity,brane,pointers
+1,Seeder,PA,Seed frozen,hash(scope+policy) stored,chiral,forward,"{""seed"": ""af553e62""}"
+2,Gatekeeper,ShuttleCOM,Candidate NRHO(L2) (0),witness_quorum=True; CRT_OPEN=False,chiral,forward,"{""arms"": {""mod11"": 6, ""mod13"": 1, ""mod2"": 1, ""mod3"": 1, ""mod5"": 3, ""mod7"": 6}, ""axis"": 0, ""path"": ""NRHO(L2)"", ""witness"": {""DFT"": true, ""WHT"": false, ""haptic"": false, ""parity_set"": true, ""rf_lane"": true, ""seismic"": false}}"
+3,Gatekeeper,ShuttleCOM,Candidate Free-Return (3),witness_quorum=True; CRT_OPEN=False,anti,forward,"{""arms"": {""mod11"": 6, ""mod13"": 1, ""mod2"": 1, ""mod3"": 1, ""mod5"": 3, ""mod7"": 6}, ""axis"": 3, ""path"": ""Free-Return"", ""witness"": {""DFT"": true, ""WHT"": true, ""haptic"": false, ""parity_set"": true, ""rf_lane"": true, ""seismic"": false}}"
+4,Gatekeeper,ShuttleCOM,Candidate DRO (6),witness_quorum=True; CRT_OPEN=False,chiral,forward,"{""arms"": {""mod11"": 6, ""mod13"": 1, ""mod2"": 1, ""mod3"": 1, ""mod5"": 0, ""mod7"": 6}, ""axis"": 6, ""path"": ""DRO"", ""witness"": {""DFT"": false, ""WHT"": false, ""haptic"": false, ""parity_set"": true, ""rf_lane"": true, ""seismic"": false}}"
+5,Gatekeeper,ShuttleCOM,Candidate Ballistic-Capture (9),witness_quorum=True; CRT_OPEN=False,anti,forward,"{""arms"": {""mod11"": 4, ""mod13"": 1, ""mod2"": 1, ""mod3"": 1, ""mod5"": 3, ""mod7"": 6}, ""axis"": 9, ""path"": ""Ballistic-Capture"", ""witness"": {""DFT"": true, ""WHT"": true, ""haptic"": false, ""parity_set"": true, ""rf_lane"": true, ""seismic"": false}}"
+6,Falsifier,ShuttleCOM,No unique survivor,Either CLOSED or anomaly; escalate,anti,review,{}
+7,Reporter,Mast,Broadcast survivor and hash,replay kit ready,twin,publish,"{""rows"": 0}"

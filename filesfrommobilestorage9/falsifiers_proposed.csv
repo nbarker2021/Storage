@@ -1,0 +1,16 @@
+test_id,category,scenario,input_payload_json,expected_verdict,expected_signals_json,severity
+F001,Screw/Class,13A/13B mismatch across segments,"{""rest"": {""class"": ""13A""}, ""delta"": {""class"": ""13B""}, ""tolerance"": {""phase_max_deg"": 1.0}}",REJECT,"{""phase_drift_deg"": "">1.0"", ""replay_hash_match"": false, ""residue_consistency"": true}",P1
+F002,All‑8 Gate,Force H3<0 so latch3 never fires,"{""faces"": {""H3"": {""offset"": -0.02}}, ""policy"": {""advance_requires_all_8"": true}}",STALL,"{""latches"": [1, 1, 1, 0, 1, 1, 1, 1], ""advance"": false, ""watchdog_alert"": true}",P1
+F003,Even‑Lift,Execute Type‑I Δ without Return,"{""delta"": {""parity"": ""odd"", ""even_lift_applied"": false}}",REJECT,"{""requires_even_lift"": true, ""executed"": false}",P0
+F004,Measure‑Zero,Set H_i==0 exactly for all i,"{""faces"": {""all_equal_zero"": true}, ""epsilon"": 0.0}",REJECT,"{""toggle_rate"": ""high"", ""instability"": true}",P2
+F005,CRT,Supply inconsistent residues,"{""residues"": {""t_mod_13"": 5, ""t_mod_5"": 4}, ""ledger_prev"": {""t_mod_65"": 17}}",REJECT,"{""crt_consistency"": false, ""request_resync"": true}",P0
+F006,Dyadic Rest,Declare R2 while 4 planes active,"{""declared_rest"": ""R2"", ""active_planes"": 4, ""policy"": ""auto_promote""}",AUTO‑PROMOTE,"{""rest_auto_promotion"": ""R8""}",P3
+F007,Mirror,Break J by wrong π on plane 2,"{""mirror"": {""plane2_phase"": ""pi/2""}}",REJECT,"{""pal_check"": false, ""mirror_invariant"": false}",P1
+F008,Bounds Pulse,Move H4 outward without contact,"{""pulse"": {""H4"": ""+0.1""}, ""evidence"": {""H4_touch"": false}}",REJECT,"{""pulse_without_witness"": true}",P2
+F009,Ledger,Alter one event hash,"{""ledger"": {""tamper_at_index"": 7}}",REJECT,"{""rehydration_hash_match"": false, ""tamper_detected"": true}",P0
+F010,Idempotency,Replay same apply_delta twice,"{""request_id"": ""abc123"", ""apply_delta"": {""Δ_id"": ""d-42""}}",REJECT,"{""duplicate_request"": true, ""idempotency_violation"": true}",P0
+F011,Parity/Evenness,R16 declared but doubly-even check fails,"{""rest"": ""R16"", ""parity_bits"": ""mismatch""}",REJECT,"{""evenness_violation"": true}",P1
+F012,Anchor Collision,"Same E, different tags","{""anchor"": {""E"": ""hash:xyz"", ""tags"": {""phase13"": 7, ""tuple_n"": 10}}, ""anchor2"": {""E"": ""hash:xyz"", ""tags"": {""phase13"": 8, ""tuple_n"": 10}}}",REJECT,"{""anchor_collision"": true}",P1
+F013,Composition Order,Apply non-commuting overlays without proof,"{""overlays"": [""S"", ""G""], ""compose_proof"": false}",REJECT,"{""non_commuting"": true}",P2
+F014,Witness Starvation,Bias policy so H7 rarely/never fires,"{""faces"": {""H7"": {""narrow"": 0.9}}, ""policy"": {""min_rate_H7"": 0.0}}",REJECT,"{""starved_face"": ""H7"", ""advance"": false}",P2
+F015,Epsilon Collapse,Set epsilon=0 in gating,"{""epsilon"": 0.0}",REJECT,"{""flapping"": true}",P3

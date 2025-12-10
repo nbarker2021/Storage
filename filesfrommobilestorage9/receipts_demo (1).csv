@@ -1,0 +1,4 @@
+form_id,domain,MAE_eV,MSE_eV2,SC,data_rung,fourbit,status,P_spin,sigma,Vbias,temp,IL_dB,ER_dB,BER,Gbps
+QChem_XC_ML_v1,QuantumChemistry,0.048,0.004,0.982,rung2→rung3-accuracy,1011,PROVISIONAL,,,,,,,,
+SpinHelix_RT_Filter,Spintronics,,,,,1101,PROVISIONAL,0.81,1.2,0.05,295.0,,,,
+Photonic_PseudoB_Splitter,PhotonicChip,,,,,1010,PROVISIONAL,,,,,1.4,18.0,3.2e-12,140.0

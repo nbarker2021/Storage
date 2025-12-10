@@ -1,0 +1,26 @@
+test_id,category,scenario,input_payload_json,expected_verdict,expected_signals_json,severity
+F016,Concurrency,Double advance race (two controllers call /advance at once),"{""actions"": [{""op"": ""advance"", ""req_id"": ""r1""}, {""op"": ""advance"", ""req_id"": ""r2""}], ""policy"": {""idempotent_step"": true}}",REJECT/ONE-OK,"{""step_increment"": ""==1"", ""race_detected"": true, ""duplicate_blocked"": true}",P0
+F017,Clock/Residue,Timebase jitter causes residue misreport,"{""residues"": {""source"": ""system_clock"", ""jitter_ms"": 25}, ""tolerance"": {""residue_window"": ""±1 tick""}}",REJECT/RESYNC,"{""residue_out_of_window"": true, ""resync_requested"": true}",P2
+F018,Witness Monotonicity,Latched bit cleared mid-cycle,"{""latches"": {""H5"": {""set"": 1, ""later_cleared"": 1}}}",REJECT,"{""latch_monotonicity_violated"": true}",P1
+F019,Normalization,Face normals unnormalized (scale mismatch),"{""faces"": {""H1"": {""normal_norm"": 0.01}, ""H2"": {""normal_norm"": 10.0}}, ""epsilon"": 1e-06}",REJECT/FIXUP,"{""faces_renormalized"": true, ""scale_invariance_restored"": true}",P3
+F020,Numeric Range,A_p radii underflow/overflow,"{""A"": [1e-14, 1e-14, 1e-14, 1e-14], ""axis"": 1000000000.0}",REJECT/CLAMP,"{""clamped"": true, ""range_violation"": true}",P2
+F021,Overlay Order,Dict-order nondeterminism in overlay application,"{""overlays"": {""unordered_keys"": {""M"": 1, ""S"": 1, ""G"": 1}}}",REJECT/FIXUP,"{""canonical_order_enforced"": true, ""replay_hash_match"": true}",P1
+F022,Versioning,Anchor embedder version mismatch,"{""anchor"": {""vers"": {""embedder"": ""v1.2""}}, ""runtime"": {""embedder"": ""v1.3""}}",REJECT/REINDEX,"{""vers_mismatch"": true, ""reindex_required"": true}",P1
+F023,Rest Demotion,"After auto-promotion to R8, next frame declares R4","{""prev_rest"": ""R8"", ""declared_rest"": ""R4""}",REJECT/PIN,"{""rest_demotion_blocked"": true}",P2
+F024,AuthZ,Wrong key scope used to call overlay family,"{""key_scope"": ""G"", ""api_call"": ""/delta/apply?family=M""}",REJECT,"{""authz_denied"": true}",P0
+F025,Tenant Isolation,Cross-tenant composition attempt,"{""tenant_a_anchor"": ""A1"", ""tenant_b_delta"": ""BΔ""}",REJECT,"{""cross_tenant_blocked"": true}",P0
+F026,Sagas/Compensation,apply_delta committed; ledger append fails,"{""apply_delta"": {""Δ_id"": ""d-77""}, ""ledger"": {""append"": ""fail""}}",ROLLBACK/RETRY,"{""compensation_triggered"": true, ""idempotent_retry_ok"": true}",P0
+F027,Ledger Ordering,Out-of-order event (step decreases),"{""prev_step"": 42, ""event_step"": 41}",REJECT,"{""out_of_order"": true}",P1
+F028,Pulse Order,Change pulse order mid-run without version bump,"{""pulse_order_change"": true, ""version_bump"": false}",REJECT,"{""order_version_mismatch"": true}",P2
+F029,Gauge Freeze,Mirror gauge shifts during cycle,"{""gauge"": {""shift_time"": ""mid_cycle""}}",REJECT,"{""gauge_nonstationary"": true}",P2
+F030,Tolerance Policy,Per-face heterogeneous epsilons without spec,"{""epsilon"": {""H1"": 1e-06, ""H2"": 0.001, ""H3"": 0}}",REJECT/FIXUP,"{""epsilon_normalized"": true}",P3
+F031,CRT Rebase,Remove/add CRT module mid-run without rebase,"{""crt"": {""before"": [""13"", ""5""], ""after"": [""13""]}}",REJECT/RESYNC,"{""crt_rebase_required"": true}",P2
+F032,Proof Replay,Reuse an old Even-Lift proof,"{""even_lift_proof"": {""nonce"": ""stale"", ""ts"": ""old""}}",REJECT,"{""proof_replay_detected"": true}",P0
+F033,Anchor Near-Collision,Two anchors within ε distance,"{""anchors"": [{""E"": ""e1""}, {""E"": ""e2""}], ""dist"": ""<ε""}",TIEBREAK,"{""tie_break_rule_applied"": true}",P2
+F034,Phase Wrap,Angles cross 2π boundary; unwrap missing,"{""phase_sequence"": [6.0, 6.2, 0.1]}",REJECT/FIXUP,"{""unwrap_applied"": true}",P2
+F035,Envelope Drift,Moonshine envelope id mismatch between ends,"{""encoder_Tg"": ""13A_norm1"", ""decoder_Tg"": ""13A_norm2""}",REJECT,"{""moonshine_version_mismatch"": true}",P1
+F036,Quantizer Boundary,E8 nearest-neighbor tie,"{""vq_candidate"": ""Voronoi_boundary""}",TIEBREAK,"{""quantizer_tiebreak_rule"": ""lexicographic""}",P2
+F037,Fairness,One face rarely latches; N-cycle fairness violated,"{""fairness"": {""min_latches_per_N"": 1, ""N"": 10}, ""observed"": {""H6"": 0}}",REJECT/ADJUST,"{""fairness_violation"": true}",P2
+F038,Decode Clamp,Δ mix yields negative pixel values,"{""decode"": {""values"": [-0.01, 1.2]}}",REJECT/FIXUP,"{""clamped_to_range"": true}",P3
+F039,Null Δ,Δ=0 across cycle; can cadence still advance?,"{""delta_zero_cycle"": true}",SPECIFY,"{""advance_rule_for_null_delta"": ""required""}",P3
+F040,Serialization,Float truncation in JSON causes mismatch,"{""serialize"": {""format"": ""short"", ""precision"": 4}}",REJECT/FIXUP,"{""canonical_float_format"": ""base10-decimal-17""}",P2

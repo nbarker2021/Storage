@@ -1,0 +1,6 @@
+token_id,value,units,source,provenance,confidence
+codon_P,AUG,triplet,symbolic,spec,n/a
+anticodon_P,UAC,triplet,symbolic,spec,n/a
+codon_A,GAA,triplet,symbolic,spec,n/a
+anticodon_A,CUU,triplet,symbolic,spec,n/a
+bond_event,peptide_bond,event,symbolic,PTC,n/a

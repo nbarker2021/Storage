@@ -1,0 +1,13 @@
+update_id,token_id,token_name,event,before_B,after_B,delta_bits,residue_flux,reason
+6f961b4e883243118ead4843de,057e1579422e409dbc5dc33d2e,VENT_iso_target,VENT,0010,0110,1,0.18,"width↓, var↓, targets stable"
+85b3d77677f74b7fbb1ec9a965,50fb555a682f43c0b6c434e8f0,ABL_amoebic_corridors,DIGEST,0110,1110,1,0.25,receipts_pass
+896324be9153456eaeda505b10,b577d3968bec440fae4c6d0cd4,EXO_non_commit,EXO,0110,0110,0,0.0,no_iso_move
+e58987c58b1042d59ddd4e7f22,c1960edece61458cb5e05db8ad,QD_absorption_600_800,DIGEST,1110,1111,1,0.12,linewidth gate passes
+006c0ef19a3e4a73822d0412e1,6252bf1a2d8a40f99b7a9871ef,Coherence_R_E_F_W,NUDGE,1011,1111,1,0.05,single-rail F
+b4813e5c9900422b8a78f3caab,e9ce6fcc2d304f659e3bdf1ad3,LC_visible_time_crystal,VENT,1010,1110,1,0.21,subharmonic lock stabilized
+247a928aeb6540cf93755986f1,acf3ce7bd1814107bf1a0ba2d6,Primordial_Bfield_0p02nG,EXO,1100,1110,1,0.0,priors too loose
+12e14509552f497da343168ee0,86cc039bc266418490fe5c29f7,BIO_qubit_fluor_protein_ODMR,DIGEST,0111,1111,1,0.14,contrast stable
+4ecefd9a98274b4996da6ff446,5034dbde23a94ed3be56f67fc0,LiNbO3_photonic_gauges,VENT,0110,1110,1,0.19,dispersion tamed
+e9f699d981e14d21b043004c30,28dee1f2bbd243cf9414ab9eb0,Skyrmion_spiral_spintronic,DIGEST,1101,1111,1,0.17,thermal drift contained
+7cba284cfef540fcbddbb36930,278d9a7682ab4c5d912bb84586,Brain_rhythm_recall_explore,VENT,1001,1101,1,0.09,windowing iso-ROC
+e4d03db0b7774e2fb4ac1b9080,b8182881e77d4bc6bb34bd9c3b,phi_greedy_tiebreaker,POLICY,0111,1111,1,0.07,tie-break reduces flops

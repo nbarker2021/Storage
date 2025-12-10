@@ -1,0 +1,51 @@
+component,category,mentions,docs_count,degree
+UTC 2025-09-20 21:06,other,15,15,125
+What it teaches (learning targets),other,17,17,85
+Ledger hook (what gets recorded),ledger,17,17,74
+Room,other,17,17,56
+N/A,other,17,17,54
+Notes:,other,9,9,45
+Safety,other,17,17,44
+Paper kit,other,17,17,41
+Instruments,other,17,17,37
+Receipts & 4-bit,ledger,2,2,13
+4-bit Commit,view,2,2,11
+Receipts: 4-bit:____ votes: mirror__/__ views__/__ page hash: __________________,ledger,2,2,10
+4 stations; shared octet; sticky token labels.,station,2,2,9
+4 stations; shared octet; sticky token labels.,view,2,2,9
+Cartan links; run octet/mirror/Δ/strict; pause for a measurement; re■enter.,view,2,2,9
+Form ID: __________________ Status: ■ANCHOR ■PROVISIONAL ■WORKING ■NON-WORKING,ledger,2,2,9
+OPE FCE View Mirror,view,2,2,9
+"Octet sheet, DNA■10, 4■bit sticker, ledger page.",ledger,2,2,9
+"Octet sheet, DNA■10, 4■bit sticker, ledger page.",view,2,2,9
+"One table, 8 colored pens, tape wall for overlays.",overlay,2,2,9
+P M,other,2,2,9
+Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________,ledger,2,2,9
+Receipt: ■OPE ■FCE ■View ■Mirror Hash: __________,view,2,2,9
+"Round table, role badges, coordination board.",role,2,2,9
+"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts",ledger,2,2,9
+"Scene 14: Sandbox Red/Blue: Safety, Redaction, Receipts",scene,2,2,9
+Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix),scene,2,2,9
+Scene 2: Mirror & Δ■Lift Clinic (Bug■to■Fix),view,2,2,9
+Scene 3: Octet Coverage for ML (A/B→Octet),scene,2,2,9
+Scene 3: Octet Coverage for ML (A/B→Octet),view,2,2,9
+Scene 4: Construction■A Loom: E8 and Leech on Paper,overlay,2,2,9
+Scene 4: Construction■A Loom: E8 and Leech on Paper,scene,2,2,9
+Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes,scene,2,2,9
+Scene 5: Sidecar Sprint: 4 Rails in 20 Minutes,sidecar,2,2,9
+Scene 6: Two■Scientist Theorem■Card Resolution,scene,2,2,9
+Scene 6: Two■Scientist Theorem■Card Resolution,theorem,2,2,9
+Scene 8: Card■Deck CQE + Lab Stations,scene,2,2,9
+Scene 8: Card■Deck CQE + Lab Stations,station,2,2,9
+Theorem Card,theorem,2,2,9
+"Theorem cards, claim wall, mirror worksheet.",theorem,2,2,9
+"Theorem cards, claim wall, mirror worksheet.",view,2,2,9
+Three stations; octet master; metrics per rail.,station,2,2,9
+Three stations; octet master; metrics per rail.,view,2,2,9
+"Thresholds: normal{OPE:__,FCE:__} strict{OPE:__,FCE:__}",view,2,2,9
+Worksheet – 4■bit Receipt,ledger,2,2,9
+Worksheet – Ledger Row,ledger,2,2,9
+Worksheet – Mirror Test,view,2,2,9
+Worksheet – Octet Overlay,overlay,2,2,9
+Worksheet – Octet Overlay,view,2,2,9
+Worksheet – Strict Ratchet,view,2,2,9

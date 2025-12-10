@@ -1,0 +1,5 @@
+pair,high_mid_overlap,high_rev_overlap,mid_rev_overlap,high_only,mid_only,rev_only
+honeycomb-kagome,213,157,185,498,671,495
+kagome-archimedean,191,165,195,469,637,500
+archimedean-lieb,183,145,191,466,613,486
+lieb-honeycomb,207,145,197,500,620,510

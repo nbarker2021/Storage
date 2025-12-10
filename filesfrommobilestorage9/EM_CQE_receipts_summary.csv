@@ -1,0 +1,7 @@
+test,regime,g2,DoP,S_signs,pol_code,f0_est,delta_harm,cartan_hit,bicoherence,energy_ok,b1,b1_class,b2,b3,b4,stability_hits_over_scan,baseline_bico,baseline_delta,baseline_hit,overlay_secondary_delta,overlay_secondary_hit,overlay_bico,overlay_note
+T1_sweep,coherent,1.0475843542857655,0.9999999999999998,"(1, 1, 0)",6,119.0,1.7795130420052185,1.0,1.0,True,1,coherent,1,0,1,,,,,,,,
+T1_sweep,thermal,1.4285356608400048,0.9999999999999998,"(1, 1, 0)",6,119.0,1.7795130420052185,1.0,1.0,True,1,thermal,1,0,1,,,,,,,,
+T1_sweep,antibunched,0.0,0.9999999999999998,"(1, 1, 0)",6,119.0,1.7795130420052185,1.0,1.0,True,1,antibunched,1,0,1,,,,,,,,
+T2_polarization_walk,plate_scan,0.9403376826705684,1.0,"(0, 0, 1)",1,89.0,1.7795130420052185,0.8333333333333334,1.0,True,1,coherent,1,0,1,6.0,,,,,,,
+T3_kerr_proxy,nonlinear,0.8917767835941927,1.0,"(1, 1, 1)",7,99.0,2.3804761428476167,0.6666666666666666,0.022616232821400687,True,0,indeterminate,1,0,0,,0.0026485993806518015,23.569047498785352,0.16666666666666666,,,,
+T4_hidden_sector_mock,wall,1.1397688396823946,1.0,"(1, 1, 1)",7,59.0,1.7795130420052185,0.5,1.0,True,0,indeterminate,1,0,1,,,,,1.7795130420052185,0.5,0.0009799635985706958,provisional overlay only

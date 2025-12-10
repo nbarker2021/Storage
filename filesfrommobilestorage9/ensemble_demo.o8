@@ -1,0 +1,18 @@
+# Ensemble-flavored demo: bind metadata, pick gauge, tickets, call py adapter, commit.
+scene EnsembleDemo
+dim 20
+gauge auto
+sidecar {
+  "project": "CQE-OS",
+  "safety": "meaning-silent"
+}
+
+octet {
+  abbb BIND units="SI";
+  abba ROLE "pilot";
+  baab POSE;
+  baaa TICKET;
+  abaa CALL py "np.linalg.norm" [ [1.0,0.0,0.0], [0.0,1.0,0.0] ];
+  babb SNAP;
+  abab EMIT "ensemble_receipts.json";
+}

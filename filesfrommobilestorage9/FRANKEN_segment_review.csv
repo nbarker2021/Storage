@@ -1,0 +1,7 @@
+rel,exists,bytes,lines,import_path,import_status,trace_tail,top_level_classes,top_level_defs,exports,has_cli,truncated_ellipses,todo_fixme,imports_unified,imports_franken,third_party_imports,stdlib_imports,topic_tags,reusability_mode,risk,notes
+src/unified/franken/__init__.py,True,0,1,unified.franken.__init__,ERROR: ModuleNotFoundError: No module named 'unified.franken.__init__',"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  File ""<frozen importlib._bootstrap>"", line 1204, in _gcd_import  File ""<frozen importlib._bootstrap>"", line 1176, in _find_and_load  File ""<frozen importlib._bootstrap>"", line 1140, in _find_and_load_unlockedModuleNotFoundError: No module named 'unified.franken.__init__'",0,0,[],False,0,0,False,False,[],[],[],segment-ready,low,
+src/unified/franken/agrm_franken.py,False,,,,,,0,0,[],False,0,0,False,False,[],[],[],reference-only,high,Referenced in docs but missing in reconstructed tree
+src/unified/franken/cmplx_franken.py,False,,,,,,0,0,[],False,0,0,False,False,[],[],[],reference-only,high,Referenced in docs but missing in reconstructed tree
+src/unified/franken/mdhg_franken.py,False,,,,,,0,0,[],False,0,0,False,False,[],[],[],reference-only,high,Referenced in docs but missing in reconstructed tree
+src/unified/franken/tsp_franken.py,False,,,,,,0,0,[],False,0,0,False,False,[],[],[],reference-only,high,Referenced in docs but missing in reconstructed tree
+src/unified/franken/util_franken.py,False,,,,,,0,0,[],False,0,0,False,False,[],[],[],reference-only,high,Referenced in docs but missing in reconstructed tree

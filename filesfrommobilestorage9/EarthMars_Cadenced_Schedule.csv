@@ -1,0 +1,17 @@
+id,launch_date,TMI_date,arrival_date,dv_TMI_km_s,dv_MOI_km_s,notes
+P01,2026-01-01,2027-02-05,2027-10-21,2.94468925612437,2.648895228985996,Mass scaled to 1/8; LEO→cislunar staging via orbital mechanics; burns only at TMI/MOI
+P02,2026-01-31,2027-03-07,2027-11-20,2.94468925612437,2.648895228985996,Mass scaled to 1/8; LEO→cislunar staging via orbital mechanics; burns only at TMI/MOI
+P03,2026-03-02,2027-04-06,2027-12-20,2.94468925612437,2.648895228985996,Mass scaled to 1/8; LEO→cislunar staging via orbital mechanics; burns only at TMI/MOI
+P04,2026-04-01,2027-05-06,2028-01-19,2.94468925612437,2.648895228985996,Mass scaled to 1/8; LEO→cislunar staging via orbital mechanics; burns only at TMI/MOI
+P05,2026-05-01,2027-06-05,2028-02-18,2.94468925612437,2.648895228985996,Mass scaled to 1/8; LEO→cislunar staging via orbital mechanics; burns only at TMI/MOI
+P06,2026-05-31,2027-07-05,2028-03-19,2.94468925612437,2.648895228985996,Mass scaled to 1/8; LEO→cislunar staging via orbital mechanics; burns only at TMI/MOI
+P07,2026-06-30,2027-08-04,2028-04-18,2.94468925612437,2.648895228985996,Mass scaled to 1/8; LEO→cislunar staging via orbital mechanics; burns only at TMI/MOI
+P08,2026-07-30,2027-11-12,2028-07-27,2.94468925612437,2.648895228985996,Mass scaled to 1/8; LEO→cislunar staging via orbital mechanics; burns only at TMI/MOI
+P09,2026-08-29,2027-11-12,2028-07-27,2.94468925612437,2.648895228985996,Mass scaled to 1/8; LEO→cislunar staging via orbital mechanics; burns only at TMI/MOI
+P10,2026-09-28,2027-11-12,2028-07-27,2.94468925612437,2.648895228985996,Mass scaled to 1/8; LEO→cislunar staging via orbital mechanics; burns only at TMI/MOI
+P11,2026-10-28,2027-11-12,2028-07-27,2.94468925612437,2.648895228985996,Mass scaled to 1/8; LEO→cislunar staging via orbital mechanics; burns only at TMI/MOI
+P12,2026-11-27,2027-11-12,2028-07-27,2.94468925612437,2.648895228985996,Mass scaled to 1/8; LEO→cislunar staging via orbital mechanics; burns only at TMI/MOI
+P13,2026-12-27,2027-11-12,2028-07-27,2.94468925612437,2.648895228985996,Mass scaled to 1/8; LEO→cislunar staging via orbital mechanics; burns only at TMI/MOI
+P14,2027-01-26,2027-11-12,2028-07-27,2.94468925612437,2.648895228985996,Mass scaled to 1/8; LEO→cislunar staging via orbital mechanics; burns only at TMI/MOI
+P15,2027-02-25,2027-11-12,2028-07-27,2.94468925612437,2.648895228985996,Mass scaled to 1/8; LEO→cislunar staging via orbital mechanics; burns only at TMI/MOI
+P16,2027-03-27,2027-11-12,2028-07-27,2.94468925612437,2.648895228985996,Mass scaled to 1/8; LEO→cislunar staging via orbital mechanics; burns only at TMI/MOI

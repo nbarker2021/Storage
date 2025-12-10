@@ -1,0 +1,19 @@
+# O8 hello — minimal scene demonstrating POSE→TICKET→ANNIHILATE→SNAP→EMIT
+scene HelloWorld
+dim 20
+gauge auto
+sidecar {
+  "units": "SI",
+  "mode": "meaning-silent"
+}
+
+octet {
+  abba ROLE operator;
+  baab POSE;
+  baaa TICKET;
+  baba ANNIHILATE;
+  babb SNAP;
+  bbab MIRROR;
+  bbaa RATCHET;
+  abab EMIT "o8_receipts.json";
+}

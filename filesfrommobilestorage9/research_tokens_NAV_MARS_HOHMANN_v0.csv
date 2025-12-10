@@ -1,0 +1,4 @@
+token_id,value,units,source,provenance,confidence
+atm_density_kg_m3,0.020,kg/m^3,stand-in,scratch,low
+dv_budget_m_s,3600,m/s,stand-in,scratch,low
+transfer_type,Hohmann,-,symbolic,spec,n/a

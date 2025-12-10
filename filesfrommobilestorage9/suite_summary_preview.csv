@@ -1,0 +1,23 @@
+class,pack,id,fourbit,pass,reasons,receipts_hash,timestamp_utc
+golden,PACK_EM_NH,PACK_EM_NH,1111,True,,6ad5630f89c0c9bcf3388975e2e87baeed53d69f75a06c7cf70cd8d6ded64df9,20250919T195756Z
+golden,PACK_NEURO_RIPPLE,PACK_NEURO_RIPPLE,1111,True,,fde9dcca3765d68f5f34be973cc1991ffc7492264a38256c42a05b7c2c503dd7,20250919T195756Z
+golden,PACK_CHEM_ATRO,PACK_CHEM_ATRO,1111,True,,4a965194e2da790501dd9638586fc2881eaa43cea25aba4c16b1b0b18ab20e1c,20250919T195756Z
+golden,PACK_CHEM_RELAY,PACK_CHEM_RELAY,1111,True,,9a24079871f0fb1c5de90beb2f0bc0e474c559b225f3c853185f87fcfd8bcde0,20250919T195756Z
+golden,PACK_MAT_GRO,PACK_MAT_GRO,1111,False,|deltaEg_eV|>0.05 (got 0.06),27aa8af4b2ef052a4d3172a91704f826d8918f727f8ea4d7c506b0a2f0aad668,20250919T195756Z
+golden,PACK_PHOT_GAUGE,PACK_PHOT_GAUGE,1111,True,,b9586aea616aceb7839b36367b521c628c52b8560de46252345bfc614fc55b1f,20250919T195756Z
+golden,PACK_BIO_SGE,paper_GHIST_2025,1111,True,,0addc094e2dd9d651d1639fe46070d14d294fb32b5cb2b108bc17ef97b7950b6,20250919T195756Z
+golden,PACK_CM_TOPO_SC,paper_TOPO_SC_2025,1111,True,,62b3eda6d680891303ba1e968cf2043c4b5878e939aee41093c97a53bd2d563a,20250919T195756Z
+golden,PACK_QD_ENTAN_VERIFY,paper_PRL_ENTAN_2025,1111,True,,d627994e016efbb33895d562c131c9c54c2020eadb640118099c8f7f7f478ca4,20250919T195756Z
+golden,PACK_CHEM_METHYL_XFER,paper_NCOMMS_METHYL_2025,1111,True,,e913c6e3dbe83ced43a5c80d8b4d34397afdfc8bd139cbda1e34f240e03e52af,20250919T195756Z
+golden,PACK_PHOT_PNN,paper_LSA_PNN_2025,1111,True,,c48a6cc8c1e70b8105b6e0b7a136f69f016743fb25b27a35baa35219dfe4f649,20250919T195756Z
+baseline,PACK_EM_NH,PACK_EM_NH,10,False,chirality_score<0.2 (got 0.11); nonreciprocity_index<0.15 (got 0.09); floquet_gap_GHz<2.0 (got 0.7); max_temp_rise_K>5.0 (got 6.8),c0ceeac31c731dd893e25ff7c9a5adfe1d2ee6f71d004f36bed9982a40384c16,20250919T195756Z
+baseline,PACK_NEURO_RIPPLE,PACK_NEURO_RIPPLE,10,False,spike_content_MI<0.2 (got 0.08); phase_lock_R<0.2 (got 0.11); replay_err_cm>12.0 (got 19.0),7e2a968342a3d6adba432881d29f3991d8030a4cbf248adddff4bd4cc6b6c5b3,20250919T195756Z
+baseline,PACK_CHEM_ATRO,PACK_CHEM_ATRO,10,False,deltaG_dagger_axis_kcal<24.0 (got 19.0); er<0.9 (got 0.55); dr<9.0 (got 3.2); yield_pct<40.0 (got 18.0),edfd057f15854170abb7bb28853a00b4205d7fb0b84440a2525192e603a99f5f,20250919T195756Z
+baseline,PACK_CHEM_RELAY,PACK_CHEM_RELAY,10,False,ee<0.9 (got 0.61); dr_alpha<9.0 (got 3.1); dr_gamma<9.0 (got 2.5); site_selectivity_pct<80.0 (got 58.0); mass_balance_pct<95.0 (got 84.0),665707f7e0bb5042a203d48da86d4ff9711ad250edefec338a4d73be6ffb4d3e,20250919T195756Z
+baseline,PACK_MAT_GRO,PACK_MAT_GRO,10,False,|deltaEg_eV|>0.05 (got 0.15); |deltaPhi_eV|<0.1 (got 0.03); |ads_energy_eV|<0.2 (got 0.08),b6139823b8a7446388768793d1d7250273661f7a80cfeac0aaacabbf62cbce5a,20250919T195756Z
+baseline,PACK_PHOT_GAUGE,PACK_PHOT_GAUGE,10,False,gap_GHz<1.0 (got 0.6); linewidth_GHz>0.2 (got 0.45); edge_mode_Q<800.0 (got 430.0),78285e6ded6ffe147a49a1df4117aafafc79f160393a027b8d1f49d51e8abb72,20250919T195756Z
+baseline,PACK_BIO_SGE,paper_GHIST_2025,10,False,celltype_acc<0.65 (got 0.55); per_cell_corr<0.35 (got 0.22); svg_recovery@k<0.5 (got 0.35); gpu_hours>48 (got 60),0ae184a46413a19ad91aa407abc095e91089dcec97c3da6e9e0a9afec34e27e9,20250919T195756Z
+baseline,PACK_CM_TOPO_SC,paper_TOPO_SC_2025,10,False,surface_band_res_meV<1.0 (got 0.6); zbp_robustness<0.6 (got 0.3); odd_parity_QPI_score<0.5 (got 0.2); bulk_gap_meV<0.2 (got 0.12),102a706998bc97f4a85ab8e0714df624b39c63632c79182dc4a95ff3a8729878,20250919T195756Z
+baseline,PACK_QD_ENTAN_VERIFY,paper_PRL_ENTAN_2025,10,False,fidelity<0.6 (got 0.45); N_qubits<12 (got 8); runtime_s>7200 (got 14400),3b3d75e5d414faef2555a0ce80bd5106e1b94866f7c1d13303d9249a2dc05ae6,20250919T195756Z
+baseline,PACK_CHEM_METHYL_XFER,paper_NCOMMS_METHYL_2025,10,False,yield_pct<45.0 (got 22.0); chemoselect_pct<80.0 (got 63.0); quantum_yield<0.05 (got 0.02),3331ae0750cdf0ec934cd63ebf34c3d672a80a075d8cb270067c7ac2942d047f,20250919T195756Z
+baseline,PACK_PHOT_PNN,paper_LSA_PNN_2025,10,False,TOPS<0.1 (got 0.05); pJ_per_MAC>10.0 (got 18.0); acc_top1_pct<85.0 (got 79.0); latency_ms>10.0 (got 16.0),ca8d8bd908f9fe2224156b62952ddb5a7950ad8db7ff2be05b8e28d0e98bc06c,20250919T195756Z

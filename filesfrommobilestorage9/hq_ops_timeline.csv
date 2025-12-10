@@ -1,0 +1,10 @@
+floor,team,artifact,status
+Ground,Seeder,SeedCard,sealed
+L3,Builder,Pre-pose K-scan,done
+L4,Mirror,4 reflections,done
+L7,Spectral,DFT/WHT flags,done
+L1,Gatekeeper,CRT arms + policy,done
+L5,Alena,Snap hash,skipped
+L8,Validation,toy Monster suite,n/a
+L6,Librarian,ledger row,n/a
+Roof,Reporter,broadcast,n/a
