@@ -1,0 +1,25 @@
+{
+  "answer": "[CQE] One-shot sealed answer for: Earth observation fusion: VIS/IR + wind; anti\u2011alias diurnal/orbital with 3% anchors.",
+  "token_path": "/mnt/data/CQE_Modular_Atomic_Pilot/nuggets/mtok_dbd9b12dd9942926.json",
+  "receipts": {
+    "all8_closure": true,
+    "dual": true,
+    "compose": true,
+    "seal": "b7d3a1ef8a25ed111b1ffc95fcfd7bb1284210a4e6298385e323c83bb55be690"
+  },
+  "braid": {
+    "winner_min_margin": 0.0,
+    "winners_hash": "d8715e032fa85a79a88d47db910dc220877d9be2e37ba65e5a0b2e125666f65a",
+    "chambers": 4096
+  },
+  "schedule_visits": {
+    "0": 3,
+    "1": 2,
+    "2": 3,
+    "3": 2,
+    "4": 3,
+    "5": 3,
+    "6": 2,
+    "7": 3
+  }
+}

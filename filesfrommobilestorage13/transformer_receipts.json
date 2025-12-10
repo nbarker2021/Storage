@@ -1,0 +1,142 @@
+[
+  {
+    "transform_id": "a6b9b7818555bdb1",
+    "transform_type": "attention",
+    "input_shape": [
+      1,
+      4,
+      1024
+    ],
+    "output_shape": [
+      1,
+      4,
+      1024
+    ],
+    "metadata": {
+      "parity": "odd",
+      "dihedral": {
+        "N": 1,
+        "k": 0,
+        "reflect": true
+      },
+      "slice": "V",
+      "e8_sublattice": 0,
+      "rooted": true,
+      "digital_root": 2,
+      "conservation": -0.0006392394884398448
+    },
+    "lambda_ir": "\u03bb Q. \u03bb K. \u03bb V. (softmax (scale (dot Q (transpose K)) 0)) \u00b7 V",
+    "delta_phi": -0.0006392394884398448,
+    "timestamp": 1760898932.3993828,
+    "anchors": {
+      "fwd": "db0e7e2dba87f214",
+      "mir": "f389319a70dd334d"
+    },
+    "signature": "ccfb25106eac961e7a5328f70bf6b47fb66d5f63a2068f02c81d28c1214d23d8"
+  },
+  {
+    "transform_id": "f8a919321799d288",
+    "transform_type": "layer_norm",
+    "input_shape": [
+      1,
+      4,
+      1024
+    ],
+    "output_shape": [
+      1,
+      4,
+      1024
+    ],
+    "metadata": {
+      "parity": "even",
+      "dihedral": {
+        "N": 16,
+        "k": 0,
+        "reflect": true
+      },
+      "slice": "K",
+      "e8_sublattice": 2,
+      "rooted": true,
+      "digital_root": 8,
+      "conservation": -0.06354377166143041
+    },
+    "lambda_ir": "\u03bb x. (normalize x 8)",
+    "delta_phi": -0.06354377166143041,
+    "timestamp": 1760898932.3998513,
+    "anchors": {
+      "fwd": "106600de15c66203",
+      "mir": "84e0bca727dd9980"
+    },
+    "signature": "14004372d231e532cc10a26a4f261fea8f2ed026cf6ac4484d5ec499fa8dc19a"
+  },
+  {
+    "transform_id": "e0fbb52d977e755e",
+    "transform_type": "feedforward",
+    "input_shape": [
+      1,
+      4,
+      1024
+    ],
+    "output_shape": [
+      1,
+      4,
+      1024
+    ],
+    "metadata": {
+      "parity": "odd",
+      "dihedral": {
+        "N": 8,
+        "k": 1,
+        "reflect": true
+      },
+      "slice": "R",
+      "e8_sublattice": 2,
+      "rooted": true,
+      "digital_root": 1,
+      "conservation": -0.031223780784811323
+    },
+    "lambda_ir": "\u03bb x. (project_R (gelu (project_2 x)))",
+    "delta_phi": -0.031223780784811323,
+    "timestamp": 1760898932.64933,
+    "anchors": {
+      "fwd": "cc762af4fb6ef517",
+      "mir": "c2eeee6c1d16d11c"
+    },
+    "signature": "81ade975d36a7ada4138aa4dfa97703c612b9326c5a5acf6a4096c57270ba895"
+  },
+  {
+    "transform_id": "35409dc61ec65099",
+    "transform_type": "layer_norm",
+    "input_shape": [
+      1,
+      4,
+      1024
+    ],
+    "output_shape": [
+      1,
+      4,
+      1024
+    ],
+    "metadata": {
+      "parity": "even",
+      "dihedral": {
+        "N": 16,
+        "k": 0,
+        "reflect": true
+      },
+      "slice": "K",
+      "e8_sublattice": 3,
+      "rooted": false,
+      "digital_root": 6,
+      "conservation": -0.06399973714053195
+    },
+    "lambda_ir": "\u03bb x. (normalize x 6)",
+    "delta_phi": -0.06399973714053195,
+    "timestamp": 1760898932.6495795,
+    "anchors": {
+      "fwd": "9f321889c9bb3616",
+      "mir": "98e7ee724e3dcd1c"
+    },
+    "signature": "9748eea65278f77651605f956a26c09b919ecd72b3f684c7900d8ca7c8e10724"
+  }
+]

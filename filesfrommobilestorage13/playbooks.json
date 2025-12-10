@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "created_utc": "2025-09-20T14:41:10.885866Z",
+    "version": "0.1.0"
+  },
+  "domains": {
+    "QuantumChemistry": {
+      "octet_views": [
+        "atoms (Li,C,N,O,Ne)",
+        "diatomics (H2, LiH)",
+        "XC rung2 (GGA)",
+        "XC rung3 (meta-GGA proxy)",
+        "basis-size sweep",
+        "MB\u2192DFT inversion",
+        "DFT\u2192MB check",
+        "transfer-to-solids (proxy)"
+      ],
+      "mirror": [
+        "MB\u2192DFT vs DFT\u2192MB",
+        "train\u2194eval swap",
+        "palindromic residual bands"
+      ],
+      "delta_lifts": [
+        "local gradient correction",
+        "range-separated tweak",
+        "density smoothing"
+      ],
+      "strict_ratchet": {
+        "MAE_eV": [
+          0.08,
+          0.05,
+          0.03
+        ],
+        "SC_corr": [
+          0.95,
+          0.97,
+          0.99
+        ]
+      },
+      "receipts": [
+        "MAE_eV",
+        "MSE_eV2",
+        "SC",
+        "data_rung"
+      ]
+    },
+    "Spintronics": {
+      "octet_views": [
+        "helicity L/R",
+        "temperature bands",
+        "substrate types",
+        "current density",
+        "contact geometry",
+        "chiral pitch",
+        "room-T polarization",
+        "noise/stability"
+      ],
+      "mirror": [
+        "L\u2194R swap",
+        "bias polarity inversion"
+      ],
+      "delta_lifts": [
+        "domain wall pinning tweak",
+        "helix pitch micro-adjust"
+      ],
+      "strict_ratchet": {
+        "P_spin": [
+          0.6,
+          0.7,
+          0.8
+        ]
+      },
+      "receipts": [
+        "P_spin",
+        "sigma",
+        "Vbias",
+        "temp"
+      ]
+    },
+    "PhotonicChip": {
+      "octet_views": [
+        "S-bend vs splitter",
+        "group-index sweep",
+        "dispersion bands",
+        "140Gbps modulation",
+        "loss budget",
+        "back-reflection",
+        "fabrication tolerance",
+        "temperature drift"
+      ],
+      "mirror": [
+        "CW\u2194CCW path",
+        "TX\u2194RX swap"
+      ],
+      "delta_lifts": [
+        "lattice phase tweak",
+        "hole radius repaint"
+      ],
+      "strict_ratchet": {
+        "IL_dB": [
+          2.0,
+          1.5,
+          1.0
+        ]
+      },
+      "receipts": [
+        "IL_dB",
+        "ER_dB",
+        "BER",
+        "Gbps"
+      ]
+    },
+    "General": {
+      "octet_template": "fill with 8 views that are materially independent",
+      "mirror": "define at least one inverse/swap check",
+      "delta_lifts": "declare 3\u20135 local repairs you\u2019ll allow",
+      "strict_ratchet": "numerical thresholds that only tighten after pass",
+      "receipts": "4 small numbers \u2192 4-bit commit"
+    }
+  }
+}

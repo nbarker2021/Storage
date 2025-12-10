@@ -1,0 +1,13 @@
+{
+  "universes": [
+    "EU",
+    "UU",
+    "DU",
+    "OU",
+    "GU"
+  ],
+  "counts": {
+    "nodes": 401,
+    "edges": 568
+  }
+}

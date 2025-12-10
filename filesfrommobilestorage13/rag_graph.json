@@ -1,0 +1,81 @@
+{
+  "nodes": [
+    {
+      "node_id": "node:tok:sha256:38ce831565f9957c",
+      "token_id": "tok:sha256:38ce831565f9957c",
+      "embedding_key": "vec:ea7079a6bec5e2c2",
+      "metadata": {
+        "surface": "The",
+        "channel": "text",
+        "role": "lex"
+      },
+      "created": 1760898932.3255224,
+      "modified": 1760898932.3255224
+    },
+    {
+      "node_id": "node:tok:sha256:3098a87a54299931",
+      "token_id": "tok:sha256:3098a87a54299931",
+      "embedding_key": "vec:8d93d07af0eac2d2",
+      "metadata": {
+        "surface": "universe",
+        "channel": "text",
+        "role": "lex"
+      },
+      "created": 1760898932.3497458,
+      "modified": 1760898932.349746
+    },
+    {
+      "node_id": "node:tok:sha256:a89db09a5e383fb3",
+      "token_id": "tok:sha256:a89db09a5e383fb3",
+      "embedding_key": "vec:641f9be6315ec059",
+      "metadata": {
+        "surface": "is",
+        "channel": "text",
+        "role": "lex"
+      },
+      "created": 1760898932.37418,
+      "modified": 1760898932.3741803
+    },
+    {
+      "node_id": "node:tok:sha256:adb271fd22b0d99e",
+      "token_id": "tok:sha256:adb271fd22b0d99e",
+      "embedding_key": "vec:9701a69821498552",
+      "metadata": {
+        "surface": "geometric",
+        "channel": "text",
+        "role": "lex"
+      },
+      "created": 1760898932.3987908,
+      "modified": 1760898932.398791
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "edge:27156d1f7ee7d051",
+      "source": "node:tok:sha256:38ce831565f9957c",
+      "target": "node:tok:sha256:3098a87a54299931",
+      "relation": "precedes",
+      "weight": 1.0,
+      "metadata": {},
+      "created": 1760898932.3988302
+    },
+    {
+      "edge_id": "edge:b730fbfdced26899",
+      "source": "node:tok:sha256:3098a87a54299931",
+      "target": "node:tok:sha256:a89db09a5e383fb3",
+      "relation": "precedes",
+      "weight": 1.0,
+      "metadata": {},
+      "created": 1760898932.3988445
+    },
+    {
+      "edge_id": "edge:6a777cb63c13c2d7",
+      "source": "node:tok:sha256:a89db09a5e383fb3",
+      "target": "node:tok:sha256:adb271fd22b0d99e",
+      "relation": "precedes",
+      "weight": 1.0,
+      "metadata": {},
+      "created": 1760898932.3988495
+    }
+  ]
+}

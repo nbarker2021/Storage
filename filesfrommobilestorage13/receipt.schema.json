@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CQE Receipt",
+  "type": "object",
+  "required": [
+    "form_id",
+    "title",
+    "timestamp",
+    "cap",
+    "scope",
+    "votes",
+    "echoes",
+    "page_hash",
+    "run_id"
+  ],
+  "properties": {
+    "form_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "cap": {
+      "type": "object",
+      "required": [
+        "fourbit",
+        "name",
+        "code"
+      ],
+      "properties": {
+        "fourbit": {
+          "type": "string",
+          "pattern": "^[01]{4}$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "code": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 15
+        }
+      }
+    },
+    "scope": {
+      "type": "string",
+      "enum": [
+        "local",
+        "context"
+      ]
+    },
+    "votes": {
+      "type": "object",
+      "required": [
+        "mirror",
+        "views"
+      ],
+      "properties": {
+        "mirror": {
+          "type": "string",
+          "pattern": "^[0-9]+/[0-9]+$"
+        },
+        "views": {
+          "type": "string",
+          "pattern": "^[0-9]+/[0-9]+$"
+        }
+      }
+    },
+    "echoes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "page_hash": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    }
+  }
+}

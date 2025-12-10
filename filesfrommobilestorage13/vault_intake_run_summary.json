@@ -1,0 +1,24 @@
+{
+  "repo_root": "/mnt/data/e8_repo",
+  "incoming": [
+    "gpt gode for agrm-cmplx.zip",
+    "v14-canonical.zip",
+    "v20-canonical.zip"
+  ],
+  "intakes": [
+    {
+      "slug": "v14-canonical",
+      "date": "20250810",
+      "file_count": 3,
+      "root": "/mnt/data/e8_repo/legacy/20250810/v14-canonical"
+    },
+    {
+      "slug": "v20-canonical",
+      "date": "20250810",
+      "file_count": 3,
+      "root": "/mnt/data/e8_repo/legacy/20250810/v20-canonical"
+    }
+  ],
+  "manifests": [],
+  "license_scan": "license_scan.json"
+}

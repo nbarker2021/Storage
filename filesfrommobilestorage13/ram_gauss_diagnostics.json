@@ -1,0 +1,26 @@
+{
+  "ramanujan_congruences": [
+    {
+      "mod": 5,
+      "a": 4,
+      "tested": 24,
+      "passes": 24,
+      "ratio": 1.0
+    },
+    {
+      "mod": 7,
+      "a": 5,
+      "tested": 17,
+      "passes": 17,
+      "ratio": 1.0
+    },
+    {
+      "mod": 11,
+      "a": 6,
+      "tested": 11,
+      "passes": 11,
+      "ratio": 1.0
+    }
+  ],
+  "gauss_reciprocity_ratio": 1.0
+}

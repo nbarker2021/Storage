@@ -1,0 +1,65 @@
+{
+  "total_tokens": 20000,
+  "blocks": 2500,
+  "blocks_perfect": 2393,
+  "blocks_coverage_rate": 0.9572,
+  "skips_used": 226,
+  "per_face_rates": [
+    {
+      "face": 0,
+      "entropy_bits": 6.78,
+      "assigned_bits": 7,
+      "q_bins": 128,
+      "pixel_count": 519
+    },
+    {
+      "face": 1,
+      "entropy_bits": 6.081,
+      "assigned_bits": 6,
+      "q_bins": 64,
+      "pixel_count": 505
+    },
+    {
+      "face": 2,
+      "entropy_bits": 6.842,
+      "assigned_bits": 7,
+      "q_bins": 128,
+      "pixel_count": 525
+    },
+    {
+      "face": 3,
+      "entropy_bits": 6.09,
+      "assigned_bits": 6,
+      "q_bins": 64,
+      "pixel_count": 499
+    },
+    {
+      "face": 4,
+      "entropy_bits": 6.846,
+      "assigned_bits": 7,
+      "q_bins": 128,
+      "pixel_count": 517
+    },
+    {
+      "face": 5,
+      "entropy_bits": 6.071,
+      "assigned_bits": 6,
+      "q_bins": 64,
+      "pixel_count": 507
+    },
+    {
+      "face": 6,
+      "entropy_bits": 6.84,
+      "assigned_bits": 7,
+      "q_bins": 128,
+      "pixel_count": 509
+    },
+    {
+      "face": 7,
+      "entropy_bits": 6.041,
+      "assigned_bits": 6,
+      "q_bins": 64,
+      "pixel_count": 515
+    }
+  ]
+}

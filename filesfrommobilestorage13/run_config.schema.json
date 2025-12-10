@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://morphonic.org/schemas/run_config.schema.json",
+  "title": "Morphon Runtime Config",
+  "type": "object",
+  "required": [
+    "run",
+    "model",
+    "planner",
+    "measure"
+  ],
+  "properties": {
+    "run": {
+      "type": "object",
+      "required": [
+        "seed",
+        "substrate",
+        "dtau_sweep",
+        "taps",
+        "gauge"
+      ],
+      "properties": {
+        "seed": {
+          "type": "integer"
+        },
+        "substrate": {
+          "type": "string",
+          "enum": [
+            "photonic",
+            "compute",
+            "hybrid"
+          ]
+        },
+        "Omega0": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "value"
+          ]
+        },
+        "dtau_sweep": {
+          "type": "object",
+          "required": [
+            "range",
+            "steps",
+            "fine"
+          ],
+          "properties": {
+            "range": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "steps": {
+              "type": "integer"
+            },
+            "fine": {
+              "type": "integer"
+            }
+          }
+        },
+        "taps": {
+          "type": "object",
+          "properties": {
+            "tetradic": {
+              "type": "boolean"
+            },
+            "dodec": {
+              "type": "boolean"
+            }
+          }
+        },
+        "gauge": {
+          "type": "object",
+          "properties": {
+            "samples": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "model": {
+      "type": "object",
+      "required": [
+        "dual_rail",
+        "losses"
+      ],
+      "properties": {
+        "dual_rail": {
+          "type": "object",
+          "required": [
+            "layers",
+            "d_model",
+            "ring_K",
+            "dtau_per"
+          ],
+          "properties": {
+            "layers": {
+              "type": "integer"
+            },
+            "d_model": {
+              "type": "integer"
+            },
+            "ring_K": {
+              "type": "integer"
+            },
+            "dtau_per": {
+              "type": "integer"
+            }
+          }
+        },
+        "losses": {
+          "type": "object",
+          "properties": {
+            "lambda_c": {
+              "type": "number"
+            },
+            "gauge": {
+              "type": "number"
+            },
+            "energy": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "planner": {
+      "type": "object",
+      "properties": {
+        "agrm": {
+          "type": "object",
+          "properties": {
+            "budgets": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "rho": {
+              "type": "number"
+            },
+            "tauR": {
+              "type": "number"
+            }
+          }
+        },
+        "mdhg": {
+          "type": "object",
+          "properties": {
+            "wr": {
+              "type": "number"
+            },
+            "sectors": {
+              "type": "integer"
+            },
+            "delay_bins": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "measure": {
+      "type": "object",
+      "required": [
+        "accuracy_match",
+        "abba",
+        "power_sampling_hz"
+      ],
+      "properties": {
+        "accuracy_match": {
+          "type": "number"
+        },
+        "abba": {
+          "type": "boolean"
+        },
+        "power_sampling_hz": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

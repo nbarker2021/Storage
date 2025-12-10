@@ -1,0 +1,16 @@
+{
+  "stft": {
+    "fs_hz": 48000,
+    "win_ms": 46.4,
+    "hop_ms": 10.0
+  },
+  "chroma": {
+    "bins": 12,
+    "ref_a_hz": 440.0
+  },
+  "spl_max": 85.0,
+  "kappa": {
+    "beat": 0.25,
+    "tempo": 0.001
+  }
+}

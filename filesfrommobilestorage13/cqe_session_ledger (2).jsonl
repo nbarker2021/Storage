@@ -1,0 +1,5 @@
+{"ts": "2025-10-10T21:17:18.728300Z", "event": "run_start", "claim": "unified_ops", "meta": {"mode": "guarded", "slices": ["RAMANUJAN", "GAUSS", "TORUS"]}}
+{"ts": "2025-10-10T21:17:18.728300Z", "event": "op_accept", "op": "validators_enable", "delta_phi": 0.0, "accepted": true, "reason": "guarded_on"}
+{"ts": "2025-10-10T21:17:18.728300Z", "event": "op_accept", "op": "torus_magic_sweep", "accepted": true, "artifacts": ["torus_magic_sizes.csv", "torus_magic_sizes.png"]}
+{"ts": "2025-10-10T21:17:18.728300Z", "event": "op_accept", "op": "ram_gauss_diagnostics", "accepted": true, "artifacts": ["ram_gauss_diagnostics.json"]}
+{"ts": "2025-10-10T21:17:18.728300Z", "event": "run_end", "settlement": {"heat": 0, "assist": 0}}

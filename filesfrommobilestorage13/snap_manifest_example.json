@@ -1,0 +1,108 @@
+{
+  "schema_version": "2.0",
+  "snap_id": "mdhg:abc12345deadbeef",
+  "created_at": "2025-08-10T04:13:09.445235Z",
+  "e8": {
+    "version": "0.1",
+    "coords": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "root_loc": {
+      "nearest_roots": [
+        {
+          "index": 0,
+          "inner_product": 1.0
+        }
+      ],
+      "reflections": [
+        3,
+        7,
+        11
+      ],
+      "adjacency_rule": "inner_product_eq_1"
+    },
+    "axes": {
+      "tenant": "acme",
+      "domain": "retrieval",
+      "policy_id": "default@2025-08-10",
+      "solver_id": "superperm-gray-v2",
+      "persona_id": "bio-qa-master-01",
+      "data_slice": "news-2025w32",
+      "version_container": "v14",
+      "timestamp_bucket": "2025-08-10T20",
+      "trust": 0.92
+    },
+    "bridge_node": [
+      "policy_swap_2025_07",
+      "solver_upgrade_gray_v2"
+    ],
+    "notes": "Demo coords; real coords should be normalized R^8."
+  },
+  "axes": {
+    "tenant": "acme",
+    "domain": "retrieval",
+    "policy_id": "default@2025-08-10",
+    "solver_id": "superperm-gray-v2",
+    "persona_id": "bio-qa-master-01",
+    "data_slice": "news-2025w32",
+    "version_container": "v14",
+    "timestamp_bucket": "2025-08-10T20",
+    "trust": 0.92
+  },
+  "kind": "MicroOp",
+  "parent_id": null,
+  "children": [],
+  "hashes": {
+    "mdhg": "abc12345deadbeef",
+    "sha256": "..."
+  },
+  "payload": {
+    "format": "json",
+    "location": "snaps/microop/2025/08/10/op_0001.json",
+    "size_bytes": 2048,
+    "content_schema": "urn:schemas:microop:1",
+    "secure": true
+  },
+  "provenance": {
+    "code_version": "v14",
+    "modules": [
+      "agrm.router",
+      "cmplx.mdhg",
+      "snap.capture"
+    ],
+    "env": {
+      "python": "3.11.9",
+      "packages": [
+        "numpy==2.0.1",
+        "fastapi==0.112.2"
+      ],
+      "platform": "linux-x86_64",
+      "hardware": "amd64"
+    },
+    "sources": [
+      {
+        "uri": "https://example.com/spec",
+        "timestamp": "2025-08-10T04:13:09.445235Z",
+        "trust": 0.9,
+        "hash": "sha256:..."
+      }
+    ],
+    "actor": "ai"
+  },
+  "security": {
+    "signed": false,
+    "allow_pickle": false
+  },
+  "metrics": {
+    "latency_ms": 12.7,
+    "k_candidates": 128
+  },
+  "notes": "Example manifest for MicroOp SNAP."
+}

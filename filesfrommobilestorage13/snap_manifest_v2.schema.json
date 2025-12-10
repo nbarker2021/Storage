@@ -1,0 +1,231 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:schemas:snap-manifest:v2",
+  "title": "SNAP Manifest v2",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "snap_id",
+    "created_at",
+    "e8",
+    "axes",
+    "payload",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "2.0"
+    },
+    "snap_id": {
+      "type": "string",
+      "minLength": 8,
+      "description": "MDHG or composite ID. Persisted identity."
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "e8": {
+      "$ref": "urn:schemas:e8-addressing:v0.1"
+    },
+    "axes": {
+      "type": "object",
+      "description": "Redundant copy for fast routing; must equal e8.axes when overlapping keys.",
+      "additionalProperties": {
+        "type": [
+          "string",
+          "number",
+          "boolean"
+        ]
+      }
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "MicroOp",
+        "PersonaDNA",
+        "PolicyMatrix",
+        "WorldSnapshot",
+        "ChainNode",
+        "Run",
+        "Dataset",
+        "Kernel",
+        "Doc",
+        "Tokens"
+      ]
+    },
+    "parent_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "children": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hashes": {
+      "type": "object",
+      "properties": {
+        "mdhg": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string"
+        },
+        "blake3": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "payload": {
+      "type": "object",
+      "required": [
+        "format",
+        "location"
+      ],
+      "properties": {
+        "format": {
+          "type": "string",
+          "enum": [
+            "json",
+            "yaml",
+            "pickle",
+            "msgpack",
+            "parquet",
+            "binary"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "description": "URI/path within store (relative or absolute)."
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "content_schema": {
+          "type": "string",
+          "description": "Optional JSON schema URI for payload content."
+        },
+        "secure": {
+          "type": "boolean",
+          "description": "If true, loaders must enforce safe mode (e.g., restricted pickle)."
+        }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "code_version",
+        "modules",
+        "env"
+      ],
+      "properties": {
+        "code_version": {
+          "type": "string",
+          "description": "e.g., v14, commit hash"
+        },
+        "modules": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Module paths used during capture."
+        },
+        "env": {
+          "type": "object",
+          "properties": {
+            "python": {
+              "type": "string"
+            },
+            "packages": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "platform": {
+              "type": "string"
+            },
+            "hardware": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "uri",
+              "timestamp"
+            ],
+            "properties": {
+              "uri": {
+                "type": "string"
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "trust": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "hash": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "actor": {
+          "type": "string",
+          "description": "human/AI origin tag"
+        }
+      },
+      "additionalProperties": false
+    },
+    "security": {
+      "type": "object",
+      "properties": {
+        "signed": {
+          "type": "boolean"
+        },
+        "signature_alg": {
+          "type": "string"
+        },
+        "public_key_id": {
+          "type": "string"
+        },
+        "allow_pickle": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "number",
+          "string",
+          "boolean"
+        ]
+      },
+      "description": "Arbitrary counters/gauges captured at snapshot time (e.g., recall@10, latency_ms)."
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

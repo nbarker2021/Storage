@@ -1,0 +1,83 @@
+{
+  "profile": {
+    "stft": {
+      "fs_hz": 48000,
+      "win_ms": 46.4,
+      "hop_ms": 10.0
+    },
+    "chroma": {
+      "bins": 12,
+      "ref_a_hz": 440.0
+    },
+    "spl_max": 85.0,
+    "tempo_grid": [
+      90,
+      120,
+      180
+    ],
+    "meter_options": [
+      "3/4",
+      "4/4",
+      "6/8",
+      "12/8"
+    ]
+  },
+  "program": [
+    {
+      "op": "meter",
+      "numerator": 3,
+      "denominator": 4,
+      "start_beat": 0
+    },
+    {
+      "op": "tempo",
+      "bpm": 120,
+      "at_beat": 0
+    },
+    {
+      "op": "stress",
+      "beat": 0,
+      "level": 3
+    },
+    {
+      "op": "phoneme",
+      "symbol": "C",
+      "voicing": "UV",
+      "manner": "stop",
+      "place": "coronal",
+      "start_beat": 0,
+      "dur_beats": 0.5,
+      "spl": 70
+    },
+    {
+      "op": "phoneme",
+      "symbol": "V",
+      "voicing": "V",
+      "manner": "vowel",
+      "place": "NA",
+      "start_beat": 0.5,
+      "dur_beats": 1.0,
+      "spl": 73
+    },
+    {
+      "op": "phoneme",
+      "symbol": "C",
+      "voicing": "UV",
+      "manner": "fricative",
+      "place": "labial",
+      "start_beat": 1.5,
+      "dur_beats": 0.5,
+      "spl": 72
+    },
+    {
+      "op": "crescendo",
+      "from_beat": 0,
+      "to_beat": 3
+    },
+    {
+      "op": "stress",
+      "beat": 3,
+      "level": 2
+    }
+  ]
+}

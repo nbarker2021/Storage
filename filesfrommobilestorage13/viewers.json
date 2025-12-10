@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "created_utc": "2025-09-20T14:41:10.885866Z",
+    "version": "0.1.0"
+  },
+  "local_8x8": {
+    "grid": [
+      8,
+      8
+    ],
+    "channels": [
+      "E",
+      "B",
+      "phase",
+      "residual",
+      "units",
+      "cost",
+      "precision",
+      "seed"
+    ],
+    "color_map": "category10",
+    "mirrors": {
+      "left_right": true,
+      "up_down": true
+    },
+    "commit_bits": 4
+  },
+  "surround_4x4x4x4": {
+    "grids": [
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "labels": [
+      "inner_ring",
+      "outer_ring"
+    ],
+    "aggregation": "median-residual",
+    "delta_probe": {
+      "window": 3,
+      "op": "signed_sum"
+    }
+  },
+  "nested_parity_2x2x2x2": {
+    "blocks": 4,
+    "block_shape": [
+      2,
+      2
+    ],
+    "parity_map": {
+      "even": "gold",
+      "odd": "indigo"
+    },
+    "hotzone_threshold": 0.85
+  },
+  "mirror_parity_probe": {
+    "tests": [
+      "forward_inverse",
+      "swap_order",
+      "pal_rest"
+    ],
+    "tolerance": {
+      "loose": 0.03,
+      "strict": 0.01
+    },
+    "receipt_bits": 4
+  }
+}

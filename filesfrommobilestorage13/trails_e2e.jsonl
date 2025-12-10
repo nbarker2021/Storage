@@ -1,0 +1,9 @@
+{"event": "snapops.begin", "module": "snapops", "policy_version": "alpha-ship-1", "ts": 1755303333.8117673}
+{"event": "thinktank.proposed", "module": "thinktank", "steps": [{"op": "mdhg.to_points"}, {"op": "mdhg.to_graph"}, {"op": "tpg.surgery"}], "ts": 1755303333.8119116}
+{"event": "dtt.run", "module": "dtt", "ok": true, "ts": 1755303333.8119624}
+{"event": "mdhg.to_graph", "module": "mdhg", "edges": 5000, "quota_hit": true, "ts": 1755303333.8131728}
+{"event": "snapops.coverage_ok", "module": "snapops", "coverage": 1.0, "ts": 1755303333.8134122}
+{"event": "mdhg.promotion_breakdown.v2", "module": "mdhg", "w5h": 0.9810229431759453, "neg": 0.06131393394849658, "hot": 0.61474609375, "bridge": 0.5, "score": 0.7385410280512243, "beacons_sha256": "c3180d58aa8b1c3391c13cd9d2b247e62f80e9902189a77d89b136389a50d26a", "ts": 1755303333.8143692}
+{"event": "snapops.branch.assembly", "module": "snapops", "top": 0.6666666666666666, "score": 0.7385410280512243, "ts": 1755303333.814514}
+{"event": "assembly.stage", "module": "assembly", "ops": ["mdhg.to_points", "mdhg.to_graph", "tpg.surgery"], "ts": 1755303333.8145947}
+{"event": "snapops.done", "module": "snapops", "ts": 1755303333.8146439}

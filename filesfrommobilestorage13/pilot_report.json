@@ -1,0 +1,25 @@
+{
+  "answer": "[CQE] One-shot sealed answer for: Zip-framed telemetry ingestion: stabilize jitter, preserve order, fence side-effects.",
+  "token_path": "/mnt/data/CQE_Modular_Atomic_Pilot/nuggets/mtok_9e009cbfa7414c9e.json",
+  "receipts": {
+    "all8_closure": true,
+    "dual": true,
+    "compose": true,
+    "seal": "d1e28412ca498f1cba67eb84e1f6775493b4aafce348a13601ff2da42477360b"
+  },
+  "braid": {
+    "winner_min_margin": 0.0001,
+    "winners_hash": "f303439950d7b016ad2ee03c5dbb00beb3e4ccf046c38a5c76e85f7680806815",
+    "chambers": 4096
+  },
+  "schedule_visits": {
+    "0": 3,
+    "1": 2,
+    "2": 3,
+    "3": 2,
+    "4": 3,
+    "5": 3,
+    "6": 2,
+    "7": 3
+  }
+}

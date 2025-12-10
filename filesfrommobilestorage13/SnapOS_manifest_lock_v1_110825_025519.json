@@ -1,0 +1,66 @@
+{
+  "generated": "2025-08-11T02:55:19.742121-07:00",
+  "python_version": "3.11.8 (main, Mar 12 2024, 11:41:52) [GCC 12.2.0]",
+  "entries": [
+    {
+      "package": "atomic",
+      "wheel": null,
+      "status": "unresolved"
+    },
+    {
+      "package": "hashers",
+      "wheel": null,
+      "status": "unresolved"
+    },
+    {
+      "package": "jsonl",
+      "wheel": null,
+      "status": "unresolved"
+    },
+    {
+      "package": "morsr",
+      "wheel": null,
+      "status": "unresolved"
+    },
+    {
+      "package": "rewrite-agrmcore-v1",
+      "wheel": null,
+      "status": "unresolved"
+    },
+    {
+      "package": "rewrite-mdhg-v1",
+      "wheel": null,
+      "status": "unresolved"
+    },
+    {
+      "package": "sap-bus",
+      "wheel": null,
+      "status": "unresolved"
+    },
+    {
+      "package": "shells",
+      "wheel": null,
+      "status": "unresolved"
+    },
+    {
+      "package": "snapdna",
+      "wheel": null,
+      "status": "unresolved"
+    },
+    {
+      "package": "src",
+      "wheel": null,
+      "status": "unresolved"
+    },
+    {
+      "package": "window-ops",
+      "wheel": null,
+      "status": "unresolved"
+    },
+    {
+      "package": "worm-trace",
+      "wheel": null,
+      "status": "unresolved"
+    }
+  ]
+}

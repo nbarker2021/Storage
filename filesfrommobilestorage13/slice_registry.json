@@ -1,0 +1,102 @@
+[
+  {
+    "slice": "SACNUM",
+    "state": "wired",
+    "stage": "provisional"
+  },
+  {
+    "slice": "LATT",
+    "state": "wired",
+    "stage": "provisional"
+  },
+  {
+    "slice": "FRAC",
+    "state": "wired",
+    "stage": "provisional"
+  },
+  {
+    "slice": "RAMANUJAN",
+    "state": "wired",
+    "stage": "provisional"
+  },
+  {
+    "slice": "GAUSS",
+    "state": "wired",
+    "stage": "provisional"
+  },
+  {
+    "slice": "NOETHER",
+    "state": "wired",
+    "stage": "provisional"
+  },
+  {
+    "slice": "SHANNON",
+    "state": "wired",
+    "stage": "provisional"
+  },
+  {
+    "slice": "HODGE",
+    "state": "wired",
+    "stage": "provisional"
+  },
+  {
+    "slice": "E8_LEECH",
+    "state": "wired",
+    "stage": "provisional"
+  },
+  {
+    "slice": "TRANSLATE_RT",
+    "state": "wired",
+    "stage": "provisional"
+  },
+  {
+    "slice": "OPS_CSV",
+    "state": "wired",
+    "stage": "provisional"
+  },
+  {
+    "slice": "OPS_JSON",
+    "state": "wired",
+    "stage": "provisional"
+  },
+  {
+    "slice": "META_LEX",
+    "state": "wired",
+    "stage": "provisional"
+  },
+  {
+    "slice": "GOLDEN",
+    "state": "wired",
+    "stage": "provisional"
+  },
+  {
+    "slice": "FUZZER",
+    "state": "wired",
+    "stage": "provisional"
+  },
+  {
+    "slice": "ARC360",
+    "state": "activated",
+    "stage": "active"
+  },
+  {
+    "slice": "PRIME_COPRIME",
+    "state": "activated",
+    "stage": "active"
+  },
+  {
+    "slice": "SLICE_CALCULUS",
+    "state": "activated",
+    "stage": "active"
+  },
+  {
+    "slice": "CQE_CONTROLLER",
+    "state": "activated",
+    "stage": "active"
+  },
+  {
+    "slice": "TORUS",
+    "state": "activated",
+    "stage": "active"
+  }
+]
