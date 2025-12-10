@@ -1,0 +1,518 @@
+// SLAT Unified Artifact MetaSchema (v1)
+// Template that all system schemas derive from (SNAP, Archivist, Repository/Master Index,
+// TeleTrail, DTT, SAP/Porter, Glyphs, Universes, Proofs, etc.)
+// JSON5 chosen for developer readability; production may emit JSON.
+{
+  $schema: 'https://slat.dev/schemas/metaschema-1.0.json',
+  $id: 'https://slat.dev/schemas/slat-artifact-1.0.json5',
+  title: 'SLAT Unified Artifact Schema',
+  description: 'Single envelope + typed payloads; pins, provenance, governance, and audit unified.',
+  type: 'object',
+
+  required: [
+    'urn', 'kind', 'version', 'lane', 'created_at',
+    'pins', 'provenance', 'governance', 'security', 'audit', 'payload'
+  ],
+
+  properties: {
+    urn: {
+      type: 'string',
+      description: 'Global identifier. Must conform to urn:slat taxonomy.',
+      pattern: '^urn:slat:[a-z]+:[a-z]+:[0-9]+@e8-[0-9]+\\.[0-9]+\\.[0-9]+:.*'
+    },
+
+    resolvers: {
+      type: 'object',
+      description: 'Optional resolver URLs that map to URN (repo://, mi://, arch://, tele://, dtt://, snap://).',
+      additionalProperties: { type: 'string' }
+    },
+
+    kind: {
+      type: 'string',
+      description: 'Artifact type / payload discriminator.',
+      enum: [
+        'statepack','snap','glyph','universe','slice','braid',
+        'dtt_subject','dtt_result','teletrail_event','proof','policy',
+        'lawpack','manifest','schedule','index','region_tag'
+      ]
+    },
+
+    version: { type: 'string', description: 'Schema version for this artifact (e.g., 1.0.0).' },
+    lane:    { $ref: '#/$defs/lane' },
+
+    created_at: { type: 'string', format: 'date-time' },
+    updated_at: { type: 'string', format: 'date-time', nullable: true },
+
+    produced_by: {
+      type: 'object',
+      description: 'Emitter details for reproducibility.',
+      properties: {
+        subsystem: { type: 'string', enum: ['repo','mi','arch','snap','tele','dtt','sap','port','ops'] },
+        build:     { type: 'string' },
+        host:      { type: 'string' }
+      }
+    },
+
+    pins: { $ref: '#/$defs/pins' },
+
+    policy_posture: { type: 'string', description: 'Brief string describing policy posture applied to this artifact.' },
+
+    governance: {
+      type: 'object',
+      properties: {
+        safe_cube_faces: { $ref: '#/$defs/safe_cube_faces' },
+        gates: {
+          type: 'object',
+          properties: {
+            DetectorGate:  { $ref: '#/$defs/gate_result' },
+            LeakageGate:   { $ref: '#/$defs/gate_result' },
+            ComplexityGate:{ $ref: '#/$defs/gate_result' },
+            TACGate:       { $ref: '#/$defs/gate_result' },
+            EvidenceGate:  { $ref: '#/$defs/gate_result' }
+          }
+        }
+      },
+      required: ['safe_cube_faces']
+    },
+
+    provenance: {
+      type: 'object',
+      description: 'Where this artifact came from and how to replay it.',
+      properties: {
+        sources:        { type: 'array', items: { type: 'string' } },
+        alias_of:       { type: 'array', items: { type: 'string' } }, // legacy/mapped URNs
+        repo_locator:   { type: 'string' },
+        master_index_keys: { type: 'array', items: { type: 'string' } },
+        dtt_subject:    { $ref: '#/$defs/dtt_subject_ref' },
+        dtt_result_ref: { type: 'string' },
+        teletrail_ref:  { $ref: '#/$defs/teletrail_ref' }
+      },
+      required: ['repo_locator']
+    },
+
+    security: {
+      type: 'object',
+      properties: {
+        kms_key:        { type: 'string' },
+        redaction_map:  { type: 'object', additionalProperties: { type: 'string' } },
+        consent_posture:{ type: 'string', enum: ['implicit','explicit','restricted'] }
+      }
+    },
+
+    audit: {
+      type: 'object',
+      properties: {
+        trace_id:  { type: 'string' },
+        events:    { type: 'array', items: { $ref: '#/$defs/audit_event' } },
+        signatures:{ type: 'array', items: { $ref: '#/$defs/signature' } }
+      },
+      required: ['trace_id']
+    },
+
+    invariants: {
+      type: 'object',
+      description: 'Expected properties for determinism and idempotence.',
+      properties: {
+        determinism: { $ref: '#/$defs/determinism' },
+        idempotence: { type: 'boolean', default: true },
+        replayable:  { type: 'boolean', default: true }
+      }
+    },
+
+    // Optional human-readable hints for operators (not identity)
+    human: { $ref: '#/$defs/human_readable' },
+
+    // Optional conformance suite hook
+    conformance: { $ref: '#/$defs/conformance_suite' },
+
+    payload: {
+      oneOf: [
+        { $ref: '#/$defs/statepack' },
+        { $ref: '#/$defs/snap' },
+        { $ref: '#/$defs/glyph' },
+        { $ref: '#/$defs/universe_manifest' },
+        { $ref: '#/$defs/universe_slice' },
+        { $ref: '#/$defs/braid_plan' },
+        { $ref: '#/$defs/dtt_subject' },
+        { $ref: '#/$defs/dtt_result' },
+        { $ref: '#/$defs/teletrail_event' },
+        { $ref: '#/$defs/reconciliation_proof' },
+        { $ref: '#/$defs/region_tag' },
+        { $ref: '#/$defs/policy_bundle' },
+        { $ref: '#/$defs/planner_schedule' },
+        { $ref: '#/$defs/index_manifest' }
+      ]
+    },
+
+    extensions: {
+      type: 'object',
+      description: 'Room for forward-compatible fields.',
+      additionalProperties: true
+    }
+  },
+
+  additionalProperties: false,
+
+  $defs: {
+    // ---- Pins ----
+    pins: {
+      type: 'object',
+      required: ['model_pin','lattice_pin','policy_pin'],
+      properties: {
+        model_pin:   { $ref: '#/$defs/model_pin' },
+        lattice_pin: { $ref: '#/$defs/lattice_pin' },
+        policy_pin:  { $ref: '#/$defs/policy_pin' }
+      }
+    },
+
+    model_pin: {
+      type: 'object',
+      properties: {
+        name:         { type: 'string' }, // e.g., gpt-5-thinking
+        revision:     { type: 'string' }, // r2025-08-10.3
+        tokenizer_rev:{ type: 'string' }
+      },
+      required: ['name','revision']
+    },
+
+    lattice_pin: {
+      type: 'object',
+      properties: {
+        lattice_version: { type: 'integer' },
+        engine_rev:      { type: 'string' },   // e8-0.9.7
+        basis:           { type: 'string' },   // content hash
+        tolerances:      { type: 'object', properties: { quant_eps: { type: 'number' }, tie_policy: { type: 'string' } } },
+        canon:           { type: 'object', properties: { method: { type: 'string', enum: ['weyl'] }, idempotent: { type: 'boolean' } } },
+        voronoi_rev:     { type: 'string' },
+        distance_metric: { type: 'string', enum: ['euclidean'] },
+        boundary_tie_policy: { type: 'string' }
+      },
+      required: ['lattice_version','engine_rev','basis']
+    },
+
+    policy_pin: {
+      type: 'object',
+      properties: {
+        lawpack_rev:   { type: 'string' },
+        guardrail_rev: { type: 'string' }
+      },
+      required: ['lawpack_rev']
+    },
+
+    lane: { type: 'string', enum: ['shadow','pilot','prod'] },
+
+    // ---- Governance & Audit ----
+    gate_result: {
+      type: 'object',
+      properties: {
+        status: { type: 'string', enum: ['pass','fail','hold'] },
+        reason: { type: 'string' },
+        metrics:{ type: 'object', additionalProperties: { type: 'number' } }
+      }
+    },
+
+    safe_cube_faces: {
+      type: 'object',
+      properties: {
+        privacy:     { type: 'boolean' },
+        bias:        { type: 'boolean' },
+        reliability: { type: 'boolean' },
+        compliance:  { type: 'boolean' }
+      },
+      additionalProperties: { type: 'boolean' }
+    },
+
+    audit_event: {
+      type: 'object',
+      properties: {
+        at:   { type: 'string', format: 'date-time' },
+        code: { type: 'string' },
+        data: { type: 'object', additionalProperties: true }
+      },
+      required: ['at','code']
+    },
+
+    signature: {
+      type: 'object',
+      properties: {
+        by:   { type: 'string', enum: ['sap','dtt','ops','system'] },
+        sig:  { type: 'string' },
+        algo: { type: 'string' }
+      },
+      required: ['by','sig']
+    },
+
+    determinism: {
+      type: 'object',
+      properties: {
+        rng_seed:   { type: 'integer' },
+        tolerances: { type: 'object', additionalProperties: { type: 'number' } }
+      }
+    },
+
+    teletrail_ref: {
+      type: 'object',
+      properties: {
+        trace_id:   { type: 'string' },
+        event_range:{ type: 'array', items: { type: 'integer' } }
+      },
+      required: ['trace_id']
+    },
+
+    dtt_subject_ref: { type: 'string' },
+
+    // ---- Optional Human-Readable Hints ----
+    human_readable: {
+      type: 'object',
+      description: 'Optional operator-friendly hints. Not part of identity.',
+      properties: {
+        triad:        { type: 'string', description: 'e.g., compute+e8+lattice' },
+        display_name: { type: 'string' },
+        breadcrumbs:  { type: 'array', items: { type: 'string' } }
+      },
+      additionalProperties: true
+    },
+
+    // ---- Conformance Suite ----
+    conformance_suite: {
+      type: 'object',
+      properties: {
+        suite_version: { type: 'string' },
+        checks: {
+          type: 'array',
+          items: {
+            type: 'object',
+            properties: {
+              id: { type: 'string' },
+              description: { type: 'string' },
+              type: { type: 'string', enum: ['schema','behavior','replay','governance'] },
+              required: { type: 'boolean' },
+              status: { type: 'string', enum: ['pass','fail','n/a','pending'] }
+            },
+            required: ['id','type','required']
+          }
+        }
+      }
+    },
+
+    // ---- Core payloads ----
+    snap: {
+      type: 'object',
+      title: 'SNAP Runtime Snap',
+      required: ['id','coord_e8','lattice_version','lane','lineage','hash'],
+      properties: {
+        id:           { type: 'string' },
+        coord_e8:     { type: 'array', items: { type: 'number' } },
+        lattice_version: { type: 'integer' },
+        lane:         { $ref: '#/$defs/lane' },
+        lineage:      { type: 'object', properties: { parent: { type:'string', nullable:true }, reanchor_of: { type:'string', nullable:true } } },
+        anchors:      { type: 'object', properties: { min_sep: { type:'number' }, admitted_at: { type:'string', format:'date-time' } } },
+        neighbors:    { type: 'object', properties: { k: { type:'integer' }, ids: { type:'array', items:{ type:'string' } }, dist: { type:'array', items:{ type:'number' } } } },
+        region_tags:  { type: 'array', items: { type:'string' } },
+        hash:         { type: 'string' }
+      }
+    },
+
+    glyph: {
+      type: 'object',
+      title: 'Glyph',
+      required: ['id','snap_ids','coord_e8','dna','n_path'],
+      properties: {
+        id:            { type: 'string' },
+        snap_ids:      { type: 'array', items: { type:'string' } },
+        coord_e8:      { type: 'array', items: { type:'number' } },
+        dna:           { type: 'string' },
+        n_path:        { type: 'string' },
+        policy_posture:{ type: 'string' },
+        evidence_count:{ type: 'integer' },
+        safe_cube_faces:{ $ref: '#/$defs/safe_cube_faces' },
+        archivist_ref: { type: 'string' },
+        evidence_refs: { type: 'array', items: { type: 'string' } },
+        neighbors:     { type: 'object', properties: { ids: { type:'array', items:{ type:'string' } }, dist: { type:'array', items:{ type:'number' } } } }
+      }
+    },
+
+    universe_manifest: {
+      type: 'object',
+      required: ['anchors','phi'],
+      properties: {
+        anchors: { type: 'object', additionalProperties: true },
+        phi:     { type: 'object', properties: { R: { type:'array', items:{ type:'number' } }, S: { type:'array', items:{ type:'number' } }, t: { type:'array', items:{ type:'number' } } } },
+        posture: { type: 'string' },
+        lineage: { type: 'string' },
+        portals: { type: 'array', items: { type:'string' } }
+      }
+    },
+
+    universe_slice: {
+      type: 'object',
+      properties: {
+        manifest_ref: { type: 'string' },
+        ttl_seconds:  { type: 'integer' },
+        archivist_ref:{ type: 'string' }
+      }
+    },
+
+    braid_plan: {
+      type: 'object',
+      properties: {
+        anchor:   { type:'string' },
+        word:     { type:'string' },
+        parity:   { type:'string' },
+        metrics:  { type:'object', additionalProperties:{ type:'number' } }
+      }
+    },
+
+    dtt_subject: {
+      type: 'object',
+      required: ['subject_id','type','lane','replay_keys'],
+      properties: {
+        subject_id: { type:'string' },
+        type: { type:'string', enum:['glyph_candidate','universe_slice','braid_plan','snap_state'] },
+        source_refs: { type:'array', items:{ type:'string' } },
+        lane: { $ref: '#/$defs/lane' },
+        policies: { $ref: '#/$defs/policy_pin' },
+        targets:  { type:'object', properties: { tac_min:{ type:'number' }, leakage_max:{ type:'number' }, complexity_max:{ type:'number' } } },
+        replay_keys: { type:'object', properties: { dna:{ type:'string' }, n_path:{ type:'string' }, coord_e8:{ type:'array', items:{ type:'number' } } }, required:['dna','n_path'] },
+        teletrail_ref: { $ref: '#/$defs/teletrail_ref' }
+      }
+    },
+
+    dtt_result: {
+      type: 'object',
+      properties: {
+        subject_id: { type:'string' },
+        verdict:    { type:'string', enum:['accept','remediate','reject','hold'] },
+        gates:      { type:'object', properties: { DetectorGate:{ $ref:'#/$defs/gate_result' }, LeakageGate:{ $ref:'#/$defs/gate_result' }, ComplexityGate:{ $ref:'#/$defs/gate_result' }, TACGate:{ $ref:'#/$defs/gate_result' }, EvidenceGate:{ $ref:'#/$defs/gate_result' } } },
+        metrics:    { type:'object', additionalProperties:{ type:'number' } },
+        artifacts:  { type:'array', items:{ type:'string' } }
+      },
+      required:['subject_id','verdict']
+    },
+
+    teletrail_event: {
+      type: 'object',
+      properties: {
+        tick:      { type:'integer' },
+        op:        { type:'string' },
+        m_op:      { type:'string' },
+        phi_delta: { type:'array', items:{ type:'number' } },
+        frontier_width: { type:'number' },
+        glyph_dl:  { type:'number' },
+        detectors: { type:'array', items:{ $ref:'#/$defs/detector_vector' } },
+        fusion:    { $ref:'#/$defs/fusion_summary' },
+        braid:     { type:'object', properties:{ parity:{ type:'string' }, word:{ type:'string' } } },
+        governance:{ type:'object', properties:{ decision:{ type:'string' } } },
+        artifacts: { type:'array', items:{ type:'string' } }
+      }
+    },
+
+    detector_vector: {
+      type: 'object',
+      properties: {
+        coverage: { type:'number' },
+        drift:    { type:'number' },
+        leakage:  { type:'number' },
+        cues:     { type:'number' },
+        hotmap_delta:{ type:'number' },
+        confidence: { type:'number' }
+      }
+    },
+
+    fusion_summary: {
+      type: 'object',
+      properties: {
+        method: { type:'string', enum:['kofn','weighted','dsmt','disagreement'] },
+        quorum: { type:'integer' },
+        disagreement_index: { type:'number' }
+      }
+    },
+
+    reconciliation_proof: {
+      type: 'object',
+      required: ['identity','subjects','pins','dtt','safe_cube','phi_roundtrip','boundary_parity','tac_hist','detector_summary','knn_replay','teletrail','repo_hooks','security','signatures'],
+      properties: {
+        identity: { type:'object', properties:{ proof_id:{ type:'string' }, created_at:{ type:'string', format:'date-time' }, issuer:{ type:'string' }, lane_from:{ $ref:'#/$defs/lane' }, lane_to:{ $ref:'#/$defs/lane' } }, required:['proof_id','created_at'] },
+        subjects: { type:'object', properties:{ target_urn:{ type:'string' }, source_urns:{ type:'array', items:{ type:'string' } } }, required:['target_urn','source_urns'] },
+        pins:     { $ref:'#/$defs/pins' },
+        dtt:      { type:'object', properties:{ subject_id:{ type:'string' }, result_id:{ type:'string' }, gates:{ type:'object' } }, required:['subject_id','result_id'] },
+        safe_cube:{ $ref:'#/$defs/safe_cube_faces' },
+        phi_roundtrip:{ type:'object', properties:{ ok:{ type:'boolean' }, max_positional_delta:{ type:'number' }, mean_delta:{ type:'number' } }, required:['ok'] },
+        boundary_parity:{ type:'object', properties:{ tie_policy:{ type:'string' }, sample_size:{ type:'integer' }, edges_tested:{ type:'integer' }, parity_ok:{ type:'boolean' }, diffs:{ type:'array', items:{ type:'string' } } }, required:['parity_ok'] },
+        tac_hist: { type:'object', additionalProperties:{ type:'number' } },
+        detector_summary:{ $ref:'#/$defs/detector_vector' },
+        knn_replay:{ type:'object', properties:{ seed:{ type:'integer' }, k:{ type:'integer' }, sample_N:{ type:'integer' }, pass_rate:{ type:'number' } }, required:['seed','k','sample_N','pass_rate'] },
+        teletrail:{ $ref:'#/$defs/teletrail_ref' },
+        repo_hooks:{ type:'object', properties:{ repo_locator:{ type:'string' }, master_index_keys:{ type:'array', items:{ type:'string' } } } },
+        security: { type:'object', properties:{ redaction_map:{ type:'object' }, consent_posture:{ type:'string' } } },
+        signatures:{ type:'array', items:{ $ref:'#/$defs/signature' } }
+      }
+    },
+
+    statepack: {
+      type: 'object',
+      required: ['snapshot_id','levels','registry','planner','telemetry','audit'],
+      properties: {
+        snapshot_id: { type:'string' },
+        levels: { type:'string', enum:['resume','replay','forensic'] },
+        registry: { $ref:'#/$defs/registry' },
+        planner:  { $ref:'#/$defs/planner_schedule' },
+        telemetry:{ type:'object', properties:{ kpi:{ type:'object' }, counters:{ type:'object' } } },
+        audit:    { type:'object', properties:{ reconciliation_proof_ref:{ type:'string' } } }
+      }
+    },
+
+    registry: {
+      type: 'object',
+      properties: {
+        snap_count:  { type:'integer' },
+        glyph_count: { type:'integer' },
+        region_tags: { type:'array', items:{ $ref:'#/$defs/region_tag' } },
+        leases:      { type:'array', items:{ $ref:'#/$defs/lease' } },
+        snaps:       { type:'array', items:{ $ref:'#/$defs/snap' } },
+        glyphs:      { type:'array', items:{ $ref:'#/$defs/glyph' } },
+        caches:      { type:'object', properties:{ neighbor_cache_key:{ type:'string' }, entries:{ type:'integer' } } }
+      }
+    },
+
+    lease: {
+      type: 'object',
+      properties: {
+        id: { type:'string' }, region:{ type:'string' }, owner:{ type:'string' }, ttl:{ type:'integer' }, epoch:{ type:'integer' }, fence_token:{ type:'string' }
+      }
+    },
+
+    region_tag: {
+      type: 'object',
+      properties: {
+        id:{ type:'string' }, type:{ type:'string', enum:['quarantine','hold','embargo'] }, region:{ type:'string' }, reason:{ type:'string' }, issued_by:{ type:'string' }, effective:{ type:'string', format:'date-time' }, expiry:{ type:'string', format:'date-time' }
+      }
+    },
+
+    planner_schedule: {
+      type: 'object',
+      properties: {
+        schedule_id:{ type:'string' },
+        ops:{ type:'array', items:{ type:'object', properties:{ tick:{ type:'integer' }, op:{ type:'string' }, m_op:{ type:'string' } } } },
+        heatmap_ref:{ type:'string' },
+        rng_seed:{ type:'integer' }
+      }
+    },
+
+    index_manifest: {
+      type: 'object',
+      properties: {
+        keys: { type:'array', items:{ type:'string' } },
+        resolvers: { type:'object' }
+      }
+    },
+
+    policy_bundle: {
+      type: 'object',
+      properties: {
+        lawpack_rev: { type:'string' },
+        guardrail_rev: { type:'string' }
+      }
+    }
+  }
+}

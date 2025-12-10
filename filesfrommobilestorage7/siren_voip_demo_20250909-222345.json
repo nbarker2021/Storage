@@ -1,0 +1,1577 @@
+{
+  "bounds": {
+    "width": 16,
+    "height": 16
+  },
+  "steps": 96,
+  "closure_reached": true,
+  "ops_counts": {
+    "snap": 0,
+    "glue_flip": 12
+  },
+  "parity_ok_all": true,
+  "conservation_ok_all": false,
+  "info_bound_ok_all": true,
+  "log": [
+    {
+      "step": 1,
+      "theta": 0.0,
+      "pos": [
+        8,
+        8
+      ],
+      "symbol": "W",
+      "invariant": "Parity",
+      "bucket": "S",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": false,
+      "info_bound_ok": true
+    },
+    {
+      "step": 2,
+      "theta": 2.399949894539843,
+      "pos": [
+        7,
+        8
+      ],
+      "symbol": "A",
+      "invariant": "Parity",
+      "bucket": "I",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": false,
+      "info_bound_ok": true
+    },
+    {
+      "step": 3,
+      "theta": 4.799899789079686,
+      "pos": [
+        8,
+        6
+      ],
+      "symbol": "V",
+      "invariant": "Parity",
+      "bucket": "R",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": false,
+      "info_bound_ok": true
+    },
+    {
+      "step": 4,
+      "theta": 0.9166643764399431,
+      "pos": [
+        9,
+        9
+      ],
+      "symbol": "E",
+      "invariant": "Parity",
+      "bucket": "E",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": false,
+      "info_bound_ok": true
+    },
+    {
+      "step": 5,
+      "theta": 3.3166142709797857,
+      "pos": [
+        5,
+        7
+      ],
+      "symbol": "C",
+      "invariant": "BoundedInfo",
+      "bucket": "N",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": false,
+      "info_bound_ok": true
+    },
+    {
+      "step": 6,
+      "theta": 5.716564165519628,
+      "pos": [
+        10,
+        6
+      ],
+      "symbol": "O",
+      "invariant": "BoundedInfo",
+      "bucket": "V",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": false,
+      "info_bound_ok": true
+    },
+    {
+      "step": 7,
+      "theta": 1.8333287528798863,
+      "pos": [
+        7,
+        11
+      ],
+      "symbol": "D",
+      "invariant": "BoundedInfo",
+      "bucket": "O",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": false,
+      "info_bound_ok": true
+    },
+    {
+      "step": 8,
+      "theta": 4.233278647419727,
+      "pos": [
+        6,
+        4
+      ],
+      "symbol": "E",
+      "invariant": "BoundedInfo",
+      "bucket": "P",
+      "ops": [
+        "glue+flip"
+      ],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 9,
+      "theta": 0.3500432347799851,
+      "pos": [
+        12,
+        9
+      ],
+      "symbol": "P",
+      "invariant": "Conservation",
+      "bucket": "S",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 10,
+      "theta": 2.7499931293198294,
+      "pos": [
+        3,
+        9
+      ],
+      "symbol": "A",
+      "invariant": "Conservation",
+      "bucket": "I",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 11,
+      "theta": 5.14994302385967,
+      "pos": [
+        10,
+        3
+      ],
+      "symbol": "I",
+      "invariant": "Conservation",
+      "bucket": "R",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 12,
+      "theta": 1.2667076112199283,
+      "pos": [
+        9,
+        13
+      ],
+      "symbol": "R",
+      "invariant": "Conservation",
+      "bucket": "E",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 13,
+      "theta": 3.6666575057597726,
+      "pos": [
+        2,
+        4
+      ],
+      "symbol": "B",
+      "invariant": "Closure",
+      "bucket": "N",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 14,
+      "theta": 6.066607400299613,
+      "pos": [
+        14,
+        6
+      ],
+      "symbol": "I",
+      "invariant": "Closure",
+      "bucket": "V",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 15,
+      "theta": 2.183371987659868,
+      "pos": [
+        3,
+        14
+      ],
+      "symbol": "N",
+      "invariant": "Closure",
+      "bucket": "O",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 16,
+      "theta": 4.583321882199712,
+      "pos": [
+        6,
+        0
+      ],
+      "symbol": "D",
+      "invariant": "Closure",
+      "bucket": "P",
+      "ops": [
+        "glue+flip"
+      ],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 17,
+      "theta": 0.7000864695599702,
+      "pos": [
+        14,
+        13
+      ],
+      "symbol": "W",
+      "invariant": "Parity",
+      "bucket": "S",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 18,
+      "theta": 3.1000363640998145,
+      "pos": [
+        0,
+        8
+      ],
+      "symbol": "A",
+      "invariant": "Parity",
+      "bucket": "I",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 19,
+      "theta": 5.499986258639659,
+      "pos": [
+        14,
+        1
+      ],
+      "symbol": "V",
+      "invariant": "Parity",
+      "bucket": "R",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 20,
+      "theta": 1.6167508459999098,
+      "pos": [
+        7,
+        15
+      ],
+      "symbol": "E",
+      "invariant": "Parity",
+      "bucket": "E",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 21,
+      "theta": 4.016700740539754,
+      "pos": [
+        1,
+        0
+      ],
+      "symbol": "C",
+      "invariant": "BoundedInfo",
+      "bucket": "N",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 22,
+      "theta": 0.1334653279000122,
+      "pos": [
+        15,
+        9
+      ],
+      "symbol": "O",
+      "invariant": "BoundedInfo",
+      "bucket": "V",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 23,
+      "theta": 2.5334152224398565,
+      "pos": [
+        0,
+        14
+      ],
+      "symbol": "D",
+      "invariant": "BoundedInfo",
+      "bucket": "O",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 24,
+      "theta": 4.933365116979701,
+      "pos": [
+        10,
+        0
+      ],
+      "symbol": "E",
+      "invariant": "BoundedInfo",
+      "bucket": "P",
+      "ops": [
+        "glue+flip"
+      ],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 25,
+      "theta": 1.050129704339959,
+      "pos": [
+        14,
+        15
+      ],
+      "symbol": "P",
+      "invariant": "Conservation",
+      "bucket": "S",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 26,
+      "theta": 3.450079598879796,
+      "pos": [
+        0,
+        4
+      ],
+      "symbol": "A",
+      "invariant": "Conservation",
+      "bucket": "I",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 27,
+      "theta": 5.85002949341964,
+      "pos": [
+        15,
+        2
+      ],
+      "symbol": "I",
+      "invariant": "Conservation",
+      "bucket": "R",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 28,
+      "theta": 1.9667940807798914,
+      "pos": [
+        2,
+        15
+      ],
+      "symbol": "R",
+      "invariant": "Conservation",
+      "bucket": "E",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 29,
+      "theta": 4.366743975319736,
+      "pos": [
+        3,
+        0
+      ],
+      "symbol": "B",
+      "invariant": "Closure",
+      "bucket": "N",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 30,
+      "theta": 0.48350856267999376,
+      "pos": [
+        15,
+        14
+      ],
+      "symbol": "I",
+      "invariant": "Closure",
+      "bucket": "V",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 31,
+      "theta": 2.883458457219838,
+      "pos": [
+        0,
+        11
+      ],
+      "symbol": "N",
+      "invariant": "Closure",
+      "bucket": "O",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 32,
+      "theta": 5.283408351759682,
+      "pos": [
+        15,
+        0
+      ],
+      "symbol": "D",
+      "invariant": "Closure",
+      "bucket": "P",
+      "ops": [
+        "glue+flip"
+      ],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 33,
+      "theta": 1.4001729391199405,
+      "pos": [
+        10,
+        15
+      ],
+      "symbol": "W",
+      "invariant": "Parity",
+      "bucket": "S",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 34,
+      "theta": 3.8001228336597848,
+      "pos": [
+        0,
+        0
+      ],
+      "symbol": "A",
+      "invariant": "Parity",
+      "bucket": "I",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 35,
+      "theta": 6.200072728199629,
+      "pos": [
+        15,
+        6
+      ],
+      "symbol": "V",
+      "invariant": "Parity",
+      "bucket": "R",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 36,
+      "theta": 2.316837315559887,
+      "pos": [
+        0,
+        15
+      ],
+      "symbol": "E",
+      "invariant": "Parity",
+      "bucket": "E",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 37,
+      "theta": 4.7167872100997315,
+      "pos": [
+        8,
+        0
+      ],
+      "symbol": "C",
+      "invariant": "BoundedInfo",
+      "bucket": "N",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 38,
+      "theta": 0.8335517974599895,
+      "pos": [
+        15,
+        15
+      ],
+      "symbol": "O",
+      "invariant": "BoundedInfo",
+      "bucket": "V",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 39,
+      "theta": 3.2335016919998196,
+      "pos": [
+        0,
+        6
+      ],
+      "symbol": "D",
+      "invariant": "BoundedInfo",
+      "bucket": "O",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 40,
+      "theta": 5.633451586539664,
+      "pos": [
+        15,
+        0
+      ],
+      "symbol": "E",
+      "invariant": "BoundedInfo",
+      "bucket": "P",
+      "ops": [
+        "glue+flip"
+      ],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 41,
+      "theta": 1.750216173899922,
+      "pos": [
+        4,
+        15
+      ],
+      "symbol": "P",
+      "invariant": "Conservation",
+      "bucket": "S",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 42,
+      "theta": 4.150166068439766,
+      "pos": [
+        0,
+        0
+      ],
+      "symbol": "A",
+      "invariant": "Conservation",
+      "bucket": "I",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 43,
+      "theta": 0.2669306558000244,
+      "pos": [
+        15,
+        13
+      ],
+      "symbol": "I",
+      "invariant": "Conservation",
+      "bucket": "R",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 44,
+      "theta": 2.6668805503398687,
+      "pos": [
+        0,
+        15
+      ],
+      "symbol": "R",
+      "invariant": "Conservation",
+      "bucket": "E",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 45,
+      "theta": 5.066830444879713,
+      "pos": [
+        15,
+        0
+      ],
+      "symbol": "B",
+      "invariant": "Closure",
+      "bucket": "N",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 46,
+      "theta": 1.183595032239971,
+      "pos": [
+        15,
+        15
+      ],
+      "symbol": "I",
+      "invariant": "Closure",
+      "bucket": "V",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 47,
+      "theta": 3.5835449267798154,
+      "pos": [
+        0,
+        0
+      ],
+      "symbol": "N",
+      "invariant": "Closure",
+      "bucket": "O",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 48,
+      "theta": 5.98349482131966,
+      "pos": [
+        15,
+        0
+      ],
+      "symbol": "D",
+      "invariant": "Closure",
+      "bucket": "P",
+      "ops": [
+        "glue+flip"
+      ],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 49,
+      "theta": 2.100259408679918,
+      "pos": [
+        0,
+        15
+      ],
+      "symbol": "W",
+      "invariant": "Parity",
+      "bucket": "S",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 50,
+      "theta": 4.500209303219748,
+      "pos": [
+        2,
+        0
+      ],
+      "symbol": "A",
+      "invariant": "Parity",
+      "bucket": "I",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 51,
+      "theta": 0.616973890580006,
+      "pos": [
+        15,
+        15
+      ],
+      "symbol": "V",
+      "invariant": "Parity",
+      "bucket": "R",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 52,
+      "theta": 3.0169237851198503,
+      "pos": [
+        0,
+        11
+      ],
+      "symbol": "E",
+      "invariant": "Parity",
+      "bucket": "E",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 53,
+      "theta": 5.416873679659695,
+      "pos": [
+        15,
+        0
+      ],
+      "symbol": "C",
+      "invariant": "BoundedInfo",
+      "bucket": "N",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 54,
+      "theta": 1.5336382670199527,
+      "pos": [
+        9,
+        15
+      ],
+      "symbol": "O",
+      "invariant": "BoundedInfo",
+      "bucket": "V",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 55,
+      "theta": 3.9335881615597827,
+      "pos": [
+        0,
+        0
+      ],
+      "symbol": "D",
+      "invariant": "BoundedInfo",
+      "bucket": "O",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 56,
+      "theta": 0.050352748920040824,
+      "pos": [
+        15,
+        9
+      ],
+      "symbol": "E",
+      "invariant": "BoundedInfo",
+      "bucket": "P",
+      "ops": [
+        "glue+flip"
+      ],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 57,
+      "theta": 2.450302643459885,
+      "pos": [
+        0,
+        15
+      ],
+      "symbol": "P",
+      "invariant": "Conservation",
+      "bucket": "S",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 58,
+      "theta": 4.850252537999729,
+      "pos": [
+        11,
+        0
+      ],
+      "symbol": "A",
+      "invariant": "Conservation",
+      "bucket": "I",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 59,
+      "theta": 0.9670171253599875,
+      "pos": [
+        15,
+        15
+      ],
+      "symbol": "I",
+      "invariant": "Conservation",
+      "bucket": "R",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 60,
+      "theta": 3.366967019899832,
+      "pos": [
+        0,
+        1
+      ],
+      "symbol": "R",
+      "invariant": "Conservation",
+      "bucket": "E",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 61,
+      "theta": 5.766916914439676,
+      "pos": [
+        15,
+        0
+      ],
+      "symbol": "B",
+      "invariant": "Closure",
+      "bucket": "N",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 62,
+      "theta": 1.8836815017999342,
+      "pos": [
+        0,
+        15
+      ],
+      "symbol": "I",
+      "invariant": "Closure",
+      "bucket": "V",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 63,
+      "theta": 4.2836313963397785,
+      "pos": [
+        0,
+        0
+      ],
+      "symbol": "N",
+      "invariant": "Closure",
+      "bucket": "O",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 64,
+      "theta": 0.4003959837000366,
+      "pos": [
+        15,
+        15
+      ],
+      "symbol": "D",
+      "invariant": "Closure",
+      "bucket": "P",
+      "ops": [
+        "glue+flip"
+      ],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 65,
+      "theta": 2.800345878239881,
+      "pos": [
+        0,
+        15
+      ],
+      "symbol": "W",
+      "invariant": "Parity",
+      "bucket": "S",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 66,
+      "theta": 5.200295772779725,
+      "pos": [
+        15,
+        0
+      ],
+      "symbol": "A",
+      "invariant": "Parity",
+      "bucket": "I",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 67,
+      "theta": 1.3170603601399833,
+      "pos": [
+        15,
+        15
+      ],
+      "symbol": "V",
+      "invariant": "Parity",
+      "bucket": "R",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 68,
+      "theta": 3.7170102546798276,
+      "pos": [
+        0,
+        0
+      ],
+      "symbol": "E",
+      "invariant": "Parity",
+      "bucket": "E",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 69,
+      "theta": 6.116960149219672,
+      "pos": [
+        15,
+        2
+      ],
+      "symbol": "C",
+      "invariant": "BoundedInfo",
+      "bucket": "N",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 70,
+      "theta": 2.23372473657993,
+      "pos": [
+        0,
+        15
+      ],
+      "symbol": "O",
+      "invariant": "BoundedInfo",
+      "bucket": "V",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 71,
+      "theta": 4.633674631119774,
+      "pos": [
+        5,
+        0
+      ],
+      "symbol": "D",
+      "invariant": "BoundedInfo",
+      "bucket": "O",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 72,
+      "theta": 0.7504392184800324,
+      "pos": [
+        15,
+        15
+      ],
+      "symbol": "E",
+      "invariant": "BoundedInfo",
+      "bucket": "P",
+      "ops": [
+        "glue+flip"
+      ],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 73,
+      "theta": 3.1503891130198767,
+      "pos": [
+        0,
+        7
+      ],
+      "symbol": "P",
+      "invariant": "Conservation",
+      "bucket": "S",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 74,
+      "theta": 5.550339007559721,
+      "pos": [
+        15,
+        0
+      ],
+      "symbol": "A",
+      "invariant": "Conservation",
+      "bucket": "I",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 75,
+      "theta": 1.667103594919979,
+      "pos": [
+        4,
+        15
+      ],
+      "symbol": "I",
+      "invariant": "Conservation",
+      "bucket": "R",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 76,
+      "theta": 4.067053489459795,
+      "pos": [
+        0,
+        0
+      ],
+      "symbol": "R",
+      "invariant": "Conservation",
+      "bucket": "E",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 77,
+      "theta": 0.18381807682005302,
+      "pos": [
+        15,
+        15
+      ],
+      "symbol": "B",
+      "invariant": "Closure",
+      "bucket": "N",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 78,
+      "theta": 2.5837679713598973,
+      "pos": [
+        0,
+        15
+      ],
+      "symbol": "I",
+      "invariant": "Closure",
+      "bucket": "V",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 79,
+      "theta": 4.983717865899742,
+      "pos": [
+        15,
+        0
+      ],
+      "symbol": "N",
+      "invariant": "Closure",
+      "bucket": "O",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 80,
+      "theta": 1.1004824532599997,
+      "pos": [
+        15,
+        15
+      ],
+      "symbol": "D",
+      "invariant": "Closure",
+      "bucket": "P",
+      "ops": [
+        "glue+flip"
+      ],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 81,
+      "theta": 3.500432347799844,
+      "pos": [
+        0,
+        0
+      ],
+      "symbol": "W",
+      "invariant": "Parity",
+      "bucket": "S",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 82,
+      "theta": 5.900382242339688,
+      "pos": [
+        15,
+        0
+      ],
+      "symbol": "A",
+      "invariant": "Parity",
+      "bucket": "I",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 83,
+      "theta": 2.0171468296999464,
+      "pos": [
+        0,
+        15
+      ],
+      "symbol": "V",
+      "invariant": "Parity",
+      "bucket": "R",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 84,
+      "theta": 4.417096724239791,
+      "pos": [
+        0,
+        0
+      ],
+      "symbol": "E",
+      "invariant": "Parity",
+      "bucket": "E",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 85,
+      "theta": 0.5338613116000488,
+      "pos": [
+        15,
+        15
+      ],
+      "symbol": "C",
+      "invariant": "BoundedInfo",
+      "bucket": "N",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 86,
+      "theta": 2.933811206139893,
+      "pos": [
+        0,
+        15
+      ],
+      "symbol": "O",
+      "invariant": "BoundedInfo",
+      "bucket": "V",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 87,
+      "theta": 5.333761100679737,
+      "pos": [
+        15,
+        0
+      ],
+      "symbol": "D",
+      "invariant": "BoundedInfo",
+      "bucket": "O",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 88,
+      "theta": 1.4505256880399955,
+      "pos": [
+        13,
+        15
+      ],
+      "symbol": "E",
+      "invariant": "BoundedInfo",
+      "bucket": "P",
+      "ops": [
+        "glue+flip"
+      ],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 89,
+      "theta": 3.85047558257984,
+      "pos": [
+        0,
+        0
+      ],
+      "symbol": "P",
+      "invariant": "Conservation",
+      "bucket": "S",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 90,
+      "theta": 6.250425477119684,
+      "pos": [
+        15,
+        6
+      ],
+      "symbol": "A",
+      "invariant": "Conservation",
+      "bucket": "I",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 91,
+      "theta": 2.367190064479942,
+      "pos": [
+        0,
+        15
+      ],
+      "symbol": "I",
+      "invariant": "Conservation",
+      "bucket": "R",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 92,
+      "theta": 4.7671399590197865,
+      "pos": [
+        10,
+        0
+      ],
+      "symbol": "R",
+      "invariant": "Conservation",
+      "bucket": "E",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 93,
+      "theta": 0.8839045463800446,
+      "pos": [
+        15,
+        15
+      ],
+      "symbol": "B",
+      "invariant": "Closure",
+      "bucket": "N",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 94,
+      "theta": 3.283854440919889,
+      "pos": [
+        0,
+        1
+      ],
+      "symbol": "I",
+      "invariant": "Closure",
+      "bucket": "V",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": false,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 95,
+      "theta": 5.683804335459733,
+      "pos": [
+        15,
+        0
+      ],
+      "symbol": "N",
+      "invariant": "Closure",
+      "bucket": "O",
+      "ops": [],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    },
+    {
+      "step": 96,
+      "theta": 1.8005689228199913,
+      "pos": [
+        0,
+        15
+      ],
+      "symbol": "D",
+      "invariant": "Closure",
+      "bucket": "P",
+      "ops": [
+        "glue+flip"
+      ],
+      "parity_ok": true,
+      "conservation_ok": true,
+      "closure_ok": true,
+      "info_bound_ok": true
+    }
+  ]
+}

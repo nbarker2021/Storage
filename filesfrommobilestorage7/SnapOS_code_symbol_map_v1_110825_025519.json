@@ -1,0 +1,832 @@
+{
+  "generated": "2025-08-11T02:55:19.742121-07:00",
+  "module_symbols": {
+    "Code.agent_center": [
+      "AgentCenter"
+    ],
+    "Code.agent_mgmt": [
+      "AgentSpec",
+      "AgentMgmt"
+    ],
+    "Code.agent_roles": [
+      "AgentRoleSpec"
+    ],
+    "Code.anti_classes": [
+      "is_anti_laminate_pattern",
+      "is_anti_prodigal_disruption"
+    ],
+    "Code.atomic": [
+      "atomic_write_text",
+      "atomic_write_json"
+    ],
+    "Code.banlist": [
+      "build_banlist_from_seq",
+      "merge_banlists",
+      "update_mdhg_banlist"
+    ],
+    "Code.build_all": [
+      "ensure_dirs",
+      "generate_default_tools",
+      "run_demo"
+    ],
+    "Code.carryset": [
+      "CarrySet"
+    ],
+    "Code.config_loader": [
+      "load_config"
+    ],
+    "Code.debruijn_engine": [
+      "PermutationOverlapGraph",
+      "all_permutations"
+    ],
+    "Code.dump_store": [],
+    "Code.e8_stratum": [
+      "E8Key",
+      "E8"
+    ],
+    "Code.env": [
+      "overlay_env"
+    ],
+    "Code.generate_snap_tools": [
+      "main"
+    ],
+    "Code.glyph": [
+      "make_glyph_id",
+      "compress_vec",
+      "glyph_from_e8"
+    ],
+    "Code.golden_ratio_threshold": [
+      "threshold_T"
+    ],
+    "Code.grid_saturation": [
+      "GridSaturation"
+    ],
+    "Code.harness_n7": [
+      "HarnessN7"
+    ],
+    "Code.hashers": [
+      "sha256_bytes",
+      "sha256_str",
+      "stable_sig",
+      "window_id",
+      "e8_vec_id"
+    ],
+    "Code.jsonio": [
+      "read_json",
+      "write_json"
+    ],
+    "Code.jsonl": [
+      "append_jsonl",
+      "read_jsonl"
+    ],
+    "Code.laminate": [
+      "windows",
+      "conflicts_with_prodigal",
+      "head_tail_same"
+    ],
+    "Code.laminate_filter": [
+      "LaminateFilter",
+      "AntiClasses"
+    ],
+    "Code.layout_memory": [
+      "LayoutMemory"
+    ],
+    "Code.ledger_query": [
+      "E8LedgerQuery"
+    ],
+    "Code.limbo_list": [
+      "LimboItem",
+      "LimboQueue"
+    ],
+    "Code.metrics": [
+      "factorial",
+      "windows",
+      "coverage",
+      "uniq",
+      "tail_diversity"
+    ],
+    "Code.morsr": [
+      "MORSR"
+    ],
+    "Code.morsr_utils": [
+      "ledger_nodes_to_universe",
+      "edges_to_adjacency"
+    ],
+    "Code.ou_encoder": [
+      "E8Key",
+      "OUEncoder"
+    ],
+    "Code.overlap_engine": [
+      "OverlapEngine"
+    ],
+    "Code.pass_through": [
+      "E8Key",
+      "PassThroughEncoder"
+    ],
+    "Code.paths": [
+      "ensure_dir",
+      "here"
+    ],
+    "Code.pidx": [
+      "PIDX"
+    ],
+    "Code.pidx_backing": [
+      "PIDXBacking"
+    ],
+    "Code.pidx_persisted": [
+      "PIDXPersisted"
+    ],
+    "Code.playbook": [
+      "Playbook"
+    ],
+    "Code.policy_mode_switch": [
+      "ModeSwitchPolicy"
+    ],
+    "Code.porter_report_templates": [
+      "summary",
+      "escalation",
+      "audit"
+    ],
+    "Code.prodigal": [
+      "ProdigalIndex"
+    ],
+    "Code.rand": [
+      "rng",
+      "choice"
+    ],
+    "Code.registry": [
+      "default_encoders"
+    ],
+    "Code.run_harness": [],
+    "Code.run_morsr_on_ledger": [],
+    "Code.safe_cube": [
+      "centroid",
+      "consensus_distance",
+      "within_tolerances",
+      "safe_consensus"
+    ],
+    "Code.safe_square": [
+      "UniverseEncoder",
+      "E8Key",
+      "Transform",
+      "GateResult",
+      "SafeSquare",
+      "l2"
+    ],
+    "Code.sap_bus": [
+      "SAPMessage",
+      "SAPBus",
+      "PorterAgent"
+    ],
+    "Code.sap_middleware": [
+      "SAPBusGuarded"
+    ],
+    "Code.sap_policies": [
+      "SAPPolicies"
+    ],
+    "Code.sap_rbac": [
+      "Capability",
+      "SAPRBAC"
+    ],
+    "Code.sap_state_machine": [
+      "SAPStateMachine"
+    ],
+    "Code.sap_topology": [
+      "PathRule",
+      "SAPTopology"
+    ],
+    "Code.schemas": [
+      "is_valid_worm_event",
+      "is_valid_porter_summary"
+    ],
+    "Code.shells": [
+      "l2",
+      "bucket"
+    ],
+    "Code.snap_factory": [
+      "SNAPFactory"
+    ],
+    "Code.snap_regency": [
+      "SNAPRegency"
+    ],
+    "Code.snap_superperm": [
+      "SNAPSuperperm"
+    ],
+    "Code.SNAPChef": [
+      "run"
+    ],
+    "Code.SNAPCosmos": [
+      "run"
+    ],
+    "Code.SNAPCulture": [
+      "run"
+    ],
+    "Code.snapdna": [
+      "SNAPSpec",
+      "SNAPDNA"
+    ],
+    "Code.SNAPFauna": [
+      "run"
+    ],
+    "Code.SNAPFinance": [
+      "run"
+    ],
+    "Code.SNAPMORSR": [
+      "_default_encode_e8",
+      "_default_respond",
+      "_default_safe",
+      "run",
+      "_dict_to_e8key",
+      "node_kind"
+    ],
+    "Code.state_model": [
+      "SequenceState"
+    ],
+    "Code.structlog": [
+      "log",
+      "info",
+      "warn",
+      "error"
+    ],
+    "Code.superperm_builder": [
+      "BuilderConfig",
+      "SuperpermBuilder"
+    ],
+    "Code.superperm_metrics": [
+      "factorial",
+      "coverage_score",
+      "length"
+    ],
+    "Code.template_library": [
+      "rotations",
+      "mirrored",
+      "interleave",
+      "lexiperms",
+      "zigzag",
+      "bands",
+      "candidate_templates"
+    ],
+    "Code.timer": [
+      "Stopwatch",
+      "timer"
+    ],
+    "Code.trace": [
+      "get_trace",
+      "emit"
+    ],
+    "Code.validate": [
+      "has_keys",
+      "validate_worm_event",
+      "validate_porter_summary"
+    ],
+    "Code.verify_replay": [],
+    "Code.window_ops": [
+      "windows",
+      "overlap_len",
+      "stitch",
+      "unique_symbols"
+    ],
+    "Code.winners": [
+      "WinnersManager"
+    ],
+    "Code.worm_trace": [
+      "WORMEvent",
+      "WORMTrace"
+    ]
+  },
+  "symbol_events": {
+    "AgentCenter": [],
+    "AgentSpec": [],
+    "AgentMgmt": [],
+    "AgentRoleSpec": [],
+    "is_anti_laminate_pattern": [],
+    "is_anti_prodigal_disruption": [],
+    "atomic_write_text": [],
+    "atomic_write_json": [],
+    "build_banlist_from_seq": [],
+    "merge_banlists": [],
+    "update_mdhg_banlist": [],
+    "ensure_dirs": [],
+    "generate_default_tools": [],
+    "run_demo": [],
+    "CarrySet": [
+      58,
+      59,
+      60,
+      61,
+      73,
+      74
+    ],
+    "load_config": [],
+    "PermutationOverlapGraph": [],
+    "all_permutations": [],
+    "E8Key": [
+      75,
+      76
+    ],
+    "E8": [
+      1,
+      2,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      13,
+      14,
+      15,
+      18,
+      25,
+      26,
+      33,
+      34,
+      38,
+      40,
+      41,
+      42,
+      62,
+      63,
+      64,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78
+    ],
+    "overlay_env": [],
+    "main": [
+      10,
+      19,
+      29,
+      38,
+      44,
+      45,
+      74
+    ],
+    "make_glyph_id": [],
+    "compress_vec": [],
+    "glyph_from_e8": [],
+    "threshold_T": [],
+    "GridSaturation": [
+      70
+    ],
+    "HarnessN7": [],
+    "sha256_bytes": [],
+    "sha256_str": [],
+    "stable_sig": [],
+    "window_id": [
+      58
+    ],
+    "e8_vec_id": [],
+    "read_json": [],
+    "write_json": [],
+    "append_jsonl": [],
+    "read_jsonl": [],
+    "windows": [
+      53,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      70,
+      73,
+      75,
+      76
+    ],
+    "conflicts_with_prodigal": [],
+    "head_tail_same": [],
+    "LaminateFilter": [
+      59,
+      60,
+      61,
+      62,
+      63,
+      67,
+      72,
+      73,
+      75
+    ],
+    "AntiClasses": [],
+    "LayoutMemory": [
+      46,
+      47,
+      48,
+      57,
+      58,
+      63,
+      64,
+      65,
+      66,
+      72,
+      73,
+      74
+    ],
+    "E8LedgerQuery": [],
+    "LimboItem": [
+      66
+    ],
+    "LimboQueue": [
+      66
+    ],
+    "factorial": [],
+    "coverage": [
+      1,
+      2,
+      8,
+      43,
+      44,
+      45,
+      46,
+      48,
+      51,
+      52,
+      53,
+      56,
+      58,
+      59,
+      61,
+      63,
+      73,
+      74,
+      76,
+      77,
+      78
+    ],
+    "uniq": [],
+    "tail_diversity": [],
+    "MORSR": [
+      76,
+      77,
+      78
+    ],
+    "ledger_nodes_to_universe": [],
+    "edges_to_adjacency": [],
+    "OUEncoder": [],
+    "OverlapEngine": [],
+    "PassThroughEncoder": [],
+    "ensure_dir": [],
+    "here": [
+      2,
+      6,
+      11,
+      14,
+      17,
+      18,
+      20,
+      21,
+      22,
+      32,
+      38,
+      43,
+      44,
+      53,
+      57,
+      58,
+      71,
+      72,
+      73,
+      74
+    ],
+    "PIDX": [
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76
+    ],
+    "PIDXBacking": [
+      66
+    ],
+    "PIDXPersisted": [],
+    "Playbook": [
+      75,
+      76
+    ],
+    "ModeSwitchPolicy": [],
+    "summary": [
+      6,
+      14,
+      17,
+      19,
+      20,
+      21,
+      32,
+      38,
+      60,
+      61,
+      63,
+      68,
+      71,
+      72,
+      74
+    ],
+    "escalation": [
+      29,
+      30,
+      31,
+      32,
+      42,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76
+    ],
+    "audit": [
+      6,
+      8,
+      29,
+      30,
+      31,
+      32,
+      34,
+      38,
+      42,
+      43,
+      44,
+      45,
+      46,
+      48,
+      51,
+      57,
+      58,
+      67,
+      73,
+      77,
+      78
+    ],
+    "ProdigalIndex": [],
+    "rng": [],
+    "choice": [
+      45,
+      73
+    ],
+    "default_encoders": [],
+    "centroid": [
+      40
+    ],
+    "consensus_distance": [],
+    "within_tolerances": [],
+    "safe_consensus": [],
+    "UniverseEncoder": [],
+    "Transform": [
+      76
+    ],
+    "GateResult": [],
+    "SafeSquare": [
+      76
+    ],
+    "l2": [],
+    "SAPMessage": [],
+    "SAPBus": [
+      66
+    ],
+    "PorterAgent": [
+      29,
+      30,
+      31,
+      32,
+      34,
+      68
+    ],
+    "SAPBusGuarded": [],
+    "SAPPolicies": [],
+    "Capability": [],
+    "SAPRBAC": [],
+    "SAPStateMachine": [],
+    "PathRule": [],
+    "SAPTopology": [],
+    "is_valid_worm_event": [],
+    "is_valid_porter_summary": [],
+    "bucket": [
+      34
+    ],
+    "SNAPFactory": [],
+    "SNAPRegency": [
+      75,
+      76
+    ],
+    "SNAPSuperperm": [
+      43,
+      44,
+      45,
+      46,
+      54,
+      60,
+      61,
+      63,
+      72,
+      73,
+      74,
+      75
+    ],
+    "run": [
+      1,
+      2,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      15,
+      19,
+      23,
+      24,
+      29,
+      31,
+      32,
+      33,
+      34,
+      40,
+      46,
+      47,
+      48,
+      57,
+      58,
+      59,
+      60,
+      62,
+      64,
+      65,
+      66,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      77
+    ],
+    "SNAPSpec": [],
+    "SNAPDNA": [
+      14,
+      15,
+      16,
+      18,
+      20,
+      24,
+      25,
+      26,
+      31,
+      32,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77
+    ],
+    "_default_encode_e8": [],
+    "_default_respond": [],
+    "_default_safe": [],
+    "_dict_to_e8key": [],
+    "node_kind": [],
+    "SequenceState": [],
+    "log": [
+      1,
+      2,
+      9,
+      10,
+      16,
+      18,
+      23,
+      29,
+      33,
+      38,
+      45,
+      46,
+      58,
+      59,
+      60,
+      61,
+      65,
+      76,
+      78
+    ],
+    "info": [
+      12,
+      13,
+      14,
+      18,
+      19,
+      72
+    ],
+    "warn": [
+      68
+    ],
+    "error": [
+      19,
+      20
+    ],
+    "BuilderConfig": [],
+    "SuperpermBuilder": [],
+    "coverage_score": [],
+    "length": [
+      40,
+      43,
+      44,
+      45,
+      48,
+      53,
+      58,
+      59,
+      61,
+      62,
+      78
+    ],
+    "rotations": [
+      66,
+      67,
+      74
+    ],
+    "mirrored": [
+      12,
+      17,
+      18,
+      70
+    ],
+    "interleave": [
+      66,
+      67,
+      74
+    ],
+    "lexiperms": [],
+    "zigzag": [
+      67,
+      74
+    ],
+    "bands": [
+      67,
+      74
+    ],
+    "candidate_templates": [
+      66
+    ],
+    "Stopwatch": [],
+    "timer": [
+      57
+    ],
+    "get_trace": [],
+    "emit": [
+      8,
+      10,
+      18,
+      29,
+      33,
+      43,
+      55,
+      58,
+      72
+    ],
+    "has_keys": [],
+    "validate_worm_event": [],
+    "validate_porter_summary": [],
+    "overlap_len": [],
+    "stitch": [
+      44
+    ],
+    "unique_symbols": [],
+    "WinnersManager": [
+      62,
+      73,
+      75,
+      76
+    ],
+    "WORMEvent": [],
+    "WORMTrace": []
+  }
+}

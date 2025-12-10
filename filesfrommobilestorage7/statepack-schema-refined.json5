@@ -1,0 +1,222 @@
+// SNAP Statepack (Perfect State‑Save) – JSON5 Template (v1.1, refined)
+// This is a CANONICAL OBJECT SHAPE for saving/restoring/replaying a SNAP session.
+// Notes:
+// - Hidden chain-of-thought is NOT stored. We store seeds/configs/decisions only.
+// - Content-addressed references (CAS) are used for any blobs; never store plaintext secrets.
+// - Levels: 'resume' (fast resume), 'replay' (deterministic), 'forensic' (auditable).
+
+{
+  snapshot_id: "snap_01H...Z",        // globally unique id
+  created_at: "2025-08-18T19:45:00Z", // ISO-8601
+  statepack_version: "1.1",           // bumped with this refinement
+  level: "replay",                    // 'resume' | 'replay' | 'forensic'
+
+  meta: {
+    producer: "snaplat/snapshots@1.0.0", // program/app producing the pack
+    environment: "prod",                 // prod|staging|dev
+    region: "us-west-2",
+    // Optional human labels
+    title: "Planner E run (pilot)",
+    description: "Mid-run save before anchor prune in region R24",
+  },
+
+  // Model/tool/policy pins — required for deterministic replay
+  model: {
+    name: "gpt-5-thinking",
+    revision: "r2025-08-10.3",
+    tokenizer_rev: "tkn_7.4",
+  },
+
+  lattice: {
+    lattice_version: 42,              // integer pin
+    engine_rev: "e8-0.9.7",          // implementation rev
+    basis_hash: "sha256:...",         // content hash of basis
+    tolerances: {
+      quant_eps: 1e-6,
+      tie_policy: "lexicographic",   // tie-breaking strategy
+    },
+    canon: { method: "weyl", idempotent: true },
+    rng_seed: 123456789,              // determinism anchor for lattice sampling
+    tie_break_policy: "stable-sort",
+  },
+
+  policy: {
+    lawpack_rev: "lp_2025.08",
+    guardrail_rev: "gr_3.2",
+  },
+
+  lane: {
+    name: "pilot",                    // shadow|pilot|prod
+    constraints: ["no_external_export"],
+  },
+
+  // SNAP API surface pinned for replay tooling & validation
+  snapi: {
+    version: "1.0.0",
+    endpoints: [
+      { name: "/snap/anchor", rev: "1.2" },
+      { name: "/snap/anchor/prune", rev: "1.0" },
+      { name: "/snap/reanchor", rev: "1.1" },
+      { name: "/snap/knn", rev: "1.0" },
+      { name: "/region/tag", rev: "1.0" },
+      { name: "/lease/region", rev: "1.0" },
+    ],
+  },
+
+  // LIVE registry snapshot (SNAP-owned, not Archivist)
+  registry: {
+    snap_count: 12411,
+    glyph_count: 2204,
+
+    region_tags: [
+      // Region-level governance (enforced on read + admit)
+      {
+        id: "rt_9",
+        type: "quarantine",                   // quarantine|warn|info
+        region: "poly:E8{...}",               // polytope/ball spec
+        reason: "hallucination cluster",
+        issued_by: "SAP",
+        effective: "2025-08-10T10:00:00Z",
+        expiry: "2025-12-31T00:00:00Z",
+      },
+    ],
+
+    leases: [
+      // Write-coordination during restore/replay
+      { id: "ls_77", region: "ball:E8{...}", owner: "planner", ttl: 30 },
+    ],
+
+    // Canonical list of runtime snaps (abbrev example entries)
+    snaps: [
+      {
+        id: "S124",
+        coord_e8: [/* 8 numbers */],
+        lattice_version: 42,
+        lane: "pilot",
+        lineage: { parent: "S120", reanchor_of: null },
+        anchors: { min_sep: 0.70, admitted_at: "2025-08-11T03:22:09Z" },
+        neighbors: { k: 16, ids: ["S12", "S98", "S421"], dist: [0.31, 0.33, 0.35] },
+        region_tags: ["quarantine:R24"],
+        hash: "sha256:...",
+      },
+      // ...
+    ],
+
+    // Finalized glyphs (Archivist is SoR; here we pin coords/links)
+    glyphs: [
+      {
+        id: "G882",
+        snap_ids: ["S124", "S774"],
+        coord_e8: [/* 8 numbers */],
+        neighbors: { ids: ["G103", "G511"], dist: [0.28, 0.34] },
+        archivist_ref: "ar://bundle/9aa...",
+        evidence_refs: ["ar://ev/aa1", "ar://ev/bb2"],
+        hash: "sha256:...",
+      },
+      // ...
+    ],
+
+    caches: {
+      neighbor_cache_key: "lv42-wht1",
+      entries: 183220,                        // hint; content is lazily rehydrated
+    },
+  },
+
+  // Planner manifest used to drive deterministic expand/contract ops
+  planner: {
+    schedule_id: "sch_5a",
+    ops: [
+      { tick: 128, op: "expand", m_op: "×1.12" },
+      { tick: 129, op: "anchor-admit", m_op: "+1.00" },
+      { tick: 136, op: "anchor-prune", m_op: "×0.82" },
+    ],
+    heatmap_ref: "hm_2025-08-10",
+    rng_seed: 987654321,
+  },
+
+  // Optional remediation records (governance fix-up loops)
+  remediations: [
+    {
+      remediation_id: "rmd_44",
+      scope: "evidence-gap for A77",
+      success_criteria: { evidence_min: 5, tests_pass: true },
+      quota: { max_trials: 10 },
+      owner: "arbiter",
+      status: "closed", // open|closed|merged
+      artifacts: ["S201", "G901"],
+      links: { blocks: ["G882"] },
+      tick_open: 150,
+      tick_close: 155,
+    },
+    // ...
+  ],
+
+  // KPIs and counters captured at snapshot time (not continuous streaming)
+  telemetry: {
+    kpi: {
+      time_to_promote_hours: 3.2,
+      remediation_depth_p50: 1,
+      knn_p95_ms: 8.4,
+    },
+    counters: {
+      anchor_admits: 311,
+      anchor_prunes: 8,
+    },
+  },
+
+  // Minimal audit pack to reconstruct high-level decisions and errors
+  audit: {
+    trace_id: "tr_7db",
+    events: [
+      { at: "2025-08-18T18:59:23Z", code: "LEASE_GRANTED", region: "R24" },
+      { at: "2025-08-18T19:00:01Z", code: "POLICY_BUNDLE_PINNED", details: { lawpack_rev: "lp_2025.08" } },
+      // ...
+    ],
+  },
+
+  // External resources table (content-addressed; optional for 'resume')
+  resources: [
+    // Each ref used anywhere in the pack should be resolvable here
+    { id: "blob_u_829", sha256: "…", size: 12345, uri: "cas://…", pii_tags: ["none"] },
+    { id: "turn3search0", sha256: "…", uri: "https://…", cached_at: "2025-08-18T18:58:10Z" },
+  ],
+
+  // Security & integrity metadata for the entire statepack
+  security: {
+    encryption: {
+      alg: "AES-256-GCM",
+      kms_key_id: "arn:aws:kms:…",
+      // If encrypted-at-rest only, this block documents policy
+    },
+    signature: {
+      public_key_id: "sigkey_01A…",
+      alg: "ed25519",
+      merkle_root: "sha256:…", // Merkle root over normalized JSON (JCS) of the pack
+      sig: "base64:…",
+    },
+  },
+
+  // Delta snapshot support — reduces payload size
+  delta: {
+    parent_snapshot_id: "snap_01G…",
+    is_delta: false,          // true if this only contains changes
+    changeset: [
+      // High-level hints; detailed diffs are produced by /diff endpoint
+      { kind: "add", path: "/registry/snaps/-", id: "S2001" },
+      { kind: "update", path: "/planner/ops[2]/m_op", from: "×0.85", to: "×0.82" },
+    ],
+  },
+
+  // Restore optimizer hints (non-binding)
+  restore_hints: {
+    region_lease_order: ["R24", "R8", "R3"],
+    cache_rebuild: "lazy",     // lazy|eager
+    validate_only_default: false,
+  },
+
+  // Index & search hints (for large packs; not required for correctness)
+  indexes: {
+    by_id: "bloom://sha256:...",  // optional bloom or sparse index
+    by_region: "bloom://sha256:...",
+  },
+}
