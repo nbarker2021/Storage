@@ -1,0 +1,1682 @@
+{
+  "0": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -83.99999999999991,
+    "radius": 0.9306822543899729,
+    "hex": "#7b00f6"
+  },
+  "1": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -77.99999999999991,
+    "radius": 0.7570851518415909,
+    "hex": "#7000e0"
+  },
+  "2": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -71.99999999999996,
+    "radius": 0.5751932659393788,
+    "hex": "#6400c8"
+  },
+  "3": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -65.99999999999997,
+    "radius": 0.38699944224860633,
+    "hex": "#b00084"
+  },
+  "4": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -59.99999999999997,
+    "radius": 0.19456557168371846,
+    "hex": "#980072"
+  },
+  "5": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -89.99999999999993,
+    "radius": 0.6261782511854975,
+    "hex": "#6700cf"
+  },
+  "6": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -35.99999999999991,
+    "radius": 0.9306822543899727,
+    "hex": "#f600b8"
+  },
+  "7": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -143.99999999999991,
+    "radius": 0.9306822543899731,
+    "hex": "#003df6"
+  },
+  "8": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -89.99999999999993,
+    "radius": 0.4679043562159781,
+    "hex": "#5d00bb"
+  },
+  "9": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -95.99999999999993,
+    "radius": 0.9306822543899725,
+    "hex": "#7b00f6"
+  },
+  "10": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -101.9999999999999,
+    "radius": 0.7570851518415909,
+    "hex": "#7000e0"
+  },
+  "11": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -107.99999999999989,
+    "radius": 0.5751932659393794,
+    "hex": "#6400c8"
+  },
+  "12": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -113.99999999999993,
+    "radius": 0.38699944224860666,
+    "hex": "#002cb0"
+  },
+  "13": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -120.00000000000004,
+    "radius": 0.1945655716837184,
+    "hex": "#002698"
+  },
+  "14": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -23.50072527544116,
+    "radius": 0.7851554661733969,
+    "hex": "#e300aa"
+  },
+  "15": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -98.00652234094207,
+    "radius": 0.23625514139880835,
+    "hex": "#4e009d"
+  },
+  "16": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -100.66037087254603,
+    "radius": 0.7037782243601082,
+    "hex": "#6c00d9"
+  },
+  "17": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -44.52442290453855,
+    "radius": 0.8734786040943776,
+    "hex": "#ee00b3"
+  },
+  "18": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -110.5900514902849,
+    "radius": 0.5411576665138433,
+    "hex": "#6200c4"
+  },
+  "19": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -37.225648793390555,
+    "radius": 0.7065838900499968,
+    "hex": "#d900a3"
+  },
+  "20": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -62.26769855229795,
+    "radius": 1.0,
+    "hex": "#ff00bf"
+  },
+  "21": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -109.63752281480005,
+    "radius": 0.8557680277229359,
+    "hex": "#7600ec"
+  },
+  "22": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -123.93331148161576,
+    "radius": 0.3773577211125944,
+    "hex": "#002baf"
+  },
+  "23": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -23.336247417113032,
+    "radius": 0.5905997149802634,
+    "hex": "#ca0098"
+  },
+  "24": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -57.24232275361076,
+    "radius": 0.8224247770858706,
+    "hex": "#e800ae"
+  },
+  "25": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -116.6911525215016,
+    "radius": 0.6855460161894794,
+    "hex": "#0035d6"
+  },
+  "26": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -52.77435120660924,
+    "radius": 0.6362109922367177,
+    "hex": "#d0009c"
+  },
+  "27": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -130.73016408910766,
+    "radius": 0.5640762969642572,
+    "hex": "#0031c7"
+  },
+  "28": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -117.73230144770184,
+    "radius": 1.0,
+    "hex": "#003fff"
+  },
+  "29": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -70.36247718519975,
+    "radius": 0.8557680277229363,
+    "hex": "#7600ec"
+  },
+  "30": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -147.85556969140558,
+    "radius": 0.22476873908467082,
+    "hex": "#00279c"
+  },
+  "31": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": -4.1124691321111015,
+    "radius": 0.564076296964257,
+    "hex": "#c70000"
+  },
+  "32": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -46.94925273882925,
+    "radius": 0.6816728207473195,
+    "hex": "#d600a0"
+  },
+  "33": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -124.46555916353653,
+    "radius": 0.5082013979655408,
+    "hex": "#0030c0"
+  },
+  "34": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -37.69130575127416,
+    "radius": 0.5120797452436963,
+    "hex": "#c00090"
+  },
+  "35": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -146.06668851838404,
+    "radius": 0.4190982076350714,
+    "hex": "#002db4"
+  },
+  "36": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -122.75767724638906,
+    "radius": 0.8224247770858704,
+    "hex": "#003ae8"
+  },
+  "37": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -63.308847478498194,
+    "radius": 0.6855460161894792,
+    "hex": "#d600a1"
+  },
+  "38": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": -17.261020049504484,
+    "radius": 0.4030307589822807,
+    "hex": "#b20000"
+  },
+  "39": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": -173.72792501289084,
+    "radius": 0.3702746871116524,
+    "hex": "#00aeae"
+  },
+  "40": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -133.05074726117059,
+    "radius": 0.6816728207473199,
+    "hex": "#0035d6"
+  },
+  "41": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -55.53444083646332,
+    "radius": 0.5082013979655408,
+    "hex": "#c00090"
+  },
+  "42": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -149.2121492562973,
+    "radius": 0.6116685966313532,
+    "hex": "#0033cd"
+  },
+  "43": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -45.80453010130237,
+    "radius": 0.32630873322326687,
+    "hex": "#a9007e"
+  },
+  "44": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -79.3396291274538,
+    "radius": 0.7037782243601084,
+    "hex": "#6c00d9"
+  },
+  "45": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -135.47557709546126,
+    "radius": 0.873478604094378,
+    "hex": "#003bee"
+  },
+  "46": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 153.30884747849845,
+    "radius": 0.14571730406781766,
+    "hex": "#009224"
+  },
+  "47": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": 13.07140454167603,
+    "radius": 0.6393132496965372,
+    "hex": "#d10000"
+  },
+  "48": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -30.787850743702464,
+    "radius": 0.6116685966313526,
+    "hex": "#cd009a"
+  },
+  "49": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -134.19546989869755,
+    "radius": 0.32630873322326653,
+    "hex": "#002aa9"
+  },
+  "50": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": -15.38511778312195,
+    "radius": 0.48263672894209836,
+    "hex": "#bd0000"
+  },
+  "51": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": -170.34848962952384,
+    "radius": 0.2917258048275659,
+    "hex": "#00a4a4"
+  },
+  "52": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -127.2256487933906,
+    "radius": 0.6362109922367173,
+    "hex": "#0034d0"
+  },
+  "53": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -49.269835910892105,
+    "radius": 0.5640762969642569,
+    "hex": "#c70095"
+  },
+  "54": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": 8.367368342393267,
+    "radius": 0.449791348945341,
+    "hex": "#b80000"
+  },
+  "55": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 154.84761861150483,
+    "radius": 0.34019097539492466,
+    "hex": "#00aa2a"
+  },
+  "56": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -142.3086942487257,
+    "radius": 0.5120797452436963,
+    "hex": "#0030c0"
+  },
+  "57": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -33.933311481615775,
+    "radius": 0.41909820763507116,
+    "hex": "#b40087"
+  },
+  "58": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": -164.61488221687785,
+    "radius": 0.48263672894209864,
+    "hex": "#00bdbd"
+  },
+  "59": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": -9.65151037047601,
+    "radius": 0.2917258048275659,
+    "hex": "#a40000"
+  },
+  "60": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -69.4099485097149,
+    "radius": 0.5411576665138432,
+    "hex": "#6200c4"
+  },
+  "61": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -142.77435120660925,
+    "radius": 0.7065838900499966,
+    "hex": "#0036d9"
+  },
+  "62": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 29.095076072718573,
+    "radius": 0.5325402422956693,
+    "hex": "#c39200"
+  },
+  "63": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 130.38617755919688,
+    "radius": 0.44386569119319386,
+    "hex": "#00b82e"
+  },
+  "64": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": -162.73897995049543,
+    "radius": 0.403030758982281,
+    "hex": "#00b2b2"
+  },
+  "65": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": -6.27207498710889,
+    "radius": 0.37027468711165185,
+    "hex": "#ae0000"
+  },
+  "66": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": 171.6326316576069,
+    "radius": 0.44979134894534134,
+    "hex": "#00b8b8"
+  },
+  "67": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 25.152381388495407,
+    "radius": 0.34019097539492443,
+    "hex": "#aa8000"
+  },
+  "68": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -56.06668851838403,
+    "radius": 0.37735772111259375,
+    "hex": "#af0083"
+  },
+  "69": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -156.66375258288681,
+    "radius": 0.5905997149802634,
+    "hex": "#0032ca"
+  },
+  "70": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 150.9049239272817,
+    "radius": 0.5325402422956699,
+    "hex": "#00c330"
+  },
+  "71": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 49.61382244080335,
+    "radius": 0.44386569119319325,
+    "hex": "#b88a00"
+  },
+  "72": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -32.144430308594266,
+    "radius": 0.22476873908467032,
+    "hex": "#9c0075"
+  },
+  "73": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": -175.88753086788873,
+    "radius": 0.5640762969642574,
+    "hex": "#00c7c7"
+  },
+  "74": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 26.691152521501685,
+    "radius": 0.1457173040678172,
+    "hex": "#926d00"
+  },
+  "75": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": 166.9285954583242,
+    "radius": 0.6393132496965374,
+    "hex": "#00d1d1"
+  },
+  "76": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -156.49927472455866,
+    "radius": 0.785155466173397,
+    "hex": "#0038e3"
+  },
+  "77": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -81.99347765905779,
+    "radius": 0.23625514139880824,
+    "hex": "#4e009d"
+  },
+  "78": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -65.99999999999989,
+    "radius": 0.6261782511854976,
+    "hex": "#cf009b"
+  },
+  "79": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -53.99999999999992,
+    "radius": 0.4679043562159781,
+    "hex": "#bb008c"
+  },
+  "80": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -35.99999999999994,
+    "radius": 0.31481370802481057,
+    "hex": "#a7007d"
+  },
+  "81": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": -2.670094050675889e-14,
+    "radius": 0.19456557168371866,
+    "hex": "#980000"
+  },
+  "82": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -77.9999999999999,
+    "radius": 0.4679043562159786,
+    "hex": "#5d00bb"
+  },
+  "83": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -23.99999999999991,
+    "radius": 0.9306822543899732,
+    "hex": "#f600b8"
+  },
+  "84": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -149.99999999999991,
+    "radius": 0.757085151841591,
+    "hex": "#0038e0"
+  },
+  "85": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -71.99999999999987,
+    "radius": 0.3148137080248107,
+    "hex": "#5300a7"
+  },
+  "86": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -89.9999999999999,
+    "radius": 0.757085151841591,
+    "hex": "#7000e0"
+  },
+  "87": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -95.99999999999986,
+    "radius": 0.5751932659393795,
+    "hex": "#6400c8"
+  },
+  "88": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -101.9999999999998,
+    "radius": 0.3869994422486069,
+    "hex": "#5800b0"
+  },
+  "89": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -107.99999999999982,
+    "radius": 0.19456557168371863,
+    "hex": "#4c0098"
+  },
+  "90": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -29.99999999999989,
+    "radius": 0.38699944224860605,
+    "hex": "#b00084"
+  },
+  "91": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": 1.1138909916216963e-13,
+    "radius": 0.3148137080248102,
+    "hex": "#a70000"
+  },
+  "92": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 36.00000000000008,
+    "radius": 0.31481370802481046,
+    "hex": "#a77d00"
+  },
+  "93": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -59.99999999999991,
+    "radius": 0.31481370802481046,
+    "hex": "#a7007d"
+  },
+  "94": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": -11.999999999999895,
+    "radius": 0.9306822543899731,
+    "hex": "#f60000"
+  },
+  "95": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": -161.99999999999991,
+    "radius": 0.6261782511854975,
+    "hex": "#00cfcf"
+  },
+  "96": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -35.99999999999985,
+    "radius": 0.19456557168371835,
+    "hex": "#980072"
+  },
+  "97": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -83.9999999999999,
+    "radius": 0.575193265939379,
+    "hex": "#6400c8"
+  },
+  "98": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -89.99999999999986,
+    "radius": 0.38699944224860644,
+    "hex": "#5800b0"
+  },
+  "99": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -95.99999999999977,
+    "radius": 0.19456557168371852,
+    "hex": "#4c0098"
+  },
+  "100": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 30.000000000000178,
+    "radius": 0.38699944224860605,
+    "hex": "#b08400"
+  },
+  "101": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 54.000000000000135,
+    "radius": 0.46790435621597803,
+    "hex": "#bb8c00"
+  },
+  "102": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -23.999999999999915,
+    "radius": 0.1945655716837179,
+    "hex": "#980072"
+  },
+  "103": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": 1.1017930272591098e-13,
+    "radius": 0.9306822543899725,
+    "hex": "#f60000"
+  },
+  "104": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": -179.99999999999994,
+    "radius": 0.5751932659393798,
+    "hex": "#00c8c8"
+  },
+  "105": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 24.000000000000227,
+    "radius": 0.19456557168371819,
+    "hex": "#987200"
+  },
+  "106": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -77.99999999999996,
+    "radius": 0.386999442248606,
+    "hex": "#5800b0"
+  },
+  "107": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -83.99999999999993,
+    "radius": 0.19456557168371816,
+    "hex": "#4c0098"
+  },
+  "108": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 66.0000000000001,
+    "radius": 0.6261782511854971,
+    "hex": "#cf9b00"
+  },
+  "109": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 36.000000000000135,
+    "radius": 0.19456557168371807,
+    "hex": "#987200"
+  },
+  "110": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": 12.000000000000098,
+    "radius": 0.9306822543899725,
+    "hex": "#f60000"
+  },
+  "111": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": 162.0000000000001,
+    "radius": 0.6261782511854979,
+    "hex": "#00cfcf"
+  },
+  "112": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 60.000000000000135,
+    "radius": 0.3148137080248104,
+    "hex": "#a77d00"
+  },
+  "113": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -71.99999999999999,
+    "radius": 0.1945655716837181,
+    "hex": "#4c0098"
+  },
+  "114": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 72.00000000000007,
+    "radius": 0.3148137080248102,
+    "hex": "#53a700"
+  },
+  "115": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 24.00000000000008,
+    "radius": 0.9306822543899729,
+    "hex": "#f6b800"
+  },
+  "116": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 150.0000000000001,
+    "radius": 0.7570851518415909,
+    "hex": "#00e038"
+  },
+  "117": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 78.00000000000009,
+    "radius": 0.4679043562159782,
+    "hex": "#5dbb00"
+  },
+  "118": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": -5.99999999999991,
+    "radius": 0.7570851518415911,
+    "hex": "#e00000"
+  },
+  "119": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": -173.99999999999991,
+    "radius": 0.7570851518415911,
+    "hex": "#00e0e0"
+  },
+  "120": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": 6.0000000000000995,
+    "radius": 0.7570851518415911,
+    "hex": "#e00000"
+  },
+  "121": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": 174.00000000000009,
+    "radius": 0.7570851518415911,
+    "hex": "#00e0e0"
+  },
+  "122": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -101.99999999999993,
+    "radius": 0.4679043562159782,
+    "hex": "#5d00bb"
+  },
+  "123": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -29.999999999999897,
+    "radius": 0.7570851518415909,
+    "hex": "#e000a8"
+  },
+  "124": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -155.99999999999991,
+    "radius": 0.9306822543899729,
+    "hex": "#003df6"
+  },
+  "125": {
+    "sector_idx": 6,
+    "sector_label": "W",
+    "theta_deg": -107.99999999999993,
+    "radius": 0.3148137080248102,
+    "hex": "#5300a7"
+  },
+  "126": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 108.00000000000003,
+    "radius": 0.1945655716837181,
+    "hex": "#4c9800"
+  },
+  "127": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -119.99999999999986,
+    "radius": 0.3148137080248104,
+    "hex": "#0029a7"
+  },
+  "128": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": -17.999999999999893,
+    "radius": 0.6261782511854979,
+    "hex": "#cf0000"
+  },
+  "129": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": -167.99999999999991,
+    "radius": 0.9306822543899725,
+    "hex": "#00f6f6"
+  },
+  "130": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -143.9999999999999,
+    "radius": 0.19456557168371807,
+    "hex": "#002698"
+  },
+  "131": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -113.9999999999999,
+    "radius": 0.6261782511854971,
+    "hex": "#0033cf"
+  },
+  "132": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 96.00000000000007,
+    "radius": 0.19456557168371816,
+    "hex": "#4c9800"
+  },
+  "133": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 102.00000000000004,
+    "radius": 0.386999442248606,
+    "hex": "#58b000"
+  },
+  "134": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -155.9999999999998,
+    "radius": 0.19456557168371819,
+    "hex": "#002698"
+  },
+  "135": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": 6.901949434358113e-14,
+    "radius": 0.5751932659393798,
+    "hex": "#c80000"
+  },
+  "136": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": -179.9999999999999,
+    "radius": 0.9306822543899725,
+    "hex": "#00f6f6"
+  },
+  "137": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 156.00000000000009,
+    "radius": 0.1945655716837179,
+    "hex": "#009826"
+  },
+  "138": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -125.99999999999987,
+    "radius": 0.46790435621597803,
+    "hex": "#002ebb"
+  },
+  "139": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -149.99999999999983,
+    "radius": 0.38699944224860605,
+    "hex": "#002cb0"
+  },
+  "140": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 84.00000000000021,
+    "radius": 0.19456557168371852,
+    "hex": "#4c9800"
+  },
+  "141": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 90.00000000000014,
+    "radius": 0.38699944224860644,
+    "hex": "#58b000"
+  },
+  "142": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 96.0000000000001,
+    "radius": 0.575193265939379,
+    "hex": "#64c800"
+  },
+  "143": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 144.00000000000014,
+    "radius": 0.19456557168371835,
+    "hex": "#009826"
+  },
+  "144": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": 18.000000000000085,
+    "radius": 0.6261782511854975,
+    "hex": "#cf0000"
+  },
+  "145": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": 168.0000000000001,
+    "radius": 0.9306822543899731,
+    "hex": "#00f6f6"
+  },
+  "146": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 120.0000000000001,
+    "radius": 0.31481370802481046,
+    "hex": "#00a729"
+  },
+  "147": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -143.99999999999991,
+    "radius": 0.31481370802481046,
+    "hex": "#0029a7"
+  },
+  "148": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": -179.9999999999999,
+    "radius": 0.3148137080248102,
+    "hex": "#00a7a7"
+  },
+  "149": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 150.0000000000001,
+    "radius": 0.38699944224860605,
+    "hex": "#00b02c"
+  },
+  "150": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 72.00000000000018,
+    "radius": 0.19456557168371863,
+    "hex": "#4c9800"
+  },
+  "151": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 78.0000000000002,
+    "radius": 0.3869994422486069,
+    "hex": "#58b000"
+  },
+  "152": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 84.00000000000014,
+    "radius": 0.5751932659393795,
+    "hex": "#64c800"
+  },
+  "153": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 90.00000000000011,
+    "radius": 0.757085151841591,
+    "hex": "#70e000"
+  },
+  "154": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 108.00000000000014,
+    "radius": 0.3148137080248107,
+    "hex": "#53a700"
+  },
+  "155": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 30.000000000000114,
+    "radius": 0.757085151841591,
+    "hex": "#e0a800"
+  },
+  "156": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 156.00000000000009,
+    "radius": 0.9306822543899732,
+    "hex": "#00f63d"
+  },
+  "157": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 102.0000000000001,
+    "radius": 0.4679043562159786,
+    "hex": "#5dbb00"
+  },
+  "158": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": 179.99999999999997,
+    "radius": 0.19456557168371866,
+    "hex": "#009898"
+  },
+  "159": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 144.00000000000006,
+    "radius": 0.31481370802481057,
+    "hex": "#00a729"
+  },
+  "160": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 126.00000000000007,
+    "radius": 0.4679043562159781,
+    "hex": "#00bb2e"
+  },
+  "161": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 114.00000000000011,
+    "radius": 0.6261782511854976,
+    "hex": "#00cf33"
+  },
+  "162": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 98.00652234094221,
+    "radius": 0.23625514139880824,
+    "hex": "#4e9d00"
+  },
+  "163": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 23.50072527544134,
+    "radius": 0.785155466173397,
+    "hex": "#e3aa00"
+  },
+  "164": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": -13.07140454167581,
+    "radius": 0.6393132496965374,
+    "hex": "#d10000"
+  },
+  "165": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -153.3088474784983,
+    "radius": 0.1457173040678172,
+    "hex": "#002492"
+  },
+  "166": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": 4.1124691321112765,
+    "radius": 0.5640762969642574,
+    "hex": "#c70000"
+  },
+  "167": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 147.85556969140575,
+    "radius": 0.22476873908467032,
+    "hex": "#009c27"
+  },
+  "168": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -130.38617755919665,
+    "radius": 0.44386569119319325,
+    "hex": "#002eb8"
+  },
+  "169": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -29.09507607271831,
+    "radius": 0.5325402422956699,
+    "hex": "#c30092"
+  },
+  "170": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 23.336247417113167,
+    "radius": 0.5905997149802634,
+    "hex": "#ca9800"
+  },
+  "171": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 123.93331148161599,
+    "radius": 0.37735772111259375,
+    "hex": "#00af2b"
+  },
+  "172": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -154.8476186115046,
+    "radius": 0.34019097539492443,
+    "hex": "#002aaa"
+  },
+  "173": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": -8.367368342393089,
+    "radius": 0.44979134894534134,
+    "hex": "#b80000"
+  },
+  "174": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": 173.72792501289112,
+    "radius": 0.37027468711165185,
+    "hex": "#00aeae"
+  },
+  "175": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": 17.26102004950456,
+    "radius": 0.403030758982281,
+    "hex": "#b20000"
+  },
+  "176": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -49.61382244080311,
+    "radius": 0.44386569119319386,
+    "hex": "#b8008a"
+  },
+  "177": {
+    "sector_idx": 5,
+    "sector_label": "WNW",
+    "theta_deg": -150.90492392728143,
+    "radius": 0.5325402422956693,
+    "hex": "#0030c3"
+  },
+  "178": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 37.22564879339075,
+    "radius": 0.7065838900499966,
+    "hex": "#d9a300"
+  },
+  "179": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 110.5900514902851,
+    "radius": 0.5411576665138432,
+    "hex": "#62c400"
+  },
+  "180": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": 170.348489629524,
+    "radius": 0.2917258048275659,
+    "hex": "#00a4a4"
+  },
+  "181": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": 15.385117783122162,
+    "radius": 0.48263672894209864,
+    "hex": "#bd0000"
+  },
+  "182": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 146.06668851838424,
+    "radius": 0.41909820763507116,
+    "hex": "#00b42d"
+  },
+  "183": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 37.691305751274314,
+    "radius": 0.5120797452436963,
+    "hex": "#c09000"
+  },
+  "184": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -25.152381388495172,
+    "radius": 0.34019097539492466,
+    "hex": "#aa0080"
+  },
+  "185": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": -171.63263165760674,
+    "radius": 0.449791348945341,
+    "hex": "#00b8b8"
+  },
+  "186": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 130.7301640891079,
+    "radius": 0.5640762969642569,
+    "hex": "#00c731"
+  },
+  "187": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 52.7743512066094,
+    "radius": 0.6362109922367173,
+    "hex": "#d09c00"
+  },
+  "188": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": 9.651510370476153,
+    "radius": 0.2917258048275659,
+    "hex": "#a40000"
+  },
+  "189": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": 164.61488221687807,
+    "radius": 0.48263672894209836,
+    "hex": "#00bdbd"
+  },
+  "190": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 45.80453010130246,
+    "radius": 0.32630873322326653,
+    "hex": "#a97e00"
+  },
+  "191": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 149.21214925629755,
+    "radius": 0.6116685966313526,
+    "hex": "#00cd33"
+  },
+  "192": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": -166.92859545832397,
+    "radius": 0.6393132496965372,
+    "hex": "#00d1d1"
+  },
+  "193": {
+    "sector_idx": 7,
+    "sector_label": "S",
+    "theta_deg": -26.691152521501547,
+    "radius": 0.14571730406781766,
+    "hex": "#92006d"
+  },
+  "194": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 44.524422904538746,
+    "radius": 0.873478604094378,
+    "hex": "#eeb300"
+  },
+  "195": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 100.66037087254621,
+    "radius": 0.7037782243601084,
+    "hex": "#6cd900"
+  },
+  "196": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 134.19546989869764,
+    "radius": 0.32630873322326687,
+    "hex": "#00a92a"
+  },
+  "197": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 30.7878507437027,
+    "radius": 0.6116685966313532,
+    "hex": "#cd9a00"
+  },
+  "198": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 124.46555916353668,
+    "radius": 0.5082013979655408,
+    "hex": "#00c030"
+  },
+  "199": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 46.94925273882943,
+    "radius": 0.6816728207473199,
+    "hex": "#d6a000"
+  },
+  "200": {
+    "sector_idx": 0,
+    "sector_label": "E",
+    "theta_deg": 6.27207498710917,
+    "radius": 0.3702746871116524,
+    "hex": "#ae0000"
+  },
+  "201": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": 162.73897995049552,
+    "radius": 0.4030307589822807,
+    "hex": "#00b2b2"
+  },
+  "202": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 116.6911525215018,
+    "radius": 0.6855460161894792,
+    "hex": "#00d635"
+  },
+  "203": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 57.242322753610935,
+    "radius": 0.8224247770858704,
+    "hex": "#e8ae00"
+  },
+  "204": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 33.93331148161598,
+    "radius": 0.4190982076350714,
+    "hex": "#b48700"
+  },
+  "205": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 142.30869424872586,
+    "radius": 0.5120797452436963,
+    "hex": "#00c030"
+  },
+  "206": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 55.53444083646346,
+    "radius": 0.5082013979655408,
+    "hex": "#c09000"
+  },
+  "207": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 133.05074726117076,
+    "radius": 0.6816728207473195,
+    "hex": "#00d635"
+  },
+  "208": {
+    "sector_idx": 4,
+    "sector_label": "NW",
+    "theta_deg": 175.8875308678889,
+    "radius": 0.564076296964257,
+    "hex": "#00c7c7"
+  },
+  "209": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 32.1444303085944,
+    "radius": 0.22476873908467082,
+    "hex": "#9c7500"
+  },
+  "210": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 109.63752281480026,
+    "radius": 0.8557680277229363,
+    "hex": "#76ec00"
+  },
+  "211": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 62.26769855229816,
+    "radius": 1.0,
+    "hex": "#ffbf00"
+  },
+  "212": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 49.269835910892354,
+    "radius": 0.5640762969642572,
+    "hex": "#c79500"
+  },
+  "213": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 127.22564879339079,
+    "radius": 0.6362109922367177,
+    "hex": "#00d034"
+  },
+  "214": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 63.3088474784984,
+    "radius": 0.6855460161894794,
+    "hex": "#d6a100"
+  },
+  "215": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 122.75767724638925,
+    "radius": 0.8224247770858706,
+    "hex": "#00e83a"
+  },
+  "216": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 156.66375258288699,
+    "radius": 0.5905997149802634,
+    "hex": "#00ca32"
+  },
+  "217": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 56.06668851838423,
+    "radius": 0.3773577211125944,
+    "hex": "#af8300"
+  },
+  "218": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 70.36247718519995,
+    "radius": 0.8557680277229359,
+    "hex": "#76ec00"
+  },
+  "219": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 117.73230144770204,
+    "radius": 1.0,
+    "hex": "#00ff3f"
+  },
+  "220": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 142.77435120660945,
+    "radius": 0.7065838900499968,
+    "hex": "#00d936"
+  },
+  "221": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 69.40994850971511,
+    "radius": 0.5411576665138433,
+    "hex": "#62c400"
+  },
+  "222": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 135.47557709546146,
+    "radius": 0.8734786040943776,
+    "hex": "#00ee3b"
+  },
+  "223": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 79.33962912745399,
+    "radius": 0.7037782243601082,
+    "hex": "#6cd900"
+  },
+  "224": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 81.99347765905794,
+    "radius": 0.23625514139880835,
+    "hex": "#4e9d00"
+  },
+  "225": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 156.49927472455883,
+    "radius": 0.7851554661733969,
+    "hex": "#00e338"
+  },
+  "226": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 59.99999999999996,
+    "radius": 0.1945655716837184,
+    "hex": "#987200"
+  },
+  "227": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 66.00000000000007,
+    "radius": 0.38699944224860666,
+    "hex": "#b08400"
+  },
+  "228": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 72.00000000000013,
+    "radius": 0.5751932659393794,
+    "hex": "#64c800"
+  },
+  "229": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 78.0000000000001,
+    "radius": 0.7570851518415909,
+    "hex": "#70e000"
+  },
+  "230": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 84.00000000000009,
+    "radius": 0.9306822543899725,
+    "hex": "#7bf600"
+  },
+  "231": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 90.00000000000007,
+    "radius": 0.4679043562159781,
+    "hex": "#5dbb00"
+  },
+  "232": {
+    "sector_idx": 1,
+    "sector_label": "ENE",
+    "theta_deg": 36.000000000000085,
+    "radius": 0.9306822543899731,
+    "hex": "#f6b800"
+  },
+  "233": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 144.0000000000001,
+    "radius": 0.9306822543899727,
+    "hex": "#00f63d"
+  },
+  "234": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 90.00000000000007,
+    "radius": 0.6261782511854975,
+    "hex": "#67cf00"
+  },
+  "235": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 120.00000000000004,
+    "radius": 0.19456557168371846,
+    "hex": "#009826"
+  },
+  "236": {
+    "sector_idx": 3,
+    "sector_label": "N",
+    "theta_deg": 114.00000000000003,
+    "radius": 0.38699944224860633,
+    "hex": "#00b02c"
+  },
+  "237": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 108.00000000000006,
+    "radius": 0.5751932659393788,
+    "hex": "#64c800"
+  },
+  "238": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 102.00000000000009,
+    "radius": 0.7570851518415909,
+    "hex": "#70e000"
+  },
+  "239": {
+    "sector_idx": 2,
+    "sector_label": "NE",
+    "theta_deg": 96.0000000000001,
+    "radius": 0.9306822543899729,
+    "hex": "#7bf600"
+  }
+}

@@ -1,0 +1,3201 @@
+{
+  "inventory": [
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/01_critical_analysis_phase1.pdf",
+      "ext": ".pdf",
+      "size": 301912
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/01_irl_methods_analysis.pdf",
+      "ext": ".pdf",
+      "size": 305298
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/02_gap_analysis_phase2.pdf",
+      "ext": ".pdf",
+      "size": 313966
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/02_integration_strategy.pdf",
+      "ext": ".pdf",
+      "size": 303942
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/03_llm_optimized_recommendations.pdf",
+      "ext": ".pdf",
+      "size": 318638
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/03_practical_implementation.pdf",
+      "ext": ".pdf",
+      "size": 308169
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/04_implementation_strategy.pdf",
+      "ext": ".pdf",
+      "size": 287156
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/05_final_critical_assessment.pdf",
+      "ext": ".pdf",
+      "size": 306828
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/10-Step Idea Actualization Process_ Comprehensive Deep Breakdown Analysis.md",
+      "ext": ".md",
+      "size": 21580
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/10-Step Idea Actualization Process_ Comprehensive Deep Breakdown Analysis.md.index.json",
+      "ext": ".json",
+      "size": 50609
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Advanced Visualization and Conceptual Mapping_ LSDT/E8 Framework.md",
+      "ext": ".md",
+      "size": 43216
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Advanced Visualization and Conceptual Mapping_ LSDT/E8 Framework.md.index.json",
+      "ext": ".json",
+      "size": 94470
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Complete Shelling Guide - Final Delivery Summary.md",
+      "ext": ".md",
+      "size": 7918
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Complete Shelling Guide - Final Delivery Summary.md.index.json",
+      "ext": ".json",
+      "size": 23139
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Complete_Shelling_Guide.zip",
+      "ext": ".zip",
+      "size": 1789448
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/ComplexityTransitionsMappedtoDimensionalThresholds.docx",
+      "ext": ".docx",
+      "size": 14805
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/ComplexityTransitionsMappedtoDimensionalThresholds_extracted.txt",
+      "ext": ".txt",
+      "size": 1142
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/ComplexityTransitionsMappedtoDimensionalThresholds_extracted.txt.index.json",
+      "ext": ".json",
+      "size": 8759
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Critical Analysis_ LSDT/E8 Framework Misalignment with LLM Operational Realities.md",
+      "ext": ".md",
+      "size": 18071
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Critical Analysis_ LSDT/E8 Framework Misalignment with LLM Operational Realities.md.index.json",
+      "ext": ".json",
+      "size": 42849
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Critical Clarity Enhancement Opportunities_ LSDT/E8 Framework Analysis.md",
+      "ext": ".md",
+      "size": 28755
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Critical Clarity Enhancement Opportunities_ LSDT/E8 Framework Analysis.md.index.json",
+      "ext": ".json",
+      "size": 64854
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Critical Tools and Methods Requiring Deep Breakdown Analysis.md",
+      "ext": ".md",
+      "size": 58730
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Critical Tools and Methods Requiring Deep Breakdown Analysis.md.index.json",
+      "ext": ".json",
+      "size": 124851
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Dimensional Architecture and Navigation Guide_ LSDT/E8 Framework.md",
+      "ext": ".md",
+      "size": 31652
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Dimensional Architecture and Navigation Guide_ LSDT/E8 Framework.md.index.json",
+      "ext": ".json",
+      "size": 70908
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Executive Overview_ Complete LSDT/E8 Framework Analysis.md",
+      "ext": ".md",
+      "size": 21812
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Executive Overview_ Complete LSDT/E8 Framework Analysis.md.index.json",
+      "ext": ".json",
+      "size": 50909
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Executive Summary_ Instruction-Data Distinction Protocol.md",
+      "ext": ".md",
+      "size": 14669
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Executive Summary_ Instruction-Data Distinction Protocol.md.index.json",
+      "ext": ".json",
+      "size": 36504
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Final Critical Assessment_ LSDT/E8 Framework Analysis and LLM Optimization.md",
+      "ext": ".md",
+      "size": 25051
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Final Critical Assessment_ LSDT/E8 Framework Analysis and LLM Optimization.md.index.json",
+      "ext": ".json",
+      "size": 57175
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Framework Evolution Roadmap_ LSDT/E8 Enhancement Strategy.md",
+      "ext": ".md",
+      "size": 31394
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Framework Evolution Roadmap_ LSDT/E8 Enhancement Strategy.md.index.json",
+      "ext": ".json",
+      "size": 70101
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Gap Analysis and Failure Mode Identification_ LSDT/E8 Framework Applied to LLMs.md",
+      "ext": ".md",
+      "size": 27667
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Gap Analysis and Failure Mode Identification_ LSDT/E8 Framework Applied to LLMs.md.index.json",
+      "ext": ".json",
+      "size": 62403
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Glyph Systems & n=-1 Glyphic Index Lattice_ Comprehensive Deep Breakdown Analysis.md",
+      "ext": ".md",
+      "size": 58701
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Glyph Systems & n=-1 Glyphic Index Lattice_ Comprehensive Deep Breakdown Analysis.md.index.json",
+      "ext": ".json",
+      "size": 125434
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/IRL Methods Enhancement for LSDT/E8 Framework_ Complete Analysis Package.md",
+      "ext": ".md",
+      "size": 11388
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/IRL Methods Enhancement for LSDT/E8 Framework_ Complete Analysis Package.md.index.json",
+      "ext": ".json",
+      "size": 29949
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Implementation Framework for Instruction-Data Distinction.md",
+      "ext": ".md",
+      "size": 28531
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Implementation Framework for Instruction-Data Distinction.md.index.json",
+      "ext": ".json",
+      "size": 64496
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Implementation Strategy for LLM-Native Methods_ Practical Protocols and Testing Procedures.md",
+      "ext": ".md",
+      "size": 36802
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Implementation Strategy for LLM-Native Methods_ Practical Protocols and Testing Procedures.md.index.json",
+      "ext": ".json",
+      "size": 80475
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Instruction-Data Distinction Protocol Package.md",
+      "ext": ".md",
+      "size": 12529
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Instruction-Data Distinction Protocol Package.md.index.json",
+      "ext": ".json",
+      "size": 32372
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Instruction-Data Distinction Protocol for LLM Systems.md",
+      "ext": ".md",
+      "size": 21950
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Instruction-Data Distinction Protocol for LLM Systems.md.index.json",
+      "ext": ".json",
+      "size": 51059
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Integrated Analysis Synthesis_ LSDT/E8 Framework.md",
+      "ext": ".md",
+      "size": 21445
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Integrated Analysis Synthesis_ LSDT/E8 Framework.md.index.json",
+      "ext": ".json",
+      "size": 50012
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Integration Analysis_ Universal Superpermutation Principle and Glyph Systems.md",
+      "ext": ".md",
+      "size": 15729
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Integration Analysis_ Universal Superpermutation Principle and Glyph Systems.md.index.json",
+      "ext": ".json",
+      "size": 38978
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Integration Strategy for IRL Methods with LSDT/E8 Framework.md",
+      "ext": ".md",
+      "size": 22781
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Integration Strategy for IRL Methods with LSDT/E8 Framework.md.index.json",
+      "ext": ".json",
+      "size": 52462
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Integration of Instruction-Data Distinction with LSDT/E8 Framework.md",
+      "ext": ".md",
+      "size": 22553
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Integration of Instruction-Data Distinction with LSDT/E8 Framework.md.index.json",
+      "ext": ".json",
+      "size": 52514
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LLM-Optimized Framework Recommendations_ Redesigning LSDT/E8 for Transformer Realities.md",
+      "ext": ".md",
+      "size": 31831
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LLM-Optimized Framework Recommendations_ Redesigning LSDT/E8 for Transformer Realities.md.index.json",
+      "ext": ".json",
+      "size": 70724
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LLM-Optimized Implementation Guide.md",
+      "ext": ".md",
+      "size": 26812
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LLM-Optimized Implementation Guide.md.index.json",
+      "ext": ".json",
+      "size": 60758
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Clarity Enhancement Package.md",
+      "ext": ".md",
+      "size": 7001
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Clarity Enhancement Package.md.index.json",
+      "ext": ".json",
+      "size": 21173
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Critical Analysis_ Complete Deliverable Package.md",
+      "ext": ".md",
+      "size": 8637
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Critical Analysis_ Complete Deliverable Package.md.index.json",
+      "ext": ".json",
+      "size": 24320
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Implementation Guide for AI Systems.md",
+      "ext": ".md",
+      "size": 50869
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Implementation Guide for AI Systems.md.index.json",
+      "ext": ".json",
+      "size": 108999
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Knowledge Base - Executive Summary.md",
+      "ext": ".md",
+      "size": 10342
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Knowledge Base - Executive Summary.md.index.json",
+      "ext": ".json",
+      "size": 27730
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Knowledge Base Package.md",
+      "ext": ".md",
+      "size": 6156
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Knowledge Base Package.md.index.json",
+      "ext": ".json",
+      "size": 19136
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Knowledge Base Validation Report.md",
+      "ext": ".md",
+      "size": 10659
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Knowledge Base Validation Report.md.index.json",
+      "ext": ".json",
+      "size": 28171
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Master Playbook - Final Delivery Summary.md",
+      "ext": ".md",
+      "size": 9690
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Master Playbook - Final Delivery Summary.md.index.json",
+      "ext": ".json",
+      "size": 26576
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Master Playbook - Quick Reference Index.md",
+      "ext": ".md",
+      "size": 12731
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Master Playbook - Quick Reference Index.md.index.json",
+      "ext": ".json",
+      "size": 32734
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Master Playbook.md",
+      "ext": ".md",
+      "size": 12180
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Master Playbook.md.index.json",
+      "ext": ".json",
+      "size": 32616
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Master Review Analysis Package.md",
+      "ext": ".md",
+      "size": 7081
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Master Review Analysis Package.md.index.json",
+      "ext": ".json",
+      "size": 21104
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Methodology Analysis.md",
+      "ext": ".md",
+      "size": 26719
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Methodology Analysis.md.index.json",
+      "ext": ".json",
+      "size": 60398
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Quick Reference Guide.md",
+      "ext": ".md",
+      "size": 7958
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Quick Reference Guide.md.index.json",
+      "ext": ".json",
+      "size": 22746
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Tier 1 Components_ Comprehensive Deep Breakdown Analysis.md",
+      "ext": ".md",
+      "size": 6962
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Tier 1 Components_ Comprehensive Deep Breakdown Analysis.md.index.json",
+      "ext": ".json",
+      "size": 21002
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Tier 2 Components_ Complete Deep Breakdown Analysis Package.md",
+      "ext": ".md",
+      "size": 13102
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Tier 2 Components_ Complete Deep Breakdown Analysis Package.md.index.json",
+      "ext": ".json",
+      "size": 33517
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Implementation Guide for AI Systems.md",
+      "ext": ".md",
+      "size": 50869
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Implementation Guide for AI Systems.md.index.json",
+      "ext": ".json",
+      "size": 109000
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Knowledge Base - Executive Summary.md",
+      "ext": ".md",
+      "size": 10342
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Knowledge Base - Executive Summary.md.index.json",
+      "ext": ".json",
+      "size": 27731
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Knowledge Base Package.md",
+      "ext": ".md",
+      "size": 6156
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Knowledge Base Package.md.index.json",
+      "ext": ".json",
+      "size": 19137
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Knowledge Base Validation Report.md",
+      "ext": ".md",
+      "size": 10659
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Knowledge Base Validation Report.md.index.json",
+      "ext": ".json",
+      "size": 28172
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Methodology Analysis.md",
+      "ext": ".md",
+      "size": 26719
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Methodology Analysis.md.index.json",
+      "ext": ".json",
+      "size": 60399
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Quick Reference Guide.md",
+      "ext": ".md",
+      "size": 7958
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Quick Reference Guide.md.index.json",
+      "ext": ".json",
+      "size": 22747
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Implementation Guide for AI Systems.md",
+      "ext": ".md",
+      "size": 50869
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Implementation Guide for AI Systems.md.index.json",
+      "ext": ".json",
+      "size": 109000
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Knowledge Base - Executive Summary.md",
+      "ext": ".md",
+      "size": 10342
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Knowledge Base - Executive Summary.md.index.json",
+      "ext": ".json",
+      "size": 27731
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Knowledge Base Package.md",
+      "ext": ".md",
+      "size": 6156
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Knowledge Base Package.md.index.json",
+      "ext": ".json",
+      "size": 19137
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Knowledge Base Validation Report.md",
+      "ext": ".md",
+      "size": 10659
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Knowledge Base Validation Report.md.index.json",
+      "ext": ".json",
+      "size": 28172
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Methodology Analysis.md",
+      "ext": ".md",
+      "size": 26719
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Methodology Analysis.md.index.json",
+      "ext": ".json",
+      "size": 60399
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Quick Reference Guide.md",
+      "ext": ".md",
+      "size": 7958
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Quick Reference Guide.md.index.json",
+      "ext": ".json",
+      "size": 22747
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT_E8_Master_Playbook_Complete.zip",
+      "ext": ".zip",
+      "size": 2033322
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT_E8_Master_Review_Package.zip",
+      "ext": ".zip",
+      "size": 5038498
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/MORSR Scanning System_ Comprehensive Deep Breakdown Analysis.md",
+      "ext": ".md",
+      "size": 29164
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/MORSR Scanning System_ Comprehensive Deep Breakdown Analysis.md.index.json",
+      "ext": ".json",
+      "size": 65674
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Master Review Analysis Package Summary.md",
+      "ext": ".md",
+      "size": 12680
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Master Review Analysis Package Summary.md.index.json",
+      "ext": ".json",
+      "size": 32464
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/PACKAGE_SUMMARY.pdf",
+      "ext": ".pdf",
+      "size": 301111
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Practical Implementation Recommendations for IRL-Enhanced LSDT/E8 Framework.md",
+      "ext": ".md",
+      "size": 28113
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Practical Implementation Recommendations for IRL-Enhanced LSDT/E8 Framework.md.index.json",
+      "ext": ".json",
+      "size": 63446
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/README.pdf",
+      "ext": ".pdf",
+      "size": 297008
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Real-World Methods and Systems for LSDT/E8 Framework Enhancement.md",
+      "ext": ".md",
+      "size": 24442
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Real-World Methods and Systems for LSDT/E8 Framework Enhancement.md.index.json",
+      "ext": ".json",
+      "size": 55975
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/The Complete Shelling Guide.md",
+      "ext": ".md",
+      "size": 16002
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/The Complete Shelling Guide.md.index.json",
+      "ext": ".json",
+      "size": 40108
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/The Safe Cube_ Foundational Architecture of the LSDT/E8 Framework.md",
+      "ext": ".md",
+      "size": 89884
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/The Safe Cube_ Foundational Architecture of the LSDT/E8 Framework.md.index.json",
+      "ext": ".json",
+      "size": 187423
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Tier 2 Components Integration Analysis_ Comprehensive Framework Synthesis.md",
+      "ext": ".md",
+      "size": 42875
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Tier 2 Components Integration Analysis_ Comprehensive Framework Synthesis.md.index.json",
+      "ext": ".json",
+      "size": 93319
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Universal Superpermutation Principle_ Comprehensive Deep Breakdown Analysis.md",
+      "ext": ".md",
+      "size": 68713
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Universal Superpermutation Principle_ Comprehensive Deep Breakdown Analysis.md.index.json",
+      "ext": ".json",
+      "size": 145721
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/WavePool System_ Comprehensive Deep Breakdown Analysis.md",
+      "ext": ".md",
+      "size": 40593
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/WavePool System_ Comprehensive Deep Breakdown Analysis.md.index.json",
+      "ext": ".json",
+      "size": 88820
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/advanced_concepts.md",
+      "ext": ".md",
+      "size": 5763
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/advanced_concepts.md.index.json",
+      "ext": ".json",
+      "size": 18177
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/advanced_shelling_operations_integration.md",
+      "ext": ".md",
+      "size": 22952
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/advanced_shelling_operations_integration.md.index.json",
+      "ext": ".json",
+      "size": 53474
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/clarity_enhancement_analysis.md",
+      "ext": ".md",
+      "size": 28755
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/clarity_enhancement_analysis.md.index.json",
+      "ext": ".json",
+      "size": 64812
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/clarity_enhancement_analysis.pdf",
+      "ext": ".pdf",
+      "size": 308379
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/cmplxfullbuild.docx",
+      "ext": ".docx",
+      "size": 631894
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/compression_techniques_protocols.md",
+      "ext": ".md",
+      "size": 16977
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/compression_techniques_protocols.md.index.json",
+      "ext": ".json",
+      "size": 41210
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/core_shelling_methodology.md",
+      "ext": ".md",
+      "size": 15335
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/core_shelling_methodology.md.index.json",
+      "ext": ".json",
+      "size": 37722
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/critical_analysis_phase1.md",
+      "ext": ".md",
+      "size": 18071
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/critical_analysis_phase1.md.index.json",
+      "ext": ".json",
+      "size": 42793
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/dimensional_architecture_navigation_guide.md",
+      "ext": ".md",
+      "size": 31652
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/dimensional_architecture_navigation_guide.md.index.json",
+      "ext": ".json",
+      "size": 70885
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/dimensional_architecture_navigation_guide.pdf",
+      "ext": ".pdf",
+      "size": 309692
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/eganswork.docx",
+      "ext": ".docx",
+      "size": 1740274
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/eganswork_extracted.txt",
+      "ext": ".txt",
+      "size": 44087
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/eganswork_extracted.txt.index.json",
+      "ext": ".json",
+      "size": 101543
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/executive_summary.md",
+      "ext": ".md",
+      "size": 14669
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/executive_summary.md.index.json",
+      "ext": ".json",
+      "size": 36465
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/executive_summary.pdf",
+      "ext": ".pdf",
+      "size": 298759
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/expansion_methodologies_implementation.md",
+      "ext": ".md",
+      "size": 22373
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/expansion_methodologies_implementation.md.index.json",
+      "ext": ".json",
+      "size": 52070
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/extract_all_docx.py",
+      "ext": ".py",
+      "size": 1665
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/extract_docx.py",
+      "ext": ".py",
+      "size": 1454
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/extracted_content.txt",
+      "ext": ".txt",
+      "size": 1742493
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/extracted_content.txt.index.json",
+      "ext": ".json",
+      "size": 3573675
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/final_critical_assessment.md",
+      "ext": ".md",
+      "size": 25051
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/final_critical_assessment.md.index.json",
+      "ext": ".json",
+      "size": 57126
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/framework_analysis_priorities.pdf",
+      "ext": ".pdf",
+      "size": 338339
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/framework_integration.md",
+      "ext": ".md",
+      "size": 22553
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/framework_integration.md.index.json",
+      "ext": ".json",
+      "size": 52469
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/framework_integration.pdf",
+      "ext": ".pdf",
+      "size": 280159
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/framework_methodology_analysis.md",
+      "ext": ".md",
+      "size": 26719
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/framework_methodology_analysis.md.index.json",
+      "ext": ".json",
+      "size": 60390
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/framework_methodology_analysis.pdf",
+      "ext": ".pdf",
+      "size": 311714
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/framework_visualization_conceptual_mapping.md",
+      "ext": ".md",
+      "size": 43216
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/framework_visualization_conceptual_mapping.md.index.json",
+      "ext": ".json",
+      "size": 94448
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/framework_visualization_conceptual_mapping.pdf",
+      "ext": ".pdf",
+      "size": 318383
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/fullspmlog.docx",
+      "ext": ".docx",
+      "size": 229459
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/fullspmlog_extracted.txt",
+      "ext": ".txt",
+      "size": 313163
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/fullspmlog_extracted.txt.index.json",
+      "ext": ".json",
+      "size": 839574
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/gap_analysis_phase2.md",
+      "ext": ".md",
+      "size": 27667
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/gap_analysis_phase2.md.index.json",
+      "ext": ".json",
+      "size": 62343
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/geminishellingpractice6625.docx",
+      "ext": ".docx",
+      "size": 1007172
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/glossary.md",
+      "ext": ".md",
+      "size": 8787
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/glossary.md.index.json",
+      "ext": ".json",
+      "size": 24666
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/glyph_systems_analysis.md",
+      "ext": ".md",
+      "size": 58701
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/glyph_systems_analysis.md.index.json",
+      "ext": ".json",
+      "size": 125375
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/glyph_systems_analysis.pdf",
+      "ext": ".pdf",
+      "size": 327141
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/implementation_framework.md",
+      "ext": ".md",
+      "size": 28531
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/implementation_framework.md.index.json",
+      "ext": ".json",
+      "size": 64463
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/implementation_framework.pdf",
+      "ext": ".pdf",
+      "size": 305526
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/implementation_strategy.md",
+      "ext": ".md",
+      "size": 36802
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/implementation_strategy.md.index.json",
+      "ext": ".json",
+      "size": 80408
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/initial_analysis.md",
+      "ext": ".md",
+      "size": 7057
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/initial_analysis.md.index.json",
+      "ext": ".json",
+      "size": 21051
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/instruction_data_distinction_protocol.md",
+      "ext": ".md",
+      "size": 21950
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/instruction_data_distinction_protocol.md.index.json",
+      "ext": ".json",
+      "size": 51043
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/instruction_data_distinction_protocol.pdf",
+      "ext": ".pdf",
+      "size": 301605
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/integration_analysis.md",
+      "ext": ".md",
+      "size": 15729
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/integration_analysis.md.index.json",
+      "ext": ".json",
+      "size": 38922
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/integration_analysis.pdf",
+      "ext": ".pdf",
+      "size": 266901
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/integration_strategy.md",
+      "ext": ".md",
+      "size": 22781
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/integration_strategy.md.index.json",
+      "ext": ".json",
+      "size": 52423
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/irl_methods_analysis.md",
+      "ext": ".md",
+      "size": 24442
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/irl_methods_analysis.md.index.json",
+      "ext": ".json",
+      "size": 55931
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/llm_optimized_recommendations.md",
+      "ext": ".md",
+      "size": 31831
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/llm_optimized_recommendations.md.index.json",
+      "ext": ".json",
+      "size": 70667
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/lsdt_e8_implementation_guide.md",
+      "ext": ".md",
+      "size": 50869
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/lsdt_e8_implementation_guide.md.index.json",
+      "ext": ".json",
+      "size": 108974
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/lsdt_e8_implementation_guide.pdf",
+      "ext": ".pdf",
+      "size": 339978
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/lsdt_e8_quick_reference.md",
+      "ext": ".md",
+      "size": 7958
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/lsdt_e8_quick_reference.md.index.json",
+      "ext": ".json",
+      "size": 22730
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/lsdtnewest.docx",
+      "ext": ".docx",
+      "size": 143266
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/lsdtnewest_extracted.txt",
+      "ext": ".txt",
+      "size": 128405
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/lsdtnewest_extracted.txt.index.json",
+      "ext": ".json",
+      "size": 267461
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/lsdtpaper.docx",
+      "ext": ".docx",
+      "size": 27274
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/lsdtpaper_extracted.txt",
+      "ext": ".txt",
+      "size": 22290
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/lsdtpaper_extracted.txt.index.json",
+      "ext": ".json",
+      "size": 52977
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/master_playbook_architecture.md",
+      "ext": ".md",
+      "size": 7636
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/master_playbook_architecture.md.index.json",
+      "ext": ".json",
+      "size": 22377
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/master_playbook_complete_guide.md",
+      "ext": ".md",
+      "size": 12180
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/master_playbook_complete_guide.md.index.json",
+      "ext": ".json",
+      "size": 32629
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/master_playbook_quick_reference_index.md",
+      "ext": ".md",
+      "size": 12731
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/master_playbook_quick_reference_index.md.index.json",
+      "ext": ".json",
+      "size": 32730
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/pdf_versions/master_playbook_complete_guide.pdf",
+      "ext": ".pdf",
+      "size": 303872
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/pdf_versions/master_playbook_quick_reference_index.pdf",
+      "ext": ".pdf",
+      "size": 301210
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/pdf_versions/volume_1_foundations_core_principles.pdf",
+      "ext": ".pdf",
+      "size": 372763
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/pdf_versions/volume_2_component_systems_tools.pdf",
+      "ext": ".pdf",
+      "size": 402861
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/pdf_versions/volume_3_implementation_integration.pdf",
+      "ext": ".pdf",
+      "size": 393170
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/pdf_versions/volume_4_advanced_operations_optimization.pdf",
+      "ext": ".pdf",
+      "size": 399970
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/volume_1_foundations/volume_1_foundations_core_principles.md",
+      "ext": ".md",
+      "size": 87865
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/volume_1_foundations/volume_1_foundations_core_principles.md.index.json",
+      "ext": ".json",
+      "size": 185114
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/volume_2_components/volume_2_component_systems_tools.md",
+      "ext": ".md",
+      "size": 118454
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/volume_2_components/volume_2_component_systems_tools.md.index.json",
+      "ext": ".json",
+      "size": 247682
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/volume_3_implementation/volume_3_implementation_integration.md",
+      "ext": ".md",
+      "size": 121274
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/volume_3_implementation/volume_3_implementation_integration.md.index.json",
+      "ext": ".json",
+      "size": 253762
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/volume_4_advanced/volume_4_advanced_operations_optimization.md",
+      "ext": ".md",
+      "size": 139315
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/volume_4_advanced/volume_4_advanced_operations_optimization.md.index.json",
+      "ext": ".json",
+      "size": 290187
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook_architecture.md",
+      "ext": ".md",
+      "size": 7636
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook_architecture.md.index.json",
+      "ext": ".json",
+      "size": 22361
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/README.md",
+      "ext": ".md",
+      "size": 6156
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/README.md.index.json",
+      "ext": ".json",
+      "size": 19161
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/executive_summary.md",
+      "ext": ".md",
+      "size": 10342
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/executive_summary.md.index.json",
+      "ext": ".json",
+      "size": 27754
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/executive_summary.pdf",
+      "ext": ".pdf",
+      "size": 298759
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/framework_methodology_analysis.md",
+      "ext": ".md",
+      "size": 26719
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/framework_methodology_analysis.md.index.json",
+      "ext": ".json",
+      "size": 60449
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/framework_methodology_analysis.pdf",
+      "ext": ".pdf",
+      "size": 311714
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/lsdt_e8_implementation_guide.md",
+      "ext": ".md",
+      "size": 50869
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/lsdt_e8_implementation_guide.md.index.json",
+      "ext": ".json",
+      "size": 109033
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/lsdt_e8_implementation_guide.pdf",
+      "ext": ".pdf",
+      "size": 339978
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/lsdt_e8_quick_reference.md",
+      "ext": ".md",
+      "size": 7958
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/lsdt_e8_quick_reference.md.index.json",
+      "ext": ".json",
+      "size": 22789
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/validation_report.md",
+      "ext": ".md",
+      "size": 10659
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/validation_report.md.index.json",
+      "ext": ".json",
+      "size": 28197
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/01_critical_analysis_phase1.md",
+      "ext": ".md",
+      "size": 18071
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/01_critical_analysis_phase1.md.index.json",
+      "ext": ".json",
+      "size": 42839
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/01_critical_analysis_phase1.pdf",
+      "ext": ".pdf",
+      "size": 301912
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/02_gap_analysis_phase2.md",
+      "ext": ".md",
+      "size": 27667
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/02_gap_analysis_phase2.md.index.json",
+      "ext": ".json",
+      "size": 62389
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/02_gap_analysis_phase2.pdf",
+      "ext": ".pdf",
+      "size": 313966
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/03_llm_optimized_recommendations.md",
+      "ext": ".md",
+      "size": 31831
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/03_llm_optimized_recommendations.md.index.json",
+      "ext": ".json",
+      "size": 70713
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/03_llm_optimized_recommendations.pdf",
+      "ext": ".pdf",
+      "size": 318638
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/04_implementation_strategy.md",
+      "ext": ".md",
+      "size": 36802
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/04_implementation_strategy.md.index.json",
+      "ext": ".json",
+      "size": 80454
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/04_implementation_strategy.pdf",
+      "ext": ".pdf",
+      "size": 287156
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/05_final_critical_assessment.md",
+      "ext": ".md",
+      "size": 25051
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/05_final_critical_assessment.md.index.json",
+      "ext": ".json",
+      "size": 57172
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/05_final_critical_assessment.pdf",
+      "ext": ".pdf",
+      "size": 306828
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/README.md",
+      "ext": ".md",
+      "size": 8637
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/README.md.index.json",
+      "ext": ".json",
+      "size": 24304
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/03_irl_methods_enhancement/01_irl_methods_analysis.md",
+      "ext": ".md",
+      "size": 24442
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/03_irl_methods_enhancement/01_irl_methods_analysis.md.index.json",
+      "ext": ".json",
+      "size": 55983
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/03_irl_methods_enhancement/01_irl_methods_analysis.pdf",
+      "ext": ".pdf",
+      "size": 305298
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/03_irl_methods_enhancement/02_integration_strategy.md",
+      "ext": ".md",
+      "size": 22781
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/03_irl_methods_enhancement/02_integration_strategy.md.index.json",
+      "ext": ".json",
+      "size": 52475
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/03_irl_methods_enhancement/02_integration_strategy.pdf",
+      "ext": ".pdf",
+      "size": 303942
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/03_irl_methods_enhancement/03_practical_implementation.md",
+      "ext": ".md",
+      "size": 28113
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/03_irl_methods_enhancement/03_practical_implementation.md.index.json",
+      "ext": ".json",
+      "size": 63447
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/03_irl_methods_enhancement/03_practical_implementation.pdf",
+      "ext": ".pdf",
+      "size": 308169
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/03_irl_methods_enhancement/README.md",
+      "ext": ".md",
+      "size": 11388
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/03_irl_methods_enhancement/README.md.index.json",
+      "ext": ".json",
+      "size": 29932
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/04_synthesis_and_overview/executive_overview.md",
+      "ext": ".md",
+      "size": 21812
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/04_synthesis_and_overview/executive_overview.md.index.json",
+      "ext": ".json",
+      "size": 50920
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/04_synthesis_and_overview/executive_overview.pdf",
+      "ext": ".pdf",
+      "size": 303454
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/04_synthesis_and_overview/framework_evolution_roadmap.md",
+      "ext": ".md",
+      "size": 31394
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/04_synthesis_and_overview/framework_evolution_roadmap.md.index.json",
+      "ext": ".json",
+      "size": 70119
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/04_synthesis_and_overview/framework_evolution_roadmap.pdf",
+      "ext": ".pdf",
+      "size": 309216
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/04_synthesis_and_overview/integrated_analysis_synthesis.md",
+      "ext": ".md",
+      "size": 21445
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/04_synthesis_and_overview/integrated_analysis_synthesis.md.index.json",
+      "ext": ".json",
+      "size": 50041
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/04_synthesis_and_overview/integrated_analysis_synthesis.pdf",
+      "ext": ".pdf",
+      "size": 304992
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/05_implementation_guides/llm_optimized_implementation_guide.md",
+      "ext": ".md",
+      "size": 26812
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/05_implementation_guides/llm_optimized_implementation_guide.md.index.json",
+      "ext": ".json",
+      "size": 60805
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/05_implementation_guides/llm_optimized_implementation_guide.pdf",
+      "ext": ".pdf",
+      "size": 307986
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/06_supporting_documents/glossary.md",
+      "ext": ".md",
+      "size": 8787
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/06_supporting_documents/glossary.md.index.json",
+      "ext": ".json",
+      "size": 24712
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/06_supporting_documents/glossary.pdf",
+      "ext": ".pdf",
+      "size": 293257
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/PACKAGE_SUMMARY.md",
+      "ext": ".md",
+      "size": 12680
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/PACKAGE_SUMMARY.md.index.json",
+      "ext": ".json",
+      "size": 32463
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/PACKAGE_SUMMARY.pdf",
+      "ext": ".pdf",
+      "size": 301111
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/README.md",
+      "ext": ".md",
+      "size": 7081
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/README.md.index.json",
+      "ext": ".json",
+      "size": 21084
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/README.pdf",
+      "ext": ".pdf",
+      "size": 297008
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/morsr_scanning_system_analysis.md",
+      "ext": ".md",
+      "size": 29164
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/morsr_scanning_system_analysis.md.index.json",
+      "ext": ".json",
+      "size": 65644
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/morsr_scanning_system_analysis.pdf",
+      "ext": ".pdf",
+      "size": 312980
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/practical_implementation.md",
+      "ext": ".md",
+      "size": 28113
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/practical_implementation.md.index.json",
+      "ext": ".json",
+      "size": 63395
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/practical_implementation_guide_examples.md",
+      "ext": ".md",
+      "size": 20912
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/practical_implementation_guide_examples.md.index.json",
+      "ext": ".json",
+      "size": 49870
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/safe_cube_analysis.pdf",
+      "ext": ".pdf",
+      "size": 353255
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/advanced_shelling_operations_integration.md",
+      "ext": ".md",
+      "size": 22952
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/advanced_shelling_operations_integration.md.index.json",
+      "ext": ".json",
+      "size": 53489
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/complete_shelling_guide_master_reference.md",
+      "ext": ".md",
+      "size": 16002
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/complete_shelling_guide_master_reference.md.index.json",
+      "ext": ".json",
+      "size": 40136
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/compression_techniques_protocols.md",
+      "ext": ".md",
+      "size": 16977
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/compression_techniques_protocols.md.index.json",
+      "ext": ".json",
+      "size": 41225
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/core_shelling_methodology.md",
+      "ext": ".md",
+      "size": 15335
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/core_shelling_methodology.md.index.json",
+      "ext": ".json",
+      "size": 37737
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/expansion_methodologies_implementation.md",
+      "ext": ".md",
+      "size": 22373
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/expansion_methodologies_implementation.md.index.json",
+      "ext": ".json",
+      "size": 52085
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/pdf_versions/advanced_shelling_operations_integration.pdf",
+      "ext": ".pdf",
+      "size": 307668
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/pdf_versions/complete_shelling_guide_master_reference.pdf",
+      "ext": ".pdf",
+      "size": 306079
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/pdf_versions/compression_techniques_protocols.pdf",
+      "ext": ".pdf",
+      "size": 303449
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/pdf_versions/core_shelling_methodology.pdf",
+      "ext": ".pdf",
+      "size": 302930
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/pdf_versions/expansion_methodologies_implementation.pdf",
+      "ext": ".pdf",
+      "size": 308916
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/pdf_versions/practical_implementation_guide_examples.pdf",
+      "ext": ".pdf",
+      "size": 451813
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/practical_implementation_guide_examples.md",
+      "ext": ".md",
+      "size": 20912
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/practical_implementation_guide_examples.md.index.json",
+      "ext": ".json",
+      "size": 49885
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/superpermutationlink.docx",
+      "ext": ".docx",
+      "size": 17473
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/superpermutationlink_extracted.txt",
+      "ext": ".txt",
+      "size": 3725
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/superpermutationlink_extracted.txt.index.json",
+      "ext": ".json",
+      "size": 14105
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/ten_step_idea_actualization_analysis.md",
+      "ext": ".md",
+      "size": 21580
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/ten_step_idea_actualization_analysis.md.index.json",
+      "ext": ".json",
+      "size": 50572
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/ten_step_idea_actualization_analysis.pdf",
+      "ext": ".pdf",
+      "size": 308024
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/tier2_integration_analysis.md",
+      "ext": ".md",
+      "size": 42875
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/tier2_integration_analysis.md.index.json",
+      "ext": ".json",
+      "size": 93272
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/tier2_integration_analysis.pdf",
+      "ext": ".pdf",
+      "size": 318012
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/todo.md",
+      "ext": ".md",
+      "size": 2030
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/todo.md.index.json",
+      "ext": ".json",
+      "size": 10079
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/universal_superpermutation_principle_analysis.md",
+      "ext": ".md",
+      "size": 68713
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/universal_superpermutation_principle_analysis.md.index.json",
+      "ext": ".json",
+      "size": 145691
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/universal_superpermutation_principle_analysis.pdf",
+      "ext": ".pdf",
+      "size": 336057
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/validation_report.md",
+      "ext": ".md",
+      "size": 10659
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/validation_report.md.index.json",
+      "ext": ".json",
+      "size": 28138
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/volume_1_foundations_core_principles.md",
+      "ext": ".md",
+      "size": 87865
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/volume_1_foundations_core_principles.md.index.json",
+      "ext": ".json",
+      "size": 185077
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/volume_2_component_systems_tools.md",
+      "ext": ".md",
+      "size": 118454
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/volume_2_component_systems_tools.md.index.json",
+      "ext": ".json",
+      "size": 247646
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/volume_3_implementation_integration.md",
+      "ext": ".md",
+      "size": 121274
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/volume_3_implementation_integration.md.index.json",
+      "ext": ".json",
+      "size": 253722
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/volume_4_advanced_operations_optimization.md",
+      "ext": ".md",
+      "size": 139315
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/volume_4_advanced_operations_optimization.md.index.json",
+      "ext": ".json",
+      "size": 290153
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/wavepool_system_analysis.md",
+      "ext": ".md",
+      "size": 40593
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/wavepool_system_analysis.md.index.json",
+      "ext": ".json",
+      "size": 88790
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/wavepool_system_analysis.pdf",
+      "ext": ".pdf",
+      "size": 322480
+    }
+  ],
+  "summary": [
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/extracted_content.txt",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 8602,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/fullspmlog_extracted.txt",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 362,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/The Safe Cube_ Foundational Architecture of the LSDT/E8 Framework.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 346,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/lsdt_e8_implementation_guide.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 161,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Implementation Guide for AI Systems.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 161,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Implementation Guide for AI Systems.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 161,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Implementation Guide for AI Systems.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 161,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/lsdt_e8_implementation_guide.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 161,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/practical_implementation_guide_examples.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 1,
+      "score_core": 108,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/practical_implementation_guide_examples.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 1,
+      "score_core": 108,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/lsdtnewest_extracted.txt",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 80,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/lsdt_e8_quick_reference.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 65,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Quick Reference Guide.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 65,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Quick Reference Guide.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 65,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Quick Reference Guide.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 65,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/lsdt_e8_quick_reference.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 65,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/WavePool System_ Comprehensive Deep Breakdown Analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 43,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/wavepool_system_analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 43,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/critical_analysis_phase1.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 35,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Critical Analysis_ LSDT/E8 Framework Misalignment with LLM Operational Realities.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 35,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/01_critical_analysis_phase1.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 35,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/instruction_data_distinction_protocol.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 14,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Instruction-Data Distinction Protocol for LLM Systems.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 14,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/practical_implementation.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 14,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/todo.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 14,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Clarity Enhancement Package.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 14,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/03_irl_methods_enhancement/03_practical_implementation.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 14,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Practical Implementation Recommendations for IRL-Enhanced LSDT/E8 Framework.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 14,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Implementation Strategy for LLM-Native Methods_ Practical Protocols and Testing Procedures.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 13,
+      "lsdt": false,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/implementation_strategy.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 13,
+      "lsdt": false,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Master Review Analysis Package Summary.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 13,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/PACKAGE_SUMMARY.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 13,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/04_implementation_strategy.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 13,
+      "lsdt": false,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LLM-Optimized Implementation Guide.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 12,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/lsdtpaper_extracted.txt",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 12,
+      "lsdt": true,
+      "likely_personal": true,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Executive Overview_ Complete LSDT/E8 Framework Analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 12,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/04_synthesis_and_overview/executive_overview.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 12,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/05_implementation_guides/llm_optimized_implementation_guide.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 12,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/irl_methods_analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 11,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Master Review Analysis Package.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 11,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/README.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 11,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/03_irl_methods_enhancement/01_irl_methods_analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 11,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Real-World Methods and Systems for LSDT/E8 Framework Enhancement.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 11,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/IRL Methods Enhancement for LSDT/E8 Framework_ Complete Analysis Package.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 8,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/03_irl_methods_enhancement/README.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 8,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/ComplexityTransitionsMappedtoDimensionalThresholds_extracted.txt",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 0,
+      "lsdt": false,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Implementation Framework for Instruction-Data Distinction.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 0,
+      "lsdt": false,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/implementation_framework.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 0,
+      "lsdt": false,
+      "likely_personal": false,
+      "category": "connected"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/volume_1_foundations_core_principles.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 588,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/volume_1_foundations/volume_1_foundations_core_principles.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 588,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/volume_2_component_systems_tools.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 399,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/volume_2_components/volume_2_component_systems_tools.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 399,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Universal Superpermutation Principle_ Comprehensive Deep Breakdown Analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 236,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/universal_superpermutation_principle_analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 236,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Glyph Systems & n=-1 Glyphic Index Lattice_ Comprehensive Deep Breakdown Analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 152,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/glyph_systems_analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 152,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/volume_4_advanced_operations_optimization.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 145,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/volume_4_advanced/volume_4_advanced_operations_optimization.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 145,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Critical Tools and Methods Requiring Deep Breakdown Analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 134,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/expansion_methodologies_implementation.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 129,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/expansion_methodologies_implementation.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 129,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/core_shelling_methodology.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 126,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/core_shelling_methodology.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 126,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/framework_methodology_analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 125,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Methodology Analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 125,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Methodology Analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 125,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Methodology Analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 125,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/framework_methodology_analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 125,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/The Complete Shelling Guide.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 1,
+      "score_core": 116,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/complete_shelling_guide_master_reference.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 1,
+      "score_core": 116,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/volume_3_implementation_integration.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 100,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/volume_3_implementation/volume_3_implementation_integration.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 100,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/advanced_shelling_operations_integration.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 94,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/advanced_shelling_operations_integration.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 94,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/MORSR Scanning System_ Comprehensive Deep Breakdown Analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 91,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/morsr_scanning_system_analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 91,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/gap_analysis_phase2.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 88,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Gap Analysis and Failure Mode Identification_ LSDT/E8 Framework Applied to LLMs.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 88,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/02_gap_analysis_phase2.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 88,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/10-Step Idea Actualization Process_ Comprehensive Deep Breakdown Analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 78,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/ten_step_idea_actualization_analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 78,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Complete Shelling Guide - Final Delivery Summary.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 69,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/initial_analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 69,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Master Playbook - Quick Reference Index.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 69,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/master_playbook_quick_reference_index.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 69,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/validation_report.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 67,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Knowledge Base Validation Report.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 67,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Knowledge Base Validation Report.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 67,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Knowledge Base Validation Report.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 67,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/validation_report.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 67,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/clarity_enhancement_analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 66,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Critical Clarity Enhancement Opportunities_ LSDT/E8 Framework Analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 66,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/framework_integration.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 63,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Integration of Instruction-Data Distinction with LSDT/E8 Framework.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 63,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/compression_techniques_protocols.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 62,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/shelling_guide/compression_techniques_protocols.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 62,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Integration Analysis_ Universal Superpermutation Principle and Glyph Systems.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 60,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/integration_analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 60,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/advanced_concepts.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 54,
+      "lsdt": false,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Master Playbook.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 1,
+      "score_core": 54,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/master_playbook_complete_guide.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 1,
+      "score_core": 54,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Master Playbook - Final Delivery Summary.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 50,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Knowledge Base - Executive Summary.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 47,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Knowledge Base - Executive Summary.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 47,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Knowledge Base - Executive Summary.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 47,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/executive_summary.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 47,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/framework_visualization_conceptual_mapping.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 45,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Advanced Visualization and Conceptual Mapping_ LSDT/E8 Framework.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 45,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook_architecture.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 44,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Tier 1 Components_ Comprehensive Deep Breakdown Analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 44,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_playbook/master_playbook_architecture.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 44,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/llm_optimized_recommendations.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 43,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LLM-Optimized Framework Recommendations_ Redesigning LSDT/E8 for Transformer Realities.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 43,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/03_llm_optimized_recommendations.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 43,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/eganswork_extracted.txt",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 42,
+      "lsdt": false,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Integrated Analysis Synthesis_ LSDT/E8 Framework.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 40,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/04_synthesis_and_overview/integrated_analysis_synthesis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 40,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Tier 2 Components_ Complete Deep Breakdown Analysis Package.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 39,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Tier 2 Components Integration Analysis_ Comprehensive Framework Synthesis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 38,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/tier2_integration_analysis.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 38,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Knowledge Base Package.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 35,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT2/E8 Framework Knowledge Base Package.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 35,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT3/E8 Framework Knowledge Base Package.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 35,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/01_original_framework_knowledge_base/README.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 35,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/dimensional_architecture_navigation_guide.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 34,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/final_critical_assessment.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 34,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/glossary.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 34,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Dimensional Architecture and Navigation Guide_ LSDT/E8 Framework.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 34,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Final Critical Assessment_ LSDT/E8 Framework Analysis and LLM Optimization.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 34,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/05_final_critical_assessment.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 34,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/06_supporting_documents/glossary.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 34,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Instruction-Data Distinction Protocol Package.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 28,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Framework Evolution Roadmap_ LSDT/E8 Enhancement Strategy.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 27,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/04_synthesis_and_overview/framework_evolution_roadmap.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 27,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/integration_strategy.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 26,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Integration Strategy for IRL Methods with LSDT/E8 Framework.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 26,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/03_irl_methods_enhancement/02_integration_strategy.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 26,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/superpermutationlink_extracted.txt",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 25,
+      "lsdt": false,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/Executive Summary_ Instruction-Data Distinction Protocol.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 24,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/executive_summary.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 24,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/LSDT/E8 Framework Critical Analysis_ Complete Deliverable Package.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 24,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    },
+    {
+      "path": "/mnt/data/_manus_ai_e8/Manus AI work on E8 framework/master_review_package/02_critical_analysis/README.md",
+      "k_segments": 1,
+      "k_packages": 1,
+      "code_blocks": 0,
+      "score_core": 24,
+      "lsdt": true,
+      "likely_personal": false,
+      "category": "direct"
+    }
+  ]
+}

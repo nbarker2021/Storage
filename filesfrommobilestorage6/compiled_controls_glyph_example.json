@@ -1,0 +1,29 @@
+{
+  "profile_hash": "demo_profile_hash_\u03b3",
+  "controls": [
+    {
+      "source_index": 1,
+      "n": 12,
+      "dtau": 0.05,
+      "taps_rad": [
+        0.0,
+        1.571,
+        3.142,
+        4.712
+      ],
+      "weight": 0.6
+    },
+    {
+      "source_index": 3,
+      "n": 8,
+      "dtau": 0.1,
+      "taps_rad": [
+        0.785,
+        2.356,
+        3.927,
+        5.498
+      ],
+      "weight": 0.5
+    }
+  ]
+}

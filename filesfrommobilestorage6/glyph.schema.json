@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://morphonic.org/schemas/glyph.schema.json",
+  "title": "\u039b\u039f\u03b3 Glyphic Program",
+  "type": "object",
+  "required": [
+    "profile",
+    "program"
+  ],
+  "properties": {
+    "profile": {
+      "type": "object",
+      "required": [
+        "vectorizer",
+        "symmetry",
+        "limits"
+      ],
+      "properties": {
+        "vectorizer": {
+          "type": "object",
+          "required": [
+            "mode"
+          ],
+          "properties": {
+            "mode": {
+              "type": "string",
+              "enum": [
+                "svg",
+                "bitmap"
+              ]
+            },
+            "dpi": {
+              "type": "number"
+            },
+            "min_stroke_len_px": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": false
+        },
+        "symmetry": {
+          "type": "object",
+          "properties": {
+            "angle_bin_deg": {
+              "type": "number",
+              "default": 15
+            },
+            "reflection_tol": {
+              "type": "number",
+              "default": 0.1
+            }
+          },
+          "additionalProperties": false
+        },
+        "limits": {
+          "type": "object",
+          "properties": {
+            "strokes_max": {
+              "type": "integer",
+              "default": 128
+            },
+            "crossings_max": {
+              "type": "integer",
+              "default": 256
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "program": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "oneOf": [
+          {
+            "title": "Rune",
+            "required": [
+              "op",
+              "unicode"
+            ],
+            "properties": {
+              "op": {
+                "const": "rune"
+              },
+              "unicode": {
+                "type": "string"
+              },
+              "bold": {
+                "type": "boolean"
+              },
+              "italic": {
+                "type": "boolean"
+              },
+              "stroke_order": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "title": "Group (Fence)",
+            "required": [
+              "op",
+              "open",
+              "close"
+            ],
+            "properties": {
+              "op": {
+                "const": "group"
+              },
+              "open": {
+                "type": "string"
+              },
+              "close": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "title": "AST Node",
+            "required": [
+              "op",
+              "node_type"
+            ],
+            "properties": {
+              "op": {
+                "const": "ast"
+              },
+              "node_type": {
+                "type": "string"
+              },
+              "arity": {
+                "type": "integer"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    }
+  }
+}

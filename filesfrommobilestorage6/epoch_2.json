@@ -1,0 +1,242 @@
+{
+  "epoch": 2,
+  "placements": [
+    {
+      "node": 0,
+      "hash": "bedee8b0aabdc77f1df4ca400987d9e65a0f01d939b2eb651ee1f2c8ef7aa304",
+      "color": "bedee8",
+      "parity": {
+        "p0": 0,
+        "p1": 1,
+        "p2": 60
+      }
+    },
+    {
+      "node": 1,
+      "hash": "2aca09e3ae78bc509c8e9d920f58ad421b653a98355f16265889fa36cf8fc854",
+      "color": "2aca09",
+      "parity": {
+        "p0": 0,
+        "p1": 2,
+        "p2": 36
+      }
+    },
+    {
+      "node": 2,
+      "hash": "756a1a42491387c24003990956ec3915fba5512c90e822548a594f53b9adae74",
+      "color": "756a1a",
+      "parity": {
+        "p0": 0,
+        "p1": 0,
+        "p2": 248
+      }
+    },
+    {
+      "node": 3,
+      "hash": "3e915cd85882edacf8fdcdc9b06b06bdf2c584b50574ce766fcf14581724639b",
+      "color": "3e915c",
+      "parity": {
+        "p0": 1,
+        "p1": 6,
+        "p2": 149
+      }
+    },
+    {
+      "node": 4,
+      "hash": "831bcd5061ea6526d20319b244774e4ca964bf88ea119ae5fcf53993477b679b",
+      "color": "831bcd",
+      "parity": {
+        "p0": 1,
+        "p1": 1,
+        "p2": 176
+      }
+    },
+    {
+      "node": 5,
+      "hash": "1afbd986a327a3e05bb58cf90cc511320c77e4d5658882fbee2a99f1af406a82",
+      "color": "1afbd9",
+      "parity": {
+        "p0": 0,
+        "p1": 1,
+        "p2": 23
+      }
+    },
+    {
+      "node": 6,
+      "hash": "202290cb54195e9b1420cb0c6fa1daeebcc202d26c2e33c988a069a1fb8b2f6a",
+      "color": "202290",
+      "parity": {
+        "p0": 0,
+        "p1": 3,
+        "p2": 0
+      }
+    },
+    {
+      "node": 7,
+      "hash": "7e08973f131cdada686984be435292e7b4f63a81d7bbffac2e60f4699310a887",
+      "color": "7e0897",
+      "parity": {
+        "p0": 1,
+        "p1": 7,
+        "p2": 87
+      }
+    },
+    {
+      "node": 8,
+      "hash": "96c22505f1db238e010a74f20422082044e82d24a6adc1dd28a4a8e769fb27fc",
+      "color": "96c225",
+      "parity": {
+        "p0": 0,
+        "p1": 7,
+        "p2": 228
+      }
+    },
+    {
+      "node": 9,
+      "hash": "77860cdea4710f2e1ad8ac624b786628378c0fd97610c44d3a85296069c8a5f2",
+      "color": "77860c",
+      "parity": {
+        "p0": 0,
+        "p1": 1,
+        "p2": 249
+      }
+    },
+    {
+      "node": 10,
+      "hash": "cfd49ea42e801101014cfec561ac2a50d318103b5da1971dc6c78fca12506eab",
+      "color": "cfd49e",
+      "parity": {
+        "p0": 1,
+        "p1": 5,
+        "p2": 98
+      }
+    },
+    {
+      "node": 11,
+      "hash": "b26d6887f52cdba06793759b934e897f0f32fc01aedb7280f7ecc6b1446b532a",
+      "color": "b26d68",
+      "parity": {
+        "p0": 0,
+        "p1": 2,
+        "p2": 197
+      }
+    },
+    {
+      "node": 12,
+      "hash": "4c875ed756de3e9b6f8a5a9e09532169f17007195b6060b0691ccb02a837f266",
+      "color": "4c875e",
+      "parity": {
+        "p0": 0,
+        "p1": 5,
+        "p2": 132
+      }
+    },
+    {
+      "node": 13,
+      "hash": "2b82546ed9204d1a1b7ab087a63d852142367d69442639c09d9f0996e0beacec",
+      "color": "2b8254",
+      "parity": {
+        "p0": 0,
+        "p1": 7,
+        "p2": 70
+      }
+    },
+    {
+      "node": 14,
+      "hash": "fb47422d5862eff05ca5102b3e70bdc8470ab328ee06dfd16a9e155c05f89212",
+      "color": "fb4742",
+      "parity": {
+        "p0": 0,
+        "p1": 2,
+        "p2": 63
+      }
+    },
+    {
+      "node": 15,
+      "hash": "9a0921cb0607bc2bacce25ce7a5ded87afc3a89971d84924ee6ca946793074e0",
+      "color": "9a0921",
+      "parity": {
+        "p0": 0,
+        "p1": 3,
+        "p2": 84
+      }
+    }
+  ],
+  "roots": {
+    "tokens": "8747c65750321f7b88a531102a4dda7625d78380d07e2159b0bec53c3584bf21",
+    "colors": "d9048304b18d6d91b81f5cca8e0afdaf24e0e72d5db3afb5df82f33548b7c982",
+    "parity": "f595f37b7be8687e17ea88efd2af3899ed091b1b4beb6fcf5f4c83f9aa28a500"
+  },
+  "violations": [
+    {
+      "type": "adj_color_parity",
+      "a": 0,
+      "b": 1
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 1,
+      "b": 5
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 1,
+      "b": 2
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 2,
+      "b": 6
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 3,
+      "b": 7
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 5,
+      "b": 9
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 5,
+      "b": 6
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 8,
+      "b": 12
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 8,
+      "b": 9
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 9,
+      "b": 13
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 11,
+      "b": 15
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 12,
+      "b": 13
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 13,
+      "b": 14
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 14,
+      "b": 15
+    }
+  ]
+}

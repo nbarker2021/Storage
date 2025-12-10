@@ -1,0 +1,26 @@
+{
+  "generated_at": "2025-10-10T20:50:26Z",
+  "sources": [
+    {
+      "path": "/mnt/data/Slices_251010_100210.txt",
+      "size": 122826,
+      "sha256": "320c645944fa2df41a61a6cdab3186bc0273b3d882ddf5435e6cb62c30062510"
+    },
+    {
+      "path": "/mnt/data/Slices 2_251010_105547.txt",
+      "size": 33100,
+      "sha256": "4fe9edd83e1df490c70e406f0f44904481aa6ceca283f43e3236a2f870f33558"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/mnt/data/CQE_SESSION_UNIFIED_v1/cqe_unified_harness.yaml",
+      "sha256": "8a4048b018579eeea7d202b5177e6dc32abc84c7a8667d5c2cb9a582564100be"
+    },
+    {
+      "path": "/mnt/data/CQE_SESSION_UNIFIED_v1/cqe_bucket_nav.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    }
+  ],
+  "notes": "Unified from latest scrapes; attach full chat later for enrichment."
+}

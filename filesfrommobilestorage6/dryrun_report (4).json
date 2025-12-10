@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "started_at": 1754817517.0744557,
+    "plan": {
+      "steps": [
+        {
+          "name": "legacy:registry",
+          "family": "legacy",
+          "module": "adapters.legacy_auto.agrm_cmplx.registry",
+          "func": "list_legacy",
+          "kwargs": {
+            "slug": "agrm-cmplx",
+            "root": "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx",
+            "_est_wall_ms": 0.0
+          },
+          "priority": 5
+        },
+        {
+          "name": "legacy:hash:verify",
+          "family": "legacy.hash",
+          "module": "adapters.legacy_auto.agrm_cmplx.hash_adapters",
+          "func": "verify_vectors",
+          "kwargs": {
+            "module": "legacy_agrm_cmplx_agrm_module",
+            "func": "fnv1a64",
+            "_est_wall_ms": 0.0
+          },
+          "priority": 10
+        },
+        {
+          "name": "microflow:demo",
+          "family": "micro",
+          "module": "lattice_ai.pipeline.microflow",
+          "func": "microflow_demo",
+          "kwargs": {
+            "seed": 8,
+            "n_items": 256,
+            "_est_wall_ms": 0.0
+          },
+          "priority": 15
+        },
+        {
+          "name": "golden:recall_latency",
+          "family": "eval",
+          "module": "lattice_ai.tests.goldens_recall_latency",
+          "func": "eval_recall_latency",
+          "kwargs": {
+            "K": 10,
+            "seed": 99,
+            "house_mod": 257,
+            "_est_wall_ms": 0.0
+          },
+          "priority": 25
+        },
+        {
+          "name": "dim:probe",
+          "family": "dim3d",
+          "module": "src.testlib_plus.agents.dim_probe",
+          "func": "proj3d_quality",
+          "kwargs": {
+            "n": 200,
+            "seed": 9,
+            "_est_wall_ms": 0.0
+          },
+          "priority": 30
+        }
+      ]
+    },
+    "ended_at": 1754817517.912442,
+    "elapsed_s": 0.8379862308502197
+  },
+  "queue_records": [
+    {
+      "name": "legacy:registry",
+      "family": "legacy",
+      "module": "adapters.legacy_auto.agrm_cmplx.registry",
+      "func": "list_legacy",
+      "priority": 5,
+      "status": "ok",
+      "duration_ms": 37.4910190000719,
+      "error": null
+    },
+    {
+      "name": "legacy:hash:verify",
+      "family": "legacy.hash",
+      "module": "adapters.legacy_auto.agrm_cmplx.hash_adapters",
+      "func": "verify_vectors",
+      "priority": 10,
+      "status": "ok",
+      "duration_ms": 1.734888999976647,
+      "error": null
+    },
+    {
+      "name": "microflow:demo",
+      "family": "micro",
+      "module": "lattice_ai.pipeline.microflow",
+      "func": "microflow_demo",
+      "priority": 15,
+      "status": "ok",
+      "duration_ms": 705.4058830000258,
+      "error": null
+    },
+    {
+      "name": "golden:recall_latency",
+      "family": "eval",
+      "module": "lattice_ai.tests.goldens_recall_latency",
+      "func": "eval_recall_latency",
+      "priority": 25,
+      "status": "ok",
+      "duration_ms": 90.18066700002692,
+      "error": null
+    },
+    {
+      "name": "dim:probe",
+      "family": "dim3d",
+      "module": "src.testlib_plus.agents.dim_probe",
+      "func": "proj3d_quality",
+      "priority": 30,
+      "status": "ok",
+      "duration_ms": 3.033736999896064,
+      "error": null
+    }
+  ],
+  "sap_events": [
+    {
+      "family": "legacy",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 37.4910190000719
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "legacy.hash",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 1.734888999976647
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "micro",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 705.4058830000258
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "eval",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 90.18066700002692
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "dim3d",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 3.033736999896064
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "op": "legacy:registry",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "legacy:hash:verify",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "microflow:demo",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "golden:recall_latency",
+      "optimization_points": [
+        "Try bits=24 and house_mod\u22481021",
+        "Consider \u03b1/\u03b2 blending when geodesic is ready"
+      ],
+      "weak_spots": [
+        "No learned Tier-2 yet; using legacy hash backend, may be uncorrelated with semantics"
+      ]
+    },
+    {
+      "op": "dim:probe",
+      "optimization_points": [],
+      "weak_spots": []
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "timestamp": 1757530042.5757122,
+  "input": {
+    "facts": [
+      "law",
+      "grid",
+      "phi",
+      "time",
+      "wave",
+      "fold",
+      "spin",
+      "bond"
+    ],
+    "prefs": [
+      "safe",
+      "true",
+      "fast",
+      "calm",
+      "open",
+      "fair",
+      "lean",
+      "mild"
+    ],
+    "cons": [
+      "harm",
+      "bias",
+      "leak",
+      "spam",
+      "lag",
+      "cost",
+      "risk",
+      "void"
+    ],
+    "hyps": [
+      "test",
+      "plan",
+      "demo",
+      "play",
+      "mock",
+      "idea",
+      "link",
+      "sync"
+    ]
+  },
+  "meta": {
+    "count": 32,
+    "parity_conflicts": 3,
+    "repairs": 3,
+    "dr3_marks": [
+      3,
+      12,
+      21,
+      30
+    ],
+    "dr6_marks": [
+      6,
+      15,
+      24
+    ],
+    "dr9_marks": [
+      9,
+      18,
+      27
+    ],
+    "diversity_score": 1.8326093449256275
+  },
+  "placed": [
+    {
+      "i": 0,
+      "j": 3,
+      "text": "safe",
+      "pose": "tri",
+      "color": "red",
+      "face": 6,
+      "hp": 4,
+      "id": "49382aa3d6792a48"
+    },
+    {
+      "i": 2,
+      "j": 0,
+      "text": "test",
+      "pose": "tri",
+      "color": "red",
+      "face": 9,
+      "hp": 12,
+      "id": "37215889743efaaa"
+    },
+    {
+      "i": 3,
+      "j": 3,
+      "text": "law",
+      "pose": "tri",
+      "color": "black",
+      "face": 5,
+      "hp": 0,
+      "id": "bdd553cbb067140b"
+    },
+    {
+      "i": 0,
+      "j": 1,
+      "text": "harm",
+      "pose": "tri",
+      "color": "red",
+      "face": 5,
+      "hp": 8,
+      "id": "05a9c9489725cec1"
+    },
+    {
+      "i": 3,
+      "j": 0,
+      "text": "plan",
+      "pose": "dia",
+      "color": "black",
+      "face": 8,
+      "hp": 13,
+      "id": "cdf4c2dd91d1247d"
+    },
+    {
+      "i": 1,
+      "j": 3,
+      "text": "true",
+      "pose": "dia",
+      "color": "black",
+      "face": 9,
+      "hp": 5,
+      "id": "72456c1f2e1efcf8"
+    },
+    {
+      "i": 1,
+      "j": 0,
+      "text": "bias",
+      "pose": "dia",
+      "color": "black",
+      "face": 6,
+      "hp": 9,
+      "id": "340a1309f5c94bc7"
+    },
+    {
+      "i": 3,
+      "j": 2,
+      "text": "grid",
+      "pose": "dia",
+      "color": "black",
+      "face": 3,
+      "hp": 1,
+      "id": "f441b46267d0c898"
+    },
+    {
+      "i": 0,
+      "j": 2,
+      "text": "fast",
+      "pose": "hrt",
+      "color": "red",
+      "face": 1,
+      "hp": 6,
+      "id": "781b5a198574ffe8"
+    },
+    {
+      "i": 2,
+      "j": 1,
+      "text": "demo",
+      "pose": "hrt",
+      "color": "red",
+      "face": 2,
+      "hp": 14,
+      "id": "1fe8478e9fa2ee4b"
+    },
+    {
+      "i": 2,
+      "j": 3,
+      "text": "phi",
+      "pose": "hrt",
+      "color": "black",
+      "face": 2,
+      "hp": 2,
+      "id": "0a7b999a9bb75e80"
+    },
+    {
+      "i": 0,
+      "j": 0,
+      "text": "leak",
+      "pose": "hrt",
+      "color": "red",
+      "face": 4,
+      "hp": 10,
+      "id": "e67348087a4a7d63"
+    },
+    {
+      "i": 3,
+      "j": 1,
+      "text": "play",
+      "pose": "spd",
+      "color": "black",
+      "face": 9,
+      "hp": 15,
+      "id": "6839810f84ee7695"
+    },
+    {
+      "i": 1,
+      "j": 2,
+      "text": "calm",
+      "pose": "spd",
+      "color": "black",
+      "face": 4,
+      "hp": 7,
+      "id": "853a70ca159a3187"
+    },
+    {
+      "i": 1,
+      "j": 1,
+      "text": "spam",
+      "pose": "spd",
+      "color": "black",
+      "face": 4,
+      "hp": 11,
+      "id": "f04d2a94932ddeaf"
+    },
+    {
+      "i": 2,
+      "j": 2,
+      "text": "time",
+      "pose": "spd",
+      "color": "black",
+      "face": 2,
+      "hp": 3,
+      "id": "be6fcb0b9daaab8f"
+    }
+  ]
+}

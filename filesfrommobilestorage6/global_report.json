@@ -1,0 +1,18 @@
+{
+  "MWQ": 1.0,
+  "gens_rank": 4,
+  "steps": 4,
+  "flips_used": 6,
+  "cayley_bound_steps": 8,
+  "bridge_count": 2,
+  "lift_calls": 1,
+  "artifact_hash": "d5382ec80d8fb56c9af410463627969d43d365fafd623cd885a9f36850dea11e",
+  "replay_ok": true,
+  "gates": {
+    "blackout": true,
+    "generator_full_rank": true,
+    "single_lift": true,
+    "replay": true,
+    "cayley_bound_steps": true
+  }
+}

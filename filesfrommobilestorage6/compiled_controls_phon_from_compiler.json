@@ -1,0 +1,14 @@
+{
+  "profile_hash": "demo_profile_hash_psi",
+  "controls": [
+    {
+      "source_index": 0,
+      "n": 24,
+      "dtau": 0.0005,
+      "taps_rad": [
+        0.0
+      ],
+      "weight": 0.8431372549019608
+    }
+  ]
+}

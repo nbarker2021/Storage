@@ -1,0 +1,30 @@
+{
+  "timestamp": "2025-10-31T22:08:03Z",
+  "config_hash": "57bfd23c59018f03c921d14606107787ca0841081c7e55b86af12e9c4879109d",
+  "config": {
+    "dimension": 8,
+    "steps": 600,
+    "angle_deg": 22.5,
+    "seed": 4242,
+    "relax_alpha": 0.25,
+    "window": 128,
+    "r_bins": 16,
+    "a_bins": 24,
+    "ang_offset_halfbin": true,
+    "use_weighted_component": true,
+    "collision_notes": "Per-step collision; parity=conjugation; even projection used for relaxation."
+  },
+  "stats": {
+    "timestamp": "2025-10-31T22:08:03Z",
+    "steps": 600,
+    "alpha_relax": 0.25,
+    "window": 128,
+    "fraction_DeltaE_positive": 0.6983333333333334,
+    "DeltaE_mean": 0.017731825159894663,
+    "DeltaE_std": 0.027854605367739507,
+    "bits_erased_total": 3.2490579451114527,
+    "odd_energy_drop_total": 10.232708037764475,
+    "work_spent_total": 2.842670886939129
+  },
+  "notes": "\u0394E = (bits_erased + odd_energy_drop) - work_spent; bits in base 2; kTln2 normalized to 1."
+}

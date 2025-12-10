@@ -1,0 +1,51 @@
+{
+  "name": "shell_coherence",
+  "namespace": "retrieval.metrics",
+  "doc": "Mean cosine similarity to the shell center.",
+  "tags": [
+    {
+      "key": "unit",
+      "value": "[0,1]"
+    },
+    {
+      "key": "phase",
+      "value": "promote"
+    }
+  ],
+  "python_compat": true,
+  "e8": {
+    "version": "0.1",
+    "coords": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "root_loc": {
+      "nearest_roots": [
+        {
+          "index": 0,
+          "inner_product": 1.0
+        }
+      ],
+      "reflections": [],
+      "adjacency_rule": "inner_product_eq_1"
+    },
+    "axes": {
+      "version_container": "v14",
+      "tenant": "demo",
+      "domain": "retrieval"
+    },
+    "bridge_node": []
+  },
+  "axes": {
+    "version_container": "v14",
+    "tenant": "demo",
+    "domain": "retrieval"
+  },
+  "updated_at": "2025-08-10T04:22:46.068098Z"
+}

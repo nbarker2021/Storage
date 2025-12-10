@@ -1,0 +1,221 @@
+{
+  "GOV": [
+    "cbc",
+    "escrow",
+    "plateau",
+    "half-life",
+    "policy channels",
+    "ethics",
+    "bell",
+    "receipt",
+    "ledger",
+    "neg-cache",
+    "parity",
+    "band8",
+    "band24",
+    "tau_warn",
+    "tau_hard",
+    "delta_phi",
+    "Δφ",
+    "ΔΦ"
+  ],
+  "DYNATOKE": [
+    "lanes",
+    "scaleuppower10",
+    "paritymirror",
+    "weylreflect0",
+    "midpoint",
+    "singleinsert",
+    "shell",
+    "torus",
+    "morsr",
+    "token_conservation"
+  ],
+  "LATT": [
+    "e8",
+    "leech",
+    "construction a",
+    "golay",
+    "hamming",
+    "weyl",
+    "cartan",
+    "orbit",
+    "root_index",
+    "nearest_error",
+    "coset",
+    "conway",
+    "automorphism",
+    "babai"
+  ],
+  "FRAC": [
+    "julia",
+    "mandelbrot",
+    "mu",
+    "escape_iter",
+    "bin_mu",
+    "chart",
+    "z0",
+    "complex",
+    "smooth iteration"
+  ],
+  "SACNUM": [
+    "digital root",
+    "dr",
+    "freq_label",
+    "ps160",
+    "pd80",
+    "crt_signature",
+    "174 hz",
+    "963 hz"
+  ],
+  "CRT": [
+    "crt",
+    "residue",
+    "mod",
+    "garner",
+    "tile4096",
+    "co-prime",
+    "manhattan",
+    "{64,64}",
+    "chinese remainder"
+  ],
+  "RAMANUJAN": [
+    "q-series",
+    "partitions",
+    "p(n)",
+    "mock theta",
+    "rogers–ramanujan",
+    "eta",
+    "theta",
+    "sl2",
+    "continued fraction"
+  ],
+  "GAUSS": [
+    "legendre",
+    "jacobi",
+    "quadratic reciprocity",
+    "dirichlet",
+    "gauss sum",
+    "bqf",
+    "z[i]",
+    "gaussian integers",
+    "conductor",
+    "primitive"
+  ],
+  "TRANSLATE_RT": [
+    "λ24",
+    "l24",
+    "interlingua",
+    "packs",
+    "idiom",
+    "morphology",
+    "register",
+    "babai snap",
+    "basis bank"
+  ],
+  "ACOUSTIC": [
+    "ggwave",
+    "ofdm",
+    "pilot",
+    "fec",
+    "extgolay",
+    "bps",
+    "frames",
+    "s0",
+    "s1",
+    "s2",
+    "qpsk",
+    "8-psk"
+  ],
+  "POSE": [
+    "peps",
+    "ips",
+    "pag",
+    "pose",
+    "pose salt",
+    "canonical pose",
+    "global parity"
+  ],
+  "TORUS": [
+    "toroid",
+    "toroidal",
+    "closure",
+    "magic size",
+    "c(k)",
+    "k*",
+    "band drift"
+  ],
+  "OPS_CSV": [
+    "delimiterrepair",
+    "typeconsolidate",
+    "missingcolinsert",
+    "header reorder",
+    "na flip",
+    "schema mismatch"
+  ],
+  "OPS_JSON": [
+    "bracebalancerepair",
+    "typeconsolidatejson",
+    "keyschemastabilize",
+    "null policy",
+    "bool string"
+  ],
+  "CONSENSUS": [
+    "require_any",
+    "adjacent",
+    "phi_monotone",
+    "parity required",
+    "Δband",
+    "neighbor_only"
+  ],
+  "RECEIPTS": [
+    "receipt_open",
+    "receipt_close",
+    "op_try",
+    "op_accept",
+    "op_reject",
+    "pose_event",
+    "neg_cache_insert",
+    "proof_annex"
+  ],
+  "FSM": [
+    "run_start",
+    "pulse_start",
+    "pulse_end",
+    "promotion_decision",
+    "egress",
+    "refusal",
+    "run_end",
+    "transitions"
+  ],
+  "OPERATORS": [
+    "TriadicRepair",
+    "Midpoint",
+    "SingleInsert",
+    "GaugeSnap",
+    "InterlinguaMap",
+    "GaugeMap",
+    "ConstrainedRealization",
+    "PolicyMove",
+    "ParityRepair"
+  ],
+  "MORPHON": [
+    "shells",
+    "plateau_guard",
+    "auto_reweight",
+    "long_hop_policy",
+    "escrow window",
+    "paydown"
+  ],
+  "TSR": [
+    "tsr",
+    "token set request",
+    "meaning pressure",
+    "ops drift",
+    "quotas",
+    "invariants",
+    "coverage",
+    "lanes quartiles",
+    "μ"
+  ]
+}

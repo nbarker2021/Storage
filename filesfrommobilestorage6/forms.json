@@ -1,0 +1,322 @@
+[
+  {
+    "form_id": "QEC_NEUTRAL_ATOMS",
+    "title": "Infleqtion logical-qubit roadmap",
+    "status": "ACTIVE",
+    "cap": {
+      "fourbit": "0000",
+      "name": "REST",
+      "code": 0
+    },
+    "scope": "local",
+    "viewers": {
+      "local": "8x8",
+      "surroundings": "4x4x4x4",
+      "parity": "2x2x2x2|2x2x2x2",
+      "mirror": true
+    },
+    "metadata": {
+      "seed_hint": 0
+    }
+  },
+  {
+    "form_id": "SC_TWPA_ISOLATOR",
+    "title": "Single-chip amp/isolator (superconducting qubits)",
+    "status": "ACTIVE",
+    "cap": {
+      "fourbit": "0001",
+      "name": "NOTCH",
+      "code": 1
+    },
+    "scope": "context",
+    "viewers": {
+      "local": "8x8",
+      "surroundings": "4x4x4x4",
+      "parity": "2x2x2x2|2x2x2x2",
+      "mirror": true
+    },
+    "metadata": {
+      "seed_hint": 1
+    }
+  },
+  {
+    "form_id": "TIME_CRYSTAL",
+    "title": "Directly observed time crystal (Google QA)",
+    "status": "ACTIVE",
+    "cap": {
+      "fourbit": "0010",
+      "name": "SWAP",
+      "code": 2
+    },
+    "scope": "local",
+    "viewers": {
+      "local": "8x8",
+      "surroundings": "4x4x4x4",
+      "parity": "2x2x2x2|2x2x2x2",
+      "mirror": true
+    },
+    "metadata": {
+      "seed_hint": 2
+    }
+  },
+  {
+    "form_id": "QGAS_MAGNIFIER",
+    "title": "Self-magnifying ultracold atoms",
+    "status": "ACTIVE",
+    "cap": {
+      "fourbit": "0011",
+      "name": "REPH",
+      "code": 3
+    },
+    "scope": "context",
+    "viewers": {
+      "local": "8x8",
+      "surroundings": "4x4x4x4",
+      "parity": "2x2x2x2|2x2x2x2",
+      "mirror": true
+    },
+    "metadata": {
+      "seed_hint": 3
+    }
+  },
+  {
+    "form_id": "CHIRAL_NANOHELICES",
+    "title": "Chiral nanohelices spin filter (room-T)",
+    "status": "ACTIVE",
+    "cap": {
+      "fourbit": "0100",
+      "name": "CDET",
+      "code": 4
+    },
+    "scope": "local",
+    "viewers": {
+      "local": "8x8",
+      "surroundings": "4x4x4x4",
+      "parity": "2x2x2x2|2x2x2x2",
+      "mirror": true
+    },
+    "metadata": {
+      "seed_hint": 4
+    }
+  },
+  {
+    "form_id": "PHOTONIC_PSEUDOFIELD",
+    "title": "Synthetic magnetic fields on photonic chip",
+    "status": "ACTIVE",
+    "cap": {
+      "fourbit": "0101",
+      "name": "CART",
+      "code": 5
+    },
+    "scope": "context",
+    "viewers": {
+      "local": "8x8",
+      "surroundings": "4x4x4x4",
+      "parity": "2x2x2x2|2x2x2x2",
+      "mirror": true
+    },
+    "metadata": {
+      "seed_hint": 5
+    }
+  },
+  {
+    "form_id": "ULTRABROAD_COMB_CHIP",
+    "title": "Chip OPO spanning visible\u2192mid-IR",
+    "status": "ACTIVE",
+    "cap": {
+      "fourbit": "0110",
+      "name": "SUBH",
+      "code": 6
+    },
+    "scope": "local",
+    "viewers": {
+      "local": "8x8",
+      "surroundings": "4x4x4x4",
+      "parity": "2x2x2x2|2x2x2x2",
+      "mirror": true
+    },
+    "metadata": {
+      "seed_hint": 6
+    }
+  },
+  {
+    "form_id": "GIANT_AROM_RING",
+    "title": "18-porphyrin aromatic nanoring",
+    "status": "ACTIVE",
+    "cap": {
+      "fourbit": "0111",
+      "name": "HYST",
+      "code": 7
+    },
+    "scope": "context",
+    "viewers": {
+      "local": "8x8",
+      "surroundings": "4x4x4x4",
+      "parity": "2x2x2x2|2x2x2x2",
+      "mirror": true
+    },
+    "metadata": {
+      "seed_hint": 7
+    }
+  },
+  {
+    "form_id": "DIAMOND_NDB",
+    "title": "Nuclear diamond battery prototype",
+    "status": "ACTIVE",
+    "cap": {
+      "fourbit": "1000",
+      "name": "THR",
+      "code": 8
+    },
+    "scope": "local",
+    "viewers": {
+      "local": "8x8",
+      "surroundings": "4x4x4x4",
+      "parity": "2x2x2x2|2x2x2x2",
+      "mirror": true
+    },
+    "metadata": {
+      "seed_hint": 8
+    }
+  },
+  {
+    "form_id": "DNA_G4_REGULATION",
+    "title": "G-quadruplex regulates metabolism",
+    "status": "ACTIVE",
+    "cap": {
+      "fourbit": "1001",
+      "name": "CMIR",
+      "code": 9
+    },
+    "scope": "context",
+    "viewers": {
+      "local": "8x8",
+      "surroundings": "4x4x4x4",
+      "parity": "2x2x2x2|2x2x2x2",
+      "mirror": true
+    },
+    "metadata": {
+      "seed_hint": 9
+    }
+  },
+  {
+    "form_id": "DIPEPTIDE_CODE",
+    "title": "Origins: dipeptide synchronicity",
+    "status": "ACTIVE",
+    "cap": {
+      "fourbit": "1010",
+      "name": "OCT",
+      "code": 10
+    },
+    "scope": "local",
+    "viewers": {
+      "local": "8x8",
+      "surroundings": "4x4x4x4",
+      "parity": "2x2x2x2|2x2x2x2",
+      "mirror": true
+    },
+    "metadata": {
+      "seed_hint": 10
+    }
+  },
+  {
+    "form_id": "PLANT_UVR8_REPROGRAM",
+    "title": "Metabolite reprograms UVR8",
+    "status": "ACTIVE",
+    "cap": {
+      "fourbit": "1011",
+      "name": "ANOM",
+      "code": 11
+    },
+    "scope": "context",
+    "viewers": {
+      "local": "8x8",
+      "surroundings": "4x4x4x4",
+      "parity": "2x2x2x2|2x2x2x2",
+      "mirror": true
+    },
+    "metadata": {
+      "seed_hint": 11
+    }
+  },
+  {
+    "form_id": "HIPPOCAMPUS_SWITCH",
+    "title": "Theta\u2013gamma \u2018switch\u2019",
+    "status": "ACTIVE",
+    "cap": {
+      "fourbit": "1100",
+      "name": "NOISE",
+      "code": 12
+    },
+    "scope": "local",
+    "viewers": {
+      "local": "8x8",
+      "surroundings": "4x4x4x4",
+      "parity": "2x2x2x2|2x2x2x2",
+      "mirror": true
+    },
+    "metadata": {
+      "seed_hint": 12
+    }
+  },
+  {
+    "form_id": "RIPPLE_CONTENT",
+    "title": "Human ripple content & replay",
+    "status": "ACTIVE",
+    "cap": {
+      "fourbit": "1101",
+      "name": "ECHO",
+      "code": 13
+    },
+    "scope": "context",
+    "viewers": {
+      "local": "8x8",
+      "surroundings": "4x4x4x4",
+      "parity": "2x2x2x2|2x2x2x2",
+      "mirror": true
+    },
+    "metadata": {
+      "seed_hint": 13
+    }
+  },
+  {
+    "form_id": "MMDDM_DECISION",
+    "title": "Mixed-mode DDM decision dynamics",
+    "status": "ACTIVE",
+    "cap": {
+      "fourbit": "1110",
+      "name": "BOUND",
+      "code": 14
+    },
+    "scope": "local",
+    "viewers": {
+      "local": "8x8",
+      "surroundings": "4x4x4x4",
+      "parity": "2x2x2x2|2x2x2x2",
+      "mirror": true
+    },
+    "metadata": {
+      "seed_hint": 14
+    }
+  },
+  {
+    "form_id": "PRIMORDIAL_BFIELDS",
+    "title": "Primordial magnetic fields sims",
+    "status": "ACTIVE",
+    "cap": {
+      "fourbit": "1111",
+      "name": "CORE",
+      "code": 15
+    },
+    "scope": "context",
+    "viewers": {
+      "local": "8x8",
+      "surroundings": "4x4x4x4",
+      "parity": "2x2x2x2|2x2x2x2",
+      "mirror": true
+    },
+    "metadata": {
+      "seed_hint": 15
+    }
+  }
+]

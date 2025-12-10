@@ -1,0 +1,19 @@
+{
+  "left_to_center_counts": {
+    "W": 9,
+    "WNW": 8,
+    "S": 6,
+    "E": 2,
+    "NW": 2
+  },
+  "right_to_center_counts": {
+    "W": 6,
+    "S": 6,
+    "WNW": 6,
+    "E": 2,
+    "NW": 2
+  },
+  "center_active_count": 3,
+  "left_active_count": 27,
+  "right_active_count": 22
+}

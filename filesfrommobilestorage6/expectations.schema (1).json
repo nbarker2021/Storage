@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://morphonic.org/schemas/expectations.schema.json",
+  "title": "Expected Closures & Plateaus",
+  "type": "object",
+  "required": [
+    "bands"
+  ],
+  "properties": {
+    "bands": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "k",
+          "band",
+          "plateau_Q"
+        ],
+        "properties": {
+          "k": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Harmonic index used in ring projection (e.g., 16, 24, 48)."
+          },
+          "band": {
+            "type": "string",
+            "enum": [
+              "16",
+              "24",
+              "48",
+              "96"
+            ],
+            "description": "Named band for convenience."
+          },
+          "plateau_Q": {
+            "type": "number",
+            "minimum": 0
+          },
+          "peak_dtau": {
+            "type": "number",
+            "description": "Expected \u0394\u03c4 at peak (normalized)."
+          },
+          "ci_low": {
+            "type": "number"
+          },
+          "ci_high": {
+            "type": "number"
+          },
+          "unimodal": {
+            "type": "boolean"
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

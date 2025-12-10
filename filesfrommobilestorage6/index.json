@@ -1,0 +1,3278 @@
+[
+  {
+    "bucket": "SNAP/DNA",
+    "title": "\u2022 TODO checklist (gate\u2011mapped) \u2192 sandbox:/mnt/data/snaplat_todo_checklist.md",
+    "source_file": "Canvas build log_250815_172043.txt",
+    "line": 14,
+    "path": "scaffolds/snap_dna/todo-checklist-gate-mapped-sandbox-mnt-data-snapla-0001.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Missing / stubbed:",
+    "source_file": "Canvas build log_250815_172043.txt",
+    "line": 17,
+    "path": "scaffolds/core/missing-stubbed-0002.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "\u2022 TODO checklist \u2192 sandbox:/mnt/data/snaplat_todo_checklist.md",
+    "source_file": "Canvas build log_250815_172043.txt",
+    "line": 51,
+    "path": "scaffolds/snap_dna/todo-checklist-sandbox-mnt-data-snaplat-todo-check-0003.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "SnapLat \u2014 System Master Brief & Gap Review (Consolidated v1.0)",
+    "source_file": "Canvas build log_250815_172043.txt",
+    "line": 55,
+    "path": "scaffolds/snap_dna/snaplat-system-master-brief-gap-review-consolidate-0004.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "Purpose: One coherent, senior\u2011engineer\u2011ready brief that fuses your Intake v1 (incl. Passes 9\u201348) into a stable reference",
+    "source_file": "Canvas build log_250815_172043.txt",
+    "line": 56,
+    "path": "scaffolds/governance/purpose-one-coherent-senior-engineer-ready-brief-t-0005.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "\u2022 Bridges: base weight 0.25 (convention); double\u2011known \u2192 N=0.5, double\u2011unknown \u2192 E\u2011DBSU.",
+    "source_file": "Canvas build log_250815_172043.txt",
+    "line": 84,
+    "path": "scaffolds/core/bridges-base-weight-0-25-convention-double-known-n-0006.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "9) Gap Review \u2192 Proof Obligations (actionable)",
+    "source_file": "Canvas build log_250815_172043.txt",
+    "line": 125,
+    "path": "scaffolds/core/9-gap-review-proof-obligations-actionable-0007.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "\u2022 Trail drift under new modules \u2192 CI guard now, not later.",
+    "source_file": "Canvas build log_250815_172043.txt",
+    "line": 156,
+    "path": "scaffolds/testing/trail-drift-under-new-modules-ci-guard-now-not-lat-0008.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "E\u2011DBSU \u2013 emergent DB for double\u2011unknown bridges.",
+    "source_file": "Canvas build log_250815_172043.txt",
+    "line": 183,
+    "path": "scaffolds/core/e-dbsu-emergent-db-for-double-unknown-bridges-0009.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "\u2022 Header stub created for quick paste into files \u2192 sandbox:/mnt/data/header_stub.yaml.",
+    "source_file": "Canvas build log_250815_172043.txt",
+    "line": 198,
+    "path": "scaffolds/dx/header-stub-created-for-quick-paste-into-files-san-0010.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "\u2022 Repacked with headers (classification + policy hash inserted where missing):",
+    "source_file": "Canvas build log_250815_172043.txt",
+    "line": 203,
+    "path": "scaffolds/governance/repacked-with-headers-classification-policy-hash-i-0011.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "\u2022 Service layer: SnapOps/Porter/Safe\u2011Cube enforce gates; policy knobs decide hard/soft gating; E\u2011DBSU lifecycle on ambig",
+    "source_file": "Canvas build log_250815_172043.txt",
+    "line": 260,
+    "path": "scaffolds/governance/service-layer-snapops-porter-safe-cube-enforce-gat-0012.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Protocol: 3 initial architectures \u2192 pick winner \u2192 generate 2 variants \u2192 pick best \u2192 final refinement. Synthetic harness",
+    "source_file": "Canvas build log_250815_172043.txt",
+    "line": 280,
+    "path": "scaffolds/core/protocol-3-initial-architectures-pick-winner-gener-0013.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Round 3 (final refinement): results table is attached (\"Round 3 \u2014 Final refinement\").",
+    "source_file": "Canvas build log_250815_172043.txt",
+    "line": 283,
+    "path": "scaffolds/core/round-3-final-refinement-results-table-is-attached-0014.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "Next: If you want, I can convert the winning config into a concrete Design Slice (schemas + projections + gates) and gen",
+    "source_file": "Canvas build log_250815_172043.txt",
+    "line": 288,
+    "path": "scaffolds/contracts/next-if-you-want-i-can-convert-the-winning-config-0015.json5"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "I can convert items 1\u20134 into code/tests immediately (Schema Registry stub + projector skeleton + SnapOps policy flags in",
+    "source_file": "Canvas build log_250815_172043.txt",
+    "line": 311,
+    "path": "scaffolds/governance/i-can-convert-items-1-4-into-code-tests-immediatel-0016.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "### Phase 3 \u2014 Rebuild Missing Modules (Queue\u2011driven)",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 74,
+    "path": "scaffolds/agency/phase-3-rebuild-missing-modules-queue-driven-0017.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "- **Missing deps** \u2192 queued stubs + xfail guardrails; replace with implemented modules iteratively.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 132,
+    "path": "scaffolds/agency/missing-deps-queued-stubs-xfail-guardrails-replace-0018.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "- I can: (a) **rank seams** by risk and harden the next wave; (b) **canonicalize missing modules** to `snaplat.*` and ge",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 191,
+    "path": "scaffolds/agency/i-can-a-rank-seams-by-risk-and-harden-the-next-wav-0019.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "5) **RAG surface** (loader + vector stub) to prepare for richer retrieval while preserving current tests.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 355,
+    "path": "scaffolds/testing/5-rag-surface-loader-vector-stub-to-prepare-for-ri-0020.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "3) **Vector surface (RAG stub):** pluggable vector scorer alongside TF/TFCO; config\u2011driven selection.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 422,
+    "path": "scaffolds/core/3-vector-surface-rag-stub-pluggable-vector-scorer-0021.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- **Vector scorer stub (`strategy=vec`)** with simple embedding proxy & hybrid combo, guarded by tests.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 455,
+    "path": "scaffolds/testing/vector-scorer-stub-strategy-vec-with-simple-embedd-0022.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "If that sounds good, I\u2019ll proceed with vector stub + exporter and wire the tests.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 459,
+    "path": "scaffolds/testing/if-that-sounds-good-i-ll-proceed-with-vector-stub-0023.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "You asked to keep working on additional non\u2011included parts. I consolidated legacy hooks and added missing capabilities w",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 619,
+    "path": "scaffolds/core/you-asked-to-keep-working-on-additional-non-includ-0024.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "# Execution Update \u2014 Batch 6: Added 5 Missing / Non\u2011Included Items",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 741,
+    "path": "scaffolds/core/execution-update-batch-6-added-5-missing-non-inclu-0025.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Per your \u201cAdd 5 missing and non included currently items,\u201d I implemented five concrete capabilities and shipped a new re",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 742,
+    "path": "scaffolds/core/per-your-add-5-missing-and-non-included-currently-0026.py"
+  },
+  {
+    "bucket": "Storage/Archivist",
+    "title": "- **Outliers:** any file with unexpected family/use\u2011case combos gets flagged for manual inspection and tag refinement.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 843,
+    "path": "scaffolds/archivist/outliers-any-file-with-unexpected-family-use-case-0027.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "3. **Tag refine:** Interactive pass to correct any mis\u2011tagging discovered in exemplars.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 852,
+    "path": "scaffolds/core/3-tag-refine-interactive-pass-to-correct-any-mis-t-0028.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "> Use these signatures to define the boundary. For anything unclear, we\u2019ll mark a clarification item and keep it non\u2011bin",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1094,
+    "path": "scaffolds/testing/use-these-signatures-to-define-the-boundary-for-an-0029.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "> The UI table \u201cSmoke\u2011wire \u2014 Import Results\u201d shows the first 200 entries. Failures typically indicate missing deps or or",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1105,
+    "path": "scaffolds/dx/the-ui-table-smoke-wire-import-results-shows-the-f-0030.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- Top missing modules (CSV): `/mnt/data/code_atlas/missing_modules.csv`",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1126,
+    "path": "scaffolds/core/top-missing-modules-csv-mnt-data-code-atlas-missin-0031.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "1. Start with the **Top Missing Modules** table (shown in UI).",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1132,
+    "path": "scaffolds/dx/1-start-with-the-top-missing-modules-table-shown-i-0032.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "3. Decide: (a) add provider to Best\u2011Of tree, (b) swap variant from its cluster, or (c) mark as external dependency.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1134,
+    "path": "scaffolds/testing/3-decide-a-add-provider-to-best-of-tree-b-swap-var-0033.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- Missing modules (grouped): `/mnt/data/code_atlas/best_of/tree/missing_modules_summary.csv`",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1147,
+    "path": "scaffolds/core/missing-modules-grouped-mnt-data-code-atlas-best-o-0034.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- `missing_modules_summary.csv` shows each missing module, how many module imports failed, and whether a **matching modu",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1152,
+    "path": "scaffolds/core/missing-modules-summary-csv-shows-each-missing-mod-0035.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "# Skiplist Baseline (clean run without missing deps)",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1167,
+    "path": "scaffolds/core/skiplist-baseline-clean-run-without-missing-deps-0036.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "**Decision captured:** Missing dependencies will be **slipped** (excluded) or **rebuilt later** if we decide to use that",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1168,
+    "path": "scaffolds/testing/decision-captured-missing-dependencies-will-be-sli-0037.py"
+  },
+  {
+    "bucket": "Storage/Archivist",
+    "title": "- **Use\u2011case \u2192 missing\u2011module needs**: for each use\u2011case, which **skipped modules** are referenced and how often.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1198,
+    "path": "scaffolds/archivist/use-case-missing-module-needs-for-each-use-case-wh-0038.py"
+  },
+  {
+    "bucket": "Storage/Archivist",
+    "title": "- Then open **Use\u2011Case Needs \u2014 Missing Modules by Use\u2011Case** to see the exact modules to add back (or rebuild) per use\u2011c",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1209,
+    "path": "scaffolds/archivist/then-open-use-case-needs-missing-modules-by-use-ca-0039.py"
+  },
+  {
+    "bucket": "Storage/Archivist",
+    "title": "2) **Needs\u2011first intake plan**: for the top 3 blocked use\u2011cases, generate a prioritized list of missing modules (with pr",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1214,
+    "path": "scaffolds/archivist/2-needs-first-intake-plan-for-the-top-3-blocked-us-0040.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "3) Promote missing modules for a chosen seam; I\u2019ll re\u2011emit contracts and expand tests to include target\u2011side behavior on",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1267,
+    "path": "scaffolds/contracts/3-promote-missing-modules-for-a-chosen-seam-i-ll-r-0041.json5"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "You confirmed that anything missing needs a **new build**. I generated a **rebuild workspace** and a prioritized **build",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1290,
+    "path": "scaffolds/agency/you-confirmed-that-anything-missing-needs-a-new-bu-0042.py"
+  },
+  {
+    "bucket": "Storage/Archivist",
+    "title": "\u2192 one stub per top missing module, each raising `NotImplementedError` with context in the docstring (importers, families",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1295,
+    "path": "scaffolds/archivist/one-stub-per-top-missing-module-each-raising-notim-0043.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "\u2192 one `pytest` file per missing module, marked `xfail` until the real implementation lands",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1300,
+    "path": "scaffolds/testing/one-pytest-file-per-missing-module-marked-xfail-un-0044.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "2. Replace the corresponding **stub module** with a concrete implementation (you can drop files in place).",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1306,
+    "path": "scaffolds/core/2-replace-the-corresponding-stub-module-with-a-con-0045.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "> This keeps us fully traceable: every new build has a stub anchor, context docstring, and a tracking test that flips fr",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1310,
+    "path": "scaffolds/testing/this-keeps-us-fully-traceable-every-new-build-has-0046.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "I expanded the **rebuild queue** with the **next wave of missing modules** and generated stubs + xfail tests for each (e",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1317,
+    "path": "scaffolds/testing/i-expanded-the-rebuild-queue-with-the-next-wave-of-0047.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "- The current environment surfaced **3 additional missing modules** to add; if you provide more importer failures (e.g.,",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1326,
+    "path": "scaffolds/agency/the-current-environment-surfaced-3-additional-miss-0048.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- Each stub documents importers, families, and use\u2011case hit counts so we can set specifications quickly before implement",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1327,
+    "path": "scaffolds/testing/each-stub-documents-importers-families-and-use-cas-0049.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "**You asked for C leading into B.** I wired presence checks that never execute the stub modules, then generated a **spec",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1339,
+    "path": "scaffolds/agency/you-asked-for-c-leading-into-b-i-wired-presence-ch-0050.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- Uses `importlib.util.find_spec(<module>)` to verify **resolvability** on PYTHONPATH; it does **not** execute the stub",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1348,
+    "path": "scaffolds/core/uses-importlib-util-find-spec-module-to-verify-res-0051.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "- Initial acceptance: presence required; interfaces/behavior/errors **TBD** (to be filled once we lock the surface)",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1354,
+    "path": "scaffolds/dx/initial-acceptance-presence-required-interfaces-be-0052.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "1) Extract **interface surfaces from importer modules** that reference the top missing module (functions/methods by whic",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1358,
+    "path": "scaffolds/core/1-extract-interface-surfaces-from-importer-modules-0053.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "# Importer\u2011Side Interface \u2192 Spec Upgrade \u2192 XFail Plan (Top Missing Module)",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1368,
+    "path": "scaffolds/core/importer-side-interface-spec-upgrade-xfail-plan-to-0054.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "You said \u201cGo with all,\u201d so I executed **(1) importer interface extraction**, **(2) spec upgrade**, and **(3) xfail test",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1369,
+    "path": "scaffolds/testing/you-said-go-with-all-so-i-executed-1-importer-inte-0055.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "- **Importer modules list (who calls into it):** see UI table \u201cImporter Modules \u2014 Top Missing Module\u201d.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1372,
+    "path": "scaffolds/dx/importer-modules-list-who-calls-into-it-see-ui-tab-0056.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "# Spec Detail (Importer Shapes) + Work Task List \u2014 Top Missing Module",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1389,
+    "path": "scaffolds/contracts/spec-detail-importer-shapes-work-task-list-top-mis-0057.json5"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "You asked to proceed with spec detail and produce a work task list. I analyzed **importer callsites** for the top missin",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1390,
+    "path": "scaffolds/contracts/you-asked-to-proceed-with-spec-detail-and-produce-0058.json5"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "- **Queue canonicalization**: created `/mnt/data/code_atlas/rebuild_workspace/build_queue_canonical.csv` with, for each",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1422,
+    "path": "scaffolds/agency/queue-canonicalization-created-mnt-data-code-atlas-0059.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "2) If not, check: Is it code/process function/work artifact? If yes \u2192 log and continue (flag for directed search later).",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1488,
+    "path": "scaffolds/core/2-if-not-check-is-it-code-process-function-work-ar-0060.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- No invention. If gaps/needs/missing deps or logic are found, log them for later address.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1493,
+    "path": "scaffolds/core/no-invention-if-gaps-needs-missing-deps-or-logic-a-0061.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "2) If code/process/work artifact \u2192 log and continue (flag for directed search later).",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1517,
+    "path": "scaffolds/core/2-if-code-process-work-artifact-log-and-continue-f-0062.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- Every missing dependency, undefined term, or \u201cto be supplied\u201d asset is logged in the **Pinned To\u2011Do / Needs Ledger** w",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1521,
+    "path": "scaffolds/core/every-missing-dependency-undefined-term-or-to-be-s-0063.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- AGRM functional spec deferred (later code promised).",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1566,
+    "path": "scaffolds/core/agrm-functional-spec-deferred-later-code-promised-0064.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- Opens To\u2011Do ledger (status: **claimed\u2013unverified** until first concrete entries appear in later steps).",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1585,
+    "path": "scaffolds/core/opens-to-do-ledger-status-claimed-unverified-until-0065.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- Confirms 3\u2011word base tokens as decision seeds; describes gating (should/shouldn\u2019t/unknown) with escalation when undeci",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1725,
+    "path": "scaffolds/testing/confirms-3-word-base-tokens-as-decision-seeds-desc-0066.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- No external files delivered in these steps; all items remain **claimed\u2013unverified** pending artifacts/tests.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1742,
+    "path": "scaffolds/testing/no-external-files-delivered-in-these-steps-all-ite-0067.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "## Next Actions (pending your go\u2011signal)",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1809,
+    "path": "scaffolds/core/next-actions-pending-your-go-signal-0068.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "6. Queue superpermutation deep dive later.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1826,
+    "path": "scaffolds/agency/6-queue-superpermutation-deep-dive-later-0069.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "1. Adds missing note on AGRM sweep mechanics (arms, starts, gating) and preference that GPT handle it as built for such",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1852,
+    "path": "scaffolds/dx/1-adds-missing-note-on-agrm-sweep-mechanics-arms-s-0070.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "- Updated bundle; optional Egan JSON canonicalization later.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1914,
+    "path": "scaffolds/contracts/updated-bundle-optional-egan-json-canonicalization-0071.json5"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "1. Decide placement of 8\u2011DoF within build order.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 1930,
+    "path": "scaffolds/testing/1-decide-placement-of-8-dof-within-build-order-0072.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**A090** \u2014 Implemented kNN index stub in Repo; acceptance for cold\u2011start vs warm\u2011start.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 2133,
+    "path": "scaffolds/core/a090-implemented-knn-index-stub-in-repo-acceptance-0073.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "**A094** \u2014 SNAP pack spec deepened (capabilities, costs, I/O contracts); selector heuristic stub.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 2147,
+    "path": "scaffolds/contracts/a094-snap-pack-spec-deepened-capabilities-costs-i-0074.json5"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- Numerous *claims of delivery* (boards, repo changes, modules, tests, legal/notice files, naming/version enforcement).",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 2392,
+    "path": "scaffolds/testing/numerous-claims-of-delivery-boards-repo-changes-mo-0075.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**Understanding delivered:** Introduces **orchestrator freshstart** and **repo ops** utilities; iterative orchestration",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 2519,
+    "path": "scaffolds/core/understanding-delivered-introduces-orchestrator-fr-0076.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**Artifacts referenced:** `agrm/orchestrator/freshstart.py`, `agrm/utils/repo_ops.py`, `docs/ITERATIVE_ORCHESTRATION.md`",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 2520,
+    "path": "scaffolds/core/artifacts-referenced-agrm-orchestrator-freshstart-0077.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**Understanding delivered:** Notes **Iterative Orchestration** concept (doc mentioned); details continue later.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 2527,
+    "path": "scaffolds/core/understanding-delivered-notes-iterative-orchestrat-0078.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Multiple *claims of delivery* (legal pack, aux pack, patches, modules, docs, scripts). None are attached in this session",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 2576,
+    "path": "scaffolds/core/multiple-claims-of-delivery-legal-pack-aux-pack-pa-0079.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "Directive: **do it**; build tools to create/define/refine/stitch SNAPs; this becomes the **workhorse**.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 2726,
+    "path": "scaffolds/snap_dna/directive-do-it-build-tools-to-create-define-refin-0080.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "\u201cBuild a \u2018**what is missing**\u2019 report by category; and (golden question) minimal memorization needs.\u201d",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 2889,
+    "path": "scaffolds/dx/build-a-what-is-missing-report-by-category-and-gol-0081.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **kNN index stub** \u2014 module \u2014 **A090** \u2014 claimed\u2013unverified.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 3155,
+    "path": "scaffolds/core/knn-index-stub-module-a090-claimed-unverified-0082.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "_Derived only from statements in the log; refined once artifacts are attached._",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 3186,
+    "path": "scaffolds/core/derived-only-from-statements-in-the-log-refined-on-0083.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "- **superbuilder/overlap.py** (overlap detector) \u2192 used by **agrm/agrm_selector.py** (AGRM selection) in early tree; lat",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 3191,
+    "path": "scaffolds/dx/superbuilder-overlap-py-overlap-detector-used-by-a-0084.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **Version note:** Parameters suggest n=7 focus and telemetry\u2011heavy evaluation; tag as **legacy\u2011research harness** pend",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 3267,
+    "path": "scaffolds/core/version-note-parameters-suggest-n-7-focus-and-tele-0085.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "# Actions Proposed (pending confirmation)",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 3272,
+    "path": "scaffolds/core/actions-proposed-pending-confirmation-0086.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "## 2) Ambiguous Targets \u2014 Canonical Recommendations (pending your OK)",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 3290,
+    "path": "scaffolds/core/2-ambiguous-targets-canonical-recommendations-pend-0087.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- Action pending: choose canonical per row; I will flip those to **validated** and mark alternates as **duplicate (archi",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 3293,
+    "path": "scaffolds/core/action-pending-choose-canonical-per-row-i-will-fli-0088.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- Action pending: confirm any candidate as the intended target, or mark **missing**.",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 3298,
+    "path": "scaffolds/core/action-pending-confirm-any-candidate-as-the-intend-0089.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "# Notes on Incomplete Deployments (as you warned)",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 3302,
+    "path": "scaffolds/core/notes-on-incomplete-deployments-as-you-warned-0090.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Some log\u2011named drops don\u2019t exist verbatim in the bundles. I preserved near\u2011name candidates so we can reconcile renames a",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 3303,
+    "path": "scaffolds/testing/some-log-named-drops-don-t-exist-verbatim-in-the-b-0091.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "**Your directive:** Defer canonical file determinations; instead, build a **single reference** that preserves *all* vari",
+    "source_file": "canvas docs 1-3 81525.txt",
+    "line": 3313,
+    "path": "scaffolds/snap_dna/your-directive-defer-canonical-file-determinations-0092.py"
+  },
+  {
+    "bucket": "Storage/Archivist",
+    "title": "- Ephemeral lattices are allowed during learning and are later consolidated via **Archivist/SNAP Ops**.",
+    "source_file": "canvas docs 10-12 81525.txt",
+    "line": 25,
+    "path": "scaffolds/archivist/ephemeral-lattices-are-allowed-during-learning-and-0093.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- **Glyph rule:** Exactly 3 words (ASCII) at N=5 compression; ambiguity beyond 3 flags a lower\u2011N knowledge gap to resolv",
+    "source_file": "canvas docs 10-12 81525.txt",
+    "line": 39,
+    "path": "scaffolds/testing/glyph-rule-exactly-3-words-ascii-at-n-5-compressio-0094.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **V3\u2011SPM\u2011007:** Every pilot row maps to a saved Trail id; missing Trail \u21d2 validation fail.",
+    "source_file": "canvas docs 10-12 81525.txt",
+    "line": 95,
+    "path": "scaffolds/core/v3-spm-007-every-pilot-row-maps-to-a-saved-trail-i-0095.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- No invention: enumerate only families/types explicitly used; expand as new ones appear in later packages.",
+    "source_file": "canvas docs 13-15 81525.txt",
+    "line": 9,
+    "path": "scaffolds/testing/no-invention-enumerate-only-families-types-explici-0096.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**Char range:** *(pending; set during backfill)*",
+    "source_file": "canvas docs 13-15 81525.txt",
+    "line": 65,
+    "path": "scaffolds/core/char-range-pending-set-during-backfill-0097.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**Mini\u2011hash:** *(pending)*",
+    "source_file": "canvas docs 13-15 81525.txt",
+    "line": 66,
+    "path": "scaffolds/core/mini-hash-pending-0098.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "**Manifest Runner (v0.30.1\u21920.30.2):** replay enforced via `policy_hash`; HTML report with Archivist counts; stable Trail",
+    "source_file": "canvas docs 13-15 81525.txt",
+    "line": 150,
+    "path": "scaffolds/governance/manifest-runner-v0-30-1-0-30-2-replay-enforced-via-0099.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- Stage items needing source retrieval (e.g., from `code bits.zip`) as **Pending Source** until we pivot to the code bat",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 10,
+    "path": "scaffolds/core/stage-items-needing-source-retrieval-e-g-from-code-0100.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- **Immediate flags:** uses `print` warnings; heavy console noise; relies on `numpy` but minimal usage; **telemetry/logg",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 33,
+    "path": "scaffolds/testing/immediate-flags-uses-print-warnings-heavy-console-0101.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **Missing import:** uses `hashlib` in `compute_checksum` but not imported.",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 41,
+    "path": "scaffolds/core/missing-import-uses-hashlib-in-compute-checksum-bu-0102.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "- `mdhg/*`, `mannequin/*`, `policy_bus.py`, `run_manifest.py`, `materialize.py` (pending source).",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 55,
+    "path": "scaffolds/governance/mdhg-mannequin-policy-bus-py-run-manifest-py-mater-0103.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "- `agrm/snap/trails.py`, `w5h/*`, `beacons/*` (pending source).",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 58,
+    "path": "scaffolds/snap_dna/agrm-snap-trails-py-w5h-beacons-pending-source-0104.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- `tools/cli.py`, `core/agrm/solver_legacy.py`, tests/, fixtures/ (pending source).",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 61,
+    "path": "scaffolds/testing/tools-cli-py-core-agrm-solver-legacy-py-tests-fixt-0105.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "`{package_id, family, module_path, version_tag, artifact_bundle, deps[], config_flags[], tests[], fixtures[], cross_syst",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 64,
+    "path": "scaffolds/testing/package-id-family-module-path-version-tag-artifact-0106.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **status**: *pending* until source is attached; *ready* after retrieval and checksum.",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 67,
+    "path": "scaffolds/core/status-pending-until-source-is-attached-ready-afte-0107.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "- **Static checks:** imports, missing deps, circulars, policy_hash pins, logging to Trails.",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 72,
+    "path": "scaffolds/governance/static-checks-imports-missing-deps-circulars-polic-0108.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- Populate **Code Intake Rows** for all units above; mark **Pending Source** where needed.",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 81,
+    "path": "scaffolds/core/populate-code-intake-rows-for-all-units-above-mark-0109.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "- **Correctness & completeness:** no missing imports/symbols; matches config contract.",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 130,
+    "path": "scaffolds/contracts/correctness-completeness-no-missing-imports-symbol-0110.json5"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "2) **Provisional nominees:** Top 1\u20132 per cluster chosen with preference for clean candidates (no parse errors, no missin",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 143,
+    "path": "scaffolds/core/2-provisional-nominees-top-1-2-per-cluster-chosen-0111.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- Any attempt to use `open()`/`subprocess`/blocked modules at import time raises a SAFE\u2011STUB error, recorded under `exec",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 162,
+    "path": "scaffolds/core/any-attempt-to-use-open-subprocess-blocked-modules-0112.py"
+  },
+  {
+    "bucket": "Storage/Archivist",
+    "title": "1) Inspect smoke table for failures; for `exec_error` cases, categorize by cause (missing dep vs risky operation).",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 166,
+    "path": "scaffolds/archivist/1-inspect-smoke-table-for-failures-for-exec-error-0113.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "2) Flag conflicts/missing surfaces vs. reconstructed design (MDHG/AGRM/TPG/Trails/W5H).",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 186,
+    "path": "scaffolds/mdhg/2-flag-conflicts-missing-surfaces-vs-reconstructed-0114.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "- Generate a **Fit Report** overlay: for each file, highlight cross\u2011system touchpoints (e.g., MDHG\u2194AGRM, Trails\u2194Reports)",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 206,
+    "path": "scaffolds/mdhg/generate-a-fit-report-overlay-for-each-file-highli-0115.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- Generated **shim skeletons** (names/signatures only) per directory to satisfy missing integration surfaces flagged in",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 234,
+    "path": "scaffolds/core/generated-shim-skeletons-names-signatures-only-per-0116.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "- `WORK_QUEUE_PASS8.csv` \u2014 prioritized tasks from Fit Report gaps (milestone, priority, size, target path, gap, shim hin",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 273,
+    "path": "scaffolds/agency/work-queue-pass8-csv-prioritized-tasks-from-fit-re-0117.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "# SnapLat \u2014 System Master Brief & Gap Review (Intake v1)",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 283,
+    "path": "scaffolds/snap_dna/snaplat-system-master-brief-gap-review-intake-v1-0118.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "> Scope: A single, coherent description of **all systems and concepts** discovered so far from documents and code, with",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 285,
+    "path": "scaffolds/core/scope-a-single-coherent-description-of-all-systems-0119.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- **Double\u2011unknown bridges** \u2192 routed to **E\u2011DBSU** (Emergent DB for Special Unknowns) for analysis; candidates for emer",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 305,
+    "path": "scaffolds/testing/double-unknown-bridges-routed-to-e-dbsu-emergent-d-0120.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "- Greedy operates confidently at N=2; at N\u22653 it **pre\u2011informs** MDHG, prebuilding structures for later iterations.",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 328,
+    "path": "scaffolds/mdhg/greedy-operates-confidently-at-n-2-at-n-3-it-pre-i-0121.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **Surgery / 2\u2011opt** for path refinement.",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 359,
+    "path": "scaffolds/core/surgery-2-opt-for-path-refinement-0122.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **Known pre\u2011alpha flags from code**: missing import `hashlib`; reference to undefined `AntiLaminate`.",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 375,
+    "path": "scaffolds/core/known-pre-alpha-flags-from-code-missing-import-has-0123.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **Bridge semantics**: honor **.25 weight**; strict routing of double\u2011unknown to **E\u2011DBSU**.",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 410,
+    "path": "scaffolds/core/bridge-semantics-honor-25-weight-strict-routing-of-0124.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- Mixed concerns in single modules; missing imports (`hashlib`), undefined symbols (`AntiLaminate`).",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 414,
+    "path": "scaffolds/core/mixed-concerns-in-single-modules-missing-imports-h-0125.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "## 13) Gap Review (from Interface Fit + Code Intake)",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 421,
+    "path": "scaffolds/core/13-gap-review-from-interface-fit-code-intake-0126.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**Interfaces missing or partial**",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 422,
+    "path": "scaffolds/core/interfaces-missing-or-partial-0127.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **E\u2011DBSU** \u2014 emergent database for double\u2011unknown bridges.",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 455,
+    "path": "scaffolds/core/e-dbsu-emergent-database-for-double-unknown-bridge-0128.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "# 17) Holistic \u201cIncomplete in Form or Function\u201d Review",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 483,
+    "path": "scaffolds/core/17-holistic-incomplete-in-form-or-function-review-0129.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "> A cross\u2011system critique of everything gathered (docs, code, canvases). The aim is to surface where the idea is **under",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 484,
+    "path": "scaffolds/testing/a-cross-system-critique-of-everything-gathered-doc-0130.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**What\u2019s incomplete**",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 487,
+    "path": "scaffolds/core/what-s-incomplete-0131.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "- **E\u2011DBSU lifecycle** (double\u2011unknowns): missing intake schema, triage policy, promotion/demotion rules, and retention/",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 490,
+    "path": "scaffolds/governance/e-dbsu-lifecycle-double-unknowns-missing-intake-sc-0132.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**What\u2019s incomplete**",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 503,
+    "path": "scaffolds/core/what-s-incomplete-0133.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "- **Scout arms**: Spawn/TTL/backoff rules absent. Risk of **deadlock** at pause zones if main arm blocks awaiting scouts",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 505,
+    "path": "scaffolds/governance/scout-arms-spawn-ttl-backoff-rules-absent-risk-of-0134.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**What\u2019s incomplete**",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 517,
+    "path": "scaffolds/core/what-s-incomplete-0135.py"
+  },
+  {
+    "bucket": "Storage/Archivist",
+    "title": "- **TPG**: `TPGConfig` not defined; **2\u2011opt surgery** entry/exit conditions undefined; **negative beacon** penalties mis",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 522,
+    "path": "scaffolds/archivist/tpg-tpgconfig-not-defined-2-opt-surgery-entry-exit-0136.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**What\u2019s incomplete**",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 532,
+    "path": "scaffolds/core/what-s-incomplete-0137.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**What\u2019s incomplete**",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 546,
+    "path": "scaffolds/core/what-s-incomplete-0138.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**What\u2019s incomplete**",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 559,
+    "path": "scaffolds/core/what-s-incomplete-0139.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- Code issues: missing `hashlib`, undefined `AntiLaminate`, mixed concerns.",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 562,
+    "path": "scaffolds/core/code-issues-missing-hashlib-undefined-antilaminate-0140.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**What\u2019s incomplete**",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 570,
+    "path": "scaffolds/core/what-s-incomplete-0141.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**What\u2019s incomplete**",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 583,
+    "path": "scaffolds/core/what-s-incomplete-0142.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**What\u2019s incomplete**",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 593,
+    "path": "scaffolds/core/what-s-incomplete-0143.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "- No **cost model** for MDHG building or scout proliferation; missing **quotas** for points/edges; no **streaming** mode",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 594,
+    "path": "scaffolds/mdhg/no-cost-model-for-mdhg-building-or-scout-prolifera-0144.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**What\u2019s incomplete**",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 603,
+    "path": "scaffolds/core/what-s-incomplete-0145.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**What\u2019s incomplete**",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 613,
+    "path": "scaffolds/core/what-s-incomplete-0146.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- Add **pre\u2011commit** hooks; enable **CI** with importability + stub tests.",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 618,
+    "path": "scaffolds/testing/add-pre-commit-hooks-enable-ci-with-importability-0147.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "| Pri | Family | Gap | Proof Obligation | First Experiment |",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 623,
+    "path": "scaffolds/core/pri-family-gap-proof-obligation-first-experiment-0148.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "| P1 | Orchestration | Scout SLA missing | Spawn/TTL/backoff & ThinkTank quorum | Simulate contradictory scouts |",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 630,
+    "path": "scaffolds/agency/p1-orchestration-scout-sla-missing-spawn-ttl-backo-0149.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "| P1 | Data | Snap schema missing | v1 schema + replay idempotence | Round\u2011trip a toy Snap |",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 632,
+    "path": "scaffolds/contracts/p1-data-snap-schema-missing-v1-schema-replay-idemp-0150.json5"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- `E_DBSU_LIFECYCLE.md` \u2014 double\u2011unknown bridge lifecycle.",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 680,
+    "path": "scaffolds/core/e-dbsu-lifecycle-md-double-unknown-bridge-lifecycl-0151.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- Wire W5H alignment stub (`agrm/snap/w5h.py`) to feed the scoring panel; add a tiny BeaconsRegistry stub to start real",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 765,
+    "path": "scaffolds/testing/wire-w5h-alignment-stub-agrm-snap-w5h-py-to-feed-t-0152.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- `PLANS/W5H_BEACONS_NOTES.md` \u2014 documents the sandbox semantics; coefficients will later move to config.",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 782,
+    "path": "scaffolds/testing/plans-w5h-beacons-notes-md-documents-the-sandbox-s-0153.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "- **Safe\u2011Cube guard**: invalid/unknown Snap routes op as `archivist.expand.invalid_schema`; decision is enforced by the",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 900,
+    "path": "scaffolds/contracts/safe-cube-guard-invalid-unknown-snap-routes-op-as-0154.json5"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "- `negation_lines.json` \u2014 lines containing `not/no/never/inverse/neg/deny/unsafe/unknown/double unknown/ambiguous`.",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 935,
+    "path": "scaffolds/contracts/negation-lines-json-lines-containing-not-no-never-0155.json5"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "## Pass 25 \u2014 Failure\u2011Injection Orchestration + MORSR/WavePool/SnapOps stubs + Stage Gap Review",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 1002,
+    "path": "scaffolds/agency/pass-25-failure-injection-orchestration-morsr-wave-0156.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**Remaining gap review (this stage)**",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 1016,
+    "path": "scaffolds/core/remaining-gap-review-this-stage-0157.py"
+  },
+  {
+    "bucket": "Storage/Archivist",
+    "title": "- Implement `agrm.space` skeleton per plan (Universe, Lattice, `weyl_index` stub, default registry) and integrate tags i",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 1064,
+    "path": "scaffolds/archivist/implement-agrm-space-skeleton-per-plan-universe-la-0158.py"
+  },
+  {
+    "bucket": "E8/Lattice",
+    "title": "- `src/agrm/space/api.py` \u2014 new **Universe** (name, hemispheres) and **Lattice** (name, dim, `weyl_index(point)` stub) w",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 1071,
+    "path": "scaffolds/e8/src-agrm-space-api-py-new-universe-name-hemisphere-0159.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- This keeps the core Trails API untouched while providing a fast, test\u2011friendly query surface. We can later swap `buffe",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 1160,
+    "path": "scaffolds/testing/this-keeps-the-core-trails-api-untouched-while-pro-0160.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "- `agrm/mdhg/randomwalk.py` \u2014 stub `rank_by_random_walk(...)` (degree\u2011biased stationary estimate placeholder).",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 1309,
+    "path": "scaffolds/mdhg/agrm-mdhg-randomwalk-py-stub-rank-by-random-walk-d-0161.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- `ops/mc/{mcmc,smc,anneal}.py` \u2014 lightweight stubs exposing `suggest(...)` (for later expansion).",
+    "source_file": "canvas docs 16-18 81525.txt",
+    "line": 1310,
+    "path": "scaffolds/core/ops-mc-mcmc-smc-anneal-py-lightweight-stubs-exposi-0162.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "- Many Markdown/PDF deliverables (critical analyses, gap reviews, implementation guides) + two large ZIP bundles (Master",
+    "source_file": "canvas docs 19-21 81525.txt",
+    "line": 9,
+    "path": "scaffolds/dx/many-markdown-pdf-deliverables-critical-analyses-g-0163.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **Formal specs missing**: Safe Cube axes/invariants; Shelling finite\u2011state algorithm; Glyph grammar/BNF and type syste",
+    "source_file": "canvas docs 19-21 81525.txt",
+    "line": 41,
+    "path": "scaffolds/core/formal-specs-missing-safe-cube-axes-invariants-she-0164.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "- **Gaps**: missing formal axis set; unclear intersection policy when one universe is sparse; no acceptance tests.",
+    "source_file": "canvas docs 19-21 81525.txt",
+    "line": 86,
+    "path": "scaffolds/governance/gaps-missing-formal-axis-set-unclear-intersection-0165.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- **Gaps**: missing proofs/examples; no approximation knobs bound to acceptance tests.",
+    "source_file": "canvas docs 19-21 81525.txt",
+    "line": 100,
+    "path": "scaffolds/testing/gaps-missing-proofs-examples-no-approximation-knob-0166.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **Gaps**: ranker signals not enumerated; no bridge\u2011aware features; missing safety thresholds.",
+    "source_file": "canvas docs 19-21 81525.txt",
+    "line": 107,
+    "path": "scaffolds/core/gaps-ranker-signals-not-enumerated-no-bridge-aware-0167.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "- **Gaps**: missing end\u2011to\u2011end examples; no failure\u2011mode catalog; resource negotiation policy TBD.",
+    "source_file": "canvas docs 19-21 81525.txt",
+    "line": 114,
+    "path": "scaffolds/governance/gaps-missing-end-to-end-examples-no-failure-mode-c-0168.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **Seeds must be logged/indexed** for reuse in later iterations.",
+    "source_file": "canvas docs 19-21 81525.txt",
+    "line": 220,
+    "path": "scaffolds/core/seeds-must-be-logged-indexed-for-reuse-in-later-it-0169.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "3. **Bridge explosion at N\u22655**: emergent double\u2011unknown bridges (E\u2011DBSU) can swamp MDHG promotion unless we throttle and",
+    "source_file": "canvas docs 19-21 81525.txt",
+    "line": 301,
+    "path": "scaffolds/mdhg/3-bridge-explosion-at-n-5-emergent-double-unknown-0170.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "## Tensions / Open Questions (for later design debate)",
+    "source_file": "canvas docs 19-21 81525.txt",
+    "line": 373,
+    "path": "scaffolds/core/tensions-open-questions-for-later-design-debate-0171.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- It introduces two **high\u2011value checks** we can borrow later: **SRI constraint** and **intentional\u2011vector gating** to s",
+    "source_file": "canvas docs 19-21 81525.txt",
+    "line": 380,
+    "path": "scaffolds/testing/it-introduces-two-high-value-checks-we-can-borrow-0172.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- Treat **L** as an operator: `L : State \u2192 {pass,fail,refine}` with side\u2011effects:",
+    "source_file": "canvas docs 19-21 81525.txt",
+    "line": 403,
+    "path": "scaffolds/core/treat-l-as-an-operator-l-state-pass-fail-refine-wi-0173.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "- **ThinkTank/MORSR:** candidate selection under L; scout arms propose perspective shifts when L returns `refine` and \u0394U",
+    "source_file": "canvas docs 19-21 81525.txt",
+    "line": 411,
+    "path": "scaffolds/agency/thinktank-morsr-candidate-selection-under-l-scout-0174.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "### Next (if we later decide to design around this)",
+    "source_file": "canvas docs 19-21 81525.txt",
+    "line": 418,
+    "path": "scaffolds/testing/next-if-we-later-decide-to-design-around-this-0175.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- **BridgeFlip**: temporarily elevate double\u2011unknown bridge to test stability.",
+    "source_file": "canvas docs 19-21 81525.txt",
+    "line": 496,
+    "path": "scaffolds/testing/bridgeflip-temporarily-elevate-double-unknown-brid-0176.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- **BridgeFlip:** transient promotion of double\u2011unknown bridges to test stability; revert on failure.",
+    "source_file": "canvas docs 19-21 81525.txt",
+    "line": 559,
+    "path": "scaffolds/testing/bridgeflip-transient-promotion-of-double-unknown-b-0177.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- **Selectors:** Tests that lift the lowest shell components; prioritize missing witnesses (1729, reversibility, Weyl ga",
+    "source_file": "canvas docs 19-21 81525.txt",
+    "line": 600,
+    "path": "scaffolds/testing/selectors-tests-that-lift-the-lowest-shell-compone-0178.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "## Witnesses & Metrics (for later testing)",
+    "source_file": "canvas docs 19-21 81525.txt",
+    "line": 651,
+    "path": "scaffolds/testing/witnesses-metrics-for-later-testing-0179.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**Sections:** Open Items \u2192 (later) Resolved / Deferred.",
+    "source_file": "canvas docs 22-23 81525.txt",
+    "line": 6,
+    "path": "scaffolds/core/sections-open-items-later-resolved-deferred-0180.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- T-019 \u2014 Dependency map & missing references",
+    "source_file": "canvas docs 22-23 81525.txt",
+    "line": 123,
+    "path": "scaffolds/core/t-019-dependency-map-missing-references-0181.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "- **Why:** AGRM imports `superbuilder.*`; need a full codegraph and stub policy.",
+    "source_file": "canvas docs 22-23 81525.txt",
+    "line": 124,
+    "path": "scaffolds/governance/why-agrm-imports-superbuilder-need-a-full-codegrap-0182.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "- **Action:** Build import graph; flag unresolved/missing; propose stubs.",
+    "source_file": "canvas docs 22-23 81525.txt",
+    "line": 125,
+    "path": "scaffolds/dx/action-build-import-graph-flag-unresolved-missing-0183.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "- **Action:** Recovery from \u201cmissing middle,\u201d coverage vs. baseline, time/space cost, stability under noise.",
+    "source_file": "canvas docs 22-23 81525.txt",
+    "line": 528,
+    "path": "scaffolds/mdhg/action-recovery-from-missing-middle-coverage-vs-ba-0184.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- **Why:** Store dormant waves for later excitation.",
+    "source_file": "canvas docs 22-23 81525.txt",
+    "line": 537,
+    "path": "scaffolds/testing/why-store-dormant-waves-for-later-excitation-0185.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- T-119 \u2014 Superpermutation integration (pending deep dive)",
+    "source_file": "canvas docs 22-23 81525.txt",
+    "line": 632,
+    "path": "scaffolds/core/t-119-superpermutation-integration-pending-deep-di-0186.py"
+  },
+  {
+    "bucket": "E8/Lattice",
+    "title": "Implement GR spiral stepper; later E8\u2011aware projections.",
+    "source_file": "canvas docs 22-23 81525.txt",
+    "line": 730,
+    "path": "scaffolds/e8/implement-gr-spiral-stepper-later-e8-aware-project-0187.py"
+  },
+  {
+    "bucket": "E8/Lattice",
+    "title": "Implement GR spiral stepper; later E8\u2011aware projections.",
+    "source_file": "canvas docs 22-23 81525.txt",
+    "line": 760,
+    "path": "scaffolds/e8/implement-gr-spiral-stepper-later-e8-aware-project-0188.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**Status:** **SHIPPED v0.1 (2025-08-13)** (gap finder + seed pairs).",
+    "source_file": "canvas docs 22-23 81525.txt",
+    "line": 878,
+    "path": "scaffolds/core/status-shipped-v0-1-2025-08-13-gap-finder-seed-pai-0189.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "**Status:** **PARTIAL v0.1 (2025-08-13)** (policy stubs only, wiring pending in controller v0.5).",
+    "source_file": "canvas docs 22-23 81525.txt",
+    "line": 882,
+    "path": "scaffolds/governance/status-partial-v0-1-2025-08-13-policy-stubs-only-w-0190.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "**Status:** **SHIPPED v0.1** (JSON snapshot/restore in module; wire to Archivist later).",
+    "source_file": "canvas docs 22-23 81525.txt",
+    "line": 908,
+    "path": "scaffolds/contracts/status-shipped-v0-1-json-snapshot-restore-in-modul-0191.json5"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**Status:** **PENDING**.",
+    "source_file": "canvas docs 22-23 81525.txt",
+    "line": 916,
+    "path": "scaffolds/core/status-pending-0192.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**Status:** **PENDING**.",
+    "source_file": "canvas docs 22-23 81525.txt",
+    "line": 920,
+    "path": "scaffolds/core/status-pending-0193.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **T-230 \u2014 Auto\u2011tune stub**",
+    "source_file": "canvas docs 22-23 81525.txt",
+    "line": 927,
+    "path": "scaffolds/core/t-230-auto-tune-stub-0194.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "- TODO checklist (gate\u2011mapped) \u2192 `sandbox:/mnt/data/snaplat_todo_checklist.md`",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 23,
+    "path": "scaffolds/snap_dna/todo-checklist-gate-mapped-sandbox-mnt-data-snapla-0195.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**Missing / stubbed:**",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 30,
+    "path": "scaffolds/core/missing-stubbed-0196.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "- TODO checklist \u2192 `sandbox:/mnt/data/snaplat_todo_checklist.md`",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 86,
+    "path": "scaffolds/snap_dna/todo-checklist-sandbox-mnt-data-snaplat-todo-check-0197.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "# SnapLat \u2014 System Master Brief & Gap Review (Consolidated v1.0)",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 93,
+    "path": "scaffolds/snap_dna/snaplat-system-master-brief-gap-review-consolidate-0198.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "> **Purpose**: One coherent, senior\u2011engineer\u2011ready brief that fuses your Intake v1 (incl. Passes 9\u201348) into a stable ref",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 95,
+    "path": "scaffolds/governance/purpose-one-coherent-senior-engineer-ready-brief-t-0199.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **Bridges**: base weight 0.25 (convention); **double\u2011known \u2192 N=0.5**, **double\u2011unknown \u2192 E\u2011DBSU**.",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 136,
+    "path": "scaffolds/core/bridges-base-weight-0-25-convention-double-known-n-0200.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "## 9) Gap Review \u2192 Proof Obligations (actionable)",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 221,
+    "path": "scaffolds/core/9-gap-review-proof-obligations-actionable-0201.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "4. **Trail drift** under new modules \u2192 CI guard now, not later.",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 268,
+    "path": "scaffolds/testing/4-trail-drift-under-new-modules-ci-guard-now-not-l-0202.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**E\u2011DBSU** \u2013 emergent DB for double\u2011unknown bridges.",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 304,
+    "path": "scaffolds/core/e-dbsu-emergent-db-for-double-unknown-bridges-0203.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "- **Header stub** created for quick paste into files \u2192 `sandbox:/mnt/data/header_stub.yaml`.",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 328,
+    "path": "scaffolds/dx/header-stub-created-for-quick-paste-into-files-san-0204.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "- **Repacked with headers** (classification + policy hash inserted where missing):",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 337,
+    "path": "scaffolds/governance/repacked-with-headers-classification-policy-hash-i-0205.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "- **Service layer:** **SnapOps/Porter/Safe\u2011Cube** enforce gates; policy knobs decide hard/soft gating; E\u2011DBSU lifecycle",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 412,
+    "path": "scaffolds/governance/service-layer-snapops-porter-safe-cube-enforce-gat-0206.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**Protocol:** 3 initial architectures \u2192 pick winner \u2192 generate 2 variants \u2192 pick best \u2192 final refinement. Synthetic harn",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 440,
+    "path": "scaffolds/core/protocol-3-initial-architectures-pick-winner-gener-0207.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "**Round 3 (final refinement):** results table is attached (\"Round 3 \u2014 Final refinement\").",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 446,
+    "path": "scaffolds/core/round-3-final-refinement-results-table-is-attached-0208.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "> Next: If you want, I can convert the winning config into a concrete **Design Slice** (schemas + projections + gates) a",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 453,
+    "path": "scaffolds/contracts/next-if-you-want-i-can-convert-the-winning-config-0209.json5"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "> I can convert items 1\u20134 into code/tests immediately (Schema Registry stub + projector skeleton + SnapOps policy flags",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 482,
+    "path": "scaffolds/governance/i-can-convert-items-1-4-into-code-tests-immediatel-0210.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- **Provenance first**: Every note, TODO, and gap will cite its source doc and exact location.",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 869,
+    "path": "scaffolds/testing/provenance-first-every-note-todo-and-gap-will-cite-0211.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "\u2022 **Coder review**: API surfaces, invariants, error paths, complexity hot spots, testability, missing contracts.",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 884,
+    "path": "scaffolds/contracts/coder-review-api-surfaces-invariants-error-paths-c-0212.json5"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "4) **Gap analysis**",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 889,
+    "path": "scaffolds/core/4-gap-analysis-0213.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "\u2022 Identify missing pieces, unclear steps, contradictions, or dangling dependencies.",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 890,
+    "path": "scaffolds/testing/identify-missing-pieces-unclear-steps-contradictio-0214.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "\u2022 Each gap logged with severity and next step.",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 891,
+    "path": "scaffolds/core/each-gap-logged-with-severity-and-next-step-0215.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "5) **Consolidated TODO queue**",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 893,
+    "path": "scaffolds/agency/5-consolidated-todo-queue-0216.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "\u2022 Understanding delta, updated TODOs, updated gap list, and crisp questions (if any).",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 899,
+    "path": "scaffolds/core/understanding-delta-updated-todos-updated-gap-list-0217.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **Items**: `TODO-###`, `GAP-###`, `Q-###`.",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 907,
+    "path": "scaffolds/core/items-todo-gap-q-0218.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- Test surface (unit/integration/property) implied or missing?",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 918,
+    "path": "scaffolds/testing/test-surface-unit-integration-property-implied-or-0219.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- Dependencies on missing artifacts.",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 938,
+    "path": "scaffolds/testing/dependencies-on-missing-artifacts-0220.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- A concrete, faithful procedure (so we can implement it later)",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1031,
+    "path": "scaffolds/core/a-concrete-faithful-procedure-so-we-can-implement-0221.py"
+  },
+  {
+    "bucket": "Storage/Archivist",
+    "title": "| S-PROMOTION | D1 | 8867\u20138870, 8891\u20138897, 8906\u20138923, 9082\u20139085 | API sketch | `PromotionManager.stage_result` and `.pro",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1058,
+    "path": "scaffolds/archivist/s-promotion-d1-8867-8870-8891-8897-8906-8923-9082-0222.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "| Universe policy loader \u2192 Mannequin (Sentinel) | Apply `safe_cube`/tag criteria; deny if missing; reasons recorded. |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1077,
+    "path": "scaffolds/governance/universe-policy-loader-mannequin-sentinel-apply-sa-0223.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "| TODO-036 | Spec **Universe policy profile** schema (YAML) + loader semantics; enumerate built\u2011ins (User/Doc/Work/Gover",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1088,
+    "path": "scaffolds/governance/todo-036-spec-universe-policy-profile-schema-yaml-0224.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "| TODO-037 | Define **Mannequin deny reasons** enum + logging format (e.g., `safe_cube_requires_tags`). | P1 | Open | \u2014",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1089,
+    "path": "scaffolds/dx/todo-037-define-mannequin-deny-reasons-enum-loggin-0225.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "| TODO-038 | Define **Slice SNAP** schema (id/meta/lineage/TTL); retention policy. | P1 | Open | TODO-004 |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1090,
+    "path": "scaffolds/governance/todo-038-define-slice-snap-schema-id-meta-lineage-0226.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "| TODO-039 | Specify **PromotionManager** state machine & thresholds; Archivist event schema; overlay semantics. | P1 |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1091,
+    "path": "scaffolds/contracts/todo-039-specify-promotionmanager-state-machine-th-0227.json5"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "| TODO-040 | Document `to_graph`/`to_points` signatures & param ranges; backend selection rules & fallbacks. | P2 | Open",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1092,
+    "path": "scaffolds/core/todo-040-document-to-graph-to-points-signatures-pa-0228.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "| TODO-041 | Author **Universe ops** API (clone/fork/compose/diff/materialize/promote/archive) + tests. | P2 | Open | TO",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1093,
+    "path": "scaffolds/testing/todo-041-author-universe-ops-api-clone-fork-compos-0229.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "| TODO-042 | Mini **Universe Query Language** (JSON/YAML) spec and parser hooks. | P2 | Open | TODO-041 |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1094,
+    "path": "scaffolds/contracts/todo-042-mini-universe-query-language-json-yaml-sp-0230.json5"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "| TODO-043 | Package **SAP rule pack** for universes; Safe\u2011Cube preflight before promotion. | P2 | Open | TODO-005 |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1095,
+    "path": "scaffolds/core/todo-043-package-sap-rule-pack-for-universes-safe-0231.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "| TODO-044 | Wire **controller_v0_7** to accept `universe_name`; materialize then run path. | P2 | Open | TODO-012 |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1096,
+    "path": "scaffolds/core/todo-044-wire-controller-v0-7-to-accept-universe-n-0232.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "| S-SAFE-CUBE-POL | D1 | 4071\u20134076, 4892\u20134896 | Paths/Status | Governance & Safety components; current status: policies",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1107,
+    "path": "scaffolds/governance/s-safe-cube-pol-d1-4071-4076-4892-4896-paths-statu-0233.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "| S-SAFE-CUBE-DENY | D1 | 8913\u20138919, 8985\u20138990 | Change log | Mannequin Safe\u2011Cube gate: **deny** slice when `safe_cube=t",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1108,
+    "path": "scaffolds/dx/s-safe-cube-deny-d1-8913-8919-8985-8990-change-log-0234.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "| TODO-045 | Define **PolicyBus reason format** (boundary: slice/seed/adj/sweep/stage/promote); include machine codes +",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1139,
+    "path": "scaffolds/governance/todo-045-define-policybus-reason-format-boundary-s-0235.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "| TODO-046 | Add **Safe\u2011Cube preflight** to controller path (pre materialize/run); record deny reasons & counts. | P1 |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1140,
+    "path": "scaffolds/core/todo-046-add-safe-cube-preflight-to-controller-pat-0236.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "| TODO-047 | Specify **deny/allow** event schema (who/where/why), retention, and audit linkage to run manifests. | P1 |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1141,
+    "path": "scaffolds/contracts/todo-047-specify-deny-allow-event-schema-who-where-0237.json5"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "| TODO-048 | Finalize **E\u2011DBSU**: intake thresholds, TTL defaults, promotion outcomes (Constraint/Hint/Task/Discard). |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1142,
+    "path": "scaffolds/core/todo-048-finalize-e-dbsu-intake-thresholds-ttl-def-0238.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "| TODO-049 | Document **Arbiter quarantine** and **Porter routes** (source/target, payload class, checksum). | P2 | Open",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1143,
+    "path": "scaffolds/core/todo-049-document-arbiter-quarantine-and-porter-ro-0239.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "| TODO-050 | Add **PolicyBus** test matrix (unit/property/adversarial) across all boundaries. | P2 | Open | TODO-045 |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1144,
+    "path": "scaffolds/governance/todo-050-add-policybus-test-matrix-unit-property-a-0240.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "| TODO-051 | Enumerate **deny_reason** strings observed in text (canonical set) and map to boundaries. | P1 | Open | TOD",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1178,
+    "path": "scaffolds/core/todo-051-enumerate-deny-reason-strings-observed-in-0241.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "| TODO-052 | Add **run\u2011manifest fields** for per\u2011boundary reason logging (key names + types + examples). | P1 | Open | T",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1179,
+    "path": "scaffolds/core/todo-052-add-run-manifest-fields-for-per-boundary-0242.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "| TODO-053 | Record **E\u2011DBSU** TTL default(s) and promotion scoring formula exactly as written; add to spec. | P1 | Open",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1180,
+    "path": "scaffolds/core/todo-053-record-e-dbsu-ttl-default-s-and-promotion-0243.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "| TODO-054 | Cross\u2011link **PolicyBus reason codes** \u2194 **SAP events** \u2194 **Archivist records** (one row per interaction). |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1181,
+    "path": "scaffolds/governance/todo-054-cross-link-policybus-reason-codes-sap-eve-0244.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "# Open questions (pending)",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1185,
+    "path": "scaffolds/core/open-questions-pending-0245.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "| Q\u2011007 | Partition precedence | When geometric and semantic partitions **conflict**, which takes precedence at traversa",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1191,
+    "path": "scaffolds/governance/q-007-partition-precedence-when-geometric-and-sema-0246.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "| 2025-08-14 | Q-004 Answer | **Double bridges**: known\u2192treat as **N=0.5** nodes; **unknown** double bridges live in **E",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1197,
+    "path": "scaffolds/testing/2025-08-14-q-004-answer-double-bridges-known-treat-0247.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "| 2025-08-14 | Q-006 Answer | **Glyph tokens**: start **ASCII-only**; expand to broader symbol/glyph types later as abst",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1199,
+    "path": "scaffolds/testing/2025-08-14-q-006-answer-glyph-tokens-start-ascii-o-0248.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "## Open questions \u2014 addendum (pending)",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1201,
+    "path": "scaffolds/core/open-questions-addendum-pending-0249.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "## TODO additions \u2014 policy answers",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1206,
+    "path": "scaffolds/governance/todo-additions-policy-answers-0250.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "| TODO-055 | Derived (policy) | Q\u2011004 | Handle **double bridges**: known\u2192`n=0.5`; unknown\u2192route to **E\u2011DBSU** with tag `",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1209,
+    "path": "scaffolds/governance/todo-055-derived-policy-q-004-handle-double-bridge-0251.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "| TODO-056 | Derived (policy) | Q\u2011005 | Implement **reason format toggle** (snake/kebab/namespaced); add experiment logg",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1210,
+    "path": "scaffolds/governance/todo-056-derived-policy-q-005-implement-reason-for-0252.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "| TODO-057 | Derived (policy) | Q\u2011006 | Enforce **ASCII-only** glyph tokens initially; design expansion protocol + audit",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1211,
+    "path": "scaffolds/governance/todo-057-derived-policy-q-006-enforce-ascii-only-g-0253.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "| TODO-058 | Derived (policy) | Q\u2011004/Q\u2011048 | Add manifest fields: `bridge_evidence.count`, `bridge_evidence.class`, `ed",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1212,
+    "path": "scaffolds/governance/todo-058-derived-policy-q-004-q-048-add-manifest-f-0254.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "- **MDHG/Elevators:** Successful rendezvous may justify an **elevator** or a **bridge**; unknown **double\u2011bridges** rout",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1230,
+    "path": "scaffolds/governance/mdhg-elevators-successful-rendezvous-may-justify-a-0255.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **Meeting rule:** On contact, compute **meet\u2011potential = f(geo, sem, evidence)`; if **unknown double\u2011bridge** detected",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1251,
+    "path": "scaffolds/core/meeting-rule-on-contact-compute-meet-potential-f-g-0256.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "| TODO-059 | Define **conflict score** and **spawn trigger** for scouts (inputs: geo vs sem potentials, tension). | P1 |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1264,
+    "path": "scaffolds/core/todo-059-define-conflict-score-and-spawn-trigger-f-0257.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "| TODO-060 | Specify **rendezvous N\u2011lock** semantics + TTL/backoff + hysteresis. | P1 | Open |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1265,
+    "path": "scaffolds/testing/todo-060-specify-rendezvous-n-lock-semantics-ttl-b-0258.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "| TODO-061 | Add **scout quotas/tick\u2011scale** fields to profiles; log in manifests/checkpoints. | P1 | Open |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1266,
+    "path": "scaffolds/core/todo-061-add-scout-quotas-tick-scale-fields-to-pro-0259.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "| TODO-062 | Define **meet\u2011potential merge** function and when to create elevators vs bridges vs send to **E\u2011DBSU**. | P",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1267,
+    "path": "scaffolds/core/todo-062-define-meet-potential-merge-function-and-0260.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "| TODO-063 | Extend **reason code** set for scout lifecycle (`scout_*`, `rendezvous_*`). | P1 | Open |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1268,
+    "path": "scaffolds/core/todo-063-extend-reason-code-set-for-scout-lifecycl-0261.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "| TODO-064 | Simulation harness: boundary scenarios (stall/oscillation/budget) to validate guardrails before adoption. |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1269,
+    "path": "scaffolds/testing/todo-064-simulation-harness-boundary-scenarios-sta-0262.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "**Scope:** User refinement (2025\u201108\u201114). Scouts drive initial space definition, greedy\u2011vector discovery, and later \u201ctrue",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1279,
+    "path": "scaffolds/agency/scope-user-refinement-2025-08-14-scouts-drive-init-0263.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- **Rendezvous layout:** Hemisphere\u2011specific rendezvous points guaranteed to cover all hemispheres; progressively refine",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1284,
+    "path": "scaffolds/testing/rendezvous-layout-hemisphere-specific-rendezvous-p-0264.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **Greedy vectors:** scouts emit **candidate vectors** and **bridge/elevator proposals**; unknown double\u2011bridges \u2192 **E\u2011",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1308,
+    "path": "scaffolds/core/greedy-vectors-scouts-emit-candidate-vectors-and-b-0265.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "| TODO-065 | Define **work\u2011order schema** (groups/skills/context/understanding) and how scouts are instantiated from it.",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1323,
+    "path": "scaffolds/contracts/todo-065-define-work-order-schema-groups-skills-co-0266.json5"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "| TODO-066 | Specify **hemisphere rendezvous** catalog & refinement rule as unlocks occur. | P1 | Open |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1324,
+    "path": "scaffolds/testing/todo-066-specify-hemisphere-rendezvous-catalog-ref-0267.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "| TODO-067 | Mark **scout\u2011discovered edges** as provisional with decay & confirmation rules; feed weights to MDHG safely",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1325,
+    "path": "scaffolds/mdhg/todo-067-mark-scout-discovered-edges-as-provisiona-0268.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "| TODO-068 | Define **sanity\u2011check predicate** (is\u2011true\u2011to\u2011task) and evidence thresholds; log format. | P1 | Open |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1326,
+    "path": "scaffolds/core/todo-068-define-sanity-check-predicate-is-true-to-0269.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "| TODO-069 | Add **scout metrics** (disambiguation latency, rendezvous rate, timeout rate, coverage delta, false\u2011confirm",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1327,
+    "path": "scaffolds/core/todo-069-add-scout-metrics-disambiguation-latency-0270.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "| TODO-070 | Schedule **tick\u2011based aggregation cadence** and MORSR re\u2011layout handoff criteria. | P2 | Open |",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1328,
+    "path": "scaffolds/agency/todo-070-schedule-tick-based-aggregation-cadence-a-0271.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "| TODO-071 | Specify **`prep_mdhg`** semantics and detection of **N>4 hard** tasks; define greedy\u2192MDHG preseeding protoc",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1329,
+    "path": "scaffolds/testing/todo-071-specify-prep-mdhg-semantics-and-detection-0272.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "| TODO-072 | Design **resource autoscaler**: define utilization metric (CPU/GPU/Mem/IO), smoothing window, and spawn pol",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1330,
+    "path": "scaffolds/governance/todo-072-design-resource-autoscaler-define-utiliza-0273.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "| TODO-073 | Formalize **Think Tank handshake**: payload schema from main arm pause; expert panel selection; result prop",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1331,
+    "path": "scaffolds/contracts/todo-073-formalize-think-tank-handshake-payload-sc-0274.json5"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "| TODO-074 | Couple **DTT/Assembly Line** with scout outputs; define injection points and back\u2011pressure rules. | P1 | Op",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1332,
+    "path": "scaffolds/agency/todo-074-couple-dtt-assembly-line-with-scout-outpu-0275.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "| TODO-075 | Extend **reason codes**: `mdhg_prep_enabled/skipped`, `greedy_preseed_complete`, `think_tank_consulted`, `t",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1333,
+    "path": "scaffolds/testing/todo-075-extend-reason-codes-mdhg-prep-enabled-ski-0276.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- **N=0, Bridges:** N=0 = unchangeable constraints; Bridges = 0.25. Known **double-bridge** = N=0.5; **unknown** double-",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1350,
+    "path": "scaffolds/testing/n-0-bridges-n-0-unchangeable-constraints-bridges-0-0277.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **Partitions:** Geometric and/or semantic; refinement allowed if methodology stays true.",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1351,
+    "path": "scaffolds/core/partitions-geometric-and-or-semantic-refinement-al-0278.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "- **Glyph rule:** Strict 3-word compression; only when N=1 completeness is satisfied. Tokens: **ASCII-only** initially;",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1352,
+    "path": "scaffolds/testing/glyph-rule-strict-3-word-compression-only-when-n-1-0279.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "4) **Gap analysis:** log ambiguities/missing pieces with severity & next steps",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1371,
+    "path": "scaffolds/dx/4-gap-analysis-log-ambiguities-missing-pieces-with-0280.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "8) **Repo crosswalk (v2):** D1 work plan \u2194 D4 structure (present/partial/missing)",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1375,
+    "path": "scaffolds/core/8-repo-crosswalk-v2-d1-work-plan-d4-structure-pres-0281.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "10) **TODO matrix (v2):** P1/P2/P3 with dependencies; migrate relevant TODOs from prior canvas",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1377,
+    "path": "scaffolds/testing/10-todo-matrix-v2-p1-p2-p3-with-dependencies-migra-0282.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "- **MDHG ingestion:** Tag scout edges as **weyl_class \u2208 {1..8}** when aligned; else `weyl_class=unknown` \u2192 provisional/E",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1414,
+    "path": "scaffolds/mdhg/mdhg-ingestion-tag-scout-edges-as-weyl-class-1-8-w-0283.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "*To be re-built against D4 with present/partial/missing marks.*",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1462,
+    "path": "scaffolds/dx/to-be-re-built-against-d4-with-present-partial-mis-0284.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "## TODO matrix (v2) \u2014 seed entries",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1466,
+    "path": "scaffolds/core/todo-matrix-v2-seed-entries-0285.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "| V2\u2011RAG\u2011005 | Add **self\u2011reflection** controller (Self\u2011RAG\u2011style) to decide if/when to retrieve and to critique drafts.",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1499,
+    "path": "scaffolds/testing/v2-rag-005-add-self-reflection-controller-self-rag-0286.py"
+  },
+  {
+    "bucket": "E8/Lattice",
+    "title": "- **8\u2011point bidirectional sweep (REQUIRED):** Every idea evaluation and every active lattice must process **all eight We",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1507,
+    "path": "scaffolds/e8/8-point-bidirectional-sweep-required-every-idea-ev-0287.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "## TODO matrix \u2014 additions",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1519,
+    "path": "scaffolds/core/todo-matrix-additions-0288.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "## TODO matrix \u2014 MS\u201102 adds",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1559,
+    "path": "scaffolds/core/todo-matrix-ms-02-adds-0289.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "**MDHG persistence & rehydrate gap (LOCK intent):**",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1585,
+    "path": "scaffolds/mdhg/mdhg-persistence-rehydrate-gap-lock-intent-0290.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "## TODO matrix \u2014 MS\u201103 adds",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1601,
+    "path": "scaffolds/core/todo-matrix-ms-03-adds-0291.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "## TODO matrix \u2014 MS\u201104 adds",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1666,
+    "path": "scaffolds/core/todo-matrix-ms-04-adds-0292.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "- Manifests everywhere (run/slice/promotion); overlays & diffs journaled; MDHG rehydrate gap captured with fix plan.",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1710,
+    "path": "scaffolds/mdhg/manifests-everywhere-run-slice-promotion-overlays-0293.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "## TODO matrix \u2014 GS\u201106 adds",
+    "source_file": "canvas docs 4-6 81525.txt",
+    "line": 1743,
+    "path": "scaffolds/core/todo-matrix-gs-06-adds-0294.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "- **MDHG:** Hierarchy/hotmap with decay; elevator events; later bandit/learner and persistence across runs.",
+    "source_file": "canvas docs 7-9 81525.txt",
+    "line": 45,
+    "path": "scaffolds/mdhg/mdhg-hierarchy-hotmap-with-decay-elevator-events-l-0295.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "1) Continue D1 sweep to backfill any missing intermediate versions and artifacts; lock SNAP family/type taxonomy enumera",
+    "source_file": "canvas docs 7-9 81525.txt",
+    "line": 135,
+    "path": "scaffolds/snap_dna/1-continue-d1-sweep-to-backfill-any-missing-interm-0296.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "> Boundaries: this list mirrors D1 usage; it will expand as more families/types appear in later slices.",
+    "source_file": "canvas docs 7-9 81525.txt",
+    "line": 176,
+    "path": "scaffolds/core/boundaries-this-list-mirrors-d1-usage-it-will-expa-0297.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "1. Overlap histogram present; no missing bins; expected shape heuristics satisfied.",
+    "source_file": "canvas docs 7-9 81525.txt",
+    "line": 303,
+    "path": "scaffolds/contracts/1-overlap-histogram-present-no-missing-bins-expect-0298.json5"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "- **Type A:** Overlap under\u2011coverage (missing overlap bins).",
+    "source_file": "canvas docs 7-9 81525.txt",
+    "line": 311,
+    "path": "scaffolds/core/type-a-overlap-under-coverage-missing-overlap-bins-0299.py"
+  },
+  {
+    "bucket": "E8/Lattice",
+    "title": "- For cross\u2011system integration: record **8\u00d72** coverage counters once superperm outputs are mapped to lattice directions",
+    "source_file": "canvas docs 7-9 81525.txt",
+    "line": 322,
+    "path": "scaffolds/e8/for-cross-system-integration-record-8-2-coverage-c-0300.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "\u2022 Lints: ambiguity, time overlap, stale successor, non\u2011canonical paths, missing proofs.",
+    "source_file": "Canvas of session summary_250815_173042.txt",
+    "line": 38,
+    "path": "scaffolds/dx/lints-ambiguity-time-overlap-stale-successor-non-c-0301.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "\u2022 Run Pre\u2011Flight backfills; publish missing capabilities; emit baseline scene_explain for default scenes.",
+    "source_file": "Canvas of session summary_250815_173042.txt",
+    "line": 71,
+    "path": "scaffolds/core/run-pre-flight-backfills-publish-missing-capabilit-0302.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "This is all handled by an agentic management complex function that will later be described like many othe parts.(im atte",
+    "source_file": "full_build_log",
+    "line": 148,
+    "path": "scaffolds/core/this-is-all-handled-by-an-agentic-management-compl-0303.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "ConStruct6/ \u2014 config + utilities; looks like a later re-org pass.",
+    "source_file": "full_build_log",
+    "line": 378,
+    "path": "scaffolds/core/construct6-config-utilities-looks-like-a-later-re-0304.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Some modules referenced are stubs or missing in the archive; the function index is aspirational in places.",
+    "source_file": "full_build_log",
+    "line": 535,
+    "path": "scaffolds/core/some-modules-referenced-are-stubs-or-missing-in-th-0305.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "A later re-org effort; config/types look more disciplined but some functions are truncated/incomplete.",
+    "source_file": "full_build_log",
+    "line": 555,
+    "path": "scaffolds/testing/a-later-re-org-effort-config-types-look-more-disci-0306.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "Missing/aspirational modules vs. function index (needs dependency map and stubbing policy).",
+    "source_file": "full_build_log",
+    "line": 559,
+    "path": "scaffolds/governance/missing-aspirational-modules-vs-function-index-nee-0307.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "Docs \u2194 code gap: the current code doesn\u2019t yet express the richer MDHG (it\u2019s mostly frequency-based); AGRM is promising b",
+    "source_file": "full_build_log",
+    "line": 583,
+    "path": "scaffolds/mdhg/docs-code-gap-the-current-code-doesn-t-yet-express-0308.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Store the traversal schedule so AGRM can re-enter sensibly later.",
+    "source_file": "full_build_log",
+    "line": 643,
+    "path": "scaffolds/core/store-the-traversal-schedule-so-agrm-can-re-enter-0309.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Exact transform set for N (I\u2019ll look for it in your docs/code; if missing, I\u2019ll propose one).",
+    "source_file": "full_build_log",
+    "line": 685,
+    "path": "scaffolds/core/exact-transform-set-for-n-i-ll-look-for-it-in-your-0310.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "A concrete, faithful procedure (so we can implement it later)",
+    "source_file": "full_build_log",
+    "line": 739,
+    "path": "scaffolds/core/a-concrete-faithful-procedure-so-we-can-implement-0311.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Purpose: allow bit-for-bit verification and clean restore later.",
+    "source_file": "full_build_log",
+    "line": 1027,
+    "path": "scaffolds/core/purpose-allow-bit-for-bit-verification-and-clean-r-0312.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "How restore works later",
+    "source_file": "full_build_log",
+    "line": 1053,
+    "path": "scaffolds/core/how-restore-works-later-0313.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "I won\u2019t actually create one unless you ask, but that\u2019s precisely how I do it\u2014and how I\u2019d restore it later.",
+    "source_file": "full_build_log",
+    "line": 1107,
+    "path": "scaffolds/testing/i-won-t-actually-create-one-unless-you-ask-but-tha-0314.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "This is very abstract so dont update the todo list yet. Just tell me how you understand what I just wrote, and do the sa",
+    "source_file": "full_build_log",
+    "line": 1664,
+    "path": "scaffolds/core/this-is-very-abstract-so-dont-update-the-todo-list-0315.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Log the expansion trace so later runs can reproduce exactly why/how you left the original cube.",
+    "source_file": "full_build_log",
+    "line": 1759,
+    "path": "scaffolds/core/log-the-expansion-trace-so-later-runs-can-reproduc-0316.py"
+  },
+  {
+    "bucket": "Storage/Archivist",
+    "title": "What would convince me it works: Small demos where starting from the cube reduces time-to-good-answer and lowers contrad",
+    "source_file": "full_build_log",
+    "line": 1779,
+    "path": "scaffolds/archivist/what-would-convince-me-it-works-small-demos-where-0317.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Glaring void: there isn\u2019t enough nearby evidence/support (coverage gap).",
+    "source_file": "full_build_log",
+    "line": 1800,
+    "path": "scaffolds/core/glaring-void-there-isn-t-enough-nearby-evidence-su-0318.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "HALF (support and contradiction both non-trivial, high tension, or missing N\u22481 grounding).",
+    "source_file": "full_build_log",
+    "line": 1824,
+    "path": "scaffolds/core/half-support-and-contradiction-both-non-trivial-hi-0319.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Every k ticks, allow one budgeted probe just outside the cube to avoid missing \u201cthird-way\u201d solutions; if that probe lowe",
+    "source_file": "full_build_log",
+    "line": 1836,
+    "path": "scaffolds/core/every-k-ticks-allow-one-budgeted-probe-just-outsid-0320.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Each token carries transform_path, sources, shell indices, and the Y/N/DIAG outcome with reasons (support counts, tensio",
+    "source_file": "full_build_log",
+    "line": 1840,
+    "path": "scaffolds/testing/each-token-carries-transform-path-sources-shell-in-0321.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "It aligns perfectly with your Safe Cube (N\u22480.5\u20131 start), glyphing (N=5 compression), MORSR/Wave-Pool (gap-filling/aligni",
+    "source_file": "full_build_log",
+    "line": 1848,
+    "path": "scaffolds/governance/it-aligns-perfectly-with-your-safe-cube-n-0-5-1-st-0322.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Each variant is still a binary test (Y/N) with the same DIAGNOSTIC outcomes you defined (VOID = missing coverage, HALF =",
+    "source_file": "full_build_log",
+    "line": 1885,
+    "path": "scaffolds/testing/each-variant-is-still-a-binary-test-y-n-with-the-s-0323.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Safety: you don\u2019t just chase \u201cbest plausible\u201d; you prove close negatives false, or surface what data is missing.",
+    "source_file": "full_build_log",
+    "line": 1909,
+    "path": "scaffolds/core/safety-you-don-t-just-chase-best-plausible-you-pro-0324.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Avoidance accuracy: how often no-go zones prevent later contradicted paths.",
+    "source_file": "full_build_log",
+    "line": 1923,
+    "path": "scaffolds/core/avoidance-accuracy-how-often-no-go-zones-prevent-l-0325.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Gap: The \u201cGolden-ratio spiral\u201d ranking is explicitly a placeholder; you\u2019ll want a concrete GR progression (and probably",
+    "source_file": "full_build_log",
+    "line": 2257,
+    "path": "scaffolds/testing/gap-the-golden-ratio-spiral-ranking-is-explicitly-0326.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Patching: Explicit TODO; controller logs missed nodes and marks incomplete. This will block end-to-end quality without t",
+    "source_file": "full_build_log",
+    "line": 2278,
+    "path": "scaffolds/testing/patching-explicit-todo-controller-logs-missed-node-0327.py"
+  },
+  {
+    "bucket": "E8/Lattice",
+    "title": "Navigator ranking: GR / Weyl line logic is stubbed; current ranking is \u201cshell then angle.\u201d Implement GR spiral scoring &",
+    "source_file": "full_build_log",
+    "line": 2301,
+    "path": "scaffolds/e8/navigator-ranking-gr-weyl-line-logic-is-stubbed-cu-0328.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Convergence & merge: Works when paths meet; consider robust overlap reconciliation if they nearly meet (single-node gap,",
+    "source_file": "full_build_log",
+    "line": 2311,
+    "path": "scaffolds/testing/convergence-merge-works-when-paths-meet-consider-r-0329.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "SNAP (state as a first-class primitive): Every step can be frozen as a SNAP (schema\u2019d state capsule) and later recombine",
+    "source_file": "full_build_log",
+    "line": 2345,
+    "path": "scaffolds/contracts/snap-state-as-a-first-class-primitive-every-step-c-0330.json5"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "4) Post-mortem (critical take, risks, and what\u2019s missing)",
+    "source_file": "full_build_log",
+    "line": 2354,
+    "path": "scaffolds/core/4-post-mortem-critical-take-risks-and-what-s-missi-0331.py"
+  },
+  {
+    "bucket": "E8/Lattice",
+    "title": "Navigator scoring is stubbed \u2192 implement the actual Golden-ratio / Weyl-line ordering (and later E8-aware projections).",
+    "source_file": "full_build_log",
+    "line": 2365,
+    "path": "scaffolds/e8/navigator-scoring-is-stubbed-implement-the-actual-0332.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Tests \u2192 missing unit/property tests (random seeds, pathological layouts, reproducibility, CPU budget guards).",
+    "source_file": "full_build_log",
+    "line": 2377,
+    "path": "scaffolds/testing/tests-missing-unit-property-tests-random-seeds-pat-0333.py"
+  },
+  {
+    "bucket": "E8/Lattice",
+    "title": "Abstraction drift: E8 mapping vs task geometry\u2014lock an interface: Navigator gets a metric space + legality predicates; i",
+    "source_file": "full_build_log",
+    "line": 2385,
+    "path": "scaffolds/e8/abstraction-drift-e8-mapping-vs-task-geometry-lock-0334.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Concorde for exact checks on small/medium instances to unit-test AGRM\u2019s optimality gap. (Index page with downloads/bench",
+    "source_file": "full_build_log",
+    "line": 2602,
+    "path": "scaffolds/testing/concorde-for-exact-checks-on-small-medium-instance-0335.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Immediate TODO adds (to the running list)",
+    "source_file": "full_build_log",
+    "line": 2708,
+    "path": "scaffolds/core/immediate-todo-adds-to-the-running-list-0336.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Baseline harness: LKH-3/Concorde runners for sanity metrics (gap, runtime) to benchmark AGRM configurations.",
+    "source_file": "full_build_log",
+    "line": 2713,
+    "path": "scaffolds/testing/baseline-harness-lkh-3-concorde-runners-for-sanity-0337.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "Feeds: M2 Patching (better orientation-aware insertions), M3 MDHG (hot zones get richer updates), M5 Audit (new metrics)",
+    "source_file": "full_build_log",
+    "line": 3253,
+    "path": "scaffolds/mdhg/feeds-m2-patching-better-orientation-aware-inserti-0338.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "It\u2019s minimally coupled: we can stub potentials now (User/Doc/Work/Gov) and plug in full Safe-Cube/SAP later (M9) without",
+    "source_file": "full_build_log",
+    "line": 3280,
+    "path": "scaffolds/core/it-s-minimally-coupled-we-can-stub-potentials-now-0339.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "core/agrm/chain_detect_v0_1_2025_08_13.py \u2014 gap detector (by sector jumps) + VWS hot edge seed pairs.",
+    "source_file": "full_build_log",
+    "line": 3534,
+    "path": "scaffolds/core/core-agrm-chain-detect-v0-1-2025-08-13-py-gap-dete-0340.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "(Run it and it will fail CI/local if any .py file is missing a Change-Notice: banner.)",
+    "source_file": "full_build_log",
+    "line": 3728,
+    "path": "scaffolds/testing/run-it-and-it-will-fail-ci-local-if-any-py-file-is-0341.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Design note: this is intentionally \u201csoft\u201d to keep it portable; we can add hard kills (e.g., signal) later for Unix targe",
+    "source_file": "full_build_log",
+    "line": 3968,
+    "path": "scaffolds/core/design-note-this-is-intentionally-soft-to-keep-it-0342.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "Still informs MDHG if/when you want: because edges + per-ID meta are preserved, you can batch-commit into MDHG later (du",
+    "source_file": "full_build_log",
+    "line": 4155,
+    "path": "scaffolds/mdhg/still-informs-mdhg-if-when-you-want-because-edges-0343.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Yes add these items and continue working on the todo and work lists that already exist as well please",
+    "source_file": "full_build_log",
+    "line": 4218,
+    "path": "scaffolds/core/yes-add-these-items-and-continue-working-on-the-to-0344.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "Minimal queue for heat/edges \u2192 flushes into MDHG (.heat/.edge) later.",
+    "source_file": "full_build_log",
+    "line": 4243,
+    "path": "scaffolds/agency/minimal-queue-for-heat-edges-flushes-into-mdhg-hea-0345.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "2) Progress on the existing TODO/Worklist",
+    "source_file": "full_build_log",
+    "line": 4308,
+    "path": "scaffolds/core/2-progress-on-the-existing-todo-worklist-0346.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Review final output, gap checking",
+    "source_file": "full_build_log",
+    "line": 4392,
+    "path": "scaffolds/core/review-final-output-gap-checking-0347.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Review & gap check",
+    "source_file": "full_build_log",
+    "line": 4485,
+    "path": "scaffolds/core/review-gap-check-0348.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "Review & gap check (run suite + quick perf; summarize).",
+    "source_file": "full_build_log",
+    "line": 4642,
+    "path": "scaffolds/dx/review-gap-check-run-suite-quick-perf-summarize-0349.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "If unclassified: create a provisional family/type and SNAP it as staged; ThinkTank (or a later pass) refines it, then pr",
+    "source_file": "full_build_log",
+    "line": 4762,
+    "path": "scaffolds/agency/if-unclassified-create-a-provisional-family-type-a-0350.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Let's re-evaluate the session and what we have done vs what is not complete or partially done and get a new all-inclusiv",
+    "source_file": "full_build_log",
+    "line": 4795,
+    "path": "scaffolds/core/let-s-re-evaluate-the-session-and-what-we-have-don-0351.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Here\u2019s the fresh, all-inclusive gap review and the new work order derived from it (with suggested fixes baked in). I kep",
+    "source_file": "full_build_log",
+    "line": 4799,
+    "path": "scaffolds/testing/here-s-the-fresh-all-inclusive-gap-review-and-the-0352.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Gap review: plans/gap_review_v0_1_2025_08_13.md",
+    "source_file": "full_build_log",
+    "line": 4801,
+    "path": "scaffolds/core/gap-review-plans-gap-review-v0-1-2025-08-13-md-0353.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Got it \u2014 here\u2019s a deep, checkpointed review of the whole session. I\u2019ll be blunt where it helps. For each checkpoint I no",
+    "source_file": "full_build_log",
+    "line": 4855,
+    "path": "scaffolds/core/got-it-here-s-a-deep-checkpointed-review-of-the-wh-0354.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Gap-fix: Codify global invariants as machine-checkable pre/postconditions (Safe-Cube) and a short list of system-level K",
+    "source_file": "full_build_log",
+    "line": 4862,
+    "path": "scaffolds/testing/gap-fix-codify-global-invariants-as-machine-checka-0355.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Gap-fix: Implement a shell/glyph encoder (even a minimal one) and run A/B: AGRM with vs without glyph compression; track",
+    "source_file": "full_build_log",
+    "line": 4869,
+    "path": "scaffolds/testing/gap-fix-implement-a-shell-glyph-encoder-even-a-min-0356.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "Gap-fix: Add adjacency/elevator weighting in MDHG and feed those into VWS. Learn thresholds per domain (SNAPDNA) instead",
+    "source_file": "full_build_log",
+    "line": 4876,
+    "path": "scaffolds/mdhg/gap-fix-add-adjacency-elevator-weighting-in-mdhg-a-0357.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Gap-fix: Drive portfolio params from ThinkTank via SNAPDNA (task domain, entropy, budgets). Incorporate MDHG elevator bi",
+    "source_file": "full_build_log",
+    "line": 4883,
+    "path": "scaffolds/testing/gap-fix-drive-portfolio-params-from-thinktank-via-0358.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "Gap-fix: Extend SNAPDNA to mint expert profiles with capability vectors and thresholds; allow pluggable classifiers (rul",
+    "source_file": "full_build_log",
+    "line": 4890,
+    "path": "scaffolds/snap_dna/gap-fix-extend-snapdna-to-mint-expert-profiles-wit-0359.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "Gap-fix: Implement Safe-Cube gate (pre-solve). Wire SAP flows: on violation \u2192 freeze output, raise SNAP_escalation, atta",
+    "source_file": "full_build_log",
+    "line": 4897,
+    "path": "scaffolds/governance/gap-fix-implement-safe-cube-gate-pre-solve-wire-sa-0360.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "Gap-fix: Hook ThinkTank into portfolio selection; build MORSR (middle-out ripples) and WavePool (counter-wave context) a",
+    "source_file": "full_build_log",
+    "line": 4904,
+    "path": "scaffolds/agency/gap-fix-hook-thinktank-into-portfolio-selection-bu-0361.py"
+  },
+  {
+    "bucket": "Storage/Archivist",
+    "title": "Gap-fix: Add retention and sampling strategies per universe; expose projector predicates (e.g., \u201ctop-k by recency/heat\u201d)",
+    "source_file": "full_build_log",
+    "line": 4911,
+    "path": "scaffolds/archivist/gap-fix-add-retention-and-sampling-strategies-per-0362.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "Gap-fix: Add health pings + exponential backoff; enrich policy checks (rate limits, PII boundaries) tied to universes an",
+    "source_file": "full_build_log",
+    "line": 4918,
+    "path": "scaffolds/governance/gap-fix-add-health-pings-exponential-backoff-enric-0363.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "Gap-fix: Build promotion report (HTML) and a tiny anomaly detector on thrash/coverage trends to pre-empt bad promotions.",
+    "source_file": "full_build_log",
+    "line": 4925,
+    "path": "scaffolds/dx/gap-fix-build-promotion-report-html-and-a-tiny-ano-0364.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "Gap-fix: Integrate journal append per inline tick; store replay watermark in a SNAP; replay on startup/escalation before",
+    "source_file": "full_build_log",
+    "line": 4932,
+    "path": "scaffolds/snap_dna/gap-fix-integrate-journal-append-per-inline-tick-s-0365.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Gap-fix: Implement a shell/glyph RAG parser; add SFBB harness (n=5\u20138) to learn seed/prodigal policies that might general",
+    "source_file": "full_build_log",
+    "line": 4939,
+    "path": "scaffolds/testing/gap-fix-implement-a-shell-glyph-rag-parser-add-sfb-0366.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "Gap-fix: Add 8-DoF bias field feeding sector targets; measure stall reduction & gate stability.",
+    "source_file": "full_build_log",
+    "line": 4946,
+    "path": "scaffolds/mdhg/gap-fix-add-8-dof-bias-field-feeding-sector-target-0367.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "Gap-fix: Introduce a minimal test harness (pytest) focusing on: promotion policy gates, journal replay fidelity, MDHG ad",
+    "source_file": "full_build_log",
+    "line": 4953,
+    "path": "scaffolds/governance/gap-fix-introduce-a-minimal-test-harness-pytest-fo-0368.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Gap-fix: A concise Concepts \u2192 How-to \u2192 API docs site; include a \u201creasoning playbook\u201d showing E8/shell/glyph decisions wi",
+    "source_file": "full_build_log",
+    "line": 4960,
+    "path": "scaffolds/testing/gap-fix-a-concise-concepts-how-to-api-docs-site-in-0369.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "Yes please do. And let me ask you this, can, when doing the assembly line task and work need review, you allow multiple",
+    "source_file": "full_build_log",
+    "line": 5110,
+    "path": "scaffolds/agency/yes-please-do-and-let-me-ask-you-this-can-when-doi-0370.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "Absolutely\u2014your assumption is right. The Assembly-Line can manage multiple work items at once by treating the backlog as",
+    "source_file": "full_build_log",
+    "line": 5116,
+    "path": "scaffolds/agency/absolutely-your-assumption-is-right-the-assembly-l-0371.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "Crash-safe learning: inline discoveries are durable; later MDHG runs inherit them automatically.",
+    "source_file": "full_build_log",
+    "line": 5172,
+    "path": "scaffolds/mdhg/crash-safe-learning-inline-discoveries-are-durable-0372.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "With your go-ahead, I can run the Assembly-Line across several P0s simultaneously (as a Todo Universe):",
+    "source_file": "full_build_log",
+    "line": 5180,
+    "path": "scaffolds/agency/with-your-go-ahead-i-can-run-the-assembly-line-acr-0373.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Yes\u2014accurate. We can treat the backlog as a \u201cTodo Universe\u201d and apply the same mechanics:",
+    "source_file": "full_build_log",
+    "line": 5268,
+    "path": "scaffolds/core/yes-accurate-we-can-treat-the-backlog-as-a-todo-un-0374.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Your assumption is correct. Treating the backlog as a \u201cTodo Universe\u201d works: we can atomize several tasks, schedule them",
+    "source_file": "full_build_log",
+    "line": 5356,
+    "path": "scaffolds/testing/your-assumption-is-correct-treating-the-backlog-as-0375.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Add a seeding_strategy switch: \"exact\" (current), \"grid_sample\" (candidate subset per cell), \"annoy\"/\"hnsw\" (if we decid",
+    "source_file": "full_build_log",
+    "line": 5364,
+    "path": "scaffolds/testing/add-a-seeding-strategy-switch-exact-current-grid-s-0376.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Yes\u2014your assumption is accurate. We can (and did) treat multiple tasks as nodes in a \u201cTodo Universe.\u201d The same mechanics",
+    "source_file": "full_build_log",
+    "line": 5455,
+    "path": "scaffolds/core/yes-your-assumption-is-accurate-we-can-and-did-tre-0377.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "Love this drop\u2014this is exactly the missing glue. Here\u2019s how I\u2019d fold your formulas (SP, C(n), I(n), \u03c6-scaling) into the",
+    "source_file": "full_build_log",
+    "line": 5764,
+    "path": "scaffolds/snap_dna/love-this-drop-this-is-exactly-the-missing-glue-he-0378.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "a missing normalization, or",
+    "source_file": "full_build_log",
+    "line": 6303,
+    "path": "scaffolds/core/a-missing-normalization-or-0379.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Zero error at anchors (by design), monotonicity holds for 6\u201310 with the fitted coefficients, and it\u2019s robust for small i",
+    "source_file": "full_build_log",
+    "line": 6713,
+    "path": "scaffolds/testing/zero-error-at-anchors-by-design-monotonicity-holds-0380.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "If you\u2019re good with that, I\u2019ll spin those variants in the harness next (still no core changes), show you the comparison",
+    "source_file": "full_build_log",
+    "line": 7259,
+    "path": "scaffolds/governance/if-you-re-good-with-that-i-ll-spin-those-variants-0381.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "The best performers (fewest false skips\u2014missing a real imperfection\u2014with modest false patches) are:",
+    "source_file": "full_build_log",
+    "line": 7272,
+    "path": "scaffolds/core/the-best-performers-fewest-false-skips-missing-a-r-0382.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "If you\u2019re happy with these candidates, I\u2019ll do those three quick checks next and then package the two formula profiles a",
+    "source_file": "full_build_log",
+    "line": 7397,
+    "path": "scaffolds/testing/if-you-re-happy-with-these-candidates-i-ll-do-thos-0383.py"
+  },
+  {
+    "bucket": "Storage/Archivist",
+    "title": "Compensation remains unnecessary here; the staircase already absorbs the even-n step-ups. If we later push to n\u226512 with",
+    "source_file": "full_build_log",
+    "line": 7427,
+    "path": "scaffolds/archivist/compensation-remains-unnecessary-here-the-staircas-0384.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Adopt (for A/B later):",
+    "source_file": "full_build_log",
+    "line": 7437,
+    "path": "scaffolds/core/adopt-for-a-b-later-0385.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Keep compensation OFF by default. Enable only if a domain shows systematic under-prediction at higher n (we can add a ti",
+    "source_file": "full_build_log",
+    "line": 7443,
+    "path": "scaffolds/core/keep-compensation-off-by-default-enable-only-if-a-0386.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "anchors_I: {6:1, 7:6, 8:27} (editable later)",
+    "source_file": "full_build_log",
+    "line": 7485,
+    "path": "scaffolds/core/anchors-i-6-1-7-6-8-27-editable-later-0387.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Allow controller_v0_7 (and later v0_6) to accept universe_name; materialize then run.",
+    "source_file": "full_build_log",
+    "line": 8117,
+    "path": "scaffolds/core/allow-controller-v0-7-and-later-v0-6-to-accept-uni-0388.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Added a typed config dataclass AGRMConfig (pydantic-ready later).",
+    "source_file": "full_build_log",
+    "line": 8613,
+    "path": "scaffolds/core/added-a-typed-config-dataclass-agrmconfig-pydantic-0389.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Runs grid/grid vs lhs/grid vs poisson/grid, and lhs/faiss (falls back if FAISS missing).",
+    "source_file": "full_build_log",
+    "line": 8686,
+    "path": "scaffolds/core/runs-grid-grid-vs-lhs-grid-vs-poisson-grid-and-lhs-0390.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "\"adj_backend\": \"faiss\",             # grid | faiss | hnsw (falls back if missing)",
+    "source_file": "full_build_log",
+    "line": 8717,
+    "path": "scaffolds/core/adj-backend-faiss-grid-faiss-hnsw-falls-back-if-mi-0391.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "# criteria missing \"tags\" \u2192 mannequin.activate_stream(...) returns allow=False, reason=\"safe_cube_requires_tags\"",
+    "source_file": "full_build_log",
+    "line": 8805,
+    "path": "scaffolds/dx/criteria-missing-tags-mannequin-activate-stream-re-0392.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Concept\tIntended\tCurrent\tGap\tImmediate next move",
+    "source_file": "full_build_log",
+    "line": 9238,
+    "path": "scaffolds/core/concept-intended-current-gap-immediate-next-move-0393.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Glyph compression\tCollapse n\u22655 nodes to compressed glyph; traversable up/down\tNot present\tMissing core compression + lin",
+    "source_file": "full_build_log",
+    "line": 9240,
+    "path": "scaffolds/testing/glyph-compression-collapse-n-5-nodes-to-compressed-0394.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "MORSR\tMiddle-out ripple + sub-ripples; depth-limited\tNot present\tMissing core explorer\tImplement explorers/morsr.py; ret",
+    "source_file": "full_build_log",
+    "line": 9244,
+    "path": "scaffolds/agency/morsr-middle-out-ripple-sub-ripples-depth-limited-0395.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "Wave Pool\tCounter-propagating context waves; excitation at meet point\tNot present\tMissing wave engine & meeting policy\tI",
+    "source_file": "full_build_log",
+    "line": 9245,
+    "path": "scaffolds/governance/wave-pool-counter-propagating-context-waves-excita-0396.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Yes please. Do that and attach it as needed to any and all work done or to be done, and let's continue.",
+    "source_file": "full_build_log",
+    "line": 9642,
+    "path": "scaffolds/core/yes-please-do-that-and-attach-it-as-needed-to-any-0397.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Note: This pass uses lightweight heuristics for _top_terms (frequency + bigram bonus). It\u2019s deliberately swappable later",
+    "source_file": "full_build_log",
+    "line": 9916,
+    "path": "scaffolds/core/note-this-pass-uses-lightweight-heuristics-for-top-0398.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Inverse exploration: invert() provides a clean placeholder so we can integrate your inverse-idea exploration immediately",
+    "source_file": "full_build_log",
+    "line": 9944,
+    "path": "scaffolds/core/inverse-exploration-invert-provides-a-clean-placeh-0399.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "agrm/agrm/elevator_promotion.py: composite scoring + per-family/type tallies + robust handling of missing family/type.",
+    "source_file": "full_build_log",
+    "line": 11252,
+    "path": "scaffolds/core/agrm-agrm-elevator-promotion-py-composite-scoring-0400.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "If not fully shelled at the point of fully saturated state, inform user of needed gap coverage material, and request per",
+    "source_file": "full_build_log",
+    "line": 11622,
+    "path": "scaffolds/core/if-not-fully-shelled-at-the-point-of-fully-saturat-0401.py"
+  },
+  {
+    "bucket": "Schema/Contracts",
+    "title": "GAP_REQUEST: If saturated but coverage < target, SOC emits a permissioned Gap SNAP listing exact needs (schemas, example",
+    "source_file": "full_build_log",
+    "line": 11666,
+    "path": "scaffolds/contracts/gap-request-if-saturated-but-coverage-target-soc-e-0402.json5"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "4) Gap analysis (what to ask for)",
+    "source_file": "full_build_log",
+    "line": 11702,
+    "path": "scaffolds/core/4-gap-analysis-what-to-ask-for-0403.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Check family/type holes (e.g., missing \u201cmetric\u201d type).",
+    "source_file": "full_build_log",
+    "line": 11706,
+    "path": "scaffolds/core/check-family-type-holes-e-g-missing-metric-type-0404.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "Emit a GAP SNAP with precise items: \u201cNeed 2 policy memos (2025), 1 metrics sheet, 1 procedure doc; sources allowed: X/Y;",
+    "source_file": "full_build_log",
+    "line": 11710,
+    "path": "scaffolds/governance/emit-a-gap-snap-with-precise-items-need-2-policy-m-0405.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "Gap Analyzer: new snap/gaps.py (computes missing facets, emits GAP SNAP).",
+    "source_file": "full_build_log",
+    "line": 11766,
+    "path": "scaffolds/snap_dna/gap-analyzer-new-snap-gaps-py-computes-missing-fac-0406.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "gap = Gaps.compute(request_snap, working, beacons)",
+    "source_file": "full_build_log",
+    "line": 11800,
+    "path": "scaffolds/snap_dna/gap-gaps-compute-request-snap-working-beacons-0407.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Trails.append(trail, {\"event\":\"gap_request\", \"gap\": gap.spec})",
+    "source_file": "full_build_log",
+    "line": 11801,
+    "path": "scaffolds/core/trails-append-trail-event-gap-request-gap-gap-spec-0408.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "if not Permissions.allowed(gap):",
+    "source_file": "full_build_log",
+    "line": 11802,
+    "path": "scaffolds/core/if-not-permissions-allowed-gap-0409.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "fetched = EvidenceFetcher.fetch(gap)",
+    "source_file": "full_build_log",
+    "line": 11804,
+    "path": "scaffolds/core/fetched-evidencefetcher-fetch-gap-0410.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Gap Analyzer using W5H facet deficits + beacon decay + type/family holes.",
+    "source_file": "full_build_log",
+    "line": 11816,
+    "path": "scaffolds/testing/gap-analyzer-using-w5h-facet-deficits-beacon-decay-0411.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "If you\u2019re happy with this design, I\u2019ll draft SOC + Gap Analyzer as next steps, wire them into Trails and Beacons, and ke",
+    "source_file": "full_build_log",
+    "line": 11824,
+    "path": "scaffolds/core/if-you-re-happy-with-this-design-i-ll-draft-soc-ga-0412.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Absolutely\u2014here\u2019s a tight, relevance-only triage. I\u2019m not adapting anything; just assessing fit, risks, and what\u2014if anyt",
+    "source_file": "full_build_log",
+    "line": 11841,
+    "path": "scaffolds/testing/absolutely-here-s-a-tight-relevance-only-triage-i-0413.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "If we test later: Compare its \u201chigh-complexity node\u201d flags against (a) our elevator promotions and (b) W5H/beacon alignm",
+    "source_file": "full_build_log",
+    "line": 11853,
+    "path": "scaffolds/testing/if-we-test-later-compare-its-high-complexity-node-0414.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "If we test later: Treat these as threshold hypotheses in our stress suites and measure whether escalation at 6/7 actuall",
+    "source_file": "full_build_log",
+    "line": 11865,
+    "path": "scaffolds/testing/if-we-test-later-treat-these-as-threshold-hypothes-0415.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "If we test later: Run ablation: tie sweep geometry/arms to these phase labels vs. an unconstrained tuner; compare Ops me",
+    "source_file": "full_build_log",
+    "line": 11877,
+    "path": "scaffolds/testing/if-we-test-later-run-ablation-tie-sweep-geometry-a-0416.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "If we test later: Use it to formalize our Trail/Playbook QA checklists (coverage, stability regions) for any domain-spec",
+    "source_file": "full_build_log",
+    "line": 11889,
+    "path": "scaffolds/testing/if-we-test-later-use-it-to-formalize-our-trail-pla-0417.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "If we test later: Keep in the Experimental Track\u2014run GRM/AGRM as a side-arm during sweeps and report deltas (promotion q",
+    "source_file": "full_build_log",
+    "line": 11901,
+    "path": "scaffolds/testing/if-we-test-later-keep-in-the-experimental-track-ru-0418.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Deliverables: tables, plots, Trails, and a mini-corpus of synthetic \u201chard spots\u201d we can reuse in later tests.",
+    "source_file": "full_build_log",
+    "line": 12001,
+    "path": "scaffolds/testing/deliverables-tables-plots-trails-and-a-mini-corpus-0419.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "primer snap \u2192 refine (specific snaps) \u2192 check \u2192 saturation/gap \u2192 finalize.",
+    "source_file": "full_build_log",
+    "line": 12049,
+    "path": "scaffolds/testing/primer-snap-refine-specific-snaps-check-saturation-0420.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "During solve, dimensional divide the space as per the documents and our future findings.(this is to be done to all prodi",
+    "source_file": "full_build_log",
+    "line": 12209,
+    "path": "scaffolds/core/during-solve-dimensional-divide-the-space-as-per-t-0421.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Always taking perfect edges early can cause many costly imperfections later.",
+    "source_file": "full_build_log",
+    "line": 12274,
+    "path": "scaffolds/core/always-taking-perfect-edges-early-can-cause-many-c-0422.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Update beam heuristics (which perfect choices usually backfire later).",
+    "source_file": "full_build_log",
+    "line": 12325,
+    "path": "scaffolds/core/update-beam-heuristics-which-perfect-choices-usual-0423.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Temporal gap: \u201cwhen\u201d misalignment vs active beacons \u2192 either down-weight or demand a recency citation in the bridge.",
+    "source_file": "full_build_log",
+    "line": 12467,
+    "path": "scaffolds/testing/temporal-gap-when-misalignment-vs-active-beacons-e-0424.py"
+  },
+  {
+    "bucket": "Testing/Perf",
+    "title": "Still no effect on scoring/promotion until we explicitly enable that later.",
+    "source_file": "full_build_log",
+    "line": 12648,
+    "path": "scaffolds/testing/still-no-effect-on-scoring-promotion-until-we-expl-0425.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Gap requests accuracy (needed vs. unnecessary asks).",
+    "source_file": "full_build_log",
+    "line": 12718,
+    "path": "scaffolds/core/gap-requests-accuracy-needed-vs-unnecessary-asks-0426.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Greedy lengths match expectations for n=3\u20136; artifact includes an n=5 overlap heatmap (saved image) so we can start doin",
+    "source_file": "full_build_log",
+    "line": 12942,
+    "path": "scaffolds/core/greedy-lengths-match-expectations-for-n-3-6-artifa-0427.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "PII/Governance first: mandatory scrubbers; Sentinel blocks SNAPs missing classification (family/type) or redaction tags.",
+    "source_file": "full_build_log",
+    "line": 13283,
+    "path": "scaffolds/governance/pii-governance-first-mandatory-scrubbers-sentinel-0428.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Sampling + budgets: default digest, 25% sample, per-universe caps; Promoted later based on metrics.",
+    "source_file": "full_build_log",
+    "line": 13307,
+    "path": "scaffolds/core/sampling-budgets-default-digest-25-sample-per-univ-0429.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Augmented env/data.make_metas(...) to attach deterministic w5h vectors per node (or created a thin env if missing).",
+    "source_file": "full_build_log",
+    "line": 13989,
+    "path": "scaffolds/core/augmented-env-data-make-metas-to-attach-determinis-0430.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "Staging TTL/decay: still governed by DNA_POLICY[\"staging_ttl_hours\"]; you can override per scenario later if you want me",
+    "source_file": "full_build_log",
+    "line": 14248,
+    "path": "scaffolds/governance/staging-ttl-decay-still-governed-by-dna-policy-sta-0431.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Consensus gap: cost_delta_pct \u2265 1\u20133% (gives the fast-path something to gate).",
+    "source_file": "full_build_log",
+    "line": 14752,
+    "path": "scaffolds/core/consensus-gap-cost-delta-pct-1-3-gives-the-fast-pa-0432.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "Can we build a \"what is missing in any way\" universe, mot referring to us building right now, but how the system runs.",
+    "source_file": "full_build_log",
+    "line": 14961,
+    "path": "scaffolds/dx/can-we-build-a-what-is-missing-in-any-way-universe-0433.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "Every task gets evaluated before work of what is missing shell wise, what n level is achieved, what expertise is require",
+    "source_file": "full_build_log",
+    "line": 14963,
+    "path": "scaffolds/dx/every-task-gets-evaluated-before-work-of-what-is-m-0434.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "1) \u201cWhat is missing?\u201d Universe (GAPS) \u2014 shipped a first cut",
+    "source_file": "full_build_log",
+    "line": 14980,
+    "path": "scaffolds/core/1-what-is-missing-universe-gaps-shipped-a-first-cu-0435.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "I added a self-contained GAPS (Missingness Universe) module that does exactly what you described: before any work, it ev",
+    "source_file": "full_build_log",
+    "line": 14982,
+    "path": "scaffolds/core/i-added-a-self-contained-gaps-missingness-universe-0436.py"
+  },
+  {
+    "bucket": "Storage/Archivist",
+    "title": "Archivist/Projector (surface exactly what evidence is missing)",
+    "source_file": "full_build_log",
+    "line": 15013,
+    "path": "scaffolds/archivist/archivist-projector-surface-exactly-what-evidence-0437.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "If you want, I\u2019ll plug this GAPS preflight directly into SnapLat\u2019s intake path next and add the Bridge-Chaser + Inverse",
+    "source_file": "full_build_log",
+    "line": 15037,
+    "path": "scaffolds/snap_dna/if-you-want-i-ll-plug-this-gaps-preflight-directly-0438.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "\u2705 GAPS (\u201cwhat\u2019s missing?\u201d) preflight \u2014 integrated deliverable",
+    "source_file": "full_build_log",
+    "line": 15054,
+    "path": "scaffolds/core/gaps-what-s-missing-preflight-integrated-deliverab-0439.py"
+  },
+  {
+    "bucket": "DX/Reporting",
+    "title": "I prepared a clean, drop-in integration pack that runs before planning to compute missing shells/W5H, estimate n-level,",
+    "source_file": "full_build_log",
+    "line": 15056,
+    "path": "scaffolds/dx/i-prepared-a-clean-drop-in-integration-pack-that-r-0440.py"
+  },
+  {
+    "bucket": "Governance/Policy",
+    "title": "\u279c Adaptation: parameterize SNAPs by context beacons (W5H + rules/komi), and treat \u201cbest\u201d as a distribution (policy) with",
+    "source_file": "full_build_log",
+    "line": 15095,
+    "path": "scaffolds/governance/adaptation-parameterize-snaps-by-context-beacons-w-0441.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "GAPS preflight: flags missing rule info or weak W5H (e.g., \u201cwhere\u201d = low \u2192 board region unknown; inject local scans).",
+    "source_file": "full_build_log",
+    "line": 15120,
+    "path": "scaffolds/core/gaps-preflight-flags-missing-rule-info-or-weak-w5h-0442.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "GAPS now runs before planning on every task to surface \u201cwhat is missing\u201d, recommend systems, and generate half-bridges +",
+    "source_file": "full_build_log",
+    "line": 15176,
+    "path": "scaffolds/core/gaps-now-runs-before-planning-on-every-task-to-sur-0443.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "Every task now gets a \u201cwhat\u2019s missing?\u201d assessment (n-level estimate, W5H gaps, required expertise, recommended subsyste",
+    "source_file": "full_build_log",
+    "line": 15220,
+    "path": "scaffolds/snap_dna/every-task-now-gets-a-what-s-missing-assessment-n-0444.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "Demo \u2014 Summary (v0.30.17): per-scenario preflight summary (n_est, missing count, recommended systems/expertise, SNAP id)",
+    "source_file": "full_build_log",
+    "line": 15240,
+    "path": "scaffolds/snap_dna/demo-summary-v0-30-17-per-scenario-preflight-summa-0445.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Demo \u2014 Bridge Candidates (v0.30.17): top bridge targets per missing dimension and Universe.",
+    "source_file": "full_build_log",
+    "line": 15242,
+    "path": "scaffolds/core/demo-bridge-candidates-v0-30-17-top-bridge-targets-0446.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "\u201cWhat is missing in any way\u201d Universe \u2192 GAPS now runs automatically, tells us what we lack, and emits half-bridges + hyp",
+    "source_file": "full_build_log",
+    "line": 15268,
+    "path": "scaffolds/core/what-is-missing-in-any-way-universe-gaps-now-runs-0447.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Otherwise bumps decay (for later culling or recheck).",
+    "source_file": "full_build_log",
+    "line": 15399,
+    "path": "scaffolds/core/otherwise-bumps-decay-for-later-culling-or-recheck-0448.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "GAPS preflight for each scenario (n_est, missing dims, recommended systems, expertise, SNAP id).",
+    "source_file": "full_build_log",
+    "line": 15418,
+    "path": "scaffolds/snap_dna/gaps-preflight-for-each-scenario-n-est-missing-dim-0449.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Ranked half-bridges by Universe and missing dimension.",
+    "source_file": "full_build_log",
+    "line": 15421,
+    "path": "scaffolds/core/ranked-half-bridges-by-universe-and-missing-dimens-0450.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Staging is no longer a sink; FS2 promotes when wins are shown, otherwise the item decays toward culling or later recheck",
+    "source_file": "full_build_log",
+    "line": 15447,
+    "path": "scaffolds/core/staging-is-no-longer-a-sink-fs2-promotes-when-wins-0451.py"
+  },
+  {
+    "bucket": "Agency/Orchestration",
+    "title": "Landed across v0.30.17: repo structure, SNAP scaffolding, GAPS preflight, W5H-driven gap finding, staging queue, basic r",
+    "source_file": "full_build_log",
+    "line": 15618,
+    "path": "scaffolds/agency/landed-across-v0-30-17-repo-structure-snap-scaffol-0452.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Later stages (NOT STARTED)",
+    "source_file": "full_build_log",
+    "line": 15627,
+    "path": "scaffolds/core/later-stages-not-started-0453.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "These validate the \u201cproper plotting + context intake\u201d path end-to-end (simple heuristics for now; wired to be replaced b",
+    "source_file": "full_build_log",
+    "line": 15695,
+    "path": "scaffolds/snap_dna/these-validate-the-proper-plotting-context-intake-0454.py"
+  },
+  {
+    "bucket": "E8/Lattice",
+    "title": "Add a doc-intake \u201clattice projection\u201d table that will later map to E8 coordinates.",
+    "source_file": "full_build_log",
+    "line": 15721,
+    "path": "scaffolds/e8/add-a-doc-intake-lattice-projection-table-that-wil-0455.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "What\u2019s missing to call it \u201cfull MDHG\u201d",
+    "source_file": "full_build_log",
+    "line": 15813,
+    "path": "scaffolds/mdhg/what-s-missing-to-call-it-full-mdhg-0456.py"
+  },
+  {
+    "bucket": "MDHG/Stability",
+    "title": "Lengths: first run 6073, later runs drifted in the ~6184 \u2192 6211 range (no improvement).",
+    "source_file": "full_build_log",
+    "line": 15890,
+    "path": "scaffolds/mdhg/lengths-first-run-6073-later-runs-drifted-in-the-6-0457.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Golden-ratio bridge placement: \u03c6-weighted selection when multiple k=6 are available; de-prefer patterns known to induce",
+    "source_file": "full_build_log",
+    "line": 16024,
+    "path": "scaffolds/core/golden-ratio-bridge-placement-weighted-selection-w-0458.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Tune the negative-threshold per context density (dynamic: more forgiving early, stricter later).",
+    "source_file": "full_build_log",
+    "line": 16595,
+    "path": "scaffolds/core/tune-the-negative-threshold-per-context-density-dy-0459.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Tighten negative-cache thresholds dynamically (lenient early, strict later).",
+    "source_file": "full_build_log",
+    "line": 16705,
+    "path": "scaffolds/core/tighten-negative-cache-thresholds-dynamically-leni-0460.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Dynamic neg-thresholds: lenient early steps, stricter later (reduces false negatives while keeping pruning strong).",
+    "source_file": "full_build_log",
+    "line": 16760,
+    "path": "scaffolds/core/dynamic-neg-thresholds-lenient-early-steps-stricte-0461.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Dynamic negative thresholds: early steps lenient, late steps strict (linear schedule). Cuts false negatives up front; cl",
+    "source_file": "full_build_log",
+    "line": 16784,
+    "path": "scaffolds/core/dynamic-negative-thresholds-early-steps-lenient-la-0462.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Coverage %, total added length, lower-bound gap (matching-based), symmetry signature.",
+    "source_file": "full_build_log",
+    "line": 16967,
+    "path": "scaffolds/core/coverage-total-added-length-lower-bound-gap-matchi-0463.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "S as the cost. Your \u201cwhat\u2019s-missing\u201d universe supplies the heuristic (unresolved shells = lower bound).",
+    "source_file": "full_build_log",
+    "line": 17311,
+    "path": "scaffolds/core/s-as-the-cost-your-what-s-missing-universe-supplie-0464.py"
+  },
+  {
+    "bucket": "SNAP/DNA",
+    "title": "Most value: candidate ordering, AGRM control, and SNAP pipeline planning with A*-style search and a small admissible heu",
+    "source_file": "full_build_log",
+    "line": 17381,
+    "path": "scaffolds/snap_dna/most-value-candidate-ordering-agrm-control-and-sna-0465.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Improves strict search later (turns near-miss structure into step hints, neg patterns, or constraints).",
+    "source_file": "full_build_log",
+    "line": 17425,
+    "path": "scaffolds/core/improves-strict-search-later-turns-near-miss-struc-0466.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "Bridge potential (raises mutual information between two universe views, or resolves a missing shell).",
+    "source_file": "full_build_log",
+    "line": 17441,
+    "path": "scaffolds/core/bridge-potential-raises-mutual-information-between-0467.py"
+  },
+  {
+    "bucket": "Core/Runtime",
+    "title": "In this environment we may time-box. You want to bank progress (partial solve segments) and later finish to perfect with",
+    "source_file": "full_build_log",
+    "line": 17468,
+    "path": "scaffolds/core/in-this-environment-we-may-time-box-you-want-to-ba-0468.py"
+  }
+]

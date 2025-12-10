@@ -1,0 +1,353 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://morphonic.org/schemas/chrom.schema.json",
+  "title": "\u039b\u039f\u03c7 Chromatic Program",
+  "type": "object",
+  "required": [
+    "profile",
+    "program"
+  ],
+  "properties": {
+    "profile": {
+      "type": "object",
+      "description": "Calibration profile for Color\u2192Control compilation.",
+      "required": [
+        "R",
+        "Pi",
+        "kappa",
+        "taps_table"
+      ],
+      "properties": {
+        "R": {
+          "type": "array",
+          "description": "Spectral response matrix; shape [channels \u00d7 bands]. Units arbitrary but consistent.",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "minItems": 1
+        },
+        "wavelengths_nm": {
+          "type": "array",
+          "description": "Wavelength grid corresponding to R columns (nm). Length must equal number of bands.",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 1
+        },
+        "Pi": {
+          "type": "object",
+          "description": "Perceptual map parameters.",
+          "required": [
+            "model",
+            "whitepoint",
+            "transfer"
+          ],
+          "properties": {
+            "model": {
+              "type": "string",
+              "enum": [
+                "HSV",
+                "HSL",
+                "CIELAB",
+                "CIELUV"
+              ]
+            },
+            "whitepoint": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "transfer": {
+              "type": "string",
+              "enum": [
+                "linear",
+                "sRGB",
+                "PQ",
+                "HLG",
+                "ACEScg",
+                "custom"
+              ]
+            },
+            "transfer_params": {
+              "type": "object"
+            }
+          },
+          "additionalProperties": false
+        },
+        "kappa": {
+          "type": "object",
+          "description": "Compilation gains for delay and gradient.",
+          "required": [
+            "tau",
+            "grad"
+          ],
+          "properties": {
+            "tau": {
+              "type": "number",
+              "description": "\u03ba_\u03c4 (delay gain)"
+            },
+            "grad": {
+              "type": "number",
+              "description": "\u03ba_g (gradient\u2192delay gain)"
+            }
+          },
+          "additionalProperties": false
+        },
+        "Omega0": {
+          "type": "number",
+          "description": "Base angular frequency for ring projection (optional)."
+        },
+        "taps_table": {
+          "type": "array",
+          "description": "Mappings from harmony types to tap positions on the ring (radians).",
+          "items": {
+            "type": "object",
+            "required": [
+              "harmony",
+              "taps_rad"
+            ],
+            "properties": {
+              "harmony": {
+                "type": "string",
+                "enum": [
+                  "monadic",
+                  "complement",
+                  "split_complement",
+                  "triad",
+                  "tetrad"
+                ]
+              },
+              "taps_rad": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 1
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "program": {
+      "type": "array",
+      "description": "Chromatic program: sequence of color/gradient/harmony ops.",
+      "items": {
+        "type": "object",
+        "oneOf": [
+          {
+            "title": "Hue literal",
+            "required": [
+              "op",
+              "theta_deg"
+            ],
+            "properties": {
+              "op": {
+                "const": "hue"
+              },
+              "theta_deg": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 360
+              },
+              "lux": {
+                "type": "number",
+                "minimum": 0
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "title": "RGB literal",
+            "required": [
+              "op",
+              "rgb_linear"
+            ],
+            "properties": {
+              "op": {
+                "const": "rgb"
+              },
+              "rgb_linear": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0.0
+                },
+                "minItems": 3,
+                "maxItems": 3
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "title": "Wavelength band",
+            "required": [
+              "op",
+              "band_nm"
+            ],
+            "properties": {
+              "op": {
+                "const": "band"
+              },
+              "band_nm": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0.0
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "lux": {
+                "type": "number",
+                "minimum": 0
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "title": "Spectrum",
+            "required": [
+              "op",
+              "spectrum"
+            ],
+            "properties": {
+              "op": {
+                "const": "spec"
+              },
+              "spectrum": {
+                "type": "array",
+                "description": "Pairs [\u03bb_nm, power]",
+                "items": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "minItems": 1
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "title": "Gradient",
+            "required": [
+              "op",
+              "c1",
+              "c2",
+              "slope",
+              "width"
+            ],
+            "properties": {
+              "op": {
+                "const": "grad"
+              },
+              "c1": {
+                "type": "object"
+              },
+              "c2": {
+                "type": "object"
+              },
+              "slope": {
+                "type": "number",
+                "minimum": 0
+              },
+              "width": {
+                "type": "number",
+                "minimum": 0
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "title": "Harmony \u2014 triad",
+            "required": [
+              "op",
+              "base"
+            ],
+            "properties": {
+              "op": {
+                "const": "triad"
+              },
+              "base": {
+                "type": "object"
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "title": "Harmony \u2014 tetrad",
+            "required": [
+              "op",
+              "base"
+            ],
+            "properties": {
+              "op": {
+                "const": "tetrad"
+              },
+              "base": {
+                "type": "object"
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "title": "Harmony \u2014 complement",
+            "required": [
+              "op",
+              "base"
+            ],
+            "properties": {
+              "op": {
+                "const": "comp"
+              },
+              "base": {
+                "type": "object"
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "codex:cad06412-1824-44fa-92f4-1223764d8479",
+  "term": "geodesic_score",
+  "kind": "function",
+  "aliases": [
+    "gscore",
+    "beta_term"
+  ],
+  "definitions": [
+    {
+      "lang": "en",
+      "text": "A scoring term based on E8 geodesic distance between two points.",
+      "confidence": 0.9
+    }
+  ],
+  "python_stub": "def geodesic_score(a: np.ndarray, b: np.ndarray) -> float: ...",
+  "metadata": {
+    "owner": "core-search",
+    "stability": "experimental"
+  },
+  "e8": {
+    "version": "0.1",
+    "coords": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "root_loc": {
+      "nearest_roots": [
+        {
+          "index": 0,
+          "inner_product": 1.0
+        }
+      ],
+      "reflections": [],
+      "adjacency_rule": "inner_product_eq_1"
+    },
+    "axes": {
+      "version_container": "v14",
+      "tenant": "demo",
+      "domain": "retrieval"
+    },
+    "bridge_node": []
+  },
+  "axes": {
+    "version_container": "v14",
+    "tenant": "demo",
+    "domain": "retrieval"
+  },
+  "sources": [],
+  "status": "proposed",
+  "updated_at": "2025-08-10T04:22:46.068098Z"
+}

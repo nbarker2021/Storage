@@ -1,0 +1,202 @@
+{
+  "epoch": 3,
+  "placements": [
+    {
+      "node": 0,
+      "hash": "89f07f9501c932652aebd72c8fe1ed201daa3a6e8a0aa956b802fb5ff6e99fd7",
+      "color": "89f07f",
+      "parity": {
+        "p0": 1,
+        "p1": 6,
+        "p2": 138
+      }
+    },
+    {
+      "node": 1,
+      "hash": "441da0e47a7a96d1e5393325ab827fa514d7ad4700c787c5b7a4d1aa99fffad4",
+      "color": "441da0",
+      "parity": {
+        "p0": 0,
+        "p1": 0,
+        "p2": 171
+      }
+    },
+    {
+      "node": 2,
+      "hash": "d12a6b5393dc625abb256214f914b29cecf7734d82b558ba13c1ed62608552c2",
+      "color": "d12a6b",
+      "parity": {
+        "p0": 0,
+        "p1": 4,
+        "p2": 255
+      }
+    },
+    {
+      "node": 3,
+      "hash": "7c2af3233ed59b8d9e965a6bdd6ee3e2e024574806a4dd7cc4bb876294e625e2",
+      "color": "7c2af3",
+      "parity": {
+        "p0": 0,
+        "p1": 7,
+        "p2": 155
+      }
+    },
+    {
+      "node": 4,
+      "hash": "d0eef98d5e667df96ee3309c5c386b1abd9d024b7c9371fbd28c6a343cd28a36",
+      "color": "d0eef9",
+      "parity": {
+        "p0": 0,
+        "p1": 6,
+        "p2": 225
+      }
+    },
+    {
+      "node": 5,
+      "hash": "50c9d8b67fcbf017ca0c4505263fd63b35d35c5c4ac91a3b930f48d1197d7a05",
+      "color": "50c9d8",
+      "parity": {
+        "p0": 1,
+        "p1": 0,
+        "p2": 213
+      }
+    },
+    {
+      "node": 6,
+      "hash": "953cc45396604d23f07bcffc89f935219e899aac3998094df5a53e14d901ec8b",
+      "color": "953cc4",
+      "parity": {
+        "p0": 1,
+        "p1": 6,
+        "p2": 114
+      }
+    },
+    {
+      "node": 7,
+      "hash": "5acb3efc90ea5fb7a12f1336d1b345b061014991d514ceb3be54f63c5eb0f190",
+      "color": "5acb3e",
+      "parity": {
+        "p0": 0,
+        "p1": 7,
+        "p2": 63
+      }
+    },
+    {
+      "node": 8,
+      "hash": "c8d95c37b9a57863e10f276e924e08f1f9e17850a4c57c51bb94c927df578403",
+      "color": "c8d95c",
+      "parity": {
+        "p0": 1,
+        "p1": 5,
+        "p2": 33
+      }
+    },
+    {
+      "node": 9,
+      "hash": "3bda627fb289321f72140d83f2a37ed0d51f474e513dc72d76cb549b95f31d6c",
+      "color": "3bda62",
+      "parity": {
+        "p0": 0,
+        "p1": 2,
+        "p2": 192
+      }
+    },
+    {
+      "node": 10,
+      "hash": "c1cf67dc6d2f54bcaf892dc69f38f06e78db796b14d982f9a91c253b0d1a9e13",
+      "color": "c1cf67",
+      "parity": {
+        "p0": 1,
+        "p1": 7,
+        "p2": 183
+      }
+    },
+    {
+      "node": 11,
+      "hash": "c8d54611518095bb12c1c8f6a79b8e9c4f2af93738c02d6877c0595ffb2007c2",
+      "color": "c8d546",
+      "parity": {
+        "p0": 0,
+        "p1": 5,
+        "p2": 170
+      }
+    },
+    {
+      "node": 12,
+      "hash": "03e27b4018592c5ea2e1338ea30e7487217be60deb0593cf4b573253d278ce50",
+      "color": "03e27b",
+      "parity": {
+        "p0": 0,
+        "p1": 3,
+        "p2": 116
+      }
+    },
+    {
+      "node": 13,
+      "hash": "77f2295516c38041600d65499e8904c8229662dabe8760e9029502c42fe68d19",
+      "color": "77f229",
+      "parity": {
+        "p0": 1,
+        "p1": 1,
+        "p2": 146
+      }
+    },
+    {
+      "node": 14,
+      "hash": "a79a1cb43a267f62420c9872cf897a88f293c4ff5d8f5a10ed15805386db7872",
+      "color": "a79a1c",
+      "parity": {
+        "p0": 0,
+        "p1": 2,
+        "p2": 114
+      }
+    },
+    {
+      "node": 15,
+      "hash": "9493a0eb713261606611670cc07f9159e152d3a21919dc4b3614de326e199079",
+      "color": "9493a0",
+      "parity": {
+        "p0": 1,
+        "p1": 6,
+        "p2": 92
+      }
+    }
+  ],
+  "roots": {
+    "tokens": "4810962b5c77d96a565145ed313fbea109848aa935a552645c5f6ff1fb0aaf34",
+    "colors": "5eff8577128489794030fcbdc901ff56750aef8bc07ae60ee21ec16e10f134e1",
+    "parity": "0f510c7ec94c2ae9ba151ad55089e80b31a59aed869f98005bcc21687520479e"
+  },
+  "violations": [
+    {
+      "type": "adj_color_parity",
+      "a": 1,
+      "b": 2
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 2,
+      "b": 3
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 3,
+      "b": 7
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 5,
+      "b": 6
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 6,
+      "b": 10
+    },
+    {
+      "type": "adj_color_parity",
+      "a": 7,
+      "b": 11
+    }
+  ]
+}

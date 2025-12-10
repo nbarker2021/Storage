@@ -1,0 +1,102 @@
+{
+  "version": "v1",
+  "notes": "Canonical 12-hue palette with expected dihedral, dtau_fraction (\u03b8/360), harmony, and expected dominant band.",
+  "palette": [
+    {
+      "hue_deg": 0,
+      "name": "red",
+      "dihedral_n": 12,
+      "dtau_fraction": 0.0,
+      "harmony": "split_complement",
+      "expected_band": "24"
+    },
+    {
+      "hue_deg": 30,
+      "name": "orange",
+      "dihedral_n": 12,
+      "dtau_fraction": 0.08333333333333333,
+      "harmony": "split_complement",
+      "expected_band": "24"
+    },
+    {
+      "hue_deg": 60,
+      "name": "yellow",
+      "dihedral_n": 12,
+      "dtau_fraction": 0.16666666666666666,
+      "harmony": "triad",
+      "expected_band": "24"
+    },
+    {
+      "hue_deg": 90,
+      "name": "chartreuse",
+      "dihedral_n": 4,
+      "dtau_fraction": 0.25,
+      "harmony": "tetrad",
+      "expected_band": "16"
+    },
+    {
+      "hue_deg": 120,
+      "name": "green",
+      "dihedral_n": 12,
+      "dtau_fraction": 0.3333333333333333,
+      "harmony": "triad",
+      "expected_band": "24"
+    },
+    {
+      "hue_deg": 150,
+      "name": "spring",
+      "dihedral_n": 12,
+      "dtau_fraction": 0.4166666666666667,
+      "harmony": "triad",
+      "expected_band": "24"
+    },
+    {
+      "hue_deg": 180,
+      "name": "cyan",
+      "dihedral_n": 8,
+      "dtau_fraction": 0.5,
+      "harmony": "complement",
+      "expected_band": "16\u219224"
+    },
+    {
+      "hue_deg": 210,
+      "name": "azure",
+      "dihedral_n": 12,
+      "dtau_fraction": 0.5833333333333334,
+      "harmony": "triad",
+      "expected_band": "24"
+    },
+    {
+      "hue_deg": 240,
+      "name": "blue",
+      "dihedral_n": 12,
+      "dtau_fraction": 0.6666666666666666,
+      "harmony": "triad",
+      "expected_band": "24"
+    },
+    {
+      "hue_deg": 270,
+      "name": "violet",
+      "dihedral_n": 4,
+      "dtau_fraction": 0.75,
+      "harmony": "tetrad",
+      "expected_band": "16"
+    },
+    {
+      "hue_deg": 300,
+      "name": "magenta",
+      "dihedral_n": 12,
+      "dtau_fraction": 0.8333333333333334,
+      "harmony": "split_complement",
+      "expected_band": "24"
+    },
+    {
+      "hue_deg": 330,
+      "name": "rose",
+      "dihedral_n": 12,
+      "dtau_fraction": 0.9166666666666666,
+      "harmony": "split_complement",
+      "expected_band": "24"
+    }
+  ]
+}

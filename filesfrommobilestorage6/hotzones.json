@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "created_utc": "2025-09-20T14:41:10.885866Z"
+  },
+  "zones": [
+    {
+      "name": "Z1-pal_rest",
+      "type": "mirror_mismatch",
+      "score": 0.91,
+      "quad": "Q2",
+      "hint": "try delta_lift: local gradient correction"
+    },
+    {
+      "name": "Z2-chiral_split",
+      "type": "octet_disagreement",
+      "score": 0.88,
+      "quad": "Q4",
+      "hint": "try L/R swap + helix pitch tweak"
+    },
+    {
+      "name": "Z3-io-latency",
+      "type": "throughput_regime",
+      "score": 0.86,
+      "quad": "Q1",
+      "hint": "repaint S-bend phase"
+    }
+  ]
+}

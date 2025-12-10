@@ -1,0 +1,84 @@
+{
+  "test_name": "universal_tone_9669_emergence",
+  "hypothesis": "9669 palindromic pattern emerges from phase-frequency modulation",
+  "parameters": {
+    "n_particles": 10000,
+    "dimensions": 96,
+    "timesteps": 400,
+    "base_frequency_hz": 432.0,
+    "target_pattern": [
+      9,
+      6,
+      6,
+      9
+    ]
+  },
+  "results": [
+    {
+      "frequency_hz": 432.0,
+      "digital_root": 9,
+      "pattern": [
+        7.500867253236223,
+        7.497405639278408,
+        7.499152194805964,
+        7.502574912679407
+      ],
+      "rmse": 1.4982791659342818,
+      "symmetry": 0.999519222705832,
+      "converged_to_9669": true
+    },
+    {
+      "frequency_hz": 648.0,
+      "digital_root": 9,
+      "pattern": [
+        7.498632146601393,
+        7.497227499384966,
+        7.501416952498486,
+        7.502723401515154
+      ],
+      "rmse": 1.4993236553320877,
+      "symmetry": 0.998847491344748,
+      "converged_to_9669": true
+    },
+    {
+      "frequency_hz": 864.0,
+      "digital_root": 9,
+      "pattern": [
+        7.498361864812141,
+        7.4997003454885585,
+        7.502703295964255,
+        7.4992344937350435
+      ],
+      "rmse": 1.5012022278665123,
+      "symmetry": 0.9994025980119029,
+      "converged_to_9669": false
+    },
+    {
+      "frequency_hz": 486.0,
+      "digital_root": 9,
+      "pattern": [
+        7.495356163051255,
+        7.5042478139566615,
+        7.500240213774936,
+        7.500155809217146
+      ],
+      "rmse": 1.5022456404924076,
+      "symmetry": 0.9987991288228143,
+      "converged_to_9669": false
+    }
+  ],
+  "best_candidate": {
+    "frequency_hz": 432.0,
+    "digital_root": 9,
+    "pattern": [
+      7.500867253236223,
+      7.497405639278408,
+      7.499152194805964,
+      7.502574912679407
+    ],
+    "rmse": 1.4982791659342818,
+    "symmetry": 0.999519222705832,
+    "converged_to_9669": true
+  },
+  "conclusion": "Testing phase modulation as organizing principle for beam sorting"
+}

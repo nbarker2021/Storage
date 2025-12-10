@@ -1,0 +1,54 @@
+[
+  {
+    "name": "demo-promotion",
+    "passed": false,
+    "details": {
+      "promoted": 0,
+      "shells": 3,
+      "decisions": {
+        "ffa87199": {
+          "coh": 0.9999999999977913,
+          "red": 0.0,
+          "nov": 2.2086776851892864e-12,
+          "contra": 0.0,
+          "size": 1,
+          "thresholds": {
+            "tau_coh": 0.6,
+            "tau_red": 0.92,
+            "tau_nov_min": 0.02,
+            "tau_nov_max": 0.4
+          },
+          "decision": "reject"
+        },
+        "ffe87199": {
+          "coh": 0.9999999999976829,
+          "red": 0.0,
+          "nov": 2.3171464746951642e-12,
+          "contra": 0.0,
+          "size": 1,
+          "thresholds": {
+            "tau_coh": 0.6,
+            "tau_red": 0.92,
+            "tau_nov_min": 0.02,
+            "tau_nov_max": 0.4
+          },
+          "decision": "reject"
+        },
+        "00578e66": {
+          "coh": 0.9999999999977913,
+          "red": 0.0,
+          "nov": 2.2086776851892864e-12,
+          "contra": 0.0,
+          "size": 1,
+          "thresholds": {
+            "tau_coh": 0.6,
+            "tau_red": 0.92,
+            "tau_nov_min": 0.02,
+            "tau_nov_max": 0.4
+          },
+          "decision": "reject"
+        }
+      }
+    }
+  }
+]

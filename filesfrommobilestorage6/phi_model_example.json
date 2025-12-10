@@ -1,0 +1,20 @@
+{
+  "device": {
+    "name": "GPU-X100",
+    "driver": "v555.1",
+    "firmware": "2.3.7"
+  },
+  "coeffs": {
+    "a": 2.3e-12,
+    "b": 5e-10,
+    "c": 1.1e-09,
+    "d": 0.002,
+    "e": 0.5
+  },
+  "model_type": "linear",
+  "fit_stats": {
+    "r2": 0.94,
+    "mape_pct": 7.8
+  },
+  "date": "2025-10-25"
+}

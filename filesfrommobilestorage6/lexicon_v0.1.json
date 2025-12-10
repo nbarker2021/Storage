@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:schemas:lexicon:v0.1",
+  "title": "Lexicon Label v0.1",
+  "type": "object",
+  "required": [
+    "name",
+    "namespace",
+    "tags",
+    "python_compat",
+    "e8",
+    "axes",
+    "updated_at"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z_][a-z0-9_]*$"
+    },
+    "namespace": {
+      "type": "string",
+      "pattern": "^[a-z_][a-z0-9_]*(\\.[a-z_][a-z0-9_]*)*$"
+    },
+    "doc": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "key",
+          "value"
+        ],
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "value": {
+            "type": [
+              "string",
+              "number",
+              "boolean"
+            ]
+          }
+        }
+      }
+    },
+    "python_compat": {
+      "type": "boolean",
+      "const": true
+    },
+    "e8": {
+      "$ref": "urn:schemas:e8-addressing:v0.1"
+    },
+    "axes": {
+      "type": "object"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,3305 @@
+{
+  "generated_at": "Sat Oct 11 08:44:11 2025",
+  "root": "/mnt/data/cqe_full_system",
+  "extracted_from": [
+    {
+      "zip": "cqe_complete_system-20251011T001625Z-1-001.zip",
+      "dest": "/mnt/data/_assemble_cqe_full/cqe_complete_system-20251011T001625Z-1-001"
+    },
+    {
+      "zip": "cqe_enhanced_complete_system-20251011T001626Z-1-001.zip",
+      "dest": "/mnt/data/_assemble_cqe_full/cqe_enhanced_complete_system-20251011T001626Z-1-001"
+    },
+    {
+      "zip": "cqe_morsr_harness_scaffold-20251011T001627Z-1-001.zip",
+      "dest": "/mnt/data/_assemble_cqe_full/cqe_morsr_harness_scaffold-20251011T001627Z-1-001"
+    },
+    {
+      "zip": "enhanced_cqe_system_final-20251011T001630Z-1-001.zip",
+      "dest": "/mnt/data/_assemble_cqe_full/enhanced_cqe_system_final-20251011T001630Z-1-001"
+    },
+    {
+      "zip": "cqe_operating_system_complete.zip",
+      "dest": "/mnt/data/_assemble_cqe_full/cqe_operating_system_complete"
+    },
+    {
+      "zip": "CQE_Unified_System_Design.zip",
+      "dest": "/mnt/data/_assemble_cqe_full/CQE_Unified_System_Design"
+    },
+    {
+      "zip": "exported-assets.zip",
+      "dest": "/mnt/data/_assemble_cqe_full/exported-assets"
+    },
+    {
+      "zip": "exported-assets (1).zip",
+      "dest": "/mnt/data/_assemble_cqe_full/exported-assets (1)"
+    },
+    {
+      "zip": "exported-assets (2).zip",
+      "dest": "/mnt/data/_assemble_cqe_full/exported-assets (2)"
+    },
+    {
+      "zip": "exported-assets (3).zip",
+      "dest": "/mnt/data/_assemble_cqe_full/exported-assets (3)"
+    },
+    {
+      "zip": "exported-assets (4).zip",
+      "dest": "/mnt/data/_assemble_cqe_full/exported-assets (4)"
+    },
+    {
+      "zip": "exported-assets (5).zip",
+      "dest": "/mnt/data/_assemble_cqe_full/exported-assets (5)"
+    },
+    {
+      "zip": "handoff-20251010T010210Z-1-001.zip",
+      "dest": "/mnt/data/_assemble_cqe_full/handoff-20251010T010210Z-1-001"
+    },
+    {
+      "zip": "handoff suppliments.zip",
+      "dest": "/mnt/data/_assemble_cqe_full/handoff suppliments"
+    }
+  ],
+  "zip_errors": [],
+  "tree": [
+    {
+      "path": "docs/CQE_Master_Playbook.md",
+      "size": 206,
+      "sha256": "d3ae7adfbd95da73e3827c32d906a8af88fed8a47e684294b8d7499ebbda1eca"
+    },
+    {
+      "path": "docs/slices/CQE_SPECTRAL_Slice.md",
+      "size": 954,
+      "sha256": "25729c636c727638bcfe9afc75db026fc608c72d1c20021f4cebc1e6ca8e1b31"
+    },
+    {
+      "path": "docs/slices/CQE_TESLA_Slice.md",
+      "size": 1100,
+      "sha256": "2139962d12e827b2a39fe1b41cea12e891157b30e970028841869c4eea981037"
+    },
+    {
+      "path": "docs/slices/CQE_System_Architecture.md",
+      "size": 9394,
+      "sha256": "6340e79afab4284a8b5b9e18d8aa19d6968544f66576a962c107d3ac26fa3d02"
+    },
+    {
+      "path": "docs/slices/CQE_LANDAU_Slice.md",
+      "size": 1244,
+      "sha256": "12d48782b10b07eaca42c5fffa8bfc68fed1f44ed7c23323251ac8bc63134146"
+    },
+    {
+      "path": "docs/slices/CQE_MORSR_v2_Slice.md",
+      "size": 2118,
+      "sha256": "ffd66a41bba1aea5aac5f7c8a1b8887c45d3c34191a6cfe11ab4cce5a21e386d"
+    },
+    {
+      "path": "docs/slices/CQE_SACNUM_Slice.md",
+      "size": 1867,
+      "sha256": "ee684972dc72fbc17f59774a4df2933b24ef5ee1b0d0fc140f11b89d76d1912f"
+    },
+    {
+      "path": "docs/slices/CQE_TDA_Slice.md",
+      "size": 989,
+      "sha256": "394d1785dec3dc19906238a07582207ad8645f63da829f1460297862fc65834a"
+    },
+    {
+      "path": "docs/slices/CQE_SafeCube_Slice.md",
+      "size": 1479,
+      "sha256": "fdd61e41b873733b69bbd419ac9e0fc36b1cb99dc7f6e619f84a6ecbcda73fed"
+    },
+    {
+      "path": "docs/slices/CQE_SnapLat_Slice.md",
+      "size": 2240,
+      "sha256": "fe5c6a8af48e2eaa186e1c8408965d8e978de002e26bb6a13bcc4d639f8dbf2d"
+    },
+    {
+      "path": "docs/slices/CQE_KOLMOGOROV_Slice.md",
+      "size": 1150,
+      "sha256": "0a54e42a3ed81a05c1379e321ca610cd5eb8332c2a5a0f16029d144e78551fea"
+    },
+    {
+      "path": "docs/papers/Review of Your Comprehensive CQE Framework.pdf",
+      "size": 2202587,
+      "sha256": "bd805c93180e2dfe43274e5049a6a664563df682d0123d0b9debb8330c91782e"
+    },
+    {
+      "path": "docs/papers/Proof_Pack_v0_2.pdf",
+      "size": 5826,
+      "sha256": "700f8e879511123a2bb384a16941cd6509d636d525339573dc6e6dd2229fadaa"
+    },
+    {
+      "path": "docs/papers/PC_04_Results_Navigation.pdf",
+      "size": 2857,
+      "sha256": "e4854b6ad2bad45469acd5718d1b28bc483f9337b3c04ad2d7a64faed9991245"
+    },
+    {
+      "path": "docs/papers/PC_05_Results_Ice_Phase.pdf",
+      "size": 2154,
+      "sha256": "558a63c5a647b4829edbd65fe0d53a2014b6cbd8ede6453f5ac97a1fc88fb487"
+    },
+    {
+      "path": "docs/papers/PC_06_Results_Codon_Duplex.pdf",
+      "size": 2047,
+      "sha256": "20cbed9590ae0cab20b3ca2ca947af186bbe28ac43f94d58d629236ec60d2290"
+    },
+    {
+      "path": "docs/papers/PC_07_Falsifiers_and_Peer_Review.pdf",
+      "size": 2390,
+      "sha256": "d357453e813b513bdb8cdd36a5f3f0824cc2f74e76976ca7b35400e0438f4645"
+    },
+    {
+      "path": "docs/papers/PC_08_Ledger_and_Replay.pdf",
+      "size": 2384,
+      "sha256": "522c560652596dbfb4ba147a6c74db79d215e7deaee55762b9ba51f7603584c3"
+    },
+    {
+      "path": "docs/papers/this document is a full session review of the firs.pdf",
+      "size": 2391813,
+      "sha256": "77328dcec320ba5ebad47bbf8abf72ac0f3f3a563badded24813fecbaf531cb9"
+    },
+    {
+      "path": "docs/papers/i have a large set of files, many hundred, we need.pdf",
+      "size": 2480836,
+      "sha256": "fa21f8c1aef7df51ebb3476fee11909a78241c9a7a5adb839291502ab174c2c4"
+    },
+    {
+      "path": "docs/papers/i have a large set of files, many hundred, we need (1).pdf",
+      "size": 2538546,
+      "sha256": "c956b2f0479aa56dc8974d78dd17118ed19ddcdb682b91c99bdc42a56bfa3a11"
+    },
+    {
+      "path": "code/tools/quantum_viewer.py",
+      "size": 382,
+      "sha256": "ec9591d107448a5af205dbba981eaab87f5e1c84678eb620b5764621e3e682b9"
+    },
+    {
+      "path": "code/tools/README (2).md",
+      "size": 3738,
+      "sha256": "1a7192585aa8ed39bc354575b5b8b3dc43a66bba20f2c740962b1708bcf9f8a1"
+    },
+    {
+      "path": "code/tools/POST_MORTEM_20250810_100641.md",
+      "size": 6982,
+      "sha256": "cf6da77dcbb7edfb3906cdc8256eea70919f9cc6219eb3a9df6abf4f8eb6fb3b"
+    },
+    {
+      "path": "code/tools/Quadratic info_250902_000136.txt",
+      "size": 9630,
+      "sha256": "0d7b4b1eaadb71aa6342bec5b67cbbcc7bf27d79b3ed432e84d2b1521e524b7c"
+    },
+    {
+      "path": "code/tools/Quantum Pinning 1_250904_230729.txt",
+      "size": 5576,
+      "sha256": "23281c5548b706ad89a5dfaad81d16582bb3e1933f72e61e6687acea1ab9ea9e"
+    },
+    {
+      "path": "code/tools/Quantum pinning 2_250904_230640.txt",
+      "size": 58007,
+      "sha256": "4a93ea54d1a602107c0774f708f013fbee5a5c3f865e1fba4522c2c442f8697c"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (6).py",
+      "size": 16415,
+      "sha256": "f11079138967ed6fca9afc77f1f7f1ac585479373b843496663b53af12fb423f"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (71).py",
+      "size": 5355,
+      "sha256": "457e12808ac7a2769b18b126a9cadb06472317036c8ebd7e845b4884f24c53e3"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (7).py",
+      "size": 24949,
+      "sha256": "587d059b35120ac742b5555e262abd236b848d4af9fb0ade11e14c2fff62c624"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (55).py",
+      "size": 10907,
+      "sha256": "403616da58ccea08c5b67452f0a8eeb82bb4d59e4f7bcedfaec8c66235d10fd6"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (66).py",
+      "size": 26362,
+      "sha256": "6168d1342ca8e7346407ef5782637cfa78a9f696dc1a60a507d3c839abf93406"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script.py",
+      "size": 15189,
+      "sha256": "9f5eb8e8f4426adb1b710dd32fc412b1fe54e9e63b367c6fefaf0fac8e3f12ed"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (69).py",
+      "size": 4711,
+      "sha256": "7922383b0f5022a219eec6966f6049bf717ed8547e5d5ee155e906e64d6123d3"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (63).py",
+      "size": 32860,
+      "sha256": "4765f6449d0d340ad482dc50fa32b9a0a42d97583152db547a442aeff5fe1f26"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (56).py",
+      "size": 13711,
+      "sha256": "f9aa49781228ba94ad78b97b26cc95245e12c2861fcc6546edd17cd5d13c6d8b"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/validate_riemann_hypothesis.py",
+      "size": 13914,
+      "sha256": "bfe860ed63124db225268b4d7ee1fb5c58d3d719ad6ec5ec77d3b39cda592ff4"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (65).py",
+      "size": 16483,
+      "sha256": "5a6cd3fcc94848370043ae0a09f696e66d63e6506efb708ad9023a9645913b8b"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (68).py",
+      "size": 5389,
+      "sha256": "d1fe0733bbf9b48ed1d35e58c9fe658681b92d36064d70ca85bfec977cf95324"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/setup.py",
+      "size": 2867,
+      "sha256": "993bea7407d2d8ad522be8a3813a0a705282715bb1b565748bdeea6e6bfb96fd"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (58).py",
+      "size": 3118,
+      "sha256": "e12b4fbfd60ac335a946c9bff38a79b572969c20b5a9643f6933dc10afe5347f"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (67).py",
+      "size": 4758,
+      "sha256": "25ed22c308e2bd1604298985defcc22c8cc20fc9f914cbff9c411a5e986b775a"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (4).py",
+      "size": 13361,
+      "sha256": "94a843c4c4e1bca7e13cf5450043298a4079be0a1d603df8a5dc86fbf69d581f"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/validate_yangmills.py",
+      "size": 10482,
+      "sha256": "6d3d718bd1008b56040532f90a3a38319ddaec09be3d33c329f0a5f4fb96f2e6"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (64).py",
+      "size": 15652,
+      "sha256": "8655265b7c415bec990e111db2d269b2b3ad7f6c788c81aade0b75f7a31e1f5b"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/test_cqe_integration.py",
+      "size": 10300,
+      "sha256": "8d8a56da6bbc4aa9cd371e84ece10755c96bdc8b7078b7ce27e6feee2dcd466f"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (60).py",
+      "size": 23820,
+      "sha256": "3a5c63f6b7894473f4e6ffe97092cc4f1e127576df048cb1adcd3605d3cb430f"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/validate_hodge_conjecture.py",
+      "size": 22603,
+      "sha256": "1df5dc156d00c2351fc0d90c25156cdac56365b3e5fa9af3eb90c01ed3b11a11"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (62).py",
+      "size": 14272,
+      "sha256": "a1fd9199339551b4f631c904ffe13be4328896945f20323b91f301d16d3accb9"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (70).py",
+      "size": 6529,
+      "sha256": "413f04f88b2580d843c7b8c58a77f993309150b3faa774e19ef8222779bd0fcb"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/test_e8_embedding.py",
+      "size": 6418,
+      "sha256": "6ce5b35e2379ddc809f9bc219698ce056b5fbe8c7c4216e43b6d0126f6815532"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (61).py",
+      "size": 31167,
+      "sha256": "6a48bebfb3bb67bf030e51b4aa072fa335573b841f1cdd6ab5e4a24eaf46ec05"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (57).py",
+      "size": 14805,
+      "sha256": "c3174e63be9d0a930d78f89865f0c25d80f55f2bf38c7b19f5e7ca1f82f14da0"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/setup_embeddings.py",
+      "size": 2611,
+      "sha256": "697636e5df4b367e9679b177abc54d36b9e2ff201afd29e67b7730fa96f18803"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/validate_navier_stokes.py",
+      "size": 18041,
+      "sha256": "d23670bbf995fe28b559b61bed210f47a58b1d8eec0b9306664217a12800aff9"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/validate_proof.py",
+      "size": 7778,
+      "sha256": "c46e53aaa1bee522fcf80b158ee4d73c6a395421db2710c450cf7f1382d6c2a3"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (9).py",
+      "size": 19182,
+      "sha256": "7fd04365474be4d78d70ad98146f8314d9509e0055203c8c260a3502673fb105"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (59).py",
+      "size": 3359,
+      "sha256": "d28f29b844cbde0baa4acdf77b3bcbf6967affffbd420524c6e60dddbb9fd059"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (8).py",
+      "size": 16580,
+      "sha256": "afb7d25ade029ddc9f8e41d1fc5f6cb6c01a2834542b8d7c03c0760b2982bb33"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (47).py",
+      "size": 7369,
+      "sha256": "c0b34f329cb3cc41f88b67eac19b77fe43ede364c15307871a0f2bca36abe74d"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (41).py",
+      "size": 28352,
+      "sha256": "da775c14d5782c0adc5ad72dad63b5059d0551e2d2f1c0cc720824a342b3a6be"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (43).py",
+      "size": 3537,
+      "sha256": "a276cbb2f1d4a41459a08061e0ceeab42389cc003ead39279d6014b4a73056f5"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (49).py",
+      "size": 10710,
+      "sha256": "eed3562140c7c39cc978662c9ef32f800039d03ad65331fe9954cdb56bcc6ea6"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (54).py",
+      "size": 6861,
+      "sha256": "47f1d27f020912a40b44cbd839165fd0aba582e43a6cf54ce8ea86274c644f40"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (51).py",
+      "size": 15517,
+      "sha256": "16edc6968bed2efca7b2bb970d90e2f71d46da89c7f6697334bfc510279301c4"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (53).py",
+      "size": 2881,
+      "sha256": "cc66814fcc090c010c7e3d4d49e095f428e0a51f1a0a4df359c198eb20091766"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (5).py",
+      "size": 13879,
+      "sha256": "28619890aa3e2ea794eb25341c51fb0fcb94c6dd53d7699c83b72cbb0051baca"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (48).py",
+      "size": 8957,
+      "sha256": "6dc5555ecebb3171362de6f447f00ae18669fa3e2dc4ac19372dd0c705590924"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (50).py",
+      "size": 10747,
+      "sha256": "eb426309cddc6400a220d90a2f79870c5f026a58489859937b9ea5b2afb1b416"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (45).py",
+      "size": 5948,
+      "sha256": "7b6f4e4c72e02650ed3ae2692e12aa07c23841bca848e6fce7463c5cdf546a05"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (44).py",
+      "size": 5022,
+      "sha256": "2d1eb2e778e8656fa68375cfa397976412af1577577edc014b7d364ead13fabe"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (40).py",
+      "size": 35367,
+      "sha256": "ae24e65a659d8f96328eccd62d5a49107f15c725220c8e2b4193ffdf21ed41ff"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (46).py",
+      "size": 6462,
+      "sha256": "4818a726912bfd3379c6c0e9148d751728eab6ef9bc35c03a295e65a452e4f8e"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (31).py",
+      "size": 9715,
+      "sha256": "d85896d90d7aed6cc4f1c9437d31b56cd4a96b90b875adc771b3c8749449d6de"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (27).py",
+      "size": 12682,
+      "sha256": "ff184403468d56256af1be89ae9285face416c3e340c681e1c71fb1dc615be4a"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (35).py",
+      "size": 12952,
+      "sha256": "44036078bafce7328aa39aee4f0cc543d2ece81e14bfa4d9dab87964f2bc09c6"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (42).py",
+      "size": 4139,
+      "sha256": "d0ea7feaae32a318ceb357f03e35e1720b940966d5b0e838468977d88a39679b"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (24).py",
+      "size": 12980,
+      "sha256": "a63796e981e51086f77942da7798164cf0cb9cf28b87b208b8c66c9cb51f4beb"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (32).py",
+      "size": 16075,
+      "sha256": "65a1bc070cd147e71caff5340e66575c37c90f2452e01228cbbeac38b55fca26"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (29).py",
+      "size": 13479,
+      "sha256": "c5ecb48f76a40c6302340e3bd2d7b20e116ee1d930c04c91b461405e873391c9"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (36).py",
+      "size": 16915,
+      "sha256": "7c5dbffbd9f235b0e567abffd0f2dc3c1e34fb062be0cd5fa9b62553040ca5ec"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (38).py",
+      "size": 20334,
+      "sha256": "b25bd689e32a64d2bc53a580d43dc0552d2f029aa7f36cbd9a140b35ceaf4c9c"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (3).py",
+      "size": 21863,
+      "sha256": "ef50f6240ebfacc4984e52d5bba148660ec00e89d6d2ae32c9fbbdf5ed9a07f3"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (28).py",
+      "size": 21870,
+      "sha256": "7aac408c292fdbd425aa7145084049960b7ad1ce02311e8275a5d0370001e250"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (37).py",
+      "size": 14763,
+      "sha256": "4029f4606bfba7033127d918259dab2c037a812700f5a886f4856065093b8de8"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (39).py",
+      "size": 25320,
+      "sha256": "ac6714858b05e17e39d9409a2ec0cb73025a12d8ab7fc67db6a4e3d3860e32f4"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (52).py",
+      "size": 1106,
+      "sha256": "f368e5540118d3cd55fde979427767f3085db5894cf4c582c3162c105d3c3bd8"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (34).py",
+      "size": 20629,
+      "sha256": "dc1548103e8f305ab99c9f35673aedc098e990d77b4f3ff78a24b2c85ea24308"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (25).py",
+      "size": 16808,
+      "sha256": "70dc8c9f5b2b3f6400450557f6f3aa1529cd4d1faecb1ddc8481d7585cb2cf45"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (22).py",
+      "size": 12963,
+      "sha256": "951cacfcd96bbfac0819c47a501336221c69dde19a415cc958685af96088db83"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (30).py",
+      "size": 11707,
+      "sha256": "d7a4d6c0f92d0df854aa226fe5ae95d4a76152f53c0cf50e880100b1902809e6"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (26).py",
+      "size": 9074,
+      "sha256": "10896f4393ca30be0569aa8bde7a526b22f146297fb396335a1a0c42f662b967"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (1).py",
+      "size": 8398,
+      "sha256": "487366bf5c9dcf73ab00476d0a3bfe43ec57e9bab21ac3db01bc8ddec26613a0"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (23).py",
+      "size": 31646,
+      "sha256": "f523bc2b9934d2a09bcd7265395bf444db676f5b846abfa491b60f668b2d6867"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (19).py",
+      "size": 16124,
+      "sha256": "d120745bd98386427bc3a7b80b353cc4a98b8af36ebe6c644b9e76c66f1773ab"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (14).py",
+      "size": 20389,
+      "sha256": "372eea6315dac34fc70af5ab4f6e29eb7e86cc3c34c72abac4a9a7ef3b28418b"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/scalability_benchmarks.py",
+      "size": 34528,
+      "sha256": "67c6d24859ca664f39722653116d7ec847f06fdd6e6a30bc67182c412d15c0bb"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (21).py",
+      "size": 29424,
+      "sha256": "45009c529d49bd5a47d7d184e465cac605218799701a838befac11a1aace7d41"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (15).py",
+      "size": 11434,
+      "sha256": "a874c5f8be78c90de147448de17632ce1af5a4ef8366b1ace9811c77f2dbd662"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/fire_chain_demonstration.py",
+      "size": 13869,
+      "sha256": "d99dd573214d7c96a8f6016ab34a0885c5246a1f884ea87c2b3d1aee3203dbd0"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (10).py",
+      "size": 25012,
+      "sha256": "d9403d23a7c41f8ca55eff360b9025f81eab517ad50501ebcccc987e6fcb9452"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (33).py",
+      "size": 19976,
+      "sha256": "af51668ad109a24977cf483a2d83c2b648ae8d6e9d3ce8d740e6ec85c6911f5a"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (11).py",
+      "size": 32262,
+      "sha256": "93b7df06b141458815cf96a3cdcf59c773202af2ff6f97234a85c9322efbfab1"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (16).py",
+      "size": 18837,
+      "sha256": "9d9b1e1e6c252ad31975453a7d2fd81c9ff913c6baa7774ecb2d73ad59a5a17c"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (17).py",
+      "size": 5542,
+      "sha256": "d43f528cfab9deed0125e55cfece2b67d02744861a09a9bf2e3814fc989ce5d6"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (12).py",
+      "size": 15100,
+      "sha256": "1b33b49ccee87f3dc04f33bf266b353a21858c70284ecc5ef0e63b4198505e57"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (13).py",
+      "size": 21479,
+      "sha256": "f850fda16c79f7bb032c3a4c28c616400b09806b3bd8f2715635606b4a7efa0a"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/golden_test_harness.py",
+      "size": 12960,
+      "sha256": "f5f20819dbd86d40b9751d0cb36bc026d13088947f7957d2554c563d54f60cb0"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/convergence_and_repair_proofs.py",
+      "size": 27387,
+      "sha256": "08b2a325b46d368a12f0f96b7356ca20f0b2b7d8f343cb0cdcae6287874248f1"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (20).py",
+      "size": 31739,
+      "sha256": "989ae4d04d94679c897aa1d5e544a9d6330368be2ed2230ee07e2621c055be38"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/comprehensive_cqe_specifications.py",
+      "size": 24270,
+      "sha256": "30949afedd205895fab1a920909506c65cf4d21e03d661769683e4a53b4712a9"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/iterative_fire_chain_explorer.py",
+      "size": 30556,
+      "sha256": "a701eceb829cd46e8a99432f3dc3be9bd75204d81ac9c4a00eab37cd24d33ba7"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/e8_branching_demo.py",
+      "size": 4945,
+      "sha256": "d43bf6a68663e96313857422f772f05efb32b5d0a784a3fe44282bd2d436312f"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (18).py",
+      "size": 6339,
+      "sha256": "dfa2cd56524b53f1aa830b8e2df5680e0e762066122a777bfc28966fcd4cb4c5"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/script (2).py",
+      "size": 9287,
+      "sha256": "d41101073dc59fe99b53ebc34ff50c72fb66830d1185a5445708f4c4fe2df862"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/generate_navier_stokes_figures.py",
+      "size": 21182,
+      "sha256": "b574edf3f48d5e9be4079803ae69cd88476b8452b6a97fb8386f7bce18ac22d7"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/e8_embedding.py",
+      "size": 3306,
+      "sha256": "5a28174a610e4d1d0e4bb16bf639a71f3767ea9bae3344c43a3e11c7a04c9b6a"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/enhanced_golden_test_harness.py",
+      "size": 12971,
+      "sha256": "f6ab90694f01a619b596d6a2c416c658124b6e7d9e9ae38ff3866f5ed7f7d6c1"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/e8_millennium_exploration_harness.py",
+      "size": 27990,
+      "sha256": "307d5fcb3dfbe7ecf4b2d64687cd3c0eab75eca8eceae064f02fed6c0dc4b904"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/run_tests.py",
+      "size": 1128,
+      "sha256": "efbba01b41a9871df349025a6c27dfe3af9cd9ebadb4a99b053396260ce7d857"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe_runner.py",
+      "size": 14747,
+      "sha256": "58860b9bf3c93c65addd24a37eb356742d24f33855cc5092ade6456db1966e00"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/generate_figures.py",
+      "size": 11246,
+      "sha256": "e023f9ad39532ae59674b36d2fa322224044ebf160f2812359fcebcd364e123f"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/README.md",
+      "size": 7183,
+      "sha256": "2ae353a2e9a42177cf50562962b39bccbaaab755aa339b3dcf75f1a04c88f94e"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/chart_script (1).py",
+      "size": 2763,
+      "sha256": "4fd91e26636ac5d0e016a17d8166ba46d700f59be3d6e1918eab252adc10d734"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/chart_script.py",
+      "size": 9287,
+      "sha256": "35a9cb2b6cff26f2b3edd1e0c937bf36d5ef6285d06002f276971e7ba41255ef"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/policy_channel_formal_proofs.py",
+      "size": 22424,
+      "sha256": "eda7fdaa4c2501ce658780d7ef97ef22e42821f8b104b2b40099678735da0392"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/__init__.py",
+      "size": 763,
+      "sha256": "b7bec3f0381f042a60bb5c32071e4f68e632e55d6b1eb5f7927dcc711c7f8e9e"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/CQE_TESTING_HARNESS_COMPLETE.py",
+      "size": 13956,
+      "sha256": "3abc2754d48cb98901b70e8dfc4354f0f5b311790957b4d20030aa0356bca015"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/generate_yangmills_figures.py",
+      "size": 15678,
+      "sha256": "673709a385693b001311c60491b07e1c4c1e6dfbc591705155926aaadbf33317"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/enhanced_complete_morsr_explorer.py",
+      "size": 29138,
+      "sha256": "6adade10d20ed43be8b5098f2ec2e8e52d3760cf5f8be6c1ecb39e356674ff6c"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe_complete_system.zip",
+      "size": 498910,
+      "sha256": "c101af4ad2cf7a7f650d42b93450057fd2215c8da803629fec41a1c47bfbdc79"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe/__init__.py",
+      "size": 1170,
+      "sha256": "3cbe117371714ea804009c0dfbd78294fd0ed7c8e3939e0267d18f55cec9689c"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe/tests/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe/tests/test_cqe_system.py",
+      "size": 16795,
+      "sha256": "29c63491950607f84246a5ce63fd786ab7adc0620717972ed48be6914d34a204"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe/core/system.py",
+      "size": 15191,
+      "sha256": "6829f77bc19965619f1ec396e5452f58a9b9616fc6e7fea23d8129bb045a9444"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe/core/__init__.py",
+      "size": 477,
+      "sha256": "f40436fedd0313e5ecdf25186e84826c74f45db093e26947e85ac1314188b01d"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe/core/parity_channels.py",
+      "size": 6833,
+      "sha256": "361d6271cc68ded7a448344332fb0f973ce4d62fa3932cd297e7e3ca1208c678"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe/core/chamber_board.py",
+      "size": 10163,
+      "sha256": "ce51b6dc83da74b02baac742471aeb69923b4a701d25c0e3a8a22a42a87a76e2"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe/core/objective_function.py",
+      "size": 8454,
+      "sha256": "3cc286af026abe4458f7375fd8485319952818c430050ce0b664cb7e5102b0b0"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe/core/morsr_explorer.py",
+      "size": 10063,
+      "sha256": "e00fe73ed5559f3e932b631dcadd838e3e11fa2e4d65665f6e7552c94aaedbbc"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe/core/e8_lattice.py",
+      "size": 6024,
+      "sha256": "653c9c92d15acce482eb1680e874728e09cf0add061c462ac851ff363a4e66e7"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe/validation/__init__.py",
+      "size": 77,
+      "sha256": "ede2290a8f54c12c397751592ea003bb22f86ac11e42bfb444a12f83b6b9b042"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe/validation/framework.py",
+      "size": 18297,
+      "sha256": "a0cf2831c574231829e3c9deb4aab174a9fa4a649e01c69d55a92d01355d067d"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe/examples/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe/examples/basic_usage.py",
+      "size": 10317,
+      "sha256": "33a131da76d45038a71ddcf992fe70a4079770965340b56c3c18c9177fd9ae11"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe/domains/adapter.py",
+      "size": 5495,
+      "sha256": "27cb291ae060473024c2c4f48eb0cacfd44689ade0817b5556a4679242458544"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/cqe/domains/__init__.py",
+      "size": 63,
+      "sha256": "f7762a859b6622ce00c1db4ce787b69c0bf5d2a6f73ae3cd83139f71db44c837"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/data/README.md",
+      "size": 21,
+      "sha256": "cc5a733af42e87d6818f4fb0917a0ec51bce03fe12de743eba2c213fafe1dc44"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/config/README.md",
+      "size": 30,
+      "sha256": "9a6be3bd74f6e8d7ba3ad252691eedf31fda2a14fff0ca808ef2bb11cd53c021"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/docs/README.md",
+      "size": 30,
+      "sha256": "78d7ff15cfad22f4cb653123670a90926482de8223d1881f106484ba2773a94e"
+    },
+    {
+      "path": "code/system_drops/cqe_complete_system-20251011T001625Z-1-001/cqe_complete_system/embeddings/README.md",
+      "size": 27,
+      "sha256": "a8dcca3fb5e605eab476f245d8dc8be963b70ec96d10a033d0c9153370b42595"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (69).py",
+      "size": 4711,
+      "sha256": "7922383b0f5022a219eec6966f6049bf717ed8547e5d5ee155e906e64d6123d3"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (49).py",
+      "size": 10710,
+      "sha256": "eed3562140c7c39cc978662c9ef32f800039d03ad65331fe9954cdb56bcc6ea6"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (63).py",
+      "size": 32860,
+      "sha256": "4765f6449d0d340ad482dc50fa32b9a0a42d97583152db547a442aeff5fe1f26"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (71).py",
+      "size": 5355,
+      "sha256": "457e12808ac7a2769b18b126a9cadb06472317036c8ebd7e845b4884f24c53e3"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (54).py",
+      "size": 6861,
+      "sha256": "47f1d27f020912a40b44cbd839165fd0aba582e43a6cf54ce8ea86274c644f40"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script.py",
+      "size": 15189,
+      "sha256": "9f5eb8e8f4426adb1b710dd32fc412b1fe54e9e63b367c6fefaf0fac8e3f12ed"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (8).py",
+      "size": 16580,
+      "sha256": "afb7d25ade029ddc9f8e41d1fc5f6cb6c01a2834542b8d7c03c0760b2982bb33"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (50).py",
+      "size": 10747,
+      "sha256": "eb426309cddc6400a220d90a2f79870c5f026a58489859937b9ea5b2afb1b416"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (67).py",
+      "size": 4758,
+      "sha256": "25ed22c308e2bd1604298985defcc22c8cc20fc9f914cbff9c411a5e986b775a"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (70).py",
+      "size": 6529,
+      "sha256": "413f04f88b2580d843c7b8c58a77f993309150b3faa774e19ef8222779bd0fcb"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/setup.py",
+      "size": 2867,
+      "sha256": "993bea7407d2d8ad522be8a3813a0a705282715bb1b565748bdeea6e6bfb96fd"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (7).py",
+      "size": 24949,
+      "sha256": "587d059b35120ac742b5555e262abd236b848d4af9fb0ade11e14c2fff62c624"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (64).py",
+      "size": 15652,
+      "sha256": "8655265b7c415bec990e111db2d269b2b3ad7f6c788c81aade0b75f7a31e1f5b"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/validate_riemann_hypothesis.py",
+      "size": 13914,
+      "sha256": "bfe860ed63124db225268b4d7ee1fb5c58d3d719ad6ec5ec77d3b39cda592ff4"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/test_e8_embedding.py",
+      "size": 6418,
+      "sha256": "6ce5b35e2379ddc809f9bc219698ce056b5fbe8c7c4216e43b6d0126f6815532"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (52).py",
+      "size": 1106,
+      "sha256": "f368e5540118d3cd55fde979427767f3085db5894cf4c582c3162c105d3c3bd8"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/validate_hodge_conjecture.py",
+      "size": 22603,
+      "sha256": "1df5dc156d00c2351fc0d90c25156cdac56365b3e5fa9af3eb90c01ed3b11a11"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (46).py",
+      "size": 6462,
+      "sha256": "4818a726912bfd3379c6c0e9148d751728eab6ef9bc35c03a295e65a452e4f8e"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/setup_embeddings.py",
+      "size": 2611,
+      "sha256": "697636e5df4b367e9679b177abc54d36b9e2ff201afd29e67b7730fa96f18803"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (68).py",
+      "size": 5389,
+      "sha256": "d1fe0733bbf9b48ed1d35e58c9fe658681b92d36064d70ca85bfec977cf95324"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/validate_navier_stokes.py",
+      "size": 18041,
+      "sha256": "d23670bbf995fe28b559b61bed210f47a58b1d8eec0b9306664217a12800aff9"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/validate_yangmills.py",
+      "size": 10482,
+      "sha256": "6d3d718bd1008b56040532f90a3a38319ddaec09be3d33c329f0a5f4fb96f2e6"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (9).py",
+      "size": 19182,
+      "sha256": "7fd04365474be4d78d70ad98146f8314d9509e0055203c8c260a3502673fb105"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/validate_proof.py",
+      "size": 7778,
+      "sha256": "c46e53aaa1bee522fcf80b158ee4d73c6a395421db2710c450cf7f1382d6c2a3"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/test_cqe_integration.py",
+      "size": 10300,
+      "sha256": "8d8a56da6bbc4aa9cd371e84ece10755c96bdc8b7078b7ce27e6feee2dcd466f"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (65).py",
+      "size": 16483,
+      "sha256": "5a6cd3fcc94848370043ae0a09f696e66d63e6506efb708ad9023a9645913b8b"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (55).py",
+      "size": 10907,
+      "sha256": "403616da58ccea08c5b67452f0a8eeb82bb4d59e4f7bcedfaec8c66235d10fd6"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (47).py",
+      "size": 7369,
+      "sha256": "c0b34f329cb3cc41f88b67eac19b77fe43ede364c15307871a0f2bca36abe74d"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (6).py",
+      "size": 16415,
+      "sha256": "f11079138967ed6fca9afc77f1f7f1ac585479373b843496663b53af12fb423f"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (57).py",
+      "size": 14805,
+      "sha256": "c3174e63be9d0a930d78f89865f0c25d80f55f2bf38c7b19f5e7ca1f82f14da0"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (66).py",
+      "size": 26362,
+      "sha256": "6168d1342ca8e7346407ef5782637cfa78a9f696dc1a60a507d3c839abf93406"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (5).py",
+      "size": 13879,
+      "sha256": "28619890aa3e2ea794eb25341c51fb0fcb94c6dd53d7699c83b72cbb0051baca"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (56).py",
+      "size": 13711,
+      "sha256": "f9aa49781228ba94ad78b97b26cc95245e12c2861fcc6546edd17cd5d13c6d8b"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (51).py",
+      "size": 15517,
+      "sha256": "16edc6968bed2efca7b2bb970d90e2f71d46da89c7f6697334bfc510279301c4"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (48).py",
+      "size": 8957,
+      "sha256": "6dc5555ecebb3171362de6f447f00ae18669fa3e2dc4ac19372dd0c705590924"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (61).py",
+      "size": 31167,
+      "sha256": "6a48bebfb3bb67bf030e51b4aa072fa335573b841f1cdd6ab5e4a24eaf46ec05"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (62).py",
+      "size": 14272,
+      "sha256": "a1fd9199339551b4f631c904ffe13be4328896945f20323b91f301d16d3accb9"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (53).py",
+      "size": 2881,
+      "sha256": "cc66814fcc090c010c7e3d4d49e095f428e0a51f1a0a4df359c198eb20091766"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (60).py",
+      "size": 23820,
+      "sha256": "3a5c63f6b7894473f4e6ffe97092cc4f1e127576df048cb1adcd3605d3cb430f"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (59).py",
+      "size": 3359,
+      "sha256": "d28f29b844cbde0baa4acdf77b3bcbf6967affffbd420524c6e60dddbb9fd059"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (43).py",
+      "size": 3537,
+      "sha256": "a276cbb2f1d4a41459a08061e0ceeab42389cc003ead39279d6014b4a73056f5"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (39).py",
+      "size": 25320,
+      "sha256": "ac6714858b05e17e39d9409a2ec0cb73025a12d8ab7fc67db6a4e3d3860e32f4"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (45).py",
+      "size": 5948,
+      "sha256": "7b6f4e4c72e02650ed3ae2692e12aa07c23841bca848e6fce7463c5cdf546a05"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (58).py",
+      "size": 3118,
+      "sha256": "e12b4fbfd60ac335a946c9bff38a79b572969c20b5a9643f6933dc10afe5347f"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (32).py",
+      "size": 16075,
+      "sha256": "65a1bc070cd147e71caff5340e66575c37c90f2452e01228cbbeac38b55fca26"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (37).py",
+      "size": 14763,
+      "sha256": "4029f4606bfba7033127d918259dab2c037a812700f5a886f4856065093b8de8"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (4).py",
+      "size": 13361,
+      "sha256": "94a843c4c4e1bca7e13cf5450043298a4079be0a1d603df8a5dc86fbf69d581f"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (41).py",
+      "size": 28352,
+      "sha256": "da775c14d5782c0adc5ad72dad63b5059d0551e2d2f1c0cc720824a342b3a6be"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (33).py",
+      "size": 19976,
+      "sha256": "af51668ad109a24977cf483a2d83c2b648ae8d6e9d3ce8d740e6ec85c6911f5a"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (38).py",
+      "size": 20334,
+      "sha256": "b25bd689e32a64d2bc53a580d43dc0552d2f029aa7f36cbd9a140b35ceaf4c9c"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (31).py",
+      "size": 9715,
+      "sha256": "d85896d90d7aed6cc4f1c9437d31b56cd4a96b90b875adc771b3c8749449d6de"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (3).py",
+      "size": 21863,
+      "sha256": "ef50f6240ebfacc4984e52d5bba148660ec00e89d6d2ae32c9fbbdf5ed9a07f3"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (30).py",
+      "size": 11707,
+      "sha256": "d7a4d6c0f92d0df854aa226fe5ae95d4a76152f53c0cf50e880100b1902809e6"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (36).py",
+      "size": 16915,
+      "sha256": "7c5dbffbd9f235b0e567abffd0f2dc3c1e34fb062be0cd5fa9b62553040ca5ec"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (16).py",
+      "size": 18837,
+      "sha256": "9d9b1e1e6c252ad31975453a7d2fd81c9ff913c6baa7774ecb2d73ad59a5a17c"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (44).py",
+      "size": 5022,
+      "sha256": "2d1eb2e778e8656fa68375cfa397976412af1577577edc014b7d364ead13fabe"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (42).py",
+      "size": 4139,
+      "sha256": "d0ea7feaae32a318ceb357f03e35e1720b940966d5b0e838468977d88a39679b"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (24).py",
+      "size": 12980,
+      "sha256": "a63796e981e51086f77942da7798164cf0cb9cf28b87b208b8c66c9cb51f4beb"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (35).py",
+      "size": 12952,
+      "sha256": "44036078bafce7328aa39aee4f0cc543d2ece81e14bfa4d9dab87964f2bc09c6"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (20).py",
+      "size": 31739,
+      "sha256": "989ae4d04d94679c897aa1d5e544a9d6330368be2ed2230ee07e2621c055be38"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (21).py",
+      "size": 29424,
+      "sha256": "45009c529d49bd5a47d7d184e465cac605218799701a838befac11a1aace7d41"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (40).py",
+      "size": 35367,
+      "sha256": "ae24e65a659d8f96328eccd62d5a49107f15c725220c8e2b4193ffdf21ed41ff"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (2).py",
+      "size": 9287,
+      "sha256": "d41101073dc59fe99b53ebc34ff50c72fb66830d1185a5445708f4c4fe2df862"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (27).py",
+      "size": 12682,
+      "sha256": "ff184403468d56256af1be89ae9285face416c3e340c681e1c71fb1dc615be4a"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (18).py",
+      "size": 6339,
+      "sha256": "dfa2cd56524b53f1aa830b8e2df5680e0e762066122a777bfc28966fcd4cb4c5"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (29).py",
+      "size": 13479,
+      "sha256": "c5ecb48f76a40c6302340e3bd2d7b20e116ee1d930c04c91b461405e873391c9"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (19).py",
+      "size": 16124,
+      "sha256": "d120745bd98386427bc3a7b80b353cc4a98b8af36ebe6c644b9e76c66f1773ab"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (34).py",
+      "size": 20629,
+      "sha256": "dc1548103e8f305ab99c9f35673aedc098e990d77b4f3ff78a24b2c85ea24308"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (28).py",
+      "size": 21870,
+      "sha256": "7aac408c292fdbd425aa7145084049960b7ad1ce02311e8275a5d0370001e250"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (23).py",
+      "size": 31646,
+      "sha256": "f523bc2b9934d2a09bcd7265395bf444db676f5b846abfa491b60f668b2d6867"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (26).py",
+      "size": 9074,
+      "sha256": "10896f4393ca30be0569aa8bde7a526b22f146297fb396335a1a0c42f662b967"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (25).py",
+      "size": 16808,
+      "sha256": "70dc8c9f5b2b3f6400450557f6f3aa1529cd4d1faecb1ddc8481d7585cb2cf45"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (17).py",
+      "size": 5542,
+      "sha256": "d43f528cfab9deed0125e55cfece2b67d02744861a09a9bf2e3814fc989ce5d6"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/scalability_benchmarks.py",
+      "size": 34528,
+      "sha256": "67c6d24859ca664f39722653116d7ec847f06fdd6e6a30bc67182c412d15c0bb"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (15).py",
+      "size": 11434,
+      "sha256": "a874c5f8be78c90de147448de17632ce1af5a4ef8366b1ace9811c77f2dbd662"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/generate_figures.py",
+      "size": 11246,
+      "sha256": "e023f9ad39532ae59674b36d2fa322224044ebf160f2812359fcebcd364e123f"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (12).py",
+      "size": 15100,
+      "sha256": "1b33b49ccee87f3dc04f33bf266b353a21858c70284ecc5ef0e63b4198505e57"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (22).py",
+      "size": 12963,
+      "sha256": "951cacfcd96bbfac0819c47a501336221c69dde19a415cc958685af96088db83"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/generate_yangmills_figures.py",
+      "size": 15678,
+      "sha256": "673709a385693b001311c60491b07e1c4c1e6dfbc591705155926aaadbf33317"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/generate_navier_stokes_figures.py",
+      "size": 21182,
+      "sha256": "b574edf3f48d5e9be4079803ae69cd88476b8452b6a97fb8386f7bce18ac22d7"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (1).py",
+      "size": 8398,
+      "sha256": "487366bf5c9dcf73ab00476d0a3bfe43ec57e9bab21ac3db01bc8ddec26613a0"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/iterative_fire_chain_explorer.py",
+      "size": 30556,
+      "sha256": "a701eceb829cd46e8a99432f3dc3be9bd75204d81ac9c4a00eab37cd24d33ba7"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (13).py",
+      "size": 21479,
+      "sha256": "f850fda16c79f7bb032c3a4c28c616400b09806b3bd8f2715635606b4a7efa0a"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/run_tests.py",
+      "size": 1128,
+      "sha256": "efbba01b41a9871df349025a6c27dfe3af9cd9ebadb4a99b053396260ce7d857"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (10).py",
+      "size": 25012,
+      "sha256": "d9403d23a7c41f8ca55eff360b9025f81eab517ad50501ebcccc987e6fcb9452"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/chart_script.py",
+      "size": 9287,
+      "sha256": "35a9cb2b6cff26f2b3edd1e0c937bf36d5ef6285d06002f276971e7ba41255ef"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/golden_test_harness.py",
+      "size": 12960,
+      "sha256": "f5f20819dbd86d40b9751d0cb36bc026d13088947f7957d2554c563d54f60cb0"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/policy_channel_formal_proofs.py",
+      "size": 22424,
+      "sha256": "eda7fdaa4c2501ce658780d7ef97ef22e42821f8b104b2b40099678735da0392"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/comprehensive_cqe_specifications.py",
+      "size": 24270,
+      "sha256": "30949afedd205895fab1a920909506c65cf4d21e03d661769683e4a53b4712a9"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/README.md",
+      "size": 7183,
+      "sha256": "2ae353a2e9a42177cf50562962b39bccbaaab755aa339b3dcf75f1a04c88f94e"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (11).py",
+      "size": 32262,
+      "sha256": "93b7df06b141458815cf96a3cdcf59c773202af2ff6f97234a85c9322efbfab1"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/e8_millennium_exploration_harness.py",
+      "size": 27990,
+      "sha256": "307d5fcb3dfbe7ecf4b2d64687cd3c0eab75eca8eceae064f02fed6c0dc4b904"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/chart_script (1).py",
+      "size": 2763,
+      "sha256": "4fd91e26636ac5d0e016a17d8166ba46d700f59be3d6e1918eab252adc10d734"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/enhanced_golden_test_harness.py",
+      "size": 12971,
+      "sha256": "f6ab90694f01a619b596d6a2c416c658124b6e7d9e9ae38ff3866f5ed7f7d6c1"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/fire_chain_demonstration.py",
+      "size": 13869,
+      "sha256": "d99dd573214d7c96a8f6016ab34a0885c5246a1f884ea87c2b3d1aee3203dbd0"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/e8_branching_demo.py",
+      "size": 4945,
+      "sha256": "d43bf6a68663e96313857422f772f05efb32b5d0a784a3fe44282bd2d436312f"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/CQE_TESTING_HARNESS_COMPLETE.py",
+      "size": 13956,
+      "sha256": "3abc2754d48cb98901b70e8dfc4354f0f5b311790957b4d20030aa0356bca015"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/e8_embedding.py",
+      "size": 3306,
+      "sha256": "5a28174a610e4d1d0e4bb16bf639a71f3767ea9bae3344c43a3e11c7a04c9b6a"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/convergence_and_repair_proofs.py",
+      "size": 27387,
+      "sha256": "08b2a325b46d368a12f0f96b7356ca20f0b2b7d8f343cb0cdcae6287874248f1"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe_runner.py",
+      "size": 14747,
+      "sha256": "58860b9bf3c93c65addd24a37eb356742d24f33855cc5092ade6456db1966e00"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/__init__.py",
+      "size": 763,
+      "sha256": "b7bec3f0381f042a60bb5c32071e4f68e632e55d6b1eb5f7927dcc711c7f8e9e"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/script (14).py",
+      "size": 20389,
+      "sha256": "372eea6315dac34fc70af5ab4f6e29eb7e86cc3c34c72abac4a9a7ef3b28418b"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/enhanced_complete_morsr_explorer.py",
+      "size": 29138,
+      "sha256": "6adade10d20ed43be8b5098f2ec2e8e52d3760cf5f8be6c1ecb39e356674ff6c"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe_enhanced_complete_system.zip",
+      "size": 509956,
+      "sha256": "e7469ccf3044964974a6997b771bddbd5ec5b587ead6cea2fb7d7a683c116e49"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/docs/README.md",
+      "size": 30,
+      "sha256": "78d7ff15cfad22f4cb653123670a90926482de8223d1881f106484ba2773a94e"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/__init__.py",
+      "size": 1840,
+      "sha256": "a06e4d73faa40e494c1d021dbe91c4eebd6b5d260210d87bfa8624d041758259"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/domains/adapter.py",
+      "size": 5495,
+      "sha256": "27cb291ae060473024c2c4f48eb0cacfd44689ade0817b5556a4679242458544"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/domains/__init__.py",
+      "size": 63,
+      "sha256": "f7762a859b6622ce00c1db4ce787b69c0bf5d2a6f73ae3cd83139f71db44c837"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/core/system.py",
+      "size": 15191,
+      "sha256": "6829f77bc19965619f1ec396e5452f58a9b9616fc6e7fea23d8129bb045a9444"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/core/objective_function.py",
+      "size": 8454,
+      "sha256": "3cc286af026abe4458f7375fd8485319952818c430050ce0b664cb7e5102b0b0"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/core/__init__.py",
+      "size": 477,
+      "sha256": "f40436fedd0313e5ecdf25186e84826c74f45db093e26947e85ac1314188b01d"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/core/parity_channels.py",
+      "size": 6833,
+      "sha256": "361d6271cc68ded7a448344332fb0f973ce4d62fa3932cd297e7e3ca1208c678"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/core/morsr_explorer.py",
+      "size": 10063,
+      "sha256": "e00fe73ed5559f3e932b631dcadd838e3e11fa2e4d65665f6e7552c94aaedbbc"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/core/chamber_board.py",
+      "size": 10163,
+      "sha256": "ce51b6dc83da74b02baac742471aeb69923b4a701d25c0e3a8a22a42a87a76e2"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/core/e8_lattice.py",
+      "size": 6024,
+      "sha256": "653c9c92d15acce482eb1680e874728e09cf0add061c462ac851ff363a4e66e7"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/tests/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/tests/test_cqe_system.py",
+      "size": 16795,
+      "sha256": "29c63491950607f84246a5ce63fd786ab7adc0620717972ed48be6914d34a204"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/enhanced/unified_system.py",
+      "size": 25177,
+      "sha256": "855fc69e15a09f06b2c1d74ea613e47a62f7525f6b74a4ce85d55ad8ff1e89ad"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/enhanced/__init__.py",
+      "size": 136,
+      "sha256": "e4f6bde245f6efb9afd1a9606896e373aa5696bf00d481376775672f686c06a0"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/validation/__init__.py",
+      "size": 77,
+      "sha256": "ede2290a8f54c12c397751592ea003bb22f86ac11e42bfb444a12f83b6b9b042"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/validation/framework.py",
+      "size": 18297,
+      "sha256": "a0cf2831c574231829e3c9deb4aab174a9fa4a649e01c69d55a92d01355d067d"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/examples/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/examples/enhanced_usage.py",
+      "size": 12156,
+      "sha256": "663aca3a7450ee13009df59dfe7027b2ceee82870d41e5dd5126e68bd247a488"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/cqe/examples/basic_usage.py",
+      "size": 10317,
+      "sha256": "33a131da76d45038a71ddcf992fe70a4079770965340b56c3c18c9177fd9ae11"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/data/README.md",
+      "size": 21,
+      "sha256": "cc5a733af42e87d6818f4fb0917a0ec51bce03fe12de743eba2c213fafe1dc44"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/config/README.md",
+      "size": 30,
+      "sha256": "9a6be3bd74f6e8d7ba3ad252691eedf31fda2a14fff0ca808ef2bb11cd53c021"
+    },
+    {
+      "path": "code/system_drops/cqe_enhanced_complete_system-20251011T001626Z-1-001/cqe_enhanced_complete_system/embeddings/README.md",
+      "size": 27,
+      "sha256": "a8dcca3fb5e605eab476f245d8dc8be963b70ec96d10a033d0c9153370b42595"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold.zip",
+      "size": 20418,
+      "sha256": "a11cddd93186864d65b42bfe0c918f5e791633d689590365eb6d9fcdd9313427"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/benchmarks.csv",
+      "size": 541,
+      "sha256": "53c692aa99c6c378d3d3c2f73c599651acc185d0fbeb5d8b64ff0cbf32d8d4cf"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/README.md",
+      "size": 1683,
+      "sha256": "c2510415523e1b1cafd9b4182bd96af4faae85f19ebb09e2023b3395cf67389e"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/scripts/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/scripts/run_bench.py",
+      "size": 660,
+      "sha256": "07087ebbda55366da32a1235e66e4db5d4326fb39ebc71d2bf00f06fb64e40cd"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/tests/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/tests/generators.py",
+      "size": 421,
+      "sha256": "cc25306e3535eb3471ce3511bd6292dfe9aca1eb4a4e48f2dd46b42d37147ace"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/harness/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/harness/validateproof.py",
+      "size": 2534,
+      "sha256": "7d3278d4147bebe63f48b8b076ee8e1dc0821164b4c592fb87e72ddcf0282d21"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/domain_adapters/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/domain_adapters/permutations.py",
+      "size": 473,
+      "sha256": "55ca0220a2847ba5bd4dec406b9aff66677b3c58d5be0ee57259db5d47d5b935"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/domain_adapters/__pycache__/permutations.cpython-311.pyc",
+      "size": 1441,
+      "sha256": "5a0ea61152f086d12d47975bdda6eb7f72f93ec3674cdab03869ab88ceb9fa1e"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/domain_adapters/__pycache__/__init__.cpython-311.pyc",
+      "size": 173,
+      "sha256": "a3a69fe5d138d1f221dea35061042fb507ee7dcb20075a957766b16418d2606d"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/cqe_overlay/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/cqe_overlay/morsr.py",
+      "size": 1850,
+      "sha256": "852a7169fb454b873e54e4659aa80a5ec0086eb405b035f01c1aecf0ba2b2644"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/cqe_overlay/objective.py",
+      "size": 1455,
+      "sha256": "1d10b1bb06bf77bfeba6dbb23a8c649a7c4bcb87af08c23565611bbb0df7a8d9"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/cqe_overlay/embedding.py",
+      "size": 1791,
+      "sha256": "d2ab2f7a6f753e77fb7f87955fd5d6c0ec81e1043d6ab6ccb01253f39c895a57"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/cqe_overlay/operators.py",
+      "size": 1518,
+      "sha256": "1c461ea9eec75ddd71dd74dde0f8975c9eeb31cf67a2643ca150659b5b6e9603"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/cqe_overlay/__pycache__/objective.cpython-311.pyc",
+      "size": 3591,
+      "sha256": "3126b3358997356c40821177fce367fcfb782f049d1005b0f2800aa2e1b9d4f2"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/cqe_overlay/__pycache__/morsr.cpython-311.pyc",
+      "size": 3662,
+      "sha256": "4ece62250d38ee0f872ac42df27b08d5b0275917908a53c62537744eacad6f00"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/cqe_overlay/__pycache__/operators.cpython-311.pyc",
+      "size": 3649,
+      "sha256": "801938a132b7a36eac6d4535aca7bafc97cede29a588ac9e5ec807cb8fd6f7c3"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/cqe_overlay/__pycache__/__init__.cpython-311.pyc",
+      "size": 169,
+      "sha256": "920e3bbc0b6c16e79c60cfb5b279f947dc1e7dd3d6e2bc6dd7013bd7ecd20b64"
+    },
+    {
+      "path": "code/system_drops/cqe_morsr_harness_scaffold-20251011T001627Z-1-001/cqe_morsr_harness_scaffold/cqe_morsr_harness_scaffold/cqe_overlay/__pycache__/embedding.cpython-311.pyc",
+      "size": 5359,
+      "sha256": "97dc25cd1907e895d75e3bc6bc998133b4a048c50f347092a1fa49ca698cd37e"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/validate_proof.py",
+      "size": 7778,
+      "sha256": "c46e53aaa1bee522fcf80b158ee4d73c6a395421db2710c450cf7f1382d6c2a3"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (9).py",
+      "size": 19182,
+      "sha256": "7fd04365474be4d78d70ad98146f8314d9509e0055203c8c260a3502673fb105"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (68).py",
+      "size": 5389,
+      "sha256": "d1fe0733bbf9b48ed1d35e58c9fe658681b92d36064d70ca85bfec977cf95324"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (53).py",
+      "size": 2881,
+      "sha256": "cc66814fcc090c010c7e3d4d49e095f428e0a51f1a0a4df359c198eb20091766"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (58).py",
+      "size": 3118,
+      "sha256": "e12b4fbfd60ac335a946c9bff38a79b572969c20b5a9643f6933dc10afe5347f"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/validate_yangmills.py",
+      "size": 10482,
+      "sha256": "6d3d718bd1008b56040532f90a3a38319ddaec09be3d33c329f0a5f4fb96f2e6"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (62).py",
+      "size": 14272,
+      "sha256": "a1fd9199339551b4f631c904ffe13be4328896945f20323b91f301d16d3accb9"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/setup.py",
+      "size": 2867,
+      "sha256": "993bea7407d2d8ad522be8a3813a0a705282715bb1b565748bdeea6e6bfb96fd"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (8).py",
+      "size": 16580,
+      "sha256": "afb7d25ade029ddc9f8e41d1fc5f6cb6c01a2834542b8d7c03c0760b2982bb33"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (54).py",
+      "size": 6861,
+      "sha256": "47f1d27f020912a40b44cbd839165fd0aba582e43a6cf54ce8ea86274c644f40"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (66).py",
+      "size": 26362,
+      "sha256": "6168d1342ca8e7346407ef5782637cfa78a9f696dc1a60a507d3c839abf93406"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (48).py",
+      "size": 8957,
+      "sha256": "6dc5555ecebb3171362de6f447f00ae18669fa3e2dc4ac19372dd0c705590924"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/validate_hodge_conjecture.py",
+      "size": 22603,
+      "sha256": "1df5dc156d00c2351fc0d90c25156cdac56365b3e5fa9af3eb90c01ed3b11a11"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (49).py",
+      "size": 10710,
+      "sha256": "eed3562140c7c39cc978662c9ef32f800039d03ad65331fe9954cdb56bcc6ea6"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (61).py",
+      "size": 31167,
+      "sha256": "6a48bebfb3bb67bf030e51b4aa072fa335573b841f1cdd6ab5e4a24eaf46ec05"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (65).py",
+      "size": 16483,
+      "sha256": "5a6cd3fcc94848370043ae0a09f696e66d63e6506efb708ad9023a9645913b8b"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/validate_riemann_hypothesis.py",
+      "size": 13914,
+      "sha256": "bfe860ed63124db225268b4d7ee1fb5c58d3d719ad6ec5ec77d3b39cda592ff4"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script.py",
+      "size": 15189,
+      "sha256": "9f5eb8e8f4426adb1b710dd32fc412b1fe54e9e63b367c6fefaf0fac8e3f12ed"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/validate_navier_stokes.py",
+      "size": 18041,
+      "sha256": "d23670bbf995fe28b559b61bed210f47a58b1d8eec0b9306664217a12800aff9"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/test_cqe_integration.py",
+      "size": 10300,
+      "sha256": "8d8a56da6bbc4aa9cd371e84ece10755c96bdc8b7078b7ce27e6feee2dcd466f"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (6).py",
+      "size": 16415,
+      "sha256": "f11079138967ed6fca9afc77f1f7f1ac585479373b843496663b53af12fb423f"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (63).py",
+      "size": 32860,
+      "sha256": "4765f6449d0d340ad482dc50fa32b9a0a42d97583152db547a442aeff5fe1f26"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (71).py",
+      "size": 5355,
+      "sha256": "457e12808ac7a2769b18b126a9cadb06472317036c8ebd7e845b4884f24c53e3"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/setup_embeddings.py",
+      "size": 2611,
+      "sha256": "697636e5df4b367e9679b177abc54d36b9e2ff201afd29e67b7730fa96f18803"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (67).py",
+      "size": 4758,
+      "sha256": "25ed22c308e2bd1604298985defcc22c8cc20fc9f914cbff9c411a5e986b775a"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (59).py",
+      "size": 3359,
+      "sha256": "d28f29b844cbde0baa4acdf77b3bcbf6967affffbd420524c6e60dddbb9fd059"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (64).py",
+      "size": 15652,
+      "sha256": "8655265b7c415bec990e111db2d269b2b3ad7f6c788c81aade0b75f7a31e1f5b"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (60).py",
+      "size": 23820,
+      "sha256": "3a5c63f6b7894473f4e6ffe97092cc4f1e127576df048cb1adcd3605d3cb430f"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (69).py",
+      "size": 4711,
+      "sha256": "7922383b0f5022a219eec6966f6049bf717ed8547e5d5ee155e906e64d6123d3"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/test_e8_embedding.py",
+      "size": 6418,
+      "sha256": "6ce5b35e2379ddc809f9bc219698ce056b5fbe8c7c4216e43b6d0126f6815532"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (70).py",
+      "size": 6529,
+      "sha256": "413f04f88b2580d843c7b8c58a77f993309150b3faa774e19ef8222779bd0fcb"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (7).py",
+      "size": 24949,
+      "sha256": "587d059b35120ac742b5555e262abd236b848d4af9fb0ade11e14c2fff62c624"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (50).py",
+      "size": 10747,
+      "sha256": "eb426309cddc6400a220d90a2f79870c5f026a58489859937b9ea5b2afb1b416"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (40).py",
+      "size": 35367,
+      "sha256": "ae24e65a659d8f96328eccd62d5a49107f15c725220c8e2b4193ffdf21ed41ff"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (44).py",
+      "size": 5022,
+      "sha256": "2d1eb2e778e8656fa68375cfa397976412af1577577edc014b7d364ead13fabe"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (42).py",
+      "size": 4139,
+      "sha256": "d0ea7feaae32a318ceb357f03e35e1720b940966d5b0e838468977d88a39679b"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (38).py",
+      "size": 20334,
+      "sha256": "b25bd689e32a64d2bc53a580d43dc0552d2f029aa7f36cbd9a140b35ceaf4c9c"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (4).py",
+      "size": 13361,
+      "sha256": "94a843c4c4e1bca7e13cf5450043298a4079be0a1d603df8a5dc86fbf69d581f"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (39).py",
+      "size": 25320,
+      "sha256": "ac6714858b05e17e39d9409a2ec0cb73025a12d8ab7fc67db6a4e3d3860e32f4"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (56).py",
+      "size": 13711,
+      "sha256": "f9aa49781228ba94ad78b97b26cc95245e12c2861fcc6546edd17cd5d13c6d8b"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (45).py",
+      "size": 5948,
+      "sha256": "7b6f4e4c72e02650ed3ae2692e12aa07c23841bca848e6fce7463c5cdf546a05"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (5).py",
+      "size": 13879,
+      "sha256": "28619890aa3e2ea794eb25341c51fb0fcb94c6dd53d7699c83b72cbb0051baca"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (52).py",
+      "size": 1106,
+      "sha256": "f368e5540118d3cd55fde979427767f3085db5894cf4c582c3162c105d3c3bd8"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (51).py",
+      "size": 15517,
+      "sha256": "16edc6968bed2efca7b2bb970d90e2f71d46da89c7f6697334bfc510279301c4"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (41).py",
+      "size": 28352,
+      "sha256": "da775c14d5782c0adc5ad72dad63b5059d0551e2d2f1c0cc720824a342b3a6be"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (43).py",
+      "size": 3537,
+      "sha256": "a276cbb2f1d4a41459a08061e0ceeab42389cc003ead39279d6014b4a73056f5"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (46).py",
+      "size": 6462,
+      "sha256": "4818a726912bfd3379c6c0e9148d751728eab6ef9bc35c03a295e65a452e4f8e"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (47).py",
+      "size": 7369,
+      "sha256": "c0b34f329cb3cc41f88b67eac19b77fe43ede364c15307871a0f2bca36abe74d"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (55).py",
+      "size": 10907,
+      "sha256": "403616da58ccea08c5b67452f0a8eeb82bb4d59e4f7bcedfaec8c66235d10fd6"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (34).py",
+      "size": 20629,
+      "sha256": "dc1548103e8f305ab99c9f35673aedc098e990d77b4f3ff78a24b2c85ea24308"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (35).py",
+      "size": 12952,
+      "sha256": "44036078bafce7328aa39aee4f0cc543d2ece81e14bfa4d9dab87964f2bc09c6"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (31).py",
+      "size": 9715,
+      "sha256": "d85896d90d7aed6cc4f1c9437d31b56cd4a96b90b875adc771b3c8749449d6de"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (36).py",
+      "size": 16915,
+      "sha256": "7c5dbffbd9f235b0e567abffd0f2dc3c1e34fb062be0cd5fa9b62553040ca5ec"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (32).py",
+      "size": 16075,
+      "sha256": "65a1bc070cd147e71caff5340e66575c37c90f2452e01228cbbeac38b55fca26"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (3).py",
+      "size": 21863,
+      "sha256": "ef50f6240ebfacc4984e52d5bba148660ec00e89d6d2ae32c9fbbdf5ed9a07f3"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (28).py",
+      "size": 21870,
+      "sha256": "7aac408c292fdbd425aa7145084049960b7ad1ce02311e8275a5d0370001e250"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (24).py",
+      "size": 12980,
+      "sha256": "a63796e981e51086f77942da7798164cf0cb9cf28b87b208b8c66c9cb51f4beb"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (29).py",
+      "size": 13479,
+      "sha256": "c5ecb48f76a40c6302340e3bd2d7b20e116ee1d930c04c91b461405e873391c9"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (27).py",
+      "size": 12682,
+      "sha256": "ff184403468d56256af1be89ae9285face416c3e340c681e1c71fb1dc615be4a"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (33).py",
+      "size": 19976,
+      "sha256": "af51668ad109a24977cf483a2d83c2b648ae8d6e9d3ce8d740e6ec85c6911f5a"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (26).py",
+      "size": 9074,
+      "sha256": "10896f4393ca30be0569aa8bde7a526b22f146297fb396335a1a0c42f662b967"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (20).py",
+      "size": 31739,
+      "sha256": "989ae4d04d94679c897aa1d5e544a9d6330368be2ed2230ee07e2621c055be38"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (18).py",
+      "size": 6339,
+      "sha256": "dfa2cd56524b53f1aa830b8e2df5680e0e762066122a777bfc28966fcd4cb4c5"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (37).py",
+      "size": 14763,
+      "sha256": "4029f4606bfba7033127d918259dab2c037a812700f5a886f4856065093b8de8"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (13).py",
+      "size": 21479,
+      "sha256": "f850fda16c79f7bb032c3a4c28c616400b09806b3bd8f2715635606b4a7efa0a"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (57).py",
+      "size": 14805,
+      "sha256": "c3174e63be9d0a930d78f89865f0c25d80f55f2bf38c7b19f5e7ca1f82f14da0"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (23).py",
+      "size": 31646,
+      "sha256": "f523bc2b9934d2a09bcd7265395bf444db676f5b846abfa491b60f668b2d6867"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/policy_channel_formal_proofs.py",
+      "size": 22424,
+      "sha256": "eda7fdaa4c2501ce658780d7ef97ef22e42821f8b104b2b40099678735da0392"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (14).py",
+      "size": 20389,
+      "sha256": "372eea6315dac34fc70af5ab4f6e29eb7e86cc3c34c72abac4a9a7ef3b28418b"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (17).py",
+      "size": 5542,
+      "sha256": "d43f528cfab9deed0125e55cfece2b67d02744861a09a9bf2e3814fc989ce5d6"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (25).py",
+      "size": 16808,
+      "sha256": "70dc8c9f5b2b3f6400450557f6f3aa1529cd4d1faecb1ddc8481d7585cb2cf45"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (22).py",
+      "size": 12963,
+      "sha256": "951cacfcd96bbfac0819c47a501336221c69dde19a415cc958685af96088db83"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (15).py",
+      "size": 11434,
+      "sha256": "a874c5f8be78c90de147448de17632ce1af5a4ef8366b1ace9811c77f2dbd662"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (16).py",
+      "size": 18837,
+      "sha256": "9d9b1e1e6c252ad31975453a7d2fd81c9ff913c6baa7774ecb2d73ad59a5a17c"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (21).py",
+      "size": 29424,
+      "sha256": "45009c529d49bd5a47d7d184e465cac605218799701a838befac11a1aace7d41"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (12).py",
+      "size": 15100,
+      "sha256": "1b33b49ccee87f3dc04f33bf266b353a21858c70284ecc5ef0e63b4198505e57"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (19).py",
+      "size": 16124,
+      "sha256": "d120745bd98386427bc3a7b80b353cc4a98b8af36ebe6c644b9e76c66f1773ab"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/ENHANCED_SYSTEM_SUMMARY.md",
+      "size": 9370,
+      "sha256": "b297a3d0cb6ace9f63c5d87deb3d614bf2494c63b645186a753788f8461f6567"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (11).py",
+      "size": 32262,
+      "sha256": "93b7df06b141458815cf96a3cdcf59c773202af2ff6f97234a85c9322efbfab1"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (1).py",
+      "size": 8398,
+      "sha256": "487366bf5c9dcf73ab00476d0a3bfe43ec57e9bab21ac3db01bc8ddec26613a0"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (30).py",
+      "size": 11707,
+      "sha256": "d7a4d6c0f92d0df854aa226fe5ae95d4a76152f53c0cf50e880100b1902809e6"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/run_tests.py",
+      "size": 1128,
+      "sha256": "efbba01b41a9871df349025a6c27dfe3af9cd9ebadb4a99b053396260ce7d857"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (10).py",
+      "size": 25012,
+      "sha256": "d9403d23a7c41f8ca55eff360b9025f81eab517ad50501ebcccc987e6fcb9452"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/generate_figures.py",
+      "size": 11246,
+      "sha256": "e023f9ad39532ae59674b36d2fa322224044ebf160f2812359fcebcd364e123f"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/e8_millennium_exploration_harness.py",
+      "size": 27990,
+      "sha256": "307d5fcb3dfbe7ecf4b2d64687cd3c0eab75eca8eceae064f02fed6c0dc4b904"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/generate_yangmills_figures.py",
+      "size": 15678,
+      "sha256": "673709a385693b001311c60491b07e1c4c1e6dfbc591705155926aaadbf33317"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/golden_test_harness.py",
+      "size": 12960,
+      "sha256": "f5f20819dbd86d40b9751d0cb36bc026d13088947f7957d2554c563d54f60cb0"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/fire_chain_demonstration.py",
+      "size": 13869,
+      "sha256": "d99dd573214d7c96a8f6016ab34a0885c5246a1f884ea87c2b3d1aee3203dbd0"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/enhanced_golden_test_harness.py",
+      "size": 12971,
+      "sha256": "f6ab90694f01a619b596d6a2c416c658124b6e7d9e9ae38ff3866f5ed7f7d6c1"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/enhanced_complete_morsr_explorer.py",
+      "size": 29138,
+      "sha256": "6adade10d20ed43be8b5098f2ec2e8e52d3760cf5f8be6c1ecb39e356674ff6c"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/CQE_TESTING_HARNESS_COMPLETE.py",
+      "size": 13956,
+      "sha256": "3abc2754d48cb98901b70e8dfc4354f0f5b311790957b4d20030aa0356bca015"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/scalability_benchmarks.py",
+      "size": 34528,
+      "sha256": "67c6d24859ca664f39722653116d7ec847f06fdd6e6a30bc67182c412d15c0bb"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/README.md",
+      "size": 7183,
+      "sha256": "2ae353a2e9a42177cf50562962b39bccbaaab755aa339b3dcf75f1a04c88f94e"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/generate_navier_stokes_figures.py",
+      "size": 21182,
+      "sha256": "b574edf3f48d5e9be4079803ae69cd88476b8452b6a97fb8386f7bce18ac22d7"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/convergence_and_repair_proofs.py",
+      "size": 27387,
+      "sha256": "08b2a325b46d368a12f0f96b7356ca20f0b2b7d8f343cb0cdcae6287874248f1"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/e8_embedding.py",
+      "size": 3306,
+      "sha256": "5a28174a610e4d1d0e4bb16bf639a71f3767ea9bae3344c43a3e11c7a04c9b6a"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/chart_script (1).py",
+      "size": 2763,
+      "sha256": "4fd91e26636ac5d0e016a17d8166ba46d700f59be3d6e1918eab252adc10d734"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/chart_script.py",
+      "size": 9287,
+      "sha256": "35a9cb2b6cff26f2b3edd1e0c937bf36d5ef6285d06002f276971e7ba41255ef"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/__init__.py",
+      "size": 763,
+      "sha256": "b7bec3f0381f042a60bb5c32071e4f68e632e55d6b1eb5f7927dcc711c7f8e9e"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe_runner.py",
+      "size": 14747,
+      "sha256": "58860b9bf3c93c65addd24a37eb356742d24f33855cc5092ade6456db1966e00"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/e8_branching_demo.py",
+      "size": 4945,
+      "sha256": "d43bf6a68663e96313857422f772f05efb32b5d0a784a3fe44282bd2d436312f"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/script (2).py",
+      "size": 9287,
+      "sha256": "d41101073dc59fe99b53ebc34ff50c72fb66830d1185a5445708f4c4fe2df862"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/comprehensive_cqe_specifications.py",
+      "size": 24270,
+      "sha256": "30949afedd205895fab1a920909506c65cf4d21e03d661769683e4a53b4712a9"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/iterative_fire_chain_explorer.py",
+      "size": 30556,
+      "sha256": "a701eceb829cd46e8a99432f3dc3be9bd75204d81ac9c4a00eab37cd24d33ba7"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/enhanced_cqe_system_final.zip",
+      "size": 513970,
+      "sha256": "848b7a1bbd79d3e7ab45f59ee296d269fcea27f136f2c6106edea671a7da7b71"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/data/README.md",
+      "size": 21,
+      "sha256": "cc5a733af42e87d6818f4fb0917a0ec51bce03fe12de743eba2c213fafe1dc44"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/docs/README.md",
+      "size": 30,
+      "sha256": "78d7ff15cfad22f4cb653123670a90926482de8223d1881f106484ba2773a94e"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/config/README.md",
+      "size": 30,
+      "sha256": "9a6be3bd74f6e8d7ba3ad252691eedf31fda2a14fff0ca808ef2bb11cd53c021"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/__init__.py",
+      "size": 1840,
+      "sha256": "a06e4d73faa40e494c1d021dbe91c4eebd6b5d260210d87bfa8624d041758259"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/tests/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/tests/test_cqe_system.py",
+      "size": 16795,
+      "sha256": "29c63491950607f84246a5ce63fd786ab7adc0620717972ed48be6914d34a204"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/validation/framework.py",
+      "size": 18297,
+      "sha256": "a0cf2831c574231829e3c9deb4aab174a9fa4a649e01c69d55a92d01355d067d"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/validation/__init__.py",
+      "size": 77,
+      "sha256": "ede2290a8f54c12c397751592ea003bb22f86ac11e42bfb444a12f83b6b9b042"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/enhanced/unified_system.py",
+      "size": 25177,
+      "sha256": "855fc69e15a09f06b2c1d74ea613e47a62f7525f6b74a4ce85d55ad8ff1e89ad"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/enhanced/__init__.py",
+      "size": 136,
+      "sha256": "e4f6bde245f6efb9afd1a9606896e373aa5696bf00d481376775672f686c06a0"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/core/parity_channels.py",
+      "size": 6833,
+      "sha256": "361d6271cc68ded7a448344332fb0f973ce4d62fa3932cd297e7e3ca1208c678"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/core/morsr_explorer.py",
+      "size": 10063,
+      "sha256": "e00fe73ed5559f3e932b631dcadd838e3e11fa2e4d65665f6e7552c94aaedbbc"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/core/objective_function.py",
+      "size": 8454,
+      "sha256": "3cc286af026abe4458f7375fd8485319952818c430050ce0b664cb7e5102b0b0"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/core/system.py",
+      "size": 15191,
+      "sha256": "6829f77bc19965619f1ec396e5452f58a9b9616fc6e7fea23d8129bb045a9444"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/core/__init__.py",
+      "size": 477,
+      "sha256": "f40436fedd0313e5ecdf25186e84826c74f45db093e26947e85ac1314188b01d"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/core/e8_lattice.py",
+      "size": 6024,
+      "sha256": "653c9c92d15acce482eb1680e874728e09cf0add061c462ac851ff363a4e66e7"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/core/chamber_board.py",
+      "size": 10163,
+      "sha256": "ce51b6dc83da74b02baac742471aeb69923b4a701d25c0e3a8a22a42a87a76e2"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/examples/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/examples/enhanced_usage.py",
+      "size": 12156,
+      "sha256": "663aca3a7450ee13009df59dfe7027b2ceee82870d41e5dd5126e68bd247a488"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/examples/basic_usage.py",
+      "size": 10317,
+      "sha256": "33a131da76d45038a71ddcf992fe70a4079770965340b56c3c18c9177fd9ae11"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/domains/__init__.py",
+      "size": 63,
+      "sha256": "f7762a859b6622ce00c1db4ce787b69c0bf5d2a6f73ae3cd83139f71db44c837"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/cqe/domains/adapter.py",
+      "size": 5495,
+      "sha256": "27cb291ae060473024c2c4f48eb0cacfd44689ade0817b5556a4679242458544"
+    },
+    {
+      "path": "code/system_drops/enhanced_cqe_system_final-20251011T001630Z-1-001/enhanced_cqe_system_final/embeddings/README.md",
+      "size": 27,
+      "sha256": "a8dcca3fb5e605eab476f245d8dc8be963b70ec96d10a033d0c9153370b42595"
+    },
+    {
+      "path": "code/system_drops/cqe_operating_system_complete/cqe_operating_system.py",
+      "size": 30754,
+      "sha256": "6b2a9bd6431ada9ea56d872d43b5ada26cd5d4fe4a4096d893ed12956f4c2862"
+    },
+    {
+      "path": "code/system_drops/cqe_operating_system_complete/README.md",
+      "size": 3738,
+      "sha256": "1a7192585aa8ed39bc354575b5b8b3dc43a66bba20f2c740962b1708bcf9f8a1"
+    },
+    {
+      "path": "code/system_drops/cqe_operating_system_complete/__init__.py",
+      "size": 9851,
+      "sha256": "4f7f68ff001962374868a0b35912d4b7a5793380013b420057d0731c761f2d55"
+    },
+    {
+      "path": "code/system_drops/cqe_operating_system_complete/setup.py",
+      "size": 7803,
+      "sha256": "429b7b9cb17a646890d22873a7f8d91d17fb03a2758f2abe9fcd72ba0c8dc4c9"
+    },
+    {
+      "path": "code/system_drops/cqe_operating_system_complete/core/cqe_os_kernel.py",
+      "size": 33202,
+      "sha256": "3802e3ab27d2608e59bc1e72c70af4d51a379efc6c45280cd4dd959c9d346f1d"
+    },
+    {
+      "path": "code/system_drops/cqe_operating_system_complete/io/cqe_io_manager.py",
+      "size": 28391,
+      "sha256": "c6d34cf77c25edc7b86c00ae932b820ce61d074f433e03d659d3b6fd7e278ea0"
+    },
+    {
+      "path": "code/system_drops/cqe_operating_system_complete/governance/cqe_governance.py",
+      "size": 34204,
+      "sha256": "10287e21c1e014929be21789c8d52e08936c44fd21b4ad2c95d361ed61677d73"
+    },
+    {
+      "path": "code/system_drops/cqe_operating_system_complete/language/cqe_language_engine.py",
+      "size": 36921,
+      "sha256": "9d58dcdc17feda4b15c8e9cdc6cbbd4119e7d5795c000cd3f3a1448c242dbf70"
+    },
+    {
+      "path": "code/system_drops/cqe_operating_system_complete/reasoning/cqe_reasoning_engine.py",
+      "size": 40290,
+      "sha256": "c3970dbc9640b60309276dae08589406898b2af8d57ea23161368e2b1e35f6b3"
+    },
+    {
+      "path": "code/system_drops/cqe_operating_system_complete/storage/cqe_storage_manager.py",
+      "size": 38954,
+      "sha256": "e15abf8fd61dc9e8479234f2743018e360a2fc1853486358e82ac3252d24dddd"
+    },
+    {
+      "path": "code/system_drops/cqe_operating_system_complete/interface/cqe_interface_manager.py",
+      "size": 39378,
+      "sha256": "fdaf6e8d12844b2736b71156b7029bb4103f31dc088987a0cb796ba4d2da4efd"
+    },
+    {
+      "path": "code/system_drops/cqe_operating_system_complete/examples/complete_demo.py",
+      "size": 18140,
+      "sha256": "f80d94fb0e10417cc73875bc74fcc33cb815e4612ecbf4a49ce5028e902afc2f"
+    },
+    {
+      "path": "code/system_drops/CQE_Unified_System_Design/CQE_KOLMOGOROV_Slice.md",
+      "size": 1150,
+      "sha256": "0a54e42a3ed81a05c1379e321ca610cd5eb8332c2a5a0f16029d144e78551fea"
+    },
+    {
+      "path": "code/system_drops/CQE_Unified_System_Design/CQE_LANDAU_Slice.md",
+      "size": 1244,
+      "sha256": "12d48782b10b07eaca42c5fffa8bfc68fed1f44ed7c23323251ac8bc63134146"
+    },
+    {
+      "path": "code/system_drops/CQE_Unified_System_Design/CQE_MORSR_v2_Slice.md",
+      "size": 2118,
+      "sha256": "ffd66a41bba1aea5aac5f7c8a1b8887c45d3c34191a6cfe11ab4cce5a21e386d"
+    },
+    {
+      "path": "code/system_drops/CQE_Unified_System_Design/CQE_SACNUM_Slice.md",
+      "size": 1867,
+      "sha256": "ee684972dc72fbc17f59774a4df2933b24ef5ee1b0d0fc140f11b89d76d1912f"
+    },
+    {
+      "path": "code/system_drops/CQE_Unified_System_Design/CQE_SPECTRAL_Slice.md",
+      "size": 954,
+      "sha256": "25729c636c727638bcfe9afc75db026fc608c72d1c20021f4cebc1e6ca8e1b31"
+    },
+    {
+      "path": "code/system_drops/CQE_Unified_System_Design/CQE_SafeCube_Slice.md",
+      "size": 1479,
+      "sha256": "fdd61e41b873733b69bbd419ac9e0fc36b1cb99dc7f6e619f84a6ecbcda73fed"
+    },
+    {
+      "path": "code/system_drops/CQE_Unified_System_Design/CQE_SnapLat_Slice.md",
+      "size": 2240,
+      "sha256": "fe5c6a8af48e2eaa186e1c8408965d8e978de002e26bb6a13bcc4d639f8dbf2d"
+    },
+    {
+      "path": "code/system_drops/CQE_Unified_System_Design/CQE_System_Architecture.md",
+      "size": 9394,
+      "sha256": "6340e79afab4284a8b5b9e18d8aa19d6968544f66576a962c107d3ac26fa3d02"
+    },
+    {
+      "path": "code/system_drops/CQE_Unified_System_Design/CQE_TDA_Slice.md",
+      "size": 989,
+      "sha256": "394d1785dec3dc19906238a07582207ad8645f63da829f1460297862fc65834a"
+    },
+    {
+      "path": "code/system_drops/CQE_Unified_System_Design/CQE_TESLA_Slice.md",
+      "size": 1100,
+      "sha256": "2139962d12e827b2a39fe1b41cea12e891157b30e970028841869c4eea981037"
+    },
+    {
+      "path": "code/system_drops/exported-assets/script.py",
+      "size": 2475,
+      "sha256": "8b327b7236da17c2796cb95c382735ad6f460d831401e06a6a3ffe28b3a30610"
+    },
+    {
+      "path": "code/system_drops/exported-assets/cqe_master_cross_index.csv",
+      "size": 1047,
+      "sha256": "d5cb1e2895fdbc1d9d31c80bfc72ff8647bf6be2e5d12b0b2af501e1f76215f3"
+    },
+    {
+      "path": "code/system_drops/exported-assets/cqe_system_architecture.md",
+      "size": 4116,
+      "sha256": "0d28879cab4b465d6e20933f4ad761a1d1309c4bc61c296865160b052b63ad98"
+    },
+    {
+      "path": "code/system_drops/exported-assets/script_1.py",
+      "size": 7707,
+      "sha256": "5743038dd8c7091a82464c91778c61aa0df0e0e8f9b16e41edbf754ec3613942"
+    },
+    {
+      "path": "code/system_drops/exported-assets/cqe_batch_processor.py",
+      "size": 6692,
+      "sha256": "9f0ddd102731bb52966522d5d883cfb3fa2df62827465f8e4c13051476095550"
+    },
+    {
+      "path": "code/system_drops/exported-assets/cqe_master_cross_index_full.csv",
+      "size": 822,
+      "sha256": "0c5fb49dc49336930e2ce7a18477de3f89efc1abe5ce25904bc58d1dc72b6b2f"
+    },
+    {
+      "path": "code/system_drops/exported-assets/CQE_Delivery_Package_v1.md",
+      "size": 4593,
+      "sha256": "e4279787b8201d493359f01c23f74a6de11bc20367269be09289a661f5fe9796"
+    },
+    {
+      "path": "code/system_drops/exported-assets (1)/script.py",
+      "size": 2450,
+      "sha256": "d6eb7855479d0174f6f4a6af4635a9bce29936fdc2a8435f42f8cfe81ef28c30"
+    },
+    {
+      "path": "code/system_drops/exported-assets (1)/script_1.py",
+      "size": 1357,
+      "sha256": "bb852eee1b152a70b5f55641b3689bb33d89fbb57cdb854ecc0dff57124f1ad8"
+    },
+    {
+      "path": "code/system_drops/exported-assets (1)/script_2.py",
+      "size": 2356,
+      "sha256": "848002b7d48ec8948b97eadd3bc8e76dd63460f447e0fc8802d826c4d489ce84"
+    },
+    {
+      "path": "code/system_drops/exported-assets (1)/script_3.py",
+      "size": 2953,
+      "sha256": "542aa8679d1290f304abf6f5719e81c7781c92fc84f3143df695b3eb7872b3fe"
+    },
+    {
+      "path": "code/system_drops/exported-assets (1)/chart_script.py",
+      "size": 2646,
+      "sha256": "cdecb35dd9c68a78a3a0fbc1b8d0431806eae415fca6f479c83ee1033bf37ac2"
+    },
+    {
+      "path": "code/system_drops/exported-assets (1)/system_architecture.png",
+      "size": 279622,
+      "sha256": "ffcd4d3d68b4feba88deb6a1132f2f76753b857f2fbc3c86af96f023c352a57d"
+    },
+    {
+      "path": "code/system_drops/exported-assets (1)/script_4.py",
+      "size": 4378,
+      "sha256": "4291a5bc453bb15376a349430a724630e8f42a86178b8c43025a2e8673aee053"
+    },
+    {
+      "path": "code/system_drops/exported-assets (1)/script_5.py",
+      "size": 4089,
+      "sha256": "34ee0965c92e974e141b877dd2b4f8ab52cb66e084c1fa7e365f6b041142c65d"
+    },
+    {
+      "path": "code/system_drops/exported-assets (1)/complete-toolkit-analysis.pdf",
+      "size": 157923,
+      "sha256": "6c8f201161698d34e5adf702435850d4f29f98fd09655db182fd795118786dc0"
+    },
+    {
+      "path": "code/system_drops/exported-assets (2)/operation-via-slice-stitching-build-guide.md",
+      "size": 8035,
+      "sha256": "dba680be17181b547d955af6f3d552f100c30e239e2962991e86a2fa5ecef108"
+    },
+    {
+      "path": "code/system_drops/exported-assets (2)/chart_script.py",
+      "size": 4236,
+      "sha256": "4310a3af53dfd44a01f5d1d5f51b3731b56efc801204ddf0653b3ce32c53ee3d"
+    },
+    {
+      "path": "code/system_drops/exported-assets (2)/slice_stitching_architecture.png",
+      "size": 172529,
+      "sha256": "383317855cdbc9b0ee7f9f397b648e5aecdc2a280d6b600f467abd0ca211421b"
+    },
+    {
+      "path": "code/system_drops/exported-assets (2)/chart_script_1.py",
+      "size": 4683,
+      "sha256": "ad7c315873809359cc10cca0289c8ccad31d50c73d5ce45df547335415e739a7"
+    },
+    {
+      "path": "code/system_drops/exported-assets (2)/gantt_chart.png",
+      "size": 254295,
+      "sha256": "b64240e2e5e8ce9c40dfef6894bb1919ba498fa56f721a7bbbfa10e0889d2725"
+    },
+    {
+      "path": "code/system_drops/exported-assets (3)/script.py",
+      "size": 7160,
+      "sha256": "bc161b8472e59b4f83014a166dc6fe64c1a758ae632f2214e979b29139120c33"
+    },
+    {
+      "path": "code/system_drops/exported-assets (3)/script_1.py",
+      "size": 6939,
+      "sha256": "05c745b29299c500b548e9e9e8898c002549db77f03b8bf8392c900f90a450e2"
+    },
+    {
+      "path": "code/system_drops/exported-assets (3)/new-cqe-slices-34-37.md",
+      "size": 10942,
+      "sha256": "04c9f1bc38de8f3f7d274b38b2fa100bd7c539bd3765431f949920856955f837"
+    },
+    {
+      "path": "code/system_drops/exported-assets (3)/script_2.py",
+      "size": 4850,
+      "sha256": "7c39a7c4b2e28899d583643561b44d53e8e529740cd61f435b98d82c2f4cd302"
+    },
+    {
+      "path": "code/system_drops/exported-assets (3)/complete-cqe-37-slice-build.md",
+      "size": 14107,
+      "sha256": "efa0b1848baf7be5c871abd8661bddce30aa7d33e01dc7dd463666e91d9c6ab8"
+    },
+    {
+      "path": "code/system_drops/exported-assets (3)/cqe-slice-builder.zip",
+      "size": 23444,
+      "sha256": "d1225cf672fa3adb4409883a5dfa72b7c4cd87d0f7df9839f0dd18739a0301b3"
+    },
+    {
+      "path": "code/system_drops/exported-assets (3)/script_3.py",
+      "size": 10379,
+      "sha256": "6355acd1efefa8a6a8e91fb693bcb21e4556003e3bec6a2dcfeb92fc3a52401a"
+    },
+    {
+      "path": "code/system_drops/exported-assets (3)/cqe_galois_slice.py",
+      "size": 7822,
+      "sha256": "6aceb07e35e43890cfa0d2b85995844776bd435975b83b75c1dd11d9e9b446e3"
+    },
+    {
+      "path": "code/system_drops/exported-assets (3)/cqe_hasse_slice.py",
+      "size": 7779,
+      "sha256": "f877aa0be5473e11f91cdf3d83be4fc5897ff7fff520e11d94451d0cbcf43d2f"
+    },
+    {
+      "path": "code/system_drops/exported-assets (3)/cqe_legendre_slice.py",
+      "size": 7954,
+      "sha256": "2042cc11201db066e010ef58549a42cd06e34b34ca815ab42a250f6acff67f55"
+    },
+    {
+      "path": "code/system_drops/exported-assets (3)/cqe_riemann_slice.py",
+      "size": 7903,
+      "sha256": "a14130b09cfe908886d375d44b2841bc6a2a971315a23f9bb0a89dd2ba8d1479"
+    },
+    {
+      "path": "code/system_drops/exported-assets (3)/deployment-summary-37-slice-cqe.md",
+      "size": 7009,
+      "sha256": "325ea0ec946a5141306371ba98d5261cb7ab3a3420e0cab0c77cf84448935bc2"
+    },
+    {
+      "path": "code/system_drops/exported-assets (4)/CQE-System-Architecture.md",
+      "size": 17983,
+      "sha256": "f88b426bde318bfee40abcf38276c7e431df285cdc2af96108ee178ca4b150e4"
+    },
+    {
+      "path": "code/system_drops/exported-assets (4)/cqe-core-engine.py",
+      "size": 28224,
+      "sha256": "92729d83b0020cea1463f01c313a79f78070fbbe3f316cc0a6095e9909eb586e"
+    },
+    {
+      "path": "code/system_drops/exported-assets (4)/cqe-domain-adapters.py",
+      "size": 19395,
+      "sha256": "c0a2dbe2233d94e865e28a23525e294800cb1f6afcf95668a271bcba08b86d01"
+    },
+    {
+      "path": "code/system_drops/exported-assets (4)/cqe-testing-framework.py",
+      "size": 18504,
+      "sha256": "51b23da25a9460c97dbd3a014988e60e285d3cb9a332f3c0ca14d44fb81dfd58"
+    },
+    {
+      "path": "code/system_drops/exported-assets (4)/docker-compose.yml",
+      "size": 2301,
+      "sha256": "f7bee382b10b37af5b99f3eb8ceb8c57607b22250d32ba459f76721812523a3c"
+    },
+    {
+      "path": "code/system_drops/exported-assets (4)/cqe-system-runner.py",
+      "size": 14349,
+      "sha256": "4f6bbe502e2464d940086598e2164e0d6efc1f4decd276a4fbf1e4242248a012"
+    },
+    {
+      "path": "code/system_drops/exported-assets (4)/README.md",
+      "size": 8428,
+      "sha256": "4fb852873180af75b9eb18da248f1ce7c4ef99494ecebb511d3c970f388cf590"
+    },
+    {
+      "path": "code/system_drops/exported-assets (4)/requirements.txt",
+      "size": 79,
+      "sha256": "d8a6cebf96b715d9135e668bb2a14ba75a771e81c9fd73a66023100bfc8431f7"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/script.py",
+      "size": 13434,
+      "sha256": "3aa4d0957ed6d2173536e37d6f304bf425d3564a2fa483ef1a29c23759acb6e0"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/cqe_main_system.py",
+      "size": 12334,
+      "sha256": "6dc3e75500d4013abfa0ea3ff7cf01b142b596c66eadf8ba59091c6a574d950d"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/script_1.py",
+      "size": 16071,
+      "sha256": "8cd48829633c24a69e0a576534a832e6d2a1e4b2d24374fc281302d92418fd22"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/cqe_global_validator.py",
+      "size": 9592,
+      "sha256": "7bea28101c429b2a63c6b79a355f6e100d8f4ba2d5145a4a645deacfc00a2764"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/cqe_universal_atom.py",
+      "size": 5280,
+      "sha256": "fe22fa87856de3027ae23f9ea33c1af47b3267df134877c0e256765c22d61dd8"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/script_2.py",
+      "size": 16811,
+      "sha256": "74b9d9dcf03a8b49426841505e3ccea80b75bdbaed54144610615af5cb716a01"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/cqe_hasse_slice_full.py",
+      "size": 15702,
+      "sha256": "c1d40b0fdccd35f1cc1ef834560235b5532feac631d9519c0bd0876a65f0df2f"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/script_3.py",
+      "size": 16727,
+      "sha256": "6058ef250fb82a328cd8dd62bfa37ff9cef41575efacfb8d8fd86b88a383b6a2"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/cqe_galois_slice_full.py",
+      "size": 15752,
+      "sha256": "f938554b2c174d68ef0f14850acef63afcf7109d79881128de30caf1fa35d433"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/script_4.py",
+      "size": 16907,
+      "sha256": "e9ad9b08a661770db99036bb1d28726ce0732865c144e3d5f32f38658b381310"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/cqe_config.py",
+      "size": 6873,
+      "sha256": "04770b69f402d100b53f3e424be3d5ea891e82e3632d3e61ed68bb9a3f877612"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/cqe_performance.py",
+      "size": 8888,
+      "sha256": "f9b2fcdc5a7afcb07f8eb0af6f6589f9dd5f8c31e3afcb64bf46a9d4c5e9038d"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/script_5.py",
+      "size": 17387,
+      "sha256": "8058594128d60ddda4b360d62b74fdd0216be2369481188116e1f592c6b691f9"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/README.md",
+      "size": 5877,
+      "sha256": "610d38bd4325d24b9e3c3dea6655e3a139ad3521ce35d9244289bbbd452bec32"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/deploy_cqe_system.py",
+      "size": 9589,
+      "sha256": "993d10250c84fd840dfe8ffae9ded69e67e2a676ff2b006da67726ec7bab02e9"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/requirements.txt",
+      "size": 790,
+      "sha256": "7644b77601c39c93fa8e6aabc107efdaa3892802f7b2a2ebf07e6f0c1801cfbd"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/script_6.py",
+      "size": 20822,
+      "sha256": "23bfc5d2d1da32d93f2c21db6625bf3cdb2fc39f9b7fb2a7344ed6832135e636"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/DEPLOYMENT_SUMMARY.md",
+      "size": 5503,
+      "sha256": "8eee98307febf691ae34c2b84f5f3f393fa9735260b98d117106725747b1e620"
+    },
+    {
+      "path": "code/system_drops/exported-assets (5)/cqe_usage_examples.py",
+      "size": 12793,
+      "sha256": "2b7b4001d72771e66dcb9ec75617e0cea643f37078b4a9a4974018f0b9e15a8d"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/final_integration_analysis (1).md",
+      "size": 12138,
+      "sha256": "2ad9ec05ee595363318df0fbffce78ea6499f3bcbf3d2700bc2326f9a8cebe4b"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/cqe-20251010T010009Z-1-001.zip",
+      "size": 42440,
+      "sha256": "8ddebda10cccc564900e63fe760ebb40ff59306b5199909a11d376d2127b493e"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/analysis_notes-20251010T005716Z-1-001.zip",
+      "size": 78924,
+      "sha256": "255edca9e5f6f0ed6c35405e3c915ad264e1e2dbd64d9a655a17402158bcbb64"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/evolution_analysis.md",
+      "size": 11340,
+      "sha256": "086ee1056037678d747fd8830677ad3a96363a651bdeff45b4813bed156e3adb"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/data-20251010T010123Z-1-001.zip",
+      "size": 211,
+      "sha256": "ff70d827b84460b1a267e21e7cc53e836b0cf523084ddf79fbc58671a968a9fa"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/README (4).md",
+      "size": 30,
+      "sha256": "78d7ff15cfad22f4cb653123670a90926482de8223d1881f106484ba2773a94e"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/README (3).md",
+      "size": 21,
+      "sha256": "cc5a733af42e87d6818f4fb0917a0ec51bce03fe12de743eba2c213fafe1dc44"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/COMPLETE_CQE_EVOLUTION_ANALYSIS.md",
+      "size": 15647,
+      "sha256": "108eeb25a44c9fa539084cc1dca9de6e51f324fe6691c6a2bc7a6b9d395b2be1"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/scripts-20251010T010043Z-1-001.zip",
+      "size": 761,
+      "sha256": "5611309c8765d6a36fd4ae5c63df4f0b92823968383e70a5b1774dcc7cd4b20b"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/README (2).md",
+      "size": 30,
+      "sha256": "9a6be3bd74f6e8d7ba3ad252691eedf31fda2a14fff0ca808ef2bb11cd53c021"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/docs-20251010T010123Z-1-001.zip",
+      "size": 220,
+      "sha256": "9c82aff49eaf349b3e3e15855876c11d7c4be50447a718a23c1bac2f07cdba58"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/benchmarks.csv",
+      "size": 541,
+      "sha256": "53c692aa99c6c378d3d3c2f73c599651acc185d0fbeb5d8b64ff0cbf32d8d4cf"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/final_integration_analysis.md",
+      "size": 12138,
+      "sha256": "2ad9ec05ee595363318df0fbffce78ea6499f3bcbf3d2700bc2326f9a8cebe4b"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/cqe-20251010T010109Z-1-001.zip",
+      "size": 42440,
+      "sha256": "6c82ff8c47cdf1b0b268c9c3e5a5c5729f10371c945f2f9f0736b767890d586e"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/cqe_overlay-20251010T010041Z-1-001.zip",
+      "size": 13243,
+      "sha256": "70b82d34ea34f25184a6ec7aaff98af877737704d353d252f257c562c063b8e7"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/COMPLETE_CQE_EVOLUTION_ANALYSIS (1).md",
+      "size": 15647,
+      "sha256": "108eeb25a44c9fa539084cc1dca9de6e51f324fe6691c6a2bc7a6b9d395b2be1"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/tests-20251010T010044Z-1-001.zip",
+      "size": 600,
+      "sha256": "bc7ba69227f3d392ded768823f42ea7b51e1f6c0d8ed032fcec143416db0c632"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/data-20251010T010106Z-1-001.zip",
+      "size": 211,
+      "sha256": "b755c03fd9f6a6e3506c43b53c6ee92c00eb7a9596c9de7856ef24fce41cdef7"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/harness-20251010T010045Z-1-001.zip",
+      "size": 1554,
+      "sha256": "8bbdf0798f271bef21635f7cdcff71b634e9c795e496d00c7424e3adfed54fa6"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/README (5).md",
+      "size": 1683,
+      "sha256": "c2510415523e1b1cafd9b4182bd96af4faae85f19ebb09e2023b3395cf67389e"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/config-20251010T010121Z-1-001.zip",
+      "size": 228,
+      "sha256": "ec24937d9b1eb2fa89456a902dcd1f98fda7bbfb23a581a80fed4492076c26bb"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/embeddings-20251010T010122Z-1-001.zip",
+      "size": 241,
+      "sha256": "fe66732970367b01c566ef00696a424da4ba48a66f5e05734c961e0588e705cb"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/docs-20251010T010107Z-1-001.zip",
+      "size": 220,
+      "sha256": "79358a2a5e443b296aa9a6271cb062e4dfa89a75953ddd97af027569a6a02355"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/comprehensive_legacy_analysis.md",
+      "size": 9974,
+      "sha256": "1919e075c7eee178dea8bba85d9846d699aa55d96ded1c50b9e5319197c62418"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/domain_adapters-20251010T010039Z-1-001.zip",
+      "size": 2431,
+      "sha256": "8be501091e377e6146c6041399844e6bccc3bfb834fd40f0ee2d559db82233af"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/cqe-20251010T010122Z-1-001.zip",
+      "size": 31434,
+      "sha256": "935643ade6e49ffdd0a0b28caad47d4c95e7883fc3688969bcb346783e8c3c28"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/embeddings-20251010T010108Z-1-001.zip",
+      "size": 241,
+      "sha256": "5672305a5ffd7c0a15327f5fec3c3ca7020c9d59f140a961c0800f6a2a237fb6"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/config-20251010T010109Z-1-001.zip",
+      "size": 228,
+      "sha256": "7ba35648b58db43489460ebf397ae6c18fadbecd2e32d060e68e0a500760ac2a"
+    },
+    {
+      "path": "code/system_drops/handoff-20251010T010210Z-1-001/handoff/README (1).md",
+      "size": 27,
+      "sha256": "a8dcca3fb5e605eab476f245d8dc8be963b70ec96d10a033d0c9153370b42595"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/analysis_notes-20251010T005716Z-1-001/analysis_notes-20251010T005716Z-1-001.zip",
+      "size": 78924,
+      "sha256": "255edca9e5f6f0ed6c35405e3c915ad264e1e2dbd64d9a655a17402158bcbb64"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/analysis_notes-20251010T005716Z-1-001/analysis_notes/cqe_system_diagram.mmd",
+      "size": 4890,
+      "sha256": "1777af68fc15c0d2ba56c769b6bee1909ea59d44311142ef550c63c761e25596"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/analysis_notes-20251010T005716Z-1-001/analysis_notes/cqe_system_diagram.png",
+      "size": 51212,
+      "sha256": "fea097af6db12087be4451ff991571239028c02bc3365d8be94306a1666fb700"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/analysis_notes-20251010T005716Z-1-001/analysis_notes/cqe_system_diagram_fixed.mmd",
+      "size": 4958,
+      "sha256": "ccae3abf510f2a412eed3b8dc73bbad71460f9864467692b736d43da371ec6d5"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/analysis_notes-20251010T005716Z-1-001/analysis_notes/paper_1_analysis.md",
+      "size": 7500,
+      "sha256": "216d5f3ac35b64da5b4ece4510c912ee91f1e8c037a8a246246a808952b58ac3"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/analysis_notes-20251010T005716Z-1-001/analysis_notes/paper_5_riemann_analysis.md",
+      "size": 8067,
+      "sha256": "71a2a49f321b1aab79a5df6f4e6870a76f67e1203534231c613ac8ad19aafe2a"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/analysis_notes-20251010T005716Z-1-001/analysis_notes/patterns_trends_gaps_analysis.md",
+      "size": 12449,
+      "sha256": "4202cb702d72b5ef5cabee55634862b8b28728102f847ed0d975eddcae77b6c6"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/analysis_notes-20251010T005716Z-1-001/analysis_notes/source_materials_catalog.md",
+      "size": 3506,
+      "sha256": "08260e235901b373fd5867b5a202e6469db43d8d18e6fd3645a053e340faaba0"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/analysis_notes-20251010T005716Z-1-001/analysis_notes/system_evaluation_insights.md",
+      "size": 6849,
+      "sha256": "30ded484274524841c2a254ffb1c9b55047a9cf009f41b277263cb7297c33c00"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/analysis_notes-20251010T005716Z-1-001/analysis_notes/system_relationship_mapping.md",
+      "size": 14589,
+      "sha256": "b4b9e237fe8e9ea886919a2921d0147155e576972df6b9f4e14e29b246cdf8d3"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/config-20251010T010109Z-1-001/config-20251010T010109Z-1-001.zip",
+      "size": 228,
+      "sha256": "7ba35648b58db43489460ebf397ae6c18fadbecd2e32d060e68e0a500760ac2a"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/config-20251010T010109Z-1-001/config/README.md",
+      "size": 30,
+      "sha256": "9a6be3bd74f6e8d7ba3ad252691eedf31fda2a14fff0ca808ef2bb11cd53c021"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/config-20251010T010121Z-1-001/config-20251010T010121Z-1-001.zip",
+      "size": 228,
+      "sha256": "ec24937d9b1eb2fa89456a902dcd1f98fda7bbfb23a581a80fed4492076c26bb"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/config-20251010T010121Z-1-001/config/README.md",
+      "size": 30,
+      "sha256": "9a6be3bd74f6e8d7ba3ad252691eedf31fda2a14fff0ca808ef2bb11cd53c021"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe_overlay-20251010T010041Z-1-001/cqe_overlay-20251010T010041Z-1-001.zip",
+      "size": 13243,
+      "sha256": "70b82d34ea34f25184a6ec7aaff98af877737704d353d252f257c562c063b8e7"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe_overlay-20251010T010041Z-1-001/cqe_overlay/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe_overlay-20251010T010041Z-1-001/cqe_overlay/embedding.py",
+      "size": 1791,
+      "sha256": "d2ab2f7a6f753e77fb7f87955fd5d6c0ec81e1043d6ab6ccb01253f39c895a57"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe_overlay-20251010T010041Z-1-001/cqe_overlay/morsr.py",
+      "size": 1850,
+      "sha256": "852a7169fb454b873e54e4659aa80a5ec0086eb405b035f01c1aecf0ba2b2644"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe_overlay-20251010T010041Z-1-001/cqe_overlay/objective.py",
+      "size": 1455,
+      "sha256": "1d10b1bb06bf77bfeba6dbb23a8c649a7c4bcb87af08c23565611bbb0df7a8d9"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe_overlay-20251010T010041Z-1-001/cqe_overlay/operators.py",
+      "size": 1518,
+      "sha256": "1c461ea9eec75ddd71dd74dde0f8975c9eeb31cf67a2643ca150659b5b6e9603"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe_overlay-20251010T010041Z-1-001/cqe_overlay/__pycache__/__init__.cpython-311.pyc",
+      "size": 169,
+      "sha256": "920e3bbc0b6c16e79c60cfb5b279f947dc1e7dd3d6e2bc6dd7013bd7ecd20b64"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe_overlay-20251010T010041Z-1-001/cqe_overlay/__pycache__/embedding.cpython-311.pyc",
+      "size": 5359,
+      "sha256": "97dc25cd1907e895d75e3bc6bc998133b4a048c50f347092a1fa49ca698cd37e"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe_overlay-20251010T010041Z-1-001/cqe_overlay/__pycache__/morsr.cpython-311.pyc",
+      "size": 3662,
+      "sha256": "4ece62250d38ee0f872ac42df27b08d5b0275917908a53c62537744eacad6f00"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe_overlay-20251010T010041Z-1-001/cqe_overlay/__pycache__/objective.cpython-311.pyc",
+      "size": 3591,
+      "sha256": "3126b3358997356c40821177fce367fcfb782f049d1005b0f2800aa2e1b9d4f2"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe_overlay-20251010T010041Z-1-001/cqe_overlay/__pycache__/operators.cpython-311.pyc",
+      "size": 3649,
+      "sha256": "801938a132b7a36eac6d4535aca7bafc97cede29a588ac9e5ec807cb8fd6f7c3"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe-20251010T010009Z-1-001.zip",
+      "size": 42440,
+      "sha256": "8ddebda10cccc564900e63fe760ebb40ff59306b5199909a11d376d2127b493e"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/__init__.py",
+      "size": 1840,
+      "sha256": "a06e4d73faa40e494c1d021dbe91c4eebd6b5d260210d87bfa8624d041758259"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/core/__init__.py",
+      "size": 477,
+      "sha256": "f40436fedd0313e5ecdf25186e84826c74f45db093e26947e85ac1314188b01d"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/core/chamber_board.py",
+      "size": 10163,
+      "sha256": "ce51b6dc83da74b02baac742471aeb69923b4a701d25c0e3a8a22a42a87a76e2"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/core/e8_lattice.py",
+      "size": 6024,
+      "sha256": "653c9c92d15acce482eb1680e874728e09cf0add061c462ac851ff363a4e66e7"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/core/morsr_explorer.py",
+      "size": 10063,
+      "sha256": "e00fe73ed5559f3e932b631dcadd838e3e11fa2e4d65665f6e7552c94aaedbbc"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/core/objective_function.py",
+      "size": 8454,
+      "sha256": "3cc286af026abe4458f7375fd8485319952818c430050ce0b664cb7e5102b0b0"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/core/parity_channels.py",
+      "size": 6833,
+      "sha256": "361d6271cc68ded7a448344332fb0f973ce4d62fa3932cd297e7e3ca1208c678"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/core/system.py",
+      "size": 15191,
+      "sha256": "6829f77bc19965619f1ec396e5452f58a9b9616fc6e7fea23d8129bb045a9444"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/domains/__init__.py",
+      "size": 63,
+      "sha256": "f7762a859b6622ce00c1db4ce787b69c0bf5d2a6f73ae3cd83139f71db44c837"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/domains/adapter.py",
+      "size": 5495,
+      "sha256": "27cb291ae060473024c2c4f48eb0cacfd44689ade0817b5556a4679242458544"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/enhanced/__init__.py",
+      "size": 136,
+      "sha256": "e4f6bde245f6efb9afd1a9606896e373aa5696bf00d481376775672f686c06a0"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/enhanced/unified_system.py",
+      "size": 25177,
+      "sha256": "855fc69e15a09f06b2c1d74ea613e47a62f7525f6b74a4ce85d55ad8ff1e89ad"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/examples/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/examples/basic_usage.py",
+      "size": 10317,
+      "sha256": "33a131da76d45038a71ddcf992fe70a4079770965340b56c3c18c9177fd9ae11"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/examples/enhanced_usage.py",
+      "size": 12156,
+      "sha256": "663aca3a7450ee13009df59dfe7027b2ceee82870d41e5dd5126e68bd247a488"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/tests/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/tests/test_cqe_system.py",
+      "size": 16795,
+      "sha256": "29c63491950607f84246a5ce63fd786ab7adc0620717972ed48be6914d34a204"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/validation/__init__.py",
+      "size": 77,
+      "sha256": "ede2290a8f54c12c397751592ea003bb22f86ac11e42bfb444a12f83b6b9b042"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010009Z-1-001/cqe/validation/framework.py",
+      "size": 18297,
+      "sha256": "a0cf2831c574231829e3c9deb4aab174a9fa4a649e01c69d55a92d01355d067d"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe-20251010T010109Z-1-001.zip",
+      "size": 42440,
+      "sha256": "6c82ff8c47cdf1b0b268c9c3e5a5c5729f10371c945f2f9f0736b767890d586e"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/__init__.py",
+      "size": 1840,
+      "sha256": "a06e4d73faa40e494c1d021dbe91c4eebd6b5d260210d87bfa8624d041758259"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/core/__init__.py",
+      "size": 477,
+      "sha256": "f40436fedd0313e5ecdf25186e84826c74f45db093e26947e85ac1314188b01d"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/core/chamber_board.py",
+      "size": 10163,
+      "sha256": "ce51b6dc83da74b02baac742471aeb69923b4a701d25c0e3a8a22a42a87a76e2"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/core/e8_lattice.py",
+      "size": 6024,
+      "sha256": "653c9c92d15acce482eb1680e874728e09cf0add061c462ac851ff363a4e66e7"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/core/morsr_explorer.py",
+      "size": 10063,
+      "sha256": "e00fe73ed5559f3e932b631dcadd838e3e11fa2e4d65665f6e7552c94aaedbbc"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/core/objective_function.py",
+      "size": 8454,
+      "sha256": "3cc286af026abe4458f7375fd8485319952818c430050ce0b664cb7e5102b0b0"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/core/parity_channels.py",
+      "size": 6833,
+      "sha256": "361d6271cc68ded7a448344332fb0f973ce4d62fa3932cd297e7e3ca1208c678"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/core/system.py",
+      "size": 15191,
+      "sha256": "6829f77bc19965619f1ec396e5452f58a9b9616fc6e7fea23d8129bb045a9444"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/domains/__init__.py",
+      "size": 63,
+      "sha256": "f7762a859b6622ce00c1db4ce787b69c0bf5d2a6f73ae3cd83139f71db44c837"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/domains/adapter.py",
+      "size": 5495,
+      "sha256": "27cb291ae060473024c2c4f48eb0cacfd44689ade0817b5556a4679242458544"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/enhanced/__init__.py",
+      "size": 136,
+      "sha256": "e4f6bde245f6efb9afd1a9606896e373aa5696bf00d481376775672f686c06a0"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/enhanced/unified_system.py",
+      "size": 25177,
+      "sha256": "855fc69e15a09f06b2c1d74ea613e47a62f7525f6b74a4ce85d55ad8ff1e89ad"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/examples/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/examples/basic_usage.py",
+      "size": 10317,
+      "sha256": "33a131da76d45038a71ddcf992fe70a4079770965340b56c3c18c9177fd9ae11"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/examples/enhanced_usage.py",
+      "size": 12156,
+      "sha256": "663aca3a7450ee13009df59dfe7027b2ceee82870d41e5dd5126e68bd247a488"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/tests/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/tests/test_cqe_system.py",
+      "size": 16795,
+      "sha256": "29c63491950607f84246a5ce63fd786ab7adc0620717972ed48be6914d34a204"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/validation/__init__.py",
+      "size": 77,
+      "sha256": "ede2290a8f54c12c397751592ea003bb22f86ac11e42bfb444a12f83b6b9b042"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/cqe-20251010T010109Z-1-001/cqe/validation/framework.py",
+      "size": 18297,
+      "sha256": "a0cf2831c574231829e3c9deb4aab174a9fa4a649e01c69d55a92d01355d067d"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/data-20251010T010106Z-1-001/data-20251010T010106Z-1-001.zip",
+      "size": 211,
+      "sha256": "b755c03fd9f6a6e3506c43b53c6ee92c00eb7a9596c9de7856ef24fce41cdef7"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/data-20251010T010106Z-1-001/data/README.md",
+      "size": 21,
+      "sha256": "cc5a733af42e87d6818f4fb0917a0ec51bce03fe12de743eba2c213fafe1dc44"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/data-20251010T010123Z-1-001/data-20251010T010123Z-1-001.zip",
+      "size": 211,
+      "sha256": "ff70d827b84460b1a267e21e7cc53e836b0cf523084ddf79fbc58671a968a9fa"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/data-20251010T010123Z-1-001/data/README.md",
+      "size": 21,
+      "sha256": "cc5a733af42e87d6818f4fb0917a0ec51bce03fe12de743eba2c213fafe1dc44"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/docs-20251010T010107Z-1-001/docs-20251010T010107Z-1-001.zip",
+      "size": 220,
+      "sha256": "79358a2a5e443b296aa9a6271cb062e4dfa89a75953ddd97af027569a6a02355"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/docs-20251010T010107Z-1-001/docs/README.md",
+      "size": 30,
+      "sha256": "78d7ff15cfad22f4cb653123670a90926482de8223d1881f106484ba2773a94e"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/docs-20251010T010123Z-1-001/docs-20251010T010123Z-1-001.zip",
+      "size": 220,
+      "sha256": "9c82aff49eaf349b3e3e15855876c11d7c4be50447a718a23c1bac2f07cdba58"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/docs-20251010T010123Z-1-001/docs/README.md",
+      "size": 30,
+      "sha256": "78d7ff15cfad22f4cb653123670a90926482de8223d1881f106484ba2773a94e"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/domain_adapters-20251010T010039Z-1-001/domain_adapters-20251010T010039Z-1-001.zip",
+      "size": 2431,
+      "sha256": "8be501091e377e6146c6041399844e6bccc3bfb834fd40f0ee2d559db82233af"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/domain_adapters-20251010T010039Z-1-001/domain_adapters/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/domain_adapters-20251010T010039Z-1-001/domain_adapters/permutations.py",
+      "size": 473,
+      "sha256": "55ca0220a2847ba5bd4dec406b9aff66677b3c58d5be0ee57259db5d47d5b935"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/domain_adapters-20251010T010039Z-1-001/domain_adapters/__pycache__/__init__.cpython-311.pyc",
+      "size": 173,
+      "sha256": "a3a69fe5d138d1f221dea35061042fb507ee7dcb20075a957766b16418d2606d"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/domain_adapters-20251010T010039Z-1-001/domain_adapters/__pycache__/permutations.cpython-311.pyc",
+      "size": 1441,
+      "sha256": "5a0ea61152f086d12d47975bdda6eb7f72f93ec3674cdab03869ab88ceb9fa1e"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/embeddings-20251010T010108Z-1-001/embeddings-20251010T010108Z-1-001.zip",
+      "size": 241,
+      "sha256": "5672305a5ffd7c0a15327f5fec3c3ca7020c9d59f140a961c0800f6a2a237fb6"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/embeddings-20251010T010108Z-1-001/embeddings/README.md",
+      "size": 27,
+      "sha256": "a8dcca3fb5e605eab476f245d8dc8be963b70ec96d10a033d0c9153370b42595"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/embeddings-20251010T010122Z-1-001/embeddings-20251010T010122Z-1-001.zip",
+      "size": 241,
+      "sha256": "fe66732970367b01c566ef00696a424da4ba48a66f5e05734c961e0588e705cb"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/embeddings-20251010T010122Z-1-001/embeddings/README.md",
+      "size": 27,
+      "sha256": "a8dcca3fb5e605eab476f245d8dc8be963b70ec96d10a033d0c9153370b42595"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/harness-20251010T010045Z-1-001/harness-20251010T010045Z-1-001.zip",
+      "size": 1554,
+      "sha256": "8bbdf0798f271bef21635f7cdcff71b634e9c795e496d00c7424e3adfed54fa6"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/harness-20251010T010045Z-1-001/harness/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/harness-20251010T010045Z-1-001/harness/validateproof.py",
+      "size": 2534,
+      "sha256": "7d3278d4147bebe63f48b8b076ee8e1dc0821164b4c592fb87e72ddcf0282d21"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/papers and readmes for varied systems/benchmarks.csv",
+      "size": 541,
+      "sha256": "53c692aa99c6c378d3d3c2f73c599651acc185d0fbeb5d8b64ff0cbf32d8d4cf"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/papers and readmes for varied systems/COMPLETE_CQE_EVOLUTION_ANALYSIS (1).md",
+      "size": 15647,
+      "sha256": "108eeb25a44c9fa539084cc1dca9de6e51f324fe6691c6a2bc7a6b9d395b2be1"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/papers and readmes for varied systems/COMPLETE_CQE_EVOLUTION_ANALYSIS.md",
+      "size": 15647,
+      "sha256": "108eeb25a44c9fa539084cc1dca9de6e51f324fe6691c6a2bc7a6b9d395b2be1"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/papers and readmes for varied systems/comprehensive_legacy_analysis.md",
+      "size": 9974,
+      "sha256": "1919e075c7eee178dea8bba85d9846d699aa55d96ded1c50b9e5319197c62418"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/papers and readmes for varied systems/evolution_analysis.md",
+      "size": 11340,
+      "sha256": "086ee1056037678d747fd8830677ad3a96363a651bdeff45b4813bed156e3adb"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/papers and readmes for varied systems/final_integration_analysis (1).md",
+      "size": 12138,
+      "sha256": "2ad9ec05ee595363318df0fbffce78ea6499f3bcbf3d2700bc2326f9a8cebe4b"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/papers and readmes for varied systems/final_integration_analysis.md",
+      "size": 12138,
+      "sha256": "2ad9ec05ee595363318df0fbffce78ea6499f3bcbf3d2700bc2326f9a8cebe4b"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/papers and readmes for varied systems/README (1).md",
+      "size": 27,
+      "sha256": "a8dcca3fb5e605eab476f245d8dc8be963b70ec96d10a033d0c9153370b42595"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/papers and readmes for varied systems/README (2).md",
+      "size": 30,
+      "sha256": "9a6be3bd74f6e8d7ba3ad252691eedf31fda2a14fff0ca808ef2bb11cd53c021"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/papers and readmes for varied systems/README (3).md",
+      "size": 21,
+      "sha256": "cc5a733af42e87d6818f4fb0917a0ec51bce03fe12de743eba2c213fafe1dc44"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/papers and readmes for varied systems/README (4).md",
+      "size": 30,
+      "sha256": "78d7ff15cfad22f4cb653123670a90926482de8223d1881f106484ba2773a94e"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/papers and readmes for varied systems/README (5).md",
+      "size": 1683,
+      "sha256": "c2510415523e1b1cafd9b4182bd96af4faae85f19ebb09e2023b3395cf67389e"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/scripts-20251010T010043Z-1-001/scripts-20251010T010043Z-1-001.zip",
+      "size": 761,
+      "sha256": "5611309c8765d6a36fd4ae5c63df4f0b92823968383e70a5b1774dcc7cd4b20b"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/scripts-20251010T010043Z-1-001/scripts/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/scripts-20251010T010043Z-1-001/scripts/run_bench.py",
+      "size": 660,
+      "sha256": "07087ebbda55366da32a1235e66e4db5d4326fb39ebc71d2bf00f06fb64e40cd"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/tests-20251010T010044Z-1-001/tests-20251010T010044Z-1-001.zip",
+      "size": 600,
+      "sha256": "bc7ba69227f3d392ded768823f42ea7b51e1f6c0d8ed032fcec143416db0c632"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/tests-20251010T010044Z-1-001/tests/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "code/system_drops/handoff suppliments/handoff suppliments/tests-20251010T010044Z-1-001/tests/generators.py",
+      "size": 421,
+      "sha256": "cc25306e3535eb3471ce3511bd6292dfe9aca1eb4a4e48f2dd46b42d37147ace"
+    },
+    {
+      "path": "data/csv/pilot_action_list.csv",
+      "size": 50,
+      "sha256": "e9c189cfdfeae43f87e73fa053dad954d21c7cbcbb4186fa98312411e81dde07"
+    },
+    {
+      "path": "data/csv/pose_spectrum.csv",
+      "size": 815,
+      "sha256": "a6b2a120c61a374d40d6a0e45c6346866eb1c5f1b094ef19351c926e5147b79c"
+    },
+    {
+      "path": "data/csv/propulsion_tokens_open_specs.csv",
+      "size": 1604,
+      "sha256": "004e9a0cb3c20fe1ba2075396ba4c48b72911b59337030be97adfe0bd11e5848"
+    },
+    {
+      "path": "data/csv/qm_ising_summary.csv",
+      "size": 714,
+      "sha256": "67e9d4b1e965cbe30f7226cb1df52b0cd75122d89b7e999105aa9c54bb235284"
+    }
+  ]
+}

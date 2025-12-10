@@ -1,0 +1,344 @@
+{
+  "variants": {
+    "agrm_v1": {
+      "archive": "ConStruct 6- New Build.zip",
+      "pulled": [
+        "utils.py",
+        "snapshots_movies_songs.py"
+      ]
+    },
+    "agrm_v2": {
+      "archive": "custom gpt build.zip",
+      "pulled": [
+        "agrm_cli_launcher (2).py"
+      ]
+    },
+    "agrm_v3": {
+      "archive": "e8 related mats.zip",
+      "pulled": []
+    },
+    "agrm_v4": {
+      "archive": "final72625.zip",
+      "pulled": [
+        "grid_utils.py"
+      ]
+    },
+    "agrm_v5": {
+      "archive": "Legacy code and information.zip",
+      "pulled": []
+    },
+    "agrm_v6": {
+      "archive": "New and Updated Code 21625.zip",
+      "pulled": [
+        "snapshots_movies_songs.py"
+      ]
+    },
+    "agrm_v7": {
+      "archive": "py.zip",
+      "pulled": [
+        "AGRM.py",
+        "agrm_adaptive_builder.py",
+        "agrm_cli_allrun (1).py",
+        "agrm_cli_allrun.py",
+        "agrm_cli_launcher (1).py",
+        "agrm_cli_launcher (2).py",
+        "agrm_cli_launcher (3).py",
+        "agrm_cli_launcher.py",
+        "agrm_complexity_modulator.py",
+        "agrm_core_loop.py",
+        "agrm_diagnostics (1).py",
+        "agrm_diagnostics.py",
+        "agrm_distance_cap.py",
+        "agrm_dynamic_midpoint.py",
+        "agrm_feedback_bus.py",
+        "agrm_modulation_and_legalgraph (1).py",
+        "agrm_modulation_and_legalgraph.py",
+        "agrm_modulation_brain (1).py",
+        "agrm_modulation_brain.py",
+        "agrm_pathbuilder_dual (1).py",
+        "agrm_pathbuilder_dual.py",
+        "agrm_path_engine.py",
+        "agrm_phase_reverse_builder.py",
+        "agrm_profiler_diagnostics (1).py",
+        "agrm_profiler_diagnostics.py",
+        "agrm_quadrant_legality.py",
+        "agrm_results_export (1).py",
+        "agrm_results_export.py",
+        "agrm_runtime_controller (1).py",
+        "agrm_runtime_controller (2).py",
+        "agrm_runtime_controller (3).py",
+        "agrm_runtime_controller (4).py",
+        "agrm_runtime_controller.py",
+        "agrm_salesman_patch (1).py",
+        "agrm_salesman_patch.py",
+        "agrm_spiral_reentry.py",
+        "agrm_spiral_retention.py",
+        "agrm_zone_collapse.py",
+        "agrm_zone_density.py",
+        "CMPLX.py",
+        "cmplx_adaptive_builder.py",
+        "cmplx_anchor_reset.py",
+        "cmplx_cli_all.py",
+        "cmplx_cli_allrun.py",
+        "cmplx_cli_launcher.py",
+        "cmplx_cli_selective.py",
+        "cmplx_complexity_modulator.py",
+        "cmplx_core.py",
+        "cmplx_core_loop.py",
+        "cmplx_diagnostics.py",
+        "cmplx_distance_cap.py",
+        "cmplx_dynamic_midpoint.py",
+        "cmplx_feedback_bus.py",
+        "cmplx_logger.py",
+        "cmplx_modulation_and_legalgraph.py",
+        "cmplx_modulation_brain.py",
+        "cmplx_pathbuilder_dual.py",
+        "cmplx_path_engine.py",
+        "cmplx_phase_reverse_builder.py",
+        "cmplx_profiler_diagnostics.py",
+        "cmplx_quadrant_legality.py",
+        "cmplx_results_export.py",
+        "cmplx_run.py",
+        "cmplx_runtime_controller.py",
+        "cmplx_run_final (1).py",
+        "cmplx_run_final.py",
+        "cmplx_run_post_teach.py",
+        "cmplx_run_runtime_patched.py",
+        "cmplx_run_safe.py",
+        "cmplx_salesman_patch.py",
+        "cmplx_spiral_reentry.py",
+        "cmplx_spiral_retention.py",
+        "cmplx_sync.py",
+        "cmplx_zone_collapse.py",
+        "cmplx_zone_density.py",
+        "graph_utils.py",
+        "grid_utils.py",
+        "laminate_utils.py",
+        "mdhg_hash (1).py",
+        "mdhg_hash.py",
+        "tsp_node_loader (1).py",
+        "tsp_node_loader (2).py",
+        "tsp_node_loader.py",
+        "unpack_tsplib_gz.py",
+        "utils.py",
+        "utils.py_graph_utils.py",
+        "utils_graph_utils.py"
+      ]
+    },
+    "agrm_v8": {
+      "archive": "Revised Code.zip",
+      "pulled": [
+        "utils.py_graph_utils.py",
+        "utils_graph_utils.py"
+      ]
+    },
+    "agrm_v9": {
+      "archive": "ALL FILES EVER PROVIDED BY CHAT GPT FOR DOWNLOAD FOR THIS PROJECT.zip",
+      "pulled": [
+        "agrm_adaptive_builder.py",
+        "agrm_cli_allrun (1).py",
+        "agrm_cli_allrun.py",
+        "agrm_cli_launcher (1).py",
+        "agrm_cli_launcher (2).py",
+        "agrm_cli_launcher (3).py",
+        "agrm_cli_launcher.py",
+        "agrm_complexity_modulator.py",
+        "agrm_core_loop.py",
+        "agrm_diagnostics (1).py",
+        "agrm_diagnostics.py",
+        "agrm_distance_cap.py",
+        "agrm_dynamic_midpoint.py",
+        "agrm_feedback_bus.py",
+        "agrm_modulation_and_legalgraph (1).py",
+        "agrm_modulation_and_legalgraph.py",
+        "agrm_modulation_brain (1).py",
+        "agrm_modulation_brain.py",
+        "agrm_pathbuilder_dual (1).py",
+        "agrm_pathbuilder_dual.py",
+        "agrm_phase_reverse_builder.py",
+        "agrm_profiler_diagnostics (1).py",
+        "agrm_profiler_diagnostics.py",
+        "agrm_quadrant_legality.py",
+        "agrm_results_export (1).py",
+        "agrm_results_export.py",
+        "agrm_runtime_controller (1).py",
+        "agrm_runtime_controller (2).py",
+        "agrm_runtime_controller (3).py",
+        "agrm_runtime_controller (4).py",
+        "agrm_runtime_controller.py",
+        "agrm_salesman_patch (1).py",
+        "agrm_salesman_patch.py",
+        "agrm_spiral_reentry.py",
+        "agrm_spiral_retention.py",
+        "agrm_zone_collapse.py",
+        "agrm_zone_density.py",
+        "cmplx_cli_all.py",
+        "cmplx_cli_selective.py",
+        "cmplx_run.py",
+        "cmplx_logger.py",
+        "cmplx_run.py",
+        "cmplx_logger.py",
+        "fallback_utils.py",
+        "cmplx_run.py",
+        "cmplx_logger.py",
+        "fallback_utils.py",
+        "cmplx_run.py",
+        "cmplx_logger.py",
+        "cmplx_run.py",
+        "cmplx_logger.py",
+        "CMPLX.py",
+        "cmplx_adaptive_builder.py",
+        "cmplx_anchor_reset.py",
+        "cmplx_cli_allrun.py",
+        "cmplx_cli_launcher.py",
+        "cmplx_complexity_modulator.py",
+        "cmplx_core.py",
+        "cmplx_core_loop.py",
+        "cmplx_diagnostics.py",
+        "cmplx_distance_cap.py",
+        "cmplx_dynamic_midpoint.py",
+        "cmplx_feedback_bus.py",
+        "cmplx_modulation_and_legalgraph.py",
+        "cmplx_modulation_brain.py",
+        "cmplx_path_engine.py",
+        "cmplx_pathbuilder_dual.py",
+        "cmplx_phase_reverse_builder.py",
+        "cmplx_profiler_diagnostics.py",
+        "cmplx_quadrant_legality.py",
+        "cmplx_results_export.py",
+        "cmplx_runtime_controller.py",
+        "cmplx_salesman_patch.py",
+        "cmplx_spiral_reentry.py",
+        "cmplx_spiral_retention.py",
+        "cmplx_zone_collapse.py",
+        "cmplx_zone_density.py",
+        "mdhg_hash (1).py",
+        "tsp_node_loader.py",
+        "cmplx_run.py",
+        "cmplx_logger.py",
+        "cmplx_run.py",
+        "cmplx_logger.py",
+        "cmplx_run.py",
+        "cmplx_run_final (1).py",
+        "cmplx_run_final.py",
+        "cmplx_run_post_teach.py",
+        "cmplx_run_runtime_patched.py",
+        "cmplx_run_safe.py",
+        "cmplx_sync.py",
+        "mdhg_hash (1).py",
+        "mdhg_hash.py",
+        "tsp_node_loader (1).py",
+        "tsp_node_loader (2).py",
+        "tsp_node_loader.py",
+        "unpack_tsplib_gz.py"
+      ]
+    },
+    "agrm_v10": {
+      "archive": "suppor docs-20250810T181633Z-1-001.zip",
+      "pulled": [
+        "grid_utils.py"
+      ]
+    }
+  },
+  "evaluations": [
+    {
+      "builder": "AGRMBuilderV1",
+      "archive": "ConStruct 6- New Build.zip",
+      "error": "matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 64 is different from 3)"
+    },
+    {
+      "builder": "AGRMBuilderV2",
+      "archive": "custom gpt build.zip",
+      "error": "name 'i' is not defined"
+    },
+    {
+      "builder": "AGRMBuilderV3",
+      "archive": "e8 related mats.zip",
+      "error": "matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 64 is different from 3)"
+    },
+    {
+      "builder": "AGRMBuilderV4",
+      "archive": "final72625.zip",
+      "error": "matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 64 is different from 3)"
+    },
+    {
+      "builder": "AGRMBuilderV5",
+      "archive": "Legacy code and information.zip",
+      "error": "matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 64 is different from 3)"
+    },
+    {
+      "builder": "AGRMBuilderV6",
+      "archive": "New and Updated Code 21625.zip",
+      "error": "matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 64 is different from 3)"
+    },
+    {
+      "builder": "AGRMBuilderV7",
+      "archive": "py.zip",
+      "error": "matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 64 is different from 3)"
+    },
+    {
+      "builder": "AGRMBuilderV8",
+      "archive": "Revised Code.zip",
+      "error": "matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 64 is different from 3)"
+    },
+    {
+      "builder": "AGRMBuilderV9",
+      "archive": "ALL FILES EVER PROVIDED BY CHAT GPT FOR DOWNLOAD FOR THIS PROJECT.zip",
+      "error": "matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 64 is different from 3)"
+    },
+    {
+      "builder": "AGRMBuilderV10",
+      "archive": "suppor docs-20250810T181633Z-1-001.zip",
+      "error": "matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 64 is different from 3)"
+    }
+  ],
+  "cohort_eval": {
+    "promoted": 1,
+    "shells": 3,
+    "dim": 64,
+    "decisions": {
+      "3": {
+        "coh": 0.7900276462686031,
+        "red": 0.24828736374257906,
+        "nov": 0.20997235373139683,
+        "contra": 0.0,
+        "size": 2,
+        "thresholds": {
+          "tau_coh": 0.6,
+          "tau_red": 0.92,
+          "tau_nov_min": 0.02,
+          "tau_nov_max": 0.4
+        },
+        "decision": "approve"
+      },
+      "2": {
+        "coh": 0.9999999999979998,
+        "red": 0.0,
+        "nov": 2.000177801164682e-12,
+        "contra": 0.0,
+        "size": 1,
+        "thresholds": {
+          "tau_coh": 0.6,
+          "tau_red": 0.92,
+          "tau_nov_min": 0.02,
+          "tau_nov_max": 0.4
+        },
+        "decision": "reject"
+      },
+      "0": {
+        "coh": 0.999999999998,
+        "red": 0.9999999999980004,
+        "nov": 1.999955756559757e-12,
+        "contra": 0.0,
+        "size": 10,
+        "thresholds": {
+          "tau_coh": 0.6,
+          "tau_red": 0.92,
+          "tau_nov_min": 0.02,
+          "tau_nov_max": 0.4
+        },
+        "decision": "reject"
+      }
+    }
+  }
+}

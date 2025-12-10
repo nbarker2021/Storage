@@ -1,0 +1,304 @@
+{
+  "type": "CQE_SESSION_MANIFEST_V1",
+  "ts_utc": "2025-10-10T20:01:10.557611+00:00",
+  "merkle_root": "b14b69c4836e7a34f5ce05efd81177188267fa90ff21aa75ea477bcdaf484779",
+  "artifact_count": 20,
+  "artifacts": [
+    {
+      "name": "cqe_tokens_64bit_buckets.csv",
+      "path": "/mnt/data/cqe_tokens_64bit_buckets.csv",
+      "bytes": 2503498,
+      "modified_utc": "2025-10-10T19:43:07.156151+00:00",
+      "sha256": "273f3b9225c9bf65f242a36a90779479c778cb250204fcb0e76a3c7ef237047c"
+    },
+    {
+      "name": "cqe_bucket_summary_band2.csv",
+      "path": "/mnt/data/cqe_bucket_summary_band2.csv",
+      "bytes": 49,
+      "modified_utc": "2025-10-10T19:43:07.157989+00:00",
+      "sha256": "76811831996ea3cb42a59e62f44c70a0217372b554e350a07ec82875cd14987a"
+    },
+    {
+      "name": "cqe_bucket_summary_band4.csv",
+      "path": "/mnt/data/cqe_bucket_summary_band4.csv",
+      "bytes": 78,
+      "modified_utc": "2025-10-10T19:43:07.159827+00:00",
+      "sha256": "796fdc8af1cd3276c9005caf1e8d801bb91a61dcd3298d27dd9ef3b9e46a8e71"
+    },
+    {
+      "name": "cqe_bucket_summary_band8.csv",
+      "path": "/mnt/data/cqe_bucket_summary_band8.csv",
+      "bytes": 130,
+      "modified_utc": "2025-10-10T19:43:07.161001+00:00",
+      "sha256": "66d52de5c513d53b9e340114e43554c3699c8c032c376aed472cdd54366e9c7a"
+    },
+    {
+      "name": "cqe_bucket_summary_band64.csv",
+      "path": "/mnt/data/cqe_bucket_summary_band64.csv",
+      "bytes": 842,
+      "modified_utc": "2025-10-10T19:43:07.162035+00:00",
+      "sha256": "b5fbbf214f03f943f5fc6e6107999790ae15aa5d239968c0b40a71c3313fa687"
+    },
+    {
+      "name": "cqe_bucket_summary_tile4096.csv",
+      "path": "/mnt/data/cqe_bucket_summary_tile4096.csv",
+      "bytes": 46052,
+      "modified_utc": "2025-10-10T19:43:07.171126+00:00",
+      "sha256": "93d237474214c54ece7f937b367b1b06ff85f7758f26b0fa69d4b38c894b0c4a"
+    },
+    {
+      "name": "cqe_bucket_summary_mod24.csv",
+      "path": "/mnt/data/cqe_bucket_summary_mod24.csv",
+      "bytes": 354,
+      "modified_utc": "2025-10-10T19:43:07.172442+00:00",
+      "sha256": "e1cf73155613045454becb79b795a1cd58ab2db9ea385cdc4898cd66d71dfdfc"
+    },
+    {
+      "name": "cqe_bucket_examples_band2.csv",
+      "path": "/mnt/data/cqe_bucket_examples_band2.csv",
+      "bytes": 355,
+      "modified_utc": "2025-10-10T19:43:07.173623+00:00",
+      "sha256": "56ff9434237cce594f3c9958c8b21ba30c4a85e097eba70578d1aed1f2ee86f0"
+    },
+    {
+      "name": "cqe_bucket_examples_band4.csv",
+      "path": "/mnt/data/cqe_bucket_examples_band4.csv",
+      "bytes": 716,
+      "modified_utc": "2025-10-10T19:43:07.174463+00:00",
+      "sha256": "bba9aa0744efeab525784c02ecb08cdffde06db5a47f8b98f69b3d2988db5af8"
+    },
+    {
+      "name": "cqe_bucket_examples_band8.csv",
+      "path": "/mnt/data/cqe_bucket_examples_band8.csv",
+      "bytes": 1441,
+      "modified_utc": "2025-10-10T19:43:07.175386+00:00",
+      "sha256": "821e63451c90bb455e643cd5ba9681f8f25ca7fb6d4aeb0cb83f82eafd8700ef"
+    },
+    {
+      "name": "cqe_bucket_examples_band64.csv",
+      "path": "/mnt/data/cqe_bucket_examples_band64.csv",
+      "bytes": 8495,
+      "modified_utc": "2025-10-10T19:43:07.177501+00:00",
+      "sha256": "74824de95599e7c11cbf9a5c6086ff0a5240eb32be8c978ecc18149ef375bc4b"
+    },
+    {
+      "name": "cqe_bucket_examples_tile4096.csv",
+      "path": "/mnt/data/cqe_bucket_examples_tile4096.csv",
+      "bytes": 347202,
+      "modified_utc": "2025-10-10T19:43:07.231434+00:00",
+      "sha256": "29cee124071ae14263b725a44ef04ceb3120a4de89b5d869c84817e7bcab7fa1"
+    },
+    {
+      "name": "cqe_bucket_examples_mod24.csv",
+      "path": "/mnt/data/cqe_bucket_examples_mod24.csv",
+      "bytes": 3095,
+      "modified_utc": "2025-10-10T19:43:07.233595+00:00",
+      "sha256": "7864715d73dea4b95151d1b875a1c27c07cfc521b2a2f116c633cdd08203f1f5"
+    },
+    {
+      "name": "cqe_relation_edges_pmi.csv",
+      "path": "/mnt/data/cqe_relation_edges_pmi.csv",
+      "bytes": 830130,
+      "modified_utc": "2025-10-10T19:43:07.338062+00:00",
+      "sha256": "ce578811efdd647a1cfe3b655919320b3bce36ce18350275ef9989fe9530e581"
+    },
+    {
+      "name": "cqe_augmented_tokens.csv",
+      "path": "/mnt/data/cqe_augmented_tokens.csv",
+      "bytes": 3337458,
+      "modified_utc": "2025-10-10T19:47:08.395999+00:00",
+      "sha256": "9a0dfee317c4645805ab13cd845246d157f31a167da87db2119fb93e8d45f86e"
+    },
+    {
+      "name": "cqe_synthetic_proof_tokens.csv",
+      "path": "/mnt/data/cqe_synthetic_proof_tokens.csv",
+      "bytes": 2282,
+      "modified_utc": "2025-10-10T19:47:07.898978+00:00",
+      "sha256": "4c7aac472ff635b78155ea413e602a82d3fb53c99b5fb712849509ca2d3e2386"
+    },
+    {
+      "name": "cqe_slot_plan_band8_mod24.csv",
+      "path": "/mnt/data/cqe_slot_plan_band8_mod24.csv",
+      "bytes": 2076,
+      "modified_utc": "2025-10-10T19:47:07.901163+00:00",
+      "sha256": "b8ea02045ce695957f2ea170e7441c4d164aa87dc8e13428edd77bbac5c0cd0f"
+    },
+    {
+      "name": "CQE_HYPERHARNESS_v1.yaml",
+      "path": "/mnt/data/CQE_HYPERHARNESS_v1.yaml",
+      "bytes": 10481,
+      "modified_utc": "2025-10-10T19:54:56.485355+00:00",
+      "sha256": "8e43f3b6bbec699037f12ed5e7f7775bef0c1ece2b11556d00ee858378b48019"
+    },
+    {
+      "name": "CQE_HYPERHARNESS_overlay_v1.yaml",
+      "path": "/mnt/data/CQE_HYPERHARNESS_overlay_v1.yaml",
+      "bytes": 5012,
+      "modified_utc": "2025-10-10T19:54:56.945037+00:00",
+      "sha256": "705044676a4c0614ea358bf8cbee7ee3dbec6614d465b0c1c131497029dd5c64"
+    },
+    {
+      "name": "CQE_HYPERHARNESS_patch_README.md",
+      "path": "/mnt/data/CQE_HYPERHARNESS_patch_README.md",
+      "bytes": 1928,
+      "modified_utc": "2025-10-10T19:54:56.945833+00:00",
+      "sha256": "2c1fc614f766e11869b7cf0eb365247a7f30a766ceba8bd9600fb045a8981d8a"
+    }
+  ],
+  "indices": {
+    "governance": [],
+    "translator": [],
+    "tokens": [
+      {
+        "name": "cqe_tokens_64bit_buckets.csv",
+        "path": "/mnt/data/cqe_tokens_64bit_buckets.csv",
+        "bytes": 2503498,
+        "modified_utc": "2025-10-10T19:43:07.156151+00:00",
+        "sha256": "273f3b9225c9bf65f242a36a90779479c778cb250204fcb0e76a3c7ef237047c"
+      },
+      {
+        "name": "cqe_bucket_summary_band2.csv",
+        "path": "/mnt/data/cqe_bucket_summary_band2.csv",
+        "bytes": 49,
+        "modified_utc": "2025-10-10T19:43:07.157989+00:00",
+        "sha256": "76811831996ea3cb42a59e62f44c70a0217372b554e350a07ec82875cd14987a"
+      },
+      {
+        "name": "cqe_bucket_summary_band4.csv",
+        "path": "/mnt/data/cqe_bucket_summary_band4.csv",
+        "bytes": 78,
+        "modified_utc": "2025-10-10T19:43:07.159827+00:00",
+        "sha256": "796fdc8af1cd3276c9005caf1e8d801bb91a61dcd3298d27dd9ef3b9e46a8e71"
+      },
+      {
+        "name": "cqe_bucket_summary_band8.csv",
+        "path": "/mnt/data/cqe_bucket_summary_band8.csv",
+        "bytes": 130,
+        "modified_utc": "2025-10-10T19:43:07.161001+00:00",
+        "sha256": "66d52de5c513d53b9e340114e43554c3699c8c032c376aed472cdd54366e9c7a"
+      },
+      {
+        "name": "cqe_bucket_summary_band64.csv",
+        "path": "/mnt/data/cqe_bucket_summary_band64.csv",
+        "bytes": 842,
+        "modified_utc": "2025-10-10T19:43:07.162035+00:00",
+        "sha256": "b5fbbf214f03f943f5fc6e6107999790ae15aa5d239968c0b40a71c3313fa687"
+      },
+      {
+        "name": "cqe_bucket_summary_tile4096.csv",
+        "path": "/mnt/data/cqe_bucket_summary_tile4096.csv",
+        "bytes": 46052,
+        "modified_utc": "2025-10-10T19:43:07.171126+00:00",
+        "sha256": "93d237474214c54ece7f937b367b1b06ff85f7758f26b0fa69d4b38c894b0c4a"
+      },
+      {
+        "name": "cqe_bucket_summary_mod24.csv",
+        "path": "/mnt/data/cqe_bucket_summary_mod24.csv",
+        "bytes": 354,
+        "modified_utc": "2025-10-10T19:43:07.172442+00:00",
+        "sha256": "e1cf73155613045454becb79b795a1cd58ab2db9ea385cdc4898cd66d71dfdfc"
+      },
+      {
+        "name": "cqe_bucket_examples_band2.csv",
+        "path": "/mnt/data/cqe_bucket_examples_band2.csv",
+        "bytes": 355,
+        "modified_utc": "2025-10-10T19:43:07.173623+00:00",
+        "sha256": "56ff9434237cce594f3c9958c8b21ba30c4a85e097eba70578d1aed1f2ee86f0"
+      },
+      {
+        "name": "cqe_bucket_examples_band4.csv",
+        "path": "/mnt/data/cqe_bucket_examples_band4.csv",
+        "bytes": 716,
+        "modified_utc": "2025-10-10T19:43:07.174463+00:00",
+        "sha256": "bba9aa0744efeab525784c02ecb08cdffde06db5a47f8b98f69b3d2988db5af8"
+      },
+      {
+        "name": "cqe_bucket_examples_band8.csv",
+        "path": "/mnt/data/cqe_bucket_examples_band8.csv",
+        "bytes": 1441,
+        "modified_utc": "2025-10-10T19:43:07.175386+00:00",
+        "sha256": "821e63451c90bb455e643cd5ba9681f8f25ca7fb6d4aeb0cb83f82eafd8700ef"
+      },
+      {
+        "name": "cqe_bucket_examples_band64.csv",
+        "path": "/mnt/data/cqe_bucket_examples_band64.csv",
+        "bytes": 8495,
+        "modified_utc": "2025-10-10T19:43:07.177501+00:00",
+        "sha256": "74824de95599e7c11cbf9a5c6086ff0a5240eb32be8c978ecc18149ef375bc4b"
+      },
+      {
+        "name": "cqe_bucket_examples_tile4096.csv",
+        "path": "/mnt/data/cqe_bucket_examples_tile4096.csv",
+        "bytes": 347202,
+        "modified_utc": "2025-10-10T19:43:07.231434+00:00",
+        "sha256": "29cee124071ae14263b725a44ef04ceb3120a4de89b5d869c84817e7bcab7fa1"
+      },
+      {
+        "name": "cqe_bucket_examples_mod24.csv",
+        "path": "/mnt/data/cqe_bucket_examples_mod24.csv",
+        "bytes": 3095,
+        "modified_utc": "2025-10-10T19:43:07.233595+00:00",
+        "sha256": "7864715d73dea4b95151d1b875a1c27c07cfc521b2a2f116c633cdd08203f1f5"
+      },
+      {
+        "name": "cqe_relation_edges_pmi.csv",
+        "path": "/mnt/data/cqe_relation_edges_pmi.csv",
+        "bytes": 830130,
+        "modified_utc": "2025-10-10T19:43:07.338062+00:00",
+        "sha256": "ce578811efdd647a1cfe3b655919320b3bce36ce18350275ef9989fe9530e581"
+      }
+    ],
+    "augmentation": [
+      {
+        "name": "cqe_augmented_tokens.csv",
+        "path": "/mnt/data/cqe_augmented_tokens.csv",
+        "bytes": 3337458,
+        "modified_utc": "2025-10-10T19:47:08.395999+00:00",
+        "sha256": "9a0dfee317c4645805ab13cd845246d157f31a167da87db2119fb93e8d45f86e"
+      },
+      {
+        "name": "cqe_synthetic_proof_tokens.csv",
+        "path": "/mnt/data/cqe_synthetic_proof_tokens.csv",
+        "bytes": 2282,
+        "modified_utc": "2025-10-10T19:47:07.898978+00:00",
+        "sha256": "4c7aac472ff635b78155ea413e602a82d3fb53c99b5fb712849509ca2d3e2386"
+      },
+      {
+        "name": "cqe_slot_plan_band8_mod24.csv",
+        "path": "/mnt/data/cqe_slot_plan_band8_mod24.csv",
+        "bytes": 2076,
+        "modified_utc": "2025-10-10T19:47:07.901163+00:00",
+        "sha256": "b8ea02045ce695957f2ea170e7441c4d164aa87dc8e13428edd77bbac5c0cd0f"
+      }
+    ],
+    "math": [],
+    "configs": [
+      {
+        "name": "CQE_HYPERHARNESS_v1.yaml",
+        "path": "/mnt/data/CQE_HYPERHARNESS_v1.yaml",
+        "bytes": 10481,
+        "modified_utc": "2025-10-10T19:54:56.485355+00:00",
+        "sha256": "8e43f3b6bbec699037f12ed5e7f7775bef0c1ece2b11556d00ee858378b48019"
+      },
+      {
+        "name": "CQE_HYPERHARNESS_overlay_v1.yaml",
+        "path": "/mnt/data/CQE_HYPERHARNESS_overlay_v1.yaml",
+        "bytes": 5012,
+        "modified_utc": "2025-10-10T19:54:56.945037+00:00",
+        "sha256": "705044676a4c0614ea358bf8cbee7ee3dbec6614d465b0c1c131497029dd5c64"
+      },
+      {
+        "name": "CQE_HYPERHARNESS_patch_README.md",
+        "path": "/mnt/data/CQE_HYPERHARNESS_patch_README.md",
+        "bytes": 1928,
+        "modified_utc": "2025-10-10T19:54:56.945833+00:00",
+        "sha256": "2c1fc614f766e11869b7cf0eb365247a7f30a766ceba8bd9600fb045a8981d8a"
+      }
+    ]
+  },
+  "notes": [
+    "Numbers → Shapes → Words pipeline preserved.",
+    "Natural vs synthetic tokens are separable in augmented tables (origin/class columns).",
+    "Governance acts as third witness; supplement protocol published earlier in-session."
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "nodes": [
+    {
+      "id": "install::CQEPlus_unified_v1",
+      "kind": "install",
+      "meta": {
+        "archive": "CQEPlus_unified_v1",
+        "requirements": "sbom/CQEPlus_unified_v1.sbom.json"
+      }
+    },
+    {
+      "id": "test::CQEPlus_unified_v1",
+      "kind": "test",
+      "meta": {
+        "archive": "CQEPlus_unified_v1",
+        "command": "pytest -q"
+      }
+    },
+    {
+      "id": "install::MONOLITHS",
+      "kind": "install",
+      "meta": {
+        "archive": "MONOLITHS",
+        "requirements": "sbom/MONOLITHS.sbom.json"
+      }
+    },
+    {
+      "id": "test::MONOLITHS",
+      "kind": "test",
+      "meta": {
+        "archive": "MONOLITHS",
+        "command": "pytest -q"
+      }
+    },
+    {
+      "id": "install::TESTS",
+      "kind": "install",
+      "meta": {
+        "archive": "TESTS",
+        "requirements": "sbom/TESTS.sbom.json"
+      }
+    },
+    {
+      "id": "test::TESTS",
+      "kind": "test",
+      "meta": {
+        "archive": "TESTS",
+        "command": "pytest -q"
+      }
+    },
+    {
+      "id": "install::analysis_tools",
+      "kind": "install",
+      "meta": {
+        "archive": "analysis_tools",
+        "requirements": "sbom/analysis_tools.sbom.json"
+      }
+    },
+    {
+      "id": "test::analysis_tools",
+      "kind": "test",
+      "meta": {
+        "archive": "analysis_tools",
+        "command": "pytest -q"
+      }
+    },
+    {
+      "id": "install::core_system",
+      "kind": "install",
+      "meta": {
+        "archive": "core_system",
+        "requirements": "sbom/core_system.sbom.json"
+      }
+    },
+    {
+      "id": "test::core_system",
+      "kind": "test",
+      "meta": {
+        "archive": "core_system",
+        "command": "pytest -q"
+      }
+    },
+    {
+      "id": "install::scene8",
+      "kind": "install",
+      "meta": {
+        "archive": "scene8",
+        "requirements": "sbom/scene8.sbom.json"
+      }
+    },
+    {
+      "id": "test::scene8",
+      "kind": "test",
+      "meta": {
+        "archive": "scene8",
+        "command": "pytest -q"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "install::CQEPlus_unified_v1",
+      "to": "test::CQEPlus_unified_v1"
+    },
+    {
+      "from": "install::MONOLITHS",
+      "to": "test::MONOLITHS"
+    },
+    {
+      "from": "install::TESTS",
+      "to": "test::TESTS"
+    },
+    {
+      "from": "install::analysis_tools",
+      "to": "test::analysis_tools"
+    },
+    {
+      "from": "install::core_system",
+      "to": "test::core_system"
+    },
+    {
+      "from": "install::scene8",
+      "to": "test::scene8"
+    }
+  ]
+}

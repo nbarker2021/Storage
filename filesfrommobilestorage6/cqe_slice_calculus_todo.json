@@ -1,0 +1,17 @@
+{
+  "immediate": [
+    "Implement viewer generators (hexagon, decagon, octagon) with unit polygons and sampled faces.",
+    "Add observable samplers on S^1_W: extreme_vertex, quadrant_occupancy, chord_histogram.",
+    "Wire calculus (D\u03b8, \u0394\u03b8, \u222b, Dirichlet energy) and equalizer search; log receipts.",
+    "Add rotation/reflection-invariant equivalence; emit keys; cache in ledger."
+  ],
+  "next_24h": [
+    "Integrate braid events: compute permutation traces per face; derive J_B, writhe, crossings.",
+    "Enforce multi-resolution monotonicity checks across W=80,120,600.",
+    "Governance: promote on joint key matches + energy reductions; refuse on scale-dependence."
+  ],
+  "needs_input_or_tokenizer": [
+    "Per-token face definitions if you want non-synthetic viewers (otherwise we use canonical N-gon viewers).",
+    "Fine-grained braiding event traces if we should avoid deriving them from permutations."
+  ]
+}

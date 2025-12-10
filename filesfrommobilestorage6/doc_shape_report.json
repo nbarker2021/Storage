@@ -1,0 +1,31 @@
+{
+  "doc_path": "/mnt/data/Morphonic_Manifolds_as_Mandelbrot_Sets_in_E\u2088_Space_1.md",
+  "shape_summary": {
+    "segments": 260,
+    "scores": {
+      "D8": 0.060974496528459356,
+      "D12": 0.05517114102285297,
+      "D16": 0.11371176285184817,
+      "D24": 0.06518448758912261
+    },
+    "E8_alignment": {
+      "mean": 0.8500523738458451,
+      "p90": 0.9000598744670919,
+      "p95": 0.9147719360786487,
+      "p99": 0.9379239826729913,
+      "frac_ge_0_9": 0.10384615384615385,
+      "frac_ge_0_95": 0.0038461538461538464
+    },
+    "dominant_harmonics": [
+      1,
+      15,
+      14
+    ],
+    "labels": []
+  },
+  "plots": {
+    "trajectory_xy": "/mnt/data/doc_shape_scan/trajectory_xy.png",
+    "spectrum": "/mnt/data/doc_shape_scan/spectrum.png",
+    "e8_alignment_hist": "/mnt/data/doc_shape_scan/e8_align_hist.png"
+  }
+}

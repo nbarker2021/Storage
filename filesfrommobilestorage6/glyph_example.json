@@ -1,0 +1,69 @@
+{
+  "profile": {
+    "vectorizer": {
+      "mode": "svg",
+      "dpi": 300,
+      "min_stroke_len_px": 2
+    },
+    "symmetry": {
+      "angle_bin_deg": 15,
+      "reflection_tol": 0.1
+    },
+    "limits": {
+      "strokes_max": 128,
+      "crossings_max": 256
+    }
+  },
+  "program": [
+    {
+      "op": "group",
+      "open": "(",
+      "close": ")"
+    },
+    {
+      "op": "rune",
+      "unicode": "\u2211",
+      "bold": true,
+      "italic": false,
+      "stroke_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "op": "ast",
+      "node_type": "matrix",
+      "arity": 2,
+      "children": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "op": "rune",
+      "unicode": "="
+    },
+    {
+      "op": "ast",
+      "node_type": "fraction",
+      "arity": 2,
+      "children": [
+        "1",
+        "N"
+      ]
+    },
+    {
+      "op": "rune",
+      "unicode": "\u2211"
+    },
+    {
+      "op": "rune",
+      "unicode": "x"
+    },
+    {
+      "op": "rune",
+      "unicode": "i"
+    }
+  ]
+}

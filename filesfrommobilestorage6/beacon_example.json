@@ -1,0 +1,244 @@
+{
+  "id": "beacon:f6fb0fe2-c205-4499-a065-d654637437b4",
+  "name": "dataset_promotion_readiness",
+  "scope": "domain",
+  "level": "beacon",
+  "description": "Top-level checkpoint to decide if a dataset shell is ready for promotion.",
+  "triggers": [
+    "new_data",
+    "policy_change",
+    "recall_drop"
+  ],
+  "e8": {
+    "version": "0.1",
+    "coords": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "root_loc": {
+      "nearest_roots": [
+        {
+          "index": 0,
+          "inner_product": 1.0
+        }
+      ],
+      "reflections": [],
+      "adjacency_rule": "inner_product_eq_1"
+    },
+    "axes": {
+      "version_container": "v14",
+      "tenant": "demo",
+      "domain": "retrieval"
+    },
+    "bridge_node": []
+  },
+  "axes": {
+    "version_container": "v14",
+    "tenant": "demo",
+    "domain": "retrieval"
+  },
+  "w5h": {
+    "who": {
+      "contexts": [
+        {
+          "name": "tenant_stakeholders",
+          "score": 0.8,
+          "evidence": "policy@2025-08"
+        },
+        {
+          "name": "users",
+          "score": 0.7,
+          "evidence": "survey"
+        },
+        {
+          "name": "models",
+          "score": 0.6,
+          "evidence": "offline eval"
+        },
+        {
+          "name": "annotators",
+          "score": 0.65,
+          "evidence": "QA"
+        },
+        {
+          "name": "regulators",
+          "score": 0.5,
+          "evidence": "none"
+        }
+      ]
+    },
+    "what": {
+      "contexts": [
+        {
+          "name": "accuracy",
+          "score": 0.82,
+          "evidence": "recall@10"
+        },
+        {
+          "name": "consistency",
+          "score": 0.75,
+          "evidence": "goldens"
+        },
+        {
+          "name": "safety",
+          "score": 0.9,
+          "evidence": "quarantine"
+        },
+        {
+          "name": "freshness",
+          "score": 0.6,
+          "evidence": "recency"
+        },
+        {
+          "name": "novelty",
+          "score": 0.7,
+          "evidence": "diversity"
+        }
+      ]
+    },
+    "where": {
+      "contexts": [
+        {
+          "name": "prod_region_us",
+          "score": 0.8,
+          "evidence": "SLA"
+        },
+        {
+          "name": "prod_region_eu",
+          "score": 0.76,
+          "evidence": "SLA"
+        },
+        {
+          "name": "staging",
+          "score": 0.9,
+          "evidence": "eval"
+        },
+        {
+          "name": "offline",
+          "score": 0.95,
+          "evidence": "eval"
+        },
+        {
+          "name": "edge",
+          "score": 0.55,
+          "evidence": "limited"
+        }
+      ]
+    },
+    "when": {
+      "contexts": [
+        {
+          "name": "peak_hours",
+          "score": 0.72,
+          "evidence": "budget"
+        },
+        {
+          "name": "off_hours",
+          "score": 0.86,
+          "evidence": "budget"
+        },
+        {
+          "name": "release_week",
+          "score": 0.65,
+          "evidence": "risk"
+        },
+        {
+          "name": "audit_window",
+          "score": 0.8,
+          "evidence": "policy"
+        },
+        {
+          "name": "holiday",
+          "score": 0.58,
+          "evidence": "latency"
+        }
+      ]
+    },
+    "why": {
+      "contexts": [
+        {
+          "name": "business_goal",
+          "score": 0.83,
+          "evidence": "OKR-7"
+        },
+        {
+          "name": "user_value",
+          "score": 0.88,
+          "evidence": "NPS"
+        },
+        {
+          "name": "safety_goal",
+          "score": 0.9,
+          "evidence": "policy"
+        },
+        {
+          "name": "research_goal",
+          "score": 0.7,
+          "evidence": "roadmap"
+        },
+        {
+          "name": "compliance",
+          "score": 0.8,
+          "evidence": "policy"
+        }
+      ]
+    },
+    "how": {
+      "contexts": [
+        {
+          "name": "infra_cost",
+          "score": 0.7,
+          "evidence": "bill"
+        },
+        {
+          "name": "maintainability",
+          "score": 0.8,
+          "evidence": "bus factor"
+        },
+        {
+          "name": "operability",
+          "score": 0.85,
+          "evidence": "SRE runbook"
+        },
+        {
+          "name": "scalability",
+          "score": 0.75,
+          "evidence": "load test"
+        },
+        {
+          "name": "extensibility",
+          "score": 0.8,
+          "evidence": "modularity"
+        }
+      ]
+    }
+  },
+  "policy": {
+    "priority_contexts": [
+      "accuracy",
+      "safety",
+      "latency",
+      "operability",
+      "compliance"
+    ],
+    "aggregation": "weighted_mean",
+    "weights": {
+      "accuracy": 0.3,
+      "safety": 0.25,
+      "latency": 0.2,
+      "operability": 0.15,
+      "compliance": 0.1
+    },
+    "thresholds": {
+      "promote": 0.78,
+      "quarantine": 0.5
+    }
+  },
+  "updated_at": "2025-08-10T04:22:46.068098Z"
+}

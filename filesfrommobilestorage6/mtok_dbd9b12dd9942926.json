@@ -1,0 +1,54 @@
+{
+  "token_id": "mtok_dbd9b12dd9942926",
+  "created_at": "2025-09-18T05:46:30Z",
+  "weyl_id": 7,
+  "chamber_id": 217,
+  "gsl": {
+    "base": 24,
+    "octave_k": 2,
+    "riser": 7
+  },
+  "phi_mode": {
+    "enabled": true,
+    "gradient": true,
+    "window": [
+      13,
+      21,
+      34
+    ]
+  },
+  "edge_fence": "end_of_window",
+  "input_digest": "fa65f735a6801add1e9ac99cd3bf9726ce24b782642c3db153cff50455e70b74",
+  "output_digest": "c5f00c74ee5d632d59444e5ff2d956017b6e3dc46bb9055e00cdacb0028e2441",
+  "user_comparator": {
+    "order_key": [
+      "ts",
+      "id"
+    ],
+    "metrics": [
+      "exact"
+    ],
+    "tolerances": {
+      "exact": 1.0
+    }
+  },
+  "braid_receipt": {
+    "all8_closure": true,
+    "dual": true,
+    "compose": true,
+    "winner_hash": "d8715e032fa85a79a88d47db910dc220877d9be2e37ba65e5a0b2e125666f65a",
+    "runnerup_margin_min": 0.0,
+    "zero_event_index": 104
+  },
+  "caps": [
+    "FS.WRITE",
+    "NET.GET"
+  ],
+  "ledger_refs": {
+    "macrocycle_seal": "b7d3a1ef8a25ed111b1ffc95fcfd7bb1284210a4e6298385e323c83bb55be690",
+    "pack_ids": [
+      "73a0f636e9fb454aae8fdf8d1372b26ec5882610e64471eaee98cacbea472af3"
+    ]
+  },
+  "sidecar": {}
+}

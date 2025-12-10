@@ -1,0 +1,666 @@
+[
+  {
+    "line": 148,
+    "text": "This is all handled by an agentic management complex function that will later be described like many othe parts.(im attempting to inform without overinforming and harming the critique of the idea as it is presented piece by piece.)"
+  },
+  {
+    "line": 378,
+    "text": "ConStruct6/ \u2014 config + utilities; looks like a later re-org pass."
+  },
+  {
+    "line": 535,
+    "text": "Some modules referenced are stubs or missing in the archive; the function index is aspirational in places."
+  },
+  {
+    "line": 555,
+    "text": "A later re-org effort; config/types look more disciplined but some functions are truncated/incomplete."
+  },
+  {
+    "line": 559,
+    "text": "Missing/aspirational modules vs. function index (needs dependency map and stubbing policy)."
+  },
+  {
+    "line": 583,
+    "text": "Docs \u2194 code gap: the current code doesn\u2019t yet express the richer MDHG (it\u2019s mostly frequency-based); AGRM is promising but thin."
+  },
+  {
+    "line": 643,
+    "text": "Store the traversal schedule so AGRM can re-enter sensibly later."
+  },
+  {
+    "line": 685,
+    "text": "Exact transform set for N (I\u2019ll look for it in your docs/code; if missing, I\u2019ll propose one)."
+  },
+  {
+    "line": 739,
+    "text": "A concrete, faithful procedure (so we can implement it later)"
+  },
+  {
+    "line": 1027,
+    "text": "Purpose: allow bit-for-bit verification and clean restore later."
+  },
+  {
+    "line": 1053,
+    "text": "How restore works later"
+  },
+  {
+    "line": 1107,
+    "text": "I won\u2019t actually create one unless you ask, but that\u2019s precisely how I do it\u2014and how I\u2019d restore it later."
+  },
+  {
+    "line": 1664,
+    "text": "This is very abstract so dont update the todo list yet. Just tell me how you understand what I just wrote, and do the same type of review please"
+  },
+  {
+    "line": 1759,
+    "text": "Log the expansion trace so later runs can reproduce exactly why/how you left the original cube."
+  },
+  {
+    "line": 1779,
+    "text": "What would convince me it works: Small demos where starting from the cube reduces time-to-good-answer and lowers contradiction rate vs. a free search, without missing legitimate alternatives (measure with held-out \u201cthird-way\u201d cases)."
+  },
+  {
+    "line": 1800,
+    "text": "Glaring void: there isn\u2019t enough nearby evidence/support (coverage gap)."
+  },
+  {
+    "line": 1824,
+    "text": "HALF (support and contradiction both non-trivial, high tension, or missing N\u22481 grounding)."
+  },
+  {
+    "line": 1836,
+    "text": "Every k ticks, allow one budgeted probe just outside the cube to avoid missing \u201cthird-way\u201d solutions; if that probe lowers tension, the cube expands along that facet (logged)."
+  },
+  {
+    "line": 1840,
+    "text": "Each token carries transform_path, sources, shell indices, and the Y/N/DIAG outcome with reasons (support counts, tension, gaps). No gray area, just decision or fix-what\u2019s-missing."
+  },
+  {
+    "line": 1848,
+    "text": "It aligns perfectly with your Safe Cube (N\u22480.5\u20131 start), glyphing (N=5 compression), MORSR/Wave-Pool (gap-filling/aligning), and SAP governance (quarantine on HALF until grounded)."
+  },
+  {
+    "line": 1885,
+    "text": "Each variant is still a binary test (Y/N) with the same DIAGNOSTIC outcomes you defined (VOID = missing coverage, HALF = insufficient grounding)."
+  },
+  {
+    "line": 1909,
+    "text": "Safety: you don\u2019t just chase \u201cbest plausible\u201d; you prove close negatives false, or surface what data is missing."
+  },
+  {
+    "line": 1923,
+    "text": "Avoidance accuracy: how often no-go zones prevent later contradicted paths."
+  },
+  {
+    "line": 2257,
+    "text": "Gap: The \u201cGolden-ratio spiral\u201d ranking is explicitly a placeholder; you\u2019ll want a concrete GR progression (and probably E8-aware projection hooks later)."
+  },
+  {
+    "line": 2278,
+    "text": "Patching: Explicit TODO; controller logs missed nodes and marks incomplete. This will block end-to-end quality without the splice logic."
+  },
+  {
+    "line": 2301,
+    "text": "Navigator ranking: GR / Weyl line logic is stubbed; current ranking is \u201cshell then angle.\u201d Implement GR spiral scoring & (later) E8 projection awareness."
+  },
+  {
+    "line": 2311,
+    "text": "Convergence & merge: Works when paths meet; consider robust overlap reconciliation if they nearly meet (single-node gap, shell mismatch)."
+  },
+  {
+    "line": 2345,
+    "text": "SNAP (state as a first-class primitive): Every step can be frozen as a SNAP (schema\u2019d state capsule) and later recombined into SNAPOperations or SNAPDNA (curated expertise mixtures). This yields MoE-like Think Tank swarms specialized on demand, and supports DTT (Deploy to Test) and Assembly Line (atomicized A/Bs and hypothesis factories)."
+  },
+  {
+    "line": 2354,
+    "text": "4) Post-mortem (critical take, risks, and what\u2019s missing)"
+  },
+  {
+    "line": 2365,
+    "text": "Navigator scoring is stubbed \u2192 implement the actual Golden-ratio / Weyl-line ordering (and later E8-aware projections). Right now shell+angle is too blunt."
+  },
+  {
+    "line": 2377,
+    "text": "Tests \u2192 missing unit/property tests (random seeds, pathological layouts, reproducibility, CPU budget guards)."
+  },
+  {
+    "line": 2385,
+    "text": "Abstraction drift: E8 mapping vs task geometry\u2014lock an interface: Navigator gets a metric space + legality predicates; internals can later switch from Euclidean shells to lattice shells."
+  },
+  {
+    "line": 2602,
+    "text": "Concorde for exact checks on small/medium instances to unit-test AGRM\u2019s optimality gap. (Index page with downloads/benchmarks.)"
+  },
+  {
+    "line": 2708,
+    "text": "Immediate TODO adds (to the running list)"
+  },
+  {
+    "line": 2713,
+    "text": "Baseline harness: LKH-3/Concorde runners for sanity metrics (gap, runtime) to benchmark AGRM configurations."
+  },
+  {
+    "line": 3253,
+    "text": "Feeds: M2 Patching (better orientation-aware insertions), M3 MDHG (hot zones get richer updates), M5 Audit (new metrics), and later M9 (potentials from Safe-Cube/SAP)."
+  },
+  {
+    "line": 3280,
+    "text": "It\u2019s minimally coupled: we can stub potentials now (User/Doc/Work/Gov) and plug in full Safe-Cube/SAP later (M9) without changing the state machine."
+  },
+  {
+    "line": 3534,
+    "text": "core/agrm/chain_detect_v0_1_2025_08_13.py \u2014 gap detector (by sector jumps) + VWS hot edge seed pairs."
+  },
+  {
+    "line": 3728,
+    "text": "(Run it and it will fail CI/local if any .py file is missing a Change-Notice: banner.)"
+  },
+  {
+    "line": 3968,
+    "text": "Design note: this is intentionally \u201csoft\u201d to keep it portable; we can add hard kills (e.g., signal) later for Unix targets."
+  },
+  {
+    "line": 4155,
+    "text": "Still informs MDHG if/when you want: because edges + per-ID meta are preserved, you can batch-commit into MDHG later (dual-write). The bridge output is intentionally symmetric with MDHG\u2019s."
+  },
+  {
+    "line": 4218,
+    "text": "Yes add these items and continue working on the todo and work lists that already exist as well please"
+  },
+  {
+    "line": 4243,
+    "text": "Minimal queue for heat/edges \u2192 flushes into MDHG (.heat/.edge) later."
+  },
+  {
+    "line": 4308,
+    "text": "2) Progress on the existing TODO/Worklist"
+  },
+  {
+    "line": 4392,
+    "text": "Review final output, gap checking"
+  },
+  {
+    "line": 4485,
+    "text": "Review & gap check"
+  },
+  {
+    "line": 4642,
+    "text": "Review & gap check (run suite + quick perf; summarize)."
+  },
+  {
+    "line": 4762,
+    "text": "If unclassified: create a provisional family/type and SNAP it as staged; ThinkTank (or a later pass) refines it, then promotion runs."
+  },
+  {
+    "line": 4795,
+    "text": "Let's re-evaluate the session and what we have done vs what is not complete or partially done and get a new all-inclusive to all work not done but planned to be done,  and redeploy a new work order derived after gap review judgment, adding the suggested gap fixes found also."
+  },
+  {
+    "line": 4799,
+    "text": "Here\u2019s the fresh, all-inclusive gap review and the new work order derived from it (with suggested fixes baked in). I kept it concise here and wrote the full artifacts into the repo with versioned filenames."
+  },
+  {
+    "line": 4801,
+    "text": "Gap review: plans/gap_review_v0_1_2025_08_13.md"
+  },
+  {
+    "line": 4855,
+    "text": "Got it \u2014 here\u2019s a deep, checkpointed review of the whole session. I\u2019ll be blunt where it helps. For each checkpoint I note current state, what works, where we\u2019re thin, and gap-fix ideas tailored to the project\u2019s intent."
+  },
+  {
+    "line": 4862,
+    "text": "Gap-fix: Codify global invariants as machine-checkable pre/postconditions (Safe-Cube) and a short list of system-level KPIs (coverage, thrash, promotion precision/recall, quarantine rate)."
+  },
+  {
+    "line": 4869,
+    "text": "Gap-fix: Implement a shell/glyph encoder (even a minimal one) and run A/B: AGRM with vs without glyph compression; track effects on coverage, patch cost, and promotion decisions."
+  },
+  {
+    "line": 4876,
+    "text": "Gap-fix: Add adjacency/elevator weighting in MDHG and feed those into VWS. Learn thresholds per domain (SNAPDNA) instead of constants."
+  },
+  {
+    "line": 4883,
+    "text": "Gap-fix: Drive portfolio params from ThinkTank via SNAPDNA (task domain, entropy, budgets). Incorporate MDHG elevator bias into _route_efficiency."
+  },
+  {
+    "line": 4890,
+    "text": "Gap-fix: Extend SNAPDNA to mint expert profiles with capability vectors and thresholds; allow pluggable classifiers (rules + statistical/embedding)."
+  },
+  {
+    "line": 4897,
+    "text": "Gap-fix: Implement Safe-Cube gate (pre-solve). Wire SAP flows: on violation \u2192 freeze output, raise SNAP_escalation, attach remediation hints (missing universes, n-level, policy mismatch)."
+  },
+  {
+    "line": 4904,
+    "text": "Gap-fix: Hook ThinkTank into portfolio selection; build MORSR (middle-out ripples) and WavePool (counter-wave context) as opt-in advisors to Navigator."
+  },
+  {
+    "line": 4911,
+    "text": "Gap-fix: Add retention and sampling strategies per universe; expose projector predicates (e.g., \u201ctop-k by recency/heat\u201d)."
+  },
+  {
+    "line": 4918,
+    "text": "Gap-fix: Add health pings + exponential backoff; enrich policy checks (rate limits, PII boundaries) tied to universes and SNAP families."
+  },
+  {
+    "line": 4925,
+    "text": "Gap-fix: Build promotion report (HTML) and a tiny anomaly detector on thrash/coverage trends to pre-empt bad promotions."
+  },
+  {
+    "line": 4932,
+    "text": "Gap-fix: Integrate journal append per inline tick; store replay watermark in a SNAP; replay on startup/escalation before VWS seed."
+  },
+  {
+    "line": 4939,
+    "text": "Gap-fix: Implement a shell/glyph RAG parser; add SFBB harness (n=5\u20138) to learn seed/prodigal policies that might generalize to AGRM."
+  },
+  {
+    "line": 4946,
+    "text": "Gap-fix: Add 8-DoF bias field feeding sector targets; measure stall reduction & gate stability."
+  },
+  {
+    "line": 4953,
+    "text": "Gap-fix: Introduce a minimal test harness (pytest) focusing on: promotion policy gates, journal replay fidelity, MDHG adjacency, and ThinkTank portfolio."
+  },
+  {
+    "line": 4960,
+    "text": "Gap-fix: A concise Concepts \u2192 How-to \u2192 API docs site; include a \u201creasoning playbook\u201d showing E8/shell/glyph decisions with examples."
+  },
+  {
+    "line": 5110,
+    "text": "Yes please do. And let me ask you this, can, when doing the assembly line task and work need review, you allow multiple work items and not just a single one? If yku are breaking into atomic elements, and stepping up, id imagine you could evaluate the \"todo universe\" similarly to how we operate this system."
+  },
+  {
+    "line": 5116,
+    "text": "Absolutely\u2014your assumption is right. The Assembly-Line can manage multiple work items at once by treating the backlog as a \u201cTodo Universe\u201d with its own shells/sectors and gates. In practice:"
+  },
+  {
+    "line": 5172,
+    "text": "Crash-safe learning: inline discoveries are durable; later MDHG runs inherit them automatically."
+  },
+  {
+    "line": 5180,
+    "text": "With your go-ahead, I can run the Assembly-Line across several P0s simultaneously (as a Todo Universe):"
+  },
+  {
+    "line": 5268,
+    "text": "Yes\u2014accurate. We can treat the backlog as a \u201cTodo Universe\u201d and apply the same mechanics:"
+  },
+  {
+    "line": 5356,
+    "text": "Your assumption is correct. Treating the backlog as a \u201cTodo Universe\u201d works: we can atomize several tasks, schedule them with gates, and run them in one AL pass. That\u2019s basically what I did\u2014ran multiple scaled tests with isolated journals and conservative configs, and promoted only when gates passed."
+  },
+  {
+    "line": 5364,
+    "text": "Add a seeding_strategy switch: \"exact\" (current), \"grid_sample\" (candidate subset per cell), \"annoy\"/\"hnsw\" (if we decide to bring in a tiny dependency later)."
+  },
+  {
+    "line": 5455,
+    "text": "Yes\u2014your assumption is accurate. We can (and did) treat multiple tasks as nodes in a \u201cTodo Universe.\u201d The same mechanics apply:"
+  },
+  {
+    "line": 5764,
+    "text": "Love this drop\u2014this is exactly the missing glue. Here\u2019s how I\u2019d fold your formulas (SP, C(n), I(n), \u03c6-scaling) into the planetary\u2192stellar\u2192BH progression in a way that\u2019s faithful to your ConStruct/SFBB reasoning and usable inside our AGRM/SNAP stack."
+  },
+  {
+    "line": 6303,
+    "text": "a missing normalization, or"
+  },
+  {
+    "line": 6713,
+    "text": "Zero error at anchors (by design), monotonicity holds for 6\u201310 with the fitted coefficients, and it\u2019s robust for small imbalance deltas if we keep the imbalance coefficient small. It\u2019s the most faithful to your exact targets but risks overfitting if we later adjust anchors."
+  },
+  {
+    "line": 7259,
+    "text": "If you\u2019re good with that, I\u2019ll spin those variants in the harness next (still no core changes), show you the comparison tables and the \u201cno-action\u201d precision/recall on synthetic sequences, then we can pick a winner/hybrid to SNAP as a policy for later A/Bs."
+  },
+  {
+    "line": 7272,
+    "text": "The best performers (fewest false skips\u2014missing a real imperfection\u2014with modest false patches) are:"
+  },
+  {
+    "line": 7397,
+    "text": "If you\u2019re happy with these candidates, I\u2019ll do those three quick checks next and then package the two formula profiles as SNAP policies (math-only, still not integrated) so we can A/B them later inside AGRM when you give the go-ahead."
+  },
+  {
+    "line": 7427,
+    "text": "Compensation remains unnecessary here; the staircase already absorbs the even-n step-ups. If we later push to n\u226512 with much steeper targets, we can revisit turning compensation on."
+  },
+  {
+    "line": 7437,
+    "text": "Adopt (for A/B later):"
+  },
+  {
+    "line": 7443,
+    "text": "Keep compensation OFF by default. Enable only if a domain shows systematic under-prediction at higher n (we can add a tiny \u03bb and small \u03b3 later)."
+  },
+  {
+    "line": 7485,
+    "text": "anchors_I: {6:1, 7:6, 8:27} (editable later)"
+  },
+  {
+    "line": 8117,
+    "text": "Allow controller_v0_7 (and later v0_6) to accept universe_name; materialize then run."
+  },
+  {
+    "line": 8613,
+    "text": "Added a typed config dataclass AGRMConfig (pydantic-ready later)."
+  },
+  {
+    "line": 8686,
+    "text": "Runs grid/grid vs lhs/grid vs poisson/grid, and lhs/faiss (falls back if FAISS missing)."
+  },
+  {
+    "line": 8717,
+    "text": "\"adj_backend\": \"faiss\",             # grid | faiss | hnsw (falls back if missing)"
+  },
+  {
+    "line": 8805,
+    "text": "# criteria missing \"tags\" \u2192 mannequin.activate_stream(...) returns allow=False, reason=\"safe_cube_requires_tags\""
+  },
+  {
+    "line": 9238,
+    "text": "Concept\tIntended\tCurrent\tGap\tImmediate next move"
+  },
+  {
+    "line": 9240,
+    "text": "Glyph compression\tCollapse n\u22655 nodes to compressed glyph; traversable up/down\tNot present\tMissing core compression + lineage mapping\tImplement glyphs/codec.py + glyph SNAPs; add inverse traversal tests"
+  },
+  {
+    "line": 9244,
+    "text": "MORSR\tMiddle-out ripple + sub-ripples; depth-limited\tNot present\tMissing core explorer\tImplement explorers/morsr.py; return \u201cnew middle\u201d candidates"
+  },
+  {
+    "line": 9245,
+    "text": "Wave Pool\tCounter-propagating context waves; excitation at meet point\tNot present\tMissing wave engine & meeting policy\tImplement explorers/wavepool.py with wave schedulers"
+  },
+  {
+    "line": 9642,
+    "text": "Yes please. Do that and attach it as needed to any and all work done or to be done, and let's continue."
+  },
+  {
+    "line": 9916,
+    "text": "Note: This pass uses lightweight heuristics for _top_terms (frequency + bigram bonus). It\u2019s deliberately swappable later with stronger extractors (RAKE/KeyBERT/spacy) or your glyph grammar."
+  },
+  {
+    "line": 9944,
+    "text": "Inverse exploration: invert() provides a clean placeholder so we can integrate your inverse-idea exploration immediately; we\u2019ll swap the implementation later (vector flip along pinned dimensions, antonym lexicon, or learned inverse)."
+  },
+  {
+    "line": 11252,
+    "text": "agrm/agrm/elevator_promotion.py: composite scoring + per-family/type tallies + robust handling of missing family/type."
+  },
+  {
+    "line": 11622,
+    "text": "If not fully shelled at the point of fully saturated state, inform user of needed gap coverage material, and request permission to access outside sources for filling both our and this gap in data."
+  },
+  {
+    "line": 11666,
+    "text": "GAP_REQUEST: If saturated but coverage < target, SOC emits a permissioned Gap SNAP listing exact needs (schemas, examples, doc types)."
+  },
+  {
+    "line": 11702,
+    "text": "4) Gap analysis (what to ask for)"
+  },
+  {
+    "line": 11706,
+    "text": "Check family/type holes (e.g., missing \u201cmetric\u201d type)."
+  },
+  {
+    "line": 11710,
+    "text": "Emit a GAP SNAP with precise items: \u201cNeed 2 policy memos (2025), 1 metrics sheet, 1 procedure doc; sources allowed: X/Y; constraints: Z.\u201d"
+  },
+  {
+    "line": 11766,
+    "text": "Gap Analyzer: new snap/gaps.py (computes missing facets, emits GAP SNAP)."
+  },
+  {
+    "line": 11800,
+    "text": "gap = Gaps.compute(request_snap, working, beacons)"
+  },
+  {
+    "line": 11801,
+    "text": "Trails.append(trail, {\"event\":\"gap_request\", \"gap\": gap.spec})"
+  },
+  {
+    "line": 11802,
+    "text": "if not Permissions.allowed(gap):"
+  },
+  {
+    "line": 11804,
+    "text": "fetched = EvidenceFetcher.fetch(gap)"
+  },
+  {
+    "line": 11816,
+    "text": "Gap Analyzer using W5H facet deficits + beacon decay + type/family holes."
+  },
+  {
+    "line": 11824,
+    "text": "If you\u2019re happy with this design, I\u2019ll draft SOC + Gap Analyzer as next steps, wire them into Trails and Beacons, and keep the interfaces small so the main spine stays protected."
+  },
+  {
+    "line": 11841,
+    "text": "Absolutely\u2014here\u2019s a tight, relevance-only triage. I\u2019m not adapting anything; just assessing fit, risks, and what\u2014if anything\u2014we should sandbox-test later."
+  },
+  {
+    "line": 11853,
+    "text": "If we test later: Compare its \u201chigh-complexity node\u201d flags against (a) our elevator promotions and (b) W5H/beacon alignment, on synthetic rings/lines/bimodal clouds."
+  },
+  {
+    "line": 11865,
+    "text": "If we test later: Treat these as threshold hypotheses in our stress suites and measure whether escalation at 6/7 actually improves promotion quality or just cost."
+  },
+  {
+    "line": 11877,
+    "text": "If we test later: Run ablation: tie sweep geometry/arms to these phase labels vs. an unconstrained tuner; compare Ops metrics."
+  },
+  {
+    "line": 11889,
+    "text": "If we test later: Use it to formalize our Trail/Playbook QA checklists (coverage, stability regions) for any domain-specific Ops."
+  },
+  {
+    "line": 11901,
+    "text": "If we test later: Keep in the Experimental Track\u2014run GRM/AGRM as a side-arm during sweeps and report deltas (promotion quality, stability) vs. non-GR baselines."
+  },
+  {
+    "line": 12001,
+    "text": "Deliverables: tables, plots, Trails, and a mini-corpus of synthetic \u201chard spots\u201d we can reuse in later tests."
+  },
+  {
+    "line": 12049,
+    "text": "primer snap \u2192 refine (specific snaps) \u2192 check \u2192 saturation/gap \u2192 finalize."
+  },
+  {
+    "line": 12209,
+    "text": "During solve, dimensional divide the space as per the documents and our future findings.(this is to be done to all prodigals given, branching into as many solution paths as meet perfect standards)"
+  },
+  {
+    "line": 12274,
+    "text": "Always taking perfect edges early can cause many costly imperfections later."
+  },
+  {
+    "line": 12325,
+    "text": "Update beam heuristics (which perfect choices usually backfire later)."
+  },
+  {
+    "line": 12467,
+    "text": "Temporal gap: \u201cwhen\u201d misalignment vs active beacons \u2192 either down-weight or demand a recency citation in the bridge."
+  },
+  {
+    "line": 12648,
+    "text": "Still no effect on scoring/promotion until we explicitly enable that later."
+  },
+  {
+    "line": 12718,
+    "text": "Gap requests accuracy (needed vs. unnecessary asks)."
+  },
+  {
+    "line": 12942,
+    "text": "Greedy lengths match expectations for n=3\u20136; artifact includes an n=5 overlap heatmap (saved image) so we can start doing localized surgery later."
+  },
+  {
+    "line": 13283,
+    "text": "PII/Governance first: mandatory scrubbers; Sentinel blocks SNAPs missing classification (family/type) or redaction tags."
+  },
+  {
+    "line": 13307,
+    "text": "Sampling + budgets: default digest, 25% sample, per-universe caps; Promoted later based on metrics."
+  },
+  {
+    "line": 13989,
+    "text": "Augmented env/data.make_metas(...) to attach deterministic w5h vectors per node (or created a thin env if missing)."
+  },
+  {
+    "line": 14248,
+    "text": "Staging TTL/decay: still governed by DNA_POLICY[\"staging_ttl_hours\"]; you can override per scenario later if you want me to extend the override schema."
+  },
+  {
+    "line": 14752,
+    "text": "Consensus gap: cost_delta_pct \u2265 1\u20133% (gives the fast-path something to gate)."
+  },
+  {
+    "line": 14961,
+    "text": "Can we build a \"what is missing in any way\" universe, mot referring to us building right now, but how the system runs."
+  },
+  {
+    "line": 14963,
+    "text": "Every task gets evaluated before work of what is missing shell wise, what n level is achieved, what expertise is required. What system to be used, and any other relevant data."
+  },
+  {
+    "line": 14980,
+    "text": "1) \u201cWhat is missing?\u201d Universe (GAPS) \u2014 shipped a first cut"
+  },
+  {
+    "line": 14982,
+    "text": "I added a self-contained GAPS (Missingness Universe) module that does exactly what you described: before any work, it evaluates what\u2019s missing (shell/W5H coverage, n-level readiness, expertise needed, recommended subsystems), proposes half-bridges (what evidence to add), and even generates a few inverse/false hypotheticals to probe the space from the \u201cother side.\u201d"
+  },
+  {
+    "line": 15013,
+    "text": "Archivist/Projector (surface exactly what evidence is missing)"
+  },
+  {
+    "line": 15037,
+    "text": "If you want, I\u2019ll plug this GAPS preflight directly into SnapLat\u2019s intake path next and add the Bridge-Chaser + Inverse Explore hooks so every task starts with a \u201cwhat\u2019s missing / where\u2019s the bridge\u201d plan before AGRM sweeps."
+  },
+  {
+    "line": 15054,
+    "text": "\u2705 GAPS (\u201cwhat\u2019s missing?\u201d) preflight \u2014 integrated deliverable"
+  },
+  {
+    "line": 15056,
+    "text": "I prepared a clean, drop-in integration pack that runs before planning to compute missing shells/W5H, estimate n-level, tag required expertise, and suggest subsystems. It also emits half-bridges and a few inverse hypotheticals for bridge hunting."
+  },
+  {
+    "line": 15095,
+    "text": "\u279c Adaptation: parameterize SNAPs by context beacons (W5H + rules/komi), and treat \u201cbest\u201d as a distribution (policy) with confidence. GAPS preflight can flag missing context (e.g., superko regime unknown \u2192 half-bridge: \u201cset ruleset\u201d)."
+  },
+  {
+    "line": 15120,
+    "text": "GAPS preflight: flags missing rule info or weak W5H (e.g., \u201cwhere\u201d = low \u2192 board region unknown; inject local scans)."
+  },
+  {
+    "line": 15176,
+    "text": "GAPS now runs before planning on every task to surface \u201cwhat is missing\u201d, recommend systems, and generate half-bridges + inverse hypotheticals for immediate bridge/inverse exploration."
+  },
+  {
+    "line": 15220,
+    "text": "Every task now gets a \u201cwhat\u2019s missing?\u201d assessment (n-level estimate, W5H gaps, required expertise, recommended subsystems) stitched as a SNAP and summarized for reports."
+  },
+  {
+    "line": 15240,
+    "text": "Demo \u2014 Summary (v0.30.17): per-scenario preflight summary (n_est, missing count, recommended systems/expertise, SNAP id)."
+  },
+  {
+    "line": 15242,
+    "text": "Demo \u2014 Bridge Candidates (v0.30.17): top bridge targets per missing dimension and Universe."
+  },
+  {
+    "line": 15268,
+    "text": "\u201cWhat is missing in any way\u201d Universe \u2192 GAPS now runs automatically, tells us what we lack, and emits half-bridges + hypotheticals to widen search."
+  },
+  {
+    "line": 15399,
+    "text": "Otherwise bumps decay (for later culling or recheck)."
+  },
+  {
+    "line": 15418,
+    "text": "GAPS preflight for each scenario (n_est, missing dims, recommended systems, expertise, SNAP id)."
+  },
+  {
+    "line": 15421,
+    "text": "Ranked half-bridges by Universe and missing dimension."
+  },
+  {
+    "line": 15447,
+    "text": "Staging is no longer a sink; FS2 promotes when wins are shown, otherwise the item decays toward culling or later recheck."
+  },
+  {
+    "line": 15618,
+    "text": "Landed across v0.30.17: repo structure, SNAP scaffolding, GAPS preflight, W5H-driven gap finding, staging queue, basic reporting."
+  },
+  {
+    "line": 15627,
+    "text": "Later stages (NOT STARTED)"
+  },
+  {
+    "line": 15695,
+    "text": "These validate the \u201cproper plotting + context intake\u201d path end-to-end (simple heuristics for now; wired to be replaced by our SNAP-aware parser later)."
+  },
+  {
+    "line": 15721,
+    "text": "Add a doc-intake \u201clattice projection\u201d table that will later map to E8 coordinates."
+  },
+  {
+    "line": 15813,
+    "text": "What\u2019s missing to call it \u201cfull MDHG\u201d"
+  },
+  {
+    "line": 15890,
+    "text": "Lengths: first run 6073, later runs drifted in the ~6184 \u2192 6211 range (no improvement)."
+  },
+  {
+    "line": 16024,
+    "text": "Golden-ratio bridge placement: \u03c6-weighted selection when multiple k=6 are available; de-prefer patterns known to induce later low-k stalls (per SFBB Appendix)."
+  },
+  {
+    "line": 16595,
+    "text": "Tune the negative-threshold per context density (dynamic: more forgiving early, stricter later)."
+  },
+  {
+    "line": 16705,
+    "text": "Tighten negative-cache thresholds dynamically (lenient early, strict later)."
+  },
+  {
+    "line": 16760,
+    "text": "Dynamic neg-thresholds: lenient early steps, stricter later (reduces false negatives while keeping pruning strong)."
+  },
+  {
+    "line": 16784,
+    "text": "Dynamic negative thresholds: early steps lenient, late steps strict (linear schedule). Cuts false negatives up front; clamps junk later."
+  },
+  {
+    "line": 16967,
+    "text": "Coverage %, total added length, lower-bound gap (matching-based), symmetry signature."
+  },
+  {
+    "line": 17311,
+    "text": "S as the cost. Your \u201cwhat\u2019s-missing\u201d universe supplies the heuristic (unresolved shells = lower bound)."
+  },
+  {
+    "line": 17381,
+    "text": "Most value: candidate ordering, AGRM control, and SNAP pipeline planning with A*-style search and a small admissible heuristic from the \u201cwhat\u2019s-missing\u201d universe."
+  },
+  {
+    "line": 17425,
+    "text": "Improves strict search later (turns near-miss structure into step hints, neg patterns, or constraints)."
+  },
+  {
+    "line": 17441,
+    "text": "Bridge potential (raises mutual information between two universe views, or resolves a missing shell)."
+  },
+  {
+    "line": 17468,
+    "text": "In this environment we may time-box. You want to bank progress (partial solve segments) and later finish to perfect without starting over."
+  }
+]

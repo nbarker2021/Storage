@@ -1,0 +1,89 @@
+[
+  {
+    "cluster": 0,
+    "aggregates": {
+      "I": 0.6844862824507778,
+      "C": 1.0,
+      "P": 0.6936012618917032,
+      "S": 1.0,
+      "lag2": -0.2069255985764565,
+      "lag3": -0.0012626669457331,
+      "rigid_mean": 0.2009819662130585,
+      "hydro_std": 0.4892524948304474
+    },
+    "thresholds": {
+      "I": 0.6,
+      "C": 0.6,
+      "P": 0.6,
+      "S": 0.6
+    },
+    "parity_votes": null,
+    "members": 56,
+    "passes": {
+      "Integrity": true,
+      "Compatibility": true,
+      "Plausibility": true,
+      "Safety": true
+    },
+    "commit_bits": "1110",
+    "top_match": "coil_like"
+  },
+  {
+    "cluster": 1,
+    "aggregates": {
+      "I": 0.6893224463248898,
+      "C": 1.0,
+      "P": 0.700401870538425,
+      "S": 1.0,
+      "lag2": 0.0557005452055497,
+      "lag3": -0.1016545172675014,
+      "rigid_mean": 0.1765060709598524,
+      "hydro_std": 0.4847934078120299
+    },
+    "thresholds": {
+      "I": 0.6,
+      "C": 0.6,
+      "P": 0.6,
+      "S": 0.6
+    },
+    "parity_votes": null,
+    "members": 70,
+    "passes": {
+      "Integrity": true,
+      "Compatibility": true,
+      "Plausibility": true,
+      "Safety": true
+    },
+    "commit_bits": "1111",
+    "top_match": "coil_like"
+  },
+  {
+    "cluster": 2,
+    "aggregates": {
+      "I": 0.7692860208710806,
+      "C": 1.0,
+      "P": 0.676696429291585,
+      "S": 0.3529404851204158,
+      "lag2": -0.069444662920406,
+      "lag3": -0.0367488986681187,
+      "rigid_mean": 0.2117986396533109,
+      "hydro_std": 0.3513334565790417
+    },
+    "thresholds": {
+      "I": 0.6,
+      "C": 0.6,
+      "P": 0.6,
+      "S": 0.6
+    },
+    "parity_votes": null,
+    "members": 34,
+    "passes": {
+      "Integrity": true,
+      "Compatibility": true,
+      "Plausibility": true,
+      "Safety": false
+    },
+    "commit_bits": "1110",
+    "top_match": "coil_like"
+  }
+]

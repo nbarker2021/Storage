@@ -1,0 +1,153 @@
+{
+  "generated": "2025-10-18 22:48:57 UTC",
+  "manifests": {
+    "E8x4_Parity_32D": {
+      "description": "Four E8 parity blocks (Leech/A/D/E) each paired with its mirror; forward & reverse words inverse up to conjugacy.",
+      "acceptance_tests": [
+        "P1",
+        "P2",
+        "P3",
+        "P8"
+      ],
+      "resolution_priority": [
+        "Leech",
+        "E-hybrid",
+        "A",
+        "D",
+        "Mirror"
+      ],
+      "notes": "Use as 32D stable workspace; lowest dispersion on Leech."
+    },
+    "KQPL_192D": {
+      "description": "Klein-Quad Parity Lattice: mirrored 96D halves; four Klein routes \u00d7 two halves = eight channels around an E8 spine.",
+      "acceptance_tests": [
+        "P1",
+        "P2",
+        "P3",
+        "P7",
+        "P11"
+      ],
+      "ecc_layers": [
+        "bit64",
+        "family",
+        "half",
+        "triad96",
+        "parity192"
+      ],
+      "notes": "Unilaterally binary; any E8 insertion self-solves or is rejected with receipts."
+    },
+    "Wrapper_384D_14plus2": {
+      "description": "Meta-shell with 14 Weyl/Monster-aligned portals + 2 solve rails (forward/back).",
+      "acceptance_tests": [
+        "P1",
+        "P2",
+        "P3",
+        "P13",
+        "P14"
+      ],
+      "portals": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "P7",
+        "P8",
+        "P9",
+        "P10",
+        "P11",
+        "P12",
+        "P13",
+        "P14"
+      ],
+      "notes": "Portals commute with parity-torus; \u0394\u03c6 monotone under portal use."
+    }
+  },
+  "portal_invariants": [
+    {
+      "id": "P1",
+      "name": "Parity-Torus Closure",
+      "statement": "Every lawful move must close a 6-segment LR \u03c0/4 torus loop before commit.",
+      "evidence": "Observed closure across all scales; \u0394\u03c6_cycle\u22640 with receipts."
+    },
+    {
+      "id": "P2",
+      "name": "\u0394\u03c6 Monotonicity",
+      "statement": "Potential functional \u0394\u03c6 must be non-increasing along any accepted route, including reflections.",
+      "evidence": "Governance (Weyl) snap-backs never raise \u0394\u03c6."
+    },
+    {
+      "id": "P3",
+      "name": "Anchor Identity",
+      "statement": "Forward/mirror executions preserve anchor hashes at closure.",
+      "evidence": "Leech rails show minimal dispersion; mirrors match hashes."
+    },
+    {
+      "id": "P4",
+      "name": "Residuals-as-Programs",
+      "statement": "Remainders encode the next legal route as a reduced word; no heuristic choices required.",
+      "evidence": "Stubborn items close after E8 straightening with minimal programs."
+    },
+    {
+      "id": "P5",
+      "name": "Two-Rail Lawfulness",
+      "statement": "Solve rail and governance rail are co-equal; both must be receipts-legal per step.",
+      "evidence": "Negative rails logged; closures require both rails consistent."
+    },
+    {
+      "id": "P6",
+      "name": "Compactification Cone",
+      "statement": "Moves leaving the lawful cone (\u03a0, BW32) are reflected into the dominant chamber.",
+      "evidence": "All excursions corrected by snap-back; no illegal commits recorded."
+    },
+    {
+      "id": "P7",
+      "name": "Least-Action Selection",
+      "statement": "Among routes with identical receipts, choose the shortest legal word.",
+      "evidence": "E-hybrid channels often chosen when words shorten without \u0394\u03c6 increase."
+    },
+    {
+      "id": "P8",
+      "name": "Family Orthogonality",
+      "statement": "Leech, A, D, E channels act as orthogonal rails; cross-family detours must not raise \u0394\u03c6.",
+      "evidence": "Cross-family closures keep \u0394\u03c6 stable; Leech dispersion lowest."
+    },
+    {
+      "id": "P9",
+      "name": "64-Bit ECC Locality",
+      "statement": "Single-site contradictions are repaired at the 64-bit tile before escalation.",
+      "evidence": "Row/column and cross-family parity fix most faults locally."
+    },
+    {
+      "id": "P10",
+      "name": "10-Segment Composite",
+      "statement": "64D layer closes uniquely via 6 (torus) + 4 (mirror) segments.",
+      "evidence": "No alternate composite preserves both \u0394\u03c6 and anchor identity."
+    },
+    {
+      "id": "P11",
+      "name": "Klein Wave Pre-Solve",
+      "statement": "Non-orientable wave routes may pre-stamp anchors at lower \u0394\u03c6 prior to visible interaction.",
+      "evidence": "96D triads show provisional anchors that match final closures."
+    },
+    {
+      "id": "P12",
+      "name": "Octave Palindrome",
+      "statement": "16D bodies are palindromic; forward/mirror rails glue at a central fixed point.",
+      "evidence": "4096-term octaves preserve identity; palindromic receipts recorded."
+    },
+    {
+      "id": "P13",
+      "name": "Portal Commutativity",
+      "statement": "Any successful portal sequence has a mirrored twin with identical \u0394\u03c6_cycle and anchor hash.",
+      "evidence": "14-DOF wrapper sequences pairwise agree under mirroring."
+    },
+    {
+      "id": "P14",
+      "name": "E8 Autogenesis",
+      "statement": "Any lawful expansion that preserves receipts decomposes into products of E8 rails.",
+      "evidence": "32/48/64/96/192/384/~8192D layers factor through E8 channels."
+    }
+  ]
+}

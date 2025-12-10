@@ -1,0 +1,1061 @@
+{
+  "phi_opt_deg": 44.34417106558553,
+  "overlays": [
+    {
+      "payload": "P01",
+      "nodes": {
+        "staging": {
+          "anomalies": {
+            "launch_slip_days": {
+              "recipe": [
+                "Hold at cislunar staging; wait for next phase cap (|phase\u2212\u03c6_opt|\u22642\u00b0).",
+                "Commit {4} TMI at that cap; resequence manifest if necessary."
+              ],
+              "helper_next_cap_day_from_planned": 680
+            },
+            "phase_miss_deg": {
+              "recipe": [
+                "If \u22644\u00b0, commit at next cap; else add <=2 micro {2} trims pre-TMI, then commit."
+              ]
+            }
+          }
+        },
+        "cruise": {
+          "anomalies": {
+            "underburn_TMI_percent": {
+              "recipe": [
+                "At ~30% and ~70% of tT, apply {2} trims to recover \u0394v deficit; escalate to {4} if >40 m/s total."
+              ]
+            },
+            "overburn_TMI_percent": {
+              "recipe": [
+                "Apply retro {2} trims at next cap; if overshoot >5%, single {4} braking correction."
+              ]
+            },
+            "cruise_perturbation_dv_km_s": {
+              "recipe": [
+                "Three-cap sequence: along-track, cross-track, along-track; \u226420 m/s each."
+              ]
+            }
+          }
+        },
+        "arrival": {
+          "anomalies": {
+            "underburn_MOI_percent": {
+              "recipe": [
+                "If captured: {4} circularize next periapsis; if not: two-pass capture with periapsis {4} burns."
+              ]
+            },
+            "overburn_MOI_percent": {
+              "recipe": [
+                "Raise periapsis via {2}; stabilize with {8}; finalize with small {4}."
+              ]
+            }
+          }
+        }
+      },
+      "correction_windows": {
+        "midcourse_days_since_TMI": [
+          78,
+          181
+        ]
+      },
+      "policies": {
+        "legal_moves": "{2}\u2192{4}\u2192{8} (tie)",
+        "cap_only": true,
+        "phase_window_deg": 2.0,
+        "micro_trim_cap_km_s_per_cap": 0.02
+      }
+    },
+    {
+      "payload": "P02",
+      "nodes": {
+        "staging": {
+          "anomalies": {
+            "launch_slip_days": {
+              "recipe": [
+                "Hold at cislunar staging; wait for next phase cap (|phase\u2212\u03c6_opt|\u22642\u00b0).",
+                "Commit {4} TMI at that cap; resequence manifest if necessary."
+              ],
+              "helper_next_cap_day_from_planned": 680
+            },
+            "phase_miss_deg": {
+              "recipe": [
+                "If \u22644\u00b0, commit at next cap; else add <=2 micro {2} trims pre-TMI, then commit."
+              ]
+            }
+          }
+        },
+        "cruise": {
+          "anomalies": {
+            "underburn_TMI_percent": {
+              "recipe": [
+                "At ~30% and ~70% of tT, apply {2} trims to recover \u0394v deficit; escalate to {4} if >40 m/s total."
+              ]
+            },
+            "overburn_TMI_percent": {
+              "recipe": [
+                "Apply retro {2} trims at next cap; if overshoot >5%, single {4} braking correction."
+              ]
+            },
+            "cruise_perturbation_dv_km_s": {
+              "recipe": [
+                "Three-cap sequence: along-track, cross-track, along-track; \u226420 m/s each."
+              ]
+            }
+          }
+        },
+        "arrival": {
+          "anomalies": {
+            "underburn_MOI_percent": {
+              "recipe": [
+                "If captured: {4} circularize next periapsis; if not: two-pass capture with periapsis {4} burns."
+              ]
+            },
+            "overburn_MOI_percent": {
+              "recipe": [
+                "Raise periapsis via {2}; stabilize with {8}; finalize with small {4}."
+              ]
+            }
+          }
+        }
+      },
+      "correction_windows": {
+        "midcourse_days_since_TMI": [
+          78,
+          181
+        ]
+      },
+      "policies": {
+        "legal_moves": "{2}\u2192{4}\u2192{8} (tie)",
+        "cap_only": true,
+        "phase_window_deg": 2.0,
+        "micro_trim_cap_km_s_per_cap": 0.02
+      }
+    },
+    {
+      "payload": "P03",
+      "nodes": {
+        "staging": {
+          "anomalies": {
+            "launch_slip_days": {
+              "recipe": [
+                "Hold at cislunar staging; wait for next phase cap (|phase\u2212\u03c6_opt|\u22642\u00b0).",
+                "Commit {4} TMI at that cap; resequence manifest if necessary."
+              ],
+              "helper_next_cap_day_from_planned": 680
+            },
+            "phase_miss_deg": {
+              "recipe": [
+                "If \u22644\u00b0, commit at next cap; else add <=2 micro {2} trims pre-TMI, then commit."
+              ]
+            }
+          }
+        },
+        "cruise": {
+          "anomalies": {
+            "underburn_TMI_percent": {
+              "recipe": [
+                "At ~30% and ~70% of tT, apply {2} trims to recover \u0394v deficit; escalate to {4} if >40 m/s total."
+              ]
+            },
+            "overburn_TMI_percent": {
+              "recipe": [
+                "Apply retro {2} trims at next cap; if overshoot >5%, single {4} braking correction."
+              ]
+            },
+            "cruise_perturbation_dv_km_s": {
+              "recipe": [
+                "Three-cap sequence: along-track, cross-track, along-track; \u226420 m/s each."
+              ]
+            }
+          }
+        },
+        "arrival": {
+          "anomalies": {
+            "underburn_MOI_percent": {
+              "recipe": [
+                "If captured: {4} circularize next periapsis; if not: two-pass capture with periapsis {4} burns."
+              ]
+            },
+            "overburn_MOI_percent": {
+              "recipe": [
+                "Raise periapsis via {2}; stabilize with {8}; finalize with small {4}."
+              ]
+            }
+          }
+        }
+      },
+      "correction_windows": {
+        "midcourse_days_since_TMI": [
+          78,
+          181
+        ]
+      },
+      "policies": {
+        "legal_moves": "{2}\u2192{4}\u2192{8} (tie)",
+        "cap_only": true,
+        "phase_window_deg": 2.0,
+        "micro_trim_cap_km_s_per_cap": 0.02
+      }
+    },
+    {
+      "payload": "P04",
+      "nodes": {
+        "staging": {
+          "anomalies": {
+            "launch_slip_days": {
+              "recipe": [
+                "Hold at cislunar staging; wait for next phase cap (|phase\u2212\u03c6_opt|\u22642\u00b0).",
+                "Commit {4} TMI at that cap; resequence manifest if necessary."
+              ],
+              "helper_next_cap_day_from_planned": 680
+            },
+            "phase_miss_deg": {
+              "recipe": [
+                "If \u22644\u00b0, commit at next cap; else add <=2 micro {2} trims pre-TMI, then commit."
+              ]
+            }
+          }
+        },
+        "cruise": {
+          "anomalies": {
+            "underburn_TMI_percent": {
+              "recipe": [
+                "At ~30% and ~70% of tT, apply {2} trims to recover \u0394v deficit; escalate to {4} if >40 m/s total."
+              ]
+            },
+            "overburn_TMI_percent": {
+              "recipe": [
+                "Apply retro {2} trims at next cap; if overshoot >5%, single {4} braking correction."
+              ]
+            },
+            "cruise_perturbation_dv_km_s": {
+              "recipe": [
+                "Three-cap sequence: along-track, cross-track, along-track; \u226420 m/s each."
+              ]
+            }
+          }
+        },
+        "arrival": {
+          "anomalies": {
+            "underburn_MOI_percent": {
+              "recipe": [
+                "If captured: {4} circularize next periapsis; if not: two-pass capture with periapsis {4} burns."
+              ]
+            },
+            "overburn_MOI_percent": {
+              "recipe": [
+                "Raise periapsis via {2}; stabilize with {8}; finalize with small {4}."
+              ]
+            }
+          }
+        }
+      },
+      "correction_windows": {
+        "midcourse_days_since_TMI": [
+          78,
+          181
+        ]
+      },
+      "policies": {
+        "legal_moves": "{2}\u2192{4}\u2192{8} (tie)",
+        "cap_only": true,
+        "phase_window_deg": 2.0,
+        "micro_trim_cap_km_s_per_cap": 0.02
+      }
+    },
+    {
+      "payload": "P05",
+      "nodes": {
+        "staging": {
+          "anomalies": {
+            "launch_slip_days": {
+              "recipe": [
+                "Hold at cislunar staging; wait for next phase cap (|phase\u2212\u03c6_opt|\u22642\u00b0).",
+                "Commit {4} TMI at that cap; resequence manifest if necessary."
+              ],
+              "helper_next_cap_day_from_planned": 680
+            },
+            "phase_miss_deg": {
+              "recipe": [
+                "If \u22644\u00b0, commit at next cap; else add <=2 micro {2} trims pre-TMI, then commit."
+              ]
+            }
+          }
+        },
+        "cruise": {
+          "anomalies": {
+            "underburn_TMI_percent": {
+              "recipe": [
+                "At ~30% and ~70% of tT, apply {2} trims to recover \u0394v deficit; escalate to {4} if >40 m/s total."
+              ]
+            },
+            "overburn_TMI_percent": {
+              "recipe": [
+                "Apply retro {2} trims at next cap; if overshoot >5%, single {4} braking correction."
+              ]
+            },
+            "cruise_perturbation_dv_km_s": {
+              "recipe": [
+                "Three-cap sequence: along-track, cross-track, along-track; \u226420 m/s each."
+              ]
+            }
+          }
+        },
+        "arrival": {
+          "anomalies": {
+            "underburn_MOI_percent": {
+              "recipe": [
+                "If captured: {4} circularize next periapsis; if not: two-pass capture with periapsis {4} burns."
+              ]
+            },
+            "overburn_MOI_percent": {
+              "recipe": [
+                "Raise periapsis via {2}; stabilize with {8}; finalize with small {4}."
+              ]
+            }
+          }
+        }
+      },
+      "correction_windows": {
+        "midcourse_days_since_TMI": [
+          78,
+          181
+        ]
+      },
+      "policies": {
+        "legal_moves": "{2}\u2192{4}\u2192{8} (tie)",
+        "cap_only": true,
+        "phase_window_deg": 2.0,
+        "micro_trim_cap_km_s_per_cap": 0.02
+      }
+    },
+    {
+      "payload": "P06",
+      "nodes": {
+        "staging": {
+          "anomalies": {
+            "launch_slip_days": {
+              "recipe": [
+                "Hold at cislunar staging; wait for next phase cap (|phase\u2212\u03c6_opt|\u22642\u00b0).",
+                "Commit {4} TMI at that cap; resequence manifest if necessary."
+              ],
+              "helper_next_cap_day_from_planned": 680
+            },
+            "phase_miss_deg": {
+              "recipe": [
+                "If \u22644\u00b0, commit at next cap; else add <=2 micro {2} trims pre-TMI, then commit."
+              ]
+            }
+          }
+        },
+        "cruise": {
+          "anomalies": {
+            "underburn_TMI_percent": {
+              "recipe": [
+                "At ~30% and ~70% of tT, apply {2} trims to recover \u0394v deficit; escalate to {4} if >40 m/s total."
+              ]
+            },
+            "overburn_TMI_percent": {
+              "recipe": [
+                "Apply retro {2} trims at next cap; if overshoot >5%, single {4} braking correction."
+              ]
+            },
+            "cruise_perturbation_dv_km_s": {
+              "recipe": [
+                "Three-cap sequence: along-track, cross-track, along-track; \u226420 m/s each."
+              ]
+            }
+          }
+        },
+        "arrival": {
+          "anomalies": {
+            "underburn_MOI_percent": {
+              "recipe": [
+                "If captured: {4} circularize next periapsis; if not: two-pass capture with periapsis {4} burns."
+              ]
+            },
+            "overburn_MOI_percent": {
+              "recipe": [
+                "Raise periapsis via {2}; stabilize with {8}; finalize with small {4}."
+              ]
+            }
+          }
+        }
+      },
+      "correction_windows": {
+        "midcourse_days_since_TMI": [
+          78,
+          181
+        ]
+      },
+      "policies": {
+        "legal_moves": "{2}\u2192{4}\u2192{8} (tie)",
+        "cap_only": true,
+        "phase_window_deg": 2.0,
+        "micro_trim_cap_km_s_per_cap": 0.02
+      }
+    },
+    {
+      "payload": "P07",
+      "nodes": {
+        "staging": {
+          "anomalies": {
+            "launch_slip_days": {
+              "recipe": [
+                "Hold at cislunar staging; wait for next phase cap (|phase\u2212\u03c6_opt|\u22642\u00b0).",
+                "Commit {4} TMI at that cap; resequence manifest if necessary."
+              ],
+              "helper_next_cap_day_from_planned": 680
+            },
+            "phase_miss_deg": {
+              "recipe": [
+                "If \u22644\u00b0, commit at next cap; else add <=2 micro {2} trims pre-TMI, then commit."
+              ]
+            }
+          }
+        },
+        "cruise": {
+          "anomalies": {
+            "underburn_TMI_percent": {
+              "recipe": [
+                "At ~30% and ~70% of tT, apply {2} trims to recover \u0394v deficit; escalate to {4} if >40 m/s total."
+              ]
+            },
+            "overburn_TMI_percent": {
+              "recipe": [
+                "Apply retro {2} trims at next cap; if overshoot >5%, single {4} braking correction."
+              ]
+            },
+            "cruise_perturbation_dv_km_s": {
+              "recipe": [
+                "Three-cap sequence: along-track, cross-track, along-track; \u226420 m/s each."
+              ]
+            }
+          }
+        },
+        "arrival": {
+          "anomalies": {
+            "underburn_MOI_percent": {
+              "recipe": [
+                "If captured: {4} circularize next periapsis; if not: two-pass capture with periapsis {4} burns."
+              ]
+            },
+            "overburn_MOI_percent": {
+              "recipe": [
+                "Raise periapsis via {2}; stabilize with {8}; finalize with small {4}."
+              ]
+            }
+          }
+        }
+      },
+      "correction_windows": {
+        "midcourse_days_since_TMI": [
+          78,
+          181
+        ]
+      },
+      "policies": {
+        "legal_moves": "{2}\u2192{4}\u2192{8} (tie)",
+        "cap_only": true,
+        "phase_window_deg": 2.0,
+        "micro_trim_cap_km_s_per_cap": 0.02
+      }
+    },
+    {
+      "payload": "P08",
+      "nodes": {
+        "staging": {
+          "anomalies": {
+            "launch_slip_days": {
+              "recipe": [
+                "Hold at cislunar staging; wait for next phase cap (|phase\u2212\u03c6_opt|\u22642\u00b0).",
+                "Commit {4} TMI at that cap; resequence manifest if necessary."
+              ],
+              "helper_next_cap_day_from_planned": 680
+            },
+            "phase_miss_deg": {
+              "recipe": [
+                "If \u22644\u00b0, commit at next cap; else add <=2 micro {2} trims pre-TMI, then commit."
+              ]
+            }
+          }
+        },
+        "cruise": {
+          "anomalies": {
+            "underburn_TMI_percent": {
+              "recipe": [
+                "At ~30% and ~70% of tT, apply {2} trims to recover \u0394v deficit; escalate to {4} if >40 m/s total."
+              ]
+            },
+            "overburn_TMI_percent": {
+              "recipe": [
+                "Apply retro {2} trims at next cap; if overshoot >5%, single {4} braking correction."
+              ]
+            },
+            "cruise_perturbation_dv_km_s": {
+              "recipe": [
+                "Three-cap sequence: along-track, cross-track, along-track; \u226420 m/s each."
+              ]
+            }
+          }
+        },
+        "arrival": {
+          "anomalies": {
+            "underburn_MOI_percent": {
+              "recipe": [
+                "If captured: {4} circularize next periapsis; if not: two-pass capture with periapsis {4} burns."
+              ]
+            },
+            "overburn_MOI_percent": {
+              "recipe": [
+                "Raise periapsis via {2}; stabilize with {8}; finalize with small {4}."
+              ]
+            }
+          }
+        }
+      },
+      "correction_windows": {
+        "midcourse_days_since_TMI": [
+          78,
+          181
+        ]
+      },
+      "policies": {
+        "legal_moves": "{2}\u2192{4}\u2192{8} (tie)",
+        "cap_only": true,
+        "phase_window_deg": 2.0,
+        "micro_trim_cap_km_s_per_cap": 0.02
+      }
+    },
+    {
+      "payload": "P09",
+      "nodes": {
+        "staging": {
+          "anomalies": {
+            "launch_slip_days": {
+              "recipe": [
+                "Hold at cislunar staging; wait for next phase cap (|phase\u2212\u03c6_opt|\u22642\u00b0).",
+                "Commit {4} TMI at that cap; resequence manifest if necessary."
+              ],
+              "helper_next_cap_day_from_planned": 680
+            },
+            "phase_miss_deg": {
+              "recipe": [
+                "If \u22644\u00b0, commit at next cap; else add <=2 micro {2} trims pre-TMI, then commit."
+              ]
+            }
+          }
+        },
+        "cruise": {
+          "anomalies": {
+            "underburn_TMI_percent": {
+              "recipe": [
+                "At ~30% and ~70% of tT, apply {2} trims to recover \u0394v deficit; escalate to {4} if >40 m/s total."
+              ]
+            },
+            "overburn_TMI_percent": {
+              "recipe": [
+                "Apply retro {2} trims at next cap; if overshoot >5%, single {4} braking correction."
+              ]
+            },
+            "cruise_perturbation_dv_km_s": {
+              "recipe": [
+                "Three-cap sequence: along-track, cross-track, along-track; \u226420 m/s each."
+              ]
+            }
+          }
+        },
+        "arrival": {
+          "anomalies": {
+            "underburn_MOI_percent": {
+              "recipe": [
+                "If captured: {4} circularize next periapsis; if not: two-pass capture with periapsis {4} burns."
+              ]
+            },
+            "overburn_MOI_percent": {
+              "recipe": [
+                "Raise periapsis via {2}; stabilize with {8}; finalize with small {4}."
+              ]
+            }
+          }
+        }
+      },
+      "correction_windows": {
+        "midcourse_days_since_TMI": [
+          78,
+          181
+        ]
+      },
+      "policies": {
+        "legal_moves": "{2}\u2192{4}\u2192{8} (tie)",
+        "cap_only": true,
+        "phase_window_deg": 2.0,
+        "micro_trim_cap_km_s_per_cap": 0.02
+      }
+    },
+    {
+      "payload": "P10",
+      "nodes": {
+        "staging": {
+          "anomalies": {
+            "launch_slip_days": {
+              "recipe": [
+                "Hold at cislunar staging; wait for next phase cap (|phase\u2212\u03c6_opt|\u22642\u00b0).",
+                "Commit {4} TMI at that cap; resequence manifest if necessary."
+              ],
+              "helper_next_cap_day_from_planned": 680
+            },
+            "phase_miss_deg": {
+              "recipe": [
+                "If \u22644\u00b0, commit at next cap; else add <=2 micro {2} trims pre-TMI, then commit."
+              ]
+            }
+          }
+        },
+        "cruise": {
+          "anomalies": {
+            "underburn_TMI_percent": {
+              "recipe": [
+                "At ~30% and ~70% of tT, apply {2} trims to recover \u0394v deficit; escalate to {4} if >40 m/s total."
+              ]
+            },
+            "overburn_TMI_percent": {
+              "recipe": [
+                "Apply retro {2} trims at next cap; if overshoot >5%, single {4} braking correction."
+              ]
+            },
+            "cruise_perturbation_dv_km_s": {
+              "recipe": [
+                "Three-cap sequence: along-track, cross-track, along-track; \u226420 m/s each."
+              ]
+            }
+          }
+        },
+        "arrival": {
+          "anomalies": {
+            "underburn_MOI_percent": {
+              "recipe": [
+                "If captured: {4} circularize next periapsis; if not: two-pass capture with periapsis {4} burns."
+              ]
+            },
+            "overburn_MOI_percent": {
+              "recipe": [
+                "Raise periapsis via {2}; stabilize with {8}; finalize with small {4}."
+              ]
+            }
+          }
+        }
+      },
+      "correction_windows": {
+        "midcourse_days_since_TMI": [
+          78,
+          181
+        ]
+      },
+      "policies": {
+        "legal_moves": "{2}\u2192{4}\u2192{8} (tie)",
+        "cap_only": true,
+        "phase_window_deg": 2.0,
+        "micro_trim_cap_km_s_per_cap": 0.02
+      }
+    },
+    {
+      "payload": "P11",
+      "nodes": {
+        "staging": {
+          "anomalies": {
+            "launch_slip_days": {
+              "recipe": [
+                "Hold at cislunar staging; wait for next phase cap (|phase\u2212\u03c6_opt|\u22642\u00b0).",
+                "Commit {4} TMI at that cap; resequence manifest if necessary."
+              ],
+              "helper_next_cap_day_from_planned": 680
+            },
+            "phase_miss_deg": {
+              "recipe": [
+                "If \u22644\u00b0, commit at next cap; else add <=2 micro {2} trims pre-TMI, then commit."
+              ]
+            }
+          }
+        },
+        "cruise": {
+          "anomalies": {
+            "underburn_TMI_percent": {
+              "recipe": [
+                "At ~30% and ~70% of tT, apply {2} trims to recover \u0394v deficit; escalate to {4} if >40 m/s total."
+              ]
+            },
+            "overburn_TMI_percent": {
+              "recipe": [
+                "Apply retro {2} trims at next cap; if overshoot >5%, single {4} braking correction."
+              ]
+            },
+            "cruise_perturbation_dv_km_s": {
+              "recipe": [
+                "Three-cap sequence: along-track, cross-track, along-track; \u226420 m/s each."
+              ]
+            }
+          }
+        },
+        "arrival": {
+          "anomalies": {
+            "underburn_MOI_percent": {
+              "recipe": [
+                "If captured: {4} circularize next periapsis; if not: two-pass capture with periapsis {4} burns."
+              ]
+            },
+            "overburn_MOI_percent": {
+              "recipe": [
+                "Raise periapsis via {2}; stabilize with {8}; finalize with small {4}."
+              ]
+            }
+          }
+        }
+      },
+      "correction_windows": {
+        "midcourse_days_since_TMI": [
+          78,
+          181
+        ]
+      },
+      "policies": {
+        "legal_moves": "{2}\u2192{4}\u2192{8} (tie)",
+        "cap_only": true,
+        "phase_window_deg": 2.0,
+        "micro_trim_cap_km_s_per_cap": 0.02
+      }
+    },
+    {
+      "payload": "P12",
+      "nodes": {
+        "staging": {
+          "anomalies": {
+            "launch_slip_days": {
+              "recipe": [
+                "Hold at cislunar staging; wait for next phase cap (|phase\u2212\u03c6_opt|\u22642\u00b0).",
+                "Commit {4} TMI at that cap; resequence manifest if necessary."
+              ],
+              "helper_next_cap_day_from_planned": 680
+            },
+            "phase_miss_deg": {
+              "recipe": [
+                "If \u22644\u00b0, commit at next cap; else add <=2 micro {2} trims pre-TMI, then commit."
+              ]
+            }
+          }
+        },
+        "cruise": {
+          "anomalies": {
+            "underburn_TMI_percent": {
+              "recipe": [
+                "At ~30% and ~70% of tT, apply {2} trims to recover \u0394v deficit; escalate to {4} if >40 m/s total."
+              ]
+            },
+            "overburn_TMI_percent": {
+              "recipe": [
+                "Apply retro {2} trims at next cap; if overshoot >5%, single {4} braking correction."
+              ]
+            },
+            "cruise_perturbation_dv_km_s": {
+              "recipe": [
+                "Three-cap sequence: along-track, cross-track, along-track; \u226420 m/s each."
+              ]
+            }
+          }
+        },
+        "arrival": {
+          "anomalies": {
+            "underburn_MOI_percent": {
+              "recipe": [
+                "If captured: {4} circularize next periapsis; if not: two-pass capture with periapsis {4} burns."
+              ]
+            },
+            "overburn_MOI_percent": {
+              "recipe": [
+                "Raise periapsis via {2}; stabilize with {8}; finalize with small {4}."
+              ]
+            }
+          }
+        }
+      },
+      "correction_windows": {
+        "midcourse_days_since_TMI": [
+          78,
+          181
+        ]
+      },
+      "policies": {
+        "legal_moves": "{2}\u2192{4}\u2192{8} (tie)",
+        "cap_only": true,
+        "phase_window_deg": 2.0,
+        "micro_trim_cap_km_s_per_cap": 0.02
+      }
+    },
+    {
+      "payload": "P13",
+      "nodes": {
+        "staging": {
+          "anomalies": {
+            "launch_slip_days": {
+              "recipe": [
+                "Hold at cislunar staging; wait for next phase cap (|phase\u2212\u03c6_opt|\u22642\u00b0).",
+                "Commit {4} TMI at that cap; resequence manifest if necessary."
+              ],
+              "helper_next_cap_day_from_planned": 680
+            },
+            "phase_miss_deg": {
+              "recipe": [
+                "If \u22644\u00b0, commit at next cap; else add <=2 micro {2} trims pre-TMI, then commit."
+              ]
+            }
+          }
+        },
+        "cruise": {
+          "anomalies": {
+            "underburn_TMI_percent": {
+              "recipe": [
+                "At ~30% and ~70% of tT, apply {2} trims to recover \u0394v deficit; escalate to {4} if >40 m/s total."
+              ]
+            },
+            "overburn_TMI_percent": {
+              "recipe": [
+                "Apply retro {2} trims at next cap; if overshoot >5%, single {4} braking correction."
+              ]
+            },
+            "cruise_perturbation_dv_km_s": {
+              "recipe": [
+                "Three-cap sequence: along-track, cross-track, along-track; \u226420 m/s each."
+              ]
+            }
+          }
+        },
+        "arrival": {
+          "anomalies": {
+            "underburn_MOI_percent": {
+              "recipe": [
+                "If captured: {4} circularize next periapsis; if not: two-pass capture with periapsis {4} burns."
+              ]
+            },
+            "overburn_MOI_percent": {
+              "recipe": [
+                "Raise periapsis via {2}; stabilize with {8}; finalize with small {4}."
+              ]
+            }
+          }
+        }
+      },
+      "correction_windows": {
+        "midcourse_days_since_TMI": [
+          78,
+          181
+        ]
+      },
+      "policies": {
+        "legal_moves": "{2}\u2192{4}\u2192{8} (tie)",
+        "cap_only": true,
+        "phase_window_deg": 2.0,
+        "micro_trim_cap_km_s_per_cap": 0.02
+      }
+    },
+    {
+      "payload": "P14",
+      "nodes": {
+        "staging": {
+          "anomalies": {
+            "launch_slip_days": {
+              "recipe": [
+                "Hold at cislunar staging; wait for next phase cap (|phase\u2212\u03c6_opt|\u22642\u00b0).",
+                "Commit {4} TMI at that cap; resequence manifest if necessary."
+              ],
+              "helper_next_cap_day_from_planned": 680
+            },
+            "phase_miss_deg": {
+              "recipe": [
+                "If \u22644\u00b0, commit at next cap; else add <=2 micro {2} trims pre-TMI, then commit."
+              ]
+            }
+          }
+        },
+        "cruise": {
+          "anomalies": {
+            "underburn_TMI_percent": {
+              "recipe": [
+                "At ~30% and ~70% of tT, apply {2} trims to recover \u0394v deficit; escalate to {4} if >40 m/s total."
+              ]
+            },
+            "overburn_TMI_percent": {
+              "recipe": [
+                "Apply retro {2} trims at next cap; if overshoot >5%, single {4} braking correction."
+              ]
+            },
+            "cruise_perturbation_dv_km_s": {
+              "recipe": [
+                "Three-cap sequence: along-track, cross-track, along-track; \u226420 m/s each."
+              ]
+            }
+          }
+        },
+        "arrival": {
+          "anomalies": {
+            "underburn_MOI_percent": {
+              "recipe": [
+                "If captured: {4} circularize next periapsis; if not: two-pass capture with periapsis {4} burns."
+              ]
+            },
+            "overburn_MOI_percent": {
+              "recipe": [
+                "Raise periapsis via {2}; stabilize with {8}; finalize with small {4}."
+              ]
+            }
+          }
+        }
+      },
+      "correction_windows": {
+        "midcourse_days_since_TMI": [
+          78,
+          181
+        ]
+      },
+      "policies": {
+        "legal_moves": "{2}\u2192{4}\u2192{8} (tie)",
+        "cap_only": true,
+        "phase_window_deg": 2.0,
+        "micro_trim_cap_km_s_per_cap": 0.02
+      }
+    },
+    {
+      "payload": "P15",
+      "nodes": {
+        "staging": {
+          "anomalies": {
+            "launch_slip_days": {
+              "recipe": [
+                "Hold at cislunar staging; wait for next phase cap (|phase\u2212\u03c6_opt|\u22642\u00b0).",
+                "Commit {4} TMI at that cap; resequence manifest if necessary."
+              ],
+              "helper_next_cap_day_from_planned": 680
+            },
+            "phase_miss_deg": {
+              "recipe": [
+                "If \u22644\u00b0, commit at next cap; else add <=2 micro {2} trims pre-TMI, then commit."
+              ]
+            }
+          }
+        },
+        "cruise": {
+          "anomalies": {
+            "underburn_TMI_percent": {
+              "recipe": [
+                "At ~30% and ~70% of tT, apply {2} trims to recover \u0394v deficit; escalate to {4} if >40 m/s total."
+              ]
+            },
+            "overburn_TMI_percent": {
+              "recipe": [
+                "Apply retro {2} trims at next cap; if overshoot >5%, single {4} braking correction."
+              ]
+            },
+            "cruise_perturbation_dv_km_s": {
+              "recipe": [
+                "Three-cap sequence: along-track, cross-track, along-track; \u226420 m/s each."
+              ]
+            }
+          }
+        },
+        "arrival": {
+          "anomalies": {
+            "underburn_MOI_percent": {
+              "recipe": [
+                "If captured: {4} circularize next periapsis; if not: two-pass capture with periapsis {4} burns."
+              ]
+            },
+            "overburn_MOI_percent": {
+              "recipe": [
+                "Raise periapsis via {2}; stabilize with {8}; finalize with small {4}."
+              ]
+            }
+          }
+        }
+      },
+      "correction_windows": {
+        "midcourse_days_since_TMI": [
+          78,
+          181
+        ]
+      },
+      "policies": {
+        "legal_moves": "{2}\u2192{4}\u2192{8} (tie)",
+        "cap_only": true,
+        "phase_window_deg": 2.0,
+        "micro_trim_cap_km_s_per_cap": 0.02
+      }
+    },
+    {
+      "payload": "P16",
+      "nodes": {
+        "staging": {
+          "anomalies": {
+            "launch_slip_days": {
+              "recipe": [
+                "Hold at cislunar staging; wait for next phase cap (|phase\u2212\u03c6_opt|\u22642\u00b0).",
+                "Commit {4} TMI at that cap; resequence manifest if necessary."
+              ],
+              "helper_next_cap_day_from_planned": 680
+            },
+            "phase_miss_deg": {
+              "recipe": [
+                "If \u22644\u00b0, commit at next cap; else add <=2 micro {2} trims pre-TMI, then commit."
+              ]
+            }
+          }
+        },
+        "cruise": {
+          "anomalies": {
+            "underburn_TMI_percent": {
+              "recipe": [
+                "At ~30% and ~70% of tT, apply {2} trims to recover \u0394v deficit; escalate to {4} if >40 m/s total."
+              ]
+            },
+            "overburn_TMI_percent": {
+              "recipe": [
+                "Apply retro {2} trims at next cap; if overshoot >5%, single {4} braking correction."
+              ]
+            },
+            "cruise_perturbation_dv_km_s": {
+              "recipe": [
+                "Three-cap sequence: along-track, cross-track, along-track; \u226420 m/s each."
+              ]
+            }
+          }
+        },
+        "arrival": {
+          "anomalies": {
+            "underburn_MOI_percent": {
+              "recipe": [
+                "If captured: {4} circularize next periapsis; if not: two-pass capture with periapsis {4} burns."
+              ]
+            },
+            "overburn_MOI_percent": {
+              "recipe": [
+                "Raise periapsis via {2}; stabilize with {8}; finalize with small {4}."
+              ]
+            }
+          }
+        }
+      },
+      "correction_windows": {
+        "midcourse_days_since_TMI": [
+          78,
+          181
+        ]
+      },
+      "policies": {
+        "legal_moves": "{2}\u2192{4}\u2192{8} (tie)",
+        "cap_only": true,
+        "phase_window_deg": 2.0,
+        "micro_trim_cap_km_s_per_cap": 0.02
+      }
+    }
+  ]
+}

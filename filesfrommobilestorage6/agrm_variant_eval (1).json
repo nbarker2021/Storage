@@ -1,0 +1,78 @@
+{
+  "variants": [
+    {
+      "builder": "AGRMBuilderBest",
+      "error": "matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 64 is different from 3)"
+    },
+    {
+      "builder": "AGRMBuilderV1",
+      "error": "matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 64 is different from 3)"
+    },
+    {
+      "builder": "AGRMBuilderV2",
+      "error": "name 'i' is not defined"
+    },
+    {
+      "builder": "AGRMBuilderV3",
+      "error": "matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 64 is different from 3)"
+    },
+    {
+      "builder": "AGRMBuilderV4",
+      "error": "matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 64 is different from 3)"
+    },
+    {
+      "builder": "AGRMBuilderV5",
+      "error": "matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 64 is different from 3)"
+    }
+  ],
+  "cohort_eval": {
+    "promoted": 1,
+    "shells": 3,
+    "dim": 64,
+    "decisions": {
+      "3": {
+        "coh": 0.7900276462686031,
+        "red": 0.24828736374257906,
+        "nov": 0.20997235373139683,
+        "contra": 0.0,
+        "size": 2,
+        "thresholds": {
+          "tau_coh": 0.6,
+          "tau_red": 0.92,
+          "tau_nov_min": 0.02,
+          "tau_nov_max": 0.4
+        },
+        "decision": "approve"
+      },
+      "2": {
+        "coh": 0.9999999999979998,
+        "red": 0.0,
+        "nov": 2.000177801164682e-12,
+        "contra": 0.0,
+        "size": 1,
+        "thresholds": {
+          "tau_coh": 0.6,
+          "tau_red": 0.92,
+          "tau_nov_min": 0.02,
+          "tau_nov_max": 0.4
+        },
+        "decision": "reject"
+      },
+      "0": {
+        "coh": 0.999999999998,
+        "red": 0.999999999998,
+        "nov": 1.999955756559757e-12,
+        "contra": 0.0,
+        "size": 5,
+        "thresholds": {
+          "tau_coh": 0.6,
+          "tau_red": 0.92,
+          "tau_nov_min": 0.02,
+          "tau_nov_max": 0.4
+        },
+        "decision": "reject"
+      }
+    }
+  },
+  "embedder": null
+}

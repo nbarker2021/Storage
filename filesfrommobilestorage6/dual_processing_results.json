@@ -1,0 +1,6311 @@
+{
+  "archives": [
+    {
+      "archive": "LatticeBuilder_Validator_v1",
+      "total_files": 2,
+      "processed": [
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/LatticeBuilder_Validator_v1/LatticeBuilder_Validator_v1/lattice_builder_v1.py",
+          "name": "lattice_builder_v1.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.03125,
+              0.09375,
+              0.125,
+              0.21875,
+              0.125,
+              0.125,
+              0.109375,
+              0.0625,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.078125,
+              0.0625,
+              0.078125,
+              0.03125,
+              0.03125,
+              0.109375,
+              0.046875,
+              0.03125,
+              0.015625,
+              0.0,
+              0.125,
+              0.125,
+              0.046875,
+              0.09375,
+              0.125,
+              0.078125,
+              0.0,
+              64.0,
+              74.84817967058385,
+              29.24098734966875,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "e308a7d0958b45943952befed80519f2c43acd9f8243316603e2cee1a9654df1"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/LatticeBuilder_Validator_v1/LatticeBuilder_Validator_v1/lattice_builder_v1.py",
+              "type": ".py",
+              "size": 10000,
+              "lines": 293,
+              "words": 1236,
+              "imports": [
+                "from __future__ import annotations",
+                "import json, math, argparse, sys",
+                "from typing import List, Tuple, Dict"
+              ],
+              "classes": [],
+              "functions": [
+                "mat_det",
+                "is_integral",
+                "is_even",
+                "cholesky",
+                "quad_norm",
+                "cartan_A",
+                "cartan_D",
+                "cartan_E6",
+                "cartan_E7",
+                "cartan_E8",
+                "block_diag",
+                "parse_root_spec",
+                "enumerate_short",
+                "rec",
+                "has_root",
+                "validate_properties",
+                "niemeier_check",
+                "main"
+              ],
+              "keywords": [
+                "lattice",
+                "E8",
+                "Niemeier"
+              ]
+            },
+            "receipt": "8619d0d524bd0c265164c03315204313e2ec49d85bb9d88068df878357b5a4a7"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 3,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/LatticeBuilder_Validator_v1/LatticeBuilder_Validator_v1/README.md",
+          "name": "README.md",
+          "ext": ".md",
+          "geometric": {
+            "embedding": [
+              0.046875,
+              0.0,
+              0.046875,
+              0.015625,
+              0.140625,
+              0.125,
+              0.125,
+              0.109375,
+              0.109375,
+              0.078125,
+              0.046875,
+              0.03125,
+              0.0,
+              0.03125,
+              0.046875,
+              0.046875,
+              0.046875,
+              0.015625,
+              0.046875,
+              0.046875,
+              0.0625,
+              0.125,
+              0.015625,
+              0.015625,
+              0.046875,
+              0.015625,
+              0.125,
+              0.09375,
+              0.09375,
+              0.140625,
+              0.0625,
+              0.046875,
+              64.0,
+              70.03114715800123,
+              32.76276636485093,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "bec17d6e37e404daac70b455d80ae6b5df6b1697e880faa06c32acd3fdc58f8b"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/LatticeBuilder_Validator_v1/LatticeBuilder_Validator_v1/README.md",
+              "type": ".md",
+              "size": 2112,
+              "lines": 39,
+              "words": 307,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": [],
+              "headers": [
+                "# Lattice Builder & Validator v1 (pure stdlib)",
+                "# 1) Build a Gram matrix for E8^3 and save as JSON",
+                "# 2) Validate lattice properties",
+                "# 3) Enumerate short vectors to find roots of norm 2",
+                "# 4) Niemeier check (24D)"
+              ],
+              "code_blocks": 2
+            },
+            "receipt": "ba720b8677fb2f16920ecb715c61839e93ff2d55d5deffc0518822bd9799e9ae"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        }
+      ],
+      "geometric_count": 2,
+      "semantic_count": 2,
+      "combined_count": 2
+    },
+    {
+      "archive": "GeoTokenizer_TieIn_v1",
+      "total_files": 2,
+      "processed": [
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/GeoTokenizer_TieIn_v1/GeoTokenizer_TieIn_v1/geo_tokenizer_tiein_v1.py",
+          "name": "geo_tokenizer_tiein_v1.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.0625,
+              0.109375,
+              0.09375,
+              0.21875,
+              0.171875,
+              0.15625,
+              0.078125,
+              0.015625,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.046875,
+              0.03125,
+              0.046875,
+              0.078125,
+              0.03125,
+              0.0625,
+              0.0625,
+              0.078125,
+              0.0,
+              0.0,
+              0.03125,
+              0.1875,
+              0.09375,
+              0.046875,
+              0.0625,
+              0.046875,
+              0.15625,
+              0.015625,
+              64.0,
+              77.57957261992763,
+              27.38154481664485,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "410e151f5e58c71e8c412e3c3fc5d271527022c9cd965c791dcba33f263c330e"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/GeoTokenizer_TieIn_v1/GeoTokenizer_TieIn_v1/geo_tokenizer_tiein_v1.py",
+              "type": ".py",
+              "size": 10000,
+              "lines": 273,
+              "words": 1131,
+              "imports": [
+                "from __future__ import annotations",
+                "import os, io, sys, json, math, time, zlib, struct, hashlib, argparse, random",
+                "from dataclasses import dataclass, asdict",
+                "from typing import List, Tuple, Dict, Any, Optional, Callable"
+              ],
+              "classes": [
+                "LedgerEntry:",
+                "TokLight:",
+                "GeoToken:",
+                "GeoCodec:",
+                "TokenMemory:"
+              ],
+              "functions": [
+                "_sha256_hex",
+                "__init__",
+                "log",
+                "verify",
+                "centroid",
+                "v_sub",
+                "v_add",
+                "v_norm",
+                "angle",
+                "zigzag_encode",
+                "zigzag_decode",
+                "write_varint",
+                "read_varint",
+                "__init__",
+                "_quant",
+                "_dequant",
+                "encode",
+                "decode",
+                "radial_angle_embed",
+                "cos_sim",
+                "__init__",
+                "save",
+                "learn",
+                "nearest",
+                "split_tokens",
+                "merge_tokens",
+                "refine_tokens"
+              ],
+              "keywords": [
+                "embedding"
+              ]
+            },
+            "receipt": "9a9d19557670033ac530592b130d093f7e0fed7666bcdaf774ba44c2377c08fe"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 1,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/GeoTokenizer_TieIn_v1/GeoTokenizer_TieIn_v1/README.md",
+          "name": "README.md",
+          "ext": ".md",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.0625,
+              0.03125,
+              0.125,
+              0.25,
+              0.171875,
+              0.109375,
+              0.046875,
+              0.03125,
+              0.046875,
+              0.046875,
+              0.03125,
+              0.015625,
+              0.015625,
+              0.0,
+              0.015625,
+              0.03125,
+              0.015625,
+              0.015625,
+              0.0625,
+              0.0625,
+              0.109375,
+              0.046875,
+              0.03125,
+              0.0,
+              0.0625,
+              0.125,
+              0.0625,
+              0.078125,
+              0.078125,
+              0.203125,
+              0.015625,
+              64.0,
+              77.97329176401125,
+              29.190528973942715,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "6c5aeaaf8680de6c9e5f0654639a9c3c03d2cef8f44a2f24fc450510c728843d"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/GeoTokenizer_TieIn_v1/GeoTokenizer_TieIn_v1/README.md",
+              "type": ".md",
+              "size": 1102,
+              "lines": 28,
+              "words": 125,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": [],
+              "headers": [
+                "# GeoTokenizer Tie-In v1",
+                "## Capabilities",
+                "## CLI",
+                "# encode/decode",
+                "# learn a prototype and convert later inputs",
+                "# synthesize/extend/refine/break"
+              ],
+              "code_blocks": 2
+            },
+            "receipt": "fba08f408751e5647f536bed7956d2757b30c93cad7873863804367d9e724757"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        }
+      ],
+      "geometric_count": 2,
+      "semantic_count": 2,
+      "combined_count": 2
+    },
+    {
+      "archive": "GeometryOnlyTransformer_Standalone_v2",
+      "total_files": 2,
+      "processed": [
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/GeometryOnlyTransformer_Standalone_v2/GeometryOnlyTransformer_Standalone_v2/geometry_transformer_standalone_v2.py",
+          "name": "geometry_transformer_standalone_v2.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.046875,
+              0.0625,
+              0.15625,
+              0.125,
+              0.234375,
+              0.140625,
+              0.078125,
+              0.046875,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.015625,
+              0.09375,
+              0.046875,
+              0.03125,
+              0.078125,
+              0.046875,
+              0.09375,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.203125,
+              0.09375,
+              0.078125,
+              0.046875,
+              0.046875,
+              0.15625,
+              0.046875,
+              64.0,
+              74.12547592859438,
+              28.87728271342631,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "ef90d2ede15cc82553de1ed32c0e44712135a8c9173da9146a987a25ecef8fbe"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/GeometryOnlyTransformer_Standalone_v2/GeometryOnlyTransformer_Standalone_v2/geometry_transformer_standalone_v2.py",
+              "type": ".py",
+              "size": 10000,
+              "lines": 248,
+              "words": 1068,
+              "imports": [
+                "from __future__ import annotations",
+                "import json, time, math, random, argparse, sys, hashlib, os",
+                "from dataclasses import dataclass, asdict",
+                "from typing import List, Tuple, Dict, Any, Optional, Callable"
+              ],
+              "classes": [
+                "LedgerEntry:",
+                "GeoLight:",
+                "GeoToken:",
+                "GeoAttention:",
+                "GeoTransformer:"
+              ],
+              "functions": [
+                "_sha256_hex",
+                "_now",
+                "__init__",
+                "_disk_path",
+                "compute",
+                "verify",
+                "v_add",
+                "v_sub",
+                "v_dot",
+                "v_norm",
+                "v_scale",
+                "v_rot",
+                "centroid",
+                "angle",
+                "rbf",
+                "cos_sim",
+                "__init__",
+                "forward",
+                "__init__",
+                "encode",
+                "decode_score",
+                "step"
+              ],
+              "keywords": [
+                "CQE",
+                "geometric",
+                "embedding",
+                "channel"
+              ]
+            },
+            "receipt": "87ff2d0b9a79067d67f2477251bced9e391332d23e313356a486ec706a656472"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 4,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/GeometryOnlyTransformer_Standalone_v2/GeometryOnlyTransformer_Standalone_v2/README.md",
+          "name": "README.md",
+          "ext": ".md",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.03125,
+              0.03125,
+              0.078125,
+              0.171875,
+              0.109375,
+              0.125,
+              0.171875,
+              0.03125,
+              0.015625,
+              0.046875,
+              0.0625,
+              0.0625,
+              0.0,
+              0.015625,
+              0.046875,
+              0.046875,
+              0.03125,
+              0.015625,
+              0.046875,
+              0.046875,
+              0.125,
+              0.015625,
+              0.0625,
+              0.0,
+              0.046875,
+              0.140625,
+              0.0625,
+              0.09375,
+              0.140625,
+              0.125,
+              0.0,
+              64.0,
+              68.535804468472,
+              31.13736755050992,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "f07fc5070c4d6bd1b76aa469e887ec886088f77744cf37fbe54a71ec06ada4c9"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/GeometryOnlyTransformer_Standalone_v2/GeometryOnlyTransformer_Standalone_v2/README.md",
+              "type": ".md",
+              "size": 614,
+              "lines": 16,
+              "words": 74,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": [],
+              "headers": [
+                "# Geometry-Only Transformer \u2014 Standalone v2",
+                "## Run"
+              ],
+              "code_blocks": 2
+            },
+            "receipt": "0ddd4c0b1de557f8778a60168b690761fb693a7a5d84d1d33ef097ff324f5ff4"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        }
+      ],
+      "geometric_count": 2,
+      "semantic_count": 2,
+      "combined_count": 2
+    },
+    {
+      "archive": "CoherenceSuite_v1",
+      "total_files": 7,
+      "processed": [
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/CoherenceSuite_v1/CoherenceSuite_v1/coherence_metrics.py",
+          "name": "coherence_metrics.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.03125,
+              0.140625,
+              0.125,
+              0.203125,
+              0.125,
+              0.109375,
+              0.140625,
+              0.03125,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.0625,
+              0.046875,
+              0.09375,
+              0.046875,
+              0.03125,
+              0.09375,
+              0.03125,
+              0.03125,
+              0.015625,
+              0.0,
+              0.15625,
+              0.125,
+              0.046875,
+              0.078125,
+              0.125,
+              0.046875,
+              0.03125,
+              64.0,
+              78.07410842430414,
+              28.61222460172743,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "49fb4e30fae5be54f10f4f1cbc2da570c460efaa652bc3952705b7ae21362673"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/CoherenceSuite_v1/CoherenceSuite_v1/coherence_metrics.py",
+              "type": ".py",
+              "size": 4009,
+              "lines": 104,
+              "words": 526,
+              "imports": [
+                "from __future__ import annotations",
+                "import math, json",
+                "from typing import List, Tuple, Dict, Any",
+                "import cmath"
+              ],
+              "classes": [],
+              "functions": [
+                "centroid",
+                "v_sub",
+                "v_norm",
+                "angle",
+                "angular_coherence",
+                "radial_coherence",
+                "spectral_entropy",
+                "embedding_alignment",
+                "delta_phi",
+                "composite_coherence",
+                "collapse_detector"
+              ],
+              "keywords": [
+                "embedding",
+                "Phi"
+              ]
+            },
+            "receipt": "cfd535e8c2277786ec69cf892dd458f38cdfb47602828435c1849deb430ca5fa"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 2,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/CoherenceSuite_v1/CoherenceSuite_v1/receipts_bridge.py",
+          "name": "receipts_bridge.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.046875,
+              0.140625,
+              0.109375,
+              0.171875,
+              0.171875,
+              0.15625,
+              0.078125,
+              0.046875,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.046875,
+              0.0625,
+              0.0625,
+              0.078125,
+              0.03125,
+              0.09375,
+              0.03125,
+              0.03125,
+              0.015625,
+              0.03125,
+              0.125,
+              0.125,
+              0.046875,
+              0.0625,
+              0.125,
+              0.046875,
+              0.03125,
+              64.0,
+              77.83797901129307,
+              27.807580110960586,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "6a0f172e77af808d0f6a6a4a89b2d17bc754a9380baf87e910007803124295fb"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/CoherenceSuite_v1/CoherenceSuite_v1/receipts_bridge.py",
+              "type": ".py",
+              "size": 1833,
+              "lines": 61,
+              "words": 152,
+              "imports": [
+                "import os, json",
+                "from typing import Dict, Any, List, Optional"
+              ],
+              "classes": [],
+              "functions": [
+                "read_jsonl",
+                "load_geolight",
+                "load_toklight",
+                "merge_timelines"
+              ],
+              "keywords": [
+                "receipt",
+                "lambda",
+                "channel"
+              ]
+            },
+            "receipt": "b9a93e0ffe34db5dc780c676d94871cd1e76dce25e461aa364fa94d70d69d20d"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 3,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/CoherenceSuite_v1/CoherenceSuite_v1/state_store.py",
+          "name": "state_store.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.015625,
+              0.078125,
+              0.171875,
+              0.15625,
+              0.21875,
+              0.15625,
+              0.09375,
+              0.03125,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0625,
+              0.0625,
+              0.09375,
+              0.078125,
+              0.03125,
+              0.0625,
+              0.046875,
+              0.03125,
+              0.03125,
+              0.0625,
+              0.109375,
+              0.0625,
+              0.09375,
+              0.09375,
+              0.09375,
+              0.046875,
+              0.0,
+              64.0,
+              75.28596686395564,
+              26.63992813897159,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "d84774be1452ce9d52df07161920d52f4021103442af915a67130ee930a81527"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/CoherenceSuite_v1/CoherenceSuite_v1/state_store.py",
+              "type": ".py",
+              "size": 1515,
+              "lines": 44,
+              "words": 147,
+              "imports": [
+                "import os, json, time, uuid",
+                "from typing import Dict, Any, List, Optional"
+              ],
+              "classes": [
+                "StateStore:"
+              ],
+              "functions": [
+                "__init__",
+                "_path",
+                "save",
+                "load",
+                "list"
+              ],
+              "keywords": [
+                "receipt",
+                "embedding"
+              ]
+            },
+            "receipt": "9abbfe19680d99b00a59e8f885b918281c4e444cfe5e1ab20af4118b9627a09e"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 2,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/CoherenceSuite_v1/CoherenceSuite_v1/callbacks.py",
+          "name": "callbacks.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.03125,
+              0.046875,
+              0.109375,
+              0.1875,
+              0.15625,
+              0.21875,
+              0.078125,
+              0.046875,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.078125,
+              0.0625,
+              0.0625,
+              0.078125,
+              0.03125,
+              0.046875,
+              0.078125,
+              0.03125,
+              0.03125,
+              0.03125,
+              0.078125,
+              0.078125,
+              0.125,
+              0.0625,
+              0.09375,
+              0.046875,
+              0.0625,
+              64.0,
+              73.66802250001354,
+              29.05280083649807,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "1b9136becdef87d1432b55f70aa64e23b0583d6259f1eb6a7ac95341d469e4c3"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/CoherenceSuite_v1/CoherenceSuite_v1/callbacks.py",
+              "type": ".py",
+              "size": 1503,
+              "lines": 35,
+              "words": 159,
+              "imports": [
+                "from __future__ import annotations",
+                "import json, math",
+                "from typing import Dict, Any, List, Optional, Tuple",
+                "from coherence_metrics import composite_coherence, collapse_detector, embedding_alignment",
+                "from state_store import StateStore"
+              ],
+              "classes": [],
+              "functions": [
+                "recall_pair_and_compare",
+                "timeline_metrics"
+              ],
+              "keywords": [
+                "receipt",
+                "lambda",
+                "embedding"
+              ]
+            },
+            "receipt": "decd670e5db05dcb1210e4fd636c8cca4f651c6d70f083dde605c464980e7f38"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 3,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/CoherenceSuite_v1/CoherenceSuite_v1/analytics_cli.py",
+          "name": "analytics_cli.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.0,
+              0.078125,
+              0.140625,
+              0.1875,
+              0.09375,
+              0.171875,
+              0.125,
+              0.078125,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.078125,
+              0.09375,
+              0.078125,
+              0.0625,
+              0.03125,
+              0.078125,
+              0.0625,
+              0.015625,
+              0.046875,
+              0.015625,
+              0.078125,
+              0.125,
+              0.078125,
+              0.109375,
+              0.09375,
+              0.03125,
+              0.0,
+              64.0,
+              72.779393291581,
+              29.221284844329944,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "ad1a12c30cae323166a9833ded24e1d7346398e22faab0f61ff67cf6f5cd5694"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/CoherenceSuite_v1/CoherenceSuite_v1/analytics_cli.py",
+              "type": ".py",
+              "size": 2186,
+              "lines": 55,
+              "words": 167,
+              "imports": [
+                "import json, argparse, sys",
+                "from typing import List, Dict, Any",
+                "from coherence_metrics import composite_coherence, collapse_detector, embedding_alignment",
+                "from state_store import StateStore",
+                "from receipts_bridge import load_geolight, load_toklight, merge_timelines",
+                "import callbacks as _cb"
+              ],
+              "classes": [],
+              "functions": [
+                "load_points",
+                "main"
+              ],
+              "keywords": [
+                "receipt",
+                "embedding"
+              ]
+            },
+            "receipt": "2a76989b9f974d56d81c20dc56fcd712200daf56359c3610e1d65e62885f236e"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 2,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/CoherenceSuite_v1/CoherenceSuite_v1/api_server.py",
+          "name": "api_server.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.046875,
+              0.0625,
+              0.1875,
+              0.15625,
+              0.203125,
+              0.140625,
+              0.140625,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.015625,
+              0.046875,
+              0.078125,
+              0.078125,
+              0.09375,
+              0.03125,
+              0.03125,
+              0.078125,
+              0.03125,
+              0.03125,
+              0.03125,
+              0.109375,
+              0.09375,
+              0.09375,
+              0.078125,
+              0.09375,
+              0.046875,
+              0.0,
+              64.0,
+              75.9639100165335,
+              26.6832423775008,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "cb12ee3ffab5fe1d14591bdc8b503a96bb9d0cb3b6ab0121cd299ba78b999696"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/CoherenceSuite_v1/CoherenceSuite_v1/api_server.py",
+              "type": ".py",
+              "size": 2827,
+              "lines": 72,
+              "words": 259,
+              "imports": [
+                "import json",
+                "from wsgiref.simple_server import make_server",
+                "from urllib.parse import parse_qs",
+                "from coherence_metrics import composite_coherence, collapse_detector, embedding_alignment",
+                "from state_store import StateStore"
+              ],
+              "classes": [],
+              "functions": [
+                "read_json",
+                "respond",
+                "app",
+                "serve"
+              ],
+              "keywords": [
+                "receipt",
+                "embedding"
+              ]
+            },
+            "receipt": "7a0a7d1fe2734ea341e03b2cfc26b56477ddcc0263778ec1d8843ad165ea14a9"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 2,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/CoherenceSuite_v1/CoherenceSuite_v1/README.md",
+          "name": "README.md",
+          "ext": ".md",
+          "geometric": {
+            "embedding": [
+              0.046875,
+              0.0,
+              0.03125,
+              0.078125,
+              0.15625,
+              0.140625,
+              0.109375,
+              0.109375,
+              0.09375,
+              0.078125,
+              0.015625,
+              0.046875,
+              0.015625,
+              0.0,
+              0.046875,
+              0.03125,
+              0.078125,
+              0.0,
+              0.03125,
+              0.078125,
+              0.046875,
+              0.109375,
+              0.03125,
+              0.078125,
+              0.0,
+              0.015625,
+              0.140625,
+              0.078125,
+              0.078125,
+              0.171875,
+              0.0625,
+              0.0,
+              64.0,
+              74.27593356290195,
+              32.44898568528178,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "66c03d495c4e6ef8fb41fa5fe4e2141595feeb1cd5ec5471e210cc329cfef8f2"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/CoherenceSuite_v1/CoherenceSuite_v1/README.md",
+              "type": ".md",
+              "size": 1123,
+              "lines": 27,
+              "words": 124,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": [],
+              "headers": [
+                "# Coherence Suite v1 \u2014 Waveform Collapse & Decoherence (CQE-native, stdlib)",
+                "## Modules",
+                "## Run",
+                "## Examples"
+              ],
+              "code_blocks": 4
+            },
+            "receipt": "26634b0604275e18d872cbdbb3bdba11003b110e080c402693e9de86824c99e3"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        }
+      ],
+      "geometric_count": 7,
+      "semantic_count": 7,
+      "combined_count": 7
+    },
+    {
+      "archive": "Viewer24_Controller_v1",
+      "total_files": 7,
+      "processed": [
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v1/Viewer24_Controller_v1/niemeier_specs.py",
+          "name": "niemeier_specs.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.03125,
+              0.03125,
+              0.09375,
+              0.171875,
+              0.109375,
+              0.109375,
+              0.140625,
+              0.15625,
+              0.0,
+              0.015625,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.109375,
+              0.046875,
+              0.015625,
+              0.015625,
+              0.09375,
+              0.109375,
+              0.03125,
+              0.015625,
+              0.03125,
+              0.0,
+              0.1875,
+              0.078125,
+              0.046875,
+              0.046875,
+              0.140625,
+              0.140625,
+              0.0,
+              64.0,
+              73.79489000612186,
+              32.12338314690987,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "6e5b75d56791b2fe17e2ad35bc04397a40e00a49c8ce455038908f9888e836a3"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v1/Viewer24_Controller_v1/niemeier_specs.py",
+              "type": ".py",
+              "size": 3016,
+              "lines": 98,
+              "words": 449,
+              "imports": [
+                "from typing import List"
+              ],
+              "classes": [],
+              "functions": [
+                "cartan_A",
+                "cartan_D",
+                "cartan_E6",
+                "cartan_E7",
+                "cartan_E8",
+                "block_diag",
+                "parse_root_spec"
+              ],
+              "keywords": [
+                "E8",
+                "Niemeier"
+              ]
+            },
+            "receipt": "000161fa2585254314d9377d019ea2831740f64c21bf5fdcb9213d76f601cfed"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 2,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v1/Viewer24_Controller_v1/transforms.py",
+          "name": "transforms.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.0625,
+              0.203125,
+              0.21875,
+              0.140625,
+              0.109375,
+              0.15625,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.0,
+              0.015625,
+              0.0,
+              0.015625,
+              0.03125,
+              0.015625,
+              0.046875,
+              0.046875,
+              0.046875,
+              0.046875,
+              0.015625,
+              0.03125,
+              0.0,
+              0.09375,
+              0.1875,
+              0.0625,
+              0.0625,
+              0.078125,
+              0.078125,
+              0.125,
+              0.0625,
+              64.0,
+              82.44297419514064,
+              24.96200177677573,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "d01fb4f16a226d016a3ec62d1cce1771c2dfd22939f5f81a1712ec16ccef6aa0"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v1/Viewer24_Controller_v1/transforms.py",
+              "type": ".py",
+              "size": 1528,
+              "lines": 47,
+              "words": 244,
+              "imports": [
+                "import math",
+                "from typing import List, Tuple, Dict"
+              ],
+              "classes": [],
+              "functions": [
+                "bbox",
+                "world_to_screen",
+                "apply_affine",
+                "coxeter_number",
+                "angles_for_spec"
+              ],
+              "keywords": [
+                "E8"
+              ]
+            },
+            "receipt": "414cd774a6aaf8ff1bd6b5e42f44d2af584635cc3c753f2bb5ad669f0b0e3406"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 1,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v1/Viewer24_Controller_v1/viewer_api.py",
+          "name": "viewer_api.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.046875,
+              0.140625,
+              0.15625,
+              0.203125,
+              0.125,
+              0.1875,
+              0.09375,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.046875,
+              0.03125,
+              0.015625,
+              0.0,
+              0.046875,
+              0.0625,
+              0.03125,
+              0.015625,
+              0.046875,
+              0.125,
+              0.125,
+              0.0625,
+              0.03125,
+              0.046875,
+              0.0625,
+              0.125,
+              0.171875,
+              64.0,
+              83.17461072431072,
+              22.558801350165567,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "00630b7da08d015e8fd350eff9b33f048255e4acd915907faa2c37813bdeb849"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v1/Viewer24_Controller_v1/viewer_api.py",
+              "type": ".py",
+              "size": 3301,
+              "lines": 85,
+              "words": 316,
+              "imports": [
+                "import json, os",
+                "from wsgiref.simple_server import make_server",
+                "from urllib.parse import parse_qs",
+                "from niemeier_specs import NIEMEIER_SPECS, parse_root_spec",
+                "from transforms import world_to_screen, apply_affine, angles_for_spec"
+              ],
+              "classes": [],
+              "functions": [
+                "read_json",
+                "respond",
+                "app",
+                "serve"
+              ],
+              "keywords": []
+            },
+            "receipt": "8df5f8f345b65a26999e56ff96d7d2865a9066ea6a40f6b3acc7d3af1cd800e7"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v1/Viewer24_Controller_v1/README.md",
+          "name": "README.md",
+          "ext": ".md",
+          "geometric": {
+            "embedding": [
+              0.03125,
+              0.0,
+              0.0625,
+              0.109375,
+              0.21875,
+              0.078125,
+              0.1875,
+              0.09375,
+              0.078125,
+              0.015625,
+              0.046875,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.0,
+              0.03125,
+              0.046875,
+              0.09375,
+              0.03125,
+              0.0625,
+              0.03125,
+              0.125,
+              0.015625,
+              0.0625,
+              0.0,
+              0.046875,
+              0.109375,
+              0.109375,
+              0.046875,
+              0.171875,
+              0.046875,
+              0.0,
+              64.0,
+              73.5025775483418,
+              28.831943491784802,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "42b215fbb4c778d2a4d9423a1ec2c75d6cb2c6937c96e32ca78ddd343f4cc976"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v1/Viewer24_Controller_v1/README.md",
+              "type": ".md",
+              "size": 2062,
+              "lines": 50,
+              "words": 302,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": [],
+              "headers": [
+                "# Viewer24 Controller v1 (pure stdlib)",
+                "## What it shows",
+                "## Run",
+                "# open http://127.0.0.1:8989",
+                "## Integration",
+                "## Uniform edges (design)",
+                "## Files",
+                "## Roadmap"
+              ],
+              "code_blocks": 4
+            },
+            "receipt": "1167aabf7a867b878c465a4f7f7fe72002db87901bdb9a3775c16eeeade0e18e"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v1/Viewer24_Controller_v1/static/index.html",
+          "name": "index.html",
+          "ext": ".html",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.0,
+              0.078125,
+              0.09375,
+              0.1875,
+              0.140625,
+              0.140625,
+              0.171875,
+              0.078125,
+              0.03125,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.078125,
+              0.03125,
+              0.0625,
+              0.015625,
+              0.125,
+              0.046875,
+              0.015625,
+              0.03125,
+              0.03125,
+              0.015625,
+              0.1875,
+              0.09375,
+              0.078125,
+              0.078125,
+              0.078125,
+              0.078125,
+              0.03125,
+              64.0,
+              74.55063951142539,
+              30.322126051711905,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "8610e8339c098659de6df3bc005a8b363af13e388eb28a8f20fe337917392cd5"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v1/Viewer24_Controller_v1/static/index.html",
+              "type": ".html",
+              "size": 511,
+              "lines": 22,
+              "words": 40,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "a3a95078503911de5e56ed3c28084bc4596deccf9e007e4664005cb978645db7"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v1/Viewer24_Controller_v1/static/app.js",
+          "name": "app.js",
+          "ext": ".js",
+          "geometric": {
+            "embedding": [
+              0.03125,
+              0.015625,
+              0.0625,
+              0.09375,
+              0.125,
+              0.15625,
+              0.140625,
+              0.234375,
+              0.03125,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.015625,
+              0.046875,
+              0.078125,
+              0.03125,
+              0.09375,
+              0.0625,
+              0.078125,
+              0.015625,
+              0.015625,
+              0.078125,
+              0.0,
+              0.140625,
+              0.078125,
+              0.09375,
+              0.03125,
+              0.046875,
+              0.140625,
+              0.015625,
+              64.0,
+              73.08942944958338,
+              29.245626702150354,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "005066207008df063f6fc830e9ddef104861f01eece195b1f31da8c9196a8e9b"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v1/Viewer24_Controller_v1/static/app.js",
+              "type": ".js",
+              "size": 2778,
+              "lines": 91,
+              "words": 308,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "275fc69ae888e108d607a6569d4b8633107bb77f47e3aae2d66738568d0daf2c"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v1/Viewer24_Controller_v1/static/style.css",
+          "name": "style.css",
+          "ext": ".css",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.046875,
+              0.078125,
+              0.171875,
+              0.1875,
+              0.15625,
+              0.171875,
+              0.0625,
+              0.046875,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.046875,
+              0.03125,
+              0.046875,
+              0.0625,
+              0.046875,
+              0.078125,
+              0.015625,
+              0.015625,
+              0.046875,
+              0.078125,
+              0.109375,
+              0.078125,
+              0.078125,
+              0.09375,
+              0.09375,
+              0.125,
+              0.0,
+              64.0,
+              77.26660925813944,
+              27.59290760920456,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "18b78b20fc7d35d7e1ffc66d392eb2d278ba9ddb81d679fcf8340cff0e7b155c"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v1/Viewer24_Controller_v1/static/style.css",
+              "type": ".css",
+              "size": 631,
+              "lines": 23,
+              "words": 86,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "b352a4c329e891f2fb7996a2f556ad6dc784179224faafeb56bfbfa88bf35f33"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        }
+      ],
+      "geometric_count": 7,
+      "semantic_count": 7,
+      "combined_count": 7
+    },
+    {
+      "archive": "MonsterMoonshineDB_v1",
+      "total_files": 10,
+      "processed": [
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/db.py",
+          "name": "db.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.03125,
+              0.203125,
+              0.21875,
+              0.1875,
+              0.234375,
+              0.03125,
+              0.03125,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.015625,
+              0.0,
+              0.015625,
+              0.015625,
+              0.03125,
+              0.03125,
+              0.03125,
+              0.046875,
+              0.0625,
+              0.03125,
+              0.0625,
+              0.015625,
+              0.109375,
+              0.109375,
+              0.0625,
+              0.046875,
+              0.0625,
+              0.046875,
+              0.171875,
+              0.078125,
+              64.0,
+              83.34381444504444,
+              23.7019012397987,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "e3aa8252e2682607a229e274839fb2ba8ee2f6deda26203d5e4ad822848b3c1a"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/db.py",
+              "type": ".py",
+              "size": 3797,
+              "lines": 111,
+              "words": 476,
+              "imports": [
+                "import os, sqlite3, json, time, math",
+                "from typing import List, Tuple, Dict, Any, Optional"
+              ],
+              "classes": [],
+              "functions": [
+                "connect",
+                "l2norm",
+                "add_item",
+                "ensure_chart",
+                "get_item",
+                "list_items",
+                "cosine",
+                "search",
+                "log",
+                "stats"
+              ],
+              "keywords": []
+            },
+            "receipt": "377691263dc8cad6bc783fc2afc5e7989911eda1840f70640ebb10565fc44e04"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/api.py",
+          "name": "api.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.0625,
+              0.171875,
+              0.234375,
+              0.234375,
+              0.125,
+              0.078125,
+              0.015625,
+              0.0,
+              0.015625,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.046875,
+              0.046875,
+              0.046875,
+              0.03125,
+              0.046875,
+              0.03125,
+              0.0625,
+              0.015625,
+              0.09375,
+              0.15625,
+              0.046875,
+              0.046875,
+              0.046875,
+              0.09375,
+              0.140625,
+              0.046875,
+              64.0,
+              83.86754810413859,
+              23.353455559707943,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "ffc4b2e84a2947fd1d8aa8293d4fbe360c66da2a0359f5ad2b7be21c7a7467f7"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/api.py",
+              "type": ".py",
+              "size": 3928,
+              "lines": 100,
+              "words": 345,
+              "imports": [
+                "import json, time, uuid, os",
+                "from typing import Any, Dict, List",
+                "from wsgiref.simple_server import make_server",
+                "from urllib.parse import parse_qs",
+                "from db import connect, add_item, get_item, list_items, search, log, stats",
+                "from embedding.voa_moonshine import moonshine_feature, fuse",
+                "from embedding.geometry_bridge import radial_angle_hist",
+                "from embedding.cqe_channels import summarize_lane"
+              ],
+              "classes": [],
+              "functions": [
+                "read_json",
+                "respond",
+                "app",
+                "serve"
+              ],
+              "keywords": [
+                "embedding",
+                "channel"
+              ]
+            },
+            "receipt": "a2e21bb1de93483251b3d1e5dc347e2c43eb5abce600ef2597dc347c66402905"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 2,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/server.py",
+          "name": "server.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.015625,
+              0.015625,
+              0.046875,
+              0.09375,
+              0.125,
+              0.15625,
+              0.234375,
+              0.09375,
+              0.015625,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.046875,
+              0.125,
+              0.015625,
+              0.03125,
+              0.03125,
+              0.15625,
+              0.015625,
+              0.0,
+              0.015625,
+              0.0,
+              0.0625,
+              0.109375,
+              0.203125,
+              0.09375,
+              0.09375,
+              0.03125,
+              0.03125,
+              0.109375,
+              64.0,
+              68.0815676487816,
+              33.23941521359594,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "2f290e35d042cf1de06bd280655544a0412d0b415472915de489c9db45e6342f"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/server.py",
+              "type": ".py",
+              "size": 62,
+              "lines": 5,
+              "words": 9,
+              "imports": [
+                "from api import serve"
+              ],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "07f750ecfcfed719cd9331780bb15f1fccd6731b9a1cf818cba17454882b37eb"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/embedding/voa_moonshine.py",
+          "name": "voa_moonshine.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.015625,
+              0.046875,
+              0.125,
+              0.171875,
+              0.109375,
+              0.140625,
+              0.140625,
+              0.03125,
+              0.03125,
+              0.078125,
+              0.0,
+              0.015625,
+              0.015625,
+              0.0,
+              0.0625,
+              0.0625,
+              0.03125,
+              0.140625,
+              0.0625,
+              0.0,
+              0.03125,
+              0.03125,
+              0.03125,
+              0.015625,
+              0.109375,
+              0.1875,
+              0.09375,
+              0.078125,
+              0.0625,
+              0.0625,
+              0.0,
+              64.0,
+              72.74957044546724,
+              30.326120409350356,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "4fca3986793ccc54aec690712efd9ffdc3bf5d1d1defd126dc35e4cb83008900"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/embedding/voa_moonshine.py",
+              "type": ".py",
+              "size": 987,
+              "lines": 37,
+              "words": 148,
+              "imports": [
+                "from typing import List, Dict, Any"
+              ],
+              "classes": [],
+              "functions": [
+                "pad",
+                "moonshine_feature",
+                "scale",
+                "fuse"
+              ],
+              "keywords": []
+            },
+            "receipt": "a97a614bafe78c8ec353be062b18d2559530641e2cd5384dddcad73bf93d5073"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/embedding/geometry_bridge.py",
+          "name": "geometry_bridge.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.125,
+              0.203125,
+              0.125,
+              0.21875,
+              0.140625,
+              0.109375,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.015625,
+              0.015625,
+              0.0,
+              0.0,
+              0.046875,
+              0.0,
+              0.015625,
+              0.046875,
+              0.046875,
+              0.046875,
+              0.03125,
+              0.015625,
+              0.046875,
+              0.078125,
+              0.171875,
+              0.0625,
+              0.046875,
+              0.046875,
+              0.0625,
+              0.125,
+              0.15625,
+              64.0,
+              82.29332540522348,
+              24.335512356701663,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "8a79b59d0ab0f2e0725b9565804a877ab088e2b4b6822d3f99070ed244222fdd"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/embedding/geometry_bridge.py",
+              "type": ".py",
+              "size": 1010,
+              "lines": 32,
+              "words": 147,
+              "imports": [
+                "from typing import List, Tuple",
+                "import math"
+              ],
+              "classes": [],
+              "functions": [
+                "centroid",
+                "v_sub",
+                "v_norm",
+                "angle",
+                "radial_angle_hist"
+              ],
+              "keywords": []
+            },
+            "receipt": "a31440948cf8e2a51ea41e8e7e7d0cc16997493af9056afcf4fb23cbe7ea372e"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/embedding/cqe_channels.py",
+          "name": "cqe_channels.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.046875,
+              0.125,
+              0.140625,
+              0.234375,
+              0.140625,
+              0.109375,
+              0.046875,
+              0.015625,
+              0.0,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.015625,
+              0.109375,
+              0.015625,
+              0.015625,
+              0.0625,
+              0.0625,
+              0.046875,
+              0.046875,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.15625,
+              0.109375,
+              0.09375,
+              0.0625,
+              0.125,
+              0.140625,
+              0.015625,
+              64.0,
+              79.57802682597517,
+              29.764344960765026,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "c44ef54c0cb64232849c68f5fb79b16bcbe876b008bea2996e8aeb3fde15ad87"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/embedding/cqe_channels.py",
+              "type": ".py",
+              "size": 242,
+              "lines": 9,
+              "words": 29,
+              "imports": [
+                "from typing import List, Dict"
+              ],
+              "classes": [],
+              "functions": [
+                "summarize_lane"
+              ],
+              "keywords": [
+                "channel"
+              ]
+            },
+            "receipt": "064c6fc3b8a0f499e85c882fad9875ab8be8879a096af62e5dff6a20527c2019"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 1,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/README.md",
+          "name": "README.md",
+          "ext": ".md",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.015625,
+              0.0,
+              0.046875,
+              0.046875,
+              0.0625,
+              0.15625,
+              0.140625,
+              0.203125,
+              0.03125,
+              0.125,
+              0.03125,
+              0.0625,
+              0.03125,
+              0.0,
+              0.03125,
+              0.0,
+              0.0,
+              0.109375,
+              0.078125,
+              0.03125,
+              0.125,
+              0.0,
+              0.015625,
+              0.046875,
+              0.0,
+              0.140625,
+              0.140625,
+              0.109375,
+              0.109375,
+              0.015625,
+              0.078125,
+              64.0,
+              66.24400216069094,
+              33.80554203213557,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "931f6b04cf8f193c1a9595ee320d31e9e86a69ce65c5587be45144e6151cd98a"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/README.md",
+              "type": ".md",
+              "size": 619,
+              "lines": 16,
+              "words": 81,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": [],
+              "headers": [
+                "# Monster/Moonshine VOA Embedding DB \u2014 Personal HTML Server",
+                "## Run",
+                "## Extend"
+              ],
+              "code_blocks": 2
+            },
+            "receipt": "5bd1c57e098466f538f99d0db589b9d80378c658e9233a473fd5bef87a07af28"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/static/index.html",
+          "name": "index.html",
+          "ext": ".html",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.0,
+              0.078125,
+              0.09375,
+              0.1875,
+              0.140625,
+              0.140625,
+              0.171875,
+              0.078125,
+              0.03125,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.078125,
+              0.03125,
+              0.0625,
+              0.015625,
+              0.125,
+              0.046875,
+              0.015625,
+              0.03125,
+              0.03125,
+              0.015625,
+              0.1875,
+              0.09375,
+              0.078125,
+              0.078125,
+              0.078125,
+              0.078125,
+              0.03125,
+              64.0,
+              74.55063951142539,
+              30.322126051711905,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "fbb8ed40d52c3f7668cf0fd797f22c0cef2a35b13842f9dc1a18b764f2a5ca38"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/static/index.html",
+              "type": ".html",
+              "size": 1103,
+              "lines": 43,
+              "words": 74,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "c976ce997064f7ebd4bde64405886265aafe0912a644472ca7fdb5b3cd4cdc7e"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/static/app.js",
+          "name": "app.js",
+          "ext": ".js",
+          "geometric": {
+            "embedding": [
+              0.03125,
+              0.03125,
+              0.125,
+              0.046875,
+              0.140625,
+              0.15625,
+              0.09375,
+              0.171875,
+              0.03125,
+              0.015625,
+              0.015625,
+              0.03125,
+              0.015625,
+              0.0,
+              0.015625,
+              0.078125,
+              0.140625,
+              0.015625,
+              0.09375,
+              0.0,
+              0.109375,
+              0.015625,
+              0.015625,
+              0.046875,
+              0.0,
+              0.125,
+              0.109375,
+              0.078125,
+              0.078125,
+              0.078125,
+              0.09375,
+              0.0,
+              64.0,
+              72.69489059858763,
+              29.66887418612767,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "2acc7b14b4b3bcf1d62e0ce3063555e362fdd2c077e6b21b932e7a11a688f06e"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/static/app.js",
+              "type": ".js",
+              "size": 1290,
+              "lines": 29,
+              "words": 128,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "1f326147d3c19b006f40e52f327184ad40a72131eae6ecf7fdd2b704478d2c7c"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/static/style.css",
+          "name": "style.css",
+          "ext": ".css",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.046875,
+              0.078125,
+              0.171875,
+              0.1875,
+              0.15625,
+              0.171875,
+              0.046875,
+              0.0625,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.046875,
+              0.03125,
+              0.046875,
+              0.0625,
+              0.046875,
+              0.078125,
+              0.015625,
+              0.015625,
+              0.046875,
+              0.078125,
+              0.109375,
+              0.078125,
+              0.078125,
+              0.09375,
+              0.09375,
+              0.125,
+              0.0,
+              64.0,
+              77.22236212970066,
+              27.631761276163424,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "acdb15fe5c1dd34614a8593c705c7db2e55fd7731fcabe8a5ba2903857174943"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/MonsterMoonshineDB_v1/MonsterMoonshineDB_v1/static/style.css",
+              "type": ".css",
+              "size": 265,
+              "lines": 7,
+              "words": 39,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "e7d32372a3953f27ebc20fb8424956b5e98436c3de3a6e21ecb940eb8a3e85ab"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        }
+      ],
+      "geometric_count": 10,
+      "semantic_count": 10,
+      "combined_count": 10
+    },
+    {
+      "archive": "Viewer24_Controller_v2_CA",
+      "total_files": 9,
+      "processed": [
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/niemeier_specs.py",
+          "name": "niemeier_specs.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.0625,
+              0.125,
+              0.1875,
+              0.125,
+              0.125,
+              0.109375,
+              0.109375,
+              0.015625,
+              0.0,
+              0.015625,
+              0.046875,
+              0.0,
+              0.0,
+              0.015625,
+              0.0625,
+              0.015625,
+              0.015625,
+              0.0625,
+              0.078125,
+              0.046875,
+              0.015625,
+              0.03125,
+              0.0,
+              0.015625,
+              0.21875,
+              0.109375,
+              0.0625,
+              0.078125,
+              0.0625,
+              0.125,
+              0.0625,
+              64.0,
+              77.10043799527017,
+              28.11118528501554,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "7c5bcf85d508d199afe34864bfd9e49543bf39e17a64bada2732467f7ee1dd78"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/niemeier_specs.py",
+              "type": ".py",
+              "size": 1344,
+              "lines": 29,
+              "words": 137,
+              "imports": [
+                "from typing import List"
+              ],
+              "classes": [],
+              "functions": [
+                "cartan_A",
+                "cartan_D",
+                "cartan_E6",
+                "cartan_E7",
+                "cartan_E8"
+              ],
+              "keywords": [
+                "E8"
+              ]
+            },
+            "receipt": "9b61eec5bc526f309bb2f700a34cdcd5ecdaa2342c62a12d17c289756f390f6b"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 1,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/transforms.py",
+          "name": "transforms.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.078125,
+              0.171875,
+              0.171875,
+              0.140625,
+              0.21875,
+              0.109375,
+              0.0,
+              0.0,
+              0.015625,
+              0.015625,
+              0.0,
+              0.03125,
+              0.0,
+              0.0,
+              0.046875,
+              0.015625,
+              0.03125,
+              0.046875,
+              0.09375,
+              0.015625,
+              0.03125,
+              0.03125,
+              0.0,
+              0.109375,
+              0.140625,
+              0.078125,
+              0.09375,
+              0.03125,
+              0.125,
+              0.109375,
+              0.046875,
+              64.0,
+              80.02633996310605,
+              25.825648427797223,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "bc3074e8548b4cd15ced8ddaa9aa76c2cef516a4d063a884fbdfca0e3f65669a"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/transforms.py",
+              "type": ".py",
+              "size": 694,
+              "lines": 19,
+              "words": 117,
+              "imports": [
+                "from typing import List, Tuple"
+              ],
+              "classes": [],
+              "functions": [
+                "bbox",
+                "world_to_screen"
+              ],
+              "keywords": []
+            },
+            "receipt": "86fcaf79775575d563e79f26c007cdf7cef3fcf09659b2de8fc0c211ee34c2f1"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/dihedral_ca.py",
+          "name": "dihedral_ca.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.015625,
+              0.15625,
+              0.1875,
+              0.21875,
+              0.109375,
+              0.109375,
+              0.0625,
+              0.015625,
+              0.0,
+              0.0,
+              0.015625,
+              0.0,
+              0.015625,
+              0.03125,
+              0.0625,
+              0.03125,
+              0.046875,
+              0.03125,
+              0.0,
+              0.109375,
+              0.03125,
+              0.03125,
+              0.0,
+              0.03125,
+              0.171875,
+              0.078125,
+              0.046875,
+              0.078125,
+              0.125,
+              0.09375,
+              0.09375,
+              64.0,
+              77.9431884451746,
+              28.25509882698236,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "639f1a3b22d96f05643a99811373950a61e49faa3db8a8f30bfaeaefd1b0bc47"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/dihedral_ca.py",
+              "type": ".py",
+              "size": 4017,
+              "lines": 80,
+              "words": 255,
+              "imports": [
+                "import math, random",
+                "from typing import List, Tuple, Dict"
+              ],
+              "classes": [
+                "DihedralCA:"
+              ],
+              "functions": [
+                "__init__",
+                "idx",
+                "seed_from_specs",
+                "ph",
+                "neighbor_sum",
+                "step",
+                "tile_pixels_em",
+                "wavelength_to_rgb",
+                "clamp"
+              ],
+              "keywords": []
+            },
+            "receipt": "1f4ea78172c2b51c0b05373c12306468b49e69507d71b78cb27e0530c6636643"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/lambda_color.py",
+          "name": "lambda_color.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.03125,
+              0.078125,
+              0.171875,
+              0.15625,
+              0.203125,
+              0.078125,
+              0.078125,
+              0.03125,
+              0.0,
+              0.0,
+              0.015625,
+              0.0,
+              0.0,
+              0.03125,
+              0.125,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.09375,
+              0.0625,
+              0.03125,
+              0.03125,
+              0.015625,
+              0.015625,
+              0.15625,
+              0.09375,
+              0.09375,
+              0.09375,
+              0.125,
+              0.140625,
+              0.0,
+              64.0,
+              76.5645407891277,
+              31.792287206344906,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "5db23604a51c56adab7aebea1397e1b1932027c353b408bd86a120f03c1853a5"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/lambda_color.py",
+              "type": ".py",
+              "size": 238,
+              "lines": 8,
+              "words": 29,
+              "imports": [
+                "from typing import Tuple"
+              ],
+              "classes": [],
+              "functions": [
+                "lane_color"
+              ],
+              "keywords": [
+                "channel"
+              ]
+            },
+            "receipt": "78fe6d0c91d8a6b8fd834020c53d53cfb5800df3fa2adf54380b0aab29b36f20"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 1,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/viewer_api.py",
+          "name": "viewer_api.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.046875,
+              0.1875,
+              0.1875,
+              0.1875,
+              0.171875,
+              0.0625,
+              0.0625,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.09375,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.078125,
+              0.046875,
+              0.03125,
+              0.03125,
+              0.0,
+              0.0625,
+              0.203125,
+              0.0625,
+              0.0625,
+              0.046875,
+              0.09375,
+              0.140625,
+              0.09375,
+              64.0,
+              78.78760417899268,
+              26.1856150438961,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "6ecfe599b8f5ad03494c362e93e03807e05669a81dc305914f8567e47b651d9d"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/viewer_api.py",
+              "type": ".py",
+              "size": 3543,
+              "lines": 71,
+              "words": 273,
+              "imports": [
+                "import json, os",
+                "from urllib.parse import parse_qs",
+                "from wsgiref.simple_server import make_server",
+                "from niemeier_specs import NIEMEIER_SPECS",
+                "from transforms import world_to_screen",
+                "from dihedral_ca import DihedralCA"
+              ],
+              "classes": [],
+              "functions": [
+                "read_json",
+                "respond",
+                "app",
+                "serve"
+              ],
+              "keywords": []
+            },
+            "receipt": "d98f4fe97d9057f60410a9e6ec6852b912821df97a477293881ff71ed2b6b005"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/README.md",
+          "name": "README.md",
+          "ext": ".md",
+          "geometric": {
+            "embedding": [
+              0.03125,
+              0.015625,
+              0.03125,
+              0.0625,
+              0.125,
+              0.15625,
+              0.140625,
+              0.171875,
+              0.09375,
+              0.015625,
+              0.046875,
+              0.03125,
+              0.015625,
+              0.03125,
+              0.0,
+              0.03125,
+              0.109375,
+              0.0,
+              0.046875,
+              0.09375,
+              0.03125,
+              0.125,
+              0.015625,
+              0.0625,
+              0.0,
+              0.046875,
+              0.109375,
+              0.109375,
+              0.078125,
+              0.0625,
+              0.109375,
+              0.0,
+              64.0,
+              69.82343804196411,
+              29.873792634338926,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "fb70d976129b01074d658bd4b9ef32702e3555363c2897c3c41d3bedf45b95c6"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/README.md",
+              "type": ".md",
+              "size": 586,
+              "lines": 15,
+              "words": 77,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": [],
+              "headers": [
+                "# Viewer24 Controller v2 + Dihedral CA Overlay (pure stdlib)"
+              ],
+              "code_blocks": 0
+            },
+            "receipt": "906b9af7caeee53cbe60674ac25fe5e83ff43241f0f20ae9b17a6f13e9d1c202"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/static/index.html",
+          "name": "index.html",
+          "ext": ".html",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.0,
+              0.078125,
+              0.09375,
+              0.1875,
+              0.140625,
+              0.140625,
+              0.171875,
+              0.078125,
+              0.03125,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.078125,
+              0.03125,
+              0.0625,
+              0.015625,
+              0.125,
+              0.046875,
+              0.015625,
+              0.03125,
+              0.03125,
+              0.015625,
+              0.1875,
+              0.09375,
+              0.078125,
+              0.078125,
+              0.078125,
+              0.078125,
+              0.03125,
+              64.0,
+              74.55063951142539,
+              30.322126051711905,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "e34da252ff51e3c3aae41bfbb1deb6cac3919e54b1c49677576e867221da028a"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/static/index.html",
+              "type": ".html",
+              "size": 750,
+              "lines": 26,
+              "words": 58,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "5fd5829891dafba7bc2a1bbb10fe96e0e5cf4c3d86aedaf437b65fa25b46cb2c"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/static/overlay_ca.js",
+          "name": "overlay_ca.js",
+          "ext": ".js",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.046875,
+              0.03125,
+              0.140625,
+              0.078125,
+              0.171875,
+              0.171875,
+              0.15625,
+              0.046875,
+              0.0,
+              0.015625,
+              0.0,
+              0.0,
+              0.03125,
+              0.0,
+              0.109375,
+              0.03125,
+              0.03125,
+              0.015625,
+              0.046875,
+              0.140625,
+              0.015625,
+              0.03125,
+              0.03125,
+              0.03125,
+              0.09375,
+              0.109375,
+              0.046875,
+              0.109375,
+              0.125,
+              0.140625,
+              0.0,
+              64.0,
+              74.41729528739017,
+              32.13030584610229,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "13565a48f370c2f5941759094124e81220278343eb40e22bf6da7833b598bdb6"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/static/overlay_ca.js",
+              "type": ".js",
+              "size": 2839,
+              "lines": 53,
+              "words": 268,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "d9773e4be06f7b2063387c3e1a94299912eeb4927641ed9dd0a8bbcebc6a2c34"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/static/style.css",
+          "name": "style.css",
+          "ext": ".css",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.046875,
+              0.078125,
+              0.171875,
+              0.1875,
+              0.15625,
+              0.171875,
+              0.0625,
+              0.046875,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.046875,
+              0.03125,
+              0.046875,
+              0.0625,
+              0.046875,
+              0.078125,
+              0.015625,
+              0.015625,
+              0.046875,
+              0.078125,
+              0.109375,
+              0.078125,
+              0.078125,
+              0.09375,
+              0.09375,
+              0.125,
+              0.0,
+              64.0,
+              77.26660925813944,
+              27.59290760920456,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "355d801bd0b03122ccc10aac7bce6b9749df6ff179a95ff51787541fd6d7388c"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA/Viewer24_Controller_v2_CA/static/style.css",
+              "type": ".css",
+              "size": 788,
+              "lines": 11,
+              "words": 107,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "b2ac539377ad64ee5df1fdb55c11a54a999ac01a7e4bfb08df8ed036f06392b5"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        }
+      ],
+      "geometric_count": 9,
+      "semantic_count": 9,
+      "combined_count": 9
+    },
+    {
+      "archive": "cqe_plus_repo",
+      "total_files": 18,
+      "processed": [
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/utils.py",
+          "name": "utils.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.046875,
+              0.171875,
+              0.25,
+              0.25,
+              0.09375,
+              0.109375,
+              0.0,
+              0.0,
+              0.015625,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.015625,
+              0.015625,
+              0.046875,
+              0.046875,
+              0.015625,
+              0.0625,
+              0.03125,
+              0.046875,
+              0.0,
+              0.109375,
+              0.171875,
+              0.015625,
+              0.0625,
+              0.078125,
+              0.078125,
+              0.140625,
+              0.078125,
+              64.0,
+              83.47470056709173,
+              24.703094493494746,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "a6356d8dcef4cae213b921db16899ac1bc2270272a2ac0cbf4cd8dd36d0b14c0"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/utils.py",
+              "type": ".py",
+              "size": 379,
+              "lines": 10,
+              "words": 38,
+              "imports": [
+                "import json, hashlib, time",
+                "from typing import Any, Dict"
+              ],
+              "classes": [],
+              "functions": [
+                "sha256_json",
+                "now_receipt"
+              ],
+              "keywords": [
+                "receipt"
+              ]
+            },
+            "receipt": "3f51999d6a0070f04b9b4bfc736092c063d2d24123694c196d8bf19744ffd4b7"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 1,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/receipts.py",
+          "name": "receipts.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.0625,
+              0.21875,
+              0.203125,
+              0.1875,
+              0.171875,
+              0.0625,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.015625,
+              0.03125,
+              0.015625,
+              0.03125,
+              0.03125,
+              0.0625,
+              0.046875,
+              0.03125,
+              0.03125,
+              0.0,
+              0.140625,
+              0.109375,
+              0.140625,
+              0.0,
+              0.015625,
+              0.0625,
+              0.109375,
+              0.171875,
+              64.0,
+              83.28985210030466,
+              24.310829221852604,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "c97d82301edc63ad93dc9d70338012406685bc7fa08caf3071b17a9d87f5e9c0"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/receipts.py",
+              "type": ".py",
+              "size": 193,
+              "lines": 6,
+              "words": 24,
+              "imports": [
+                "from typing import Dict, Any",
+                "from .utils import now_receipt"
+              ],
+              "classes": [],
+              "functions": [
+                "stamp"
+              ],
+              "keywords": [
+                "receipt"
+              ]
+            },
+            "receipt": "c7154a58085bf7f8d035c10a1358bdbe67c2f02a210b263b04431e8d63aec546"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 1,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/mdhg.py",
+          "name": "mdhg.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.046875,
+              0.125,
+              0.1875,
+              0.25,
+              0.09375,
+              0.125,
+              0.046875,
+              0.015625,
+              0.015625,
+              0.0,
+              0.015625,
+              0.0,
+              0.0,
+              0.015625,
+              0.046875,
+              0.0,
+              0.015625,
+              0.015625,
+              0.109375,
+              0.046875,
+              0.015625,
+              0.046875,
+              0.015625,
+              0.078125,
+              0.15625,
+              0.109375,
+              0.03125,
+              0.015625,
+              0.09375,
+              0.1875,
+              0.0625,
+              64.0,
+              80.80239840432105,
+              26.54382427325301,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "abe38b0d00de250f0c384466dcdf1fd60d40944f5772e8682c5bfb0a11e60b48"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/mdhg.py",
+              "type": ".py",
+              "size": 1569,
+              "lines": 32,
+              "words": 128,
+              "imports": [
+                "from typing import Dict, Any, Optional",
+                "import hashlib",
+                "from .utils import now_receipt, sha256_json"
+              ],
+              "classes": [
+                "TinyLFU:",
+                "MDHG:"
+              ],
+              "functions": [
+                "jump_hash",
+                "__init__",
+                "_idx",
+                "admit",
+                "score",
+                "__init__",
+                "_place",
+                "put",
+                "propose_topK",
+                "manifest"
+              ],
+              "keywords": [
+                "receipt",
+                "lambda"
+              ]
+            },
+            "receipt": "150b1e7776892b940b24fe32eb8a054e594fea489faa8cbe94f1f34682ebe94e"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 2,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/agrm.py",
+          "name": "agrm.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.046875,
+              0.125,
+              0.234375,
+              0.1875,
+              0.109375,
+              0.125,
+              0.0625,
+              0.03125,
+              0.0,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.046875,
+              0.03125,
+              0.046875,
+              0.015625,
+              0.078125,
+              0.046875,
+              0.03125,
+              0.046875,
+              0.015625,
+              0.078125,
+              0.125,
+              0.125,
+              0.03125,
+              0.03125,
+              0.0625,
+              0.21875,
+              0.015625,
+              64.0,
+              80.2960601486189,
+              25.635365983882984,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "e0c5df16bab65eb0111d88391c95aa4f4822bf2ea4d179ed039ff9b0cfc4eaf5"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/agrm.py",
+              "type": ".py",
+              "size": 1741,
+              "lines": 38,
+              "words": 124,
+              "imports": [
+                "from typing import Dict, Any, List",
+                "import random, time, math",
+                "from .utils import now_receipt"
+              ],
+              "classes": [],
+              "functions": [
+                "tsp_cost",
+                "move_2opt",
+                "ucb1",
+                "run"
+              ],
+              "keywords": [
+                "receipt",
+                "lambda"
+              ]
+            },
+            "receipt": "ae23afe936b00658b9842e33a606c4dc00c7d5fae57807a993eb9fcce7cc7895"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 2,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/delta.py",
+          "name": "delta.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.078125,
+              0.125,
+              0.15625,
+              0.265625,
+              0.140625,
+              0.078125,
+              0.0625,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.046875,
+              0.046875,
+              0.03125,
+              0.015625,
+              0.09375,
+              0.046875,
+              0.015625,
+              0.046875,
+              0.015625,
+              0.046875,
+              0.171875,
+              0.125,
+              0.03125,
+              0.015625,
+              0.0625,
+              0.171875,
+              0.0625,
+              64.0,
+              78.54928693830152,
+              25.372851517204385,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "be5d99b70d23b09fabd66e8f352a12c0522a4a684c4f446d2971a1d1e411f6e1"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/delta.py",
+              "type": ".py",
+              "size": 3263,
+              "lines": 68,
+              "words": 238,
+              "imports": [
+                "from typing import Dict, Any, List",
+                "import numpy as np, json, math",
+                "from pathlib import Path",
+                "from .utils import now_receipt",
+                "import hashlib",
+                "import hashlib",
+                "import csv, os"
+              ],
+              "classes": [],
+              "functions": [
+                "_blake",
+                "_read",
+                "_views",
+                "lex",
+                "spec",
+                "geom",
+                "run",
+                "cos",
+                "l2",
+                "wass"
+              ],
+              "keywords": [
+                "receipt"
+              ]
+            },
+            "receipt": "ed3ff24ce3e7ceb98f1654d09bc1466ae854b2cc1475f402b86339128ca8113a"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 1,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/braid.py",
+          "name": "braid.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.078125,
+              0.09375,
+              0.203125,
+              0.25,
+              0.140625,
+              0.109375,
+              0.015625,
+              0.03125,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.046875,
+              0.046875,
+              0.03125,
+              0.015625,
+              0.078125,
+              0.046875,
+              0.03125,
+              0.046875,
+              0.015625,
+              0.046875,
+              0.140625,
+              0.140625,
+              0.03125,
+              0.046875,
+              0.109375,
+              0.109375,
+              0.0625,
+              64.0,
+              80.2960601486189,
+              26.80141857852282,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "91284ea2972b65cce9975c1ed8af4d6ed38cb5afdef9960fbc4cee165f4224a0"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/braid.py",
+              "type": ".py",
+              "size": 291,
+              "lines": 7,
+              "words": 30,
+              "imports": [
+                "from typing import Dict, Any",
+                "from .delta import run as delta_run",
+                "from .utils import now_receipt"
+              ],
+              "classes": [],
+              "functions": [
+                "run"
+              ],
+              "keywords": [
+                "receipt"
+              ]
+            },
+            "receipt": "12c4b35300b825f21c7b36a2ba4957e0c1508aa7c6c6359d20c4f9400fd79ff3"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 1,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/cli.py",
+          "name": "cli.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.046875,
+              0.171875,
+              0.140625,
+              0.21875,
+              0.15625,
+              0.125,
+              0.03125,
+              0.0,
+              0.0,
+              0.0,
+              0.015625,
+              0.0,
+              0.0,
+              0.0625,
+              0.03125,
+              0.03125,
+              0.03125,
+              0.015625,
+              0.0625,
+              0.0625,
+              0.03125,
+              0.03125,
+              0.03125,
+              0.015625,
+              0.203125,
+              0.046875,
+              0.078125,
+              0.078125,
+              0.078125,
+              0.171875,
+              0.03125,
+              64.0,
+              80.92889825189532,
+              27.72717033600006,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "5fd9f706af6603325b741cee1086381f5a7b814f41c45b2d25bef689e9d385b8"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/cli.py",
+              "type": ".py",
+              "size": 3311,
+              "lines": 78,
+              "words": 221,
+              "imports": [
+                "import argparse, json, os",
+                "from pathlib import Path",
+                "from .worldforge.compose import compose",
+                "from .delta import run as delta_run",
+                "from .braid import run as braid_run",
+                "from .mdhg import MDHG",
+                "from .agrm import run as agrm_run",
+                "import csv"
+              ],
+              "classes": [],
+              "functions": [
+                "main"
+              ],
+              "keywords": [
+                "receipt",
+                "E8"
+              ]
+            },
+            "receipt": "c17f5dbb2d3daa5471f75c2156ae59fdc01ec14ef4527e0612d93690a0be468a"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 2,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/worldforge/__init__.py",
+          "name": "__init__.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.07692307692307693,
+              0.0,
+              0.07692307692307693,
+              0.0,
+              0.0,
+              0.07692307692307693,
+              0.07692307692307693,
+              0.07692307692307693,
+              0.15384615384615385,
+              0.15384615384615385,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.3076923076923077,
+              0.0,
+              0.0,
+              0.07692307692307693,
+              0.07692307692307693,
+              0.23076923076923078,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.3076923076923077,
+              0.23076923076923078,
+              0.07692307692307693,
+              0.0,
+              0.0,
+              13.0,
+              54.02651113412233,
+              34.0550982027416,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "b0d43998b7477b6f5254b7adade900e5eaae1b9509d3779185fb73ff850ebe17"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/worldforge/__init__.py",
+              "type": ".py",
+              "size": 1,
+              "lines": 2,
+              "words": 0,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "4bc358fb500d647a88f326538dedf1b159727f9c8fa7ccf5bc1f360206700500"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/worldforge/operators.py",
+          "name": "operators.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.03125,
+              0.046875,
+              0.125,
+              0.171875,
+              0.15625,
+              0.234375,
+              0.046875,
+              0.046875,
+              0.0,
+              0.0,
+              0.015625,
+              0.0,
+              0.0,
+              0.03125,
+              0.078125,
+              0.03125,
+              0.046875,
+              0.015625,
+              0.15625,
+              0.03125,
+              0.0,
+              0.03125,
+              0.03125,
+              0.015625,
+              0.1875,
+              0.09375,
+              0.109375,
+              0.0625,
+              0.0625,
+              0.109375,
+              0.015625,
+              64.0,
+              75.41168909103217,
+              30.04075681405497,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "bea5d81d8fcf01df50d14780aa268b2dc57032ad369695e7f59257141f6a6ef9"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/worldforge/operators.py",
+              "type": ".py",
+              "size": 1217,
+              "lines": 23,
+              "words": 92,
+              "imports": [
+                "from typing import Dict, Any"
+              ],
+              "classes": [],
+              "functions": [
+                "P5_startcap",
+                "residue_endcap",
+                "B_obs",
+                "B_soft",
+                "B_higgs",
+                "B_ward",
+                "Bridge"
+              ],
+              "keywords": [
+                "E8",
+                "Niemeier"
+              ]
+            },
+            "receipt": "8d891448bc856233ab2f2e921a0089ad21bc58e54dd7e2f838f1cfd9e95e35a5"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 2,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/worldforge/lattices.py",
+          "name": "lattices.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.078125,
+              0.078125,
+              0.15625,
+              0.171875,
+              0.1875,
+              0.109375,
+              0.09375,
+              0.03125,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.046875,
+              0.0,
+              0.03125,
+              0.0625,
+              0.078125,
+              0.046875,
+              0.015625,
+              0.046875,
+              0.015625,
+              0.078125,
+              0.140625,
+              0.09375,
+              0.0625,
+              0.03125,
+              0.140625,
+              0.125,
+              0.03125,
+              64.0,
+              79.86820809347421,
+              28.02541295960259,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "606612a4b94c7d00f06cb796b24bd4c7473110197a3d019c14f678c8fbb8eb8d"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/worldforge/lattices.py",
+              "type": ".py",
+              "size": 425,
+              "lines": 11,
+              "words": 33,
+              "imports": [
+                "from typing import Dict, Any"
+              ],
+              "classes": [],
+              "functions": [
+                "e8_from_4d",
+                "niemeier_context",
+                "cartan_inward_projection"
+              ],
+              "keywords": [
+                "E8",
+                "Niemeier"
+              ]
+            },
+            "receipt": "551ba8a7f3f6dd4c2ce91e735208d8de10f65ef60ce74f8d661c46be45e164e6"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 2,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/worldforge/renderers.py",
+          "name": "renderers.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.078125,
+              0.078125,
+              0.171875,
+              0.1875,
+              0.171875,
+              0.125,
+              0.046875,
+              0.03125,
+              0.015625,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.015625,
+              0.0625,
+              0.015625,
+              0.03125,
+              0.046875,
+              0.125,
+              0.015625,
+              0.015625,
+              0.03125,
+              0.015625,
+              0.09375,
+              0.15625,
+              0.0625,
+              0.109375,
+              0.015625,
+              0.109375,
+              0.109375,
+              0.046875,
+              64.0,
+              79.60294533652633,
+              27.86602678055393,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "689dbd699a726e817149b81b5f5829c6855b5878207c574d7ceb9a217d0e809a"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/worldforge/renderers.py",
+              "type": ".py",
+              "size": 706,
+              "lines": 14,
+              "words": 41,
+              "imports": [
+                "from typing import Dict, Any"
+              ],
+              "classes": [],
+              "functions": [
+                "plan_image",
+                "plan_video",
+                "plan_text",
+                "plan_audio"
+              ],
+              "keywords": []
+            },
+            "receipt": "20fa8be60bf016c71ae9ce4b28d9223a5acab25550e9ca8d30b35fb308b9ce53"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/worldforge/compose.py",
+          "name": "compose.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.09375,
+              0.125,
+              0.15625,
+              0.21875,
+              0.15625,
+              0.15625,
+              0.0,
+              0.03125,
+              0.0,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.015625,
+              0.03125,
+              0.015625,
+              0.015625,
+              0.046875,
+              0.109375,
+              0.046875,
+              0.0,
+              0.0625,
+              0.0,
+              0.078125,
+              0.140625,
+              0.15625,
+              0.015625,
+              0.015625,
+              0.046875,
+              0.171875,
+              0.078125,
+              64.0,
+              82.41373923116521,
+              25.789901144531697,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "72612cffa474e878ff2db03839d3051d62c49823003270b35354c80e88c2954b"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/src/cqeplus/worldforge/compose.py",
+              "type": ".py",
+              "size": 919,
+              "lines": 19,
+              "words": 91,
+              "imports": [
+                "from typing import Dict, Any, List",
+                "from ..receipts import stamp",
+                "from .operators import P5_startcap, residue_endcap, B_obs, B_soft, B_higgs, B_ward, Bridge",
+                "from .renderers import plan_image, plan_video, plan_text, plan_audio"
+              ],
+              "classes": [],
+              "functions": [
+                "compose"
+              ],
+              "keywords": [
+                "receipt"
+              ]
+            },
+            "receipt": "90783c2854c8730ffe9dc9e867af77a9e22cef3a6bbd8cddef59b29c52b82a94"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 1,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/README.md",
+          "name": "README.md",
+          "ext": ".md",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.0625,
+              0.0,
+              0.015625,
+              0.046875,
+              0.09375,
+              0.09375,
+              0.203125,
+              0.140625,
+              0.078125,
+              0.09375,
+              0.09375,
+              0.046875,
+              0.015625,
+              0.0,
+              0.015625,
+              0.0625,
+              0.078125,
+              0.0,
+              0.046875,
+              0.0625,
+              0.140625,
+              0.03125,
+              0.046875,
+              0.0625,
+              0.015625,
+              0.0625,
+              0.078125,
+              0.15625,
+              0.140625,
+              0.0,
+              0.015625,
+              64.0,
+              62.414161757493986,
+              31.405299242676378,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "b941fb9b29a82ba50eb1cff8981abe1cb732878aa19dd7ffcc54c17205b85981"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/README.md",
+              "type": ".md",
+              "size": 74,
+              "lines": 4,
+              "words": 8,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": [],
+              "headers": [
+                "# CQE+ (CQEPlus) \u2014 Working System"
+              ],
+              "code_blocks": 0
+            },
+            "receipt": "5f7af68e176f46778f0a2dad8426658db1c3c06054056a7f2e184d21c3c2e17e"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/docs/ARCHITECTURE.md",
+          "name": "ARCHITECTURE.md",
+          "ext": ".md",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.018867924528301886,
+              0.03773584905660377,
+              0.03773584905660377,
+              0.07547169811320754,
+              0.07547169811320754,
+              0.09433962264150944,
+              0.07547169811320754,
+              0.11320754716981132,
+              0.22641509433962265,
+              0.05660377358490566,
+              0.05660377358490566,
+              0.05660377358490566,
+              0.05660377358490566,
+              0.0,
+              0.018867924528301886,
+              0.018867924528301886,
+              0.0,
+              0.0,
+              0.07547169811320754,
+              0.11320754716981132,
+              0.16981132075471697,
+              0.03773584905660377,
+              0.0,
+              0.0,
+              0.03773584905660377,
+              0.018867924528301886,
+              0.11320754716981132,
+              0.16981132075471697,
+              0.16981132075471697,
+              0.018867924528301886,
+              0.05660377358490566,
+              53.0,
+              62.01701095313615,
+              32.199051699481714,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "35f9b2a654ef0fc65e830a2cb3f69cc3e860f67c2c8019eb6b72d29c5a672493"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/docs/ARCHITECTURE.md",
+              "type": ".md",
+              "size": 37,
+              "lines": 2,
+              "words": 6,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": [],
+              "headers": [],
+              "code_blocks": 0
+            },
+            "receipt": "18f93228bbe53cf4428f84ebe04becdf0ba4acd02b17463e3b0a4c486fa71c4a"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/tests/README.md",
+          "name": "README.md",
+          "ext": ".md",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.08823529411764706,
+              0.029411764705882353,
+              0.11764705882352941,
+              0.20588235294117646,
+              0.14705882352941177,
+              0.17647058823529413,
+              0.0,
+              0.058823529411764705,
+              0.08823529411764706,
+              0.0,
+              0.029411764705882353,
+              0.029411764705882353,
+              0.0,
+              0.0,
+              0.029411764705882353,
+              0.0,
+              0.058823529411764705,
+              0.058823529411764705,
+              0.029411764705882353,
+              0.20588235294117646,
+              0.029411764705882353,
+              0.0,
+              0.029411764705882353,
+              0.0,
+              0.0,
+              0.029411764705882353,
+              0.20588235294117646,
+              0.17647058823529413,
+              0.11764705882352941,
+              0.058823529411764705,
+              0.0,
+              34.0,
+              70.49598138194446,
+              26.54475734509593,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "baca13740c661a25bdfce9c950f8075261f6bafce0d63a54464462448f3dcd10"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/tests/README.md",
+              "type": ".md",
+              "size": 24,
+              "lines": 2,
+              "words": 3,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": [],
+              "headers": [],
+              "code_blocks": 0
+            },
+            "receipt": "d70a2f55d36b4e1152e7b49b87906ac0722b886f5c3558c52e3237960d4487c5"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/examples/tsp_20.json",
+          "name": "tsp_20.json",
+          "ext": ".json",
+          "geometric": {
+            "embedding": [
+              0.09375,
+              0.078125,
+              0.078125,
+              0.078125,
+              0.171875,
+              0.09375,
+              0.15625,
+              0.109375,
+              0.09375,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.0,
+              0.015625,
+              0.34375,
+              0.046875,
+              0.046875,
+              0.015625,
+              0.046875,
+              0.015625,
+              0.046875,
+              0.15625,
+              0.0,
+              0.09375,
+              0.109375,
+              0.03125,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.0,
+              64.0,
+              69.4029293442467,
+              22.41827385483384,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "703143c35458e42b41184912bd401b960ebca79fc4d6c27ab15e218d231af42f"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/examples/tsp_20.json",
+              "type": ".json",
+              "size": 213,
+              "lines": 29,
+              "words": 29,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "2bfccf03b628ee4f22f9ee5d2dd347272ed60cfc8f129b95c5aad4abf0e339e9"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/requirements.txt",
+          "name": "requirements.txt",
+          "ext": ".txt",
+          "geometric": {
+            "embedding": [
+              0.13333333333333333,
+              0.16666666666666666,
+              0.36666666666666664,
+              0.13333333333333333,
+              0.1,
+              0.03333333333333333,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.06666666666666667,
+              0.03333333333333333,
+              0.0,
+              0.0,
+              0.1,
+              0.03333333333333333,
+              0.03333333333333333,
+              0.0,
+              0.0,
+              0.06666666666666667,
+              0.1,
+              0.23333333333333334,
+              0.03333333333333333,
+              0.06666666666666667,
+              0.13333333333333333,
+              0.13333333333333333,
+              0.03333333333333333,
+              30.0,
+              79.12690931521196,
+              16.605254279708667,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "5fea7c71b3ff20bd8ad833f2792c13687c9c1e17ff083ba042a1fb3a4829fb41"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/requirements.txt",
+              "type": ".txt",
+              "size": 13,
+              "lines": 3,
+              "words": 2,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "81394b7df04c2dd40778e7c62dd52cf1dc18c722610aa3abca8a5cb577ca0271"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/pyproject.toml",
+          "name": "pyproject.toml",
+          "ext": ".toml",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.046875,
+              0.140625,
+              0.125,
+              0.15625,
+              0.171875,
+              0.140625,
+              0.078125,
+              0.0625,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.046875,
+              0.0,
+              0.03125,
+              0.046875,
+              0.046875,
+              0.078125,
+              0.03125,
+              0.0625,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.046875,
+              0.171875,
+              0.09375,
+              0.078125,
+              0.078125,
+              0.03125,
+              0.171875,
+              0.015625,
+              64.0,
+              77.78715858684919,
+              27.524547355332878,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "b511f90fa384e06a10fa5440651e7b9297d260a378f9f655c13c53ad72afad01"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/cqe_plus_repo/pyproject.toml",
+              "type": ".toml",
+              "size": 483,
+              "lines": 20,
+              "words": 54,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "92edcb301f8e014b6d375fe8ffea8122132407fe4e0a98f2eafe460230eb098b"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        }
+      ],
+      "geometric_count": 18,
+      "semantic_count": 18,
+      "combined_count": 18
+    },
+    {
+      "archive": "Viewer24_Controller_v2_CA_Residue",
+      "total_files": 11,
+      "processed": [
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/niemeier_specs.py",
+          "name": "niemeier_specs.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.0625,
+              0.125,
+              0.1875,
+              0.125,
+              0.125,
+              0.109375,
+              0.109375,
+              0.015625,
+              0.0,
+              0.015625,
+              0.046875,
+              0.0,
+              0.0,
+              0.015625,
+              0.0625,
+              0.015625,
+              0.015625,
+              0.0625,
+              0.078125,
+              0.046875,
+              0.015625,
+              0.03125,
+              0.0,
+              0.015625,
+              0.21875,
+              0.109375,
+              0.0625,
+              0.078125,
+              0.0625,
+              0.125,
+              0.0625,
+              64.0,
+              77.10043799527017,
+              28.11118528501554,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "cc936a52d7dc7ae1472d8e8a265b9d6ba7182888ef5e45cf9ba5c0921f0fec38"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/niemeier_specs.py",
+              "type": ".py",
+              "size": 1344,
+              "lines": 29,
+              "words": 137,
+              "imports": [
+                "from typing import List"
+              ],
+              "classes": [],
+              "functions": [
+                "cartan_A",
+                "cartan_D",
+                "cartan_E6",
+                "cartan_E7",
+                "cartan_E8"
+              ],
+              "keywords": [
+                "E8"
+              ]
+            },
+            "receipt": "6ad792623567bda23cb9b0df364e0846931084eb89406edb9c2d166c5e0f9b33"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 1,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/transforms.py",
+          "name": "transforms.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.078125,
+              0.171875,
+              0.171875,
+              0.140625,
+              0.21875,
+              0.109375,
+              0.0,
+              0.0,
+              0.015625,
+              0.015625,
+              0.0,
+              0.03125,
+              0.0,
+              0.0,
+              0.046875,
+              0.015625,
+              0.03125,
+              0.046875,
+              0.09375,
+              0.015625,
+              0.03125,
+              0.03125,
+              0.0,
+              0.109375,
+              0.140625,
+              0.078125,
+              0.09375,
+              0.03125,
+              0.125,
+              0.109375,
+              0.046875,
+              64.0,
+              80.02633996310605,
+              25.825648427797223,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "99bced05539964c7a20e8a11592f0ad76f72b538084d1bb677e8956ef299b701"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/transforms.py",
+              "type": ".py",
+              "size": 694,
+              "lines": 19,
+              "words": 117,
+              "imports": [
+                "from typing import List, Tuple"
+              ],
+              "classes": [],
+              "functions": [
+                "bbox",
+                "world_to_screen"
+              ],
+              "keywords": []
+            },
+            "receipt": "d62126a2ee0ab1c1e67fc471ffbde51e8b75b7d0c34687c6983e96f6d5ced6e8"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/dihedral_ca.py",
+          "name": "dihedral_ca.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.015625,
+              0.15625,
+              0.1875,
+              0.21875,
+              0.109375,
+              0.109375,
+              0.0625,
+              0.015625,
+              0.0,
+              0.0,
+              0.015625,
+              0.0,
+              0.015625,
+              0.03125,
+              0.0625,
+              0.03125,
+              0.046875,
+              0.03125,
+              0.0,
+              0.109375,
+              0.03125,
+              0.03125,
+              0.0,
+              0.03125,
+              0.171875,
+              0.078125,
+              0.046875,
+              0.078125,
+              0.125,
+              0.09375,
+              0.09375,
+              64.0,
+              77.9431884451746,
+              28.25509882698236,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "02e76de60156127968080cea6f97f35d2e82866bd4d977d19da1388cff6d84c8"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/dihedral_ca.py",
+              "type": ".py",
+              "size": 4029,
+              "lines": 82,
+              "words": 260,
+              "imports": [
+                "import math, random",
+                "from typing import List, Tuple, Dict"
+              ],
+              "classes": [
+                "DihedralCA:"
+              ],
+              "functions": [
+                "__init__",
+                "idx",
+                "seed_from_specs",
+                "ph",
+                "neighbor_sum",
+                "step",
+                "wavelength",
+                "tile_pixels_em",
+                "wavelength_to_rgb",
+                "clamp",
+                "rgb_to_hex"
+              ],
+              "keywords": []
+            },
+            "receipt": "7b43b4b3e53301a19525ebf12fa2a7d5b4b32c2611d94efc7d3c7a02ddeeec0b"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/inverse_residue.py",
+          "name": "inverse_residue.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.09375,
+              0.109375,
+              0.15625,
+              0.171875,
+              0.171875,
+              0.125,
+              0.0625,
+              0.0,
+              0.0,
+              0.03125,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.0625,
+              0.0,
+              0.046875,
+              0.03125,
+              0.078125,
+              0.046875,
+              0.03125,
+              0.03125,
+              0.0,
+              0.125,
+              0.125,
+              0.078125,
+              0.0625,
+              0.0625,
+              0.0625,
+              0.15625,
+              0.0625,
+              64.0,
+              80.07346632790181,
+              27.02455498156531,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "63294828ed7fc8e1858f5e99d93c6166dfbe842d8a83a258aaefca4f1e334e03"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/inverse_residue.py",
+              "type": ".py",
+              "size": 3445,
+              "lines": 73,
+              "words": 341,
+              "imports": [
+                "import math",
+                "from typing import Dict, List, Tuple",
+                "from dihedral_ca import DihedralCA, wavelength_to_rgb, rgb_to_hex"
+              ],
+              "classes": [
+                "ResidueAnalyzer:"
+              ],
+              "functions": [
+                "__init__",
+                "capture_baseline",
+                "_hex_to_rgb",
+                "_nibble_hist",
+                "residue_tile",
+                "l1_rgb"
+              ],
+              "keywords": [
+                "channel"
+              ]
+            },
+            "receipt": "88d7a7f7af49bb45dc977fb1b221e4019e608cd28b03e54cb922542bcc2c91c0"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 1,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/server.py",
+          "name": "server.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.0625,
+              0.203125,
+              0.203125,
+              0.15625,
+              0.140625,
+              0.125,
+              0.03125,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0625,
+              0.0,
+              0.03125,
+              0.0,
+              0.078125,
+              0.03125,
+              0.03125,
+              0.03125,
+              0.015625,
+              0.125,
+              0.15625,
+              0.0625,
+              0.046875,
+              0.078125,
+              0.046875,
+              0.109375,
+              0.15625,
+              64.0,
+              80.09579835461096,
+              23.987666653934074,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "a1f22807123148ba7776a3edeee27457f318cae3f1c63b0c4911b5cab509ac6f"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/server.py",
+              "type": ".py",
+              "size": 4217,
+              "lines": 85,
+              "words": 327,
+              "imports": [
+                "import json, os",
+                "from urllib.parse import parse_qs",
+                "from wsgiref.simple_server import make_server",
+                "from niemeier_specs import NIEMEIER_SPECS",
+                "from transforms import world_to_screen",
+                "from dihedral_ca import DihedralCA",
+                "from inverse_residue import ResidueAnalyzer"
+              ],
+              "classes": [],
+              "functions": [
+                "read_json",
+                "respond",
+                "app",
+                "serve"
+              ],
+              "keywords": []
+            },
+            "receipt": "a90b3429cfa133000ac5e2c669094d7ce294b4849fc1530ff44638db7973d846"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/README.md",
+          "name": "README.md",
+          "ext": ".md",
+          "geometric": {
+            "embedding": [
+              0.03125,
+              0.046875,
+              0.046875,
+              0.078125,
+              0.1875,
+              0.046875,
+              0.15625,
+              0.171875,
+              0.0625,
+              0.03125,
+              0.046875,
+              0.03125,
+              0.03125,
+              0.015625,
+              0.0,
+              0.015625,
+              0.078125,
+              0.0,
+              0.015625,
+              0.046875,
+              0.0625,
+              0.171875,
+              0.03125,
+              0.09375,
+              0.0,
+              0.046875,
+              0.09375,
+              0.0,
+              0.125,
+              0.125,
+              0.109375,
+              0.0,
+              64.0,
+              73.32131767092024,
+              29.48170258304269,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "58e01cfd2d4bd2f08bf1d05260e6034c27020f4c15050b27a8eaf2babfff4074"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/README.md",
+              "type": ".md",
+              "size": 615,
+              "lines": 15,
+              "words": 87,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": [],
+              "headers": [
+                "# Viewer24 v2 + CA + Inverse Residue Viewer (stdlib)"
+              ],
+              "code_blocks": 0
+            },
+            "receipt": "3bd54fb62619a2f55c108790f8a5cc456b3211e196be3e90bca6b2bd0455d15f"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/static/index.html",
+          "name": "index.html",
+          "ext": ".html",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.0,
+              0.078125,
+              0.09375,
+              0.1875,
+              0.140625,
+              0.140625,
+              0.171875,
+              0.078125,
+              0.03125,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.078125,
+              0.03125,
+              0.0625,
+              0.015625,
+              0.125,
+              0.046875,
+              0.015625,
+              0.03125,
+              0.03125,
+              0.015625,
+              0.1875,
+              0.09375,
+              0.078125,
+              0.078125,
+              0.078125,
+              0.078125,
+              0.03125,
+              64.0,
+              74.55063951142539,
+              30.322126051711905,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "fe13d8bc5f2a5e082db74b10467838ffea71b64d527752f23eb422f79508aea2"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/static/index.html",
+              "type": ".html",
+              "size": 789,
+              "lines": 27,
+              "words": 61,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "b24fe43e12f0ca8cde3431410ef47c8eb59ff1e97e836ca7839851ed8d470260"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/static/inverse.html",
+          "name": "inverse.html",
+          "ext": ".html",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.0,
+              0.078125,
+              0.15625,
+              0.140625,
+              0.171875,
+              0.15625,
+              0.171875,
+              0.03125,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.078125,
+              0.03125,
+              0.03125,
+              0.03125,
+              0.109375,
+              0.046875,
+              0.015625,
+              0.046875,
+              0.015625,
+              0.046875,
+              0.171875,
+              0.0625,
+              0.09375,
+              0.109375,
+              0.0625,
+              0.078125,
+              0.046875,
+              64.0,
+              76.16986215289236,
+              29.816112559968065,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "39d5c8289255be042e9ebd483169744614c26e0a60bc2b95e748097846889742"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/static/inverse.html",
+              "type": ".html",
+              "size": 572,
+              "lines": 23,
+              "words": 44,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "082419c9e21cb7ec34ae09a7b7437c0fba509cc645198749ced7871bdc80f66e"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/static/main.js",
+          "name": "main.js",
+          "ext": ".js",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.046875,
+              0.078125,
+              0.109375,
+              0.15625,
+              0.140625,
+              0.1875,
+              0.125,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.0,
+              0.03125,
+              0.0,
+              0.0625,
+              0.0,
+              0.03125,
+              0.078125,
+              0.046875,
+              0.09375,
+              0.015625,
+              0.046875,
+              0.03125,
+              0.0,
+              0.171875,
+              0.0625,
+              0.078125,
+              0.078125,
+              0.125,
+              0.109375,
+              0.03125,
+              64.0,
+              76.85773592986997,
+              30.26575545423479,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "3a285f171a887b18e48ead2878cbc8a58cc6a7f43412fc5bbe1512ba1f059a9a"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/static/main.js",
+              "type": ".js",
+              "size": 2839,
+              "lines": 53,
+              "words": 268,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "ff09a8e49542e321d349b2c6fa2155f0e8c3b7dfc13f20f6d7d9df0940f41031"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/static/inverse.js",
+          "name": "inverse.js",
+          "ext": ".js",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.046875,
+              0.140625,
+              0.09375,
+              0.125,
+              0.140625,
+              0.21875,
+              0.109375,
+              0.015625,
+              0.0,
+              0.03125,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.046875,
+              0.0,
+              0.03125,
+              0.0625,
+              0.03125,
+              0.09375,
+              0.015625,
+              0.046875,
+              0.015625,
+              0.0625,
+              0.171875,
+              0.0625,
+              0.03125,
+              0.09375,
+              0.09375,
+              0.140625,
+              0.046875,
+              64.0,
+              76.58824981526621,
+              28.615275175719862,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "e8fbc60af4d68dc05271c812f1fc940b813b8434436f817475dc726399fda000"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/static/inverse.js",
+              "type": ".js",
+              "size": 2536,
+              "lines": 58,
+              "words": 240,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "f50f1040e0ed4a09afefa72ae362350d825d245e40c2d1c6fa6a45c96389eb97"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/static/style.css",
+          "name": "style.css",
+          "ext": ".css",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.046875,
+              0.078125,
+              0.171875,
+              0.1875,
+              0.15625,
+              0.171875,
+              0.0625,
+              0.046875,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.046875,
+              0.03125,
+              0.046875,
+              0.0625,
+              0.046875,
+              0.078125,
+              0.015625,
+              0.015625,
+              0.046875,
+              0.078125,
+              0.109375,
+              0.078125,
+              0.078125,
+              0.09375,
+              0.09375,
+              0.125,
+              0.0,
+              64.0,
+              77.26660925813944,
+              27.59290760920456,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "a4d008e58d1b3ce87c8c434a9a3f5198f7b9f5127f305df9ec1c4fc2f5af605d"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Viewer24_Controller_v2_CA_Residue/Viewer24_Controller_v2_CA_Residue/static/style.css",
+              "type": ".css",
+              "size": 789,
+              "lines": 11,
+              "words": 107,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "e0080dc0e7edd0b9953ccdb23b9812ef37140ef0eace19ece8c586d3928c55bd"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        }
+      ],
+      "geometric_count": 11,
+      "semantic_count": 11,
+      "combined_count": 11
+    },
+    {
+      "archive": "Morphonic-LambdaSuite_v1",
+      "total_files": 14,
+      "processed": [
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/__init__.py",
+          "name": "__init__.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.0625,
+              0.0625,
+              0.0625,
+              0.046875,
+              0.15625,
+              0.078125,
+              0.109375,
+              0.09375,
+              0.046875,
+              0.078125,
+              0.0,
+              0.0,
+              0.015625,
+              0.09375,
+              0.09375,
+              0.03125,
+              0.015625,
+              0.03125,
+              0.015625,
+              0.109375,
+              0.09375,
+              0.0,
+              0.015625,
+              0.046875,
+              0.0625,
+              0.078125,
+              0.09375,
+              0.09375,
+              0.171875,
+              0.046875,
+              0.09375,
+              64.0,
+              66.63438753048234,
+              32.9526156730994,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "dc906f4c475c694db7acb41d613d1ffd118abc78b091f28ae131eee085498311"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/__init__.py",
+              "type": ".py",
+              "size": 101,
+              "lines": 3,
+              "words": 2,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "83b0eff2369b9c5888e3057e2f389f8e8f74f39f3251600268e56c0cadc54533"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/ast.py",
+          "name": "ast.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.03125,
+              0.0625,
+              0.171875,
+              0.15625,
+              0.171875,
+              0.203125,
+              0.046875,
+              0.0,
+              0.0,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.078125,
+              0.0625,
+              0.046875,
+              0.0,
+              0.015625,
+              0.0625,
+              0.078125,
+              0.015625,
+              0.03125,
+              0.03125,
+              0.046875,
+              0.09375,
+              0.09375,
+              0.109375,
+              0.046875,
+              0.140625,
+              0.140625,
+              0.046875,
+              64.0,
+              76.8179920737974,
+              30.574560403221643,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "93b55c7a57f9b6b5289ed3518ab556fde48661c29609a5d7562a374d245ae908"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/ast.py",
+              "type": ".py",
+              "size": 729,
+              "lines": 53,
+              "words": 84,
+              "imports": [
+                "from dataclasses import dataclass",
+                "from typing import Any, List, Optional"
+              ],
+              "classes": [
+                "Var:",
+                "Lam:",
+                "App:",
+                "Let:",
+                "Const:",
+                "Pair:",
+                "Fst:",
+                "Snd:",
+                "If:",
+                "Mu:"
+              ],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "6e69be62081228c203306fb8901b3b909f755ed532ce868895cf6115b0f274a5"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/typesys.py",
+          "name": "typesys.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.046875,
+              0.109375,
+              0.09375,
+              0.21875,
+              0.15625,
+              0.21875,
+              0.03125,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.125,
+              0.03125,
+              0.0,
+              0.015625,
+              0.0625,
+              0.0625,
+              0.015625,
+              0.03125,
+              0.015625,
+              0.09375,
+              0.125,
+              0.09375,
+              0.0625,
+              0.0625,
+              0.0625,
+              0.21875,
+              0.046875,
+              64.0,
+              75.22082237745494,
+              29.023804438718567,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "816e7b9e09870c82426a908c2f8ed2b32cfb1902a69237f5cc1b63a15f817d3f"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/typesys.py",
+              "type": ".py",
+              "size": 852,
+              "lines": 40,
+              "words": 92,
+              "imports": [
+                "from dataclasses import dataclass",
+                "from typing import Optional, Dict"
+              ],
+              "classes": [
+                "TyVar:",
+                "Arrow:",
+                "Bool: pass",
+                "Nat: pass",
+                "Prod:",
+                "Grade:"
+              ],
+              "functions": [
+                "pretty"
+              ],
+              "keywords": []
+            },
+            "receipt": "5ca59cfbab16e9f39f0f19b9936b167193cf536db133880128987015dc11bbe4"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/typing.py",
+          "name": "typing.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.0625,
+              0.140625,
+              0.171875,
+              0.1875,
+              0.15625,
+              0.171875,
+              0.03125,
+              0.0,
+              0.015625,
+              0.0,
+              0.015625,
+              0.0,
+              0.015625,
+              0.0,
+              0.03125,
+              0.015625,
+              0.046875,
+              0.015625,
+              0.09375,
+              0.03125,
+              0.015625,
+              0.046875,
+              0.0,
+              0.140625,
+              0.125,
+              0.125,
+              0.015625,
+              0.015625,
+              0.09375,
+              0.140625,
+              0.078125,
+              64.0,
+              77.7359830235691,
+              24.965364858870526,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "09a4827527dc6948206851215f5217138ad600d619afdadfca1cb87591a5a41f"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/typing.py",
+              "type": ".py",
+              "size": 2157,
+              "lines": 52,
+              "words": 256,
+              "imports": [
+                "from typing import Dict, Optional, Tuple",
+                "from . import ast as A",
+                "from .typesys import Type, Arrow, Bool, Nat, Prod, pretty"
+              ],
+              "classes": [
+                "TypeError_"
+              ],
+              "functions": [
+                "type_of"
+              ],
+              "keywords": []
+            },
+            "receipt": "fcdc45d33fa8f9d06e1f0f10b3d4d8db30e1698d2f6f87129a7290d1f1311625"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/eval.py",
+          "name": "eval.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.0625,
+              0.0625,
+              0.171875,
+              0.1875,
+              0.265625,
+              0.09375,
+              0.03125,
+              0.03125,
+              0.0,
+              0.0,
+              0.0,
+              0.015625,
+              0.0,
+              0.0,
+              0.0625,
+              0.046875,
+              0.015625,
+              0.046875,
+              0.09375,
+              0.046875,
+              0.015625,
+              0.03125,
+              0.03125,
+              0.046875,
+              0.140625,
+              0.15625,
+              0.03125,
+              0.015625,
+              0.09375,
+              0.140625,
+              0.046875,
+              64.0,
+              78.86119536733909,
+              26.599339889797974,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "dade807f9f68f5dde0c6d6c7cc720c715068aa6cb213649c3b757f92f545336a"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/eval.py",
+              "type": ".py",
+              "size": 3432,
+              "lines": 82,
+              "words": 394,
+              "imports": [
+                "from typing import Any, Dict, Tuple",
+                "from . import ast as A"
+              ],
+              "classes": [
+                "EvalError"
+              ],
+              "functions": [
+                "is_value",
+                "subst",
+                "delta_step",
+                "step",
+                "eval_normal"
+              ],
+              "keywords": []
+            },
+            "receipt": "91343da26b12f4c55f84caf1625ff0d6c4219d106392fc4675f4b7c60249f444"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/modal.py",
+          "name": "modal.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.03125,
+              0.078125,
+              0.15625,
+              0.125,
+              0.1875,
+              0.21875,
+              0.03125,
+              0.015625,
+              0.0,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.0625,
+              0.078125,
+              0.046875,
+              0.0,
+              0.015625,
+              0.078125,
+              0.078125,
+              0.015625,
+              0.015625,
+              0.03125,
+              0.015625,
+              0.15625,
+              0.09375,
+              0.09375,
+              0.046875,
+              0.140625,
+              0.140625,
+              0.03125,
+              64.0,
+              76.1296758108328,
+              30.701365534545626,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "479550f50de2f86b293afd7b1ea2bb66cde6922e8c899dac60cabb0b0b86dc3d"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/modal.py",
+              "type": ".py",
+              "size": 281,
+              "lines": 15,
+              "words": 44,
+              "imports": [
+                "from dataclasses import dataclass",
+                "from typing import Any",
+                "from . import ast as A"
+              ],
+              "classes": [
+                "Box:",
+                "Diamond:"
+              ],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "4be13597c5a8484d75cf8569bede86e3d0802dfa528fc5d0fcd7b2b30d05c91e"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/glyphs.py",
+          "name": "glyphs.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.078125,
+              0.125,
+              0.171875,
+              0.25,
+              0.15625,
+              0.09375,
+              0.03125,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.046875,
+              0.03125,
+              0.046875,
+              0.03125,
+              0.09375,
+              0.03125,
+              0.0,
+              0.046875,
+              0.015625,
+              0.078125,
+              0.15625,
+              0.15625,
+              0.015625,
+              0.03125,
+              0.078125,
+              0.09375,
+              0.09375,
+              64.0,
+              78.86668562557007,
+              24.98820843081182,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "06856bce1118c3ee543388c2e1f4620cbe4ec35aba264e9ae00f1998f7c9a5de"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/glyphs.py",
+              "type": ".py",
+              "size": 892,
+              "lines": 30,
+              "words": 109,
+              "imports": [
+                "from typing import Dict, Any",
+                "from . import ast as A"
+              ],
+              "classes": [],
+              "functions": [
+                "parse_tokens"
+              ],
+              "keywords": []
+            },
+            "receipt": "d65715ff7c542666ea285f36f459750fa334a4a7ce374787d094867fcdf7b168"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/e8_bridge.py",
+          "name": "e8_bridge.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.03125,
+              0.03125,
+              0.125,
+              0.234375,
+              0.09375,
+              0.0625,
+              0.09375,
+              0.140625,
+              0.03125,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.03125,
+              0.09375,
+              0.046875,
+              0.0,
+              0.0625,
+              0.125,
+              0.015625,
+              0.0625,
+              0.046875,
+              0.03125,
+              0.03125,
+              0.078125,
+              0.109375,
+              0.125,
+              0.046875,
+              0.140625,
+              0.046875,
+              0.03125,
+              64.0,
+              73.58711488136018,
+              31.458136185159212,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "935d1121ef67cc3b8e6f6d3d6085149f73c5b3d8780367ec698fd9784bc6e302"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/e8_bridge.py",
+              "type": ".py",
+              "size": 10000,
+              "lines": 278,
+              "words": 957,
+              "imports": [
+                "import sys",
+                "from typing import Dict, List, Tuple, Optional, Any, Union",
+                "from dataclasses import dataclass",
+                "from enum import Enum",
+                "import hashlib",
+                "import json"
+              ],
+              "classes": [
+                "LambdaType",
+                "LambdaTerm:",
+                "LambdaE8Builder:",
+                "GeometricLambdaCapture:"
+              ],
+              "functions": [
+                "__post_init__",
+                "to_string",
+                "__init__",
+                "fresh_var",
+                "var",
+                "abs",
+                "app",
+                "e8_embed",
+                "e8_project",
+                "e8_navigate",
+                "dihedral",
+                "path_compose",
+                "conserve",
+                "compose",
+                "__init__",
+                "capture_attention",
+                "capture_feedforward",
+                "capture_layer_norm"
+              ],
+              "keywords": [
+                "lattice",
+                "E8",
+                "lambda",
+                "geometric",
+                "embedding"
+              ]
+            },
+            "receipt": "19d722b0743738003845d81609ef46a9c7d9a7daad5fe2c934d1493b5e51c462"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 5,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/runtime.py",
+          "name": "runtime.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.046875,
+              0.140625,
+              0.140625,
+              0.203125,
+              0.15625,
+              0.1875,
+              0.0,
+              0.03125,
+              0.015625,
+              0.0,
+              0.0,
+              0.03125,
+              0.0,
+              0.0,
+              0.03125,
+              0.015625,
+              0.046875,
+              0.015625,
+              0.125,
+              0.03125,
+              0.015625,
+              0.046875,
+              0.0,
+              0.078125,
+              0.171875,
+              0.109375,
+              0.046875,
+              0.03125,
+              0.046875,
+              0.171875,
+              0.046875,
+              64.0,
+              77.8950130408913,
+              25.50483657881056,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "6f4f984a79c8da6ceb5be5d9a8d1c3d43a743b5f153d4af89413680afe2eff43"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/morphonic_lambda/runtime.py",
+              "type": ".py",
+              "size": 1319,
+              "lines": 32,
+              "words": 134,
+              "imports": [
+                "from typing import Any, Dict, Tuple, Optional",
+                "from . import ast as A",
+                "from .eval import eval_normal",
+                "import json, hashlib",
+                "from morphonic_cqe_unified.sidecar.speedlight_sidecar_plus import SpeedLightPlus as SpeedLight",
+                "from speedlight_sidecar_plus import SpeedLightPlus as SpeedLight  # type: ignore"
+              ],
+              "classes": [],
+              "functions": [
+                "_hash_payload",
+                "eval_with_sidecar",
+                "compute"
+              ],
+              "keywords": [
+                "sidecar",
+                "lambda",
+                "channel"
+              ]
+            },
+            "receipt": "5f6b9c3bd24b18c07653e9cc45d5a366c46963039017a0343e555a944d50d108"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 3,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/examples/factorial_mu.py",
+          "name": "factorial_mu.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.015625,
+              0.03125,
+              0.03125,
+              0.109375,
+              0.28125,
+              0.125,
+              0.125,
+              0.0625,
+              0.015625,
+              0.0,
+              0.0,
+              0.0,
+              0.015625,
+              0.109375,
+              0.078125,
+              0.0,
+              0.015625,
+              0.046875,
+              0.078125,
+              0.0625,
+              0.03125,
+              0.015625,
+              0.0,
+              0.03125,
+              0.09375,
+              0.140625,
+              0.125,
+              0.078125,
+              0.109375,
+              0.0625,
+              0.109375,
+              64.0,
+              72.26427870367559,
+              34.822630321664235,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "6ed3dd69c7bba6ffb35567952f516cf7eaa40cd04d948baf55b80227a342e92a"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/examples/factorial_mu.py",
+              "type": ".py",
+              "size": 469,
+              "lines": 12,
+              "words": 66,
+              "imports": [
+                "from morphonic_lambda import ast as A, eval as E"
+              ],
+              "classes": [],
+              "functions": [],
+              "keywords": [
+                "lambda"
+              ]
+            },
+            "receipt": "a167e323d48ed621b8ae21e4824b14835eed0c8356acd8839027e91cb27336bd"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 1,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/tests/test_beta_eta_delta_mu.py",
+          "name": "test_beta_eta_delta_mu.py",
+          "ext": ".py",
+          "geometric": {
+            "embedding": [
+              0.015625,
+              0.015625,
+              0.0,
+              0.046875,
+              0.046875,
+              0.171875,
+              0.171875,
+              0.140625,
+              0.09375,
+              0.03125,
+              0.03125,
+              0.0,
+              0.0,
+              0.0,
+              0.09375,
+              0.140625,
+              0.0,
+              0.015625,
+              0.015625,
+              0.09375,
+              0.109375,
+              0.03125,
+              0.0,
+              0.0,
+              0.015625,
+              0.078125,
+              0.15625,
+              0.109375,
+              0.140625,
+              0.09375,
+              0.078125,
+              0.0625,
+              64.0,
+              69.3560292192575,
+              36.74060980272349,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "048d61275e9dd47818b2a44c4cefaba4493d3924d7d94d6604edeb43c0974591"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/tests/test_beta_eta_delta_mu.py",
+              "type": ".py",
+              "size": 723,
+              "lines": 22,
+              "words": 92,
+              "imports": [
+                "from morphonic_lambda import ast as A, eval as E"
+              ],
+              "classes": [],
+              "functions": [
+                "test_beta",
+                "test_delta_succ",
+                "test_pair_proj",
+                "test_mu_unrolls"
+              ],
+              "keywords": [
+                "lambda"
+              ]
+            },
+            "receipt": "56ffe21561180b0b6faaeb690cde02236e7fc6a416fab8d62c0fa9f97a8af98a"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 1,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/README.md",
+          "name": "README.md",
+          "ext": ".md",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.0,
+              0.046875,
+              0.03125,
+              0.015625,
+              0.03125,
+              0.078125,
+              0.078125,
+              0.15625,
+              0.15625,
+              0.171875,
+              0.0625,
+              0.03125,
+              0.015625,
+              0.078125,
+              0.046875,
+              0.078125,
+              0.0,
+              0.125,
+              0.046875,
+              0.09375,
+              0.0625,
+              0.046875,
+              0.015625,
+              0.015625,
+              0.046875,
+              0.109375,
+              0.109375,
+              0.15625,
+              0.0625,
+              0.03125,
+              0.0,
+              64.0,
+              62.0136152515115,
+              36.587510543813686,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "fb950e443bfb90efa07c1da205110e66165b379682fde2ab28227681c6bebc81"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/README.md",
+              "type": ".md",
+              "size": 76,
+              "lines": 3,
+              "words": 11,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": [],
+              "headers": [
+                "# Morphonic Lambda Suite v1"
+              ],
+              "code_blocks": 0
+            },
+            "receipt": "980f4977dd5a1a2034e3f3ca1c9f10be9ecd38b54e0fbeddae0de1a57216bde3"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/docs/MGLC_Spec_v1.0.md",
+          "name": "MGLC_Spec_v1.0.md",
+          "ext": ".md",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.015625,
+              0.0,
+              0.0625,
+              0.03125,
+              0.09375,
+              0.09375,
+              0.140625,
+              0.125,
+              0.15625,
+              0.0625,
+              0.03125,
+              0.03125,
+              0.0,
+              0.0625,
+              0.09375,
+              0.015625,
+              0.0,
+              0.046875,
+              0.09375,
+              0.078125,
+              0.078125,
+              0.046875,
+              0.03125,
+              0.015625,
+              0.046875,
+              0.0625,
+              0.140625,
+              0.15625,
+              0.09375,
+              0.0625,
+              0.03125,
+              64.0,
+              65.35215789104156,
+              36.38454704252898,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "f81101545ebb8e2e00c1ebafecadd16b5ca6bfdb4b3c5fcc1ba21c1e89004d19"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/docs/MGLC_Spec_v1.0.md",
+              "type": ".md",
+              "size": 1631,
+              "lines": 37,
+              "words": 274,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": [],
+              "headers": [
+                "# Morphonic Geometry\u2011Native Lambda Calculus (MGLC) \u2014 Spec v1.0",
+                "## 1. Syntax (core)",
+                "## 2. Types",
+                "## 3. Reductions",
+                "## 4. Subject reduction & progress (sketch)",
+                "## 5. Modal/Channel semantics",
+                "## 6. Glyph/Sound",
+                "## 7. Sidecar integration"
+              ],
+              "code_blocks": 0
+            },
+            "receipt": "12ce6fca5096236214db04e148c326328acf4d017b7e4a704455ceb59175810d"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        },
+        {
+          "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/pyproject.toml",
+          "name": "pyproject.toml",
+          "ext": ".toml",
+          "geometric": {
+            "embedding": [
+              0.0,
+              0.03125,
+              0.15625,
+              0.109375,
+              0.109375,
+              0.21875,
+              0.140625,
+              0.09375,
+              0.03125,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.046875,
+              0.015625,
+              0.046875,
+              0.015625,
+              0.046875,
+              0.078125,
+              0.046875,
+              0.0625,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.015625,
+              0.171875,
+              0.125,
+              0.078125,
+              0.09375,
+              0.03125,
+              0.171875,
+              0.015625,
+              64.0,
+              77.18776726927412,
+              29.21793738901411,
+              0.0
+            ],
+            "dim": 36,
+            "receipt": "3c8cfc82dc24c1b74a22a3ad47e6f7697fa873c109821cb8d061dfe934b96b3f"
+          },
+          "semantic": {
+            "analysis": {
+              "file": "/home/ubuntu/cqe_workspace/extracted/Morphonic-LambdaSuite_v1/Morphonic-LambdaSuite_v1/pyproject.toml",
+              "type": ".toml",
+              "size": 506,
+              "lines": 17,
+              "words": 51,
+              "imports": [],
+              "classes": [],
+              "functions": [],
+              "keywords": []
+            },
+            "receipt": "e2e377d68e981a4350cc8d28a44ffb876f873d7c465403e332d537dd843d0955"
+          },
+          "combined": {
+            "has_both": true,
+            "geometric_dim": 36,
+            "semantic_features": 0,
+            "correlation_ready": true
+          }
+        }
+      ],
+      "geometric_count": 14,
+      "semantic_count": 14,
+      "combined_count": 14
+    }
+  ],
+  "total_files": 82,
+  "total_geometric": 82,
+  "total_semantic": 82,
+  "total_combined": 82
+}

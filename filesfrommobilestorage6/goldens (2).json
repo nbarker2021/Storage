@@ -1,0 +1,144 @@
+[
+  {
+    "name": "demo-promotion",
+    "passed": false,
+    "details": {
+      "promoted": 0,
+      "shells": 3,
+      "decisions": {
+        "ffa87199": {
+          "coh": 0.9999999999977913,
+          "red": 0.0,
+          "nov": 2.2086776851892864e-12,
+          "contra": 0.0,
+          "size": 1,
+          "thresholds": {
+            "tau_coh": 0.6,
+            "tau_red": 0.92,
+            "tau_nov_min": 0.02,
+            "tau_nov_max": 0.4
+          },
+          "decision": "reject"
+        },
+        "ffe87199": {
+          "coh": 0.9999999999976829,
+          "red": 0.0,
+          "nov": 2.3171464746951642e-12,
+          "contra": 0.0,
+          "size": 1,
+          "thresholds": {
+            "tau_coh": 0.6,
+            "tau_red": 0.92,
+            "tau_nov_min": 0.02,
+            "tau_nov_max": 0.4
+          },
+          "decision": "reject"
+        },
+        "00578e66": {
+          "coh": 0.9999999999977913,
+          "red": 0.0,
+          "nov": 2.2086776851892864e-12,
+          "contra": 0.0,
+          "size": 1,
+          "thresholds": {
+            "tau_coh": 0.6,
+            "tau_red": 0.92,
+            "tau_nov_min": 0.02,
+            "tau_nov_max": 0.4
+          },
+          "decision": "reject"
+        }
+      }
+    }
+  },
+  {
+    "name": "ref-64d-promotion",
+    "passed": false,
+    "details": {
+      "promoted": 0,
+      "shells": 3,
+      "decisions": {
+        "fb": {
+          "coh": 0.9999999999979999,
+          "red": 0.0,
+          "nov": 2.0000667788622195e-12,
+          "contra": 0.0,
+          "size": 1,
+          "thresholds": {
+            "tau_coh": 0.6,
+            "tau_red": 0.92,
+            "tau_nov_min": 0.02,
+            "tau_nov_max": 0.4
+          },
+          "decision": "reject"
+        },
+        "91": {
+          "coh": 0.9999999999979998,
+          "red": 0.0,
+          "nov": 2.000177801164682e-12,
+          "contra": 0.0,
+          "size": 1,
+          "thresholds": {
+            "tau_coh": 0.6,
+            "tau_red": 0.92,
+            "tau_nov_min": 0.02,
+            "tau_nov_max": 0.4
+          },
+          "decision": "reject"
+        },
+        "d1": {
+          "coh": 0.9999999999979996,
+          "red": 0.0,
+          "nov": 2.000399845769607e-12,
+          "contra": 0.0,
+          "size": 1,
+          "thresholds": {
+            "tau_coh": 0.6,
+            "tau_red": 0.92,
+            "tau_nov_min": 0.02,
+            "tau_nov_max": 0.4
+          },
+          "decision": "reject"
+        }
+      }
+    }
+  },
+  {
+    "name": "ref-64d-promotion-bits2",
+    "passed": true,
+    "details": {
+      "promoted": 1,
+      "shells": 2,
+      "decisions": {
+        "3": {
+          "coh": 0.7900276462686031,
+          "red": 0.24828736374257906,
+          "nov": 0.20997235373139683,
+          "contra": 0.0,
+          "size": 2,
+          "thresholds": {
+            "tau_coh": 0.6,
+            "tau_red": 0.92,
+            "tau_nov_min": 0.02,
+            "tau_nov_max": 0.4
+          },
+          "decision": "approve"
+        },
+        "2": {
+          "coh": 0.9999999999979998,
+          "red": 0.0,
+          "nov": 2.000177801164682e-12,
+          "contra": 0.0,
+          "size": 1,
+          "thresholds": {
+            "tau_coh": 0.6,
+            "tau_red": 0.92,
+            "tau_nov_min": 0.02,
+            "tau_nov_max": 0.4
+          },
+          "decision": "reject"
+        }
+      }
+    }
+  }
+]

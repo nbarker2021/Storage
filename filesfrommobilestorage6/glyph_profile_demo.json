@@ -1,0 +1,18 @@
+{
+  "vectorizer": {
+    "mode": "svg",
+    "dpi": 300,
+    "min_stroke_len_px": 2
+  },
+  "symmetry": {
+    "angle_bin_deg": 15,
+    "reflection_tol": 0.1
+  },
+  "limits": {
+    "strokes_max": 128,
+    "crossings_max": 256
+  },
+  "kappa": {
+    "stroke_dtau": 0.01
+  }
+}

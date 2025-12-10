@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:schemas:master-codex:v0.1",
+  "title": "Master Codex Entry v0.1",
+  "type": "object",
+  "required": [
+    "id",
+    "term",
+    "kind",
+    "definitions",
+    "updated_at",
+    "e8",
+    "axes"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable ID (mdhg or UUID)"
+    },
+    "term": {
+      "type": "string",
+      "description": "Canonical term/identifier (snake_case)"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "term",
+        "concept",
+        "function",
+        "rule",
+        "symbol",
+        "dataset",
+        "persona",
+        "policy",
+        "microop",
+        "component"
+      ]
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "definitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "lang",
+          "text"
+        ],
+        "properties": {
+          "lang": {
+            "type": "string",
+            "default": "en"
+          },
+          "text": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    },
+    "python_stub": {
+      "type": "string",
+      "description": "Optional stub or signature"
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "e8": {
+      "$ref": "urn:schemas:e8-addressing:v0.1"
+    },
+    "axes": {
+      "type": "object"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "proposed",
+        "approved",
+        "deprecated"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

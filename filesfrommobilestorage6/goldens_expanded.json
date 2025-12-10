@@ -1,0 +1,58 @@
+{
+  "policy_borders": [
+    {
+      "name": "border_approve",
+      "ok": false,
+      "report": {
+        "coh": 0.9991672942890574,
+        "red": 0.9966705639598279,
+        "nov": 0.0008327057109426272,
+        "contra": 0.0,
+        "size": 2,
+        "thresholds": {
+          "tau_coh": 0.6,
+          "tau_red": 0.92,
+          "tau_nov_min": 0.02,
+          "tau_nov_max": 0.4
+        },
+        "decision": "reject"
+      }
+    },
+    {
+      "name": "border_redundant",
+      "ok": false,
+      "report": {
+        "coh": 0.999999999997999,
+        "red": 0.999999999997999,
+        "nov": 2.0009549572819196e-12,
+        "contra": 0.0,
+        "size": 2,
+        "thresholds": {
+          "tau_coh": 0.6,
+          "tau_red": 0.92,
+          "tau_nov_min": 0.02,
+          "tau_nov_max": 0.4
+        },
+        "decision": "reject"
+      }
+    },
+    {
+      "name": "border_too_novel",
+      "ok": false,
+      "report": {
+        "coh": 0.0,
+        "red": -0.9999999999980002,
+        "nov": 1.0,
+        "contra": 0.0,
+        "size": 2,
+        "thresholds": {
+          "tau_coh": 0.6,
+          "tau_red": 0.92,
+          "tau_nov_min": 0.02,
+          "tau_nov_max": 0.4
+        },
+        "decision": "reject"
+      }
+    }
+  ]
+}

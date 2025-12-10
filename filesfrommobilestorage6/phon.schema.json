@@ -1,0 +1,242 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://morphonic.org/schemas/phon.schema.json",
+  "title": "\u039b\u039f\u03c8 Phonetic Program",
+  "type": "object",
+  "required": [
+    "profile",
+    "program"
+  ],
+  "properties": {
+    "profile": {
+      "type": "object",
+      "required": [
+        "stft",
+        "chroma",
+        "spl_max",
+        "tempo_grid",
+        "meter_options"
+      ],
+      "properties": {
+        "stft": {
+          "type": "object",
+          "required": [
+            "fs_hz",
+            "win_ms",
+            "hop_ms"
+          ],
+          "properties": {
+            "fs_hz": {
+              "type": "number"
+            },
+            "win_ms": {
+              "type": "number"
+            },
+            "hop_ms": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": false
+        },
+        "chroma": {
+          "type": "object",
+          "required": [
+            "bins",
+            "ref_a_hz"
+          ],
+          "properties": {
+            "bins": {
+              "type": "integer",
+              "enum": [
+                12,
+                24
+              ]
+            },
+            "ref_a_hz": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": false
+        },
+        "spl_max": {
+          "type": "number",
+          "description": "Sound pressure level cap (dB SPL)."
+        },
+        "tempo_grid": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "meter_options": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "program": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "oneOf": [
+          {
+            "title": "Meter",
+            "required": [
+              "op",
+              "numerator",
+              "denominator"
+            ],
+            "properties": {
+              "op": {
+                "const": "meter"
+              },
+              "numerator": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "denominator": {
+                "type": "integer",
+                "enum": [
+                  1,
+                  2,
+                  4,
+                  8,
+                  16
+                ]
+              },
+              "start_beat": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "title": "Tempo",
+            "required": [
+              "op",
+              "bpm"
+            ],
+            "properties": {
+              "op": {
+                "const": "tempo"
+              },
+              "bpm": {
+                "type": "number",
+                "minimum": 10,
+                "maximum": 400
+              },
+              "at_beat": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "title": "Phoneme",
+            "required": [
+              "op",
+              "symbol",
+              "voicing",
+              "manner",
+              "place",
+              "start_beat",
+              "dur_beats"
+            ],
+            "properties": {
+              "op": {
+                "const": "phoneme"
+              },
+              "symbol": {
+                "type": "string"
+              },
+              "voicing": {
+                "type": "string",
+                "enum": [
+                  "V",
+                  "UV"
+                ]
+              },
+              "manner": {
+                "type": "string",
+                "enum": [
+                  "stop",
+                  "fricative",
+                  "affricate",
+                  "nasal",
+                  "liquid",
+                  "glide",
+                  "vowel"
+                ]
+              },
+              "place": {
+                "type": "string",
+                "enum": [
+                  "labial",
+                  "coronal",
+                  "dorsal",
+                  "glottal",
+                  "NA"
+                ]
+              },
+              "start_beat": {
+                "type": "number"
+              },
+              "dur_beats": {
+                "type": "number"
+              },
+              "spl": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "title": "Stress",
+            "required": [
+              "op",
+              "beat",
+              "level"
+            ],
+            "properties": {
+              "op": {
+                "const": "stress"
+              },
+              "beat": {
+                "type": "integer"
+              },
+              "level": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 3
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "title": "Crescendo",
+            "required": [
+              "op",
+              "from_beat",
+              "to_beat"
+            ],
+            "properties": {
+              "op": {
+                "const": "crescendo"
+              },
+              "from_beat": {
+                "type": "number"
+              },
+              "to_beat": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    }
+  }
+}

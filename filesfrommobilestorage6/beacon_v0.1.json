@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:schemas:beacon:v0.1",
+  "title": "Beacon v0.1",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "scope",
+    "level",
+    "w5h",
+    "policy",
+    "e8",
+    "axes",
+    "updated_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string",
+      "enum": [
+        "system",
+        "tenant",
+        "domain",
+        "component",
+        "microop",
+        "dataset",
+        "persona",
+        "policy"
+      ]
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "beacon",
+        "sub_beacon"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "triggers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "e8": {
+      "$ref": "urn:schemas:e8-addressing:v0.1"
+    },
+    "axes": {
+      "type": "object"
+    },
+    "w5h": {
+      "type": "object",
+      "required": [
+        "who",
+        "what",
+        "where",
+        "when",
+        "why",
+        "how"
+      ],
+      "properties": {
+        "who": {
+          "$ref": "urn:schemas:w5h-vector:v0.1"
+        },
+        "what": {
+          "$ref": "urn:schemas:w5h-vector:v0.1"
+        },
+        "where": {
+          "$ref": "urn:schemas:w5h-vector:v0.1"
+        },
+        "when": {
+          "$ref": "urn:schemas:w5h-vector:v0.1"
+        },
+        "why": {
+          "$ref": "urn:schemas:w5h-vector:v0.1"
+        },
+        "how": {
+          "$ref": "urn:schemas:w5h-vector:v0.1"
+        }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "priority_contexts": {
+          "type": "array",
+          "minItems": 5,
+          "items": {
+            "type": "string"
+          },
+          "description": "At least 5 high-priority context views to aggregate over."
+        },
+        "aggregation": {
+          "type": "string",
+          "enum": [
+            "mean",
+            "weighted_mean",
+            "harmonic",
+            "geometric"
+          ]
+        },
+        "weights": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "thresholds": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,8 @@
+{
+  "M": 32,
+  "N_datasets": 100,
+  "mean_ops_with_cache": 132.0,
+  "mean_ops_no_cache": 4228.0,
+  "mean_steps": 6.0,
+  "ops_savings_factor": 32.03030303030303
+}

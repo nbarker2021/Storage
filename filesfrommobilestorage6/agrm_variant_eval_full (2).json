@@ -1,0 +1,465 @@
+{
+  "patched_variants": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "evaluations": [
+    {
+      "builder": "AGRMBuilderV1",
+      "db": "unified_v1.db",
+      "ingested": 1,
+      "promotion": {
+        "promoted": 0,
+        "shells": 1,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    },
+    {
+      "builder": "AGRMBuilderV3",
+      "db": "unified_v3.db",
+      "ingested": 1,
+      "promotion": {
+        "promoted": 0,
+        "shells": 1,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    },
+    {
+      "builder": "AGRMBuilderV4",
+      "db": "unified_v4.db",
+      "ingested": 1,
+      "promotion": {
+        "promoted": 0,
+        "shells": 1,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    },
+    {
+      "builder": "AGRMBuilderV5",
+      "db": "unified_v5.db",
+      "ingested": 1,
+      "promotion": {
+        "promoted": 0,
+        "shells": 1,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    },
+    {
+      "builder": "AGRMBuilderV6",
+      "db": "unified_v6.db",
+      "ingested": 1,
+      "promotion": {
+        "promoted": 0,
+        "shells": 1,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    },
+    {
+      "builder": "AGRMBuilderV7",
+      "db": "unified_v7.db",
+      "ingested": 1,
+      "promotion": {
+        "promoted": 0,
+        "shells": 1,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    },
+    {
+      "builder": "AGRMBuilderV8",
+      "db": "unified_v8.db",
+      "ingested": 1,
+      "promotion": {
+        "promoted": 0,
+        "shells": 1,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    },
+    {
+      "builder": "AGRMBuilderV9",
+      "db": "unified_v9.db",
+      "ingested": 1,
+      "promotion": {
+        "promoted": 0,
+        "shells": 1,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    },
+    {
+      "builder": "AGRMBuilderV10",
+      "db": "unified_v10.db",
+      "ingested": 1,
+      "promotion": {
+        "promoted": 0,
+        "shells": 1,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    }
+  ],
+  "cohort_evaluations": [
+    {
+      "builder": "AGRMBuilderV1",
+      "cohort_eval": {
+        "promoted": 0,
+        "shells": 1,
+        "dim": 64,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    },
+    {
+      "builder": "AGRMBuilderV3",
+      "cohort_eval": {
+        "promoted": 0,
+        "shells": 1,
+        "dim": 64,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    },
+    {
+      "builder": "AGRMBuilderV4",
+      "cohort_eval": {
+        "promoted": 0,
+        "shells": 1,
+        "dim": 64,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    },
+    {
+      "builder": "AGRMBuilderV5",
+      "cohort_eval": {
+        "promoted": 0,
+        "shells": 1,
+        "dim": 64,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    },
+    {
+      "builder": "AGRMBuilderV6",
+      "cohort_eval": {
+        "promoted": 0,
+        "shells": 1,
+        "dim": 64,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    },
+    {
+      "builder": "AGRMBuilderV7",
+      "cohort_eval": {
+        "promoted": 0,
+        "shells": 1,
+        "dim": 64,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    },
+    {
+      "builder": "AGRMBuilderV8",
+      "cohort_eval": {
+        "promoted": 0,
+        "shells": 1,
+        "dim": 64,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    },
+    {
+      "builder": "AGRMBuilderV9",
+      "cohort_eval": {
+        "promoted": 0,
+        "shells": 1,
+        "dim": 64,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    },
+    {
+      "builder": "AGRMBuilderV10",
+      "cohort_eval": {
+        "promoted": 0,
+        "shells": 1,
+        "dim": 64,
+        "decisions": {
+          "0": {
+            "coh": 0.999999999998,
+            "red": 0.0,
+            "nov": 1.999955756559757e-12,
+            "contra": 0.0,
+            "size": 1,
+            "thresholds": {
+              "tau_coh": 0.6,
+              "tau_red": 0.92,
+              "tau_nov_min": 0.02,
+              "tau_nov_max": 0.4
+            },
+            "decision": "reject"
+          }
+        }
+      }
+    }
+  ],
+  "errors": [
+    {
+      "builder": "AGRMBuilderV2",
+      "error": "name 'i' is not defined"
+    }
+  ]
+}

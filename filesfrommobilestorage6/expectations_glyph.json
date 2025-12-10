@@ -1,0 +1,18 @@
+{
+  "bands": [
+    {
+      "k": 12,
+      "band": "24",
+      "plateau_Q": 2.0,
+      "unimodal": true,
+      "notes": "Matrix structure (grid) with grouping fence favors 12-sect scaffold; 24 plateau via LCM."
+    },
+    {
+      "k": 16,
+      "band": "16",
+      "plateau_Q": 1.5,
+      "unimodal": true,
+      "notes": "Tetradic taps from crossings/junctions."
+    }
+  ]
+}

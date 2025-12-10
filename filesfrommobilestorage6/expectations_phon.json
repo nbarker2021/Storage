@@ -1,0 +1,18 @@
+{
+  "bands": [
+    {
+      "k": 24,
+      "band": "24",
+      "plateau_Q": 3.0,
+      "unimodal": true,
+      "notes": "Ternary meter with voicing parity; 24-dominant."
+    },
+    {
+      "k": 16,
+      "band": "16",
+      "plateau_Q": 1.0,
+      "unimodal": true,
+      "notes": "Possible secondary shoulders under strong tetrasyllabic stress."
+    }
+  ]
+}

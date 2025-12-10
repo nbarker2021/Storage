@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://morphonic.org/schemas/compiled_controls.schema.json",
+  "title": "Compiled Controls (\u039b\u039f\u03c7 \u2192 \u039b\u039f)",
+  "type": "object",
+  "required": [
+    "profile_hash",
+    "controls"
+  ],
+  "properties": {
+    "profile_hash": {
+      "type": "string",
+      "description": "Hex digest of the calibration profile."
+    },
+    "controls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "n",
+          "dtau",
+          "taps_rad",
+          "weight"
+        ],
+        "properties": {
+          "source_index": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Index in chromatic program that produced this control."
+          },
+          "n": {
+            "type": "integer",
+            "enum": [
+              4,
+              8,
+              12,
+              24
+            ],
+            "description": "Dihedral sector count."
+          },
+          "dtau": {
+            "type": "number",
+            "description": "Delay offset in base-period units (0..T normalized if desired)."
+          },
+          "taps_rad": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 1
+          },
+          "weight": {
+            "type": "number",
+            "minimum": 0.0,
+            "description": "Tap gain/radiance weighting (normalized)."
+          },
+          "gauge_rotation": {
+            "type": "number",
+            "description": "Optional gauge rotation (radians)."
+          },
+          "phase_offset": {
+            "type": "number",
+            "description": "Optional uniform phase offset (radians)."
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

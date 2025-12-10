@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://morphonic.org/schemas/phi_model.schema.json",
+  "title": "\u03c6-Model (Compute\u2192Energy)",
+  "type": "object",
+  "required": [
+    "device",
+    "coeffs",
+    "model_type",
+    "fit_stats",
+    "date"
+  ],
+  "properties": {
+    "device": {
+      "type": "object",
+      "required": [
+        "name",
+        "driver",
+        "firmware"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "driver": {
+          "type": "string"
+        },
+        "firmware": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "coeffs": {
+      "type": "object",
+      "required": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "properties": {
+        "a": {
+          "type": "number"
+        },
+        "b": {
+          "type": "number"
+        },
+        "c": {
+          "type": "number"
+        },
+        "d": {
+          "type": "number"
+        },
+        "e": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "model_type": {
+      "type": "string",
+      "enum": [
+        "linear",
+        "mixed",
+        "hierarchical"
+      ]
+    },
+    "fit_stats": {
+      "type": "object",
+      "required": [
+        "r2",
+        "mape_pct"
+      ],
+      "properties": {
+        "r2": {
+          "type": "number"
+        },
+        "mape_pct": {
+          "type": "number"
+        }
+      }
+    },
+    "date": {
+      "type": "string"
+    }
+  }
+}

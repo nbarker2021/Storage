@@ -1,0 +1,26 @@
+{
+  "ts": 1761125483.828743,
+  "files_indexed": 19077,
+  "lanes": {
+    "tooling": 5933,
+    "ragdna": 5615,
+    "assets": 135,
+    "configs": 708,
+    "tests": 1925,
+    "cards": 108,
+    "ecc": 83,
+    "scene8": 96,
+    "adapters_llm": 40,
+    "worldforge": 182,
+    "core": 2584,
+    "receipts": 162,
+    "ethics": 53,
+    "physics": 9,
+    "docs": 1090,
+    "data": 354
+  },
+  "manifests": {
+    "index": "/mnt/data/aletheia_runtime_index.jsonl",
+    "summary": "/mnt/data/aletheia_runtime_summary.json"
+  }
+}

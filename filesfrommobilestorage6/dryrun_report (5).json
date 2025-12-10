@@ -1,0 +1,320 @@
+{
+  "meta": {
+    "started_at": 1754818251.9525998,
+    "plan": {
+      "steps": [
+        {
+          "name": "legacy:registry",
+          "family": "legacy",
+          "module": "adapters.legacy_auto.agrm_cmplx.registry",
+          "func": "list_legacy",
+          "kwargs": {
+            "slug": "agrm-cmplx",
+            "root": "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx",
+            "_est_wall_ms": 0.0
+          },
+          "priority": 5
+        },
+        {
+          "name": "legacy:hash:verify",
+          "family": "legacy.hash",
+          "module": "adapters.legacy_auto.agrm_cmplx.hash_adapters",
+          "func": "verify_vectors",
+          "kwargs": {
+            "module": "legacy_agrm_cmplx_agrm_module",
+            "func": "fnv1a64",
+            "_est_wall_ms": 0.0
+          },
+          "priority": 10
+        },
+        {
+          "name": "e8:encoder:demo",
+          "family": "encode",
+          "module": "lattice_ai.tests.encoder_demo",
+          "func": "demo",
+          "priority": 12
+        },
+        {
+          "name": "snap:demo",
+          "family": "snap",
+          "module": "lattice_ai.tests.snap_demo",
+          "func": "demo",
+          "priority": 14
+        },
+        {
+          "name": "microflow:demo",
+          "family": "micro",
+          "module": "lattice_ai.pipeline.microflow",
+          "func": "microflow_demo",
+          "kwargs": {
+            "seed": 8,
+            "n_items": 256,
+            "_est_wall_ms": 0.0
+          },
+          "priority": 15
+        },
+        {
+          "name": "golden:recall_latency",
+          "family": "eval",
+          "module": "lattice_ai.tests.goldens_recall_latency",
+          "func": "eval_recall_latency",
+          "kwargs": {
+            "K": 10,
+            "seed": 99,
+            "house_mod": 257,
+            "_est_wall_ms": 0.0
+          },
+          "priority": 25
+        },
+        {
+          "name": "dim:probe",
+          "family": "dim3d",
+          "module": "src.testlib_plus.agents.dim_probe",
+          "func": "proj3d_quality",
+          "kwargs": {
+            "n": 200,
+            "seed": 9,
+            "_est_wall_ms": 0.0
+          },
+          "priority": 30
+        }
+      ]
+    },
+    "ended_at": 1754818252.6482224,
+    "elapsed_s": 0.6956226825714111
+  },
+  "queue_records": [
+    {
+      "name": "legacy:registry",
+      "family": "legacy",
+      "module": "adapters.legacy_auto.agrm_cmplx.registry",
+      "func": "list_legacy",
+      "priority": 5,
+      "status": "ok",
+      "duration_ms": 3.100777999861748,
+      "error": null
+    },
+    {
+      "name": "legacy:hash:verify",
+      "family": "legacy.hash",
+      "module": "adapters.legacy_auto.agrm_cmplx.hash_adapters",
+      "func": "verify_vectors",
+      "priority": 10,
+      "status": "ok",
+      "duration_ms": 0.8126570000968059,
+      "error": null
+    },
+    {
+      "name": "e8:encoder:demo",
+      "family": "encode",
+      "module": "lattice_ai.tests.encoder_demo",
+      "func": "demo",
+      "priority": 12,
+      "status": "error",
+      "duration_ms": 658.6998039999798,
+      "error": {
+        "type": "IndexError",
+        "msg": "tuple index out of range",
+        "trace": "Traceback (most recent call last):\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 45, in run\n    fn=self._import_callable(op.module, op.func)\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 31, in _import_callable\n    m=importlib.import_module(module); return getattr(m, func)\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/mnt/data/e8_repo/lattice_ai/tests/encoder_demo.py\", line 4, in <module>\n    from lattice_ai.encode.e8_lattice import E8LatticeEncoder\n  File \"/mnt/data/e8_repo/lattice_ai/encode/e8_lattice.py\", line 47, in <module>\n    _E8_ROOTS = _gen_e8_roots()\n                ^^^^^^^^^^^^^^^\n  File \"/mnt/data/e8_repo/lattice_ai/encode/e8_lattice.py\", line 22, in _gen_e8_roots\n    s = [signs[i] if v[i] != 0.0 else 1.0 for i in range(8)]\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/data/e8_repo/lattice_ai/encode/e8_lattice.py\", line 22, in <listcomp>\n    s = [signs[i] if v[i] != 0.0 else 1.0 for i in range(8)]\n         ~~~~~^^^\nIndexError: tuple index out of range\n"
+      }
+    },
+    {
+      "name": "snap:demo",
+      "family": "snap",
+      "module": "lattice_ai.tests.snap_demo",
+      "func": "demo",
+      "priority": 14,
+      "status": "ok",
+      "duration_ms": 4.520398999829922,
+      "error": null
+    },
+    {
+      "name": "microflow:demo",
+      "family": "micro",
+      "module": "lattice_ai.pipeline.microflow",
+      "func": "microflow_demo",
+      "priority": 15,
+      "status": "ok",
+      "duration_ms": 5.049521000046298,
+      "error": null
+    },
+    {
+      "name": "golden:recall_latency",
+      "family": "eval",
+      "module": "lattice_ai.tests.goldens_recall_latency",
+      "func": "eval_recall_latency",
+      "priority": 25,
+      "status": "ok",
+      "duration_ms": 20.818757000142796,
+      "error": null
+    },
+    {
+      "name": "dim:probe",
+      "family": "dim3d",
+      "module": "src.testlib_plus.agents.dim_probe",
+      "func": "proj3d_quality",
+      "priority": 30,
+      "status": "ok",
+      "duration_ms": 2.44105199999467,
+      "error": null
+    }
+  ],
+  "sap_events": [
+    {
+      "family": "legacy",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 3.100777999861748
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "legacy.hash",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 0.8126570000968059
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "encode",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 658.6998039999798
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "snap",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 4.520398999829922
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "micro",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 5.049521000046298
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "eval",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 20.818757000142796
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "dim3d",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 2.44105199999467
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "op": "legacy:registry",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "legacy:hash:verify",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "snap:demo",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "microflow:demo",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "golden:recall_latency",
+      "optimization_points": [
+        "Try bits=24 and house_mod\u22481021",
+        "Consider \u03b1/\u03b2 blending when geodesic is ready"
+      ],
+      "weak_spots": [
+        "No learned Tier-2 yet; using legacy hash backend, may be uncorrelated with semantics"
+      ]
+    },
+    {
+      "op": "dim:probe",
+      "optimization_points": [],
+      "weak_spots": []
+    }
+  ]
+}

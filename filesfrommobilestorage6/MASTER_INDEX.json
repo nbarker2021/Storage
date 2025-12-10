@@ -1,0 +1,160 @@
+{
+  "name": "CQE Master Pack",
+  "version": "session-20250921-010758",
+  "root": "/mnt/data/derived",
+  "rungs": [
+    {
+      "rung": "CISS",
+      "present": false,
+      "folder": "/mnt/data/derived/ciss_kernel_pack",
+      "files": []
+    },
+    {
+      "rung": "Photonic",
+      "present": true,
+      "folder": "/mnt/data/derived/photonic_kernel_pack",
+      "ledgers": [
+        {
+          "file": "photonic_ledger.csv",
+          "status_counts": {
+            "PROVISIONAL": 4,
+            "WORKING": 3
+          }
+        },
+        {
+          "file": "photonic_ledger_ultratight.csv",
+          "status_counts": {
+            "PROVISIONAL": 4,
+            "WORKING": 3
+          }
+        }
+      ],
+      "overlays": [
+        {
+          "file": "photonic_overlay64.json",
+          "commit": {
+            "hash": "f196ee24f6b5974505ff666200190ad2333eed1c301232b49d19545e1ef2ff89",
+            "four_bit": "1111"
+          }
+        }
+      ],
+      "files": [
+        "photonic_ledger.csv",
+        "photonic_ledger_ultratight.csv",
+        "photonic_overlay64.json",
+        "photonic_scenarios_with_evidence.csv",
+        "photonic_summary.csv"
+      ]
+    },
+    {
+      "rung": "Time_SpaceTime",
+      "present": true,
+      "folder": "/mnt/data/derived/timecrystal_kernel_pack",
+      "ledgers": [
+        {
+          "file": "timecrystal_ledger.csv",
+          "status_counts": {
+            "WORKING": 3,
+            "PROVISIONAL": 1
+          }
+        }
+      ],
+      "overlays": [
+        {
+          "file": "timecrystal_overlay64.json",
+          "commit": {
+            "hash": "f196ee24f6b5974505ff666200190ad2333eed1c301232b49d19545e1ef2ff89",
+            "four_bit": "1111"
+          }
+        }
+      ],
+      "files": [
+        "timecrystal_ledger.csv",
+        "timecrystal_overlay64.json",
+        "timecrystal_scenarios_with_evidence.csv",
+        "timecrystal_summary.csv"
+      ]
+    },
+    {
+      "rung": "Atmosphere_Ozone",
+      "present": false,
+      "folder": "/mnt/data/derived/atmosphere_kernel_pack",
+      "files": []
+    },
+    {
+      "rung": "G4_Switchgear",
+      "present": false,
+      "folder": "/mnt/data/derived/gquad_kernel_pack",
+      "files": []
+    },
+    {
+      "rung": "Hippocampal_Ripples",
+      "present": true,
+      "folder": "/mnt/data/derived/hippocampal_kernel_pack",
+      "ledgers": [
+        {
+          "file": "hippocampal_ledger.csv",
+          "status_counts": {
+            "WORKING": 6
+          }
+        }
+      ],
+      "overlays": [
+        {
+          "file": "hippocampal_overlay64.json",
+          "commit": {
+            "hash": "f196ee24f6b5974505ff666200190ad2333eed1c301232b49d19545e1ef2ff89",
+            "four_bit": "1111"
+          }
+        }
+      ],
+      "files": [
+        "hippocampal_ledger.csv",
+        "hippocampal_overlay64.json",
+        "hippocampal_scenarios_with_evidence.csv",
+        "hippocampal_summary.csv"
+      ]
+    },
+    {
+      "rung": "Unified_Clocked_Interconnect",
+      "present": true,
+      "folder": "/mnt/data/derived/unified_clocked_interconnect",
+      "overlays": [
+        {
+          "file": "clocked_interconnect_overlay.json",
+          "commit": {
+            "hash": "b53cd528de1848dc7124e975377ec5bda9ac9e2be96f716f70ffd9fe08055663",
+            "four_bit": "1011"
+          }
+        }
+      ],
+      "files": [
+        "clocked_interconnect_overlay.json",
+        "clocked_interconnect_plan.csv"
+      ]
+    },
+    {
+      "rung": "Global_Ladder",
+      "present": true,
+      "folder": "/mnt/data/derived/global_ladder",
+      "files": [
+        "workset_chain_index.json"
+      ]
+    }
+  ],
+  "global_ladder": {
+    "path": "/mnt/data/derived/global_ladder/workset_chain_index.json",
+    "ladder_hash": "87c5c9ad295701be82d9f3730b7a6304677c43697a84a688d060c3661c957529",
+    "ladder_four_bit": "1000",
+    "rungs": [
+      {
+        "name": "Hippocampal (ripples & routing)",
+        "overlay": "/mnt/data/derived/hippocampal_kernel_pack/hippocampal_overlay64.json",
+        "summary": "/mnt/data/derived/hippocampal_kernel_pack/hippocampal_summary.csv",
+        "overlay_hash": "f196ee24f6b5974505ff666200190ad2333eed1c301232b49d19545e1ef2ff89",
+        "rung_hash": "a974e9e168a7bcca0d8e29057f1316a9578813ef5d85d283eeb5e5fb40d9d466",
+        "nibble": "1010"
+      }
+    ]
+  }
+}

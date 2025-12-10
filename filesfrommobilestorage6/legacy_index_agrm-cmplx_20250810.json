@@ -1,0 +1,46 @@
+{
+  "slug": "agrm-cmplx",
+  "root": "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx",
+  "files": [
+    {
+      "path": "gpt gode for agrm-cmplx/AGRM_refactored (1).py",
+      "dotted_hint": null
+    },
+    {
+      "path": "gpt gode for agrm-cmplx/AGRM_refactored (2).py",
+      "dotted_hint": null
+    },
+    {
+      "path": "gpt gode for agrm-cmplx/AGRM_refactored (3).py",
+      "dotted_hint": null
+    },
+    {
+      "path": "gpt gode for agrm-cmplx/AGRM_refactored (4).py",
+      "dotted_hint": null
+    },
+    {
+      "path": "gpt gode for agrm-cmplx/AGRM_refactored.py",
+      "dotted_hint": null
+    },
+    {
+      "path": "gpt gode for agrm-cmplx/test_hash.py",
+      "dotted_hint": null
+    },
+    {
+      "path": "gpt gode for agrm-cmplx/test_runtime.py",
+      "dotted_hint": null
+    },
+    {
+      "path": "gpt gode for agrm-cmplx/test_scoring.py",
+      "dotted_hint": null
+    },
+    {
+      "path": "gpt gode for agrm-cmplx/test_think_systems.py",
+      "dotted_hint": null
+    },
+    {
+      "path": "gpt gode for agrm-cmplx/thermodynamics_testing_framework_reworked.py",
+      "dotted_hint": null
+    }
+  ]
+}
