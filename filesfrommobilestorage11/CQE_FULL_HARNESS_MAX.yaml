@@ -1,0 +1,274 @@
+{
+  "version": 2,
+  "profile": "CQE_FULL_UNIFIED_MAX",
+  "policies": {
+    "global": {
+      "dihedral": "R+F",
+      "W": [
+        80,
+        120,
+        240,
+        600
+      ],
+      "parity64": true,
+      "phi_monotone": true
+    },
+    "ops.safe": {
+      "morphon.escrow.window.max_pulses": 1,
+      "long_hop_policy.crt.neighbor_only": true
+    },
+    "ops.aggressive": {
+      "plateau_guard.W": 3,
+      "auto_reweight.thresholds.warn": 0.1,
+      "escrow.window.max_pulses": 4
+    },
+    "numerology_bridge": {
+      "repair.delta_thresh": 1,
+      "prime.family.alt": true,
+      "cross_layer_weight": 0.35
+    },
+    "knot_sensitive": {
+      "braid.weight": 0.35,
+      "avoid_spike_windows": true
+    }
+  },
+  "modules": {
+    "ARC360": {
+      "receipts": [
+        "tick_closure",
+        "cascade_x2_x10",
+        "bridges",
+        "tunneling",
+        "mid_legal",
+        "ratio_legal"
+      ],
+      "thresholds": {
+        "strict": {
+          "hour": 0.1,
+          "min": 0.1,
+          "sec": 0.1
+        },
+        "loose": {
+          "hour": 1.0,
+          "min": 0.5,
+          "sec": 0.5
+        }
+      },
+      "shapes_legal": {
+        "ticks": true,
+        "mid": true,
+        "ratios": [
+          [
+            "H",
+            "M",
+            5
+          ],
+          [
+            "M",
+            "S",
+            1
+          ],
+          [
+            "H",
+            "S",
+            5
+          ]
+        ]
+      }
+    },
+    "PRIME_COPRIME": {
+      "receipts": [
+        "prime_top5_mean",
+        "delta_mean",
+        "crt_corridors",
+        "recycle_routes"
+      ],
+      "thresholds": {
+        "top5_mean": 0.65,
+        "delta_mean": 1.25,
+        "crt_corridors_min": 1
+      }
+    },
+    "SLICE_CALCULUS": {
+      "receipts": [
+        "equalizer_theta",
+        "dirichlet_E",
+        "pose_keys_W80_W240_W600",
+        "braid_current",
+        "writhe",
+        "crossings"
+      ],
+      "multi_res": {
+        "verify_monotonicity": true,
+        "W": [
+          80,
+          120,
+          240,
+          600
+        ]
+      }
+    },
+    "CQE_CONTROLLER": {
+      "receipts": [
+        "objective",
+        "keys",
+        "writhe",
+        "repair_applicable",
+        "LPC",
+        "scale_agreement",
+        "qa_blocks"
+      ],
+      "objective_weights": {
+        "alpha": 0.5,
+        "beta": 0.15,
+        "gamma": 0.25,
+        "delta": 0.1,
+        "kappa": 0.0
+      }
+    },
+    "TORUS": {
+      "receipts": [
+        "k_star",
+        "toroid_closed",
+        "band_drift"
+      ],
+      "thresholds": {
+        "band_drift_max": 1
+      }
+    },
+    "TRANSLATE_RT": {
+      "receipts": [
+        "\u0394\u03a6_monotone",
+        "pack_compat",
+        "E8\u2192\u039b24\u2192E8_map"
+      ],
+      "policy": {
+        "pair_default": "AI_BASE(8/16)\u2194HUM_BASE(8/12)",
+        "crt_neighbor": true,
+        "parity": true
+      },
+      "gates": {
+        "mono_ok": "\u0394\u03a6_monotone and pack_compat"
+      }
+    },
+    "OPS_CSV": {
+      "receipts": [
+        "lane_balance",
+        "delimiter_repair",
+        "schema_snap"
+      ]
+    },
+    "OPS_JSON": {
+      "receipts": [
+        "brace_balance",
+        "type_consolidation",
+        "schema_stabilize"
+      ]
+    },
+    "META_LEX": {
+      "receipts": [
+        "H_label\u2194SPF_bindings",
+        "bridge_usage"
+      ]
+    },
+    "GOLDEN": {
+      "receipts": [
+        "promote_hashes"
+      ],
+      "use": [
+        "ci/golden_refusal.json"
+      ]
+    },
+    "REFUSAL": {
+      "receipts": [
+        "refuse_hashes"
+      ],
+      "use": [
+        "ci/golden_refusal.json"
+      ]
+    },
+    "FUZZER": {
+      "receipts": [
+        "illegal_move_rate",
+        "reject_or_escrow"
+      ],
+      "rate": 0.01,
+      "moves": [
+        "bad_crc",
+        "pose_cross_hit",
+        "parity_flip",
+        "crt_long_hop"
+      ]
+    },
+    "FAMILY_FINDER": {
+      "receipts": [
+        "clusters",
+        "exemplars"
+      ],
+      "use": [
+        "families/family_finder_config.json"
+      ]
+    }
+  },
+  "slices": {
+    "enabled": [
+      "SACNUM",
+      "LATT",
+      "FRAC",
+      "RAMANUJAN",
+      "GAUSS",
+      "NOETHER",
+      "SHANNON",
+      "HODGE",
+      "E8_LEECH",
+      "TRANSLATE_RT",
+      "OPS_CSV",
+      "OPS_JSON",
+      "META_LEX",
+      "GOLDEN",
+      "REFUSAL",
+      "FUZZER",
+      "ARC360",
+      "PRIME_COPRIME",
+      "SLICE_CALCULUS",
+      "CQE_CONTROLLER",
+      "TORUS",
+      "FAMILY_FINDER"
+    ]
+  },
+  "promotion": {
+    "decision": "any",
+    "gates": {
+      "A_arc_strict": "(ARC360.tick.strict.any and (ARC360.bridges.any or ARC360.tunneling.any))",
+      "B_prime": "(PRIME_COPRIME.prime_top5_mean>=0.65 and PRIME_COPRIME.crt_corridors>=1)",
+      "C_collapse": "(CQE_CONTROLLER.keys.dispersion_W80<=1 and CQE_CONTROLLER.scale_agreement)",
+      "D_arc_loose_bridge": "(ARC360.tick.loose.any and (ARC360.bridges.residue or ARC360.tunneling.prime))",
+      "E_translate_rt": "TRANSLATE_RT.mono_ok",
+      "F_ops_integrity": "(OPS_CSV.ok or OPS_JSON.ok)"
+    }
+  },
+  "tsr_requests": [
+    {
+      "id": "TSR_MEANING_v1",
+      "channel": "tokens/meaning_pressure",
+      "quota": "balanced lanes; \u03bc spans; CRT neighbor spread"
+    },
+    {
+      "id": "TSR_OPS_Drift_v1",
+      "channel": "tokens/ops_drift",
+      "quota": "csv/json drift families; \u03bc low/mid/high; parity64"
+    },
+    {
+      "id": "TSR_TRANSLATE_PACKS",
+      "channel": "tokens/translation",
+      "quota": "EN\u2194ES general pack; \u0394\u03a6 range; safety-filtered"
+    }
+  ],
+  "outputs": {
+    "acceptance_table": "acceptance_table.csv",
+    "slice_registry": "slice_registry.json",
+    "proof_receipts": "proofs/",
+    "run_ledger": "run_ledger.jsonl",
+    "families": "families/"
+  }
+}

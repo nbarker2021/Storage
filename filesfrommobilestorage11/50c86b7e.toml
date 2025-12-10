@@ -1,0 +1,103 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cqe"
+version = "0.1.0"
+description = "Cartan-Quadratic Equivalence: E8-based universal embedding framework"
+authors = [
+    {name = "CQE Research Team", email = "team@cqe-research.org"}
+]
+license = {text = "Apache-2.0"}
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["lattice", "e8", "embedding", "optimization", "machine-learning", "group-theory"]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+dependencies = [
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "pandas>=2.0.0",
+    "scikit-learn>=1.3.0",
+    "networkx>=3.0",
+    "fastapi>=0.100.0",
+    "uvicorn[standard]>=0.22.0",
+    "pydantic>=2.0.0",
+    "redis>=4.5.0",
+    "sqlalchemy>=2.0.0",
+    "alembic>=1.11.0",
+    "grpcio>=1.54.0",
+    "protobuf>=4.23.0",
+    "websockets>=11.0",
+    "click>=8.1.0",
+    "python-dotenv>=1.0.0",
+    "structlog>=23.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.3.0",
+    "pytest-cov>=4.1.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.3.0",
+    "ruff>=0.0.270",
+    "mypy>=1.3.0",
+    "pre-commit>=3.3.0",
+]
+docs = [
+    "sphinx>=6.2.0",
+    "sphinx-rtd-theme>=1.2.0",
+    "myst-parser>=1.0.0",
+]
+benchmark = [
+    "transformers>=4.30.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/cqe-production"
+Documentation = "https://cqe-research.github.io/cqe"
+Repository = "https://github.com/yourusername/cqe-production"
+Issues = "https://github.com/yourusername/cqe-production/issues"
+
+[project.scripts]
+cqe = "cqe.cli:main"
+cqe-server = "cqe.api.rest:serve"
+
+[tool.setuptools]
+packages = ["cqe"]
+
+[tool.black]
+line-length = 100
+target-version = ['py310', 'py311', 'py312']
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false  # Start lenient, tighten over time
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --cov=cqe --cov-report=html --cov-report=term-missing"

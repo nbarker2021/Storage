@@ -1,0 +1,23 @@
+meta:
+  id: cqe-unified-harness
+
+
+validators:
+  mode: guarded
+  ramanujan:
+    enabled: true
+    partition_gates: [5,7,11]
+    mock_theta_shadow_threshold: 0.7
+    eta_product_prefer: true
+  gauss:
+    enabled: true
+    reciprocity_gate: true
+    primitive_character_prefer: true
+    gauss_sum_tolerance: 0.05
+  crt:
+    garner_proof_required_on_accept: true
+  frac:
+    chart_fields_required_in_receipts: true
+  pose:
+    global_once_enforced: true
+

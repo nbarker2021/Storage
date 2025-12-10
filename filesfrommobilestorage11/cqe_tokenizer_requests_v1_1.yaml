@@ -1,0 +1,63 @@
+version: 1.1
+profile: CQE_TSR_v1_1
+purpose: "Supplemental inserts to unlock EULER/KNOT/CLIFFORD certifications and strengthen translate/op domains."
+
+global_invariants:
+  parity64: required
+  token_conservation: true
+  delta_phi:
+    escrow_window: 4
+    plateau_guard_W: 3
+  governance:
+    bands: [8, 24]
+    max_delta_band: 1
+    crt_tiles: 4096
+
+requests:
+  - id: TSR_SACNUM_ALIAS_v1_1
+    channel: tokens/aliases
+    deliverable: sacnum_alias.csv
+    schema: [{name: token, type: string},{name: sacnum_alias, type: int, range: [0,23]}]
+    coverage:
+      corridors_required: [0,4,8,12,16,20]
+      min_per_corridor: 48
+      alias_consistency: true
+    purpose: "Guarantee corridor presence for EULER certification."
+
+  - id: TSR_BRAID_DELTA_v1_1
+    channel: tokens/braiding
+    deliverable: braiding_metrics.csv
+    schema: [{name: token, type: string},{name: braid_before, type: float},{name: braid_after, type: float},{name: braid_delta, type: float}]
+    distribution_targets:
+      z_tail_min_abs: 1.0
+      tail_fraction_min: 0.15
+      abs_delta_min: 0.5
+    purpose: "Ensure nontrivial braid deltas for KNOT certification."
+
+  - id: TSR_SHAPE_COMPRESS_v1_1
+    channel: tokens/shape_compress
+    deliverable: shape_compress_probes.csv
+    schema: [{name: token, type: string},{name: lambda2_before, type: float},{name: lambda2_after, type: float},{name: mdl_before, type: float},{name: mdl_after, type: float}]
+    targets:
+      min_frac_spectral_lift: 0.30
+      min_frac_mdl_drop: 0.30
+    purpose: "Provide stronger shape-only evidence for CLIFFORD certification."
+
+  - id: TSR_TRANSLATE_RT_v1_1
+    channel: translate/packs
+    deliverable: translate_rt_packs_multi.jsonl
+    schema: [{name: pack_id, type: string},{name: pair, type: string},{name: domain, type: string},{name: register, type: string},{name: safety_label, type: string},{name: src_tokens, type: array},{name: tgt_tokens, type: array}]
+    pairs: ["en-es","en-de","en-fr"]
+    constraints:
+      token_conservation_required: true
+      pack_constrained: true
+    purpose: "Stress TRANSLATE_RT across multiple pairs under Λ24 interlingua."
+
+  - id: TSR_OPS_JSON_DRIFT_v1_1
+    channel: tokens/ops_drift
+    deliverable: ops_json_drift_v2.zip
+    quotas:
+      drift_types: ["unbalanced_braces","comma_missing","type_flip","null_sparsity","key_reorder","burst","deep_nesting","hetero_array"]
+      min_files_per_type: 12
+      min_chunks_per_file: 6
+    purpose: "Broaden ops drift coverage."

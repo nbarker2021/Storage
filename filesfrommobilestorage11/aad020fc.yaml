@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cqe-config
+  labels:
+    app: cqe
+data:
+  LOG_LEVEL: "INFO"
+  MAX_CACHE_SIZE: "10000"
+  MORSR_MAX_ITERATIONS: "10"
+  PHI_TOLERANCE: "0.000001"
+  E8_DIMENSION: "8"
+  NUM_ROOTS: "240"
+  NUM_CARTAN: "8"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: cqe-secrets
+type: Opaque
+stringData:
+  redis-url: "redis://cqe-redis:6379"

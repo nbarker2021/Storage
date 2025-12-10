@@ -1,0 +1,8 @@
+closure: {
+  "idf_equal": false,
+  "sum_delta_phi_forward": -0.28852647449821234,
+  "sum_delta_phi_adjoint": -0.2684649210423231,
+  "reality": false
+}
+
+---

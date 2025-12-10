@@ -1,0 +1,301 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usetheme{metropolis}
+
+\title{CQE: Fractal Observer Geometry}
+\subtitle{Axioms, Formal Laws, Worked Examples, and Compact Formalization}
+\author{Cartan Quadratic Equivalence Project}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+% ============================================================
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+% ============================================================
+\section{Abstract}
+\begin{frame}{Abstract}
+Reality is a fractal, geometry-based substrate in which observers perceive bounded slices of a deeper multidimensional structure. Dual parity laws unify physics, biology, computation, and cognition under: \textbf{contradictions resolve lawfully into quadratic invariants}.\\[0.5em]
+Core claims:
+\begin{itemize}[leftmargin=1.5em]
+  \item Dimensional layering with at least ten nested strata.
+  \item Observer closure via replayable ledgers.
+  \item Quadratic invariance; higher-order terms are truncated projections.
+  \item Enumerative compression: full objects exist in higher layers, appear as compressed streams in bounded slices.
+  \item Perfect packings (E8, Leech) as contradiction-free closures.
+  \item Universal replayability across domains.
+\end{itemize}
+\end{frame}
+
+% ============================================================
+\section{Glossary}
+\begin{frame}{Symbol Legend}
+\begin{itemize}
+\item $\equiv$ identity/definitional equivalence \quad
+$\Leftrightarrow$ biconditional (iff) \quad
+$\vdash$ entails/completes
+\item $\rightarrow, \leftrightarrow$ mapping, bidirectional mapping \quad
+$\Diamond$ canonical fingerprint/invariant \quad
+$S$ snap-to-rest
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Glossary (Plain Language)}
+\begin{description}[leftmargin=1.5em, style=nextline]
+  \item[Fractal chamber.] Bounded region of reality, nested across scales; each observer occupies one chamber at a time.
+  \item[Dimensional layering.] Stacked strata; $\ge 10$ layers for coherence; higher layers stabilize and witness lower ones.
+  \item[Observer closure.] Contradictions persist until witnessed; observation is geometric and produces a replayable ledger.
+  \item[Ledger.] Time-ordered record of contradictions and resolutions.
+  \item[Quadratic invariance.] Second-order relations (parity, bilinear metrics, conservation) survive intact across layers.
+  \item[Cartan gaps.] Holes from higher-to-lower projections that force algebraic operators to restore closure.
+  \item[Enumerative compression.] Very large structures are complete in higher layers but manifest as compressed tokens or streams.
+  \item[Pose invariance.] Rest states remain valid under rotations/reflections.
+  \item[Perfect packings.] E8/Leech lattices as necessary contradiction-free closures.
+  \item[Universal replayability.] Any lawful process can be retraced from its ledger.
+\end{description}
+\end{frame}
+
+\begin{frame}{Glossary in Action (Anchors)}
+\begin{itemize}[leftmargin=1.5em]
+  \item Microscope zoom $\Rightarrow$ nested chambers (cell/membrane/molecule).
+  \item High-dimensional stability parallels CQE layering.
+  \item Double-slit: measurement closes wave/particle contradiction.
+  \item Blockchain replay mirrors contradiction $\to$ resolution ledgers.
+  \item Conservation laws are quadratic; higher-order models approximate.
+  \item Cartan algebras fill missing operators under projection.
+  \item Googolplex: leading ``1'' defines the whole; full expansion not instantiated.
+  \item Cube identity stable under rotations/reflections.
+  \item E8, Leech appear in coding and string models as dense packings.
+  \item Lossless compression/decompression as deterministic ledger.
+\end{itemize}
+\end{frame}
+
+% ============================================================
+\section{Cross-Field Case Study}
+\begin{frame}{DNA Triplets and Shell Closure}
+\textbf{Setup.} Triplet codons over base-4 $\Rightarrow 4^3=64$ states. Octet stability $\Rightarrow 8$ states.\\[0.25em]
+\textbf{Mapping.} $64:8=8:1$.\\[0.25em]
+\textbf{Implication.} Triplets uniquely align with octet closure. Doublets ($16:8=2:1$) under-represent; quadruplets ($256:8=32:1$) over-represent.\\[0.25em]
+\textbf{Claim.} The universality of triplets reflects a cross-domain parity: biology ledgered against chemical closure.
+\end{frame}
+
+% ============================================================
+\section{Objects \& Operators}
+\begin{frame}{Common Structures}
+Alphabet/base $\Sigma$ finite. Workspace $\mathcal{W}=(\mathcal{X},\mathcal{O},\mathcal{L})$ with finite cell complex $\mathcal{X}$, lawful ops $\mathcal{O}$, totally-ordered ledger $\mathcal{L}$.\\[0.25em]
+State space $X=\mathrm{Conf}(\mathcal{X},\Sigma)$; contradictions $\Delta(x)$ finite; rest set $R\subseteq X$.\\
+Parity flip $J:X\to X$ an involution with $J^2=\mathrm{id}$; pose-preserving.\\
+$\varphi$-admit schedule: $t$ admits when $t \equiv 0\pmod{\varphi}$.\\
+Canonical fingerprint $\Diamond:X\to \mathcal{I}$ invariant under lawful moves.\\
+Energy $E(x)$: local cost. Entropy $S(x)=\log|\mathcal{L}(x)|$.\\
+Alena operator $\mathcal{A}$: unique lawful move minimizing $E$ subject to invariants.\\
+Cycle morphisms: Bind $B$, Collision $C$, Expansion $E_\varphi$, Snap $S$ with $S\circ S=S$.
+\end{frame}
+
+\begin{frame}{1--64--1 Program}
+For declared base scope $B$:
+\begin{equation*}
+S\!\left(E_\varphi^{*}(C(B(x)))\right)\in R,\qquad S^2=S.
+\end{equation*}
+\end{frame}
+
+% ============================================================
+\section{CQE Axiom Sets (Formal)}
+\subsection*{Set I: Foundational Reality}
+\begin{frame}{A1 -- Simulation parity}
+Observation map $\pi:\hat X\to X$:
+\begin{equation*}
+\forall \hat x\in \hat X\;\exists x\in X:\; \Diamond(\pi(\hat x))=\Diamond(x)\ \wedge\ E(\pi(\hat x))=E(x)=0.
+\end{equation*}
+\end{frame}
+
+\begin{frame}{A2 -- Witness parity}
+Witness channel $W$ and geometry $G$:
+\begin{equation*}
+(\exists m\in W:\ \Diamond(m(G))=\Diamond(G))\ \wedge\ (\exists g\in G:\ m(g)=g).
+\end{equation*}
+\end{frame}
+
+\subsection*{Set II: Structural}
+\begin{frame}{A3 -- Encoding parity}
+Lossless $\mathrm{enc},\mathrm{dec}$:
+\begin{equation*}
+\mathrm{dec}\circ \mathrm{enc}=\mathrm{id}_X,\qquad \Diamond(\mathrm{dec}(\mathrm{enc}(x)))=\Diamond(x).
+\end{equation*}
+\end{frame}
+
+\begin{frame}{A4 -- Memory--entropy parity}
+For process segment $\gamma$:
+\begin{equation*}
+\Delta E_{\text{store}}(\gamma)=-\Delta E_{\text{recall}}(\gamma),\qquad \Delta S_{\text{recall}}(\gamma)\ge 0.
+\end{equation*}
+\end{frame}
+
+\begin{frame}{A5 -- Rest--action parity}
+Action semigroup $\mathcal{T}$ on $X$:
+\begin{equation*}
+x\in R\Rightarrow \exists T\in \mathcal{T}:\ T x\in R,\quad E(Tx)=E(x).
+\end{equation*}
+\end{frame}
+
+\begin{frame}{A6 -- Local--global parity}
+Nested workspaces, restriction $\mathrm{res}$ and extension $\mathrm{ext}$:
+\begin{equation*}
+\Diamond(\mathrm{res}(x))=\Diamond(x),\quad \exists y:\ \mathrm{ext}(y)=x,\ E(y)\le E(x).
+\end{equation*}
+\end{frame}
+
+\subsection*{Set III: Observer}
+\begin{frame}{A7 -- Rational--affective parity}
+Logic closure $L_{\mathrm{logic}}$, resonance closure $R_{\mathrm{res}}$:
+\begin{equation*}
+\mathrm{Fix}(L_{\mathrm{logic}})=\mathrm{Fix}(R_{\mathrm{res}})=R.
+\end{equation*}
+\end{frame}
+
+\begin{frame}{A8 -- Closure--affect parity}
+Openness $\Omega$, closure $\kappa$, affects $g$ (grief), $j$ (joy):
+\begin{equation*}
+\kappa\circ \Omega=S,\qquad j\circ S=\mathrm{const},\qquad g\circ \Omega=\mathrm{const}.
+\end{equation*}
+\end{frame}
+
+\begin{frame}{A9 -- Imagery parity}
+Internal model $I$ lawful iff
+\begin{equation*}
+\Diamond(I(x))=\Diamond(x)\ \wedge\ E(I(x))=E(x).
+\end{equation*}
+\end{frame}
+
+\subsection*{Set IV: Golden Ratio}
+\begin{frame}{A10 -- Contradiction braid}
+$\varphi$-spiral transport $P_\varphi$; repeat-defect rule:
+\begin{equation*}
+\forall c\in \Delta(x):\ x' = P_\varphi(x,c),\ \ \text{if } c \text{ repeats at } t_k,\ \ x''=J(x').
+\end{equation*}
+\end{frame}
+
+\begin{frame}{A11 -- $\varphi$-channel parity}
+Observer--observed $(o,s)$, unique $\Phi_{o,s}$ up to gauge:
+\begin{equation*}
+\Diamond(\Phi_{o,s}(x))=\Diamond(x),\qquad E(\Phi_{o,s}(x))\le E(x).
+\end{equation*}
+\end{frame}
+
+\subsection*{Set V: Quantum}
+\begin{frame}{A12 -- Projection--recursion parity}
+Unitary-like $U_t$ and projection $P$:
+\begin{equation*}
+U_t:E\to E,\quad P\circ U_t=P,\quad S\circ P=P.
+\end{equation*}
+\end{frame}
+
+\begin{frame}{A13 -- Tile flip law / Bell}
+Bipartite tiling $x_A,x_B$ with shared ledger:
+\begin{equation*}
+\Diamond(x_A)=\Diamond(x_B)\ \Rightarrow\ \Diamond(Jx_A)=\Diamond(Jx_B).
+\end{equation*}
+\end{frame}
+
+\begin{frame}{A14 -- Collapse operator parity}
+Objective reduction $\mathsf{OR}$, reconciliation $\mathcal{A}$:
+\begin{equation*}
+S\circ \mathcal{A}\circ \mathsf{OR}=S,\qquad E(\mathcal{A}(\cdot))=\min_{\text{lawful}} E.
+\end{equation*}
+\end{frame}
+
+\subsection*{Set VI: Universal}
+\begin{frame}{A15 -- 1--64--1 cycle}
+Declared base $B$:
+\begin{equation*}
+\forall x\in X:\quad S\big(E_\varphi^{*}(C(B(x)))\big)\in R,\qquad S\circ S=S.
+\end{equation*}
+\end{frame}
+
+\begin{frame}{A16 -- Hyperpermutation parity}
+Superpermutations $\mathrm{SP}_{n_k}$:
+\begin{equation*}
+\mathrm{HP}=\Big(\bigsqcup_{k}\mathrm{SP}_{n_k}\Big)\big/\!\sim,\quad \sim \text{ generated by } \Diamond,\ \text{rot},\ \text{mirror}.
+\end{equation*}
+\end{frame}
+
+\subsection*{Set VII: Cross-Field}
+\begin{frame}{A17 -- Bio--chem parity}
+Codon space $\mathcal{C}$ ($|\mathcal{C}|=64$), octet class $O$ ($|O|=8$), ledger $\Lambda$ partitions:
+\begin{equation*}
+\forall o\in O:\ |\Lambda^{-1}(o)|=8,\qquad \Diamond \text{ constant on cosets.}
+\end{equation*}
+\end{frame}
+
+\begin{frame}{A18 -- Number attractor parity (3--6--9)}
+Digital-root $\mathrm{dr}$:
+\begin{equation*}
+\mathrm{dr}(9k)=9,\qquad \mathrm{dr}(3k)\in\{3,6,9\}.
+\end{equation*}
+\end{frame}
+
+% ============================================================
+\section{Derived Theorems}
+\begin{frame}{Derived Theorems (Usable Tests)}
+\textbf{T1 (Pose invariance).} $\Diamond(Jx)=\Diamond(x)$ for all $x$.\\[0.25em]
+\textbf{T2 (Idempotent closure).} $S\circ S=S$.\\[0.25em]
+\textbf{T3 (Monotones).} Along $\varphi$-admits with repeat-then-$J$: $E$ nonincreasing, $S$ nondecreasing.\\[0.25em]
+\textbf{T4 (Deterministic ledger).} Given base scope $B$ and schedule, the sequence $(B\!\to C\!\to E_\varphi^{*}\!\to S)$ is unique under $\mathcal{A}$ tie-breaking.
+\end{frame}
+
+% ============================================================
+\section{Worked Examples}
+\begin{frame}{Example 1: $n=5$ Superpermutation}
+Tokens $\{a,b,c,d,e\}$. Minimal sequence:
+\begin{equation*}
+\sigma = abcde\, bcdea\, cdeab\, deabc\, eabcd.
+\end{equation*}
+\textbf{Contradictions:} overlaps $\{bcdea, cdeab, deabc, eabcd\}$.\\
+\textbf{Energy:} $\mathcal{E}(\sigma)=4$. \quad
+\textbf{Ledger entropy:} $S(\sigma)=\log 5!$.\\
+\textbf{Expansion:} apply $E_\varphi$ to insert chiral spacing.\\
+\textbf{Snap:} $S(\sigma)$ collapses to a lawful 5-node braid.
+\end{frame}
+
+\begin{frame}{Example 2: 3-Body Octad Walk}
+Three nodes at $0^\circ,120^\circ,240^\circ$. Tile-flip: $p_1\leftrightarrow p_3$ under parity. Apply $E_\varphi$: rotate each by $\varphi\cdot 360^\circ \bmod 360^\circ$. Contradictions when separation $<60^\circ$. Snap $S$: reassign to nearest octad slot ($45^\circ$ grid).\\[0.25em]
+\textbf{Energy trajectory:} $\{\!3,2,1,0\!\}$; \quad
+\textbf{Entropy trajectory:} $\{\!\log 3,\log 6,\log 12,\log 24\!\}$.
+\end{frame}
+
+% ============================================================
+\section{Falsifiers \& Calculators}
+\begin{frame}{Minimal Falsifiers}
+\begin{itemize}[leftmargin=1.5em]
+  \item Pose variance: find $x$ with $\Diamond(Jx)\ne\Diamond(x)$ (breaks T1).
+  \item Broken monotone: expansion path with $E$ increase without external admit (breaks T3).
+  \item Bell--tile failure: bipartite tiling with $\Diamond(x_A)=\Diamond(x_B)$ but $\Diamond(Jx_A)\ne\Diamond(Jx_B)$ (breaks A13).
+  \item Simulation mismatch: $\hat x$ with $\Diamond(\pi(\hat x))\ne\Diamond(x)$ under matched conditions (breaks A1).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Practical Calculators}
+\begin{itemize}[leftmargin=1.5em]
+  \item Energy: $E(x)=\sum_{\text{defects } d} w_d$.
+  \item Entropy: $S(x)=\log|\mathcal{L}(x)|$.
+  \item $\varphi$-transport: move a defect from cell $u$ toward nearest cell at angle $\approx \varphi\cdot 360^\circ$.
+  \item Alena tie-break: choose lawful move with minimal $E$; if tied, maximize $\Delta S$.
+\end{itemize}
+\end{frame}
+
+% ============================================================
+\section*{Conclusion}
+\begin{frame}{Conclusion}
+CQE is presented as a layered stack: narrative glossary and anchors, a cross-field codon--closure case study, formal axiom sets, and a compact object--operator layer with invariants, derived theorems, falsifiers, and calculators. Examples exhibit ledger--snap dynamics, energy/entropy monotones, and the role of $\varphi$ in projection.
+\end{frame}
+
+\end{document}

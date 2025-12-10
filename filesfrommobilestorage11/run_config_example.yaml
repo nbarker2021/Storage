@@ -1,0 +1,39 @@
+run:
+  seed: 42
+  substrate: compute
+  Omega0: auto
+  dtau_sweep:
+    range:
+    - 0.0
+    - 0.25
+    steps: 96
+    fine: 9
+  taps:
+    tetradic: true
+    dodec: true
+  gauge:
+    samples: 3
+model:
+  dual_rail:
+    layers: 24
+    d_model: 1024
+    ring_K: 64
+    dtau_per: 2
+  losses:
+    lambda_c: 0.05
+    gauge: 0.01
+    energy: 0.001
+planner:
+  agrm:
+    budgets:
+    - 1x8
+    rho: 1.0
+    tauR: 5
+  mdhg:
+    wr: 0.05
+    sectors: 8
+    delay_bins: 64
+measure:
+  accuracy_match: 0.2
+  abba: true
+  power_sampling_hz: 200

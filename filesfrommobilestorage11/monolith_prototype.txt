@@ -1,0 +1,450 @@
+
+"""
+CQE MONOLITH SNAPSHOT (GEN-1)
+
+This file is a frozen, unified snapshot of the CQE stack as designed so far.
+It merges all conceptual modules (core physics, compliance, projection,
+interface, civic/municipal governance, biosubstrate continuity, quantum
+cognition scaffolding, catastrophic event handling, optical/crystal hardware
+abstractions, and tactile/dihedral interfaces) into one single Python module.
+
+This is NOT meant to be run as a single runtime.
+Instead, this file is meant to act like a "genome dump" for CQE:
+    - You can pull out any class, function, or subsystem.
+    - You can see all docstrings in-line.
+    - You can trace how every piece links back to the Four Laws.
+
+CQE as designed here is not "an AI assistant."
+CQE is a lawful physics-governance substrate for civilization.
+
+CORE PRINCIPLES / FOUR LAWS
+---------------------------
+
+1. Quadratic Invariance
+   Internal state evolution is represented in an exceptional geometric
+   basis (E₈/Cartan frame). Morphonic tension Φ(x) = xᵀ A x measures
+   strain in that frame. The system absolutely forbids any internal
+   update where ΔΦ > 0. In plainer words:
+       "Inside a coherent region, you are not allowed to inject harm."
+
+2. Boundary-Only Entropy
+   Any irreversible, lossy, high-energy, or destructive act must be
+   explicitly declared as a boundary crossing event. The system logs
+   the cost ("entropy bits"), the channel used, and the morphonic
+   tension delta. No one is allowed to bleed damage silently inside
+   the region.
+
+3. Auditable Governance
+   Every boundary event (irreversible or externally-consequential act)
+   produces a cryptographic, canonical-normal-form receipt. That
+   receipt can be inspected, replayed, and used for rollback. CQE never
+   does "just trust me" politics. Everything leaves a receipt.
+
+4. Optimized Efficiency
+   Planning is not "whatever works." CQE enforces least-tension path
+   selection. Movement through state space is computed as a minimal
+   geodesic under the morphonic metric. Wasteful or needlessly violent
+   trajectories are rejected at plan time.
+
+STRUCTURAL OVERVIEW
+-------------------
+
+Sections in this file:
+
+(1)  Imports and shared constants
+(2)  CORE STATE LAYER
+     - StateVector, ActionStep, channel classification (3/6/9)
+     - E8Lattice and Weyl chamber logic
+     - MorphonicField (Φ, ΔΦ guard)
+     - ToroidalClock (time as toroidal closure)
+     - LeastTensionPlanner (Law 4 planner)
+
+(3)  MICRODYNAMICS / COGNITION LAYER
+     - QuantumPacket and collapse
+     - OrchChamber (coherence cell / Orch OR analog in lawful form)
+     - ColliderScenario (high-energy boundary trial sim)
+
+(4)  COMPLIANCE / IMMUNE SYSTEM
+     - CRT residue merge → base80 signature
+     - ALENA seam check
+     - Hodge boundary entropy accounting
+     - Canonical Normal Form (CNF)
+     - BoundaryReceipt + emit_receipt
+     - RollbackEngine
+     - AuditChain (multi-node Merkle-like attestation)
+     - CatastropheEvent + log_catastrophe (basin-contact scale logging)
+
+(5)  RENDER / TEACHING LAYER
+     - project_state_to_frame (CQE-GVS reversible projection)
+     - invert_frame_to_state (inverse mapping)
+     - describe_geometric_view (toroidal/spiral/fractal language)
+     - explain_lawfulness (human-facing summary of legality)
+
+(6)  STORAGE / CONTINUITY LAYER
+     - hash_json, generate_release_manifest
+     - Ledger (append-only boundary receipts log)
+     - encode_snapdna / decode_snapdna (reversible biosubstrate persistence)
+     - ContinuityAnchor (biosubstrate anchor for memory survival)
+     - RAGIndex (retrieval that always preserves WHAT+GOV context)
+
+(7)  ARCHIVE CORE
+     - CQEArchiveCore: global library with OPEN/GOV/PERSONAL/HAZARDOUS partitions
+
+(8)  UNIVERSAL ATOM
+     - UniversalAtom: wraps CQE state in an annotated packet with sacred geometry
+       tags and fractal-boundary classification for pedagogy and planning
+
+(9)  COSMOLOGY
+     - Basin + basin_contact: treat universes/communities/ecosystems as basins,
+       and catastrophic contact between basins as lawful boundary receipts
+
+(10) INTERFACE / CIVIC SURFACES
+     - bundle_what_gov / law_context_for_step (WHAT+GOV fuse)
+     - LanguageEngine (linguistic binding)
+     - PublicAPI (external propose call)
+     - CivicConsole (municipal console, co-signing into audit chain)
+     - EmergencyConsole (catastrophe logging intake)
+
+(11) HARDWARE ABSTRACTIONS
+     - PhotonicPlane (optical planning / collider sandbox with minimal ΔΦ cost)
+     - CrystalArchive (crystal memory "geodes" as signed history shards)
+     - DihedralSurface (physical facet/tactile interface using dihedral symmetry,
+       letting a human sculpt lawful change directly in 3D)
+
+(12) CQE RUNTIME BODIES
+     - CQENode (personal lawful cognition device)
+     - CQEHub  (civic/municipal lawful governance console)
+     - CQEAnchor (continuity organ that snapshots receipts + state into biosubstrate)
+
+NOTES
+-----
+- Many submethods contain "placeholder" logic for math-heavy areas
+  (e.g. Weyl chamber classification, ALENA seam tensor, etc.). The docstrings
+  explain what a production implementation must do.
+- The system assumes access to linear algebra via NumPy.
+- This file is intentionally rich in docstrings and comments. It is meant
+  to be handed to engineers, mathematicians, and governance designers and
+  used as a base to cut modules apart for real deployment.
+
+"""
+
+# (1) IMPORTS AND SHARED CONSTANTS
+# --------------------------------
+
+import json
+import time
+import hashlib
+import numpy as np
+import copy
+from dataclasses import dataclass, field, replace
+from typing import (
+    Any,
+    Dict,
+    List,
+    Tuple,
+    Optional,
+    Literal,
+)
+
+# Universal constants in CQE physics
+PHI = (1.0 + np.sqrt(5.0)) / 2.0  # golden ratio, structural reference
+COUPLING = 0.03  # universal golden-step increment, toroidal timestep magnitude
+
+
+# (2) CORE STATE LAYER
+# --------------------
+
+
+@dataclass
+class StateVector:
+    """
+    Represents the current lawful state of a coherent region in CQE.
+    This could be a person, an ecosystem, an infrastructure cluster,
+    a lab runtime, a civic collective, or any reversible interior domain.
+
+    Fields:
+    - coords: np.ndarray (shape (8,) or compatible) holding the state's
+      coordinates in an exceptional high-symmetry frame (E₈/Cartan basis).
+      CQE treats this as the "canonical true coordinates".
+
+    - phi: float. Morphonic tension Φ(x) = xᵀ A x. Φ measures "strain"
+      or "loaded stress" in the morphonic field. CQE forbids any internal
+      update where ΔΦ > 0. That is Quadratic Invariance (Law 1).
+
+    - tick: int. Toroidal time index. CQE does NOT treat time as linear.
+      Time only advances when the system completes a closed, low-strain,
+      toroidal orbit step. We do not allow arbitrary tick++ unless we
+      closed a loop in a reversible way.
+
+    - metadata: dict. Arbitrary attached annotations: sacred geometry tags,
+      civic binding, continuity anchors, basin provenance, etc.
+    """
+    coords: np.ndarray
+    phi: float
+    tick: int
+    metadata: Dict[str, Any]
+
+
+@dataclass
+class ActionStep:
+    """
+    A proposed motion in CQE state space.
+
+    Fields:
+    - channel: one of {3,6,9}
+        3 → stabilize/internal flow (poloidal / inward coherence)
+        6 → expression/outward flow (toroidal / surfacing)
+        9 → stitching/new-boundary flow (meridional / membrane formation)
+
+      CQE uses these 3/6/9 channels to tag what kind of motion is being
+      attempted. This matters for receipts, because channel 9 is
+      considered a boundary crossing (Law 2).
+
+    - delta_coords: np.ndarray offset to add to current coords if allowed.
+
+    - note: human-readable trace / explanation of why this step exists
+      (e.g. "toward goal", "orch_chamber boundary proposal", etc.).
+    """
+    channel: int
+    delta_coords: np.ndarray
+    note: str
+
+
+def classify_channel(delta: np.ndarray) -> int:
+    """
+    Heuristic channel classifier.
+    In full CQE this is derived from Weyl chamber assignment in E₈.
+
+    - If sum(delta) < 0  → channel 3 (internal stabilizer)
+    - If sum(delta) > 0  → channel 6 (outward express)
+    - Else               → channel 9 (boundary stitch / new membrane)
+
+    Production CQE uses chamber mapping, but this captures the intended logic.
+    """
+    s = np.sum(delta)
+    if s < -1e-9:
+        return 3
+    elif s > 1e-9:
+        return 6
+    return 9
+
+
+def make_step(delta: np.ndarray, note: str) -> ActionStep:
+    """
+    Helper to package a delta vector plus a note into an ActionStep
+    with a channel tag determined by classify_channel.
+
+    This is used everywhere (planner, dihedral interface, OrchChamber).
+    """
+    ch = classify_channel(delta)
+    return ActionStep(
+        channel=ch,
+        delta_coords=delta,
+        note=note
+    )
+
+
+class E8Lattice:
+    """
+    E8Lattice encapsulates group/lattice operations for CQE.
+
+    Responsibilities:
+    - Construct/generate an E₈-class root system.
+    - Project arbitrary coordinate vectors into an admissible Weyl chamber.
+    - Limit or "snap" deltas to legal local steps according to COUPLING.
+      COUPLING is ~0.03, matching the toroidal step constraint.
+
+    Notes:
+    - In full CQE, each allowed move is a low-strain Weyl reflection
+      or rotation inside an admissible chamber. We approximate that here
+      with a norm cap of COUPLING.
+    """
+
+    def __init__(self):
+        self.roots = self._construct_e8_roots()
+
+    def _construct_e8_roots(self) -> np.ndarray:
+        """
+        Construct an approximate E₈ root system.
+
+        Classical description (schematic):
+        - 112 roots with two ±1 entries, others 0
+        - 128 roots with ±1/2 entries (even number of minus signs)
+        Each such root is normalized to length sqrt(2).
+
+        Real production code would implement the full 240 E₈ roots
+        explicitly and store them in canonical orientation.
+        """
+        roots = []
+
+        # Type A roots: ±1, ±1, rest 0
+        basis = np.eye(8)
+        for i in range(8):
+            for j in range(i + 1, 8):
+                for signs in [(1, 1), (1, -1), (-1, 1), (-1, -1)]:
+                    v = np.zeros(8)
+                    v[i] = signs[0]
+                    v[j] = signs[1]
+                    roots.append(v)
+
+        # Type B roots: half-integers with even number of negatives
+        import itertools
+        for signs in itertools.product([+0.5, -0.5], repeat=8):
+            if (sum(1 for s in signs if s < 0) % 2) == 0:
+                roots.append(np.array(signs))
+
+        roots_arr = np.array(roots, dtype=float)
+        # Normalize so each root has squared norm 2.0
+        norms = np.sqrt(np.sum(roots_arr ** 2, axis=1, keepdims=True))
+        roots_arr = roots_arr * (np.sqrt(2.0) / norms)
+        return roots_arr
+
+    def project_to_chamber(self, vec: np.ndarray) -> Tuple[np.ndarray, int]:
+        """
+        Map `vec` into a canonical Weyl chamber, returning:
+        - chamber-aligned coordinates
+        - a provisional chamber ID (can be used to help choose channel)
+
+        Production logic: reflect vec through Weyl walls to force it into
+        the fundamental chamber, track reflection path.
+
+        Here: we stub out a trivial assignment. The returned "chamber_id"
+        is a placeholder.
+        """
+        chamber_id = int(np.sign(np.sum(vec[:3])) != 0)
+        return vec, chamber_id
+
+    def legal_delta(self, delta: np.ndarray) -> np.ndarray:
+        """
+        Snap/clip a proposed step `delta` to a legal small move.
+
+        We constrain the norm of delta to COUPLING. This enforces Law 4
+        (Optimized Efficiency) by preventing reckless high-strain jumps.
+
+        In full CQE, we'd also check that this delta keeps us in a valid
+        Weyl chamber and doesn't create illegal shear.
+        """
+        mag = np.linalg.norm(delta)
+        if mag > COUPLING:
+            delta = delta * (COUPLING / (mag + 1e-12))
+        return delta
+
+
+class MorphonicField:
+    """
+    MorphonicField wraps a positive-definite symmetric matrix A,
+    which defines morphonic tension:
+
+        Φ(x) = xᵀ A x
+
+    This tension scalar Φ(x) is how CQE encodes "strain" or "stress load"
+    in the coherent region's geometry.
+
+    Law 1 (Quadratic Invariance): CQE forbids internal steps where ΔΦ > 0.
+    Thatis, you are not allowed to internally execute an update that creates
+    additional destructive strain in the same body/ecosystem/channel.
+    """
+
+    def __init__(self, A: np.ndarray):
+        assert A.shape[0] == A.shape[1], "A must be square"
+        self.A = A
+
+    def phi(self, coords: np.ndarray) -> float:
+        """
+        Compute Φ(x) = xᵀ A x for the given coordinate vector.
+        """
+        return float(coords.T @ self.A @ coords)
+
+    def apply_internal_step(self, state: StateVector, step: ActionStep) -> StateVector:
+        """
+        Attempt to evolve `state` by `step` *internally*.
+
+        We do not allow ΔΦ > 0 internally. If the new state's phi exceeds the
+        current state's phi, we raise. That enforces Quadratic Invariance.
+
+        Returns:
+        A new StateVector with updated coords and phi (tick and metadata unchanged).
+        """
+        new_coords = state.coords + step.delta_coords
+        new_phi = self.phi(new_coords)
+        if new_phi > state.phi + 1e-12:
+            raise ValueError("ΔΦ > 0 internally; illegal under Law 1 (Quadratic Invariance).")
+
+        return replace(state,
+                       coords=new_coords,
+                       phi=new_phi)
+
+
+class ToroidalClock:
+    """
+    ToroidalClock enforces CQE's notion of time:
+    Time doesn't tick just because code says 'tick++'.
+    A legal tick is a small rotation along a toroidal orbit in state space
+    that "seals" without ripping coherence.
+
+    The rotation increment is COUPLING (~0.03) which ties to:
+    - golden-angle-like minimal-overlap,
+    - minimal local shear,
+    - low additive tension.
+
+    This enforces the idea that "time" only advances when the system has
+    completed a closed, low-strain loop. Otherwise, you haven't truly advanced.
+    """
+
+    def __init__(self, closure_tolerance: float = 1e-6):
+        self.closure_tolerance = closure_tolerance
+
+    def advance_tick(self, state: StateVector) -> StateVector:
+        """
+        Advance the state's toroidal tick if (and only if) a small,
+        low-strain toroidal rotation is valid.
+
+        Implementation detail here is illustrative:
+        We rotate (coords[0], coords[1]) by angle = COUPLING * 2π.
+        Then we check that the move did not blow up displacement.
+
+        Production CQE would:
+        - track a full toroidal manifold embedding,
+        - ensure closure to within tolerance,
+        - confirm ΔΦ ≤ 0 using MorphonicField.
+        """
+        theta = COUPLING * 2.0 * np.pi
+        rot = np.array([[np.cos(theta), -np.sin(theta)],
+                        [np.sin(theta),  np.cos(theta)]])
+        new_coords = state.coords.copy()
+        new_coords[:2] = rot @ new_coords[:2]
+
+        # Basic sanity: if the displacement is too large, consider it illegal
+        if np.linalg.norm(new_coords - state.coords) > (COUPLING * 10.0):
+            raise ValueError("Toroidal closure failed: step not on legal toroidal orbit.")
+
+        return replace(state,
+                       coords=new_coords,
+                       tick=state.tick + 1)
+
+
+class LeastTensionPlanner:
+    """
+    LeastTensionPlanner enforces Law 4 (Optimized Efficiency).
+
+    It proposes a path (sequence of ActionSteps) to move from current coords
+    toward a goal_coords, while minimizing morphonic tension increases.
+
+    Behavior:
+    - Snap candidate deltas using E8Lattice.legal_delta() to keep them small.
+    - Reject or soften moves that would cause ΔΦ > 0 internally.
+    - Return ActionSteps that obey CQE's movement constraints.
+
+    This is how CQE prevents thrash, waste, or brute-force strategies.
+    The planner *refuses* to propose a path that is needlessly violent or
+    tension-spiking, even if that would look "faster".
+    """
+
+    def __init__(self, lattice: E8Lattice, field: MorphonicField):
+        self.lattice = lattice
+        self.field = field
+
+    def plan(self,
+             state: StateVector,
+             goal_coords: np.ndarray,
+(Content truncated due to size limit. Use page ranges or line ranges to read remaining content)

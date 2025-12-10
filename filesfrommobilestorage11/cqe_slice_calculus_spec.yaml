@@ -1,0 +1,62 @@
+version: 1
+profile: CQE_SLICE_CALCULUS
+angle_space:
+  lattice_W: [80,120,600]   # wedge counts (pose keys live comfortably at W=80..120; 600 for fine mode)
+  discretization: "theta_m = 2π m / W, m=0..W-1"
+viewers:
+  outer_polygon_N: 6        # hexagon outer view (example)
+  interiors_N: [10,8]       # decagon, octagon interiors
+observables:
+  # All signals are sampled on the wedge lattice S^1_W
+  - id: extreme_vertex
+    type: categorical
+    desc: argmax of projected vertices of the N-gon at theta
+  - id: extreme_index
+    type: integer
+    desc: winner index among pre-sampled face points
+  - id: permutation
+    type: permutation
+    desc: projection order of face points (braid source)
+  - id: quadrant_occupancy
+    type: integer[4]
+    desc: counts per quadrant after rotating by theta
+  - id: chord_histogram
+    type: integer[K]
+    desc: histogram of step classes (chord lengths) visible at theta
+  - id: braid_events
+    type: spike_train
+    desc: swap angles where adjacent orders tie-flip (source for J_B)
+
+operators:
+  rotate_pose:   {class: "CyclicShift", param: "m→m+r mod W"}
+  reflect:       {class: "Reverse", param: "m→-m mod W"}
+  segment_2_10:  {class: "Segment", desc: "cut face stream at 2↔10 closures (decagon layer)"}
+  repair:        {class: "LeastAction", rule: "largest odd prime ≤ digit → next odd coprime, modulo base"}
+  clone_tile:    {class: "Superpose", rule: "superpose k clones rotated by 2π/k"}
+  project:       {class: "Evaluate", desc: "evaluate observable on S^1_W for chosen viewers"}
+
+calculus:
+  derivative:    "Dθ f[m] = f[m+1] - f[m]"
+  curvature:     "Δθ f[m] = f[m+1] - 2 f[m] + f[m-1]"
+  integral:      "∫ f(θ) dθ ≈ (2π/W) Σ f[m]"
+  dirichlet_E:   "E(f) = Σ ||Dθ f[m]||^2"
+  braid_current: "J_B[m] = # of adjacent transpositions from π[m] to π[m+1]"
+  fourier:       "DFT on f to expose dominant harmonics (Cartan lanes)"
+equivalence:
+  metric: "min over rotation/reflection of Σ_f || f_A - f_B ||_2 on S"
+  stack_S: ["extreme_vertex","chord_histogram","quadrant_occupancy"]
+  epsilon: 1e-3
+multi_resolution:
+  downsample: "average or vote every k wedges"
+  upsample:   "circular interpolation"
+  monotonicity: "equivalence at coarse ⇒ equivalence at fine (else flag scale-dependent)"
+least_action:
+  condition: "E(Δ_pred) ≤ E(Δ_obs)"
+  update:    "θ ← θ - η ∇E(θ)"
+receipts:
+  - dirichlet_energy
+  - writhe
+  - crossing_count
+  - equalizer_theta
+  - braid_current_profile
+  - equivalence_key

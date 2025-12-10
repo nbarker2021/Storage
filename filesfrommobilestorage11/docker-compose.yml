@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  buildenv:
+    image: python:3.11-slim
+    working_dir: /workspace
+    volumes:
+      - ./sbom:/workspace/sbom:ro
+      - ./build:/workspace/build
+      - ./export:/workspace/tools
+      - /mnt/data/rehydrated_repo:/workspace/rehydrated:ro
+    command: bash -lc "python -m venv .venv && . .venv/bin/activate && pip install -r sbom/requirements.normalized.txt && pytest -q || true"

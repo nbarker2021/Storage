@@ -1,0 +1,40 @@
+version: 1
+profile: CQE_UNIFIED
+artifacts:
+  arc_pass3: "/mnt/data/cqe_arc360/arc360_state_pass3.csv"
+  arc_bridge: "/mnt/data/cqe_arc360_bridging/arc360_legalization_and_bridges.csv"
+  prime_summary: "/mnt/data/cqe_prime_engine/prime_coprime_closure_summary.csv"
+  prime_recycle: "/mnt/data/cqe_prime_engine/prime_coprime_recycle_routes.csv"
+  lpc: "/mnt/data/cqe_controller/LPC.csv"
+  controller_summary: "/mnt/data/cqe_controller/controller_summary.csv"
+  emb128: "/mnt/data/cqe_highD_ext/embedding_pca128_int.csv"
+
+modules:
+  ARC360:
+    uses: ["arc_pass3"]
+    receipts: ["tick_closure","cascade","bridges"]
+  PRIME_COPRIME:
+    uses: ["prime_summary","prime_recycle"]
+    receipts: ["prime_top5","delta_mean","crt_corridor","recycle_routes"]
+  SLICE_CALCULUS:
+    uses: ["emb128"]
+    receipts: ["equalizer","dirichlet_E","pose_keys","braid_current"]
+  CQE_CONTROLLER:
+    uses: ["lpc","controller_summary"]
+    receipts: ["objective","keys","writhe","repair_applicable"]
+  TORUS:
+    uses: ["arc_pass3"]
+    receipts: ["magic_k_star","toroid_closed"]
+
+slices:
+  enabled: ['SACNUM', 'LATT', 'FRAC', 'RAMANUJAN', 'GAUSS', 'NOETHER', 'SHANNON', 'HODGE', 'E8_LEECH', 'TRANSLATE_RT', 'OPS_CSV', 'OPS_JSON', 'META_LEX', 'GOLDEN', 'FUZZER', 'ARC360', 'PRIME_COPRIME', 'SLICE_CALCULUS', 'CQE_CONTROLLER', 'TORUS']
+
+promotion:
+  gates:
+    gate_A_arc_strict: "(ARC360.strict_tick and ARC360.bridge)"
+    gate_B_prime: "(PRIME_COPRIME.top5_ge_0_60 and PRIME_COPRIME.crt_corridor)"
+    gate_C_collapse: "(CQE_CONTROLLER.key_dispersion_le_1)"
+    gate_D_arc_loose_bridge: "(ARC360.loose_any and (ARC360.residue_bridge or ARC360.prime_tunnel))"
+  decision: "any"
+outputs:
+  acceptance_table: "/mnt/data/cqe_unified_build/acceptance_table.csv"

@@ -1,0 +1,316 @@
+# CQE-HYPERHARNESS v1.1.1 — unified config (fold-in patch applied)
+# Generated: 2025-10-10T20:01:56Z
+---
+meta:
+  id: cqe-hyperharness
+  version: "1.1.1"
+  generated_at: "2025-10-10T20:01:56Z"
+  authoring: ["CQE custodian"]
+  notes: |
+    v1.1.1 folds in pose-aware cache & global-once; FRAC chart fields in receipts;
+    CRT Garner proofs in receipts; Toroid closure metrics and receipts.
+
+governance:
+  start_of_turn:
+    cbc: true
+    parity_required: true
+    requests:
+      - id: normal_token_request
+        channel: tokens/normal
+        required: true
+      - id: TSR_CQE_MeaningPressure_v1
+        channel: tokens/cqe_meaning_pressure
+        required: true
+        template_ref: GOV/ANNEX/TSR_CQE_v1
+      - id: TSR_OPS_Drift_v1
+        channel: tokens/ops_drift
+        required: true
+        template_ref: GOV/ANNEX/TSR_OPS_Drift_v1
+
+morphon:
+  shells: { "base": 1, "scale_factor": 10, "max": 5 }
+  plateau_guard: { "W": 4, "eps": 1.0e-3 }
+  auto_reweight:
+    trigger: channel_balance_entropy
+    thresholds: { "warn": 0.12, "hard": 0.20 }
+  long_hop_policy:
+    crt:
+      neighbor_only: true
+      dual_validator_required_if_violate: true
+  escrow:
+    allowed: true
+    window: { "max_pulses": 3 }
+    paydown_required: true
+
+policy_labels:
+  ops.safe:
+    morphon.escrow.window.max_pulses: 1
+    morphon.long_hop_policy.crt.neighbor_only: true
+  ops.aggressive:
+    morphon.plateau_guard.W: 3
+    morphon.auto_reweight.thresholds.warn: 0.10
+    morphon.escrow.window.max_pulses: 4
+
+invariants:
+  - "ΔΦ discipline: accept if ΔΦ≤0 or escrow with paydown"
+  - "CBC: enumerate admissible ops or cite neg-cache hit"
+  - "Δband8/Δband24 ≤ 1 unless quarantined"
+  - "Parity: 64-bit lanes; no promotion without pass"
+  - "Token conservation where applicable"
+  - "Bell-honoring; signatures on critical events"
+  - "Pose global-once: at most one global PaG at pulse 0; further global poses require ESCL→8 receipts"
+  - "Pose legality: PaG must preserve admissible ops up to relabeling π(k); verifier checks closure"
+  - "Pose-aware cache: keys must include pose_salt; cross-pose cache hits forbidden"
+
+cache_policy:
+  key_fields: ["orbit_hash","operator_signature","pose_k","pose_salt"]
+  cross_pose_hits: "forbid"
+  events_log: true
+
+slices:
+  DYNATOKE: { status: active, lanes: "[-1,1]^8", token_conservation: strict }
+  LATT:     { status: active, e8: true, leech: true }
+  FRAC:     { status: active, charts: ["Julia"], K: 16 }
+  CRT:      { status: active, frames: ["{64,64}","{9,11,41,37}"] }
+  SACNUM:   { status: active, DR: true, PS160: true }
+  GAUSS:    { status: available, phase_bins: 12 }
+  RAMANUJAN:{ status: available, q_series: true }
+  TRANSLATE:{ status: available, hub: "Λ24", packs: true }
+  ACOUSTIC: { status: available, shells: ["S0","S1","S2"] }
+
+domains:
+  ops_csv:
+    operators:
+      - id: DelimiterRepair
+        class: TriadicRepair
+        scope: local_chunk
+        guards: ["ΔΦ<=0","CBC","Δband≤1","token_conservation","parity_pass"]
+        receipts: ["op_try","op_accept","op_reject"]
+      - id: TypeConsolidate
+        class: Midpoint
+        scope: column_family
+        guards: ["ΔΦ<=0","token_conservation"]
+        receipts: ["op_try","op_accept","op_reject"]
+      - id: MissingColInsert
+        class: SingleInsert
+        scope: batch
+        guards: ["token_conservation","ΔΦ<=0","Δband≤1"]
+        receipts: ["op_try","op_accept","op_reject","proof_annex"]
+      - id: ParityMirror
+        class: ParityRepair
+        scope: batch
+        guards: ["ΔΦ≈0 within cap","parity_pass"]
+        receipts: ["pose_event"]
+      - id: PlateauBreak
+        class: PolicyMove
+        scope: run
+        guards: ["CBC","escrow_window<=W"]
+        receipts: ["neg_cache_insert"]
+
+  ops_json:
+    operators:
+      - id: BraceBalanceRepair
+        class: TriadicRepair
+        scope: local_chunk
+        guards: ["ΔΦ<=0","CBC","Δband≤1","token_conservation","parity_pass"]
+        receipts: ["op_try","op_accept","op_reject"]
+      - id: TypeConsolidateJSON
+        class: Midpoint
+        scope: key_family
+        guards: ["ΔΦ<=0","token_conservation"]
+        receipts: ["op_try","op_accept","op_reject"]
+      - id: KeySchemaStabilize
+        class: SingleInsert
+        scope: batch
+        guards: ["token_conservation","ΔΦ<=0","Δband≤1"]
+        receipts: ["op_try","op_accept","op_reject","proof_annex"]
+
+  translate_rt:
+    operators:
+      - id: SnapE8_Source
+        class: GaugeSnap
+        scope: window
+        purpose: "Babai snap to source E8 basis; emit syndrome"
+        guards: ["ΔΦ<=0","parity_pass","CBC"]
+        receipts: ["op_try","op_accept"]
+      - id: MapToL24
+        class: InterlinguaMap
+        scope: window
+        purpose: "E8→Λ24; apply defined-space filters (domain/register/safety)"
+        guards: ["ΔΦ<=0","CBC"]
+        receipts: ["op_try","op_accept","op_reject"]
+      - id: MapToE8_Target
+        class: GaugeMap
+        scope: window
+        purpose: "Λ24→target E8 bank; choose basis by ΔΦ + pack compatibility"
+        guards: ["ΔΦ<=0","CBC","Δband≤1"]
+        receipts: ["op_try","op_accept","op_reject"]
+      - id: RealizeTokens
+        class: ConstrainedRealization
+        scope: window
+        purpose: "Pack-constrained token surface; token-conservation enforced"
+        guards: ["token_conservation","ΔΦ<=0"]
+        receipts: ["op_try","op_accept","op_reject"]
+      - id: ShellAdvance
+        class: PolicyMove
+        scope: window
+        purpose: "ScaleUp×10 when saturated; bounded micro-corrections"
+        guards: ["plateau_guard","escrow_window<=W"]
+        receipts: ["neg_cache_insert","op_accept"]
+    consensus:
+      require_any:
+        - ["LATT.adjacent","FRAC.adjacent"]
+      crt: { neighbor_only: true }
+      parity: { required: true }
+      phi_monotone: true
+
+consensus:
+  ops_csv:
+    require_any:
+      - ["LATT.adjacent","FRAC.adjacent"]
+      - ["LATT.adjacent","SACNUM.binAgree"]
+    crt: { neighbor_only: true }
+    parity: { required: true }
+    phi_monotone: true
+  ops_json:
+    require_any:
+      - ["LATT.adjacent","FRAC.adjacent"]
+      - ["LATT.adjacent","SACNUM.binAgree"]
+    crt: { neighbor_only: true }
+    parity: { required: true }
+    phi_monotone: true
+  translate_rt:
+    require_any:
+      - ["LATT.adjacent","FRAC.adjacent"]
+    crt: { neighbor_only: true }
+    parity: { required: true }
+    phi_monotone: true
+
+verifiers:
+  pose:
+    global_once_pulse0: true
+    escalate_code: "ESCL→8"
+    cache_key_includes: ["pose_k","pose_salt"]
+    relabel_closure_required: true
+  frac:
+    receipt_extensions: ["chart_kind","p","weights_hash","scaling_cr","scaling_ci","chart_version"]
+  crt:
+    garner_proof_required_on_accept: true
+    receipt_extensions: ["frame_id","garner_coeffs","indexP_before","indexP_after"]
+
+fsm:
+  states: ["run_start","pulse_start","op_try","op_accept","op_reject",
+           "pulse_end","promotion_decision","egress","refusal","run_end"]
+  transitions:
+    - ["run_start","pulse_start"]
+    - ["pulse_start","op_try"]
+    - ["op_try","op_accept"]
+    - ["op_try","op_reject"]
+    - ["op_accept","pulse_end"]
+    - ["op_reject","pulse_end"]
+    - ["pulse_end","promotion_decision"]
+    - ["promotion_decision","egress"]
+    - ["promotion_decision","refusal"]
+    - ["egress","run_end"]
+    - ["refusal","run_end"]
+
+schemas:
+  receipt:
+    type: object
+    required: ["ts","event","parity64"]
+    properties:
+      ts: { type: string }
+      event: { type: string }
+      delta_phi: { type: number }
+      pre: { type: object }
+      post: { type: object }
+      cbc_list: { type: array, items: { type: string } }
+      hashes: { type: object }
+      spectra: { type: object }
+      validators: { type: object }
+      reason: { type: string }
+      parity64: { type: string }
+      # Pose-aware cache extension
+      pose: { type: object, properties: { k: {type: integer}, scope: {type: string}, global: {type: boolean} } }
+      cache: { type: object, properties: { pose_salt: {type: string}, key: {type: string}, hit: {type: boolean} } }
+      # FRAC extension
+      frac: { type: object, properties: { chart_kind: {type: string}, p: {type: integer}, weights_hash: {type: string}, scaling_cr: {type: string}, scaling_ci: {type: string}, chart_version: {type: string} } }
+      # CRT extension
+      crt: { type: object, properties: { frame_id: {type: string}, garner_coeffs: {type: string}, indexP_before: {type: integer}, indexP_after: {type: integer} } }
+  neg_cache:
+    type: object
+    required: ["event","signature","parity64"]
+    properties:
+      event: { const: "neg_cache_insert" }
+      signature: { type: string }
+      reason: { type: string }
+      parity64: { type: string }
+  closure_update:
+    type: object
+    required: ["event","k","Ck","components","parity64"]
+    properties:
+      event: { const: "closure_update" }
+      k: { type: integer }
+      Ck: { type: number }
+      components: { type: object, properties: { ring_uniformity: {type:number}, tile_neighbor_coverage: {type:number}, parity_balance: {type:number}, frac_coherence: {type:number}, e8_orbit_coverage: {type:number} } }
+      parity64: { type: string }
+  toroid_close:
+    type: object
+    required: ["event","k_star","Ck","band_drift_max","parity64"]
+    properties:
+      event: { const: "toroid_close" }
+      k_star: { type: integer }
+      Ck: { type: number }
+      band_drift_max: { type: integer }
+      parity64: { type: string }
+
+stress_tests:
+  ops_csv:
+    ST_A_control: { description: "steady producer", expect: { promotion_rate: 1.0, phi_nonpositive: true, band_delta_max: 1 } }
+    ST_B_delimiter_chaos: { description: "mixed delimiters/newlines", expect: { repairs_per_file_min: 1, escrow_windows_max: 1, eventual_promotion: true } }
+    ST_C_schema_mismatch: { description: "added string col + tile jump", expect: { consolidate_reject: true, crt_long_hop_reject: true, decision: "refuse" } }
+    ST_D_na_flip: { description: "NA encoding variance", expect: { parity_mirror_accept: true, promotion_continue: true } }
+    ST_E_header_drift: { description: "header reorder", expect: { midpoint_accept: true, decision: "promote" } }
+    ST_F_burst_anomaly: { description: "malformed burst then normal", expect: { escrow_then_refuse_current: true, next_file_promote: true } }
+  TORUS_magic_sizes:
+    description: "Detect magic shell sizes that complete local closure toward torus"
+    expect: { plateau_detected: true, k_star_defined: true, delta_phi_nonpositive_window: true, band_drift_max: 1, toroid_closed_flag: true }
+
+meta_lex:
+  H_labels: ["love","hate","apology","threat","joy","sadness","anger","fear","surprise","disgust","trust","anticipation","gratitude","remorse","pride","shame","forgiveness","deception"]
+  SPF:
+    love: ["chirality:L","Δμ:down","tile_neighbor:true","r5∈{0,1}"]
+    hate: ["chirality:R","Δμ:up","parity_imbalance:high","r5∈{3,4}"]
+    apology: ["Δμ:down","lane_variance:low","parity_balance:high"]
+    threat: ["Δμ:up","deadline_number:true","punct:!|!!"]
+
+goldens:
+  ops_csv:
+    promote: []
+    refuse: []
+
+fuzzer:
+  rate: 0.01
+  moves: ["bad_crc","pose_cross_hit","parity_flip","crt_long_hop"]
+  expected: ["op_reject","escrow_then_reject"]
+
+annexes:
+  GOV/ANNEX/TSR_CQE_v1: |
+    (see v1.1 annex; keep canonical TSR text identical)
+  GOV/ANNEX/TSR_OPS_Drift_v1: |
+    OPS Drift Corpus v1:
+      Provide mixed artifacts (CSV/JSON) with controlled drift types:
+        - steady series
+        - delimiter chaos
+        - schema mismatch
+        - NA flip
+        - header reorder
+        - burst anomaly
+      Coverage envelopes:
+        - DYNATOKE lanes quartiles
+        - FRAC μ: low/mid/high
+        - CRT neighbor spread (tile4096 Manhattan radius ≤ 1 for ≥60%)
+        - Parity present; ΔΦ recorded on each operator pulse
+      Quotas:
+        - ≥ 10 files per drift type; each with ≥ 5 chunks
+        - Include manifest with ground-truth drift labels

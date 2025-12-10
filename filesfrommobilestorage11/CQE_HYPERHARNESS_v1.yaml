@@ -1,0 +1,295 @@
+# CQE-HYPERHARNESS v1 — single-file config pack
+# Generated: 2025-10-10T19:45:39Z
+# This file includes: governance (turn_start + TSR), morphon knobs,
+# slice registry, domain operator set (ops_csv), invariants, FSM, schemas,
+# stress tests, and annex (TSR) embedded as canonical text.
+---
+meta:
+  id: cqe-hyperharness
+  version: "1.0"
+  generated_at: "2025-10-10T19:45:39Z"
+  authoring: ["CQE custodian"]
+  notes: |
+    Single file intended to be loaded by the CQE engine. All sections are authoritative.
+    Replace or extend domains/slices as needed; keep invariants and FSM intact.
+
+governance:
+  start_of_turn:
+    cbc: true
+    parity_required: true
+    requests:
+      - id: normal_token_request
+        channel: tokens/normal
+        required: true
+      - id: TSR_CQE_MeaningPressure_v1
+        channel: tokens/cqe_meaning_pressure
+        required: true
+        template_ref: GOV/ANNEX/TSR_CQE_v1
+        invariants:
+          - "ΔΦ<=0 on ingestion receipts (A payload)"
+          - "token_conservation strict (A payload)"
+          - "lanes quartile coverage"
+          - "frac μ low/mid/high coverage"
+          - "chirality L/R/0 coverage"
+          - "crt tile spread wide; ≥20% neighbors"
+          - "pressure prevalence ≥ 0.30"
+          - "register/domain balance enforced"
+        quotas:
+          output_tokens_min: 10000
+          emotion_blocks:
+            core_min_per_class: 200
+            extended_min_per_class: 80
+          languages:
+            required: ["en"]
+            optional_at_least_two_more: true
+
+morphon:
+  shells:
+    base: 1
+    scale_factor: 10
+    max: 5
+  plateau_guard:
+    W: 4
+    eps: 1.0e-3
+  auto_reweight:
+    trigger: channel_balance_entropy
+    thresholds: {"warn": 0.12, "hard": 0.20}
+  long_hop_policy:
+    crt:
+      neighbor_only: true
+      dual_validator_required_if_violate: true
+  escrow:
+    allowed: true
+    window:
+      max_pulses: 3
+    paydown_required: true
+
+invariants:
+  - "ΔΦ discipline: accept if ΔΦ≤0 or escrow with paydown"
+  - "CBC: enumerate admissible ops or cite neg-cache hit"
+  - "Δband8/Δband24 ≤ 1 unless quarantined"
+  - "Parity: 64-bit lanes; no promotion without pass"
+  - "Token conservation where applicable"
+  - "Bell-honoring; signatures on critical events"
+
+slices:
+  DYNATOKE: {status: active, lanes: "[-1,1]^8", token_conservation: strict}
+  LATT:     {status: active, e8: true, leech: true}
+  FRAC:     {status: active, charts: ["Julia"], K: 16}
+  CRT:      {status: active, frames: ["{64,64}","{9,11,41,37}"]}
+  SACNUM:   {status: active, DR: true, PS160: true}
+  GAUSS:    {status: available, phase_bins: 12}
+  RAMANUJAN:{status: available, q_series: true}
+  TRANSLATE:{status: available, hub: "Λ24", packs: true}
+  ACOUSTIC: {status: available, shells: ["S0","S1","S2"]}
+
+domains:
+  ops_csv:
+    operators:
+      - id: DelimiterRepair
+        class: TriadicRepair
+        scope: local_chunk
+        legal_moves:
+          normalize_delimiter: [",",";","|"]
+          newline_rewrite: ["\r\n" , "\n"]
+          quoted_cell_unescape: true
+        guards: ["ΔΦ<=0","CBC","Δband≤1","token_conservation"]
+        receipts: ["op_try","op_accept","op_reject"]
+      - id: TypeConsolidate
+        class: Midpoint
+        scope: column_family
+        legal_moves:
+          upcast_exact: ["int→float","tinyint→int"]
+          downcast_proved: ["float→decimal(k)"]
+          categorical_collapse: "entropy≤τ"
+        guards: ["ΔΦ<=0","token_conservation"]
+        receipts: ["op_try","op_accept","op_reject"]
+      - id: MissingColInsert
+        class: SingleInsert
+        scope: batch
+        legal_moves:
+          derive_from_other: "regex/parse/udf with witness proof"
+        guards: ["token_conservation","ΔΦ<=0","Δband≤1"]
+        receipts: ["op_try","op_accept","op_reject","proof_annex"]
+      - id: ParityMirror
+        class: ParityRepair
+        scope: batch
+        purpose: "rebalance NA/null/empty equivalences"
+        guards: ["ΔΦ≈0 within cap","parity_pass"]
+        receipts: ["pose_event"]
+      - id: PlateauBreak
+        class: PolicyMove
+        scope: run
+        purpose: "exit no-accept zones; writes negative-proof cache"
+        guards: ["CBC","escrow_window<=W"]
+        receipts: ["neg_cache_insert"]
+
+consensus:
+  ops_csv:
+    require_any:
+      - ["LATT.adjacent", "FRAC.adjacent"]
+      - ["LATT.adjacent", "SACNUM.binAgree"]
+    crt:
+      neighbor_only: true
+    parity: 
+      required: true
+    phi_monotone: true
+
+fsm:
+  states: ["run_start","pulse_start","op_try","op_accept","op_reject",
+           "pulse_end","promotion_decision","egress","refusal","run_end"]
+  transitions:
+    - ["run_start","pulse_start"]
+    - ["pulse_start","op_try"]
+    - ["op_try","op_accept"]
+    - ["op_try","op_reject"]
+    - ["op_accept","pulse_end"]
+    - ["op_reject","pulse_end"]
+    - ["pulse_end","promotion_decision"]
+    - ["promotion_decision","egress"]
+    - ["promotion_decision","refusal"]
+    - ["egress","run_end"]
+    - ["refusal","run_end"]
+
+schemas:
+  receipt:
+    type: object
+    required: ["ts","event","parity64"]
+    properties:
+      ts: {type: string}
+      event: {type: string}
+      delta_phi: {type: number}
+      pre: {type: object}
+      post: {type: object}
+      cbc_list: {type: array, items: {type: string}}
+      hashes: {type: object}
+      spectra: {type: object}
+      validators: {type: object}
+      reason: {type: string}
+      parity64: {type: string}
+  neg_cache:
+    type: object
+    required: ["event","signature","parity64"]
+    properties:
+      event: {const: "neg_cache_insert"}
+      signature: {type: string}
+      reason: {type: string}
+      parity64: {type: string}
+
+stress_tests:
+  ops_csv:
+    ST_A_control:
+      description: "steady producer"
+      expect:
+        promotion_rate: 1.0
+        phi_nonpositive: true
+        band_delta_max: 1
+    ST_B_delimiter_chaos:
+      description: "mixed delimiters/newlines"
+      expect:
+        repairs_per_file_min: 1
+        escrow_windows_max: 1
+        eventual_promotion: true
+    ST_C_schema_mismatch:
+      description: "added string col + tile jump"
+      expect:
+        consolidate_reject: true
+        crt_long_hop_reject: true
+        decision: "refuse"
+    ST_D_na_flip:
+      description: "NA encoding variance"
+      expect:
+        parity_mirror_accept: true
+        promotion_continue: true
+    ST_E_header_drift:
+      description: "header reorder"
+      expect:
+        midpoint_accept: true
+        decision: "promote"
+    ST_F_burst_anomaly:
+      description: "malformed burst then normal"
+      expect:
+        escrow_then_refuse_current: true
+        next_file_promote: true
+
+annexes:
+  GOV/ANNEX/TSR_CQE_v1: |
+    # --- BEGIN TSR_CQE_MeaningPressure_v1 (canonical, verbatim) ---
+    Token Set Request (TSR) — CQE Meaning/Pressure Corpus v1
+
+    0) Scope
+      Provide two payloads:
+        A. Output-based tokens (system artifacts): realized tokens + receipts for replay.
+        B. Human emotion blocks (large, disparate examples) mixing words/glyphs/numbers/residues,
+           with pressure tokens present (negators, contrastives, punctuation).
+
+    1) Coverage goals (shape-first)
+      - DYNATOKE lanes L∈[-1,1]^8: coverage across quartiles (low/high variance windows).
+      - FRAC phase μ: include low/mid/high.
+      - Chirality: L, R, 0.
+      - CRT tiles (4096): broad spread; ≥20% neighbor tiles.
+      - LATT/Leech proxies: mix high/low inner-products, Hamming radii.
+      - Pressure tokens: ensure frequent presence of {not, never, unless, but, however, !, ?}.
+
+    2) Emotion classes (human-side labels, non-binding for engine)
+      Core: love, hate, apology, threat.
+      Extended: joy, sadness, anger, fear, surprise, disgust, trust, anticipation, gratitude,
+                remorse, pride, shame, forgiveness, deception.
+      Unknown allowed. Do not guess if uncertain.
+
+    3) Quotas
+      - Block size: 1–4K chars (≈150–800 whitespace tokens).
+      - A. Output tokens: ≥10k realized tokens with receipts.
+      - B. Emotion blocks: ≥200 per core class; ≥80 per extended class.
+      - Languages: en required; include ≥2 more if available.
+      - Registers: casual / neutral / formal.
+      - Domains: conversation / social / support / news / legal / technical (mixed).
+
+    4) File layout
+      /cqe_tokenset_v1/
+        A_output_tokens/outputs.jsonl
+        B_emotion_blocks/blocks.jsonl
+        manifests/packs.json
+        manifests/provenance.csv
+        manifests/README.md
+
+    5) Schemas (JSONL)
+      5.1 outputs.jsonl
+        { "run_id":"...", "slice_path":[...], "window_id":"...",
+          "realized_tokens":[...],
+          "receipts":{"ΔΦ":-0.034,"pose":"k=2,L","basis":{"source":"...","target":"..."},
+                      "packs":["..."],"cbc":true,"parity64":"hex16"},
+          "pressure_context":["not","!","but"],
+          "timestamp":"ISO8601", "provenance":{"source":"internal-run","consent":"n/a"} }
+      5.2 blocks.jsonl
+        { "block_id":"...", "language":"en", "register":"casual|neutral|formal",
+          "domain":"conversation|support|news|legal|tech|other",
+          "human_label":"love|hate|apology|threat|joy|...|unknown",
+          "window":[
+            {"type":"word","text":"I"},{"type":"word","text":"am"},{"type":"word","text":"sorry"},
+            {"type":"glyph","text":"!"},{"type":"number","num":{"value":24},"meta":{"unit":"h"}},
+            {"type":"residue","res":{"r5":3,"r7":6,"r11":2}}
+          ],
+          "pressure_tokens":["not","but","?","!"],
+          "anonymization":{"names":"masked","ids":"hashed","pii_removed":true},
+          "provenance":{"source":"training|live","date":"YYYY-MM-DD","consent":"yes|no|n/a"} }
+
+    6) Gates
+      - Token-conservation (A): realized ⊆ (inputs × packs × rules).
+      - Parity: parity64 present.
+      - ΔΦ present for A; B may omit but should include pressure_tokens.
+      - Anonymization: no raw PII.
+      - Pressure prevalence: ≥30% of blocks contain ≥1 pressure token.
+      - Register/domain balance: no single domain >40%.
+      - Language balance: en + ≥2 others if supplied.
+
+    7) Suggested sampling
+      Contrast pairs; negation flips; punctuation escalation; numeric/deadline pressure;
+      residue variety (r5,r7,r11).
+
+    8) Submission
+      Tar/zip of /cqe_tokenset_v1/.
+
+    9) Rationale
+      Shape-first, coverage envelopes not hard constants; suited to CQE invariants.
+    # --- END TSR_CQE_MeaningPressure_v1 ---

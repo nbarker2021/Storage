@@ -1,0 +1,264 @@
+{
+  "version": 1,
+  "profile": "CQE_FULL_UNIFIED",
+  "artifacts": {
+    "arc360": [
+      "arc360/arc360_state_pass0.csv",
+      "arc360/arc360_state_pass1.csv",
+      "arc360/arc360_state_pass2.csv",
+      "arc360/arc360_state_pass3.csv",
+      "arc360/cqe_arc360_snapwrap_ledger.jsonl",
+      "arc360/cqe_arc360_snapwrap_summary.json"
+    ],
+    "arc360_bridging": [
+      "arc360_bridging/arc360_bridging_ledger.jsonl",
+      "arc360_bridging/arc360_bridging_summary.json",
+      "arc360_bridging/arc360_legalization_and_bridges.csv"
+    ],
+    "clock_arc": [
+      "clock_arc/cqe_clock_arc_map.csv",
+      "clock_arc/cqe_clock_arc_summary.json"
+    ],
+    "prime_engine": [
+      "prime_engine/cqe_prime_coprime_extension.yaml",
+      "prime_engine/prime_coprime_closure_summary.csv",
+      "prime_engine/prime_coprime_recycle_routes.csv",
+      "prime_engine/prime_coprime_spill_recycle.csv"
+    ],
+    "controller": [
+      "controller/LPC.csv",
+      "controller/controller_receipts.jsonl",
+      "controller/controller_summary.csv",
+      "controller/cqe_controller_spec.yaml"
+    ],
+    "slice_calc_pack": [
+      "slice_calc_pack/cqe_slice_calculus_mapping.md",
+      "slice_calc_pack/cqe_slice_calculus_spec.yaml",
+      "slice_calc_pack/cqe_slice_calculus_todo.json"
+    ],
+    "unified_build": [
+      "unified_build/README.md",
+      "unified_build/acceptance_table.csv",
+      "unified_build/cqe_unified_harness.yaml",
+      "unified_build/slice_registry.json"
+    ],
+    "session_files": [
+      "CQE_SESSION_MANIFEST_V1.json",
+      "cqe_unified_manifest.json",
+      "cqe_unified_index.md",
+      "cqe_unified_harness.yaml",
+      "cqe_unified_harness (1).yaml",
+      "acceptance_table.csv",
+      "slice_registry.json",
+      "README.md",
+      "cqe_wrap_snap_report.csv",
+      "cqe_wrap_snap_overlay.csv",
+      "cqe_braiding_metrics.csv",
+      "cqe_gate_labels_with_braiding.csv",
+      "cqe_gate_labels_with_braiding_FIXED.csv"
+    ]
+  },
+  "slices": {
+    "enabled": [
+      "SACNUM",
+      "LATT",
+      "FRAC",
+      "RAMANUJAN",
+      "GAUSS",
+      "NOETHER",
+      "SHANNON",
+      "HODGE",
+      "E8_LEECH",
+      "TRANSLATE_RT",
+      "OPS_CSV",
+      "OPS_JSON",
+      "META_LEX",
+      "GOLDEN",
+      "FUZZER",
+      "ARC360",
+      "PRIME_COPRIME",
+      "SLICE_CALCULUS",
+      "CQE_CONTROLLER",
+      "TORUS"
+    ],
+    "policies": {
+      "default": {
+        "dihedral": "R+F",
+        "W": [
+          80,
+          240
+        ],
+        "parity64": true,
+        "phi_monotone": true
+      },
+      "ops.safe": {
+        "morphon.escrow.window.max_pulses": 1,
+        "long_hop_policy.crt.neighbor_only": true
+      },
+      "ops.aggressive": {
+        "plateau_guard.W": 3,
+        "auto_reweight.thresholds.warn": 0.1,
+        "escrow.window.max_pulses": 4
+      },
+      "numerology_bridge": {
+        "repair.delta_thresh": 1,
+        "prime.family.alt": true,
+        "cross_layer_weight": 0.3
+      },
+      "knot_sensitive": {
+        "braid.weight": 0.3,
+        "avoid_spike_windows": true
+      }
+    }
+  },
+  "modules": {
+    "ARC360": {
+      "receipts": [
+        "tick_closure",
+        "cascade_x2_x10",
+        "bridges",
+        "tunneling"
+      ],
+      "use": [
+        "arc360",
+        "arc360_bridging",
+        "clock_arc"
+      ],
+      "gates": {
+        "strict": "tick.strict.any and bridges.any",
+        "loose_bridge": "tick.loose.any and (bridges.residue or bridges.prime)"
+      }
+    },
+    "PRIME_COPRIME": {
+      "receipts": [
+        "prime_top5_mean",
+        "delta_mean",
+        "crt_corridors",
+        "recycle_routes"
+      ],
+      "use": [
+        "prime_engine"
+      ],
+      "gates": {
+        "prime_ok": "prime_top5_mean>=0.60 and crt_corridors"
+      }
+    },
+    "SLICE_CALCULUS": {
+      "receipts": [
+        "equalizer_theta",
+        "dirichlet_E",
+        "pose_keys_W80_W240",
+        "braid_current"
+      ],
+      "use": [
+        "slice_calc_pack"
+      ]
+    },
+    "CQE_CONTROLLER": {
+      "receipts": [
+        "objective",
+        "keys",
+        "writhe",
+        "repair_applicable",
+        "LPC"
+      ],
+      "use": [
+        "controller",
+        "slice_calc_pack"
+      ],
+      "gates": {
+        "collapse": "keys.dispersion_W80<=1"
+      }
+    },
+    "TORUS": {
+      "receipts": [
+        "k_star",
+        "toroid_closed",
+        "coverage_band"
+      ],
+      "use": [
+        "arc360"
+      ]
+    },
+    "TRANSLATE_RT": {
+      "receipts": [
+        "\u0394\u03a6_monotone",
+        "pack_compat",
+        "E8\u2192\u039b24\u2192E8_map"
+      ],
+      "policy": {
+        "default_pair": "AI_BASE(8/16)\u2194HUM_BASE(8/12)",
+        "crt_neighbor": true,
+        "parity": true
+      }
+    },
+    "OPS_CSV": {
+      "receipts": [
+        "lane_balance",
+        "delimiter_repair",
+        "schema_snap"
+      ]
+    },
+    "OPS_JSON": {
+      "receipts": [
+        "brace_balance",
+        "type_consolidation",
+        "schema_stabilize"
+      ]
+    },
+    "META_LEX": {
+      "receipts": [
+        "H_label\u2194SPF_bindings",
+        "bridge_usage"
+      ]
+    },
+    "GOLDEN": {
+      "receipts": [
+        "promote_hashes",
+        "refuse_hashes"
+      ]
+    },
+    "FUZZER": {
+      "receipts": [
+        "illegal_move_rate",
+        "reject_or_escrow"
+      ]
+    },
+    "SACNUM": {},
+    "LATT": {},
+    "FRAC": {},
+    "RAMANUJAN": {},
+    "GAUSS": {},
+    "NOETHER": {},
+    "SHANNON": {},
+    "HODGE": {},
+    "E8_LEECH": {}
+  },
+  "promotion": {
+    "decision": "any",
+    "gates": {
+      "A_arc_strict": "ARC360.strict",
+      "B_prime": "PRIME_COPRIME.prime_ok",
+      "C_collapse": "CQE_CONTROLLER.collapse",
+      "D_arc_loose_bridge": "ARC360.loose_bridge"
+    }
+  },
+  "tsr_requests": [
+    {
+      "id": "TSR_MEANING_v1",
+      "channel": "tokens/meaning_pressure",
+      "quota": "balanced lanes; \u03bc spans; CRT neighbor spread"
+    },
+    {
+      "id": "TSR_OPS_Drift_v1",
+      "channel": "tokens/ops_drift",
+      "quota": "csv/json drift families; \u03bc low/mid/high; parity64"
+    }
+  ],
+  "outputs": {
+    "acceptance_table": "acceptance_table.csv",
+    "slice_registry": "slice_registry.json",
+    "proof_receipts": "proofs/",
+    "run_ledger": "run_ledger.jsonl"
+  }
+}

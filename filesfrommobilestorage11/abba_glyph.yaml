@@ -1,0 +1,24 @@
+modality: glyph
+description: ABBA sequence for matrix+fraction glyph block with grouping fence.
+sequence:
+- phase: A0_baseline
+  program_ref: glyph_example.json
+  controls: compiled_controls_glyph_example.json
+  notes: Baseline controls.
+- phase: B1_modal
+  program_ref: glyph_example.json
+  compiler: compile_glyph.py
+  profile_ref: glyph_profile_demo.json
+  notes: "Compiled \u039B\u039F\u03B3 controls."
+- phase: B2_modal_repeat
+  program_ref: glyph_example.json
+  compiler: compile_glyph.py
+  profile_ref: glyph_profile_demo.json
+  notes: Repeat to check drift.
+- phase: A3_baseline
+  program_ref: glyph_example.json
+  controls: compiled_controls_glyph_example.json
+  notes: Return to baseline.
+matching:
+  accuracy_tolerance_pct: 0.2
+power_sampling_hz: 200

@@ -1,0 +1,751 @@
+openapi: 3.1.0
+info:
+  title: SNAP Statepack & Snapshot Service API
+  version: 1.0.0
+  description: |
+    Web API for creating, retrieving, restoring, replaying, and diffing **statepack** snapshots
+    for SNAP. This spec also pins the schemas used by SNAP's runtime registry and selected
+    SNAP control endpoints to support deterministic replay.
+
+    **Privacy:** Hidden chain-of-thought is never stored. Replay relies on seeds, configs,
+    and decision metadata only.
+servers:
+  - url: https://api.snaplat.example.com/v1
+    description: Primary API endpoint
+security:
+  - bearerAuth: []
+tags:
+  - name: snapshots
+    description: Create, fetch, delete, diff, and replay snapshots
+  - name: sessions
+    description: Restore sessions from snapshots
+  - name: snap
+    description: Selected SNAP runtime endpoints used during replay (optional)
+paths:
+  /snapshots:
+    post:
+      tags: [snapshots]
+      summary: Create a new snapshot (statepack)
+      operationId: createSnapshot
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SnapshotCreateRequest'
+      responses:
+        '201':
+          description: Snapshot created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SnapshotCreateResponse'
+        '400': { $ref: '#/components/responses/ErrorResponse' }
+        '409': { $ref: '#/components/responses/ErrorResponse' }
+  /snapshots/{snapshot_id}:
+    get:
+      tags: [snapshots]
+      summary: Fetch a snapshot (statepack)
+      operationId: getSnapshot
+      parameters:
+        - in: path
+          name: snapshot_id
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: The statepack snapshot
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Statepack'
+        '404': { $ref: '#/components/responses/ErrorResponse' }
+    delete:
+      tags: [snapshots]
+      summary: Delete a snapshot
+      operationId: deleteSnapshot
+      parameters:
+        - in: path
+          name: snapshot_id
+          required: true
+          schema: { type: string }
+      responses:
+        '204': { description: Deleted }
+        '404': { $ref: '#/components/responses/ErrorResponse' }
+  /snapshots/{snapshot_id}/replay:
+    post:
+      tags: [snapshots]
+      summary: Deterministically replay a snapshot (optionally a specific turn)
+      operationId: replaySnapshot
+      parameters:
+        - in: path
+          name: snapshot_id
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReplayRequest'
+      responses:
+        '200':
+          description: Replay results and parity checks
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReplayResult'
+        '412': { $ref: '#/components/responses/ErrorResponse' }
+        '409': { $ref: '#/components/responses/ErrorResponse' }
+  /snapshots/{snapshot_id}/diff:
+    get:
+      tags: [snapshots]
+      summary: Diff two snapshots (structural & semantic)
+      operationId: diffSnapshots
+      parameters:
+        - in: path
+          name: snapshot_id
+          required: true
+          schema: { type: string }
+        - in: query
+          name: other
+          description: Snapshot ID to compare against
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Diff result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DiffResult'
+        '404': { $ref: '#/components/responses/ErrorResponse' }
+  /sessions/{session_id}/restore:
+    post:
+      tags: [sessions]
+      summary: Restore a session from a snapshot
+      operationId: restoreSession
+      parameters:
+        - in: path
+          name: session_id
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RestoreRequest'
+      responses:
+        '200':
+          description: Restore result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestoreResult'
+        '412': { $ref: '#/components/responses/ErrorResponse' }
+        '409': { $ref: '#/components/responses/ErrorResponse' }
+
+  # --- Selected SNAP endpoints (optional for direct control in replay) ---
+  /snap/knn:
+    get:
+      tags: [snap]
+      summary: k-NN over canonized E8 coordinates
+      operationId: knn
+      parameters:
+        - in: query
+          name: id
+          required: false
+          schema: { type: string }
+        - in: query
+          name: coord_e8
+          description: Comma-separated vector if id not provided
+          required: false
+          schema: { type: string }
+        - in: query
+          name: k
+          schema: { type: integer, default: 16, minimum: 1 }
+        - in: query
+          name: radius
+          schema: { type: number }
+        - in: query
+          name: lattice_version
+          schema: { type: integer }
+        - in: query
+          name: tolerance
+          schema: { type: number, default: 1e-6 }
+      responses:
+        '200':
+          description: Neighbor set
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KnnResult'
+  /snap/anchor:
+    post:
+      tags: [snap]
+      summary: Anchor admission (create + place)
+      operationId: anchorAdmit
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AnchorRequest'
+      responses:
+        '200':
+          description: Admission outcome
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnchorAdmit'
+  /snap/anchor/prune:
+    post:
+      tags: [snap]
+      summary: Anchor prune (contraction)
+      operationId: anchorPrune
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AnchorPrunePlan'
+      responses:
+        '200':
+          description: Prune result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnchorPrune'
+  /snap/reanchor:
+    post:
+      tags: [snap]
+      summary: Re-anchor (drift remediation)
+      operationId: reanchor
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReanchorRequest'
+      responses:
+        '200':
+          description: Re-anchor result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reanchor'
+  /region/tag:
+    post:
+      tags: [snap]
+      summary: Create a region tag/quarantine
+      operationId: createRegionTag
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegionTagCreate'
+      responses:
+        '200':
+          description: Region tag
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RegionTag'
+  /region/tag/{tag_id}:
+    delete:
+      tags: [snap]
+      summary: Remove a region tag/quarantine
+      operationId: deleteRegionTag
+      parameters:
+        - in: path
+          name: tag_id
+          required: true
+          schema: { type: string }
+      responses:
+        '204': { description: Deleted }
+  /lease/region:
+    post:
+      tags: [snap]
+      summary: Acquire a lease for an E8 region
+      operationId: leaseRegion
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LeaseRequest'
+      responses:
+        '200':
+          description: Lease result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LeaseGrant'
+  /lease/{lease_id}:
+    delete:
+      tags: [snap]
+      summary: Release a lease
+      operationId: releaseLease
+      parameters:
+        - in: path
+          name: lease_id
+          required: true
+          schema: { type: string }
+      responses:
+        '204': { description: Released }
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  responses:
+    ErrorResponse:
+      description: Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+
+  schemas:
+    # --- Common Errors ---
+    Error:
+      type: object
+      required: [code, message]
+      properties:
+        code:
+          type: string
+          enum: [VERSION_MISMATCH, POLICY_VIOLATION, REF_INTEGRITY_FAIL, LEASE_DENIED, CACHE_CORRUPT, NOT_FOUND, INVALID_REQUEST, CONFLICT]
+        message: { type: string }
+        details: { type: object, additionalProperties: true }
+
+    # --- Snapshot Service ---
+    SnapshotCreateRequest:
+      type: object
+      required: [levels]
+      properties:
+        levels:
+          type: string
+          description: Snapshot fidelity level
+          enum: [resume, replay, forensic]
+        scope:
+          type: object
+          description: Optional selectors to limit export
+          properties:
+            lane: { type: string }
+            regions: { type: array, items: { type: string } }
+            ids: { type: array, items: { type: string } }
+        includeCaches:
+          type: boolean
+          default: false
+    SnapshotCreateResponse:
+      type: object
+      required: [snapshot_id, created_at, statepack]
+      properties:
+        snapshot_id: { type: string }
+        created_at: { type: string, format: date-time }
+        statepack:
+          $ref: '#/components/schemas/Statepack'
+
+    RestoreRequest:
+      type: object
+      required: [snapshot_id, mode]
+      properties:
+        snapshot_id: { type: string }
+        mode:
+          type: string
+          enum: [resume, replay]
+        validateOnly:
+          type: boolean
+          default: false
+    RestoreResult:
+      type: object
+      required: [session_id, status]
+      properties:
+        session_id: { type: string }
+        status: { type: string, enum: [ok, failed] }
+        warnings: { type: array, items: { type: string } }
+
+    ReplayRequest:
+      type: object
+      properties:
+        turn_id: { type: string, description: Optional specific turn to replay }
+        strict: { type: boolean, default: true }
+    ReplayResult:
+      type: object
+      required: [status, parity]
+      properties:
+        status: { type: string, enum: [ok, failed] }
+        parity:
+          type: object
+          properties:
+            m_op_parity: { type: boolean }
+            neighbor_parity_sample: { type: number, minimum: 0, maximum: 1 }
+            notes: { type: array, items: { type: string } }
+
+    DiffResult:
+      type: object
+      properties:
+        structural:
+          type: array
+          items: { type: string }
+        semantic:
+          type: array
+          items: { type: string }
+
+    # --- Statepack (top-level) ---
+    Statepack:
+      type: object
+      required: [snapshot_id, created_at, levels, snapi, model, lattice, policy, lane, registry, planner, telemetry, audit]
+      properties:
+        snapshot_id: { type: string }
+        created_at: { type: string, format: date-time }
+        levels: { type: string, enum: [resume, replay, forensic] }
+        snapi: { $ref: '#/components/schemas/Snapi' }
+        model: { $ref: '#/components/schemas/ModelPin' }
+        lattice: { $ref: '#/components/schemas/LatticePin' }
+        policy: { $ref: '#/components/schemas/PolicyPin' }
+        lane: { $ref: '#/components/schemas/Lane' }
+        registry: { $ref: '#/components/schemas/Registry' }
+        planner: { $ref: '#/components/schemas/PlannerManifest' }
+        telemetry: { $ref: '#/components/schemas/TelemetryPack' }
+        audit: { $ref: '#/components/schemas/AuditPack' }
+
+    Snapi:
+      type: object
+      required: [version, endpoints]
+      properties:
+        version: { type: string }
+        endpoints:
+          type: array
+          items:
+            type: object
+            required: [name, rev]
+            properties:
+              name: { type: string }
+              rev: { type: string }
+
+    ModelPin:
+      type: object
+      required: [name, revision]
+      properties:
+        name: { type: string, example: gpt-5-thinking }
+        revision: { type: string, example: r2025-08-10.3 }
+        tokenizer_rev: { type: string }
+
+    LatticePin:
+      type: object
+      required: [lattice_version, engine_rev, basis, tolerances, canon]
+      properties:
+        lattice_version: { type: integer, example: 42 }
+        engine_rev: { type: string, example: e8-0.9.7 }
+        basis: { type: string, description: Content hash of basis }
+        tolerances:
+          type: object
+          properties:
+            quant_eps: { type: number, example: 1e-6 }
+            tie_policy: { type: string, example: lexicographic }
+        canon:
+          type: object
+          properties:
+            method: { type: string, example: weyl }
+            idempotent: { type: boolean, example: true }
+
+    PolicyPin:
+      type: object
+      properties:
+        lawpack_rev: { type: string }
+        guardrail_rev: { type: string }
+
+    Lane:
+      type: object
+      required: [name]
+      properties:
+        name: { type: string, enum: [shadow, pilot, prod] }
+        constraints: { type: array, items: { type: string } }
+
+    Registry:
+      type: object
+      required: [snap_count, glyph_count, snaps, glyphs]
+      properties:
+        snap_count: { type: integer }
+        glyph_count: { type: integer }
+        region_tags: { type: array, items: { $ref: '#/components/schemas/RegionTag' } }
+        leases: { type: array, items: { $ref: '#/components/schemas/LeaseGrant' } }
+        snaps: { type: array, items: { $ref: '#/components/schemas/Snap' } }
+        glyphs: { type: array, items: { $ref: '#/components/schemas/Glyph' } }
+        caches:
+          type: object
+          properties:
+            neighbor_cache_key: { type: string }
+            entries: { type: integer }
+
+    Snap:
+      type: object
+      required: [id, coord_e8, lattice_version]
+      properties:
+        id: { type: string }
+        coord_e8:
+          type: array
+          items: { type: number }
+          minItems: 8
+          maxItems: 8
+        lattice_version: { type: integer }
+        lane: { type: string }
+        lineage:
+          type: object
+          properties:
+            parent: { type: string, nullable: true }
+            reanchor_of: { type: string, nullable: true }
+        anchors:
+          type: object
+          properties:
+            min_sep: { type: number }
+            admitted_at: { type: string, format: date-time }
+        neighbors:
+          type: object
+          properties:
+            k: { type: integer }
+            ids: { type: array, items: { type: string } }
+            dist: { type: array, items: { type: number } }
+        region_tags: { type: array, items: { type: string } }
+        hash: { type: string }
+
+    Glyph:
+      type: object
+      required: [id, coord_e8]
+      properties:
+        id: { type: string }
+        snap_ids: { type: array, items: { type: string } }
+        coord_e8:
+          type: array
+          items: { type: number }
+          minItems: 8
+          maxItems: 8
+        neighbors:
+          type: object
+          properties:
+            ids: { type: array, items: { type: string } }
+            dist: { type: array, items: { type: number } }
+        archivist_ref: { type: string }
+        evidence_refs: { type: array, items: { type: string } }
+        hash: { type: string }
+
+    AnchorRequest:
+      type: object
+      required: [payload]
+      properties:
+        payload: { type: object, additionalProperties: true }
+        evidence_ids: { type: array, items: { type: string } }
+        policy:
+          type: object
+          properties:
+            min_sep: { type: number }
+            reuse_bias: { type: number }
+        lane: { type: string }
+
+    AnchorAdmit:
+      type: object
+      required: [id, decision, tick, m_op]
+      properties:
+        id: { type: string }
+        policy:
+          type: object
+          properties:
+            min_sep: { type: number }
+            reuse_bias: { type: number }
+        decision: { type: string, enum: [accepted, deferred, quarantine] }
+        reason: { type: string }
+        tick: { type: integer }
+        m_op: { type: string }
+
+    AnchorPrunePlan:
+      type: object
+      required: [selector]
+      properties:
+        selector:
+          type: object
+          properties:
+            region: { type: string }
+            tag: { type: string }
+        plan_id: { type: string }
+
+    AnchorPrune:
+      type: object
+      required: [plan_id, pruned_ids, tick, m_op]
+      properties:
+        plan_id: { type: string }
+        pre_checks:
+          type: object
+          properties:
+            dangling_edges: { type: boolean }
+        pruned_ids: { type: array, items: { type: string } }
+        tick: { type: integer }
+        m_op: { type: string }
+
+    ReanchorRequest:
+      type: object
+      required: [id]
+      properties:
+        id: { type: string }
+        new_evidence: { type: array, items: { type: string } }
+        drift_signal:
+          type: object
+          properties:
+            delta: { type: number }
+            window: { type: string }
+        policy:
+          type: object
+          properties:
+            min_sep: { type: number }
+            reuse_bias: { type: number }
+
+    Reanchor:
+      type: object
+      required: [id, old_coord, new_coord, tick]
+      properties:
+        id: { type: string }
+        old_coord: { type: array, items: { type: number } }
+        new_coord: { type: array, items: { type: number } }
+        drift_signal:
+          type: object
+          properties:
+            delta: { type: number }
+            window: { type: string }
+        lineage_link: { type: string }
+        status: { type: string }
+        tick: { type: integer }
+
+    RegionTagCreate:
+      type: object
+      required: [type, region]
+      properties:
+        type: { type: string, enum: [quarantine, warn, info] }
+        region: { type: string, description: Polytope or ball spec }
+        reason: { type: string }
+        expiry: { type: string, format: date-time }
+
+    RegionTag:
+      type: object
+      required: [id, type, region]
+      properties:
+        id: { type: string }
+        type: { type: string, enum: [quarantine, warn, info] }
+        region: { type: string }
+        reason: { type: string }
+        issued_by: { type: string, example: SAP }
+        effective: { type: string, format: date-time }
+        expiry: { type: string, format: date-time }
+
+    KnnResult:
+      type: object
+      required: [neighbors]
+      properties:
+        query:
+          type: object
+          properties:
+            id: { type: string }
+            k: { type: integer }
+            lattice_version: { type: integer }
+        neighbors:
+          type: array
+          items:
+            type: object
+            properties:
+              id: { type: string }
+              dist: { type: number }
+        seed: { type: integer }
+        tolerance: { type: number }
+
+    LeaseRequest:
+      type: object
+      required: [region, ttl]
+      properties:
+        region: { type: string }
+        ttl: { type: integer }
+        owner: { type: string }
+
+    LeaseGrant:
+      type: object
+      required: [lease_id, region, granted]
+      properties:
+        lease_id: { type: string }
+        region: { type: string }
+        granted: { type: boolean }
+        ttl: { type: integer }
+        owner: { type: string }
+
+    Remediation:
+      type: object
+      required: [remediation_id, status]
+      properties:
+        remediation_id: { type: string }
+        scope: { type: string }
+        success_criteria:
+          type: object
+          properties:
+            evidence_min: { type: integer }
+            tests_pass: { type: boolean }
+        quota:
+          type: object
+          properties:
+            max_trials: { type: integer }
+        owner: { type: string }
+        status: { type: string, enum: [open, closed, merged] }
+        artifacts: { type: array, items: { type: string } }
+        links:
+          type: object
+          properties:
+            blocks: { type: array, items: { type: string } }
+        tick_open: { type: integer }
+        tick_close: { type: integer }
+
+    PlannerManifest:
+      type: object
+      required: [schedule_id, ops]
+      properties:
+        schedule_id: { type: string }
+        ops:
+          type: array
+          items:
+            type: object
+            required: [tick, op, m_op]
+            properties:
+              tick: { type: integer }
+              op: { type: string }
+              m_op: { type: string }
+        heatmap_ref: { type: string }
+        rng_seed: { type: integer }
+
+    TelemetryPack:
+      type: object
+      properties:
+        kpi:
+          type: object
+          properties:
+            time_to_promote_hours: { type: number }
+            remediation_depth_p50: { type: integer }
+            knn_p95_ms: { type: number }
+        counters:
+          type: object
+          properties:
+            anchor_admits: { type: integer }
+            anchor_prunes: { type: integer }
+
+    AuditPack:
+      type: object
+      required: [trace_id]
+      properties:
+        trace_id: { type: string }
+        events:
+          type: array
+          items:
+            type: object
+            properties:
+              at: { type: string, format: date-time }
+              code: { type: string }
+              region: { type: string }

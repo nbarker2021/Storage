@@ -1,0 +1,71 @@
+# CQE_UNIFIED_HARNESS — session snapshot
+# Generated: 2025-10-10T20:50:26Z
+meta:
+  id: cqe-unified-harness
+  version: "0.1"
+  generated_at: "2025-10-10T20:50:26Z"
+registry:
+  slices:
+  - id: MORSR_GAUGE_POSE
+    status: spec_available
+    deps: ['POSE', 'GOV']
+    notes: "PEPS/IPS/PaG; ledger-first; pose-aware cache."
+  - id: DYNATOKE
+    status: active
+    deps: ['GOV', 'LATT', 'FRAC', 'CRT']
+    notes: "lanes, ΔΦ gating, shell ×10, token conservation."
+  - id: LATT
+    status: active
+    deps: ['SACNUM', 'CRT', 'FRAC']
+    notes: "E8/Leech, Construction A–D, Hamming gating, Conway lifts."
+  - id: FRAC
+    status: active
+    deps: ['LATT', 'SACNUM', 'GOV']
+    notes: "Julia/Mandelbrot charts, μ-banding, K=16 bins."
+  - id: SACNUM
+    status: active
+    deps: ['GOV', 'LATT']
+    notes: "Digital-root, PD80/PS160, frequency labels."
+  - id: CRT
+    status: active
+    deps: ['SACNUM', 'LATT', 'GOV']
+    notes: "Residue frames, tile4096, Garner proofs."
+  - id: RAMANUJAN
+    status: available
+    deps: ['CRT', 'LATT', 'FRAC']
+    notes: "q-series, partitions, eta/theta, mock-theta shadows."
+  - id: GAUSS
+    status: available
+    deps: ['CRT', 'FRAC', 'LATT']
+    notes: "Reciprocity gates, Dirichlet χ, Gauss sums, BQF/ℤ[i]."
+  - id: TRANSLATE_RT
+    status: available
+    deps: ['LATT', 'FRAC', 'GOV']
+    notes: "E8→Λ24→E8', pack-constrained realization."
+  - id: ACOUSTIC
+    status: available
+    deps: ['TRANSLATE_RT', 'GOV']
+    notes: "GGwave-like PHY, S0–S2 shells."
+  - id: OPS_CSV
+    status: active
+    deps: ['GOV', 'LATT', 'FRAC', 'CRT']
+    notes: "Delimiter/Type/Insert repairs."
+  - id: OPS_JSON
+    status: active
+    deps: ['GOV', 'LATT', 'FRAC', 'CRT']
+    notes: "Brace/Type/Schema repairs."
+  - id: TORUS
+    status: test
+    deps: ['GOV', 'LATT', 'FRAC', 'CRT']
+    notes: "C(k) closure; k* detection."
+  - id: POSE
+    status: enforced
+    deps: ['GOV']
+    notes: "Global-once; pose-aware cache keys."
+  - id: GOV
+    status: enforced
+    deps: []
+    notes: "ΔΦ, CBC, escrow, ethics, channel entropy."
+
+nav:
+  buckets:

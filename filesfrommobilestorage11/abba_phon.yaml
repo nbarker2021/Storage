@@ -1,0 +1,24 @@
+modality: phon
+description: ABBA sequence for ternary meter with CV alternation at 120 BPM.
+sequence:
+- phase: A0_baseline
+  program_ref: phon_example.json
+  controls: compiled_controls_phon_example.json
+  notes: Baseline controls (no chromatic or modal tweaks).
+- phase: B1_modal
+  program_ref: phon_example.json
+  compiler: compile_phon.py
+  profile_ref: phon_profile_demo.json
+  notes: "Compiled \u039B\u039F\u03C8 controls."
+- phase: B2_modal_repeat
+  program_ref: phon_example.json
+  compiler: compile_phon.py
+  profile_ref: phon_profile_demo.json
+  notes: Repeat to check drift.
+- phase: A3_baseline
+  program_ref: phon_example.json
+  controls: compiled_controls_phon_example.json
+  notes: Return to baseline.
+matching:
+  accuracy_tolerance_pct: 0.2
+power_sampling_hz: 200

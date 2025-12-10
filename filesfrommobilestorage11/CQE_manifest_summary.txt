@@ -1,0 +1,99 @@
+- Appendix_III_Alena_Tuning.md: # Appendix III — Alena Tuning & Dead‑band
+`λ` sweet band ≈ 0.66; entry/exit hysteresis ±0.01. Priorities: palindromic fix → minimal defects → minimal motion.
+- Appendix_II_Witness_Math.md: # Appendix II — Witness Math
+`P4 = |h4[1] - h4[3]|`
+`P8 = |h8[1] - h8[7]| + |h8[2] - h8[6]| + |h8[3] - h8[5]|`
+Syndrome and K‑corrections follow the chosen code parity and even‑lift rules (Construction‑A discipline).
+- Appendix_IV_Dyadic_Rests_Atlas.md: # Appendix IV — Dyadic Rests & 8‑Cell Atlas
+16 naive sign patterns reduce to 8 legal vertices under mirror+k‑parity+frame closure. One vertex is the palindromic rest; seven are clean orthogonal deltas.
+- Appendix_I_Hand_Proof_Kit.md: # Appendix I — Hand Proof Kit (n=1→5, no jargon)
+## Materials
+- Two sheets of graph paper (4×4 grids), two colors of pens/highlighters. ## Steps
+1.
+- Appendix_V_Schematics.md: # Appendix V — Schematics (ASCII)
+```
+T^10 carrier (schematic)
+  [2‑plane 1]—[2‑plane 2]—[2‑plane 3]—[2‑plane 4]  + groove + axis
+Face‑only scan (latches)
+  faces: f1 f2 f3 f4 f5 f6 f7 f8
+  step advances only if all latched = 1
+Ledger chain
+  step_hash -> step_hash -> step_hash   (append‑only; residues replay)
+```
+- Cheat_Sheet.md: # CQE Zero-Repeat Cheat Sheet
+- **Carrier:** `T^10` = 4×(2‑plane) + groove + axis
+- **State:** `X = R ⊕ Δ`, `R ∈ {R2, R4, R8, R16, R64}`
+- **Mirror:** pose‑as‑gauge (free check)
+- **Residues:** mods `{2,4,8,13}` (+ extras as needed), stitched by CRT
+- **Legality:** Con‑A evenness; code parity OK
+- **Witnesses:** 8 faces; cadence advances only when all latch
+- **Reduction:** minimize `ν = (syndrome, P4, P8)` until REST
+- **Cost (Alena):** `D = Σ w_i (P_i + λ|K_i|)`, `λ ≈ 0.66`
+- **Ledger:** appen
+- Paper_A_Foundations.md: # Paper A — Foundations: Canon, Carrier & Rests
+**Series:** CQE: A Legality-First, Geometry-Native Operating Model for Deterministic Reasoning
+**Version:** v1.0
+**Date:** 2025-09-17T15:37:36.022748Z
+## Abstract
+We present a framework (CQE) in which legality—not similarity—governs both retrieval and generation. Inputs are integerized and evaluated on a 10‑D toroidal carrier with dyadic rests (2/4/8/16/64) and mirror parity.
+- Paper_B_Algebraic_Spine.md: # Paper B — Algebraic Spine & the n=4→5 Hinge
+## Abstract
+States the hand‑checkable hinge: n=4 collapses to one palindromic rest on a 4×4 parity grid; inserting “5” forces **eight** inequivalent insertion classes (the octad). Provides falsifiers and a paper‑and‑pencil worksheet.
+- Paper_C_Control_Determinism.md: # Paper C — Control & Determinism (Corridors, Latches, Replay)
+## Abstract
+Formalizes the gate wall (g₁..g₆) and face‑only scan; proves the confluent reduction ⇒ unique normal form; provides the replay kit. ## C.1 Gate Wall (I/O twin)
+g₁ XOR parity (mod 2), g₂ chamber (mod 3), g₃ cost (mod 5), g₄ provenance (mod 7), g₅ safety (mod 11), g₆ timing (mod 13).
+- Paper_D_ScratchPad_HQ.md: # Paper D — Scratch‑Pad HQ: The Operating Model
+## Abstract
+Blueprint of the building: Control Tower, eight stations, floors (L1–L8), latches, runbook, and journals. ## D.1 Floors & Stations
+- L1 Exchange (parity market), L2 CRT switchboard, L3 Construction‑A lift, L4 Helix cartography, L5 Alena (sliders), L6 Ledger, L7 Spectral/Haptic lab, L8 Validation court.
+- Paper_E_API_Reference.md: # Paper E — API & Reference Implementation
+## Abstract
+Public endpoints and schemas; idempotent, key‑scoped; example payloads. ## E.1 Endpoints
+POST `/frame.compile` → F from glyphs
+POST `/verify` → verdict + (synd, P4, P8, typeII)
+POST `/reduce` → one legal ACTION step + reason
+POST `/commit` → collapse to normal form (hash)
+POST `/anchor.match` → invariant‑keyed lookup
+POST `/extend` → propose minimal frame extension (+ cost)
+## E.2 Schemas
+RunFrame, StepFrame, FeatureFrame, CheckFrame, Artifa
+- Paper_F_Tokens_Governance.md: # Paper F — Tokens, Glyphs, Stand‑ins & Governance
+## Abstract
+How to use stand‑in tokens (domain‑agnostic glyphs) safely; numeric glyphs compile frames; journals track meaning; contracts and provenance. ## F.1 Stand‑ins
+Treat “$” or “DNA” as a sealed container until a gate requires expansion.
+- Paper_G_Applications.md: # Paper G — Applications & Evidence
+## Abstract
+Worked examples that live entirely inside the CQE runtime (toy but faithful): composite video from 8 streams; 3‑body “mission control”; codon duplex & peptide bond; water‑ice anomaly; time‑crystal‑like gating; vector‑search hygiene. ### G.1 Composite video (Δ‑space mixing)
+Mix differences in 10‑D under a shared rest; enforce latches; decode to pixels; deterministic replay.
+- Paper_H_Falsifiers_Ablations.md: # Paper H — Falsifiers, Limits, Ablations
+## Abstract
+Everything that would break the story, and how to test it. - Show non‑confluence (same seed+frame → different hash).
+- Poster_One_Sheet.md: # One‑Sheet Poster — CQE: A Legality-First, Geometry-Native Operating Model for Deterministic Reasoning
+**Rest, not search.** Move context on a 10‑D torus; accept only legal states. **Deterministic.** Confluent reduction → unique normal form (REST).
+- Speaker_Deck_Outline.md: # Speaker Deck — CQE in 12 Slides (Markdown outline)
+1. Problem: similarity-led systems are non‑deterministic & fragile
+2.
+- acceptance_tests.csv: test_id,seed,frame_mods,expected_verdict,notes
+T001,seed:A,"{2,4,8,13}",REST,n=4 palindrome canonicalizes
+T002,seed:B,"{2,4,8,13}",ACTION->REST,n=5 insertion class palindromizes
+T003,seed:C,"{2,4,8,13}",ACTION->REST,n=5 insertion class stabilizes (non‑pal)
+T004,seed:D,"{2,4,8,13}",REJECT,dual‑red (DFT & WHT) pre‑gate
+T005,seed:E,"{2,4,8,13}",REST,replay determinism hash match
+- n5_worksheet_template.csv: cell_id,row,col,try_5_here(y/n),result_class(1..8),repaired(y/n),palindromic(y/n),notes
+r1c1,1,1,,,,,
+r1c2,1,2,,,,,
+r1c3,1,3,,,,,
+r1c4,1,4,,,,,
+r2c1,2,1,,,,,
+r2c2,2,2,,,,,
+r2c3,2,3,,,,,
+r2c4,2,4,,,,,
+r3c1,3,1,,,,,
+r3c2,3,2,,,,,
+r3c3,3,3,,,,,
+r3c4,3,4,,,,,
+r4c1,4,1,,,,,
+r4c2,4,2,,,,,
+r4c3,4,3,,,,,
+r4c4,4,4,,,,,
