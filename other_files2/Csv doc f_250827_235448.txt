@@ -1,0 +1,113 @@
+Doc F — Futures, Scoring, and Controllers (DFSS/AltDFSS, O1–O7, Policy Cards)
+Purpose: Define the futures we evaluate, how we score them deterministically, and how controllers (RAW, DEEPEN, RECALL) pick legal moves using operators O1–O7. This chapter specifies the JSON/CSV artifacts (policy/evidence cards), strict scoring math, decision order, and validators so that every selection is reproducible from CSVs alone.
+F1. Overview
+A future is a small, lawful hypothetical change to the working structure (graph/orbit/octet arrangement) projected one step ahead within a BW‑32 window. We enumerate futures, compute features (geometry, graph, legality, energy), and select using DFSS (Deterministic Futures Search & Scoring) or AltDFSS. The chosen future informs a concrete operator move (O1–O7) executed by a controller (RAW, DEEPEN, RECALL). Acceptance still depends on Doc D’s gates and, for Master, a PromotionContract.
+Outputs
+• policy_cards.json — ranked futures with scores, features, and the recommended controller/operator.
+• evidence_cards.json — supporting evidence (quotes/atoms, octadic/geometry facts) per candidate.
+• (Optional) POLICY_SUMMARY.csv — the top‑k future decisions flattened for dashboards.
+F2. Futures Taxonomy (S₀, S½, S⁺, Sᶜ, Sʳ, Sᵒ)
+Each future type is deterministic (no RNG) and has a bounded branching factor B_max per window.
+FutureMeaningAllowed editsLAEC costTypical useS₀Identitynone0Baseline for minimax and regression checksS½Half‑stepone Hamming‑1 in active lane; small bridge trial+1Exploratory refinement in RAW/DEEPENS⁺Dimension upgradeadd a lawful dimension/feature (e.g., lane or bucket refinement)+2When octadic/geometry suggest capacitySᶜConstrained forwardfull‑step adhering to current constraints & lanes+1Even‑step acceptance candidateSʳRepair/rollbackinverse of last accepted step; isoenergetic rewire allowed+1RECALL after red watcher/regressionSᵒOperator‑specifiedbounded template move (triad mediation, symmetry align)+1..+2Human hint or policy‑forced move 
+Determinism rules: enumerate in fixed lexical order; tie‑breakers by glyph order and doc_id; seeds fixed in ops.
+F3. Feature Set (per future)
+For each candidate future f in window w:
+• Graph metrics 
+• (Fiedler) ↑ desirable; normalized 
+• C (global clustering) ↑ desirable; normalized
+• ASP (avg shortest path) ↓ desirable; normalized
+• Cut fraction on proposed partition ↓ desirable
+• Geometry metrics (from Doc E) 
+• Δ𝒜 (lower is better), Band‑8, chirality stability
+• Octadic metrics (from Doc E) 
+• ΔQ at (2,4,8); monotone‑lift indicator; clean flag boolean
+• Legality 
+• parity_ok, bridge_ok, chirality_bin_ok
+• octet_unique (would remain 64‑unique?)
+• Energetics / Budget 
+• ΔLAEC; windows_needed delta; budget_ok if executed
+All features are recorded in the candidate list inside policy_cards.json (and optionally flattened to CSV).
+F4. Scoring (DFSS & AltDFSS)
+F4.1 Base normalization
+For each metric family M ∈ {λ₂, C, ASP⁻¹, Δ𝒜, Band‑8, ΔQ} compute z‑scores over the candidate set in the current window. Clamp to ±3 to stabilize.
+F4.2 DFSS score
+DFSS(f) = w_λ*λ₂ₙ + w_C*Cₙ + w_ASP*ASP⁻¹ₙ + w_G*(-Δ𝒜ₙ + Band8ₙ) + w_O*(ΔQ₈ₙ + lift_flag) - w_K*(ΔLAEC_norm) 
+• lift_flag ∈ {0,1} for monotone Q₂≤Q₄≤Q₈.
+• All weights are fixed in ops.yml (recorded in the policy card header).
+F4.3 AltDFSS (AltScore)
+AltScore(f) = 0.4*λ₂ₙ + 0.3*Cₙ + 0.3*ASP⁻¹ₙ + β1*clean + β2*Band8ₙ - β3*Δ𝒜ₙ - β4*ΔLAEC_norm 
+Select AltScore when ops.scoring_policy = alt or when geometry/octadic dominate (Doc E signals).
+F4.4 Minimax selection
+• Group futures by type; pick argmax per type; then pick the minimax solution against worst‑case noise model (mirror/null checks). Record the adversary model used.
+• Decision order: Legality → Score → Geometry → ΔJ (secondary objective) → Glyph lexicographic tie → Doc id tie.
+Output: policy_cards.json[top_k] with score_family, chosen_controller, chosen_operator.
+F5. Controllers (RAW, DEEPEN, RECALL) & Operators (O1–O7)
+F5.1 RAW (gentle intake)
+Use when: fragmented graph (high cut), low Band‑8, or clean=false with low Q₄.
+Moves: prefer O1 Half‑Step, O4 Per‑Edge Triad on weak edges.
+Constraints: no k≈5 rewires; ΔLAEC low; parity odd only; bridges trialled but not committed.
+F5.2 DEEPEN (structured progress)
+Use when: clean=true and Q8 high; geometry stable (low Δ𝒜, high Band‑8).
+Moves: O2 Full‑Step, O3 Center‑3‑Triad for consolidation, and selective k≈5 repairs.
+Constraints: parity even allowed for acceptance; commit bridges that pass legality and reduce Δ𝒜.
+F5.3 RECALL (repair / heavy)
+Use when: watcher red (regression), chirality drift, or parity failures.
+Moves: O6 Isoenergetic Slider (degree‑preserving rewires), O5 Symmetry Gate alignment, O7 Governance Swaps to satisfy law/constraints.
+Constraints: may allow Sʳ rollbacks; strict octet uniqueness enforced before leaving RECALL.
+F6. Operators — Legal Preconditions & Costs
+OperatorActionPreconditionsLAEC ΔGlyph updateO1 Half‑StepHamming‑1 in active laneodd step; CI, parity_ok+1triad index increments in lane; parity O/*O2 Full‑Stepcommit lane changeeven step; rank↑ or lawful fallback+1parity E/*; triad writebackO3 Center‑3‑Triadmediate A,B with T(A,B)A,B close; ΔS<0; glue≤cap+1new triad with mediator indexO4 Per‑Edge Triadlocal triad on weak edgeedge weight≤τ; parity_ok+1per‑edge glyph tag appendedO5 Symmetry Gateenforce symmetrysymmetry diff≤τ_s0mirror glyph alignmentO6 Isoenergetic Sliderdegree‑preserving rewireλ₂ not ↓; ASP not ↑+1glyph unchanged; ledger noteO7 Governance Swapsswap to satisfy law/constraintlaw conflict; buffer constraint+1glyph replaced; link to law id 
+All operators must pass Doc D gates. Failed preconditions → reject.
+F7. Policy & Evidence Cards (Artifacts)
+F7.1 policy_cards.json (schema)
+{ "run_id": "r1", "window_id": 4, "scoring_policy": "dfss|alt", "weights": {"w_λ":0.25, "w_C":0.2, ...}, "candidates": [ { "future_id": "f:Shalf:001", "type": "S½", "features": {"lambda2_n":0.8, "C_n":0.4, "ASP_inv_n":0.3, "dA_n":-0.2, "band8":0.7, "dQ8":0.5, "clean":true, "parity_ok":true, "octet_unique":true, "dLAEC_norm":0.03}, "score": 0.69, "controller": "DEEPEN", "operator": "O2" }, ... ], "top_k": ["f:Shalf:001","f:Splus:002"], "adversary_model": "mirror_null_v1" } 
+F7.2 evidence_cards.json (schema)
+{ "future_id": "f:Shalf:001", "evidence": { "quotes": ["a:17a…","a:22b…"], "octadic": {"clean": true, "Q8": 0.68}, "geometry": {"band8": 0.78, "dA": -0.12} } } 
+F7.3 POLICY_SUMMARY.csv (optional)
+run_id,window_id,future_id,type,score,controller,operator,lambda2_n,C_n,ASP_inv_n,dA_n,band8,dQ8,clean,dLAEC_norm 
+F8. Integration with PromotionScore (PS)
+promotion_score in orbit.csv takes features from the chosen future’s policy card:
+PS = a1*evidence_strength + a2*stability_score + a3*consistency_across_shells + a4*recency_boost + a5*human_signal + a6*agreement_rate - a7*cost_penalty(ΔLAEC_norm) 
+• stability_score derives from geometry/octadic metrics and clean‑flag.
+• consistency_across_shells from split balance and Band‑8 adherence.
+• cost_penalty is a monotone function of ΔLAEC.
+F9. Validators (DFSS integrity)
+• Deterministic enumeration: future IDs generated lexicographically; B_max respected.
+• Feature recompute: recomputing features from intake/orbit yields exact values in policy cards.
+• Score recompute: rerunning DFSS/AltDFSS with recorded weights reproduces the top_k order.
+• Controller legality: chosen operator’s preconditions satisfied; otherwise policy card invalid.
+• Evidence links: all evidence_cards references resolve to existing atoms/rows.
+F10. Pseudocode (window loop)
+C = enumerate_futures(orbit_window) Feats = compute_features(C) Scores = score(C, policy=ops.scoring_policy) Top = select_minimax(Scores, adversary=mirror_null) Card = make_policy_card(Top, Feats, ops) Ev = make_evidence_cards(Top, orbit_window) write_cards(Card, Ev) controller = choose_controller(Top, geometry, octadic) operator = choose_operator(controller, Top) execute(operator) # then Doc D gates & contract if promoting 
+F11. Worked Examples
+F11.1 Clean octadic, low Δ𝒜 → DEEPEN full‑step
+• clean=true, Q8=0.71, Band8=0.82, Δ𝒜=-0.18.
+• DFSS rank 1: Sᶜ full‑step, controller DEEPEN, operator O2.
+• Promotion candidate if budget OK.
+F11.2 Regression watcher red → RECALL repair
+• Regression detected on stability_score.
+• Policy selects Sʳ with O6 Isoenergetic Slider; ΔLAEC=+1; geometry unchanged; watchers green after repair.
+F11.3 Fragmented graph → RAW half‑steps
+• cf8=0.28 (high), Q8=0.49, Band8=0.41.
+• Policy selects S½ with O1 Half‑Step and O4 Per‑Edge Triad on weakest edges; no commitment until even step.
+F12. Operational Stances (policy profiles)
+• Conservative/IRL‑First: scoring_policy=dfss, ΔLAEC weight high, clean‑flag required for DEEPEN; RECALL on any watcher red.
+• Exploratory/Research: scoring_policy=alt, broader S⁺ exploration; bridges aggressive; ΔLAEC penalty low.
+• Through‑Mode/Paranoid: run both DFSS & AltDFSS; intersect top‑k; if disagree, queue contract and defer promotion.
+• Ops‑Prod: frozen primitive catalog; B_max small; RECALL limited; journal every override.
+F13. Checklists
+Per window
+• [ ] Futures enumerated deterministically (IDs)
+• [ ] Features & scores computed; cards written
+• [ ] Controller & operator legal
+• [ ] Evidence cards linked
+• [ ] LAEC delta and budget accounted
+Before promotion
+• [ ] Policy card referenced in PromotionContract
+• [ ] Watchers green
+• [ ] Contract includes evidence set & law refs (if IRL)
+F14. Failure Modes & Responses
+• Non‑deterministic feature (seed drift) → invalidate card; rerun with fixed embed_spec_hash.
+• Operator precondition fail → reject policy; recompute with constraints tightened.
+• Octet uniqueness violation → TLattice; attempt RECALL stabilization.
+• Budget overflow → queue policy; mark in contract budget_ok=false until next run.
+End Doc F — DFSS/AltDFSS, controllers, operators, and policy/evidence cards. Next: Doc G — Graph, Orbitals, and Seeds.

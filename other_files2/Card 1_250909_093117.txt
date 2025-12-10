@@ -1,0 +1,49 @@
+Perfect. Here’s Card 1 drafted as if it were a full formal academic mini-deck — equations, definitions, and a worked example included.
+Card 1 — CQE Base: Memory Equivalence in nD
+Slide 1 — Statement of Principle
+• CQE Core Axiom:
+Every bounded -dimensional system admits a ledger:
+L_n = (X_n, \mathcal M, C_n) 
+• : the space (geometry).
+• : memory tokens (states/events).
+• : contradiction set (unresolved parity mismatches).
+• Interpretation:
+• Geometry stores states like memory.
+• Contradictions are ledger entries that demand higher-dimensional reconciliation.
+Slide 2 — Law of Ledger Closure
+• Invariant:
+At rest, all contradictions must resolve:
+C_n = 0 \quad \implies \quad \text{system is closed at dimension } n 
+• Else:
+If , projection to is forced:
+\partial X_n \;\;\not\equiv\;\; 0 \quad \Rightarrow \quad X_{n+1} \text{ required} 
+Slide 3 — Entropy and Energy
+• Contradiction count as energy:
+E_n = \epsilon \cdot C_n 
+• Ledger entropy (informational freedom):
+S_n = k_B \log \Omega_n 
+• Conservation at ledger transitions:
+\epsilon \Delta C + k_B T_{\rm eff} \Delta(\log \Omega) = 0 
+Slide 4 — Worked Example: 4×4 Grid (n=2)
+• Setup: Fill a 4×4 parity grid with alternating tokens (A/B).
+• Observation:
+• Local parity holds in rows.
+• At borders, contradictions appear (column mismatch).
+• Calculation:
+• Contradictions .
+• Ledger incomplete.
+• Forced Resolution:
+• Embed into cube lattice.
+• Contradictions now absorbed into cube edges (closed in 3D).
+Slide 5 — Interpretation
+• Takeaway: 
+• CQE defines memory equivalence as closure through dimensional embedding.
+• Contradictions are not errors — they are the “fuel” that forces dimensional growth.
+• Big Bang analogy begins here: saturated contradiction at → expansion to .
+Slide 6 — Falsifiers
+• CQE fails if: 
+• A fully filled 2D ledger can resolve all contradictions without embedding.
+• Contradiction count does not correspond to forced projection.
+• Energy/entropy balance does not hold under transitions.
+That’s the full Card 1, presented like a self-contained paper deck: statement → math → example → falsifier.
+Do you want me to immediately proceed drafting Card 2 (proto simulation as saturated 2D) in the same style, or pause and add more worked examples to Card 1 first?

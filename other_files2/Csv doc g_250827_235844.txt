@@ -1,0 +1,132 @@
+Doc G — Graph, Orbitals, and Seeds (Nodes/Edges, Layout, Centers/Bridges, Macro‑Seed)
+Purpose: Specify the relational graph, the orbital layout, and the seed synthesis layer. This chapter defines CSV‑first artifacts, thresholds, algorithms, and validators so that graph construction, layout angles/radii, center/bridge extraction, and macro‑seed assembly are deterministic and auditable.
+G1. Overview (why this layer exists)
+• Relations Graph captures semantic adjacency among Atom Cards (meaning/embedding) across chunks and documents.
+• Orbital Layout projects graph structure into a polar frame: angle = lane (semantic), radius = stability.
+• Centers & Bridges select the minimal set of structural anchors and legal connectors across shells.
+• Composite Macro‑Seed summarizes each bucket’s core primitives and braids them into a palindromic supersequence for stable IO.
+Outputs (CSV‑first):
+• relation_graph_nodes.csv, relation_graph_edges.csv
+• orbital_layout.csv (+ optional orbital_layout.png)
+• centers_bridges.csv
+• composite_macro_seed.json (+ optional macro_seed_tiles.csv)
+G2. Nodes & Edges (construction rules)
+G2.1 Nodes (one row per atom)
+Schema (relation_graph_nodes.csv)
+node_id,atom_id,doc_id,chunk_id,card_type,primitive,shell,bucket_id,octet_id,glyph_id,context_label,truth_value,confidence,stability_score,evidence_strength,recency_rank 
+• node_id = UUIDv5("node", atom_id)
+• Include both Orbit and Master atoms (flagged via join in downstream queries); default graph built from Orbit.
+G2.2 Edge eligibility (deterministic)
+Two nodes u, v are connectable iff:
+• Legality: glyph parity bins are compatible; no SOI violations.
+• Context: same doc_id or shared primitive or shared context_label (configurable).
+• Similarity meets threshold τ using one selected metric family.
+Similarity Options (choose one; fixed per run)
+• Jaccard(primitive sets) for meaning cards.
+• Cosine(embeddings) for embedding cards (same embed_space_id & embed_spec_hash).
+• Hybrid: max(Jaccard, Cosine) after z‑score normalization.
+G2.3 Edge weight & threshold
+• Compute base similarity sim(u,v); define weight w = 1 − sim (lower is better).
+• Threshold τ (default 0.35 for Jaccard; 0.25 for Cosine) enforces E(u,v) iff sim ≥ τ.
+Schema (relation_graph_edges.csv)
+edge_id,source_node_id,target_node_id,sim_family,sim_value,weight,tau,legal,bridge_flag,chirality_bin 
+• edge_id = UUIDv5("edge", source|target|sim_family|tau) (order source<target lexicographically).
+• legal must be true; otherwise refuse write.
+G2.4 Deterministic pruning
+• Remove multi‑edges; keep highest sim_value per (u,v).
+• Enforce degree cap Δ_max (ops.yml) by removing lowest‑sim edges beyond cap (tie‑break by glyph lexicographic order).
+G3. Orbital Layout (angle & radius)
+G3.1 Angle (semantic lane)
+• Build feature matrix X from node primitives and/or TF‑IDF of claim_text.
+• Compute SVD X = U Σ Vᵀ with fixed algorithm/seed → angle θ = atan2(U[:,2], U[:,1]).
+• Map θ to 8 lanes: lane = floor(((θ+π)/(2π))*8)+1 ∈ {1..8}.
+• Determinism: SVD sign flips normalized (ensure first non‑zero entry ≥ 0 in singular vectors).
+G3.2 Radius (stability)
+• Base stability_score from geometry/octadic (Doc E).
+• Radius r = log(1 + κ * stability_score) for κ>0 (ops.yml).
+• Optionally scale radii per shell to equalize medians (visual clarity only; values recorded unscaled).
+G3.3 Layout CSV & PNG
+Schema (orbital_layout.csv)
+node_id,atom_id,lane,theta,stability_score,radius,shell,bucket_id,octet_id,chirality_bin 
+• Optionally render orbital_layout.png (deterministic: no random jitter; fixed size & fonts).
+Validator: Recompute lanes/θ from X and confirm exact match; sign‑flip normalization must yield identical θ.
+G4. Centers & Bridges (anchors & connectors)
+G4.1 Centers (per shell)
+• Score nodes with centrality: 
+• eigenvector centrality (power method with fixed iters/seed),
+• degree centrality, and
+• evidence weight (evidence_strength).
+• Normalize and sum with weights (α_evc, α_deg, α_evid) (ops.yml).
+• Select top‑k per shell as centers (k default 2).
+G4.2 Bridges (legal connectors)
+• Candidate bridges are edges crossing shells or filling broken lanes.
+• Rank by bridge economy E_br = saved_steps / (1 + LAEC_delta) and legality (parity/chirality bins).
+• Select a minimum spanning arborescence over shells using weight' = 1/E_br (deterministic Kruskal with tiebreakers).
+• Log selected bridges to both relation_graph_edges.csv (bridge_flag=true) and VALID_MULTI_D_BRIDGE_LOG.csv with saved_steps, saved_windows estimates.
+Schema (centers_bridges.csv)
+shell,center_node_id,rank,evc,deg,evidence_weight,bridge_edge_id,bridge_rank,saved_steps,saved_windows 
+Validator: Recompute centrality with the frozen graph; centers & bridge set must match; saved_steps/windows consistent with LAEC model.
+G5. Seeds — Macro‑Seed Synthesis
+G5.1 Per‑bucket seeds
+For each bucket (per doc):
+• Compute primitive frequencies and entropy distance from corpus baseline.
+• Take top 4 primitives by freq × entropy_distance.
+• Emit a bucket seed with their glyph IDs and supporting atoms.
+G5.2 Composite Macro‑Seed (document level)
+• Collect bucket seeds and enforce all 8 shells represented (impute if missing).
+• Order by centrality × entropy offset (higher first).
+• Insert shared primitives (appear in ≥3 shells) with +20% weight.
+• Assemble braid chain by greedy‑overlap on glyph triads; fold into 8‑slot palindromic sequence A–B–C–D–D–C–B–A (SUP rule).
+• Serialize to JSON with lineage and window/packet references.
+Schema (composite_macro_seed.json)
+{ "doc_id": "…", "seeds": [ {"bucket_id": 12, "primitives": ["p:…","p:…","p:…","p:…"], "glyph_ids": ["g:…"], "weight": 1.0}, … ], "ordering": ["A","B","C","D","D","C","B","A"], "braid_chain": ["g:…","g:…",…], "shared_primitives": ["p:…"], "lineage": {"relation_graph_nodes": ["n:…"], "edges": ["e:…"], "windows": [3,4], "packets": [1]}, "spec_version": "seed_v1", "hash": "sha256:…" } 
+Optional (macro_seed_tiles.csv) — tile‑level expansion (8‑bit tiles per seed position) for packet mapping.
+G5.3 Validators
+• Coverage: all 8 shells present.
+• Ordering: A–B–C–D–D–C–B–A enforced; braid chain overlaps deterministic (max overlap length; lexical tiebreak).
+• Lineage: every glyph in the chain maps to a node/edge listed under lineage; hash matches recomputation.
+G6. Determinism & Budgets
+• Graph determinism: fixed thresholds, no RNG; if alt detectors used for edges, seeds fixed, and tie‑breakers recorded.
+• Layout determinism: SVD sign normalization; fixed feature construction.
+• Budgeting: LAEC saved_steps from bridges feed VALID_MULTI_D_BRIDGE_LOG.csv and PromotionScore cost penalties.
+G7. Examples
+G7.1 Edge formation
+Nodes share primitive locked_core; Jaccard = 0.52 ≥ τ=0.35 → edge created with weight=0.48, legal=true.
+G7.2 Orbital placement
+Node’s SVD angle maps to lane 6; stability_score=0.74 → radius=log(1+κ·0.74); chirality bin R → parity_set=E/R on even acceptance.
+G7.3 Centers & bridges
+Shell 3 center chosen by (evc=0.41, deg=12, evidence=0.86). Bridge between shells 3↔6 saves 9 steps (2 windows) → logged with bridge_flag=true.
+G7.4 Macro‑seed
+Bucket seeds pick primitives [locked_core, phase_coil, field_gate, lane_bias]. Shared phase_coil across 3 shells gets +20% weight; braid chain folded to A–B–C–D–D–C–B–A with deterministic overlap.
+G8. Operational Toggles
+• sim_family: jaccard | cosine | hybrid
+• edge_tau: {jaccard:0.35, cosine:0.25}
+• degree_cap: Δ_max
+• layout_features: primitives | tfidf | hybrid
+• lane_count: 8 (fixed for parity compatibility)
+• center_weights: {evc:0.5, deg:0.3, evidence:0.2}
+• bridges: enable|disable, bridge_policy: mst | kbest
+• seed_spec: seed_v1, overlap_policy: greedy|maximal
+G9. Checklists
+Build Graph
+• [ ] Nodes written with stable IDs
+• [ ] Edge similarity ≥ τ; legal bins; degree cap honored
+• [ ] No multi‑edges; weights recorded
+Layout
+• [ ] SVD feature construction logged
+• [ ] Angle lanes mapped; radii computed from stability
+• [ ] PNG optional render matches CSV
+Centers/Bridges
+• [ ] Top‑k centers per shell logged
+• [ ] MST or k‑best bridges chosen deterministically
+• [ ] Saved steps/windows computed and logged
+Seeds
+• [ ] Per‑bucket top4 by freq×entropy distance
+• [ ] 8‑shell coverage (impute if needed)
+• [ ] Palindromic braid assembled; lineage serialized; hash checked
+G10. Failure Modes & Responses
+• SVD sign instability → apply sign‑flip normalization; if still unstable, fall back to PCA with fixed seed.
+• Sparse edges → relax τ slightly or switch to hybrid similarity; log policy change in ops.yml.
+• Bridge illegality → discard bridge; search next best; if none, mark shells disconnected and raise watcher alert.
+• Seed coverage gap → impute missing shells using nearest‑lane primitives; flag imputation in JSON.
+End Doc G — Graph, Orbitals, and Seeds. Next: Doc H — LAEC, TLattice, and Buffer Gate (energetics, stabilization, compression/expansion).

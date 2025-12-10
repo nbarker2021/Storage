@@ -1,0 +1,186 @@
+Doc B — Formal Objects & Naming (Field‑Level Schemas & Canon Rules)
+This is the field‑level spec for the CSV‑first system. It defines every object, column, ID, hash, enum, and foreign‑key relation; the glyph canonicalization rules; and the validators that enforce legality and determinism. Treat this as the contract your scripts must uphold.
+B1. Encoding, Files, and Versioning
+• Encoding: UTF‑8, Unix newlines. No BOM.
+• Datetime format: ISO‑8601 UTC (YYYY‑MM‑DDTHH:MM:SSZ).
+• Numbers: Integers unless noted; floats use .; no thousands separators.
+• JSON columns: Strict JSON (RFC 8259); arrays or objects only.
+• Nulls: Empty string "" (never null, NaN, or None).
+• File versioning: Each CSV includes a header comment row (optional): # schema_version: v1.0.
+• Deterministic ordering: Sort rows by (run_id, packet_id, window_id, step_index, atom_id) unless a file declares a different key.
+B2. Global IDs, Hashes, and Deterministic Derivations
+B2.1 Canonicalization Pre‑hash
+• Unicode NFC normalize every string.
+• Trim leading/trailing whitespace; collapse internal runs of spaces to one (except inside quote_text).
+• Escape separators in glyph items: , → \,, | → \|, / → \/.
+B2.2 Required Identifiers
+• run_id — UUIDv5("run", SHA256(sorted(input_files)|config_hash))[:8].
+• atom_id — UUIDv5("atom", canonical_json(row_without_ids_and_hashes)).
+• glyph_id — SHA256(glyph_spec_version | glyph_a | glyph_b | glyph_c) (post‑canonicalization).
+• context_hash — SHA256(context_source_text_or_law_block).
+• ledger_hash — rolling SHA256(prev_ledger_hash | glyph_id | atom_id | step_index).
+• cursor_id — SHA256(latest_prompt_string) (for prompt‑cursor recall).
+• packet_id — monotone integer per run (0,1,2,…) where each packet spans 10 windows (Base‑320).
+• window_id — 0..9 within a packet (BW‑32 window index).
+• step_index — monotone integer within window_id.
+B3. Enums & Controlled Vocabularies
+• card_type ∈ {meaning, embedding}
+• truth_value ∈ {T, F, U}
+• confidence ∈ {high, med, low}
+• promotion_status ∈ {proposed, accepted_to_master, rework, retired}
+• master_state ∈ {accepted, deprecated}
+• consensus_level ∈ {doc, corpus, global}
+• context_source ∈ {native, uploaded, IRL}
+• embed_encoding ∈ {float32_csv, sparse_json, b64pack}
+• parity_set (two‑symbol code): first ∈ {E,O}, second ∈ {L,R,N} → e.g., E/R
+• law.validity ∈ {valid, invalid, contested}
+• mgl.class ∈ {word, symbol, notation}
+B3.1 Context Labels (taxonomy)
+Use these labels for context_label:
+• device_spec, bio_freq, field_mechanics, phase_tag, governance, numeric_schema, simulation_layer, symbolic_ai, experiment_protocol
+B4. Glyph Triad — Canon & Parser
+B4.1 Structure
+• Three items: glyph_a, glyph_b, glyph_c.
+• Each item is 1–3 tokens; tokens may be words, symbols, or notations.
+B4.2 Canonicalization
+• Tokenize on whitespace, preserve inner punctuation; NFC normalize.
+• Order tokens within an item lexicographically.
+• Normalize case: preserve as‑is (case‑sensitive), but hash is case‑sensitive.
+• Escape separators inside items as per B2.1.
+• Compute glyph_id = SHA256(spec|a|b|c).
+B4.3 Bijection to Headers
+• The triad must decode to (shell, bucket_id, octet_id, parity_set, doc_id, chunk_id) using a glyph spec map recorded in glyph_spec_version.
+• Validator rejects rows where triad↔header mapping fails; collisions are logged to GLYPHIC_MASTER_LOG.csv.
+B5. CSV Schemas (Column‑level)
+Types: str, int, float, bool, json. Constraints: PK=primary key, FK=foreign key, UQ=unique, REQ=required.
+B5.1 MASTER_GPT_TRUTH.csv
+• run_id:str REQ
+• atom_id:str PK
+• doc_id:str REQ
+• chunk_id:str REQ
+• span_start:int REQ, span_end:int REQ (for meaning cards; "" if embedding‑only)
+• card_type:str REQ
+• primitive:str REQ
+• meta_bucket:str REQ
+• parity_set:str REQ
+• context_id:str REQ, context_label:str REQ, truth_value:str REQ
+• context_source:str REQ, context_hash:str REQ
+• glyph_a:str REQ, glyph_b:str REQ, glyph_c:str REQ, glyph_id:str UQ
+• glyph_spec_version:str REQ
+• claim_text:str (REQ when card_type=meaning)
+• quote_text:str (REQ when card_type=meaning)
+• embed_space_id:str, embed_dim:int, embed_encoding:str, embed_values:str, embed_spec_hash:str
+• laec_steps:int REQ, s_acc:int, r_back:int, b_exp:int, e_br:int, d_dup:int
+• tlattice_id:str, stabilized:bool
+• buffer_Hc:float, constraints_applied:json
+• ledger_hash:str REQ, step_index:int REQ, window_id:int REQ, packet_id:int REQ
+• master_state:str REQ, consensus_level:str REQ
+• evidence_strength:float, stability_score:float, agreement_rate:float
+• origin_orbit_ids:json
+• last_reviewed_at:str, reviewer_id:str
+• promotion_contract_hash:str REQ
+FKs:
+• (doc_id, chunk_id) → MASTER_DOCUMENT_INTAKE
+• context_hash → LAWS_VALIDATION.law_hash (when context_source=IRL)
+• promotion_contract_hash → PROMOTION_CONTRACTS.contract_hash
+B5.2 MASTER_USER_TRUTH.csv
+• Same base as GPT_TRUTH plus: user_id:str REQ, alignment:str REQ, alignment_basis:json, challenge_status:str REQ
+B5.3 MASTER_DOCUMENT_INTAKE.csv
+• doc_id:str PK, chunk_id:str PK
+• offset_start:int REQ, offset_end:int REQ
+• text_hash:str UQ REQ, text_excerpt:str REQ
+• source_uri:str or upload_id:str
+• ingest_time:str REQ
+• shell:int REQ, bucket_id:int REQ, glyph_triad:str REQ, ledger_hash:str REQ
+B5.4 orbit.csv
+• All base atom fields plus:
+• orbit_id:str PK
+• shell:int REQ, bucket_id:int REQ, octet_id:int REQ (1..64)
+• promotion_score:float, promotion_status:str
+• conflict_set:json, recency_rank:int
+Constraints: 64 unique (glyph_id) per (doc_id, shell) set to satisfy 8×8 octet uniqueness.
+B5.5 PROMOTION_CONTRACTS.csv
+• contract_id:str PK
+• atom_id:str REQ
+• ps_value:float REQ, weights:json REQ, theta_accept:float REQ
+• budget_ok:bool REQ
+• evidence_set:json REQ (array of atom_ids)
+• law_refs:json (array of law_ids)
+• conflict_resolution:json (array of {atom_id, reason})
+• watchers_passed:json REQ, energy_floors_ok:bool REQ
+• window_use:int REQ, packet_ids:json REQ
+• contract_hash:str UQ REQ
+B5.6 PROMOTION_JOURNAL.csv
+• when:str REQ, who:str REQ, atom_id:str REQ, decision:str REQ, contract_id:str, rationale:str, cursor_id:str
+B5.7 LAWS_VALIDATION.csv
+• law_id:str PK, title:str REQ, domain:str REQ, text:str REQ, source_ref:str, observation_tools:json
+• validity:str REQ, applies_to:json, last_checked_at:str, checker_id:str
+• law_hash:str UQ REQ
+B5.8 GREY_EVIDENCE.csv
+• evidence_id:str PK, description:str REQ, source_ref:str, strength:str REQ, relevance_tags:json, notes:str
+B5.9 VALID_MULTI_D_BRIDGE_LOG.csv
+• bridge_id:str PK, start_atom_id:str REQ, end_atom_id:str REQ, hop_count:int REQ (>=4)
+• path:json REQ (array of atom_ids), legality:str REQ
+• saved_steps:int, saved_windows:int, justification:str, created_at:str REQ
+B5.10 GLYPHIC_MASTER_LOG.csv
+• glyph_id:str PK, glyph_a:str REQ, glyph_b:str REQ, glyph_c:str REQ, spec_version:str REQ
+• scope:str REQ, collisions:json, related_bridges:json
+B5.11 SYSTEM_OPS_GUIDE.csv
+• op_id:str PK, process_name:str REQ, rationale:str REQ, math_spec_ref:str, example_ref:str, version:str REQ
+B5.12 TESTBED.csv / TEST_RESULTS.csv
+• TESTBED: case_id:str PK, hypothesis:str REQ, input_refs:json, expected_behavior:str, priority:int, owner:str
+• TEST_RESULTS: case_id:str REQ, when:str REQ, who:str REQ, where:str, what:str REQ, how:str REQ, outcome:str REQ, artifacts_ref:str, notes:str
+B5.13 MASTER_DETAIL_SHELL.csv (optional)
+• detail_id:str PK, master_atom_id:str FK, fine_grain_primitive:str, micro_context:str, glyph_ref:str, notes:str
+B5.14 MGL_REGISTRY.csv
+• mgl_id:str PK, item_token:str UQ REQ, class:str REQ, semantic_scope:str REQ, reserved_by:str REQ, added_at:str REQ
+B6. Foreign‑Key Map (high‑level)
+• MASTER_GPT_TRUTH.(doc_id,chunk_id) → MASTER_DOCUMENT_INTAKE.(doc_id,chunk_id)
+• MASTER_GPT_TRUTH.context_hash → LAWS_VALIDATION.law_hash (if IRL)
+• MASTER_GPT_TRUTH.promotion_contract_hash → PROMOTION_CONTRACTS.contract_hash
+• MASTER_USER_TRUTH.(doc_id,chunk_id) → MASTER_DOCUMENT_INTAKE
+• PROMOTION_CONTRACTS.atom_id → orbit.atom_id or MASTER_GPT_TRUTH.atom_id
+• VALID_MULTI_D_BRIDGE_LOG.(start_atom_id,end_atom_id) → {orbit, MASTER_GPT_TRUTH}.atom_id
+• MASTER_DETAIL_SHELL.master_atom_id → MASTER_GPT_TRUTH.atom_id
+B7. Validators (must refuse to write on fail)
+• Schema & Types: exact column set, types, and enum values.
+• FK Integrity: all foreign keys resolve; otherwise reject row.
+• Glyph Bijection: triad decodes to headers; collisions → block and log.
+• Parity Audit: odd/even, bridge flags, chirality bins match step headers.
+• Octet Legality: 64 unique glyph_id within each (doc_id, shell) octet grid; else TLattice until fixed.
+• Evidence Grounding: meaning cards must have quote_text overlapping span_start..span_end of an intake chunk.
+• IRL Claims: truth_value=T with context_source=IRL must FK to a LAWS_VALIDATION row.
+• Ledger/Merkle: recompute ledger_hash chain (and merkle_root if enabled) for each window.
+• LAEC Budget: promotions must fit windows_per_run; otherwise queue with budget_ok=false in contract.
+B8. Worked Examples
+B8.1 Glyph Canonicalization
+Input items: glyph_a="⊕coil Δ", glyph_b="E_Lock", glyph_c="phase"
+Tokenize & sort (per item):
+• glyph_a tokens → ["Δ", "⊕coil"] → canonical item: "Δ ⊕coil"
+• glyph_b stays "E_Lock"; glyph_c stays "phase" Compute: glyph_id = SHA256("v1|Δ ⊕coil|E_Lock|phase")
+B8.2 Promotion Contract (JSON)
+{ "contract_id": "pc:7f91…", "atom_id": "a:0c3…", "ps_value": 0.71, "weights": {"evidence":0.25,"stability":0.20,"consistency":0.15,"recency":0.10,"human":0.10,"agreement":0.10,"cost":0.10}, "theta_accept": 0.65, "budget_ok": true, "evidence_set": ["a:17a…","a:22b…"], "law_refs": ["EM-001"], "conflict_resolution": [{"atom_id":"a:09d…","reason":"weaker evidence"}], "watchers_passed": {"symmetry":true,"five_to_eight":true,"regression":true}, "energy_floors_ok": true, "window_use": 2, "packet_ids": [3], "contract_hash": "pc:4910…" } 
+B8.3 IRL Truth FK Check
+Row with truth_value=T and context_source=IRL must have context_hash present in LAWS_VALIDATION.law_hash; otherwise reject.
+B9. Operational Toggles (schema‑aware)
+• strict_even (reject even steps with no local rank rise)
+• octadic_detector ∈ {fiedler, louvain, leiden, sbm} (vote for clean‑flag)
+• edge_threshold (Jaccard) ∈ {0.35, 0.45, 0.55}
+• mgl_overlap_audit ∈ {strict, warn, off}
+• numerology_tags ∈ {on, off} (symbolic only; never IRL by default)
+• windows_per_run:int (LAEC budget)
+B10. Checklists for Implementers
+• [ ] Implement canonicalization per B2.1 & B4.2.
+• [ ] Generate IDs/hashes per B2.2.
+• [ ] Populate CSVs with exact columns; reject unknown columns.
+• [ ] Enforce enums and FK integrity.
+• [ ] Run glyph bijection + parity audits on ingest and before promotion.
+• [ ] Validate octet legality; TLattice outliers.
+• [ ] Compute PS features; mint PromotionContracts; journal decisions.
+• [ ] Recompute ledger chain and optional Merkle roots.
+B11. Notes & Edge Cases
+• Embeddings absent: leave embedding fields empty; card_type=embedding rows may be omitted entirely. The system remains valid on meaning cards alone.
+• Large embeddings: prefer sparse_json or b64pack. Keep a Parquet sidecar only as an optimization, never source of truth.
+• User truths: may be aligned/misaligned/unknown; adjudication creates a new Master row and deprecates the user row, linking both ways.
+• MGL overlap: if Orbit uses an MGL item, inherit semantics if consistent; else block and log collision.
+End Doc B — Next: Doc C (CSV Artifacts & FK Maps in full tables, plus sample validators).

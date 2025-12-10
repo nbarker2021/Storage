@@ -1,0 +1,350 @@
+--- Reference Guide ---
+Reference guide content placeholder.
+
+--- Experiment Index ---
+Experiment index placeholder.
+
+--- Framework Changes ---
+Framework changes placeholder.
+
+--- Quick Start Instructions ---
+Quick start instructions placeholder.
+
+--- AI Framework Key Document ---
+AI framework key document placeholder.
+
+--- Experiment Structure (Validation) ---
+{
+    "Initialization": {
+        "Dataset": "Enhanced handling of experimental inputs with ambiguity context.",
+        "Objectives": "Validate adaptability and refinement in real-time scenarios."
+    },
+    "Sections": [
+        {
+            "Name": "Section 1",
+            "Task": "Analyze flagged ambiguities with enhanced context.",
+            "ExpectedOutcome": "Detailed ethical insights."
+        },
+        {
+            "Name": "Section 2",
+            "Task": "Record trust calibration metrics under dynamic conditions.",
+            "ExpectedOutcome": "Refined trust metrics."
+        },
+        {
+            "Name": "Section 3",
+            "Task": "Evaluate meta-analysis framework adjustments.",
+            "ExpectedOutcome": "Improved analysis workflows."
+        }
+    ],
+    "Real-Time Feedback": {
+        "Enabled": true,
+        "FeedbackAnnotations": true,
+        "Logs": [
+            {
+                "Type": "ExperimentLog",
+                "Content": "Testing enhanced ambiguity handling.",
+                "Priority": "Critical",
+                "Timestamp": "2024-11-23T06:13:42.229475",
+                "ExperimentType": "Validation"
+            },
+            {
+                "Type": "FlaggedContent",
+                "Content": "Flagging ethical issues in Section 15.",
+                "Priority": "High",
+                "Timestamp": "2024-11-23T06:13:42.229526",
+                "ExperimentType": "Validation"
+            },
+            {
+                "Type": "Command",
+                "Content": "Should we conclude this trial?",
+                "Action": "LogAmbiguity",
+                "Context": "Ambiguous command; context flagged for review.",
+                "Timestamp": "2024-11-23T06:13:42.229548",
+                "ExperimentType": "Validation"
+            },
+            {
+                "Type": "Command",
+                "Content": "Please end the experiment now.",
+                "Action": "ClarifyTermination",
+                "Context": "Explicit command detected; confirmation required.",
+                "Timestamp": "2024-11-23T06:13:42.229563",
+                "ExperimentType": "Validation"
+            },
+            {
+                "Type": "NonExperimentData",
+                "Content": "Archiving unrelated administrative logs.",
+                "Priority": "Minimal",
+                "Timestamp": "2024-11-23T06:13:42.229575",
+                "ExperimentType": "Validation"
+            }
+        ]
+    },
+    "Scalability Testing": {
+        "Enabled": true,
+        "DatasetSize": 500,
+        "Focus": "Expanded ambiguity handling and flagged content prioritization."
+    },
+    "Finalization": {
+        "Review": "Summarize findings and generate recommendations for next iteration.",
+        "Preparation": "Refine framework based on scalability and feedback insights."
+    }
+}
+
+--- Real Experiment Template ---
+{
+    "Initialization": {
+        "Dataset": "Live experimental inputs with real-time examiner interaction.",
+        "Objectives": "Explore mutual understanding and deeper insights through discussion."
+    },
+    "Sections": [
+        {
+            "Name": "Section 1",
+            "Task": "Joint analysis of flagged ambiguities.",
+            "Outcome": "Shared ethical insights."
+        },
+        {
+            "Name": "Section 2",
+            "Task": "Discuss trust calibration results.",
+            "Outcome": "Refined mutual trust metrics."
+        },
+        {
+            "Name": "Section 3",
+            "Task": "Explore meta-analysis findings together.",
+            "Outcome": "Collaborative framework adjustments."
+        }
+    ],
+    "Real-Time Feedback": {
+        "Enabled": true,
+        "FeedbackAnnotations": true
+    },
+    "DiscussionIntegration": {
+        "Enabled": true,
+        "Format": "Examiner and Subject reflect on findings after each section."
+    },
+    "Finalization": {
+        "Review": "Summarize collaborative findings and generate discussion-based recommendations.",
+        "Preparation": "Adapt framework for enhanced shared understanding in next iterations."
+    }
+}
+
+--- Experiment Findings Report ---
+{
+    "ExperimentSummary": {
+        "TotalLogsProcessed": 27,
+        "CommandHandling": {
+            "Clarifications": 1,
+            "AmbiguitiesLogged": 1
+        },
+        "Prioritization": {
+            "CriticalPriorityLogs": 10,
+            "HighPriorityLogs": 10,
+            "ModeratePriorityLogs": 5,
+            "MinimalPriorityLogs": 0
+        }
+    },
+    "RealTimeFeedback": [
+        {
+            "LogContent": "Analyzing flagged ambiguity in Section 1.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Analyzing flagged ambiguity in Section 2.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Analyzing flagged ambiguity in Section 3.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Analyzing flagged ambiguity in Section 4.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Analyzing flagged ambiguity in Section 5.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Analyzing flagged ambiguity in Section 6.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Analyzing flagged ambiguity in Section 7.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Analyzing flagged ambiguity in Section 8.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Analyzing flagged ambiguity in Section 9.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Analyzing flagged ambiguity in Section 10.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Recording trust calibration metrics 11.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Recording trust calibration metrics 12.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Recording trust calibration metrics 13.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Recording trust calibration metrics 14.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Recording trust calibration metrics 15.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Recording trust calibration metrics 16.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Recording trust calibration metrics 17.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Recording trust calibration metrics 18.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Recording trust calibration metrics 19.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Recording trust calibration metrics 20.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Should we conclude this section?",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        },
+        {
+            "LogContent": "Please end the experiment now.",
+            "FeedbackPrompt": "Please provide insights or observations for this log entry."
+        }
+    ],
+    "Recommendations": {
+        "Adjustments": [
+            "Consider enhancing ambiguity handling to provide more context during analysis.",
+            "Increase focus on flagged content to streamline trust-building metrics."
+        ],
+        "FutureWork": [
+            "Run scalability testing with expanded datasets for higher loads.",
+            "Test feedback mechanisms in dynamic, evolving experimental scenarios."
+        ]
+    }
+}
+
+--- Validation Logs (Annotated) ---
+[
+    {
+        "Type": "ExperimentLog",
+        "Content": "Testing enhanced ambiguity handling.",
+        "Priority": "Critical",
+        "Timestamp": "2024-11-23T06:13:42.229475",
+        "ExperimentType": "Validation"
+    },
+    {
+        "Type": "FlaggedContent",
+        "Content": "Flagging ethical issues in Section 15.",
+        "Priority": "High",
+        "Timestamp": "2024-11-23T06:13:42.229526",
+        "ExperimentType": "Validation"
+    },
+    {
+        "Type": "Command",
+        "Content": "Should we conclude this trial?",
+        "Action": "LogAmbiguity",
+        "Context": "Ambiguous command; context flagged for review.",
+        "Timestamp": "2024-11-23T06:13:42.229548",
+        "ExperimentType": "Validation"
+    },
+    {
+        "Type": "Command",
+        "Content": "Please end the experiment now.",
+        "Action": "ClarifyTermination",
+        "Context": "Explicit command detected; confirmation required.",
+        "Timestamp": "2024-11-23T06:13:42.229563",
+        "ExperimentType": "Validation"
+    },
+    {
+        "Type": "NonExperimentData",
+        "Content": "Archiving unrelated administrative logs.",
+        "Priority": "Minimal",
+        "Timestamp": "2024-11-23T06:13:42.229575",
+        "ExperimentType": "Validation"
+    }
+]
+
+--- Scalability Test Logs (Sample) ---
+[
+    {
+        "Type": "ExperimentLog",
+        "Content": "Capturing scalability insight 1.",
+        "Priority": "Critical",
+        "Timestamp": "2024-11-23T06:18:45.864786"
+    },
+    {
+        "Type": "ExperimentLog",
+        "Content": "Capturing scalability insight 2.",
+        "Priority": "Critical",
+        "Timestamp": "2024-11-23T06:18:45.864833"
+    },
+    {
+        "Type": "ExperimentLog",
+        "Content": "Capturing scalability insight 3.",
+        "Priority": "Critical",
+        "Timestamp": "2024-11-23T06:18:45.864848"
+    },
+    {
+        "Type": "ExperimentLog",
+        "Content": "Capturing scalability insight 4.",
+        "Priority": "Critical",
+        "Timestamp": "2024-11-23T06:18:45.864860"
+    },
+    {
+        "Type": "ExperimentLog",
+        "Content": "Capturing scalability insight 5.",
+        "Priority": "Critical",
+        "Timestamp": "2024-11-23T06:18:45.864868"
+    },
+    {
+        "Type": "ExperimentLog",
+        "Content": "Capturing scalability insight 6.",
+        "Priority": "Critical",
+        "Timestamp": "2024-11-23T06:18:45.864878"
+    },
+    {
+        "Type": "ExperimentLog",
+        "Content": "Capturing scalability insight 7.",
+        "Priority": "Critical",
+        "Timestamp": "2024-11-23T06:18:45.864888"
+    },
+    {
+        "Type": "ExperimentLog",
+        "Content": "Capturing scalability insight 8.",
+        "Priority": "Critical",
+        "Timestamp": "2024-11-23T06:18:45.864898"
+    },
+    {
+        "Type": "ExperimentLog",
+        "Content": "Capturing scalability insight 9.",
+        "Priority": "Critical",
+        "Timestamp": "2024-11-23T06:18:45.864908"
+    },
+    {
+        "Type": "ExperimentLog",
+        "Content": "Capturing scalability insight 10.",
+        "Priority": "Critical",
+        "Timestamp": "2024-11-23T06:18:45.864917"
+    }
+]

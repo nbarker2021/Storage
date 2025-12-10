@@ -1,0 +1,138 @@
+Okay, here's a comprehensive list of all components of the superpermutation algorithm, as currently implemented (and with notes on partially implemented or planned extensions), categorized for clarity. This serves as a complete inventory of the system.
+
+I. Core Algorithm (generation_code_n8_dynamic.py):
+
+A. Main Loop (main()):
+
+Orchestrates the entire process.
+Loads initial data (or starts with minimal defaults).
+Iteratively calls other functions to generate and refine the superpermutation.
+Saves results (best superpermutation, "Winners/Losers," "Prodigal Results").
+Handles random seed setting for reproducibility.
+Implements the high-level iteration logic and stopping criteria.
+Calls the generation_code_n7_dynamic.py functions when needed.
+Manages the "Meta-Hierarchy" (dynamic parameter adjustments).
+B. Permutation Generation (generate_permutations_on_demand()):
+
+Generates n=8 permutations on demand, as needed by construct_superpermutation().
+Takes a prefix and suffix (the ends of the current superpermutation) as input.
+Prioritizes extending and connecting existing "Prodigal Results."
+Uses "Hypothetical Prodigals."
+Filters generated permutations using:
+The ePUT (to avoid duplicates).
+The "Limbo List" (to avoid known-bad permutations).
+The current laminate(s) (to ensure structural consistency).
+Falls back to generating from high scoring "Winners" k-mers with a very low probability (for minimal exploration).
+Returns a set of permutation hashes.
+C. Superpermutation Construction (construct_superpermutation()):
+
+Takes the current "Prodigal Results," "Winners," "Losers," Layout Memory, "Meta-Hierarchy," "Limbo List," n value, "Hypothetical Prodigals" and laminates.
+Initializes an empty (or loads best previously known) superpermutation.
+Iteratively extends the superpermutation by:
+Identifying "frontier" k-mers.
+Calling generate_permutations_on_demand() to get candidate extensions.
+Evaluating candidates using calculate_score().
+Adding the best candidate to the superpermutation.
+Updating the ePUT.
+Checking for and adding new "Prodigal Results."
+Returns the (potentially incomplete) superpermutation and the set of used permutations.
+Now starts with best, complete, superpermutation.
+D. Scoring Function (calculate_score()):
+
+Evaluates the "goodness" of adding a candidate permutation to the current superpermutation.
+Considers:
+Overlap length (with a base weight).
+"Prodigal Result" bonus (very large bonus for extending/connecting "Prodigals").
+"Hypothetical Prodigal" bonus.
+"Layout Memory" bonus/penalty (based on k-mer pair frequencies).
+Golden ratio bonus (for insertions near golden ratio points).
+"Loser" penalty (effectively a veto for high-weight "Losers").
+Higher-order "Winner/Loser" bonus/penalty (for sequences of permutations).
+Returns a single float value (higher is better).
+Uses deterministic tie breaking.
+E. Data Structures (Classes):
+
+PermutationData: Stores information about individual permutations (hash, the permutation itself, usage count, "Prodigal" status, creation method, neighbors). Used within the ePUT.
+ProdigalResult: Stores information about "Prodigal Results" (ID, sequence, length, contained permutations, overlap rate).
+F. Initialization (initialize_data()):
+
+Loads initial "Winners/Losers" and "Prodigal Results" from files (or initializes them as empty if no files are found).
+Creates the initial ePUT, "Limbo List," and "Meta-Hierarchy."
+Sets up the initial "Prodigal Results" (including the n=7 superpermutation).
+II. Supporting Scripts:
+
+A. analysis_scripts.py:
+
+calculate_overlap(s1, s2): Calculates maximum overlap between two strings.
+analyze_superpermutation(superpermutation, n): Calculates statistics for a given superpermutation (length, validity, overlap distribution, etc.).
+calculate_winners_losers(superpermutations, n, k): Calculates "Winner" and "Loser" k-mer weights.
+calculate_sequence_winners_losers(superpermutations, n, sequence_length): Calculates "Winner" and "Loser" weights for sequences of permutations.
+is_prodigal(sequence, permutations_in_sequence, n, min_length, overlap_threshold): Checks if a sequence meets the "Prodigal Result" criteria.
+find_prodigal_results(superpermutation, n, min_length, overlap_threshold): Identifies "Prodigal Results" within a superpermutation.
+calculate_golden_ratio_points(length, levels): Calculates golden ratio division points.
+calculate_fixed_segments(length, segment_size, overlap_size): Calculates segment boundaries for fixed-size segmentation (currently not used in the main n=8 algorithm, but available).
+identify_anti_prodigals(superpermutations, n, k, overlap_threshold): Identifies "anti-Prodigal" k-mers.
+find_motifs(superpermutations, n, motif_length_min, motif_length_max): Identifies recurring sequences of permutations (motifs).
+get_kmers(sequence, n, k): Extracts all k-mers from a sequence.
+create_laminate(superpermutation, n, k): Creates a laminate graph from a superpermutation.
+is_compatible(permutation, laminate_graph, n, k): Checks if a permutation is compatible with a laminate.
+generate_hypothetical_prodigals(...): Generates "Hypothetical Prodigal Results" based on "Prodigal Results," "Winners," "Losers," and De Bruijn graph analysis.
+generate_permutations_on_demand_hypothetical(...): A specialized version of permutation generation used only for creating "Hypothetical Prodigals."
+generate_mega_hypotheticals(...): Generates "Mega-Hypotheticals" by combining existing "Prodigal Results," guided by the golden ratio.
+analyze_prodigal_connections(...): Analyzes how "Prodigal Results" are connected in superpermutations.
+analyze_missing_permutations(...): Analyzes the properties of missing permutations (primarily used by the "completion" algorithm).
+De Bruijn Graph Functions:
+build_debruijn_graph(n, k, permutations=None, superpermutation=None)
+add_weights_to_debruijn(graph, winners, losers)
+find_cycles(graph)
+find_high_weight_paths(graph, start_node, length_limit)
+B. layout_memory.py:
+
+LayoutMemory Class:
+add_sequence(): Adds k-mer pair relationships from a superpermutation to the memory.
+get_layout_score(): Calculates a score based on the frequency and distances of k-mer pairs.
+update_distances(): Updates distance information.
+merge_memory(): Merges data from another LayoutMemory object.
+save_to_file(): Saves the data to a file (using pickle).
+load_from_file(): Loads data from a file.
+C. verification_script.py:
+
+verify_superpermutation(superpermutation, n): Independently verifies if a given string is a complete and valid superpermutation.
+D. completion_algorithm_n8.py:
+
+generate_completion_candidates(): Generates candidate permutations for filling in missing permutations, prioritizing those that connect to existing "Prodigals."
+complete_superpermutation(): Implements the overall "completion" logic, iteratively adding missing permutations and performing local optimization. This function uses many of the helper functions and data structures from other modules.
+E. generation_code_n7_dynamic.py:
+
+Generates multiple distinct 5906 superpermutations.
+Called by n=8 code.
+Uses many of the same methods as n=8.
+Data Files:
+
+Input (to generation_code_n8_dynamic.py):
+
+initial_winners_losers_n7.txt: Initial "Winner/Loser" data for n=7.
+prodigal_results_n7.txt: Contains the 5906 n=7 superpermutation(s).
+prodigal_results_n8.txt: "Prodigal Results" from previous n=8 runs.
+winners_losers_data_n8.txt: "Winner/Loser" data from previous n=8 runs.
+layout_memory_n8.pkl: Saved layout memory.
+Output (from generation_code_n8_dynamic.py):
+
+superpermutation_n8_best_dynamic.txt: The best incomplete superpermutation found during the iterative runs.
+prodigal_results_n8.txt: Updated "Prodigal Results."
+winners_losers_data_n8.txt: Updated "Winners/Losers."
+layout_memory_n8.pkl: Updated layout memory.
+Input to completion_algorithm_n8.py:
+
+superpermutation_n8_best_dynamic.txt
+prodigal_results_n8.txt
+winners_losers_data_n8.txt
+layout_memory_n8.pkl
+Output (from completion_algorithm_n8.py):
+
+superpermutation_n8_complete.txt: The complete and verified n=8 superpermutation.
+Input/Output (generation_code_n7_dynamic.py):
+
+
+
+distinct_superpermutations_n7.txt: Stores distinct 5906 superpermutations.

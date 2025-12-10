@@ -1,0 +1,43 @@
+{
+  "version": "0.1",
+  "coords": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "root_loc": {
+    "nearest_roots": [
+      {
+        "index": 0,
+        "inner_product": 1.0
+      }
+    ],
+    "reflections": [
+      3,
+      7,
+      11
+    ],
+    "adjacency_rule": "inner_product_eq_1"
+  },
+  "axes": {
+    "tenant": "acme",
+    "domain": "retrieval",
+    "policy_id": "default@2025-08-10",
+    "solver_id": "superperm-gray-v2",
+    "persona_id": "bio-qa-master-01",
+    "data_slice": "news-2025w32",
+    "version_container": "v14",
+    "timestamp_bucket": "2025-08-10T20",
+    "trust": 0.92
+  },
+  "bridge_node": [
+    "policy_swap_2025_07",
+    "solver_upgrade_gray_v2"
+  ],
+  "notes": "Demo coords; real coords should be normalized R^8."
+}

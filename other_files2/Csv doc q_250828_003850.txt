@@ -1,0 +1,92 @@
+Doc Q — Comprehensive Index & Glossary (A–N + Session Terms)
+Purpose: A single, authoritative index and glossary for every concept defined across Docs A–N and this session. Use it as your first‑stop lookup. Each entry lists: definition, where enforced, inputs/outputs, validators, and key CSVs.
+Q1. Index (By Topic → Doc Sections)
+• Acceptance & Legality → D (§D2–D6), M (§M4), L (§L3–L4)
+• A/B Evaluation → J (§J1–J15)
+• Artifacts (CSV headers) → B (§B2–B9), N (§N3)
+• Audit & Evidence → I (§I1–I12), L (§L3.8)
+• Buffer Gate → H (§H3–H6), M (§M8)
+• Bridges/Seeds/Centers → G (§G2–G7)
+• Change Control & Migrations → L (§L5–L6)
+• Contracts & PS → D (§D5–D8), M (§M10)
+• Determinism (IDs/Hashes) → M (§M2), B (§B3)
+• DFSS/AltDFSS → F (§F3–F7), M (§M7)
+• Geometry & Octadic → E (§E2–E6), M (§M5–M6)
+• Glyphs/MGL → B (§B4–B8), K (§K3)
+• Governance & Runbooks → L (entire)
+• LAEC & Budgets → H (§H2–H4), M (§M9)
+• Master vs Orbit → K (§K2), A (§A1–A3)
+• Merkle & Ledgers → I (§I3), M (§M2)
+• Prompt‑Cursor Recall → K (§K4)
+• TLattice Recovery → H (§H5–H6), L (§L3.9)
+Q2. Glossary (A–Z)
+A/B Harness (Doc J) — Deterministic comparison of Native vs Framework pipelines over fixed splits; writes df_eval_* CSVs and confidence intervals.
+Acceptance Automaton (Doc M §M4) — DFA over Explore, Govern, TLattice, Halt with guards (CI, Parity, Octet, Buffer, SOI, Watchers, Budget, Contract). Governs legal state transitions per window.
+Atom Card — Minimal unit (meaning or embedding) with glyph triad, headers, and provenance. Lives in orbit.csv and, if promoted, in MASTER_* CSVs. Validators: schema, bijection, parity.
+Band‑8 — Lane‑band occupancy metric (Doc E) indicating coverage of the eighth lane band; contributes to geometry score and DFSS features.
+Buffer Gate — Even‑step gate applying compress → constrain → expand with entropy floors. Logs buffer_events.csv; tracked by LAEC (b_exp).
+Budget (LAEC) — Window planning via Logic Application Energy Cost counters (s_acc,r_back,b_exp,e_br,d_dup). Windows = ceil(LAEC/32).
+Centers — High‑centrality primitives/buckets used as anchors for bridges and seeds (Doc G). Stored in centers.csv (if enabled via dashboards).
+Clean‑Flag — Octadic detector result asserting spectral monotone lift (2→4→8), bounded cut fractions, and balance variance; stored in octadic_checks.csv.
+Contracts (PromotionContract) — JSON‑backed decision artifact with ps_value, evidence and law refs, watcher status, budget, and hashes. Required for Master appends. CSV: PROMOTION_CONTRACTS.csv.
+Cursor ID — SHA256(latest_prompt_string) tagging actions under that prompt; stored in PROMOTION_JOURNAL.csv and optional RECALL_STACK.csv.
+DFMODE — Bits→DataFrames method (Rule 15): tiling n=1 primitives into df_primitives, df_tiles, df_shells, df_seeds for packet synthesis.
+DFSS / AltDFSS — Deterministic scoring of futures. DFSS emphasizes spectral and geometry lifts; AltDFSS emphasizes clean‑flags and ASP inverse. See Doc F & M.
+Evidence Link — Flattened claim↔span mapping row in EVIDENCE_LINKS.csv with alignment method/score and law refs. Validators: span overlap, hashing.
+Fiedler Vector — Second eigenvector of graph Laplacian used for recursive spectral splits (2→4→8). Inputs: similarity graph; Outputs: cluster IDs.
+Futures — Enumerated actions (promote, defer, rework) prepared for DFSS scoring; materialized in policy_cards.json.
+Geometry (Curved Action 𝒜) — Composite metric of curvature², divergence, crossings, hull, helicity, writhe, and Band‑8. Lower is better.
+Glyph (Triad) — 3‑item token set encoding headers (shell, bucket, octet, parity, doc, chunk). Deterministic bijection with glyph_spec_version; ID = hash of triad.
+GLYPHIC_MASTER_LOG — Registry of collisions, overlaps (vs MGL), and bridges harvested from glyphs. Used by overlap audits and bridge savings.
+Governance (GOV) — Role with authority to reserve MGL tokens, approve Buffer overrides, manage laws, and authorize freeze‑window promotions.
+Helicity / Writhe — Signed turns / total turns in polyline geometry; feed into 𝒜.
+Index (Master/Orbit) — Materialized CSV sidecars for fast lookups: MASTER_INDEX.csv, ORBIT_INDEX.csv.
+IRL Truth — Claim with context_source=IRL requiring LAWS_VALIDATION FK; otherwise demoted to uncertain (U) at promotion time.
+Jaccard / Cosine — Similarity measures used for fuzzy quote alignment and graph edges; thresholds set in ops.yml.
+LAEC (Logic Application Energy Cost) — Accumulated per window; converts to windows/packets; budgets enforced (Doc H/M).
+Ledger Hash — Rolling SHA‑256 over ordered rows (prev | glyph_id | atom_id | step_index); window headers in LEDGER_WINDOWS.csv.
+MGL (Master Glyph Language) — Reserved glyph items with immutable semantics; stored in MGL_REGISTRY.csv. Orbit overlaps trigger audits (strict/warn/off).
+Merkle Root — Optional per‑window tree over ordered leaves (glyph_id|atom_id|step_index); enables inclusion proofs. CSV: MERKLE_WINDOWS.csv.
+Minimax — DFSS decision style maximizing worst‑case score under fixed adversaries (mirrors/nulls) with fixed seeds.
+Octet (8×8 Grid) — Legalization target: 64 unique triads in octad slots per doc/shell; duplicates rejected; tracked by octet_legality validator.
+Orbit — Working state for atoms (promotion_status∈{proposed,deferred,rework,retired,accepted_to_master}); promotion moves to Master.
+Parity Set — (Even|Odd) × (L|R|N) derived from step parity and lane chirality; used by legality and bridge logic.
+Policy Cards — Structured feature bundles for DFSS/AltDFSS; stored as policy_cards.json and cited by contracts.
+Prompt‑Cursor Recall — Deterministic retrieval order: Orbit@cursor → Master → Orbit@rest, governed by cursor_id, recency ranks, and ops profile.
+Promotion Journal — Append‑only log of Master state transitions with cursor_id; CSV: PROMOTION_JOURNAL.csv.
+PromotionScore (PS) — Calibrated linear (or logistic) acceptance score combining evidence, stability, consistency, recency, human, agreement, and cost.
+Quarantine (TLattice) — Temporary lattice to stabilize illegal/unstable sets; exits after shell coverage and octet legality pass; logs in tlattice_log.csv.
+RAG Alignment — Quote→span anchoring with exact/fuzzy methods; deterministic thresholds; writes EVIDENCE_LINKS.csv.
+Recency Rank — Integer rank for Orbit items; decays with age; resets on citations/promotion; optional log: RECALL_STACK.csv.
+Seeds/Bridges — Macro‑seed primitives and legal multi‑D bridges enabling step savings and window economy; logged in VALID_MULTI_D_BRIDGE_LOG.csv.
+SOI Gate — Structure‑of‑Invariants guard ensuring invariant headers (shell/bucket/parity) remain coherent across expansions.
+Spectral Lift — Monotone increase in modularity from 2→4→8 splits; part of clean‑flag and DFSS features.
+Through‑Mode — Conservative profile (aka "paranoid") that defers promotions, tightens thresholds, and runs extra audits on watcher red.
+TLattice Thrash — Repeated failure to stabilize; triggers re‑imputation, glyph repair, and constraint tightening.
+Traceability (τ) — KPI: % of Master atoms with glyph id + span + contract hash; computed onto EVIDENCE_SCOREBOARD.csv.
+Watchers — Automated checks: five_to_eight, symmetry, regression; red state halts promotions until cleared.
+Window / Packet — BW‑32 action set and Base‑320 group (10 windows). Publishing unit is the packet after audits.
+Q3. Symbols & Abbreviations
+• 𝒜 — Curved action (geometry cost)
+• Hc — Compressive entropy (Buffer Gate)
+• λ₂ — Fiedler eigenvalue (spectral)
+• Q — Modularity
+• PS — PromotionScore
+• η, f, τ, ℓIRL, ρ, α — Integrity, Faithfulness, Traceability, Lawfulness, Resolution rate, Audit coverage
+Q4. Cross‑Walk (Term → CSVs)
+• Master atom → MASTER_GPT_TRUTH.csv, PROMOTION_JOURNAL.csv
+• Orbit atom → orbit.csv
+• Evidence link → EVIDENCE_LINKS.csv
+• Contract → PROMOTION_CONTRACTS.csv
+• Ledger/Merkle → LEDGER_WINDOWS.csv, MERKLE_WINDOWS.csv
+• Geometry/Octadic → geometry_cards.csv, octadic_checks.csv
+• LAEC/Budget → energy_budget.csv
+• Bridges → VALID_MULTI_D_BRIDGE_LOG.csv
+• MGL/Collisions → MGL_REGISTRY.csv, GLYPHIC_MASTER_LOG.csv
+• Audits → AUDIT_TRAIL.csv, MANIFEST.json
+Q5. Operator Quick Hints
+• If evidence is fuzzy → require higher alignment score or defer to Through‑Mode.
+• If octet illegal → TLattice; repair glyphs; re‑run clean‑flag.
+• If Buffer floor fails → governance override or stronger constraints; never silent accept.
+• If A/B ΔE small → tune DFSS weights or add bridges to reduce LAEC.
+End Doc Q — A one‑stop reference for definitions, pointers, and CSV hooks.

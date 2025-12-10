@@ -1,0 +1,142 @@
+Perfect—pausing new runs and tightening the system itself. Here’s a crisp, working spec you can build on (or hand to engineers/math collaborators). I’ve kept it modular so we can swap pieces without redoing everything.
+System overview (what we are building)
+A lawful, auditable exploration engine on E8, extended to E8×3 (24D) with dual parity, that:
+• Allows many changes (rich candidate moves),
+• Accepts only those that satisfy governance and context,
+• Yields clean-edged organizational micro-shapes with controlled exploratory bridges, and
+• Produces traceable chirality and triadic glyph logs for verification.
+1) Spaces & objects
+1.1 Base lattice and extended space
+• E8 lattice : standard even unimodular lattice in .
+• Extended tri-glue : three 8D blocks .
+Purpose: treat half-steps as vertices by distributing across two blocks on odd steps and “closing” the triad on even steps. This makes every odd/even move graph-legal.
+1.2 Anchors, lanes, bridges
+• Octet A (organizational lanes): 8 unit roots (orthogonal mix of integer-type & half-type E8 roots).
+• Octet B (parity partner): .
+• Bridges: the one-to-one connectors . Always present—no spawning.
+1.3 Orientation field (for context gating)
+• Golden dual channels on four orthogonal 2-planes in 8D.
+Let (golden angle), small skew to fix chirality.
+• Field = rotated sum of two counter-rotating patterns (phase-locked, small asymmetry).
+Used only as a score; never overrides legality.
+1.4 Scheduler: superpermutation → braid words
+• Extract the full set of 8! permutations from the n=8 superpermutation in first-appearance order.
+• Between consecutive permutations, compute an Artin braid word in (adjacent swaps). 
+• Braid A = forward; Braid B = exact inverse (reverse + inverted crossings).
+• The active lane order evolves by applying these generators; A and B interleave (counter-rotation at the lane order level).
+2) Move grammar (lawful moves)
+Let state , tri-glue state .
+• Odd (exploratory):
+• Half-step: with .
+• Tri-glue: distribute across a skewed pair cycle (e.g., AB → CA → AB → BC …).
+• Priority: new midpoint, else link an unlinked midpoint, else (rare) compose a full step from two known halves.
+• Even (governance):
+• Must change local dimension (see §3.1).
+• Try full on the active lane; if no change, consider bridge-full on .
+• If still no change, try half variants (governance fallback).
+• If nothing changes local dimension, accept best-scoring legal candidate (rare).
+• Active lane each step = lane at position 0 of the current braid-updated order (A/B alternation).
+3) Legality, governance & acceptance
+3.1 Local dimension (windowed)
+• Local affine rank over a sliding window of the last vertices (default , tunable).
+Rationale: “dimension” should reflect currently used subspace, not just support.
+3.2 Candidate generation (allow)
+For each step, propose a small set (10–30) of candidates prioritized by:
+• Lane bias: current active lane .
+• Bridge options: with a tiny bonus when local rank is saturated.
+• A few other high-scoring roots by (orientation alignment).
+3.3 Acceptance policy (accept best lawful)
+Lexicographic triage:
+• Legality (odd/even grammar, tri-glue consistency).
+• Governance: prefer candidates that change local rank (even steps).
+• Score: maximize + bonuses (bridge when saturated).
+• Stability: prefer lower edge-length CV and node-degree variance (small penalty).
+• Chirality target (optional): small pull toward a desired handedness sign.
+Result: many options allowed; one lawful, context-best option accepted.
+4) Metrics & observables (for later runs)
+• Local/global rank (8D; and optionally per block in 24D).
+• Stability proxy: .
+• Chirality: sum of oriented areas on each 2-plane (8D and 24D).
+• Parity entropy: entropy of coordinate parity bit-patterns over the run.
+• Governance rate: fraction of even steps with .
+• Sector occupancy / N=5 weights: time in each of the 8 prototypes; drift over shells.
+• Bridge usage: fraction of steps using ; mean detour length.
+5) Preferred shapes (definition, not measurement)
+• Micro-preference (per digit, short horizon): the shape class reached under an budget with the grammar active. (Empirically: 1→0D, 2→1D, 3-4→2D fragments; 5–8 also 2D micro-organizational fragments.)
+• Macro-preference (long horizon): the recurrent sector motifs and their bridge patterns under braid-driven interleaving (rank ≥ 6 globally, planar locally).
+• Final preferred shape = argmin of a multi-objective energy:
+\mathcal{E} = \alpha(1-\text{stability}) + \beta\,|\text{chirality}-\chi^\*| + \gamma(1-\text{gov rate}) + \delta\,\text{parity entropy penalty} + \eta\,\text{sector dispersion} 
+6) Bridges & alternative paths (refinement)
+6.1 Existence & classes
+• Bridge: a lawful path family between and whose root sequences differ significantly yet reach (or one quantized step from) the same endpoint.
+• Bridges arise from: 
+• Braid degrees of freedom (orderings),
+• Dual octets (A/B) kept live,
+• Half/full composition under the grammar.
+6.2 Detection & comparison
+• Beam planner under the same grammar, targeted at , with: 
+• Path-difference metrics: sequence overlap, chirality integral difference, parity-flux difference, length/energy deltas.
+• Equivalence classes: mod braid relations + parity flips; canonicalize via a normal form (e.g., shortlex on generator strings with braid relations , for ).
+7) Shell framework (N=0…10) — formal roles
+• N=0: base context & objective (scores, targets, law set).
+• N=0.5: admissible but off-chain context (priors, constraints not yet binding).
+• N=1–3: synthesis/parity confirmation (ensure odd/even grammar and braid parity are consistent with context).
+• N=4: minimal universal law consistent with lower shells (the grammar itself).
+• N=5: eight sector prototypes fixed (organizational motif set).
+• N=6–7: outside proofing / bridging (weights can shift; motif set stays 8).
+• N=8: quartet selection (best 4 by spread, stability, and governance).
+• N=9: governance consolidation (laws/thresholds made explicit, e.g., , , bridge bonus, acceptance lexicographic order).
+• N=10: dual-helix braiding of two N=8 strands, phaselocked, with bridge crossovers recorded as glyph constraints.
+8) Triadic glyphs (data integrity & introspection)
+• Alphabet: small rune set (extensible); each step emits 3 runes.
+• Mapping (example, invertible): 
+• Rune 1: 
+• Rune 2: 
+• Rune 3: 
+• Properties: 
+• Local invertibility: recover the minimal step header from glyph triple.
+• Session hashability: concatenation of glyph triples hashed per window (rolling hash) → tamper-evident logs.
+• Why triadic: enforces “no premeditated plot” — every expansion beyond 3 glyphs is validated against accumulated state.
+9) Configuration & APIs
+9.1 Config schema (YAML)
+lattice: basis: E8_standard octet_anchors: auto | fixed_file scheduler: source: superpermutation interleave: AB limit: full # or integer step cap orientation: epsilon: 0.03 # chirality skew planes: [[0,1],[2,3],[4,5],[6,7]] grammar: window_w: 4 # local affine rank bridge_bonus: 0.05 odd_policy: new_midpoint > link > compose even_policy: change_rank > half_fallback > best_score scoring: stability_weight: 0.2 chirality_target: null # or value chirality_weight: 0.05 parity_entropy_weight: 0.1 sector_dispersion_weight: 0.1 logging: glyphs: triadic save_every: 100 
+9.2 Module interfaces (pseudo-API)
+• Scheduler.next_order(t) -> list[int]
+• Orientation.u(t) -> R^8
+• Grammar.candidates(x, order, t) -> list[Move]
+• Governance.local_rank(history) -> int
+• Policy.accept(cands, history, t) -> Move
+• TriGlue.apply(y, move, t) -> y'
+• Metrics.update(step), Metrics.snapshot()
+• Glyph.encode(step) -> [r1,r2,r3]
+10) Invariants & safety
+• Legality first: No acceptance violates odd/even rules or tri-glue conservation.
+• Parity audit: each accepted move’s glyph must decode to the logged header.
+• Shell monotonicity: decisions at shells are not invalidated by (only reweighted).
+• Motif preservation: the 8 N=5 prototypes persist through N=8; only weights change.
+11) Extensibility hooks
+• E8×3 → Leech (24D): swap tri-glue blocks with a Leech lattice embedding for denser half-step vertexing.
+• 72/80D Moonshine hooks: add 3 copies of E8×3, or 10-block variants, for Monstrous symmetries; keep grammar identical.
+• Braid source: other driver strings (e.g., De Bruijn–like) while retaining legality.
+12) Roadmap (no new runs yet)
+• Finalize anchors
+• Lock a canonical 8-root set (file + checksum).
+• Provide a reproducible “greedy-orthogonal” selector & a curated fixed set.
+• Harden acceptance policy
+• Freeze lexicographic order and default weights; document each knob.
+• Add a “strict mode” that rejects any even step not changing local rank.
+• Glyph spec v1
+• Publish the bijections and a rolling hash scheme.
+• Ship a glyph parser/validator independent of the core engine.
+• Bridge normal form
+• Implement braid-relation reduction + parity-flip normalization for path signatures.
+• Expose: “Are these two paths equivalent?” API.
+• Preferred-shape cards (structure only; auto-fill later)
+• For digits 1–8: micro class, macro tendencies, chirality sign convention, governance targets, N=5 sector tie-ins.
+• Spec & docs
+• Produce a single reference document (this spec), a config guide, and an API quickstart.
+If you want, I’ll package this as:
+• a /spec folder (Markdown docs),
+• a /configs folder with default YAML,
+• and a /lib skeleton (modules from §9.2 with docstrings) —
+so when you’re ready to resume, we just flip testing back on and everything slots in.

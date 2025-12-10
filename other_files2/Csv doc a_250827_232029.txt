@@ -1,0 +1,130 @@
+Doc A — Concepts, Goals, and System Shape (Deep Guide)
+This document is the anchoring overview for the CSV‑first system. It introduces the core concepts, design rationale, acceptance legality, and traceability guarantees. It also provides operator‑ready examples and optional operational stances you can toggle per run. Use this as the first chapter of the Final Rule & Governance Pack.
+1) Scope & Intent
+• Scope: Define the problem space, the information model, the acceptance gates, and the audit trail for the system. This covers what the system is, why it’s built this way, and how every move remains deterministic and traceable.
+• Intent: Enable rich exploration while ensuring only lawful, auditable decisions enter the Master state. Everything runs on CSV artifacts; no hidden state.
+2) Core Concepts (Canonical)
+• Atom Card: Minimal unit of information. Two types: 
+• meaning: claim + evidence quote + context truth
+• embedding: geometry‑only representation (optional) Both carry: glyph triad, context truth (T/F/U), and governance fields (LAEC, buffer, ledger, window/packet).
+• Shells (K=8): Semantic bands covering the space; every document must cover all shells (impute if missing).
+• Buckets: Per‑document clusters within shells.
+• Octet Grid (8×8): 64 slots per Orbit; each slot uses a unique, legal glyph triad.
+• Glyph Triad: Three items (each 1–3 tokens, any script/notation) in canonical form (NFC normalized, escaped delimiters, stable ordering). The triad is bijective with header metadata.
+• Master vs Orbit: 
+• Master = best‑of truths (accepted by contract)
+• Orbit = working context (everything else; promotions evaluated here)
+• LAEC: Logic‑Application Energy Cost; normalized step cost to stabilize an Orbit doc to a legal 8×8.
+• PromotionContract: Hashable proof bundle (evidence set, law refs, watchers passed, energy floors, budget status) required for Master acceptance.
+3) Why These Choices (Design Rationale)
+• CSV‑only: Forces determinism and makes every decision reconstructible with simple tools.
+• Two tiers (Master/Orbit): Separates stable consensus from exploratory context. Prevents drift, eases rollback.
+• Triadic glyphs: Compact, human‑legible markers acting as audit beacons and fast filters across CSVs.
+• 8×8 Octets / 8 Shells: A small, uniform lattice that balances expressivity with strict legality checks and fast parity audits.
+• Contracts, not scores: A number (PS) alone is insufficient; the PromotionContract encodes why a move is lawful under governance.
+• LAEC budgets: Bring compute economy under explicit control (how many windows/packets the run will consume).
+4) Legality & Determinism (Acceptance Grammar)
+• Odd/Even Step Grammar 
+• Odd (explore): half‑steps, bridges, triad trials.
+• Even (govern): accept/reject; enforce floors; log constraints; commit or rollback.
+• Parity Audit: Every accepted row must pass parity (odd/even), bridge legality, and chirality checks; otherwise it cannot enter the ledger.
+• Entropy Floors (Buffer Gate): No silent entropy drops; all expansions logged with constraint IDs/hashes.
+• Outliers → TLattice: Quarantine until a legal 8×8 with unique triads is achieved; then evaluate for promotion.
+• Contracts Required: Master append operations require a valid, hashable PromotionContract.
+5) Information Model (CSV‑First)
+• MASTER_GPT_TRUTH.csv — Accepted truths; immutable except state flips (accepted→deprecated). Holds promotion_contract_hash.
+• MASTER_USER_TRUTH.csv — User assertions; alignment vs laws/theory; adjudication status.
+• MASTER_DOCUMENT_INTAKE.csv — Canonical external chunks with offsets, shell/bucket, glyph triad, text hash.
+• orbit.csv — Working atoms (meaning/embedding), with shell/bucket/octet assignments and promotion features.
+• Governance Pack (optional): LAWS_VALIDATION, GREY_EVIDENCE, BRIDGE_LOG, GLYPHIC_MASTER_LOG, SYSTEM_OPS_GUIDE, TESTBED, TEST_RESULTS, MGL_REGISTRY, and optional MASTER_DETAIL_SHELL.
+• PROMOTION_CONTRACTS.csv — Proof bundles; PROMOTION_JOURNAL.csv — decisions (who/when/why/cursor).
+All files share deterministic IDs, hashes, and window/packet mapping.
+6) Traceability Guarantees
+• Quote‑level grounding: meaning‑cards must include a source span overlapping a canonical chunk.
+• Bijective glyphs: Triad ↔ header is invertible; collisions are blocked or explicitly reconciled.
+• Rolling ledgers: ledger_hash updates with every append; optional Merkle roots per BW‑32 window.
+• FK integrity: Law‑backed truths must reference LAWS_VALIDATION; promotions must reference a row in PROMOTION_CONTRACTS.
+7) LAEC & Budgets (Windows/Packets)
+• LAEC = steps + w_r*rollbacks + w_b*expansions + w_e*bridges + w_d*de‑dupes.
+• Windows needed = ceil(LAEC/32); Packets = ceil(LAEC/320).
+• Enforce run budget: prioritize promotions by PS; defer the rest; record budget status in the contract.
+8) Buffer Gate (Even Steps)
+• Compress: compute invariant/variant tiles; buffer_Hc.
+• Constrain: apply internal knowledge (laws, refs) with ID/hash logging.
+• Expand (optional): only legal candidates; increases b_exp cost.
+• Verify: entropy floor respected; parity & glyph audits pass.
+9) Graph, Orbital, and Seeds
+• Relations Graph: nodes (doc→chunk→atom); edges at similarity threshold; centrality tracked.
+• Orbital Layout: angle = semantic lane, radius = stability; visualize shells and bridges.
+• Composite Macro‑Seed: top primitives by centrality×entropy distance with full shell coverage.
+10) Futures & Controllers (Overview)
+• Futures (DFSS/AltDFSS): S₀,S½,S⁺,Sᶜ,Sʳ,Sᵒ; minimax across futures using AltScore (legality, geometry, path economy).
+• Controllers: RAW (gentle), DEEPEN (structured), RECALL (repair/heavy). Operators: O1–O7 (half/full steps, triads, symmetry gate, isoenergetic slider, governance swaps).
+11) Optional Operational Stances (Profiles)
+Toggle these per run depending on risk tolerance and throughput needs.
+A) Conservative / IRL‑First
+• Goal: Highest validity; slow intake.
+• Settings: 
+• enforce LAWS_VALIDATION for any T/F claim; disallow truth= T without law refs
+• strict parity/glyph collision audits; strict LAEC budgets
+• ALT disabled except stability‑heavy scoring
+• Use when: Publishing, external audit.
+B) Exploratory / Research
+• Goal: Max coverage; tolerant to expense.
+• Settings: 
+• allow U (unknown) truths with grey evidence logging
+• ALT scheduler on; relaxed LAEC; DFSS/AltDFSS wide
+• aggressive bridge discovery (≥4 hops)
+• Use when: Early discovery, hypothesis mining.
+C) Through‑Mode / Paranoid
+• Goal: Trigger only when canonical coverage is weak or entropy is unstable.
+• Settings: 
+• auto‑enable ALT variants + buffer expansions
+• run independent glyph validator; mirror/null geometry checks on
+• defer promotions; contracts created but queued
+• Use when: Sparse or adversarial content.
+D) Ops‑Efficient / Production
+• Goal: Stable throughput; bounded cost.
+• Settings: 
+• frozen primitive catalog; DFSS narrow; governors on floors
+• LAEC budgets enforced; promotion batch size capped
+• incident auto‑escalation to TESTBED
+• Use when: Continuous ingestion.
+12) Operator Checklists
+Intake
+• [ ] Source registered in MASTER_DOCUMENT_INTAKE (hash, offsets, glyph)
+• [ ] All 8 shells present or imputed
+• [ ] TLattice for outliers started; LAEC counters live
+RAG Alignment
+• [ ] Every claim has a quote span; context truth set (T/F/U)
+• [ ] IRL truths linked to LAWS_VALIDATION
+ALT & Geometry
+• [ ] Geometry card written; octadic (2→4→8) clean‑flag evaluated
+• [ ] Controller method declared (RAW/DEEPEN/RECALL)
+Promotion
+• [ ] PS computed and logged
+• [ ] PromotionContract minted (evidence, laws, watchers, floors, budget)
+• [ ] Journal entry appended (who/when/why/cursor)
+Post‑Run
+• [ ] Ledger/Merkle roots updated
+• [ ] Scoreboard (A/B) refreshed; incidents reviewed; TESTBED updated
+13) Failure Modes & Mitigations
+• Glyph collisions → block promotion; run overlap audit; if compatible, merge; else assign new glyph or demote.
+• Entropy dips → reject step; require explicit override in governance pack.
+• Budget exhausted → defer promotions by PS; record budget_ok=false.
+• Law reference missing (for T truths) → force U or F until LAWS_VALIDATION row exists.
+• Octet illegality (non‑unique triads) → continue in TLattice until stabilized.
+14) Minimal Runbook
+• Ingest external docs → build Orbit atoms and LAEC counters.
+• Align claims/quotes → write relations graph + orbitals.
+• Run ALT/DFSS, geometry, octadic, operators → compute PS features.
+• Mint PromotionContracts → append to Master if thresholds & budgets pass.
+• Write journals, update ledgers, refresh A/B dashboards.
+15) Glossary (Quick)
+• Atom Card: smallest data unit (meaning/embedding).
+• LAEC: logic‑application energy cost, mapped to BW‑32 windows.
+• TLattice: temporary lattice for out‑of‑corpus docs.
+• PromotionContract: proof package required for Master acceptance.
+• MGL: Master Glyph Language; reserved glyph items.
+• DFSS/AltDFSS: futures and minimax scoring regimes.
+End Doc A. Next: Doc B — Formal Objects & Naming (field‑level schemas & naming conventions).

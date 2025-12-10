@@ -1,0 +1,89 @@
+Session Summary — End‑to‑End Consolidated Report (v1)
+Date: Aug 16, 2025 • Owner: Nick Barker • Coordinator: SnapLat
+Scope: A single, fully detailed narrative and reference of the entire engagement to date — from initial recovery and organization of canvas docs through Phase‑2 rebasing, Phase‑3 batching, FST readiness, and supporting artifacts. Contracts only; no numbers/equations. All terms reflect the post‑P3 Batch‑A baseline.
+1) Executive Overview
+• We transformed a scattered multi‑session delivery into a unified, anchor‑first system with stable contracts, registries, policies, and lint‑based spec‑tests.
+• The system now supports: deterministic Anchors & URNs, lineage via ALIDs, Evidence Graph with provenance, Coverage/ADR normalization, Custody with attest‑before‑release, Connector scope enforcement, Overlay Scenes (version‑pinned, capability‑negotiated), Crosswalks with temporal intervals, RBAC, People/Teams/Ownership, Privacy/Alias policy, and Org‑level governance gates.
+• A complete Full System Test (FST) plan is defined with seeded spec_run rows and a Zip Builder to package every canvas deliverable.
+Readiness posture: Gateable with a short pre‑flight; FST can execute once late anchor/capability backfills and baseline scene explains are emitted.
+2) Anchor & Lineage Foundations (Core Contracts)
+• Anchor ID: deterministic, policy‑scoped identifier per row.
+Composition: surface_id | schema_version | policy_hash | stable_row_key → anchor_id (base32 of SHA256).
+Prohibitions: no ordinals; no locale‑sensitive or volatile inputs.
+• ALID (Anchor Lineage ID): stable equivalence key across policy changes; computed from surface_id | stable_row_key; used for graph grouping, not deep‑links.
+• URN Pattern: urn:trail:<trail_id>#a=<surface_id>:<anchor_id>; all cross‑surface references are URN‑based.
+• Hygiene lints: MISSING_SCHEMA_VERSION, MISSING_ANCHOR, ORDINAL_ANCHOR, BROKEN_URN, ANCHOR_INPUT_CONTAINS_VOLATILE, ANCHOR_ALIAS_USED_AS_KEY, ANCHOR_INPUT_PII.
+3) Evidence Model & Graph
+• Evidence Graph (evidence_node.v1, evidence_edge.v1) links Trails, Anchors, ADRs, Coverage, Errors, Crosswalks, Custody Events, Connectors, People/Teams, Incidents, Overlays, Universes, Capabilities, RBAC.
+• Edge kinds: supports, derives, contradicts, duplicates, replaces, obsoletes, annotates, contains, attests, custody_of, emits, resolves, maps_to, triggers with basis (anchors|signer|migration|crosswalk|rbac|coverage_reason|lint|connector) and basis_meta{}.
+• Trust & Kind registries: trust_roots.v1, signing_policy.v1, coverage_reason_registry.v1, adr_kind.v1 (min evidence matrices), coverage_widget_map.v1.
+• Governance of graph: GC/compaction policy, conflict precedence, ALID collision protocol, ingest‑RBAC, query contract + query policy (role/group/user precedence) and cache manifests.
+4) Governance, Policy, and Risk Controls
+• Coverage Evidence (coverage_evidence.v1): signer blocks, reasons vocab, anchorable dashboards; widgets bound via coverage_widget_map.v1.
+• ADR Snap (adr_snap.v1): mandatory trail_refs[] + coverage_refs[] (URNs), ownership, state/audit, migration links; ADR kinds drive required evidence.
+• Error Taxonomy + error_event.v1 (emitted on lints), Recovery Plans, Quarantine, ADR Triggers.
+• Custody: custody_event/ledger.v1, attestation precedence (attestation_policy.v1), quarantine, recovery_plan — invariant: attest → release.
+• Connectors: connector.v1, connector_policy.v1, connector_event.v1 with outcomes, LS(D)T posture, export guard; deny precedence; red‑team specs.
+• Org Policy Gates (org_policy.v1): require ADR for changes to core policies; policy diffs and timelines captured.
+• Privacy/Alias: people_privacy_policy.v1, person_alias.v1 (display‑only), alias_policy.v1 (scope, uniqueness, deprecation) + lints.
+• RBAC: roles, verbs, per‑surface policies, and compound RBAC on graph ingest (must view endpoints and append edges).
+5) Surfaces, Scenes, & UI Contracts
+• Capabilities (capabilities.v1) per surface: features, provided edges, successor hints, requirements (feature logic allOf/anyOf/oneOf/not).
+• Overlay Spec and Overlay Scenes: version‑pinned bindings; Scene Inheritance & Patch ops with max stack depth; Scene Explain traces on load; Panel Capabilities (features) checked against Feature Registry.
+• Baseline Scenes: ops-default, governance-default, mdhg-default, evidence-default, errors-default (pinned) with required panels in Ops Center.
+6) Crosswalks, MDHG/AGRM & Glyphs
+• Crosswalk families: surface↔artifact, module_path↔package_id, family↔type, scenario↔universe, room↔glyph — all anchorable, URN‑based.
+• Temporal semantics: effective intervals [from, to) + activity_state; time‑aware queries via filters.at_time.
+• Canonicalization provenance: per‑row resolver_meta linking shared, signed resolver_ruleset.v1.
+• Lints: ambiguity, time overlap, stale successor, non‑canonical paths, missing proofs.
+7) People, Teams, Ownership
+• Canonical identities: people.v1, team.v1; Ownership Map with scope{surface|row|graph|policy|trail} and optional data steward.
+• Lifecycle: privacy policy for PII controls; alias lifecycle & collisions governed by alias_policy.
+8) Phase Timeline — What We Shipped
+Phase‑1 (recovery & organization)
+• Recovered and grouped all canvas docs; extracted high‑signal terms; built initial relationships and cross‑use patterns.
+Phase‑2 (rebase & systemwide ticks)
+• P2‑001 Anchor/Version Backfill → P2‑002 Coverage & ADR → P2‑003 Evidence Graph + Trust/Kind Registries → P2‑004 People/Teams + Graph Governance → P2‑005 Overlays/Universes + Privacy/Ownership/GC/Query → P2‑006 Crosswalk Integrity + Scene Pin/Capabilities → P2‑007 Custody + Temporal Crosswalks + Scene Inheritance + Feature Registry → P2‑008 Connectors + Attestation Precedence + Effective‑From + Scene Patch + Rulesets → P2‑009 SoSR & Reset Plan.
+Phase‑3 (restart & consolidation)
+• Batch‑A (P3‑001…009): Capabilities publish; prov bundles everywhere; scene explain; org policy enforcement; signed rulesets; temporal audit; custody drill; query policy hardening; connector red‑team.
+• FST Readiness: Go/No‑Go gate, readiness matrix, suites, roles, risks.
+• FST Pre‑Flight/Spec Runs/Zip Builder: seeded spec_run rows, build manifests, and packaging scripts.
+9) Current Readiness (for Full System Test)
+Gate conditions defined; small pre‑flight actions remaining:
+• Confirm anchors/capabilities on late surfaces;
+• Emit baseline scene_explain traces for default scenes;
+• Run the seeded spec_run suites in this order: Anchors → Coverage/ADR → Evidence Graph → Crosswalk Temporal → Scenes → Custody → Connectors Red‑Team → Query Policy → Bundles/Export.
+Success = all suite‑specific lints at zero on samples, spec_run rows marked ok, and Post‑FST Build Manifest finalized.
+10) Deliverables Index (this engagement)
+(All exist as canvases; see Zip Builder for filenames.)
+• Extended Scope + Tick‑005 → Tick‑009 (contracts, error taxonomy, recovery, ADR triggers)
+• Phase‑2 Rebase & P2‑001…P2‑009 (anchors, coverage/ADR, evidence graph, people/teams, overlays/scenes, crosswalks, custody, connectors, SoSR)
+• Phase‑3 Batch‑A (P3‑001…009) consolidated spec
+• FST Readiness Gate & Plan
+• FST Pre‑Flight, Spec Runs, Zip Builder, Build Manifests
+11) Open Decisions & Risks (with planned mitigations)
+• Capability drift (surfaces declare features but don’t use them) → add a capability verifier lint pass during FST.
+• Bundle sprawl (prov bundles everywhere) → add retention tags by purpose and archival windows post‑FST.
+• Scene stack complexity (extends+patch depth) → bounded at 3 and enforced; use scene_explain traces.
+• Policy sprawl (multiple layers) → use policy_diff/timeline and org gates; render policy diffs in HTML surface for human review.
+• Legacy anchors (late backfills) → pre‑flight adoption scans with recovery_plan automation.
+12) Next Steps (immediately actionable)
+• Run Pre‑Flight backfills; publish missing capabilities; emit baseline scene_explain for default scenes.
+• Execute FST suites using seeded spec_run rows; monitor Ops Center panels; remediate via recovery_plan/policy_diff+ADR.
+• Export canvases → run Zip Builder (include Pre‑/Post‑FST Build Manifests).
+• Finalize Post‑FST manifest and, if green, prepare SoSR v2 with deltas.
+13) Glossary (high‑signal tokens)
+• Anchor ID / ALID — instance vs lineage identity.
+• URN — cross‑surface reference urn:trail:…#a=surface:anchor.
+• Evidence Graph — stitched nodes/edges across Trails/Anchors/ADRs/Coverage/etc.
+• ADR — architectural decision record with mandatory evidence links.
+• Coverage Evidence — signed, anchorable policy outcome with reasons.
+• Custody — attest‑before‑release, ledger + events.
+• Connector — external binding with scope/policy/events and red‑team specs.
+• Overlay Scene — version‑pinned, capability‑checked dashboards; inheritance + patch.
+• Crosswalk — canonical, temporal mappings with provenance.
+• RBAC — roles/verbs, compound checks on graph ingest.
+• People/Teams/Ownership — canonical identities and accountability with data steward.
+• Org Gates — ADR‑required policy changes + policy diffs/timelines.
+• Spec‑Run — recorded execution of suite‑level tests (contract lints only).
+End of Session Summary v1.

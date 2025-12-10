@@ -1,0 +1,631 @@
+{
+  "meta": {
+    "started_at": 1754813975.009336,
+    "plan": {
+      "steps": [
+        {
+          "name": "legacy:registry",
+          "family": "legacy",
+          "module": "adapters.legacy_auto.agrm_cmplx.registry",
+          "func": "list_legacy",
+          "kwargs": {
+            "slug": "agrm-cmplx",
+            "root": "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx"
+          },
+          "est_wall_ms": 50,
+          "est_ram_mb": 64,
+          "priority": 5,
+          "policy_id": "policy:default"
+        },
+        {
+          "name": "legacy:exec:_collect_hit_hist",
+          "family": "legacy",
+          "module": "adapters.legacy_auto.agrm_cmplx.executor",
+          "func": "try_call",
+          "kwargs": {
+            "module": "legacy_agrm_cmplx_gpt gode for agrm-cmplx_AGRM_refactored (1)",
+            "func": "_collect_hit_hist"
+          },
+          "est_wall_ms": 20,
+          "est_ram_mb": 32,
+          "priority": 12,
+          "policy_id": "policy:default"
+        },
+        {
+          "name": "legacy:exec:_collect_hit_hist",
+          "family": "legacy",
+          "module": "adapters.legacy_auto.agrm_cmplx.executor",
+          "func": "try_call",
+          "kwargs": {
+            "module": "legacy_agrm_cmplx_gpt gode for agrm-cmplx_AGRM_refactored (2)",
+            "func": "_collect_hit_hist"
+          },
+          "est_wall_ms": 20,
+          "est_ram_mb": 32,
+          "priority": 13,
+          "policy_id": "policy:default"
+        },
+        {
+          "name": "legacy:exec:fnv1a64",
+          "family": "legacy",
+          "module": "adapters.legacy_auto.agrm_cmplx.executor",
+          "func": "try_call",
+          "kwargs": {
+            "module": "legacy_agrm_cmplx_gpt gode for agrm-cmplx_AGRM_refactored",
+            "func": "fnv1a64"
+          },
+          "est_wall_ms": 20,
+          "est_ram_mb": 32,
+          "priority": 14,
+          "policy_id": "policy:default"
+        },
+        {
+          "name": "policy:load",
+          "family": "governance",
+          "module": "json",
+          "func": "loads",
+          "args": [
+            "{}"
+          ],
+          "priority": 10,
+          "policy_id": "policy:n7"
+        },
+        {
+          "name": "superperm:kernel",
+          "family": "solver.superperm",
+          "module": "src.testlib_plus.agents.superperm",
+          "func": "kernel_gen",
+          "kwargs": {
+            "seed": 321,
+            "n": 7,
+            "mode": "dry"
+          },
+          "est_wall_ms": 50,
+          "est_ram_mb": 64,
+          "priority": 20,
+          "policy_id": "policy:n7"
+        },
+        {
+          "name": "superperm:construct",
+          "family": "solver.superperm",
+          "module": "src.testlib_plus.agents.superperm",
+          "func": "constructor",
+          "est_wall_ms": 120,
+          "est_ram_mb": 128,
+          "priority": 30,
+          "policy_id": "policy:n7"
+        },
+        {
+          "name": "superperm:coverage",
+          "family": "solver.superperm",
+          "module": "src.testlib_plus.agents.superperm",
+          "func": "coverage_check",
+          "kwargs": {
+            "alphabet": [
+              "A",
+              "B",
+              "C"
+            ],
+            "exactly_once": true
+          },
+          "est_wall_ms": 80,
+          "est_ram_mb": 128,
+          "priority": 40,
+          "policy_id": "policy:n7"
+        },
+        {
+          "name": "dim:probe",
+          "family": "dim3d",
+          "module": "src.testlib_plus.agents.dim_probe",
+          "func": "proj3d_quality",
+          "kwargs": {
+            "n": 200,
+            "seed": 9
+          },
+          "est_wall_ms": 60,
+          "est_ram_mb": 128,
+          "priority": 50,
+          "policy_id": "policy:dim"
+        }
+      ]
+    },
+    "ended_at": 1754813975.6369421,
+    "elapsed_s": 0.6276061534881592
+  },
+  "queue_records": [
+    {
+      "name": "legacy:registry",
+      "family": "legacy",
+      "module": "adapters.legacy_auto.agrm_cmplx.registry",
+      "func": "list_legacy",
+      "priority": 5,
+      "status": "ok",
+      "duration_ms": 618.6287249997804,
+      "error": null
+    },
+    {
+      "name": "policy:load",
+      "family": "governance",
+      "module": "json",
+      "func": "loads",
+      "priority": 10,
+      "status": "ok",
+      "duration_ms": 0.0326419999510108,
+      "error": null
+    },
+    {
+      "name": "legacy:exec:_collect_hit_hist",
+      "family": "legacy",
+      "module": "adapters.legacy_auto.agrm_cmplx.executor",
+      "func": "try_call",
+      "priority": 12,
+      "status": "ok",
+      "duration_ms": 2.3547660000531323,
+      "error": null
+    },
+    {
+      "name": "legacy:exec:_collect_hit_hist",
+      "family": "legacy",
+      "module": "adapters.legacy_auto.agrm_cmplx.executor",
+      "func": "try_call",
+      "priority": 13,
+      "status": "ok",
+      "duration_ms": 0.6573580001258961,
+      "error": null
+    },
+    {
+      "name": "legacy:exec:fnv1a64",
+      "family": "legacy",
+      "module": "adapters.legacy_auto.agrm_cmplx.executor",
+      "func": "try_call",
+      "priority": 14,
+      "status": "ok",
+      "duration_ms": 0.42680100000325183,
+      "error": null
+    },
+    {
+      "name": "superperm:kernel",
+      "family": "solver.superperm",
+      "module": "src.testlib_plus.agents.superperm",
+      "func": "kernel_gen",
+      "priority": 20,
+      "status": "ok",
+      "duration_ms": 2.16997799998353,
+      "error": null
+    },
+    {
+      "name": "superperm:construct",
+      "family": "solver.superperm",
+      "module": "src.testlib_plus.agents.superperm",
+      "func": "constructor",
+      "priority": 30,
+      "status": "error",
+      "duration_ms": 0.689834000013434,
+      "error": {
+        "type": "TypeError",
+        "msg": "constructor() missing 1 required positional argument: 'kernel'",
+        "trace": "Traceback (most recent call last):\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 56, in run\n    fn=self._import_callable(op.module, op.func); out=fn(*op.args, **op.kwargs)\n                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: constructor() missing 1 required positional argument: 'kernel'\n"
+      },
+      "result": null
+    },
+    {
+      "name": "superperm:coverage",
+      "family": "solver.superperm",
+      "module": "src.testlib_plus.agents.superperm",
+      "func": "coverage_check",
+      "priority": 40,
+      "status": "error",
+      "duration_ms": 0.4746160000195232,
+      "error": {
+        "type": "TypeError",
+        "msg": "coverage_check() missing 1 required positional argument: 'seq'",
+        "trace": "Traceback (most recent call last):\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 56, in run\n    fn=self._import_callable(op.module, op.func); out=fn(*op.args, **op.kwargs)\n                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: coverage_check() missing 1 required positional argument: 'seq'\n"
+      },
+      "result": null
+    },
+    {
+      "name": "dim:probe",
+      "family": "dim3d",
+      "module": "src.testlib_plus.agents.dim_probe",
+      "func": "proj3d_quality",
+      "priority": 50,
+      "status": "ok",
+      "duration_ms": 1.865380000026562,
+      "error": null
+    }
+  ],
+  "sap_events": [
+    {
+      "family": "legacy",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "proj_wall_ms": 50.0,
+          "cap_wall_ms": 450000.0,
+          "proj_ram_mb": 64.0,
+          "cap_ram_mb": 3072.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "legacy",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_duration_ms": 618.6287249997804,
+          "wall_used_ms": 618.6287249997804,
+          "cap_wall_ms": 450000.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "governance",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:n7",
+        "reasons": [],
+        "metrics": {
+          "proj_wall_ms": 618.6287249997804,
+          "cap_wall_ms": 450000.0,
+          "proj_ram_mb": 64.0,
+          "cap_ram_mb": 3072.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:n7"
+        }
+      }
+    },
+    {
+      "family": "governance",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:n7",
+        "reasons": [],
+        "metrics": {
+          "op_duration_ms": 0.0326419999510108,
+          "wall_used_ms": 618.6613669997314,
+          "cap_wall_ms": 450000.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:n7"
+        }
+      }
+    },
+    {
+      "family": "legacy",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "proj_wall_ms": 638.6613669997314,
+          "cap_wall_ms": 450000.0,
+          "proj_ram_mb": 64.0,
+          "cap_ram_mb": 3072.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "legacy",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_duration_ms": 2.3547660000531323,
+          "wall_used_ms": 621.0161329997845,
+          "cap_wall_ms": 450000.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "legacy",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "proj_wall_ms": 641.0161329997845,
+          "cap_wall_ms": 450000.0,
+          "proj_ram_mb": 64.0,
+          "cap_ram_mb": 3072.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "legacy",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_duration_ms": 0.6573580001258961,
+          "wall_used_ms": 621.6734909999104,
+          "cap_wall_ms": 450000.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "legacy",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "proj_wall_ms": 641.6734909999104,
+          "cap_wall_ms": 450000.0,
+          "proj_ram_mb": 64.0,
+          "cap_ram_mb": 3072.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "legacy",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_duration_ms": 0.42680100000325183,
+          "wall_used_ms": 622.1002919999137,
+          "cap_wall_ms": 450000.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "solver.superperm",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:n7",
+        "reasons": [],
+        "metrics": {
+          "proj_wall_ms": 672.1002919999137,
+          "cap_wall_ms": 450000.0,
+          "proj_ram_mb": 64.0,
+          "cap_ram_mb": 3072.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:n7"
+        }
+      }
+    },
+    {
+      "family": "solver.superperm",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:n7",
+        "reasons": [],
+        "metrics": {
+          "op_duration_ms": 2.16997799998353,
+          "wall_used_ms": 624.2702699998972,
+          "cap_wall_ms": 450000.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:n7"
+        }
+      }
+    },
+    {
+      "family": "solver.superperm",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:n7",
+        "reasons": [],
+        "metrics": {
+          "proj_wall_ms": 744.2702699998972,
+          "cap_wall_ms": 450000.0,
+          "proj_ram_mb": 128.0,
+          "cap_ram_mb": 3072.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:n7"
+        }
+      }
+    },
+    {
+      "family": "solver.superperm",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:n7",
+        "reasons": [],
+        "metrics": {
+          "op_duration_ms": 0.689834000013434,
+          "wall_used_ms": 624.9601039999106,
+          "cap_wall_ms": 450000.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:n7"
+        }
+      }
+    },
+    {
+      "family": "solver.superperm",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:n7",
+        "reasons": [],
+        "metrics": {
+          "proj_wall_ms": 704.9601039999106,
+          "cap_wall_ms": 450000.0,
+          "proj_ram_mb": 128.0,
+          "cap_ram_mb": 3072.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:n7"
+        }
+      }
+    },
+    {
+      "family": "solver.superperm",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:n7",
+        "reasons": [],
+        "metrics": {
+          "op_duration_ms": 0.4746160000195232,
+          "wall_used_ms": 625.4347199999302,
+          "cap_wall_ms": 450000.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:n7"
+        }
+      }
+    },
+    {
+      "family": "dim3d",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:dim",
+        "reasons": [],
+        "metrics": {
+          "proj_wall_ms": 685.4347199999302,
+          "cap_wall_ms": 450000.0,
+          "proj_ram_mb": 128.0,
+          "cap_ram_mb": 3072.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:dim"
+        }
+      }
+    },
+    {
+      "family": "dim3d",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:dim",
+        "reasons": [],
+        "metrics": {
+          "op_duration_ms": 1.865380000026562,
+          "wall_used_ms": 627.3000999999567,
+          "cap_wall_ms": 450000.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:dim"
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "op": "legacy:registry",
+      "optimization_points": [
+        "Identify stable entry points for adapters"
+      ],
+      "weak_spots": [
+        "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx/gpt gode for agrm-cmplx/AGRM_refactored (3).py",
+        "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx/gpt gode for agrm-cmplx/AGRM_refactored (4).py",
+        "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx/gpt gode for agrm-cmplx/test_hash.py",
+        "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx/gpt gode for agrm-cmplx/test_runtime.py",
+        "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx/gpt gode for agrm-cmplx/test_scoring.py",
+        "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx/gpt gode for agrm-cmplx/test_think_systems.py"
+      ]
+    },
+    {
+      "op": "policy:load",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "legacy:exec:_collect_hit_hist",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "legacy:exec:_collect_hit_hist",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "legacy:exec:fnv1a64",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "dim:probe",
+      "optimization_points": [],
+      "weak_spots": []
+    }
+  ]
+}

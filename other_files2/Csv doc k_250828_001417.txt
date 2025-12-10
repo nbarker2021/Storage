@@ -1,0 +1,112 @@
+Doc K — Master vs Orbit; MGL; Prompt‑Cursor Recall (States, Glyph Governance, Recency)
+Purpose: Define the state model for Master vs Orbit, the Master Glyph Language (MGL) governance (reservation, overlap audits, collisions, evolution), and the Prompt‑Cursor Recall policy that deterministically orders retrieval and context expansion. All mechanics are CSV‑first and auditable.
+K1. Overview
+• Master is the best‑of truth: contract‑accepted atoms with strong evidence and governance sign‑off. State machine is minimal (accepted ↔ deprecated); append‑only history.
+• Orbit is the working context: provisional atoms, quarantine, proposals, and deferrals. Promotion is gated by Doc D (legality) and Doc F (policy), using contracts and budgets.
+• MGL (Master Glyph Language) reserves glyph items that carry canonical semantics. Orbit may reference them only under overlap rules.
+• Prompt‑Cursor Recall turns the latest prompt into a deterministic cursor and orders retrieval: Orbit@cursor → Master → Orbit@rest.
+K2. State Model (Master & Orbit)
+K2.1 Orbit states (column: promotion_status in orbit.csv)
+• proposed — candidate atoms created during P1/P2/P3.
+• deferred — legal but over budget (Doc H); queued by PS.
+• accepted_to_master — atom received a PromotionContract and was appended to Master.
+• rework — requires changes due to watcher/validator feedback.
+• retired — removed from active consideration (kept for lineage only).
+Transitions (deterministic)
+proposed → accepted_to_master (PS≥θ & contracts ok & budget ok) proposed → deferred (budget overflow) proposed → rework (watcher red / validation fail) rework → proposed (fixes applied) proposed|deferred → retired (superseded by better atom) 
+K2.2 Master states (columns: master_state, consensus_level in MASTER_GPT_TRUTH.csv)
+• accepted — current best.
+• deprecated — superseded by a newer accepted atom, or governance decision.
+Transitions
+accepted → deprecated (newer evidence or policy) 
+Journal: every transition writes to PROMOTION_JOURNAL.csv with cursor_id and rationale.
+K3. Master Glyph Language (MGL) — Governance
+MGL is a registry of reserved glyph items (tokens, symbols, notations) with controlled semantics that must remain stable across runs.
+K3.1 Registry & Schema
+MGL_REGISTRY.csv (Doc B) holds: mgl_id, item_token, class{word|symbol|notation}, semantic_scope, reserved_by, added_at.
+Policies
+• Reservation: Only governance can add items; semantic scope must be documented in SYSTEM_OPS_GUIDE.csv.
+• Immutability: Once reserved, the item_token’s semantics cannot change; deprecations add a new row with successor linkage (stored in GLYPHIC_MASTER_LOG.csv collisions field).
+• Versioning: spec_version increments when decoding rules change; Master atoms record glyph_spec_version.
+K3.2 Overlap Audits
+Orbit glyph items that match a reserved MGL item trigger an overlap audit.
+• strict: Orbit must either inherit semantics (exact scope match) or be blocked.
+• warn: Orbit may proceed with a warning if semantics differ; promotion requires explicit contract note.
+• off: No audit (not recommended).
+Collision handling (in GLYPHIC_MASTER_LOG.csv)
+• Record glyph_id, colliding items, scopes, and any related bridges.
+• If semantics are compatible, merge by inheritance (Master semantics override).
+• If incompatible, retire the Orbit glyph; propose a new triad.
+K3.3 Glyph Evolution & Lifecycle
+• Propose (Orbit triad created) → check MGL overlap.
+• Reserve (governance adds token to MGL if it becomes foundational).
+• Promote (Master atom accepted; triad becomes canonical for that header decoding).
+• Retire (triad deprecated; collisions or policy change).
+All steps are append‑only and journaled.
+K4. Prompt‑Cursor Recall (Recency Policy)
+Convert the latest prompt into a deterministic cursor; order retrieval so that context follows operator intent but remains reproducible.
+K4.1 Cursor ID
+• cursor_id = SHA256(latest_prompt_string) (Doc B). Stored in PROMOTION_JOURNAL.csv for actions taken under that prompt.
+K4.2 Recall Order (three tiers)
+• Orbit@cursor — atoms whose (doc_id, primitive, context_label) score highest against the prompt embedding or keyword map, sorted by recency_rank (lower is fresher).
+• Master — accepted atoms ranked by promotion_time (newest first) then evidence_strength.
+• Orbit@rest — remaining Orbit atoms by recency_rank then promotion_score.
+Determinism
+• If using embeddings, the prompt embedding spec/seed is fixed (embed_spec_hash); otherwise use keyword TF‑IDF with frozen vocabulary.
+K4.3 Recency & Decay
+• recency_rank in orbit.csv increments with age or demotion; reset to 0 when cited by a contract or returned in top‑k recall.
+• Optional decay CSV: RECALL_STACK.csv
+run_id,cursor_id,atom_id,rank_before,rank_after,reason,ts 
+K4.4 Entrance Priority
+• The most recent prompt is the entrance vector for context recall; its cursor_id is used to prioritize Orbit atoms that align semantically.
+• When Master‑first profile is enabled, swap tiers 1 and 2.
+K5. CSV Hooks & Indexes
+• Orbit: recency_rank, promotion_score, promotion_status, glyph_id, shell/bucket/octet.
+• Master: promotion_contract_hash, consensus_level, evidence_strength.
+• MGL: item_token → fast overlap checks; build a minimal in‑memory index keyed by token.
+• Recall: RECALL_STACK.csv (optional) for auditing recency updates.
+Create materialized views (CSV or parquet sidecars) for fast joins:
+• MASTER_INDEX.csv: (primitive, glyph_id, doc_id, atom_id, added_at)
+• ORBIT_INDEX.csv: (primitive, glyph_id, recency_rank, promotion_score, atom_id)
+K6. Validators & Determinism
+• State transitions: Only allowed transitions (K2) permitted; journal required.
+• Master append: requires PromotionContract FK; accepted only.
+• MGL overlap: enforcement per ops (strict|warn|off); collisions logged.
+• Glyph bijection: triad ↔ headers mapping must succeed (Doc B); otherwise reject.
+• Prompt determinism: cursor_id equals SHA256 of the exact prompt string; prompt embedding spec hash recorded when embeddings are used.
+• Recall order: stable sorting keys recorded (cursor_id, ranks, timestamps); re‑running yields identical top‑k.
+K7. Operational Profiles (toggles)
+• Recall policy: explore_first (Orbit@cursor → Master → Orbit@rest) | master_first (Master → Orbit@cursor → Orbit@rest).
+• MGL enforcement: strict | warn | off.
+• Recency decay: linear | exponential | staircase with fixed parameters in ops.yml.
+• Promotion pressure: prefer promotion when recency_rank repeatedly resets (signal of recurring utility).
+K8. Worked Examples
+K8.1 Overlap audit (strict)
+• Orbit triad item Δphase equals MGL token Δphase (class notation, scope phase operations).
+• Orbit semantics match → inherit; promotion allowed.
+• If Orbit scope differed (e.g., phase narrative), strict policy would block until triad is revised.
+K8.2 Recall ordering
+• Prompt mentions “locked core coils”.
+• cursor_id computed; Orbit atoms with primitives {locked_core, phase_coil} get tier‑1; Master atoms on locked_core fill tier‑2; remaining Orbit atoms form tier‑3 by recency_rank.
+K8.3 Deprecation
+• A newer Master atom supersedes an older claim; write PROMOTION_JOURNAL entry; set older master_state=deprecated; link both via origin_orbit_ids.
+K9. Checklists
+MGL
+• [ ] Token reservation justified and added to registry
+• [ ] Overlap audits run for Orbit
+• [ ] Collisions logged/merged/retired as required
+Master/Orbit
+• [ ] All transitions journaled with cursor_id
+• [ ] Contracts FK‑valid for Master appends
+• [ ] Deprecations linked to successors
+Recall
+• [ ] cursor_id recorded; prompt embedding spec hash fixed
+• [ ] Recall tiers applied per policy; top‑k stable across reruns
+• [ ] Recency ranks updated and logged in RECALL_STACK
+K10. Interfaces
+• Docs A–D: legality, contracts, budgets gate promotions and state changes.
+• Doc E: chirality/lane bins feed parity, impacting state legality.
+• Doc F: policy cards influence promotion pressure and recall priorities.
+• Doc G: centers/bridges inform recall weighting (optional) and braid continuity.
+• Doc I: evidence links and ledgers referenced on deprecations and re‑contracts.
+End Doc K — Master vs Orbit; MGL; Prompt‑Cursor Recall. Next: Doc L — Runbooks & Change Control (procedures, watchers, rollback).

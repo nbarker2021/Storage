@@ -1,0 +1,71 @@
+Section 12 — The CQE Language (CQL) v0.1
+The tiny DSL that drives octets, mirrors, caps, parity stitching, ledgers—cleanly, repeatably.
+(format you liked: quick Q&A → scenes)
+🔹 Warm-up Q&A
+Q: Why invent a language at all?
+A: To make the spine executable and portable. CQL is the minimum grammar that names: views (H1…H8), mirror contracts, Δ-lifts, reversible caps, strict ratchets, 4-bit receipts, and parity stitching. If you can say those precisely, you can replay any build exactly.
+Q: Isn’t this just YAML + Python?
+A: You can host CQL inside YAML, JSON, or notebooks. The point is a fixed, tiny set of verbs with deterministic semantics—so another lab, another team, or a future you can reproduce results byte-for-byte.
+Q: Where does safety live?
+A: In the type rails (units, domains), caps (reversible only), Δ-lifts (declared & audited), and erasures priced (Landauer log). CQL won’t let you “hand-wave past” a mirror or parity seam.
+🔹 What CQL looks like (three scenes)
+Scene A — Whiteboard (the core verbs)
+• tile — declares a working patch (any domain).
+• view — binds H1..H8 (your octet).
+• mirror — defines the palindromic rest test.
+• cap — single reversible micro-op (≤1 per hot cell).
+• lift — Δ-lift: local rewrite with named identity + proof note.
+• strict — ratchet: tighten bounds only after pass.
+• wrap — emit the tiny bit-receipt for this tile.
+• stitch — parity/glue across tiles; decode and propose minimal flips.
+• ledger — snapshot: code+glue, octet map, thresholds, hashes, receipts.
+• glyphs — declare your meaning-glyph alphabet + stable mapping.
+• safety — redaction fences; unit rails; allowed transforms.
+• commit4 / commit8 — the shaded boxes (4 or 8 bits).
+Rule of thumb: If you can’t express it with these, it’s probably not legal CQE—or it belongs in comments as a hypothesis, not an operation.
+Scene B — Bench (a minimal, runnable spec)
+form "SPARSE_FIELD_DEMO_A" using ConstructionA(p=2, code="Hamming→E8", glue="half-shift") { glyphs { # domain-neutral glyphs; can be emojis, bio tokens, etc. Σ:"sum", 🎯:"target", 🌀:"curl", 🔁:"replay" } tile (x=7, y=12) { view H1: raw(samples) units: "arb" view H2: laplacian(H1) units: "arb" view H3: grad_x(H1) units: "arb" view H4: grad_y(H1) units: "arb" view H5: lowpass(H1, cutoff=0.25Nyq) view H6: bandpass(H1, band=[0.25,0.5]) view H7: fwd(H1) note: "FFT or wavelet" view H8: inv(H7) note: "mirror arm" mirror rest { metric: nrmse(H1, H8) <= 0.03 palindromic: order(H1→H7→H8) == order(H1) # structure-preserving } if mirror FAILS at hotzone( row=3..4, col=5..6 ) { cap CAP#07: orthonorm_edge_modes(reversible=true) assert reversible(CAP#07) } if mirror STILL_FAILS { lift Δ#12: min_curvature_within(tile) proof: "Euler-Lagrange note #A1" strict tighten { nrmse <= 0.025 } } wrap { class4 = orbit_id(n=5, parity="pal+7inv") # e.g., 0b1011 cap4 = cap_code(CAP#07) # e.g., 0b0111 commit4 = bits(H_pass=4 of 8, mirror=pass) # e.g., 0b1101 strict4 = ratchet_level(3) # e.g., 0b0011 info2 = { ΔMI>0, ΔKL<0 } # e.g., 0b10 } } stitch neighborhood=4 { decode: "Golay-24" policy: - prefer flip(class4) over add_cap - never exceed 1 cap per tile on PROPOSED_CHANGES { re-mirror all affected tiles } } safety { units: enforce erasure: forbid # unless explicitly declared below } ledger commit4=0b1011 } 
+What this buys you:
+• Anyone can replay this and get the same wraps and the same stitch plan (or see exactly where they differ).
+• The 4–18 bits/tile are not “mystical”—they’re computed from declared checks.
+Scene C — Terminal (three one-liners you’ll use daily)
+# 1) Run octet+mirror on all tiles, emitting wraps cql run form.cql --phase=wrap --out wraps.cqwrap # 2) Stitch with chosen code; re-mirror changed tiles cql run form.cql --phase=stitch --wraps wraps.cqwrap --out stitched.cqwrap # 3) Freeze ledger row (hashes, receipts, Landauer log) cql ledger stitched.cqwrap --freeze --out master_ledger.yaml 
+🔹 Semantics you can trust (tight, minimal)
+• Determinism: Same inputs → same wraps; all randomness must be seeded in form header.
+• Reversibility default: cap must declare reversible=true; otherwise rejected.
+• Monotone strictness: strict can only tighten after pass; CQL enforces monotonicity.
+• Single-cap rule: At most one cap per hot cell; further attempts force a lift.
+• Parity first: stitch may flip class4, remove cap4, or nudge strict4 within declared policy; every change triggers a local re-mirror.
+• Erasures are priced: Any erase block must state bits, T, and writes a Landauer entry.
+• Units rail: Dimensional mistakes fail fast (you’ll love this after the first save).
+🔹 The type rails (how we keep meaning honest)
+• Domains: OPTICS, THERMAL, POLAR, MATH, BIO, SPIN, EM, etc. (you can add).
+• Units: SI + domain specifics (e.g., W/m², dB, rad, nm, Hz, K).
+• Glyphs: any “universally accepted meaningful expression” allowed; CQL binds them to stable identifiers for hashing (your earlier requirement).
+• Safety fences: redact { ... } blocks mark sensitive formulas—hash stored, content elided.
+🔹 Eight idioms (you’ll copy-paste these forever)
+• View braid: H1→H7→H8 with palindromic check.
+• Hotzone cap: one reversible ortho/renorm at a flagged sub-tile.
+• Δ-lift cookbook: named, local identities (min-curv, bias repaint, kernel identity).
+• Strict ratchet: after pass, shrink bounds (never before).
+• Receipt row: class4|cap4|commit4|strict4|info2.
+• Parity seam decode: flip class first, drop cap second, lift last.
+• Landauer memo: explicit, human-readable erasure log.
+• Glyph label set: field-native symbols (bio/EM/optics) pinned to stable hashes.
+🔹 Worked micro-example (10 lines, whole loop)
+tile(3,5){ view H1: raw; view H7: fwd(H1); view H8: inv(H7) mirror { psnr(H1,H8) >= 35 dB } if FAIL { cap CAP#03: orthonorm_edge } wrap { class4=0b1001; cap4=0b0011; commit4=0b1110; strict4=0b0001; info2=0b10 } } stitch{ decode:"Hamming(8,4)"; policy:[ prefer flip(class4) ] } ledger commit4=0b1110 
+🔹 “Teacher ⇄ Student” walkthrough (quick)
+Student: “Tile (7,12) fails mirror at the edge; I added CAP#07 and wrapped.”
+Teacher: “Good. Now stitch with neighbors.”
+Student: “Decoder proposes flipping neighbor’s class. I applied it, re-mirrored, all green.”
+Teacher: “Freeze the ledger; note no erasures—clean run.”
+🔹 Exercises (to make it yours)
+• Swap the domain: Replace view bodies with optics FFT/iFFT; keep the same mirror and stitch.
+• Strict ladder: Start at nrmse ≤ 0.05, pass twice, then tighten to 0.03. Prove monotonicity.
+• Parity stress: Intentionally mis-class two adjacent tiles; show the decoder’s minimal flip set.
+• Glyph pack: Define a bio glyph set (e.g., codons, helices) and use them as labels; ensure hashes stay stable when you rename visuals.
+🔹 Where this section leaves you
+• A small language that matches the small set of lawful moves.
+• Everything you’ve been doing informally (overlays, mirrors, caps, parity, ledgers) now has first-class syntax with deterministic semantics.
+• You can teach it, lint it, version it, and ship it.
+Next section: The CQE Runtime & Viewers — orchestrators, hot-zone detectors, 8×8 local viewers and 4×4×4×4 surrounds, parity looms, and how the runtime schedules mirror checks and Δ-lifts on real workloads.

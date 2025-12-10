@@ -1,0 +1,353 @@
+{
+  "meta": {
+    "started_at": 1754818420.8309772,
+    "plan": {
+      "steps": [
+        {
+          "name": "legacy:registry",
+          "family": "legacy",
+          "module": "adapters.legacy_auto.agrm_cmplx.registry",
+          "func": "list_legacy",
+          "kwargs": {
+            "slug": "agrm-cmplx",
+            "root": "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx",
+            "_est_wall_ms": 0.0
+          },
+          "priority": 5
+        },
+        {
+          "name": "legacy:hash:verify",
+          "family": "legacy.hash",
+          "module": "adapters.legacy_auto.agrm_cmplx.hash_adapters",
+          "func": "verify_vectors",
+          "kwargs": {
+            "module": "legacy_agrm_cmplx_agrm_module",
+            "func": "fnv1a64",
+            "_est_wall_ms": 0.0
+          },
+          "priority": 10
+        },
+        {
+          "name": "e8:encoder:demo",
+          "family": "encode",
+          "module": "lattice_ai.tests.encoder_demo",
+          "func": "demo",
+          "priority": 12
+        },
+        {
+          "name": "snap:demo",
+          "family": "snap",
+          "module": "lattice_ai.tests.snap_demo",
+          "func": "demo",
+          "priority": 14
+        },
+        {
+          "name": "microflow:demo",
+          "family": "micro",
+          "module": "lattice_ai.pipeline.microflow",
+          "func": "microflow_demo",
+          "kwargs": {
+            "seed": 8,
+            "n_items": 256,
+            "alpha": 1.0,
+            "beta": 0.25,
+            "_est_wall_ms": 0.0
+          },
+          "priority": 15
+        },
+        {
+          "name": "golden:recall_latency",
+          "family": "eval",
+          "module": "lattice_ai.tests.goldens_recall_latency",
+          "func": "eval_recall_latency",
+          "kwargs": {
+            "K": 10,
+            "seed": 99,
+            "house_mod": 257,
+            "_est_wall_ms": 0.0
+          },
+          "priority": 25
+        },
+        {
+          "name": "golden:grid",
+          "family": "eval",
+          "module": "lattice_ai.tests.golden_grid",
+          "func": "run_grid",
+          "priority": 26
+        },
+        {
+          "name": "dim:probe",
+          "family": "dim3d",
+          "module": "src.testlib_plus.agents.dim_probe",
+          "func": "proj3d_quality",
+          "kwargs": {
+            "n": 200,
+            "seed": 9,
+            "_est_wall_ms": 0.0
+          },
+          "priority": 30
+        }
+      ]
+    },
+    "ended_at": 1754818421.6103787,
+    "elapsed_s": 0.7794015407562256
+  },
+  "queue_records": [
+    {
+      "name": "legacy:registry",
+      "family": "legacy",
+      "module": "adapters.legacy_auto.agrm_cmplx.registry",
+      "func": "list_legacy",
+      "priority": 5,
+      "status": "ok",
+      "duration_ms": 3.7052140000923828,
+      "error": null
+    },
+    {
+      "name": "legacy:hash:verify",
+      "family": "legacy.hash",
+      "module": "adapters.legacy_auto.agrm_cmplx.hash_adapters",
+      "func": "verify_vectors",
+      "priority": 10,
+      "status": "ok",
+      "duration_ms": 1.0497700000087207,
+      "error": null
+    },
+    {
+      "name": "e8:encoder:demo",
+      "family": "encode",
+      "module": "lattice_ai.tests.encoder_demo",
+      "func": "demo",
+      "priority": 12,
+      "status": "error",
+      "duration_ms": 633.1127050000305,
+      "error": {
+        "type": "IndexError",
+        "msg": "tuple index out of range",
+        "trace": "Traceback (most recent call last):\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 45, in run\n    fn=self._import_callable(op.module, op.func)\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 31, in _import_callable\n    m=importlib.import_module(module); return getattr(m, func)\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/mnt/data/e8_repo/lattice_ai/tests/encoder_demo.py\", line 4, in <module>\n    from lattice_ai.encode.e8_lattice import E8LatticeEncoder\n  File \"/mnt/data/e8_repo/lattice_ai/encode/e8_lattice.py\", line 47, in <module>\n    _E8_ROOTS = _gen_e8_roots()\n                ^^^^^^^^^^^^^^^\n  File \"/mnt/data/e8_repo/lattice_ai/encode/e8_lattice.py\", line 22, in _gen_e8_roots\n    s = [signs[i] if v[i] != 0.0 else 1.0 for i in range(8)]\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/data/e8_repo/lattice_ai/encode/e8_lattice.py\", line 22, in <listcomp>\n    s = [signs[i] if v[i] != 0.0 else 1.0 for i in range(8)]\n         ~~~~~^^^\nIndexError: tuple index out of range\n"
+      }
+    },
+    {
+      "name": "snap:demo",
+      "family": "snap",
+      "module": "lattice_ai.tests.snap_demo",
+      "func": "demo",
+      "priority": 14,
+      "status": "ok",
+      "duration_ms": 3.2829149999997753,
+      "error": null
+    },
+    {
+      "name": "microflow:demo",
+      "family": "micro",
+      "module": "lattice_ai.pipeline.microflow",
+      "func": "microflow_demo",
+      "priority": 15,
+      "status": "error",
+      "duration_ms": 39.58696100016823,
+      "error": {
+        "type": "IndexError",
+        "msg": "tuple index out of range",
+        "trace": "Traceback (most recent call last):\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 45, in run\n    fn=self._import_callable(op.module, op.func)\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 31, in _import_callable\n    m=importlib.import_module(module); return getattr(m, func)\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/mnt/data/e8_repo/lattice_ai/pipeline/microflow.py\", line 6, in <module>\n    from lattice_ai.encode.e8_lattice import _geodesic_proxy\n  File \"/mnt/data/e8_repo/lattice_ai/encode/e8_lattice.py\", line 47, in <module>\n    _E8_ROOTS = _gen_e8_roots()\n                ^^^^^^^^^^^^^^^\n  File \"/mnt/data/e8_repo/lattice_ai/encode/e8_lattice.py\", line 22, in _gen_e8_roots\n    s = [signs[i] if v[i] != 0.0 else 1.0 for i in range(8)]\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/data/e8_repo/lattice_ai/encode/e8_lattice.py\", line 22, in <listcomp>\n    s = [signs[i] if v[i] != 0.0 else 1.0 for i in range(8)]\n         ~~~~~^^^\nIndexError: tuple index out of range\n"
+      }
+    },
+    {
+      "name": "golden:recall_latency",
+      "family": "eval",
+      "module": "lattice_ai.tests.goldens_recall_latency",
+      "func": "eval_recall_latency",
+      "priority": 25,
+      "status": "error",
+      "duration_ms": 13.794984000014665,
+      "error": {
+        "type": "IndexError",
+        "msg": "tuple index out of range",
+        "trace": "Traceback (most recent call last):\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 45, in run\n    fn=self._import_callable(op.module, op.func)\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 31, in _import_callable\n    m=importlib.import_module(module); return getattr(m, func)\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/mnt/data/e8_repo/lattice_ai/tests/goldens_recall_latency.py\", line 6, in <module>\n    from lattice_ai.encode.e8_lattice import E8LatticeEncoder\n  File \"/mnt/data/e8_repo/lattice_ai/encode/e8_lattice.py\", line 47, in <module>\n    _E8_ROOTS = _gen_e8_roots()\n                ^^^^^^^^^^^^^^^\n  File \"/mnt/data/e8_repo/lattice_ai/encode/e8_lattice.py\", line 22, in _gen_e8_roots\n    s = [signs[i] if v[i] != 0.0 else 1.0 for i in range(8)]\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/data/e8_repo/lattice_ai/encode/e8_lattice.py\", line 22, in <listcomp>\n    s = [signs[i] if v[i] != 0.0 else 1.0 for i in range(8)]\n         ~~~~~^^^\nIndexError: tuple index out of range\n"
+      }
+    },
+    {
+      "name": "golden:grid",
+      "family": "eval",
+      "module": "lattice_ai.tests.golden_grid",
+      "func": "run_grid",
+      "priority": 26,
+      "status": "error",
+      "duration_ms": 81.80706500002088,
+      "error": {
+        "type": "IndexError",
+        "msg": "tuple index out of range",
+        "trace": "Traceback (most recent call last):\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 45, in run\n    fn=self._import_callable(op.module, op.func)\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 31, in _import_callable\n    m=importlib.import_module(module); return getattr(m, func)\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/mnt/data/e8_repo/lattice_ai/tests/golden_grid.py\", line 5, in <module>\n    from lattice_ai.tests.goldens_recall_latency import synth_corpus, _cosine\n  File \"/mnt/data/e8_repo/lattice_ai/tests/goldens_recall_latency.py\", line 6, in <module>\n    from lattice_ai.encode.e8_lattice import E8LatticeEncoder\n  File \"/mnt/data/e8_repo/lattice_ai/encode/e8_lattice.py\", line 47, in <module>\n    _E8_ROOTS = _gen_e8_roots()\n                ^^^^^^^^^^^^^^^\n  File \"/mnt/data/e8_repo/lattice_ai/encode/e8_lattice.py\", line 22, in _gen_e8_roots\n    s = [signs[i] if v[i] != 0.0 else 1.0 for i in range(8)]\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/data/e8_repo/lattice_ai/encode/e8_lattice.py\", line 22, in <listcomp>\n    s = [signs[i] if v[i] != 0.0 else 1.0 for i in range(8)]\n         ~~~~~^^^\nIndexError: tuple index out of range\n"
+      }
+    },
+    {
+      "name": "dim:probe",
+      "family": "dim3d",
+      "module": "src.testlib_plus.agents.dim_probe",
+      "func": "proj3d_quality",
+      "priority": 30,
+      "status": "ok",
+      "duration_ms": 2.830207999977574,
+      "error": null
+    }
+  ],
+  "sap_events": [
+    {
+      "family": "legacy",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 3.7052140000923828
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "legacy.hash",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 1.0497700000087207
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "encode",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 633.1127050000305
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "snap",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 3.2829149999997753
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "micro",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 39.58696100016823
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "eval",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 13.794984000014665
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "eval",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 81.80706500002088
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "dim3d",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 2.830207999977574
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "op": "legacy:registry",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "legacy:hash:verify",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "snap:demo",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "dim:probe",
+      "optimization_points": [],
+      "weak_spots": []
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+Doc P — IRL Systems Mapped to Our Process (2024–2025 Sources)
+Purpose: Connect real‑world (IRL) systems and standards to each part of our CSV‑first framework, emphasizing recent 2024–2025 references. Each section explains the trend, how it maps to our process, and links to representative sources. (Links are provided for convenience; the canvas omits formal citations.)
+P1. Provenance & Tamper‑Evidence
+Trend: Wide adoption of Content Credentials (C2PA) and transparency logs for artifact provenance.
+Mapping → Our Process
+• Doc I Evidence Layer: Quote→span anchoring ≈ capture‑time provenance; EVIDENCE_LINKS.csv ≈ attached credentials.
+• Doc I Ledgers & Merkle: Rolling hashes + optional Merkle ≈ tamper‑evident chains (append‑only logs).
+• Doc L Audits: Packet audits parallel transparency log consistency proofs.
+Recent Sources (2024–2025)
+• Adobe Summit 2024 enterprise rollout of Content Credentials (C2PA): https://blog.adobe.com/en/publish/2024/03/26/adobe-summit-2024-expanding-access-content-credentials-enterprises-brands-consumers
+• Cloudflare integrates Content Credentials across CDN (2025): https://www.theverge.com/news/604989/cloudflare-adobe-content-credentials-authenticty-feature
+• Pixel 10 adds camera‑level Content Credentials (2025): https://www.androidcentral.com/phones/tech-talk-what-are-content-credentials
+• CAI milestone & 2025 ecosystem updates: https://contentauthenticity.org/blog/5000-members-building-momentum-for-a-more-trustworthy-digital-world
+Transparency Logs (software/ML)
+• Sigstore Rekor consistency monitoring (2024): https://blog.sigstore.dev/using-rekor-monitor/
+• Verifying releases via Rekor (docs): https://docs.sigstore.dev/logging/verify-release/
+• Rekor v2 alpha (2025): https://blog.sigstore.dev/rekor-v2-alpha/
+• Model signing & transparency for ML (2025): https://next.redhat.com/2025/04/10/model-authenticity-and-transparency-with-sigstore/
+P2. AI Governance & Risk Management
+Trend: Formal AI management standards and risk frameworks updated with generative AI profiles.
+Mapping → Our Process
+• Doc D Contracts: PromotionContracts align with governance artifacts (decision records, thresholds).
+• Doc J A/B & KPIs: Quantifies benefit; mirrors risk→measure→manage loops.
+• Doc L Change Control: Freeze windows, manifests, rollbacks ↔ standard ISMS/AIMS practices.
+Recent Sources (2024–2025)
+• ISO/IEC 42001 (AI Management System standard page): https://www.iso.org/standard/42001
+• NIST AI RMF GenAI Profile (AI 600‑1, 2024): https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence
+• NIST AI RMF Playbook (updated Feb 2025): https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook
+• NIST crosswalks to ISO 42001 and others (updated through 2025): https://airc.nist.gov/airmf-resources/crosswalks/
+P3. Data Versioning, Lineage & Time Travel
+Trend: Lakehouse formats and object‑store VCS provide reproducible table snapshots and catalog commits.
+Mapping → Our Process
+• Doc I Ledgers/Merkle and Doc L Snapshots ≈ Delta/Iceberg histories; Master/Orbit ≈ branches (promote vs working).
+• Doc H LAEC budgets + Doc G bridges ≈ optimized commit grouping and fast‑forward merges.
+Recent Sources (2024–2025)
+• Iceberg metadata internals (Aug 2024): https://medium.com/data-engineering-with-dremio/understanding-apache-icebergs-metadata-json-file-0cbbce193737
+• Querying Iceberg metadata tables for auditing (2024): https://www.dremio.com/blog/apache-iceberg-metadata-tables/
+• Nessie vs Iceberg vs lakeFS versioning (2024): https://www.dremio.com/blog/data-lakehouse-versioning-comparison-nessie-apache-iceberg-lakefs/
+• Data versioning with lakeFS in OpenShift AI (Jan 2025): https://www.redhat.com/en/blog/data-versioning-red-hat-openshift-ai-lakefs
+P4. Observability & Tracing for LLM/Agents
+Trend: OpenTelemetry conventions and LLM observability stacks normalize tracing, metrics, and logs.
+Mapping → Our Process
+• Doc K Prompt‑Cursor and Doc I Ledgers ↔ end‑to‑end traces and spans.
+• Doc J Dashboards ↔ LLM metrics (latency, tokens, costs, errors) and regression detection.
+Recent Sources (2024–2025)
+• OTel + Grafana: LLM observability (Jul 2024): https://grafana.com/blog/2024/07/18/a-complete-guide-to-llm-observability-with-opentelemetry-and-grafana-cloud/
+• OTel blog: AI Agent Observability and GenAI SIG (Mar 2025): https://opentelemetry.io/blog/2025/ai-agent-observability/
+• Uptrace primer on AI agent observability (2025): https://uptrace.dev/blog/ai-agent-observability
+P5. Why These IRL Trends Matter for Us
+• Convergence: Independent ecosystems (provenance, versioning, observability, governance) are converging on append‑only histories, signed evidence, and reproducible states — exactly the pillars of Docs I/L/J.
+• Interoperability: Using standard hashes, Merkle roots, and cross‑walkable governance artifacts lets our CSVs integrate with third‑party audit stacks.
+• Future‑proofing: As OTel GenAI conventions and C2PA expand, our glyphs/ledgers can export minimal views without schema loss.
+P6. Mini Mapping Table
+IRL System/StandardOur ArtifactBenefitC2PA Content CredentialsEVIDENCE_LINKS.csv + quote_excerpt spansVerifiable provenance for claimsSigstore RekorLEDGER_WINDOWS.csv / MerkleTamper‑evidence, inclusion proofsIceberg/Nessie/lakeFSMaster/Orbit + ManifestsTime‑travel, branch‑like workflowsNIST AI RMF / ISO 42001Contracts / RunbooksRisk governance, change controlOpenTelemetry (LLM/Agents)Prompt‑cursor recall + LedgersDeterministic recall, traceable runs 
+End Doc P — Real‑world systems show a broad shift toward evidence, lineage, and determinism. Our CSV‑first framework slots directly into that landscape with minimal adapters.

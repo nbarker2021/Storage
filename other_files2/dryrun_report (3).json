@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "started_at": 1754817231.6253355,
+    "plan": {
+      "steps": [
+        {
+          "name": "legacy:registry",
+          "family": "legacy",
+          "module": "adapters.legacy_auto.agrm_cmplx.registry",
+          "func": "list_legacy",
+          "kwargs": {
+            "slug": "agrm-cmplx",
+            "root": "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx",
+            "_est_wall_ms": 0.0
+          },
+          "priority": 5
+        },
+        {
+          "name": "legacy:hash:verify",
+          "family": "legacy.hash",
+          "module": "adapters.legacy_auto.agrm_cmplx.hash_adapters",
+          "func": "verify_vectors",
+          "kwargs": {
+            "module": "legacy_agrm_cmplx_agrm_module",
+            "func": "fnv1a64",
+            "_est_wall_ms": 0.0
+          },
+          "priority": 10
+        },
+        {
+          "name": "microflow:demo",
+          "family": "micro",
+          "module": "lattice_ai.pipeline.microflow",
+          "func": "microflow_demo",
+          "kwargs": {
+            "seed": 8,
+            "n_items": 256,
+            "_est_wall_ms": 0.0
+          },
+          "priority": 15
+        },
+        {
+          "name": "dim:probe",
+          "family": "dim3d",
+          "module": "src.testlib_plus.agents.dim_probe",
+          "func": "proj3d_quality",
+          "kwargs": {
+            "n": 200,
+            "seed": 9,
+            "_est_wall_ms": 0.0
+          },
+          "priority": 20
+        }
+      ]
+    },
+    "ended_at": 1754817232.411417,
+    "elapsed_s": 0.7860815525054932
+  },
+  "queue_records": [
+    {
+      "name": "legacy:registry",
+      "family": "legacy",
+      "module": "adapters.legacy_auto.agrm_cmplx.registry",
+      "func": "list_legacy",
+      "priority": 5,
+      "status": "ok",
+      "duration_ms": 7.185802999970292,
+      "error": null
+    },
+    {
+      "name": "legacy:hash:verify",
+      "family": "legacy.hash",
+      "module": "adapters.legacy_auto.agrm_cmplx.hash_adapters",
+      "func": "verify_vectors",
+      "priority": 10,
+      "status": "ok",
+      "duration_ms": 2.657380999949055,
+      "error": null
+    },
+    {
+      "name": "microflow:demo",
+      "family": "micro",
+      "module": "lattice_ai.pipeline.microflow",
+      "func": "microflow_demo",
+      "priority": 15,
+      "status": "ok",
+      "duration_ms": 773.5350309999376,
+      "error": null
+    },
+    {
+      "name": "dim:probe",
+      "family": "dim3d",
+      "module": "src.testlib_plus.agents.dim_probe",
+      "func": "proj3d_quality",
+      "priority": 20,
+      "status": "ok",
+      "duration_ms": 2.575576000026558,
+      "error": null
+    }
+  ],
+  "sap_events": [
+    {
+      "family": "legacy",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 7.185802999970292
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "legacy.hash",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 2.657380999949055
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "micro",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 773.5350309999376
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "dim3d",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 2.575576000026558
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "op": "legacy:registry",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "legacy:hash:verify",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "microflow:demo",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "dim:probe",
+      "optimization_points": [],
+      "weak_spots": []
+    }
+  ]
+}

@@ -1,0 +1,562 @@
+{
+  "meta": {
+    "started_at": 1754820112.1325002,
+    "plan": {
+      "steps": [
+        {
+          "name": "legacy:registry",
+          "family": "legacy",
+          "module": "adapters.legacy_auto.agrm_cmplx.registry",
+          "func": "list_legacy",
+          "kwargs": {
+            "slug": "agrm-cmplx",
+            "root": "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx",
+            "_est_wall_ms": 0.0
+          },
+          "priority": 5
+        },
+        {
+          "name": "legacy:hash:verify",
+          "family": "legacy.hash",
+          "module": "adapters.legacy_auto.agrm_cmplx.hash_adapters",
+          "func": "verify_vectors",
+          "kwargs": {
+            "module": "legacy_agrm_cmplx_agrm_module",
+            "func": "fnv1a64",
+            "_est_wall_ms": 0.0
+          },
+          "priority": 10
+        },
+        {
+          "name": "e8:encoder:demo",
+          "family": "encode",
+          "module": "lattice_ai.tests.encoder_demo",
+          "func": "demo",
+          "priority": 12
+        },
+        {
+          "name": "snap:demo",
+          "family": "snap",
+          "module": "lattice_ai.tests.snap_demo",
+          "func": "demo",
+          "priority": 14
+        },
+        {
+          "name": "sweep:alpha_beta",
+          "family": "eval",
+          "module": "lattice_ai.tests.sweeps",
+          "func": "alpha_beta_sweep",
+          "priority": 15
+        },
+        {
+          "name": "microflow:demo",
+          "family": "micro",
+          "module": "lattice_ai.pipeline.microflow",
+          "func": "microflow_demo",
+          "kwargs": {
+            "seed": 8,
+            "n_items": 256,
+            "alpha": 0.8,
+            "beta": 0.4,
+            "_est_wall_ms": 0.0
+          },
+          "priority": 16,
+          "policy_id": "policy:micro"
+        },
+        {
+          "name": "snap:save:baseline",
+          "family": "snap",
+          "module": "lattice_ai.tests.snap_demo",
+          "func": "save_baseline",
+          "priority": 17
+        },
+        {
+          "name": "snaphash:edge",
+          "family": "snaphash",
+          "module": "lattice_ai.tests.edge_runner",
+          "func": "run",
+          "priority": 18
+        },
+        {
+          "name": "snaphash:matrix",
+          "family": "snaphash",
+          "module": "lattice_ai.tests.edge_matrix",
+          "func": "matrix",
+          "priority": 19
+        },
+        {
+          "name": "snaphash:shells\u2192governance",
+          "family": "snaphash",
+          "module": "lattice_ai.tests.edge_shells_gov",
+          "func": "run",
+          "priority": 20
+        },
+        {
+          "name": "golden:recall_latency",
+          "family": "eval",
+          "module": "lattice_ai.tests.goldens_recall_latency",
+          "func": "eval_recall_latency",
+          "kwargs": {
+            "K": 10,
+            "seed": 99,
+            "house_mod": 257,
+            "_est_wall_ms": 0.0
+          },
+          "priority": 25
+        },
+        {
+          "name": "golden:grid",
+          "family": "eval",
+          "module": "lattice_ai.tests.golden_grid",
+          "func": "run_grid",
+          "priority": 26
+        },
+        {
+          "name": "dim:probe",
+          "family": "dim3d",
+          "module": "src.testlib_plus.agents.dim_probe",
+          "func": "proj3d_quality",
+          "kwargs": {
+            "n": 200,
+            "seed": 9,
+            "_est_wall_ms": 0.0
+          },
+          "priority": 30
+        }
+      ]
+    },
+    "ended_at": 1754820113.9088907,
+    "elapsed_s": 1.776390552520752
+  },
+  "queue_records": [
+    {
+      "name": "legacy:registry",
+      "family": "legacy",
+      "module": "adapters.legacy_auto.agrm_cmplx.registry",
+      "func": "list_legacy",
+      "priority": 5,
+      "status": "ok",
+      "duration_ms": 6.135800999800267,
+      "error": null
+    },
+    {
+      "name": "legacy:hash:verify",
+      "family": "legacy.hash",
+      "module": "adapters.legacy_auto.agrm_cmplx.hash_adapters",
+      "func": "verify_vectors",
+      "priority": 10,
+      "status": "ok",
+      "duration_ms": 0.8202369999708026,
+      "error": null
+    },
+    {
+      "name": "e8:encoder:demo",
+      "family": "encode",
+      "module": "lattice_ai.tests.encoder_demo",
+      "func": "demo",
+      "priority": 12,
+      "status": "ok",
+      "duration_ms": 998.1744140000046,
+      "error": null
+    },
+    {
+      "name": "snap:demo",
+      "family": "snap",
+      "module": "lattice_ai.tests.snap_demo",
+      "func": "demo",
+      "priority": 14,
+      "status": "error",
+      "duration_ms": 3.527359000145225,
+      "error": {
+        "type": "SyntaxError",
+        "msg": "from __future__ imports must occur at the beginning of the file (snap_demo.py, line 14)",
+        "trace": "Traceback (most recent call last):\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 45, in run\n    fn=self._import_callable(op.module, op.func)\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 31, in _import_callable\n    m=importlib.import_module(module); return getattr(m, func)\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 936, in exec_module\n  File \"<frozen importlib._bootstrap_external>\", line 1074, in get_code\n  File \"<frozen importlib._bootstrap_external>\", line 1004, in source_to_code\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/mnt/data/e8_repo/lattice_ai/tests/snap_demo.py\", line 14\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n"
+      }
+    },
+    {
+      "name": "sweep:alpha_beta",
+      "family": "eval",
+      "module": "lattice_ai.tests.sweeps",
+      "func": "alpha_beta_sweep",
+      "priority": 15,
+      "status": "ok",
+      "duration_ms": 15.368798000054085,
+      "error": null
+    },
+    {
+      "name": "microflow:demo",
+      "family": "micro",
+      "module": "lattice_ai.pipeline.microflow",
+      "func": "microflow_demo",
+      "priority": 16,
+      "status": "ok",
+      "duration_ms": 3.546350999840797,
+      "error": null
+    },
+    {
+      "name": "snap:save:baseline",
+      "family": "snap",
+      "module": "lattice_ai.tests.snap_demo",
+      "func": "save_baseline",
+      "priority": 17,
+      "status": "error",
+      "duration_ms": 2.2260880000430916,
+      "error": {
+        "type": "SyntaxError",
+        "msg": "from __future__ imports must occur at the beginning of the file (snap_demo.py, line 14)",
+        "trace": "Traceback (most recent call last):\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 45, in run\n    fn=self._import_callable(op.module, op.func)\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 31, in _import_callable\n    m=importlib.import_module(module); return getattr(m, func)\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 936, in exec_module\n  File \"<frozen importlib._bootstrap_external>\", line 1074, in get_code\n  File \"<frozen importlib._bootstrap_external>\", line 1004, in source_to_code\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/mnt/data/e8_repo/lattice_ai/tests/snap_demo.py\", line 14\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n"
+      }
+    },
+    {
+      "name": "snaphash:edge",
+      "family": "snaphash",
+      "module": "lattice_ai.tests.edge_runner",
+      "func": "run",
+      "priority": 18,
+      "status": "ok",
+      "duration_ms": 162.71532100017794,
+      "error": null
+    },
+    {
+      "name": "snaphash:matrix",
+      "family": "snaphash",
+      "module": "lattice_ai.tests.edge_matrix",
+      "func": "matrix",
+      "priority": 19,
+      "status": "ok",
+      "duration_ms": 287.7083740004309,
+      "error": null
+    },
+    {
+      "name": "snaphash:shells\u2192governance",
+      "family": "snaphash",
+      "module": "lattice_ai.tests.edge_shells_gov",
+      "func": "run",
+      "priority": 20,
+      "status": "ok",
+      "duration_ms": 79.01273100014805,
+      "error": null
+    },
+    {
+      "name": "golden:recall_latency",
+      "family": "eval",
+      "module": "lattice_ai.tests.goldens_recall_latency",
+      "func": "eval_recall_latency",
+      "priority": 25,
+      "status": "ok",
+      "duration_ms": 77.64841800008071,
+      "error": null
+    },
+    {
+      "name": "golden:grid",
+      "family": "eval",
+      "module": "lattice_ai.tests.golden_grid",
+      "func": "run_grid",
+      "priority": 26,
+      "status": "ok",
+      "duration_ms": 128.32175399989865,
+      "error": null
+    },
+    {
+      "name": "dim:probe",
+      "family": "dim3d",
+      "module": "src.testlib_plus.agents.dim_probe",
+      "func": "proj3d_quality",
+      "priority": 30,
+      "status": "ok",
+      "duration_ms": 10.713883000335045,
+      "error": null
+    }
+  ],
+  "sap_events": [
+    {
+      "family": "legacy",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 6.135800999800267
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "legacy.hash",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 0.8202369999708026
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "encode",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "coxeter_span_proxy": 5
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "snap",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 3.527359000145225
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "eval",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 15.368798000054085
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "micro",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:micro",
+        "reasons": [],
+        "metrics": {
+          "cand_count": 16,
+          "score_mean": 0.23400291800498962,
+          "gdist_mean": 0.6479116082191467,
+          "gdist_max": 0.6590313911437988
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:micro"
+        }
+      }
+    },
+    {
+      "family": "snap",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 2.2260880000430916
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "snaphash",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 162.71532100017794
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "snaphash",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 287.7083740004309
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "snaphash",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 79.01273100014805
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "eval",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 77.64841800008071
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "eval",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 128.32175399989865
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "dim3d",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_dur_ms": 10.713883000335045
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "op": "legacy:registry",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "legacy:hash:verify",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "e8:encoder:demo",
+      "optimization_points": [
+        "Hook real E8 geodesic distances and Coxeter coordinates into meta",
+        "Cache root picks per hash to avoid recomputation under high QPS"
+      ],
+      "weak_spots": []
+    },
+    {
+      "op": "sweep:alpha_beta",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "microflow:demo",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "snaphash:edge",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "snaphash:matrix",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "snaphash:shells\u2192governance",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "golden:recall_latency",
+      "optimization_points": [
+        "Try bits=24 and house_mod\u22481021",
+        "Consider \u03b1/\u03b2 blending when geodesic is ready"
+      ],
+      "weak_spots": [
+        "No learned Tier-2 yet; using legacy hash backend, may be uncorrelated with semantics"
+      ]
+    },
+    {
+      "op": "golden:grid",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "dim:probe",
+      "optimization_points": [],
+      "weak_spots": []
+    }
+  ]
+}

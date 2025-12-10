@@ -1,0 +1,7 @@
+{
+  "returncode": 0,
+  "stdout_tail": "{\n  \"records\": 6,\n  \"caps\": {}\n}\n",
+  "stderr_tail": "",
+  "report_exists": true,
+  "report_path": "/mnt/data/n7-stage/dryrun_report.json"
+}

@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-04-04T16:42:56.148657",
+  "version": "v1.0-test",
+  "cli_entrypoint": "cli/bootstrap_sync.py",
+  "included_tools": [
+    "cli/run.py",
+    "cli/agent_debug.py",
+    "cli/patch_runner.py",
+    "cli/guide_tools.py",
+    "cli/freeze_ops.py",
+    "cli/rac_manager.py",
+    "cli/context_indexer.py",
+    "cli/snapshot_tools.py"
+  ],
+  "reflexes_generated": [
+    "rac_doc_0"
+  ],
+  "guides_outlined": [
+    "best_of_handbook.md",
+    "failures_and_speedbumps.md",
+    "building_a_brain_to_guide_emergence_safely.md"
+  ],
+  "snapshots_staged": [
+    "CMPLX_snapshot_2025-04-04_v1.0.json"
+  ],
+  "notes": "This is a test delivery of all CLI-accessible system modules and reflexive memory components as of initial system bootstrapping. Output is not final and used for manual review only."
+}

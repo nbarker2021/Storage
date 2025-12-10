@@ -1,0 +1,109 @@
+Doc J — A/B Evaluation & KPIs (Native vs Framework, Metrics, Scoreboards)
+Purpose: Define a deterministic A/B harness to compare the CSV‑first Framework pipeline to a Native (non‑framework) baseline. This chapter specifies the experiment design, task suites, metrics, CSV scoreboards, validators, confidence procedures, and dashboards. Results are reproducible from CSVs alone.
+J1. Evaluation Overview
+• A/B #1 (Native vs Framework): Same inputs, two pipelines. Framework uses Docs A–I gates (DFSS, Buffer, Contracts, etc.). Native uses minimal RAG with no legality gates (simulated through post‑hoc cards).
+• A/B #0 (Framework vs Doc‑Compliant Framework): Sanity check that the implemented runtime honors Docs A–I (schema/FK/gates).
+• Outcome Artifacts: df_eval_scores.csv, df_eval_unlocks.csv, df_eval_global.csv, df_watchers.csv, plus packet‑level ledgers for audit.
+J2. Task Suite & Splits
+J2.1 Task Types
+• Extraction (claim→quote, primitive cataloging)
+• Alignment (span mapping; IRL law linkage)
+• Structuring (shell/bucket/octet legality)
+• Reasoning/Policy (DFSS/AltDFSS choice; controller/operator selection)
+• Promotion (contract validity; budget)
+J2.2 Dataset Splits (deterministic)
+• Stratified Sampling by doc type and shell coverage.
+• Seeds & Shuffles recorded in eval_config.yml and df_eval_global.csv.
+• Cross‑validation optional: k‑fold with fixed k and fold map CSV.
+Artifact — eval_config.yml (excerpt)
+splits: seed: 1729 kfold: 5 stratify_by: [doc_type, shell_coverage] 
+J3. Baselines (A vs B)
+J3.1 Native (A)
+• RAG claim extraction only; no DFSS, Buffer Gate, SOI, octet legality, or PromotionContracts.
+• Post‑hoc: compute geometry/octadic features from outputs (for fairness) but they don’t affect decisions.
+J3.2 Framework (B)
+• Full Docs A–I pipeline: legality gates, DFSS/AltDFSS, Buffer/SOI, PromotionContracts, budgets, ledgers.
+Control knobs: keep tokenizer, chunking, and quote alignment identical across A & B.
+J4. Metrics (definitions & formulas)
+J4.1 Core per‑task metrics
+• Faithfulness (f): #claims_with_evidence / #claims (meaning cards only).
+• Coverage (v): |TopK_primitives ∩ Claimed_primitives| / |TopK_primitives| (TopK per doc by freq×weight).
+• Traceability (τ): % cards with (glyph_id + span + contract_hash if Master).
+• Stability (σ): 1 − norm(contradictions + parity_fails + octet_unclean).
+• Cost (k): normalized (chars_processed + α·#cards); α in eval_config.yml.
+• LAEC (ℓ): 1 − min(1, LAEC/Lmax) (higher is better, less cost).
+• Bit‑use (u): % enabled BW‑32 bits used (utilization of window slots).
+• Buffer penalty (b): normalized count of Buffer floor violations.
+Composite E (task)
+E = w_f*f + w_v*v + w_τ*τ + w_σ*σ + w_ℓ*ℓ - w_k*k - w_b*b 
+Weights set in eval_config.yml.
+J4.2 Corpus‑level metrics
+• ΔE: E_B − E_A averaged over tasks/documents with 95% CIs.
+• PFI (Possibility Frontier Index): fraction of tasks completed by B where A failed legality/promotion.
+• Unlocks: count of formerly blocked tasks that pass under B with contracts.
+• Integrity η: packet audits passed / total packets.
+J5. CSV Scoreboards
+J5.1 df_eval_scores.csv (per task/doc)
+run_id,doc_id,task_id,split,system,faithfulness,coverage,traceability,stability,cost,laec,bit_use,buffer_penalty,E 
+• system ∈ {A_native,B_framework}.
+J5.2 df_eval_unlocks.csv (per task)
+run_id,task_id,unlocked,reason,contract_id,watchers_passed,windows_used 
+• unlocked=true when B completes a task that A fails; must cite contract_id.
+J5.3 df_eval_global.csv (aggregates)
+run_id,split,mean_E_native,mean_E_framework,delta_E,PFI,integrity_eta,ci_low,ci_high,seed 
+J6. Validators (evaluation integrity)
+• Task parity: Same inputs (chunks, tokens, laws) for A and B.
+• Metric recompute: Recomputing f, v, τ, σ, k, ℓ, u, b from raw CSVs matches logged values.
+• Unlock legitimacy: Every unlocked task references a valid contract and passes all gates (Docs D–H, I for evidence).
+• CI correctness: Confidence intervals stable with fixed bootstrapping seeds.
+• No leakage: Test splits disjoint; cross‑fold contamination rejected.
+J7. Confidence Procedures (deterministic)
+• Bootstrap (default): B=1,000 resamples with seed in eval_config.yml; percentile CI 95%.
+• Permutation test (optional): swap A/B labels per doc; p‑value for ΔE; seed fixed.
+• Benjamini–Hochberg correction across multi‑task families if reporting per‑task significance.
+Artifact — eval_ci.csv
+run_id,metric,ci_low,ci_high,method,B,seed 
+J8. Dashboards (CSV‑only views)
+• Task heatmap: pivot of E by (doc_id × task_id) for A and B; color by ΔE.
+• Unlock ledger: table of unlocked tasks with links to contracts and buffer events.
+• Integrity panel: packet audits, Buffer floor incidents, contradictions.
+(Optional CSVs: E_TASK_PIVOT.csv, UNLOCK_LEDGER.csv, INTEGRITY_PANEL.csv.)
+J9. Procedure (A/B harness)
+• Freeze config (eval_config.yml): seeds, weights, thresholds.
+• Prepare splits: create fold map CSV; record in df_eval_global.csv.
+• Run Native (A): produce claims; post‑hoc geometry/octadic; compute metrics.
+• Run Framework (B): full pipeline; compute metrics.
+• Assemble scoreboards: write df_eval_scores.csv, df_eval_unlocks.csv, df_eval_global.csv.
+• Compute CIs & tests: write eval_ci.csv.
+• Audit unlocks: verify contracts and gates; update UNLOCK_LEDGER.csv.
+• Publish summary: update dashboards; archive manifests and ops.
+J10. Example Rows
+df_eval_scores.csv
+r1,docA,align_01,fold1,A_native,0.62,0.55,0.74,0.61,0.37,0.82,0.64,0.00,0.544 r1,docA,align_01,fold1,B_framework,0.88,0.68,0.94,0.79,0.40,0.91,0.72,0.00,0.742 
+df_eval_unlocks.csv
+r1,align_01,true,"contractual evidence satisfied; octet legal",pc:4910…,{"symmetry":true,"five_to_eight":true,"regression":true},2 
+df_eval_global.csv
+r1,fold1,0.566,0.731,0.165,0.41,0.97,0.11,0.22,1729 
+J11. KPIs & Targets (tunable)
+• ΔE target: ≥ +0.10 absolute over Native.
+• PFI target: ≥ 0.30 (30% of tasks unlocked by Framework).
+• Integrity η: ≥ 0.95 packet audits pass.
+• Faithfulness f: ≥ 0.85 on promoted Master rows.
+• Traceability τ: 100% on Master; ≥ 0.95 on Orbit.
+J12. Failure Modes & Responses
+• Split leakage → regenerate folds; re‑run with new seed; incident log.
+• Metric drift → lock schema and formulas; recompute from raw; compare with previous manifests.
+• Inflated PFI (false unlock) → contract invalid; remove from df_eval_unlocks.csv; flag and re‑compute ΔE.
+J13. Governance & Change Control
+• Results append to a manifests directory: CSV hashes, ops.yml hash, eval_config hash.
+• Any change to weights/thresholds mandates a new run_id and changelog entry.
+J14. Checklists
+Before runs
+• [ ] Tokenizer, chunking, quote alignment identical for A & B.
+• [ ] Seeds and weights frozen in eval_config.yml.
+After runs
+• [ ] Scoreboards written; CIs computed.
+• [ ] Unlocks audited; contracts verified.
+• [ ] Integrity panel green; incidents triaged.
+J15. Summary
+This harness delivers reproducible, CSV‑first measurements of framework value. It quantifies improvements (ΔE), unlocks (PFI), and integrity, while ensuring fairness and auditability. With J in place, we can gate deployments on real, explainable benefits rather than heuristics.

@@ -1,0 +1,427 @@
+{
+  "meta": {
+    "started_at": 1754813255.2270274,
+    "plan": {
+      "steps": [
+        {
+          "name": "legacy:registry",
+          "family": "legacy",
+          "module": "adapters.legacy_auto.agrm_cmplx.registry",
+          "func": "list_legacy",
+          "kwargs": {
+            "slug": "agrm-cmplx",
+            "root": "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx"
+          },
+          "est_wall_ms": 50,
+          "est_ram_mb": 64,
+          "priority": 5,
+          "policy_id": "policy:default"
+        },
+        {
+          "name": "policy:load",
+          "family": "governance",
+          "module": "json",
+          "func": "loads",
+          "args": [
+            "{}"
+          ],
+          "priority": 10,
+          "policy_id": "policy:n7"
+        },
+        {
+          "name": "superperm:kernel",
+          "family": "solver.superperm",
+          "module": "src.testlib_plus.agents.superperm",
+          "func": "kernel_gen",
+          "kwargs": {
+            "seed": 321,
+            "n": 7,
+            "mode": "dry"
+          },
+          "est_wall_ms": 50,
+          "est_ram_mb": 64,
+          "priority": 20,
+          "policy_id": "policy:n7"
+        },
+        {
+          "name": "superperm:construct",
+          "family": "solver.superperm",
+          "module": "src.testlib_plus.agents.superperm",
+          "func": "constructor",
+          "est_wall_ms": 120,
+          "est_ram_mb": 128,
+          "priority": 30,
+          "policy_id": "policy:n7"
+        },
+        {
+          "name": "superperm:coverage",
+          "family": "solver.superperm",
+          "module": "src.testlib_plus.agents.superperm",
+          "func": "coverage_check",
+          "kwargs": {
+            "alphabet": [
+              "A",
+              "B",
+              "C"
+            ],
+            "exactly_once": true
+          },
+          "est_wall_ms": 80,
+          "est_ram_mb": 128,
+          "priority": 40,
+          "policy_id": "policy:n7"
+        },
+        {
+          "name": "dim:probe",
+          "family": "dim3d",
+          "module": "src.testlib_plus.agents.dim_probe",
+          "func": "proj3d_quality",
+          "kwargs": {
+            "n": 200,
+            "seed": 9
+          },
+          "est_wall_ms": 60,
+          "est_ram_mb": 128,
+          "priority": 50,
+          "policy_id": "policy:dim"
+        }
+      ]
+    },
+    "ended_at": 1754813255.9946463,
+    "elapsed_s": 0.7676188945770264
+  },
+  "queue_records": [
+    {
+      "name": "legacy:registry",
+      "family": "legacy",
+      "module": "adapters.legacy_auto.agrm_cmplx.registry",
+      "func": "list_legacy",
+      "priority": 5,
+      "status": "ok",
+      "duration_ms": 757.554918999972,
+      "error": null
+    },
+    {
+      "name": "policy:load",
+      "family": "governance",
+      "module": "json",
+      "func": "loads",
+      "priority": 10,
+      "status": "ok",
+      "duration_ms": 0.03423199996177573,
+      "error": null
+    },
+    {
+      "name": "superperm:kernel",
+      "family": "solver.superperm",
+      "module": "src.testlib_plus.agents.superperm",
+      "func": "kernel_gen",
+      "priority": 20,
+      "status": "ok",
+      "duration_ms": 3.2808119999572227,
+      "error": null
+    },
+    {
+      "name": "superperm:construct",
+      "family": "solver.superperm",
+      "module": "src.testlib_plus.agents.superperm",
+      "func": "constructor",
+      "priority": 30,
+      "status": "error",
+      "duration_ms": 1.4593490000152087,
+      "error": {
+        "type": "TypeError",
+        "msg": "constructor() missing 1 required positional argument: 'kernel'",
+        "trace": "Traceback (most recent call last):\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 56, in run\n    fn=self._import_callable(op.module, op.func); out=fn(*op.args, **op.kwargs)\n                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: constructor() missing 1 required positional argument: 'kernel'\n"
+      },
+      "result": null
+    },
+    {
+      "name": "superperm:coverage",
+      "family": "solver.superperm",
+      "module": "src.testlib_plus.agents.superperm",
+      "func": "coverage_check",
+      "priority": 40,
+      "status": "error",
+      "duration_ms": 0.2858229998992101,
+      "error": {
+        "type": "TypeError",
+        "msg": "coverage_check() missing 1 required positional argument: 'seq'",
+        "trace": "Traceback (most recent call last):\n  File \"/mnt/data/n7-stage/src/testlib_plus/orchestrator.py\", line 56, in run\n    fn=self._import_callable(op.module, op.func); out=fn(*op.args, **op.kwargs)\n                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: coverage_check() missing 1 required positional argument: 'seq'\n"
+      },
+      "result": null
+    },
+    {
+      "name": "dim:probe",
+      "family": "dim3d",
+      "module": "src.testlib_plus.agents.dim_probe",
+      "func": "proj3d_quality",
+      "priority": 50,
+      "status": "ok",
+      "duration_ms": 4.781430999969416,
+      "error": null
+    }
+  ],
+  "sap_events": [
+    {
+      "family": "legacy",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "proj_wall_ms": 50.0,
+          "cap_wall_ms": 450000.0,
+          "proj_ram_mb": 64.0,
+          "cap_ram_mb": 3072.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "legacy",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:default",
+        "reasons": [],
+        "metrics": {
+          "op_duration_ms": 757.554918999972,
+          "wall_used_ms": 757.554918999972,
+          "cap_wall_ms": 450000.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:default"
+        }
+      }
+    },
+    {
+      "family": "governance",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:n7",
+        "reasons": [],
+        "metrics": {
+          "proj_wall_ms": 757.554918999972,
+          "cap_wall_ms": 450000.0,
+          "proj_ram_mb": 64.0,
+          "cap_ram_mb": 3072.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:n7"
+        }
+      }
+    },
+    {
+      "family": "governance",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:n7",
+        "reasons": [],
+        "metrics": {
+          "op_duration_ms": 0.03423199996177573,
+          "wall_used_ms": 757.5891509999337,
+          "cap_wall_ms": 450000.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:n7"
+        }
+      }
+    },
+    {
+      "family": "solver.superperm",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:n7",
+        "reasons": [],
+        "metrics": {
+          "proj_wall_ms": 807.5891509999337,
+          "cap_wall_ms": 450000.0,
+          "proj_ram_mb": 64.0,
+          "cap_ram_mb": 3072.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:n7"
+        }
+      }
+    },
+    {
+      "family": "solver.superperm",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:n7",
+        "reasons": [],
+        "metrics": {
+          "op_duration_ms": 3.2808119999572227,
+          "wall_used_ms": 760.869962999891,
+          "cap_wall_ms": 450000.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:n7"
+        }
+      }
+    },
+    {
+      "family": "solver.superperm",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:n7",
+        "reasons": [],
+        "metrics": {
+          "proj_wall_ms": 880.869962999891,
+          "cap_wall_ms": 450000.0,
+          "proj_ram_mb": 128.0,
+          "cap_ram_mb": 3072.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:n7"
+        }
+      }
+    },
+    {
+      "family": "solver.superperm",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:n7",
+        "reasons": [],
+        "metrics": {
+          "op_duration_ms": 1.4593490000152087,
+          "wall_used_ms": 762.3293119999062,
+          "cap_wall_ms": 450000.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:n7"
+        }
+      }
+    },
+    {
+      "family": "solver.superperm",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:n7",
+        "reasons": [],
+        "metrics": {
+          "proj_wall_ms": 842.3293119999062,
+          "cap_wall_ms": 450000.0,
+          "proj_ram_mb": 128.0,
+          "cap_ram_mb": 3072.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:n7"
+        }
+      }
+    },
+    {
+      "family": "solver.superperm",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:n7",
+        "reasons": [],
+        "metrics": {
+          "op_duration_ms": 0.2858229998992101,
+          "wall_used_ms": 762.6151349998054,
+          "cap_wall_ms": 450000.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:n7"
+        }
+      }
+    },
+    {
+      "family": "dim3d",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:dim",
+        "reasons": [],
+        "metrics": {
+          "proj_wall_ms": 822.6151349998054,
+          "cap_wall_ms": 450000.0,
+          "proj_ram_mb": 128.0,
+          "cap_ram_mb": 3072.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:dim"
+        }
+      }
+    },
+    {
+      "family": "dim3d",
+      "attestation": {
+        "status": "pass",
+        "policy_id": "policy:dim",
+        "reasons": [],
+        "metrics": {
+          "op_duration_ms": 4.781430999969416,
+          "wall_used_ms": 767.3965659997748,
+          "cap_wall_ms": 450000.0
+        }
+      },
+      "ruling": {
+        "decision": "allow",
+        "rationale": {
+          "policy": "policy:dim"
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "op": "legacy:registry",
+      "optimization_points": [
+        "Identify stable entry points for adapters"
+      ],
+      "weak_spots": [
+        "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx/gpt gode for agrm-cmplx/AGRM_refactored (3).py",
+        "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx/gpt gode for agrm-cmplx/AGRM_refactored (4).py",
+        "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx/gpt gode for agrm-cmplx/test_hash.py",
+        "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx/gpt gode for agrm-cmplx/test_runtime.py",
+        "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx/gpt gode for agrm-cmplx/test_scoring.py",
+        "/mnt/data/e8_repo/legacy/20250810/agrm-cmplx/gpt gode for agrm-cmplx/test_think_systems.py"
+      ]
+    },
+    {
+      "op": "policy:load",
+      "optimization_points": [],
+      "weak_spots": []
+    },
+    {
+      "op": "dim:probe",
+      "optimization_points": [],
+      "weak_spots": []
+    }
+  ]
+}

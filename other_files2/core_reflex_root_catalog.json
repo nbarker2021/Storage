@@ -1,0 +1,22 @@
+{
+  "catalog_initialized": "2025-04-04T19:45:28.069275",
+  "status": "ACTIVE | PASSIVE TAGGING ENABLED",
+  "boot_primitives": [
+    {
+      "id": "BOOT-001",
+      "name": "RunUntilOptimal",
+      "type": "Logic Loop",
+      "origin": "doc_0",
+      "snap_threads_matched": 7,
+      "gtg_anchor": "GTG-RUNOPT-001",
+      "validated_by": "StrataCortex Simulation Round 1",
+      "emergence_status": "Controlled echo",
+      "usage_scope": "Can be used to reinitialize CMPLX runtime logic and GTG stack from frozen state",
+      "status": "CORE REFLEX ROOT"
+    }
+  ],
+  "future_action": {
+    "passive_tag": true,
+    "simulate_remaining_roots": true
+  }
+}

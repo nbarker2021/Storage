@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-04-04T16:25:36.611482",
+  "version": "v1.0",
+  "frozen_chunks": [
+    "doc_0_chunk_001",
+    "doc_0_chunk_002",
+    "doc_0_chunk_003",
+    "doc_0_chunk_004",
+    "doc_0_chunk_005",
+    "doc_0_chunk_006",
+    "doc_0_chunk_007",
+    "doc_0_chunk_008",
+    "doc_0_chunk_009",
+    "doc_0_chunk_010",
+    "doc_0_chunk_011",
+    "doc_0_chunk_012",
+    "doc_0_chunk_013"
+  ],
+  "ruleset": "CMPLX Unified Rule & Behavior System v1.1",
+  "guides": [
+    "best_of_handbook.md (outline only)",
+    "failures_and_speedbumps.md (outline only)",
+    "building_a_brain_to_guide_emergence_safely.md (outline only)"
+  ],
+  "future_filepaths": [
+    "/plans/full_build_spec.yaml",
+    "/contracts/build_contract.md",
+    "/core/runtime_manifest.json",
+    "/cli/cli_contract.md",
+    "/agents/agent_registry.json",
+    "/audit/deferred_patch_queue.yaml"
+  ],
+  "rules_active": [
+    "QAME",
+    "AGP",
+    "RGB",
+    "Predictive Structure Gen",
+    "Turn-Based Freeze Logic",
+    "Mobile/Desktop Switching",
+    "Operational Patch Suggestor Enabled"
+  ],
+  "notes": "Snapshot represents current system state with internal documents, partial structures, and finalized rules. All output frozen per turn-based logic."
+}
