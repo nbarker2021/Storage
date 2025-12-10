@@ -1,0 +1,46 @@
+{
+  "files_scanned": 4,
+  "total_rows": 51,
+  "event_kinds": {
+    "unknown": 51
+  },
+  "tick": {
+    "first": null,
+    "last": null,
+    "neg_jumps_total": 0
+  },
+  "e8": {
+    "unique_cells_total": 0,
+    "top_cells": []
+  },
+  "per_file": [
+    {
+      "summary_path": "/mnt/data/logtest/out_zip/reports/custom gpt build/__Full_CFS_Error_Report___Direct_Request___Action_Mapping/summary.json",
+      "rows": 48,
+      "first_tick": null,
+      "last_tick": null,
+      "unique_cells": 0
+    },
+    {
+      "summary_path": "/mnt/data/logtest/out_zip/reports/custom gpt build/comprehensive_summary_document (1)/summary.json",
+      "rows": 1,
+      "first_tick": null,
+      "last_tick": null,
+      "unique_cells": 0
+    },
+    {
+      "summary_path": "/mnt/data/logtest/out_zip/reports/custom gpt build/comprehensive_summary_document/summary.json",
+      "rows": 1,
+      "first_tick": null,
+      "last_tick": null,
+      "unique_cells": 0
+    },
+    {
+      "summary_path": "/mnt/data/logtest/out_zip/reports/custom gpt build/experiment_state (1)/summary.json",
+      "rows": 1,
+      "first_tick": null,
+      "last_tick": null,
+      "unique_cells": 0
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+*.egg-info/
+
+# Virtual environments
+venv/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Data (except golden)
+data/overlays/*
+data/rag/*
+data/checkpoints/*
+
+# Git
+.git/
+.gitignore
+
+# Documentation build
+docs/_build/

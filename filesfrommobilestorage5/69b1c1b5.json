@@ -1,0 +1,94 @@
+{
+  "test_name": "momentum_biased_9669_emergence",
+  "hypothesis": "IOOI momentum bias + frequency modulation induces 9-6-6-9",
+  "method": "Temporal phase switching with inward/outward particle classification",
+  "parameters": {
+    "n_particles": 10000,
+    "dimensions": 96,
+    "timesteps": 400,
+    "bins": 4,
+    "target_pattern": [
+      9,
+      6,
+      6,
+      9
+    ]
+  },
+  "results": [
+    {
+      "frequency_hz": 432.0,
+      "description": "Base - DR9 closure",
+      "digital_root": 9,
+      "pattern": [
+        7.539510773292891,
+        7.459031018997025,
+        7.4615315883936795,
+        7.539926619316404
+      ],
+      "rmse": 1.4602815787183308,
+      "symmetry": 0.9995370525766828,
+      "iooi_ratio": 1.010648042462504,
+      "converged_to_9669": false
+    },
+    {
+      "frequency_hz": 486.0,
+      "description": "9-fold harmonic",
+      "digital_root": 9,
+      "pattern": [
+        7.534202012209776,
+        7.467275926360383,
+        7.461293287240819,
+        7.53722877418902
+      ],
+      "rmse": 1.4642865255374564,
+      "symmetry": 0.9986669219272792,
+      "iooi_ratio": 1.009569676085091,
+      "converged_to_9669": false
+    },
+    {
+      "frequency_hz": 648.0,
+      "description": "1.5x harmonic",
+      "digital_root": 9,
+      "pattern": [
+        7.537060149846155,
+        7.459284567933157,
+        7.463485434552188,
+        7.540169847668499
+      ],
+      "rmse": 1.461386169547481,
+      "symmetry": 0.9989545754985265,
+      "iooi_ratio": 1.0103506248500267,
+      "converged_to_9669": false
+    },
+    {
+      "frequency_hz": 216.0,
+      "description": "Subharmonic DR9",
+      "digital_root": 9,
+      "pattern": [
+        7.541915094636635,
+        7.461537834798081,
+        7.460117057448448,
+        7.536430013116835
+      ],
+      "rmse": 1.4608288196903718,
+      "symmetry": 0.9991538945891497,
+      "iooi_ratio": 1.0105008603689032,
+      "converged_to_9669": false
+    }
+  ],
+  "best_candidate": {
+    "frequency_hz": 432.0,
+    "description": "Base - DR9 closure",
+    "digital_root": 9,
+    "pattern": [
+      7.539510773292891,
+      7.459031018997025,
+      7.4615315883936795,
+      7.539926619316404
+    ],
+    "rmse": 1.4602815787183308,
+    "symmetry": 0.9995370525766828,
+    "iooi_ratio": 1.010648042462504,
+    "converged_to_9669": false
+  }
+}

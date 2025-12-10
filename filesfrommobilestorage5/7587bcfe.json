@@ -1,0 +1,91 @@
+{
+  "test_name": "e8_coupled_resonance_9669",
+  "hypothesis": "E8-coupled frequency modulation induces 9-6-6-9 palindromic beam sorting",
+  "mechanism": "Quartile-based depth classification with IOOI temporal bias and DR=9 resonance",
+  "parameters": {
+    "n_particles": 10000,
+    "dimensions": 96,
+    "timesteps": 800,
+    "bins": 4,
+    "target_pattern": [
+      9,
+      6,
+      6,
+      9
+    ],
+    "base_frequency_hz": 432.0
+  },
+  "results": [
+    {
+      "frequency_hz": 432.0,
+      "description": "Base DR9 - E8 closure frequency",
+      "digital_root": 9,
+      "pattern": [
+        7.680185121124233,
+        7.3149112275691355,
+        7.323804710198563,
+        7.681098941108068
+      ],
+      "rmse": 1.3193617552418466,
+      "symmetry": 0.9984163678421165,
+      "iooi_ratio": 1.0493600754661154,
+      "pattern_match": 0.5602127482527177,
+      "converged_to_9669": false
+    },
+    {
+      "frequency_hz": 216.0,
+      "description": "Octave down - DR9 subharmonic",
+      "digital_root": 9,
+      "pattern": [
+        7.682954708320643,
+        7.313782513713693,
+        7.318841350117876,
+        7.684421427847791
+      ],
+      "rmse": 1.316313249188944,
+      "symmetry": 0.9989940291684,
+      "iooi_ratio": 1.0502132958602721,
+      "pattern_match": 0.5612289169370186,
+      "converged_to_9669": false
+    },
+    {
+      "frequency_hz": 108.0,
+      "description": "Two octaves down - DR9",
+      "digital_root": 9,
+      "pattern": [
+        7.6854872941971495,
+        7.317543583538924,
+        7.316688914695164,
+        7.68028020756876
+      ],
+      "rmse": 1.3171175703840572,
+      "symmetry": 0.9992790724253802,
+      "iooi_ratio": 1.049987930871681,
+      "pattern_match": 0.5609608098719809,
+      "converged_to_9669": false
+    }
+  ],
+  "best_candidate": {
+    "frequency_hz": 216.0,
+    "description": "Octave down - DR9 subharmonic",
+    "digital_root": 9,
+    "pattern": [
+      7.682954708320643,
+      7.313782513713693,
+      7.318841350117876,
+      7.684421427847791
+    ],
+    "rmse": 1.316313249188944,
+    "symmetry": 0.9989940291684,
+    "iooi_ratio": 1.0502132958602721,
+    "pattern_match": 0.5612289169370186,
+    "converged_to_9669": false
+  },
+  "interpretation": {
+    "pattern_9": "Inward convergence phase - high amplitude for innermost particles",
+    "pattern_6_first": "First outward divergence - mid-depth particles amplified",
+    "pattern_6_second": "Second outward divergence - continued mid-depth activity",
+    "pattern_9_final": "Return to inward closure - innermost particles re-amplified",
+    "palindrome": "Mirror symmetry confirms dihedral closure and parity conservation"
+  }
+}
